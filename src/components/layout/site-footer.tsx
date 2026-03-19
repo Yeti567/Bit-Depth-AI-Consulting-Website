@@ -8,7 +8,7 @@ export function SiteFooter() {
         <div className="space-y-4">
           <Link href="/" className="relative block h-12 w-[220px]" aria-label="BitDepth AI Consulting home">
             <Image
-              src="/images/bitdepth logo dark background.jpg"
+              src="/images/logo svg transparent.svg"
               alt="BitDepth AI Consulting logo"
               fill
               sizes="220px"

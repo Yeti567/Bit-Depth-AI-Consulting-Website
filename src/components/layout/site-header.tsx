@@ -9,7 +9,7 @@ export function SiteHeader({ simplified = false }: { simplified?: boolean }) {
       <div className="container-shell relative flex min-h-20 items-center justify-between gap-6">
         <Link href="/" className="relative block h-10 w-[180px] shrink-0" aria-label="BitDepth AI Consulting home">
           <Image
-            src="/images/bitdepth logo dark background.jpg"
+            src="/images/logo svg transparent.svg"
             alt="BitDepth AI Consulting logo"
             fill
             priority
