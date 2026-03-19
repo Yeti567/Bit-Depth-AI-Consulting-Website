@@ -198,7 +198,7 @@ export default function ServicesPage() {
               <h3 className="mt-8 text-xl font-semibold text-navy">TRAINING FORMATS:</h3>
               <ul className="mt-4 space-y-3 text-charcoal/82">
                 <li>Half-day executive briefing: AI landscape, strategic implications, and what questions to ask vendors</li>
-                <li>Full-day operations workshop: Hands-on training with AI tools relevant to your team's actual workflows</li>
+                <li>Full-day operations workshop: Hands-on training with AI tools relevant to your team&apos;s actual workflows</li>
                 <li>Ongoing enablement retainer: Monthly sessions to support your team as your AI tools evolve</li>
               </ul>
               <h3 className="mt-8 text-xl font-semibold text-navy">WHO THIS IS FOR:</h3>

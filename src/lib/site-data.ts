@@ -112,19 +112,19 @@ export const resources = [
   {
     title: 'How to Evaluate AI Use Cases in Industrial Operations',
     category: 'Guide',
-    href: '#',
+    href: '/resources/how-to-evaluate-ai-use-cases-in-industrial-operations',
     description: 'A practical framework for identifying AI opportunities with measurable operational value.'
   },
   {
     title: 'What Vendor-Neutral AI Consulting Actually Means',
     category: 'Perspective',
-    href: '#',
+    href: '/resources/what-vendor-neutral-ai-consulting-actually-means',
     description: 'Why independent advice matters when comparing platforms, pilots, and long-term architecture choices.'
   },
   {
     title: 'Building an AI Roadmap for Canadian Mid-Market Companies',
     category: 'Roadmap',
-    href: '#',
+    href: '/resources/building-an-ai-roadmap-for-canadian-mid-market-companies',
     description: 'How leadership teams can move from curiosity to a disciplined implementation plan.'
   }
 ];
