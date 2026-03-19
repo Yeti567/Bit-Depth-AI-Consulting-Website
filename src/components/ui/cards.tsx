@@ -31,7 +31,7 @@ export function TestimonialCard({ quote, name, role }: { quote: string; name: st
       <div className="icon-chip">
         <MessageSquareQuote className="h-5 w-5" />
       </div>
-      <blockquote>“{quote}”</blockquote>
+      <blockquote>"{quote}"</blockquote>
       <div className="attribution">
         <p>{name}</p>
         <p className="mt-1 text-white/55">{role}</p>

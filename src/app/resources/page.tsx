@@ -63,7 +63,7 @@ export default function ResourcesPage() {
                 <h2 className="mt-4 text-2xl font-bold text-white">{resource.title}</h2>
                 <p className="mt-4 text-white/75">{resource.description}</p>
                 <Link href={resource.href} className="mt-6 inline-flex text-sm font-semibold text-cyan">
-                  Coming soon
+                  Read article
                 </Link>
               </article>
             </ScrollReveal>

@@ -87,7 +87,7 @@ const caseStudies = [
   },
   {
     label: 'Case Study 02',
-    title: 'An oil and gas operator under pressure to “do something with AI”',
+    title: 'An oil and gas operator under pressure to "do something with AI"',
     situation:
       'Leadership wanted to move quickly, but the available opportunities ranged from field reporting automation to predictive maintenance, each with different data, risk, and implementation demands.',
     pointOfView:

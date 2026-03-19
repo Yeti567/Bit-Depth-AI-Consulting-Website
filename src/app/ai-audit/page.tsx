@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Audit Services for Canadian Businesses | BitDepth AI Consulting',
     description:
-      'Book BitDepth’s AI Opportunity Discovery Audit to assess readiness, rank opportunities, and define a practical roadmap.',
+      'Book BitDepth\'s AI Opportunity Discovery Audit to assess readiness, rank opportunities, and define a practical roadmap.',
     images: ['/images/AI Audit Page.webp']
   }
 };

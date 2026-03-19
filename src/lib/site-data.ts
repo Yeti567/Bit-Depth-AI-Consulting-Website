@@ -126,6 +126,24 @@ export const resources = [
     category: 'Roadmap',
     href: '/resources/building-an-ai-roadmap-for-canadian-mid-market-companies',
     description: 'How leadership teams can move from curiosity to a disciplined implementation plan.'
+  },
+  {
+    title: "Dead in the Field: Why Predictive Maintenance Can't Wait",
+    category: 'Oil & Gas',
+    href: '/resources/dead-in-the-field-why-predictive-maintenance-cant-wait',
+    description: 'Discover how predictive maintenance AI is transforming remote oilfield operations in Canada. BitDepth AI Consulting delivers practical, edge-ready solutions for oil and gas operators.'
+  },
+  {
+    title: 'Digital Twin Technology: How Smart Manufacturers Are Pulling Ahead',
+    category: 'Manufacturing',
+    href: '/resources/digital-twin-technology-how-smart-manufacturers-are-pulling-ahead',
+    description: 'Discover how digital twin technology is transforming smart manufacturing. BitDepth AI Consulting delivers industrial IoT, AI predictive maintenance, and Industry 4.0 solutions for manufacturers.'
+  },
+  {
+    title: 'See Every Defect: AI Computer Vision Quality Control',
+    category: 'Manufacturing',
+    href: '/resources/see-every-defect-ai-computer-vision-quality-control',
+    description: 'Discover how AI computer vision quality control helps manufacturers detect defects, eliminate rework, and achieve automated visual inspection at production speed. BitDepth AI Consulting delivers results.'
   }
 ];
 

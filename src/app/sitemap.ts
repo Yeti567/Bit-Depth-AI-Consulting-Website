@@ -13,6 +13,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/ai-readiness-assessment',
     '/about',
     '/resources',
+    '/resources/dead-in-the-field-why-predictive-maintenance-cant-wait',
+    '/resources/digital-twin-technology-how-smart-manufacturers-are-pulling-ahead',
+    '/resources/see-every-defect-ai-computer-vision-quality-control',
     '/contact',
     '/privacy-policy'
   ];
