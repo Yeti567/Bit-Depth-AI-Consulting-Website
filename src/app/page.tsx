@@ -74,16 +74,26 @@ const serviceOverview = [
   'AI Training and Enablement: $2,500 to $7,500'
 ];
 
-const testimonials = [
+const caseStudies = [
   {
-    quote:
-      'The audit gave us a clear picture of where AI could actually save us time versus where it would just create new problems. That clarity alone was worth the investment.',
-    source: 'Operations Manager, BC Energy Company'
+    label: 'Case Study 01',
+    title: 'A manufacturer being sold the wrong AI project',
+    situation:
+      'A mid-market manufacturer was being pitched a custom AI platform before anyone had mapped the underlying workflow, data quality, or handoff points between teams.',
+    pointOfView:
+      'Our view: if the process is still inconsistent and the source data is fragmented, custom AI is too early. Audit first. Fix the operating foundation. Then automate the highest-friction step with the smallest viable build.',
+    outcome:
+      'The right first move was not a large platform purchase. It was a narrower automation roadmap built around process clarity, document flow, and existing systems the business already understood.'
   },
   {
-    quote:
-      'We had been pitched three different AI platforms before we called BitDepth. The audit showed us we did not need any of them. We automated two processes with tools we already had.',
-    source: 'General Manager, BC Manufacturing Firm'
+    label: 'Case Study 02',
+    title: 'An oil and gas operator under pressure to “do something with AI”',
+    situation:
+      'Leadership wanted to move quickly, but the available opportunities ranged from field reporting automation to predictive maintenance, each with different data, risk, and implementation demands.',
+    pointOfView:
+      'Our view: speed matters, but sequencing matters more. Start where the operational pain is clear, the data is accessible, and the ROI can be measured without a multi-quarter transformation program.',
+    outcome:
+      'Instead of chasing the most ambitious concept first, the business got a prioritized roadmap focused on lower-risk, operations-led use cases that could prove value before expanding investment.'
   }
 ];
 
@@ -310,17 +320,32 @@ export default function HomePage() {
         <div className="container-shell max-w-5xl">
           <ScrollReveal>
             <SectionHeading
-              title="What Our Clients Say"
-              description="Placeholder cards below. Replace with real testimonials when available."
+              eyebrow="Case Studies"
+              title="Two examples of how we think about AI before anything gets built"
+              description="These examples reflect BitDepth&apos;s point of view: audit first, challenge the default recommendation, and sequence AI around operational reality instead of hype."
               theme="dark"
             />
           </ScrollReveal>
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
-            {testimonials.map((testimonial, index) => (
-              <ScrollReveal key={testimonial.source} index={index}>
-                <article className="testimonial-card h-full">
-                  <blockquote>&apos;{testimonial.quote}&apos;</blockquote>
-                  <div className="attribution">- {testimonial.source}</div>
+            {caseStudies.map((caseStudy, index) => (
+              <ScrollReveal key={caseStudy.title} index={index}>
+                <article className="surface-card-dark h-full p-6 sm:p-8">
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan">{caseStudy.label}</p>
+                  <h3 className="mt-4 text-2xl font-bold text-white">{caseStudy.title}</h3>
+                  <div className="mt-6 space-y-5 text-white/75">
+                    <div>
+                      <p className="text-sm font-semibold uppercase tracking-[0.12em] text-white/45">Situation</p>
+                      <p className="mt-2">{caseStudy.situation}</p>
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold uppercase tracking-[0.12em] text-white/45">BitDepth Point of View</p>
+                      <p className="mt-2">{caseStudy.pointOfView}</p>
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold uppercase tracking-[0.12em] text-white/45">Likely Outcome</p>
+                      <p className="mt-2">{caseStudy.outcome}</p>
+                    </div>
+                  </div>
                 </article>
               </ScrollReveal>
             ))}
@@ -336,9 +361,6 @@ export default function HomePage() {
               Find out in under two minutes. Take our free AI Readiness Assessment and get a score across five operational pillars. No email required to start.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
-              <Link href="/ai-readiness-assessment" className="btn-secondary text-white">
-                Take the Free AI Readiness Assessment
-              </Link>
               <Link href="/contact" className="btn-primary">
                 Book Your AI Opportunity Audit
               </Link>
