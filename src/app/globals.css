@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-offwhite text-charcoal font-body antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-heading text-navy tracking-tight;
+}
+
+p {
+  @apply leading-7;
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-content px-6 md:px-8;
+  }
+
+  .section-space {
+    @apply py-16 md:py-24;
+  }
+
+  .eyebrow {
+    @apply text-sm font-semibold uppercase tracking-[0.22em] text-cyan;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-cyan px-5 py-3 text-sm font-semibold text-navy transition hover:bg-[#18c4e8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full border border-coolgray bg-white px-5 py-3 text-sm font-semibold text-navy transition hover:border-cyan hover:text-cyan focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan;
+  }
+
+  .surface-card {
+    @apply rounded-3xl border border-coolgray/70 bg-white shadow-soft;
+  }
+}
