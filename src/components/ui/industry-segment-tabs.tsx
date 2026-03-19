@@ -39,7 +39,8 @@ export function IndustrySegmentTabs({ segments }: { segments: Segment[] }) {
 
   return (
     <div className="grid gap-8">
-      <div className="flex flex-wrap gap-3">
+      <div className="-mx-1 overflow-x-auto pb-2">
+        <div className="flex min-w-max gap-3 px-1">
         {segments.map((segment) => {
           const isActive = segment.id === activeSegment.id;
 
@@ -51,7 +52,7 @@ export function IndustrySegmentTabs({ segments }: { segments: Segment[] }) {
                 setActiveId(segment.id);
                 window.history.replaceState(null, '', `#${segment.id}`);
               }}
-              className={`rounded-full border px-5 py-3 text-sm font-semibold transition ${
+              className={`shrink-0 rounded-full border px-4 py-2.5 text-sm font-semibold transition sm:px-5 sm:py-3 ${
                 isActive
                   ? 'border-cyan bg-cyan text-navy'
                   : 'border-coolgray bg-white text-navy hover:border-cyan hover:text-cyan'
@@ -61,11 +62,12 @@ export function IndustrySegmentTabs({ segments }: { segments: Segment[] }) {
             </button>
           );
         })}
+        </div>
       </div>
 
-      <article className="surface-card scroll-mt-28 p-8 md:p-10" id={activeSegment.id}>
-        <h2 className="text-3xl font-bold text-navy">{activeSegment.title}</h2>
-        <p className="mt-6 text-lg leading-8 text-charcoal/82">{activeSegment.body}</p>
+      <article className="surface-card scroll-mt-28 p-6 sm:p-8 md:p-10" id={activeSegment.id}>
+        <h2 className="text-2xl font-bold text-navy sm:text-3xl">{activeSegment.title}</h2>
+        <p className="mt-5 text-base leading-7 text-charcoal/82 sm:mt-6 sm:text-lg sm:leading-8">{activeSegment.body}</p>
         <h3 className="mt-8 text-xl font-semibold text-navy">{activeSegment.label.toUpperCase()} USE CASES WE BUILD:</h3>
         <ul className="mt-4 space-y-3 text-charcoal/82">
           {activeSegment.bullets.map((bullet) => (

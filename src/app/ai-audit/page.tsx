@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { PageShell } from '@/components/layout/page-shell';
+import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { SectionHeading } from '@/components/ui/section-heading';
 import { FAQAccordion } from '@/components/ui/faq-accordion';
 import { faqs } from '@/lib/site-data';
 
@@ -70,34 +72,40 @@ const auditFaqs = [
 export default function AIAuditPage() {
   return (
     <PageShell simplifiedHeader>
-      <section className="bg-white">
-        <div className="container-shell py-16 md:py-24">
+      <section className="section-navy section-angle relative overflow-hidden">
+        <div className="pointer-events-none absolute left-1/2 top-1/2 hidden h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan/10 md:block" />
+        <div className="pointer-events-none absolute left-1/2 top-1/2 hidden h-[900px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan/5 md:block" />
+        <div className="container-shell py-14 md:py-24">
           <div className="mx-auto max-w-[800px]">
-            <p className="eyebrow">AI Opportunity Discovery Audit</p>
-            <h1 className="mt-4 text-4xl font-bold leading-tight md:text-6xl">AI Audit Services for Canadian Businesses</h1>
-            <p className="mt-6 text-lg leading-8 text-charcoal/82">
-              Most AI projects fail before they start. Not because the technology does not work, but because no one asked the right questions first. BitDepth&apos;s AI audit services exist to change that. We start every engagement by understanding your operations, your data, and your real-world constraints before a single tool is selected or a single dollar is committed to implementation.
-            </p>
-            <div className="mt-10 relative min-h-[360px] overflow-hidden rounded-[2rem] md:min-h-[420px]">
+            <ScrollReveal>
+              <p className="industry-pill inline-flex">AI Opportunity Discovery Audit</p>
+              <h1 className="mt-6 text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">AI Audit Services for Canadian Businesses</h1>
+              <p className="mt-6 text-base leading-7 text-white/75 sm:text-lg sm:leading-8">
+                Most AI projects fail before they start. Not because the technology does not work, but because no one asked the right questions first. BitDepth&apos;s AI audit services exist to change that. We start every engagement by understanding your operations, your data, and your real-world constraints before a single tool is selected or a single dollar is committed to implementation.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal index={1} className="mt-10 relative min-h-[260px] overflow-hidden rounded-[2rem] border border-cyan/20 shadow-dark sm:min-h-[360px] md:min-h-[420px]">
               <Image src="/images/AI Audit Page.webp" alt="Business professionals reviewing operational charts and workflow diagrams in a boardroom" fill priority className="object-cover" />
-            </div>
-            <div className="mt-10 grid gap-4 sm:grid-cols-2">
-              {['Fixed-price engagement from $5,000', 'Structured two to four week delivery window', 'Four concrete deliverables you keep', 'Prioritized roadmap built around operational reality'].map((item) => (
-                <div key={item} className="surface-card p-5 text-sm font-semibold text-navy">
-                  {item}
-                </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/10 to-transparent" />
+            </ScrollReveal>
+            <div className="mt-8 grid gap-4 sm:mt-10 sm:grid-cols-2">
+              {['Fixed-price engagement from $5,000', 'Structured two to four week delivery window', 'Four concrete deliverables you keep', 'Prioritized roadmap built around operational reality'].map((item, index) => (
+                <ScrollReveal key={item} index={index + 2}>
+                  <div className="surface-card-dark p-5 text-sm font-semibold text-white">
+                    {item}
+                  </div>
+                </ScrollReveal>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section-space bg-offwhite">
+      <section className="section-light-grid section-space">
         <div className="container-shell">
           <div className="mx-auto max-w-[800px] space-y-8">
-            <div className="surface-card p-8 md:p-10">
-              <p className="eyebrow">What Is Included</p>
-              <h2 className="mt-4 text-3xl font-bold text-navy md:text-4xl">What Is Included in a BitDepth AI Audit</h2>
+            <ScrollReveal className="surface-card p-6 sm:p-8 md:p-10">
+              <SectionHeading eyebrow="What Is Included" title="What Is Included in a BitDepth AI Audit" />
               <p className="mt-6 text-lg leading-8 text-charcoal/82">
                 The AI Opportunity Discovery Audit is a structured four-week engagement. It covers your full operational environment and produces four concrete deliverables.
               </p>
@@ -119,11 +127,10 @@ export default function AIAuditPage() {
                   <p className="mt-3 text-charcoal/82">A phased implementation plan starting with the highest-value, lowest-risk opportunity. Includes technology recommendations, estimated timelines, and budget ranges.</p>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
 
-            <div className="surface-card p-8 md:p-10">
-              <p className="eyebrow">Readiness Framework</p>
-              <h2 className="mt-4 text-3xl font-bold text-navy md:text-4xl">The Five AI Readiness Pillars We Assess</h2>
+            <ScrollReveal className="surface-card p-6 sm:p-8 md:p-10" index={1}>
+              <SectionHeading eyebrow="Readiness Framework" title="The Five AI Readiness Pillars We Assess" />
               <p className="mt-6 text-lg leading-8 text-charcoal/82">
                 This framework ensures the AI audit covers every critical dimension of your organization&apos;s readiness, not just the technology.
               </p>
@@ -137,11 +144,10 @@ export default function AIAuditPage() {
               <p className="mt-8 text-charcoal/82">
                 Score interpretation: 80 to 100 means AI-ready and ready to build. 60 to 79 means AI-capable with minor preparation needed. 40 to 59 means developing, with data and process work recommended first. 0 to 39 means foundation work is needed before AI implementation.
               </p>
-            </div>
+            </ScrollReveal>
 
-            <div className="surface-card p-8 md:p-10">
-              <p className="eyebrow">Pricing</p>
-              <h2 className="mt-4 text-3xl font-bold text-navy md:text-4xl">AI Audit Pricing and Engagement Structure</h2>
+            <ScrollReveal className="surface-card p-6 sm:p-8 md:p-10" index={2}>
+              <SectionHeading eyebrow="Pricing" title="AI Audit Pricing and Engagement Structure" />
               <p className="mt-6 text-lg leading-8 text-charcoal/82">
                 The AI audit is priced at $5,000 to $7,500 fixed price depending on the size and complexity of your operations. There are no hourly overruns and no surprises.
               </p>
@@ -151,19 +157,17 @@ export default function AIAuditPage() {
               <p className="mt-6 text-lg leading-8 text-charcoal/82">
                 At the conclusion of the audit, you own the deliverables regardless of whether you continue with BitDepth for implementation.
               </p>
-            </div>
+            </ScrollReveal>
 
-            <div className="surface-card p-8 md:p-10">
-              <p className="eyebrow">FAQ</p>
-              <h2 className="mt-4 text-3xl font-bold text-navy md:text-4xl">Frequently Asked Questions About AI Audit Services</h2>
+            <ScrollReveal className="surface-card p-6 sm:p-8 md:p-10" index={3}>
+              <SectionHeading eyebrow="FAQ" title="Frequently Asked Questions About AI Audit Services" />
               <div className="mt-8">
                 <FAQAccordion items={auditFaqs.length ? auditFaqs : faqs} />
               </div>
-            </div>
+            </ScrollReveal>
 
-            <div className="surface-card scroll-mt-28 p-8 md:p-10" id="book-now">
-              <p className="eyebrow">Book Your AI Audit</p>
-              <h2 className="mt-4 text-3xl font-bold text-navy md:text-4xl">Book Your AI Audit</h2>
+            <ScrollReveal className="surface-card scroll-mt-28 p-6 sm:p-8 md:p-10" id="book-now" index={4}>
+              <SectionHeading eyebrow="Book Your AI Audit" title="Book Your AI Audit" />
               <p className="mt-6 text-lg leading-8 text-charcoal/82">
                 Use the intake form below to start the conversation. We&apos;ll review your request, confirm fit, and follow up with next steps for scheduling your audit.
               </p>
@@ -226,7 +230,7 @@ export default function AIAuditPage() {
                   Typical response time is one business day. Your information is treated as confidential and is never shared with third parties.
                 </p>
               </form>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>

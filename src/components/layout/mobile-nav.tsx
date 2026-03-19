@@ -16,21 +16,21 @@ export function MobileNav() {
         aria-controls="mobile-menu"
         aria-label="Toggle navigation"
         onClick={() => setOpen((current) => !current)}
-        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white"
+        className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white shadow-glow sm:h-11 sm:w-11"
       >
         {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
       </button>
       {open ? (
         <div
           id="mobile-menu"
-          className="absolute inset-x-6 top-[calc(100%+0.75rem)] rounded-3xl border border-coolgray bg-white p-6 shadow-soft"
+          className="absolute inset-x-4 top-[calc(100%+0.75rem)] rounded-3xl border border-cyan/20 bg-[rgba(11,31,59,0.98)] p-5 shadow-dark backdrop-blur-xl sm:inset-x-6 sm:p-6"
         >
           <nav className="flex flex-col gap-4">
             {navigation.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-base font-semibold text-navy transition hover:text-cyan"
+                className="text-base font-semibold text-white/75 transition hover:text-cyan"
                 onClick={() => setOpen(false)}
               >
                 {item.label}

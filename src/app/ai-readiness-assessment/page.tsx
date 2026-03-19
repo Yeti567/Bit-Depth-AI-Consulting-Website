@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { PageShell } from '@/components/layout/page-shell';
+import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { SectionHeading } from '@/components/ui/section-heading';
 
 export const metadata: Metadata = {
@@ -33,18 +34,23 @@ export const metadata: Metadata = {
 export default function AIReadinessAssessmentPage() {
   return (
     <PageShell simplifiedHeader>
-      <section className="section-space bg-white">
+      <section className="section-navy-soft section-space">
         <div className="container-shell max-w-4xl">
-          <SectionHeading
-            eyebrow="Assessment"
-            title="AI Readiness Assessment"
-            description="This placeholder page is ready for the free assessment experience referenced on the homepage CTA."
-          />
-          <div className="mt-10 surface-card p-8 md:p-10">
-            <p className="text-charcoal/80">
-              Add the final assessment flow here to score businesses across five operational pillars without requiring an email to begin.
-            </p>
-          </div>
+          <ScrollReveal>
+            <SectionHeading
+              eyebrow="Assessment"
+              title="AI Readiness Assessment"
+              description="This placeholder page is ready for the free assessment experience referenced on the homepage CTA."
+              theme="dark"
+            />
+          </ScrollReveal>
+          <ScrollReveal className="mt-10" index={1}>
+            <div className="surface-card-dark p-6 sm:p-8 md:p-10">
+              <p className="text-white/75">
+                Add the final assessment flow here to score businesses across five operational pillars without requiring an email to begin.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </PageShell>

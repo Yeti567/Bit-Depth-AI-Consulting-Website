@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { PageShell } from '@/components/layout/page-shell';
+import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { SectionHeading } from '@/components/ui/section-heading';
 
 export const metadata: Metadata = {
@@ -37,18 +38,22 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <PageShell>
-      <section className="section-space bg-white">
+      <section className="section-light-grid section-space">
         <div className="container-shell max-w-4xl">
-          <SectionHeading
-            eyebrow="Privacy"
-            title="Privacy Policy"
-            description="This placeholder privacy policy page is ready to be replaced with your finalized legal copy."
-          />
-          <div className="mt-10 surface-card p-8 md:p-10">
-            <p className="text-charcoal/80">
-              BitDepth AI Consulting Ltd. respects your privacy and is committed to protecting personal information collected through this website. Replace this section with your approved privacy policy covering collection, use, storage, and contact procedures.
-            </p>
-          </div>
+          <ScrollReveal>
+            <SectionHeading
+              eyebrow="Privacy"
+              title="Privacy Policy"
+              description="This placeholder privacy policy page is ready to be replaced with your finalized legal copy."
+            />
+          </ScrollReveal>
+          <ScrollReveal className="mt-10" index={1}>
+            <div className="surface-card p-6 sm:p-8 md:p-10">
+              <p className="text-charcoal/80">
+                BitDepth AI Consulting Ltd. respects your privacy and is committed to protecting personal information collected through this website. Replace this section with your approved privacy policy covering collection, use, storage, and contact procedures.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </PageShell>

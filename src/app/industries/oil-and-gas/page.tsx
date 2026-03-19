@@ -114,13 +114,13 @@ export default function OilAndGasPage() {
           />
           <div className="absolute inset-0 bg-navy/70" />
         </div>
-        <div className="container-shell relative py-24 md:py-32">
+        <div className="container-shell relative py-16 sm:py-20 md:py-32">
           <div className="max-w-4xl">
-            <h1 className="text-4xl font-bold leading-tight text-white md:text-6xl">AI Consulting for Oil and Gas Digital Transformation</h1>
-            <p className="mt-6 text-lg leading-8 text-white/85">
+            <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">AI Consulting for Oil and Gas Digital Transformation</h1>
+            <p className="mt-6 text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
               AI consulting for oil and gas companies requires more than a technology strategy. It requires deep operational understanding across upstream exploration and production, midstream transportation and storage, and downstream refining and distribution. BitDepth brings both.
             </p>
-            <p className="mt-6 text-lg leading-8 text-white/85">
+            <p className="mt-6 text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
               We work with Canadian oil and gas companies to identify where AI creates genuine operational value, then build the systems that deliver it. From predictive maintenance models that reduce unplanned downtime to generative AI systems that process regulatory and well documentation, our engagements are scoped to your segment, your data, and your team.
             </p>
           </div>
@@ -146,7 +146,7 @@ export default function OilAndGasPage() {
             <IndustrySegmentTabs segments={segments} />
 
             <section className="grid gap-8 lg:grid-cols-[1fr,0.9fr] lg:items-center">
-              <div className="surface-card p-8 md:p-10">
+              <div className="surface-card p-6 sm:p-8 md:p-10">
                 <h2 className="text-3xl font-bold text-navy">Digital Twin and IoT Solutions for Oil and Gas</h2>
                 <p className="mt-6 text-lg leading-8 text-charcoal/82">
                   Digital twin technology for oil and gas operations gives your team a live, model-based view of asset performance. Combined with industrial IoT sensors and AI analytics, digital twins shift your maintenance program from reactive to predictive.
@@ -162,7 +162,7 @@ export default function OilAndGasPage() {
                   <li>Asset lifecycle management consulting for long-term operational planning</li>
                 </ul>
               </div>
-              <div className="relative min-h-[360px] overflow-hidden rounded-[2rem]">
+              <div className="relative min-h-[240px] overflow-hidden rounded-[2rem] sm:min-h-[360px]">
                 <Image
                   src="/images/Digital Twin Blog.webp"
                   alt="Digital twin monitoring visualization for oil and gas assets"
@@ -173,7 +173,7 @@ export default function OilAndGasPage() {
             </section>
 
             <section className="grid gap-8 lg:grid-cols-[0.95fr,1.05fr] lg:items-center">
-              <div className="relative min-h-[360px] overflow-hidden rounded-[2rem]">
+              <div className="relative min-h-[240px] overflow-hidden rounded-[2rem] sm:min-h-[360px]">
                 <Image
                   src="/images/Upstream section.webp"
                   alt="Workover rig on a prairie oil field at sunrise"
@@ -181,7 +181,7 @@ export default function OilAndGasPage() {
                   className="object-cover"
                 />
               </div>
-              <div className="surface-card p-8 md:p-10">
+              <div className="surface-card p-6 sm:p-8 md:p-10">
                 <h2 className="text-3xl font-bold text-navy">Why Oil and Gas Companies Choose BitDepth</h2>
                 <p className="mt-6 text-lg leading-8 text-charcoal/82">
                   We do not enter engagements to sell software or justify a vendor relationship. We audit your operations, understand your actual data environment, and recommend the path that produces the most operational value for your specific situation.

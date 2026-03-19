@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PageShell } from '@/components/layout/page-shell';
+import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { SectionHeading } from '@/components/ui/section-heading';
 import { contactDetails } from '@/lib/site-data';
 
 export const metadata: Metadata = {
@@ -74,21 +76,35 @@ const values = [
 export default function AboutPage() {
   return (
     <PageShell>
-      <section className="section-space bg-white">
+      <section className="section-navy section-angle relative overflow-hidden">
+        <div className="pointer-events-none absolute left-1/2 top-1/2 hidden h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan/10 md:block" />
+        <div className="pointer-events-none absolute left-1/2 top-1/2 hidden h-[900px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan/5 md:block" />
+        <div className="container-shell relative py-16 sm:py-20 md:py-28">
+          <ScrollReveal className="max-w-4xl">
+            <p className="industry-pill inline-flex">About BitDepth</p>
+            <h1 className="mt-6 text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">Vendor-Neutral AI Consulting for Canadian Industrial Businesses</h1>
+            <p className="mt-6 text-lg leading-8 text-white/75">
+              BitDepth AI Consulting Ltd. is an independent AI advisory firm based in Barriere, British Columbia. We serve Canadian small and mid-market businesses in oil and gas and manufacturing that are ready to adopt AI, but want to do it based on evidence and operational fit rather than a vendor&apos;s sales pitch.
+            </p>
+            <p className="mt-6 text-lg leading-8 text-white/75">
+              We do not sell software. We do not have preferred platforms. We do not receive referral fees from technology vendors. Our business model is simple: we sell outcomes, not software. Our success is measured by the operational improvements our clients achieve.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="section-light-grid section-space">
         <div className="container-shell grid gap-10 lg:grid-cols-[minmax(0,7fr),minmax(280px,3fr)] lg:items-start">
           <div className="space-y-8">
-            <div>
-              <p className="eyebrow">About BitDepth</p>
-              <h1 className="mt-4 text-4xl font-bold leading-tight md:text-6xl">Vendor-Neutral AI Consulting for Canadian Industrial Businesses</h1>
-              <p className="mt-6 text-lg leading-8 text-charcoal/82">
-                BitDepth AI Consulting Ltd. is an independent AI advisory firm based in Barriere, British Columbia. We serve Canadian small and mid-market businesses in oil and gas and manufacturing that are ready to adopt AI, but want to do it based on evidence and operational fit rather than a vendor&apos;s sales pitch.
-              </p>
-              <p className="mt-6 text-lg leading-8 text-charcoal/82">
-                We do not sell software. We do not have preferred platforms. We do not receive referral fees from technology vendors. Our business model is simple: we sell outcomes, not software. Our success is measured by the operational improvements our clients achieve.
-              </p>
-            </div>
+            <ScrollReveal>
+              <SectionHeading
+                eyebrow="Story"
+                title="Why BitDepth exists"
+                description="The practice was built to bring enterprise-grade AI thinking to Canadian mid-market operators without vendor pressure or enterprise pricing."
+              />
+            </ScrollReveal>
 
-            <div className="surface-card p-8 md:p-10">
+            <ScrollReveal className="surface-card p-6 sm:p-8 md:p-10" index={0}>
               <h2 className="text-3xl font-bold text-navy">Why We Started BitDepth</h2>
               <p className="mt-6 text-lg leading-8 text-charcoal/82">
                 The AI consulting market is heavily skewed toward large enterprise clients. Deloitte, Accenture, and their peers start engagements at $50,000 and scale into the hundreds of thousands. The Canadian mid-market sits outside that window entirely.
@@ -99,9 +115,9 @@ export default function AboutPage() {
               <p className="mt-6 text-lg leading-8 text-charcoal/82">
                 BitDepth was built to be that advisor. We brought together practical experience across AI architecture, data systems, enterprise automation, and SMB business operations to create a consulting practice that delivers enterprise-grade thinking at a price point that fits the mid-market.
               </p>
-            </div>
+            </ScrollReveal>
 
-            <div className="surface-card p-8 md:p-10">
+            <ScrollReveal className="surface-card p-6 sm:p-8 md:p-10" index={1}>
               <h2 className="text-3xl font-bold text-navy">Our Methodology: Discovery-First AI Consulting</h2>
               <p className="mt-6 text-lg leading-8 text-charcoal/82">
                 The methodology that drives every BitDepth engagement is built around one principle: understand before you build.
@@ -112,9 +128,9 @@ export default function AboutPage() {
               <p className="mt-6 text-lg leading-8 text-charcoal/82">
                 Every client engagement follows the same sequence: audit, prioritize, build, measure. The audit generates the evidence base. Prioritization selects the highest-value, lowest-risk starting point. Implementation builds the system with clear success metrics defined in advance. Measurement validates the outcome and informs the next phase.
               </p>
-            </div>
+            </ScrollReveal>
 
-            <div className="surface-card p-8 md:p-10">
+            <ScrollReveal className="surface-card p-6 sm:p-8 md:p-10" index={2}>
               <h2 className="text-3xl font-bold text-navy">What Vendor-Neutral AI Consulting Actually Means</h2>
               <p className="mt-6 text-lg leading-8 text-charcoal/82">
                 Vendor-neutral means we enter every engagement without a predetermined answer. We have no financial relationship with any AI platform, no referral agreements, and no software to sell.
@@ -125,16 +141,16 @@ export default function AboutPage() {
               <p className="mt-6 text-lg leading-8 text-charcoal/82">
                 Where appropriate, we present multiple vendor or platform options and help the client choose the path that best fits their operations, budget, and long-term goals.
               </p>
-            </div>
+            </ScrollReveal>
           </div>
 
           <aside className="hidden lg:block">
             <div className="sticky top-28 space-y-6">
-              <div className="surface-card overflow-hidden p-0">
+              <ScrollReveal className="surface-card overflow-hidden p-0" index={1}>
                 <div className="relative aspect-[4/5] w-full">
                   <Image src="/images/Social Media Profile Card.webp" alt="BitDepth founder profile placeholder" fill className="object-cover" />
                 </div>
-                <div className="p-8">
+                <div className="p-6 sm:p-8">
                   <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan">Founder Contact</p>
                   <h2 className="mt-4 text-2xl font-bold text-navy">BitDepth AI Consulting Ltd.</h2>
                   <p className="mt-4 text-charcoal/82">Independent AI advisory for Canadian industrial businesses that need operational clarity before implementation.</p>
@@ -144,42 +160,43 @@ export default function AboutPage() {
                     <p>{contactDetails.phone}</p>
                   </div>
                 </div>
-              </div>
+              </ScrollReveal>
 
-              <div className="rounded-[2rem] bg-navy p-8 text-white shadow-soft">
+              <ScrollReveal className="cta-shell p-6 sm:p-8" index={2}>
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan">Next Step</p>
                 <h2 className="mt-4 text-2xl font-bold text-white">Book a Discovery Call</h2>
-                <p className="mt-4 text-white/80">Talk through your operating environment, goals, and whether an audit-first engagement is the right fit.</p>
+                <p className="mt-4 text-white/65">Talk through your operating environment, goals, and whether an audit-first engagement is the right fit.</p>
                 <Link href="/contact" className="btn-primary mt-6 inline-flex">
                   Book a Discovery Call
                 </Link>
-              </div>
+              </ScrollReveal>
             </div>
           </aside>
         </div>
       </section>
 
-      <section className="section-space relative overflow-hidden bg-cyan/5">
+      <section className="section-dark section-space relative overflow-hidden">
         <div className="absolute inset-0 opacity-60" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(0, 180, 216, 0.08) 1px, transparent 0)', backgroundSize: '28px 28px' }} />
         <div className="container-shell relative">
-          <div className="max-w-3xl">
-            <p className="eyebrow">Core Values</p>
-            <h2 className="mt-4 text-3xl font-bold text-navy md:text-5xl">Core Values That Drive Our AI Consulting Practice</h2>
-          </div>
+          <ScrollReveal>
+            <SectionHeading eyebrow="Core Values" title="Core Values That Drive Our AI Consulting Practice" theme="dark" />
+          </ScrollReveal>
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
-            {values.map((value) => (
-              <div key={value.title} className="surface-card h-full p-8">
-                <h3 className="text-xl font-semibold text-navy">{value.title}</h3>
-                <p className="mt-4 text-charcoal/82">{value.description}</p>
-              </div>
+            {values.map((value, index) => (
+              <ScrollReveal key={value.title} index={index}>
+                <div className="surface-card-dark h-full p-6 sm:p-8">
+                  <h3 className="text-xl font-semibold text-white">{value.title}</h3>
+                  <p className="mt-4 text-white/75">{value.description}</p>
+                </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section-space bg-white">
+      <section className="section-space section-accent-left bg-white">
         <div className="container-shell grid gap-10 lg:grid-cols-[1.15fr,0.85fr] lg:items-center">
-          <div>
+          <ScrollReveal>
             <p className="eyebrow">Mission & Geography</p>
             <h2 className="mt-4 text-3xl font-bold text-navy md:text-5xl">Based in Barriere, Serving Western Canada</h2>
             <p className="mt-6 text-lg leading-8 text-charcoal/82">
@@ -193,8 +210,8 @@ export default function AboutPage() {
                 Book a Discovery Call
               </Link>
             </div>
-          </div>
-          <div className="surface-card p-8 md:p-10">
+          </ScrollReveal>
+          <ScrollReveal className="surface-card p-6 sm:p-8 md:p-10" index={1}>
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan">Mission Statement</p>
             <h3 className="mt-4 text-2xl font-bold text-navy">We audit first, then build what works.</h3>
             <p className="mt-6 text-lg leading-8 text-charcoal/82">
@@ -203,7 +220,7 @@ export default function AboutPage() {
             <p className="mt-6 text-lg leading-8 text-charcoal/82">
               We help leadership teams understand their current state, identify the right starting point, and move toward measurable operational outcomes with confidence.
             </p>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
     </PageShell>

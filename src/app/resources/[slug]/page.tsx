@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { PageShell } from '@/components/layout/page-shell';
+import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { SectionHeading } from '@/components/ui/section-heading';
 
 type ResourceArticle = {
@@ -101,27 +102,29 @@ export default function ResourceArticlePage({ params }: { params: { slug: string
 
   return (
     <PageShell>
-      <section className="section-space bg-white">
+      <section className="section-light-grid section-space">
         <div className="container-shell max-w-4xl">
-          <SectionHeading
-            eyebrow={article.category}
-            title={article.title}
-            description={article.description}
-          />
+          <ScrollReveal>
+            <SectionHeading
+              eyebrow={article.category}
+              title={article.title}
+              description={article.description}
+            />
+          </ScrollReveal>
 
-          <article className="mt-10 surface-card space-y-6 p-8 md:p-10">
+          <ScrollReveal as="article" className="mt-10 surface-card space-y-6 p-6 sm:p-8 md:p-10" index={1}>
             {article.body.map((paragraph) => (
               <p key={paragraph} className="text-lg leading-8 text-charcoal/82">
                 {paragraph}
               </p>
             ))}
-          </article>
+          </ScrollReveal>
 
-          <div className="mt-8">
+          <ScrollReveal className="mt-8" index={2}>
             <Link href="/resources" className="btn-secondary">
               Back to Resources
             </Link>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
     </PageShell>

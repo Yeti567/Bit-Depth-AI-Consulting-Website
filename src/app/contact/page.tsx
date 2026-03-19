@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageShell } from '@/components/layout/page-shell';
+import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { contactDetails } from '@/lib/site-data';
 
@@ -35,15 +36,16 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <PageShell simplifiedHeader>
-      <section className="section-space bg-white">
+      <section className="section-navy-soft section-space">
         <div className="container-shell grid gap-10 lg:grid-cols-[0.9fr,1.1fr]">
-          <div>
+          <ScrollReveal>
             <SectionHeading
               eyebrow="Contact"
               title="Book Your AI Opportunity Audit"
               description="Use this placeholder contact page to route booking requests until the final dedicated booking experience is implemented."
+              theme="dark"
             />
-            <div className="mt-8 space-y-3 text-charcoal/80">
+            <div className="mt-8 space-y-3 text-white/70">
               <p>{contactDetails.location}</p>
               <p>
                 <Link href={`mailto:${contactDetails.email}`} className="transition hover:text-cyan">
@@ -56,16 +58,16 @@ export default function ContactPage() {
                 </Link>
               </p>
             </div>
-          </div>
-          <div className="surface-card p-8">
+          </ScrollReveal>
+          <ScrollReveal className="surface-card-dark p-6 sm:p-8" index={1}>
             <form className="grid gap-5">
-              <input className="rounded-2xl border border-coolgray bg-offwhite px-4 py-3 outline-none focus:border-cyan" type="text" placeholder="Your name" />
-              <input className="rounded-2xl border border-coolgray bg-offwhite px-4 py-3 outline-none focus:border-cyan" type="email" placeholder="Email address" />
-              <input className="rounded-2xl border border-coolgray bg-offwhite px-4 py-3 outline-none focus:border-cyan" type="text" placeholder="Company" />
-              <textarea className="min-h-32 rounded-2xl border border-coolgray bg-offwhite px-4 py-3 outline-none focus:border-cyan" placeholder="Tell us a bit about what you want to evaluate." />
+              <input className="rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-white outline-none focus:border-cyan" type="text" placeholder="Your name" />
+              <input className="rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-white outline-none focus:border-cyan" type="email" placeholder="Email address" />
+              <input className="rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-white outline-none focus:border-cyan" type="text" placeholder="Company" />
+              <textarea className="min-h-32 rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-white outline-none focus:border-cyan" placeholder="Tell us a bit about what you want to evaluate." />
               <button type="submit" className="btn-primary w-full sm:w-fit">Submit Request</button>
             </form>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
     </PageShell>

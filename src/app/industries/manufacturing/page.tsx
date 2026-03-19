@@ -116,13 +116,13 @@ export default function ManufacturingPage() {
           />
           <div className="absolute inset-0 bg-navy/70" />
         </div>
-        <div className="container-shell relative py-24 md:py-32">
+        <div className="container-shell relative py-16 sm:py-20 md:py-32">
           <div className="max-w-4xl">
-            <h1 className="text-4xl font-bold leading-tight text-white md:text-6xl">Manufacturing AI Consulting and Industry 4.0 Solutions</h1>
-            <p className="mt-6 text-lg leading-8 text-white/85">
+            <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">Manufacturing AI Consulting and Industry 4.0 Solutions</h1>
+            <p className="mt-6 text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
               Manufacturing AI consulting is most effective when it starts with the shop floor, not a technology roadmap. BitDepth works with Canadian manufacturers to understand how your production environment actually runs, where the data is, and where AI can reduce cost, improve quality, or increase throughput without requiring a full Industry 4.0 overhaul.
             </p>
-            <p className="mt-6 text-lg leading-8 text-white/85">
+            <p className="mt-6 text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
               We deliver practical AI consulting for manufacturing companies at every stage of digital maturity. Whether you are running paper-based maintenance logs or a partially connected smart factory, we find the highest-value starting point and build from there.
             </p>
           </div>
@@ -148,7 +148,7 @@ export default function ManufacturingPage() {
             <IndustrySegmentTabs segments={segments} />
 
             <section className="grid gap-8 lg:grid-cols-[1fr,0.9fr] lg:items-center">
-              <div className="surface-card p-8 md:p-10">
+              <div className="surface-card p-6 sm:p-8 md:p-10">
                 <h2 className="text-3xl font-bold text-navy">Smart Factory Delivery Built Around Existing Operations</h2>
                 <p className="mt-6 text-lg leading-8 text-charcoal/82">
                   Smart manufacturing AI works best when it respects how your plant already runs. We help manufacturers connect machine data, production systems, and operational reporting without forcing a costly rip-and-replace program.
@@ -164,7 +164,7 @@ export default function ManufacturingPage() {
                   <li>Production dashboards that support line-level decision-making</li>
                 </ul>
               </div>
-              <div className="relative min-h-[360px] overflow-hidden rounded-[2rem]">
+              <div className="relative min-h-[240px] overflow-hidden rounded-[2rem] sm:min-h-[360px]">
                 <Image
                   src="/images/Smart Factory Section.webp"
                   alt="Smart factory floor with connected machinery and digital overlays"
@@ -175,7 +175,7 @@ export default function ManufacturingPage() {
             </section>
 
             <section className="grid gap-8 lg:grid-cols-[0.95fr,1.05fr] lg:items-center">
-              <div className="relative min-h-[360px] overflow-hidden rounded-[2rem]">
+              <div className="relative min-h-[240px] overflow-hidden rounded-[2rem] sm:min-h-[360px]">
                 <Image
                   src="/images/Computer Vision Quality Control Blog.webp"
                   alt="Computer vision quality inspection on a manufacturing line"
@@ -183,7 +183,7 @@ export default function ManufacturingPage() {
                   className="object-cover"
                 />
               </div>
-              <div className="surface-card p-8 md:p-10">
+              <div className="surface-card p-6 sm:p-8 md:p-10">
                 <h2 className="text-3xl font-bold text-navy">Predictive Maintenance for Manufacturing</h2>
                 <p className="mt-6 text-lg leading-8 text-charcoal/82">
                   Predictive maintenance AI is the most frequently requested manufacturing AI application we work on. Machine learning predictive maintenance models use your existing sensor data to forecast equipment failures before they occur, reducing unplanned downtime and extending asset life.

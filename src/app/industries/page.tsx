@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
+import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { CtaBanner } from '@/components/ui/cta-banner';
 import { industries } from '@/lib/site-data';
@@ -37,22 +38,28 @@ export const metadata: Metadata = {
 export default function IndustriesPage() {
   return (
     <PageShell>
-      <section className="section-space bg-white">
+      <section className="section-navy-soft section-space">
         <div className="container-shell">
-          <SectionHeading
-            eyebrow="Industries"
-            title="AI strategy shaped by industrial operating conditions."
-            description="BitDepth focuses on sectors where uptime, safety, asset performance, quality, and workflow complexity demand practical implementation decisions."
-          />
+          <ScrollReveal>
+            <SectionHeading
+              eyebrow="Industries"
+              title="AI strategy shaped by industrial operating conditions."
+              description="BitDepth focuses on sectors where uptime, safety, asset performance, quality, and workflow complexity demand practical implementation decisions."
+              theme="dark"
+            />
+          </ScrollReveal>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {industries.map((industry) => (
-              <Link key={industry.href} href={industry.href} className="surface-card p-8 transition hover:-translate-y-1">
-                <h2 className="text-3xl font-bold">{industry.title}</h2>
-                <p className="mt-4 text-charcoal/80">{industry.description}</p>
-                <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan">
-                  View industry page <ArrowRight className="h-4 w-4" />
-                </span>
-              </Link>
+            {industries.map((industry, index) => (
+              <ScrollReveal key={industry.href} index={index}>
+                <Link href={industry.href} className="surface-card-dark block p-8">
+                  <span className="industry-pill">{industry.title}</span>
+                  <h2 className="mt-5 text-3xl font-bold text-white">{industry.title}</h2>
+                  <p className="mt-4 text-white/75">{industry.description}</p>
+                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan">
+                    View industry page <ArrowRight className="h-4 w-4" />
+                  </span>
+                </Link>
+              </ScrollReveal>
             ))}
           </div>
         </div>
