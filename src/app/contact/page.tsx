@@ -59,7 +59,22 @@ const nextSteps = [
   },
   {
     title: 'Recommended Next Steps',
-    description: 'You decide how to move forward — no pressure, no locked-in solutions.'
+    description: 'You decide how to move forward without pressure or locked-in solutions.'
+  }
+];
+
+const trustPoints = [
+  {
+    title: 'Independent & Vendor Neutral',
+    description: 'No software to sell, no referral fees to chase. Just practical AI guidance that fits your operations.'
+  },
+  {
+    title: 'Operational Experience',
+    description: 'We work with oil & gas and manufacturing environments, not tech labs.'
+  },
+  {
+    title: 'Recommended Next Steps',
+    description: 'You decide how to move forward, no pressure, no locked-in solutions.'
   }
 ];
 
@@ -192,7 +207,7 @@ export default function ContactPage() {
             <p className="eyebrow">Built for industrial businesses</p>
             <h2 className="mt-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl">Built for Industrial Businesses</h2>
             <p className="mt-4 text-base leading-7 text-white/72 sm:mt-5 sm:text-lg sm:leading-8">
-              We specialize in AI consulting for oil &amp; gas and manufacturing companies. Our focus is on practical, high-impact solutions — not experiments.
+              We specialize in AI consulting for oil &amp; gas and manufacturing companies. Our focus is on practical, high-impact solutions, not experiments.
             </p>
           </ScrollReveal>
         </div>

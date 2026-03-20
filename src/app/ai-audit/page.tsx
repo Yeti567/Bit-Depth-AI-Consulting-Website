@@ -86,7 +86,7 @@ export default function AIAuditPage() {
               AI Audit & Implementation Process
             </h1>
             <p className="mt-5 max-w-3xl text-base leading-7 text-white/72 sm:mt-6 sm:text-lg sm:leading-8 md:text-xl">
-              We don’t start with software — we start with your business. Our AI consulting process identifies real opportunities, then designs and implements solutions that deliver measurable ROI.
+              We don’t start with software; we start with your business. Our AI consulting process identifies real opportunities, then designs and implements solutions that deliver measurable ROI.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-4">
               <Link href="/contact" className="inline-flex min-h-12 items-center justify-center rounded-lg bg-amber px-6 py-3 text-sm font-semibold text-navy shadow-[0_12px_36px_rgba(245,158,11,0.3)] hover:-translate-y-0.5 hover:bg-amber-400 sm:px-8 sm:py-4 sm:text-base">

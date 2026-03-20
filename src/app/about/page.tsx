@@ -5,16 +5,16 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'About BitDepth AI Consulting | Practical AI Consulting for Industry',
+  title: 'About BitDepth AI Consulting | Industrial AI Consulting Firm',
   description:
-    'BitDepth AI Consulting delivers practical AI strategy and implementation for oil & gas and manufacturing. Learn about our founder-led approach, core philosophy, and capabilities.',
+    'Learn how BitDepth AI Consulting combines AI strategy consulting, machine learning consulting, and AI implementation services to help oil & gas and manufacturing leaders modernize their operations.',
   keywords: [
-    'AI consulting firm',
+    'industrial AI consulting firm',
+    'AI consultant',
+    'machine learning consulting',
     'AI strategy consulting',
-    'industrial AI solutions',
-    'digital transformation consultant',
-    'AI audit services',
-    'enterprise AI solutions'
+    'digital transformation consulting',
+    'predictive maintenance AI'
   ],
   alternates: {
     canonical: '/about'
@@ -62,7 +62,7 @@ export default function AboutPage() {
               About BitDepth AI Consulting
             </h1>
             <p className="mt-5 max-w-3xl text-base leading-7 text-white/72 sm:mt-6 sm:text-lg sm:leading-8">
-              Practical AI consulting built for real business operations — not theory. We help industrial companies design, implement, and scale AI solutions that deliver measurable results.
+              Practical AI consulting built for real business operations, not theory. We help industrial companies design, implement, and scale AI solutions that deliver measurable results.
             </p>
           </ScrollReveal>
           <ScrollReveal index={1} className="relative min-h-[260px] overflow-hidden rounded-[1.5rem] border border-cyan/20 bg-[#061323] shadow-[0_24px_70px_rgba(0,0,0,0.45)] sm:min-h-[360px] sm:rounded-[2rem] lg:min-h-[560px]">
@@ -95,7 +95,7 @@ export default function AboutPage() {
         <div className="container-shell grid gap-10 lg:grid-cols-[1.05fr,0.95fr] lg:items-center lg:gap-12">
           <ScrollReveal>
             <p className="eyebrow text-charcoal/60">Core philosophy</p>
-            <h2 className="mt-4 text-3xl font-extrabold leading-tight text-navy sm:text-4xl md:text-5xl">AI Starts With Data — Not Tools</h2>
+            <h2 className="mt-4 text-3xl font-extrabold leading-tight text-navy sm:text-4xl md:text-5xl">AI Starts With Data, Not Tools</h2>
             <p className="mt-4 text-base leading-7 text-charcoal/78 sm:mt-5 sm:text-lg sm:leading-8">
               Reliable, clean data is the backbone of every successful AI system.
             </p>
@@ -143,7 +143,7 @@ export default function AboutPage() {
             <p className="eyebrow text-charcoal/60">Capabilities</p>
             <h2 className="mt-4 text-3xl font-extrabold leading-tight text-navy sm:text-4xl md:text-5xl">What We Do</h2>
             <p className="mt-4 text-base leading-7 text-charcoal/78 sm:mt-5 sm:text-lg sm:leading-8">
-              We specialize in retrieving, cleaning, structuring, and activating data — then building AI systems and agentic workflows on top of that foundation.
+              We specialize in retrieving, cleaning, structuring, and activating data, then building AI systems and agentic workflows on top of that foundation.
             </p>
           </ScrollReveal>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -162,7 +162,7 @@ export default function AboutPage() {
             <p className="eyebrow">Canadian presence</p>
             <h2 className="mt-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl">Built in Canada, Serving Industry</h2>
             <p className="mt-4 text-base leading-7 text-white/72 sm:mt-5 sm:text-lg sm:leading-8">
-              BitDepth AI Consulting is a Canadian-based firm focused on helping businesses across oil &amp; gas, manufacturing, and industrial sectors adopt AI in a practical and effective way. We understand the realities of these industries — and we build solutions that work within them.
+              BitDepth AI Consulting is a Canadian-based firm focused on helping businesses across oil &amp; gas, manufacturing, and industrial sectors adopt AI in a practical and effective way. We understand the realities of these industries, and we build solutions that work within them.
             </p>
           </ScrollReveal>
           <ScrollReveal index={1} className="relative order-first min-h-[220px] overflow-hidden rounded-[1.5rem] border border-cyan/20 shadow-[0_24px_70px_rgba(0,0,0,0.28)] sm:min-h-[320px] sm:rounded-[2rem] lg:order-none lg:min-h-[520px]">

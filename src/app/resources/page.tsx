@@ -141,7 +141,7 @@ export default function ResourcesPage() {
               Practical insights on AI consulting, predictive maintenance, machine learning, and industrial automation.
             </p>
             <p className="mt-4 max-w-3xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">
-              Learn how AI is transforming oil &amp; gas, manufacturing, and industrial operations — with real-world strategies and use cases.
+              Learn how AI is transforming oil &amp; gas, manufacturing, and industrial operations with real-world strategies and use cases.
             </p>
           </ScrollReveal>
           <ScrollReveal index={1} className="relative min-h-[260px] overflow-hidden rounded-[1.6rem] border border-cyan/20 bg-[#061323] shadow-[0_24px_70px_rgba(0,0,0,0.45)] sm:min-h-[360px] sm:rounded-[2rem] lg:min-h-[560px]">

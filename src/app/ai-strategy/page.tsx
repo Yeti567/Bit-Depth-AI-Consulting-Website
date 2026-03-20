@@ -129,7 +129,7 @@ const industryFocus = [
 
 const whyPoints = [
   'We start with an AI audit, not a product pitch.',
-  'We are vendor-neutral — you choose the solution.',
+  'We are vendor-neutral, so you choose the solution.',
   'We focus on measurable ROI and adoption.',
   'We understand industrial environments and constraints.'
 ];
@@ -146,7 +146,7 @@ export default function AIStrategyPage() {
               AI Strategy & Implementation for Industrial Businesses
             </h1>
             <p className="mt-4 max-w-3xl text-base leading-7 text-white/72 sm:mt-5 sm:text-lg sm:leading-8 md:text-xl">
-              We help oil & gas and manufacturing companies design, validate, and deploy AI solutions that deliver real operational results — not experiments.
+              We help oil &amp; gas and manufacturing companies design, validate, and deploy AI solutions that deliver real operational results, not experiments.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-4">
               <Link href="/ai-audit" className="inline-flex min-h-12 items-center justify-center rounded-lg bg-amber px-6 py-3 text-sm font-semibold text-navy shadow-[0_12px_36px_rgba(245,158,11,0.3)] hover:-translate-y-0.5 hover:bg-amber-400 sm:px-8 sm:py-4 sm:text-base">
@@ -173,7 +173,7 @@ export default function AIStrategyPage() {
             </p>
             <p className="mt-3 text-base leading-7 text-white/72 sm:text-lg sm:leading-8">We take a different approach.</p>
             <p className="mt-3 text-base leading-7 text-white/72 sm:mt-4 sm:text-lg sm:leading-8">
-              Before recommending any technology, we perform a structured AI audit to uncover operational bottlenecks, data readiness, high-ROI automation opportunities, and integration constraints. This ensures every AI initiative is grounded in business value — not hype.
+              Before recommending any technology, we perform a structured AI audit to uncover operational bottlenecks, data readiness, high-ROI automation opportunities, and integration constraints. This ensures every AI initiative is grounded in business value, not hype.
             </p>
           </ScrollReveal>
         </div>
