@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.bitdepth.ai/sitemap.xml
+Sitemap: https://bitdepthaiconsulting.com/sitemap.xml

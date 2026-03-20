@@ -91,7 +91,7 @@ export function SiteFooter() {
       <div className="border-t border-white/10">
         <div className="container-shell flex flex-col gap-3 py-6 text-[13px] text-white/35 md:flex-row md:items-center md:justify-between">
           <p>2026 BitDepth AI Consulting Ltd. Barriere, British Columbia, Canada</p>
-          <p>www.bitdepth.ai</p>
+          <p>bitdepthaiconsulting.com</p>
         </div>
       </div>
     </footer>

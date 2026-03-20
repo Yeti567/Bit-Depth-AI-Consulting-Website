@@ -15,7 +15,7 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.bitdepth.ai'),
+  metadataBase: new URL('https://bitdepthaiconsulting.com'),
   title: {
     default: 'BitDepth AI Consulting Ltd.',
     template: '%s'
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     description:
       'Practical, vendor-neutral AI consulting for industrial and mid-market businesses across Canada.',
     type: 'website',
-    url: 'https://www.bitdepth.ai',
+    url: 'https://bitdepthaiconsulting.com',
     siteName: 'BitDepth AI Consulting Ltd.',
     locale: 'en_CA',
     images: [
