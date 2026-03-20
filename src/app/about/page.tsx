@@ -3,223 +3,196 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
-import { SectionHeading } from '@/components/ui/section-heading';
-import { contactDetails } from '@/lib/site-data';
 
 export const metadata: Metadata = {
-  title: 'About BitDepth AI Consulting | Vendor-Neutral AI Consulting in BC',
+  title: 'About BitDepth AI Consulting | Practical AI Consulting for Industry',
   description:
-    'BitDepth AI Consulting is a Barriere, BC-based vendor-neutral AI advisory firm serving Canadian oil and gas and manufacturing companies. We audit first, then build what works.',
+    'BitDepth AI Consulting delivers practical AI strategy and implementation for oil & gas and manufacturing. Learn about our founder-led approach, core philosophy, and capabilities.',
   keywords: [
-    'vendor-neutral AI consulting British Columbia',
-    'AI consultant Canada',
-    'AI consulting firm Western Canada',
-    'data analytics consultant BC',
-    'technology consulting services',
-    'digital transformation consultant Canada'
+    'AI consulting firm',
+    'AI strategy consulting',
+    'industrial AI solutions',
+    'digital transformation consultant',
+    'AI audit services',
+    'enterprise AI solutions'
   ],
   alternates: {
     canonical: '/about'
   },
   openGraph: {
-    title: 'About BitDepth AI Consulting | Vendor-Neutral AI Consulting in BC',
+    title: 'About BitDepth AI Consulting | Practical AI Consulting for Industry',
     description:
-      'Learn how BitDepth AI Consulting delivers vendor-neutral, audit-first AI advisory services for Canadian industrial businesses.',
+      'Discover how BitDepth AI Consulting helps industrial businesses build measurable AI solutions from data foundations to deployment.',
     url: '/about',
-    type: 'article',
+    type: 'website',
     images: [
       {
-        url: '/images/Social Media Profile Card.webp',
+        url: '/images/about-hero.webp',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting founder profile placeholder and brand card'
+        alt: 'BitDepth AI Consulting industrial hero image'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About BitDepth AI Consulting | Vendor-Neutral AI Consulting in BC',
-    description:
-      'BitDepth AI Consulting is an independent, vendor-neutral AI advisory firm serving Canadian oil and gas and manufacturing companies.',
-    images: ['/images/Social Media Profile Card.webp']
+    title: 'About BitDepth AI Consulting | Practical AI Consulting for Industry',
+    description: 'Learn about our founder-led AI consulting practice built for oil & gas and manufacturing operations.',
+    images: ['/images/about-hero.webp']
   }
 };
 
-const values = [
-  {
-    title: 'Clarity over complexity',
-    description:
-      'We translate AI into business outcomes. We avoid jargon when plain language works better. Every recommendation comes with a clear explanation of why.'
-  },
-  {
-    title: 'Data integrity first',
-    description:
-      'Reliable AI starts with clean, well-structured data. We address data quality issues before implementation, not after.'
-  },
-  {
-    title: 'Implementation over theory',
-    description:
-      'We build systems, not just reports. Every engagement produces working deliverables, not slide decks that collect dust.'
-  },
-  {
-    title: 'Client ROI as the north star',
-    description:
-      'Every engagement ties back to measurable value. We define success metrics before we start and report against them when we finish.'
-  },
-  {
-    title: 'Canadian-first perspective',
-    description:
-      'We understand the regulatory, cultural, and economic context of doing business in Canada. PIPEDA and PIPA compliance is built into every engagement, not treated as an afterthought.'
-  }
+const capabilityItems = [
+  'AI Audit & Strategy',
+  'Data Engineering & Pipelines',
+  'Machine Learning Implementation',
+  'Agentic Workflows & Automation',
+  'AI Integration & Deployment'
 ];
 
 export default function AboutPage() {
   return (
     <PageShell>
-      <section className="section-navy section-angle relative overflow-hidden">
-        <div className="pointer-events-none absolute left-1/2 top-1/2 hidden h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan/10 md:block" />
-        <div className="pointer-events-none absolute left-1/2 top-1/2 hidden h-[900px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan/5 md:block" />
-        <div className="container-shell relative py-16 sm:py-20 md:py-28">
-          <ScrollReveal className="max-w-4xl">
-            <p className="industry-pill inline-flex">About BitDepth</p>
-            <h1 className="mt-6 text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">Vendor-Neutral AI Consulting for Canadian Industrial Businesses</h1>
-            <p className="mt-6 text-lg leading-8 text-white/75">
-              BitDepth AI Consulting Ltd. is an independent AI advisory firm based in Barriere, British Columbia. We serve Canadian small and mid-market businesses in oil and gas and manufacturing that are ready to adopt AI, but want to do it based on evidence and operational fit rather than a vendor&apos;s sales pitch.
-            </p>
-            <p className="mt-6 text-lg leading-8 text-white/75">
-              We do not sell software. We do not have preferred platforms. We do not receive referral fees from technology vendors. Our business model is simple: we sell outcomes, not software. Our success is measured by the operational improvements our clients achieve.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <section className="section-light-grid section-space">
-        <div className="container-shell grid gap-10 lg:grid-cols-[minmax(0,7fr),minmax(280px,3fr)] lg:items-start">
-          <div className="space-y-8">
-            <ScrollReveal>
-              <SectionHeading
-                eyebrow="Story"
-                title="Why BitDepth exists"
-                description="The practice was built to bring enterprise-grade AI thinking to Canadian mid-market operators without vendor pressure or enterprise pricing."
-              />
-            </ScrollReveal>
-
-            <ScrollReveal className="surface-card p-6 sm:p-8 md:p-10" index={0}>
-              <h2 className="text-3xl font-bold text-navy">Why We Started BitDepth</h2>
-              <p className="mt-6 text-lg leading-8 text-charcoal/82">
-                The AI consulting market is heavily skewed toward large enterprise clients. Deloitte, Accenture, and their peers start engagements at $50,000 and scale into the hundreds of thousands. The Canadian mid-market sits outside that window entirely.
-              </p>
-              <p className="mt-6 text-lg leading-8 text-charcoal/82">
-                At the same time, the SMB AI adoption segment is growing at 25.7 percent annually, faster than any other segment in the industry. There are thousands of Canadian businesses in oil and gas and manufacturing with the data, the operations, and the problems worth solving. They just have no trusted advisor to help them navigate the technology landscape without a sales agenda behind every recommendation.
-              </p>
-              <p className="mt-6 text-lg leading-8 text-charcoal/82">
-                BitDepth was built to be that advisor. We brought together practical experience across AI architecture, data systems, enterprise automation, and SMB business operations to create a consulting practice that delivers enterprise-grade thinking at a price point that fits the mid-market.
-              </p>
-            </ScrollReveal>
-
-            <ScrollReveal className="surface-card p-6 sm:p-8 md:p-10" index={1}>
-              <h2 className="text-3xl font-bold text-navy">Our Methodology: Discovery-First AI Consulting</h2>
-              <p className="mt-6 text-lg leading-8 text-charcoal/82">
-                The methodology that drives every BitDepth engagement is built around one principle: understand before you build.
-              </p>
-              <p className="mt-6 text-lg leading-8 text-charcoal/82">
-                Too many AI projects fail because implementation starts before the problem is properly defined. The audit-first approach forces a structured diagnosis. It surfaces the data realities, the process constraints, and the organizational factors that determine whether an AI system will actually be used and whether it will deliver measurable value.
-              </p>
-              <p className="mt-6 text-lg leading-8 text-charcoal/82">
-                Every client engagement follows the same sequence: audit, prioritize, build, measure. The audit generates the evidence base. Prioritization selects the highest-value, lowest-risk starting point. Implementation builds the system with clear success metrics defined in advance. Measurement validates the outcome and informs the next phase.
-              </p>
-            </ScrollReveal>
-
-            <ScrollReveal className="surface-card p-6 sm:p-8 md:p-10" index={2}>
-              <h2 className="text-3xl font-bold text-navy">What Vendor-Neutral AI Consulting Actually Means</h2>
-              <p className="mt-6 text-lg leading-8 text-charcoal/82">
-                Vendor-neutral means we enter every engagement without a predetermined answer. We have no financial relationship with any AI platform, no referral agreements, and no software to sell.
-              </p>
-              <p className="mt-6 text-lg leading-8 text-charcoal/82">
-                When we recommend a tool, it is because that tool fits your operations, your data environment, your budget, and your team&apos;s capacity to operate it. We present options. We explain the trade-offs. You make the decision.
-              </p>
-              <p className="mt-6 text-lg leading-8 text-charcoal/82">
-                Where appropriate, we present multiple vendor or platform options and help the client choose the path that best fits their operations, budget, and long-term goals.
-              </p>
-            </ScrollReveal>
-          </div>
-
-          <aside className="hidden lg:block">
-            <div className="sticky top-28 space-y-6">
-              <ScrollReveal className="surface-card overflow-hidden p-0" index={1}>
-                <div className="relative aspect-[4/5] w-full">
-                  <Image src="/images/Social Media Profile Card.webp" alt="BitDepth founder profile placeholder" fill className="object-cover" />
-                </div>
-                <div className="p-6 sm:p-8">
-                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan">Founder Contact</p>
-                  <h2 className="mt-4 text-2xl font-bold text-navy">BitDepth AI Consulting Ltd.</h2>
-                  <p className="mt-4 text-charcoal/82">Independent AI advisory for Canadian industrial businesses that need operational clarity before implementation.</p>
-                  <div className="mt-6 space-y-3 text-sm text-charcoal/80">
-                    <p>{contactDetails.location}</p>
-                    <p>{contactDetails.email}</p>
-                    <p>{contactDetails.phone}</p>
-                  </div>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal className="cta-shell p-6 sm:p-8" index={2}>
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan">Next Step</p>
-                <h2 className="mt-4 text-2xl font-bold text-white">Book a Discovery Call</h2>
-                <p className="mt-4 text-white/65">Talk through your operating environment, goals, and whether an audit-first engagement is the right fit.</p>
-                <Link href="/contact" className="btn-primary mt-6 inline-flex">
-                  Book a Discovery Call
-                </Link>
-              </ScrollReveal>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <section className="section-dark section-space relative overflow-hidden">
-        <div className="absolute inset-0 opacity-60" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(0, 180, 216, 0.08) 1px, transparent 0)', backgroundSize: '28px 28px' }} />
-        <div className="container-shell relative">
+      <section className="section-navy relative overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,180,216,0.12),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(245,158,11,0.08),transparent_28%)]" />
+        <div className="container-shell grid gap-10 py-12 sm:py-16 lg:grid-cols-[1.05fr,0.95fr] lg:items-center lg:gap-12 lg:py-28">
           <ScrollReveal>
-            <SectionHeading eyebrow="Core Values" title="Core Values That Drive Our AI Consulting Practice" theme="dark" />
+            <p className="industry-pill inline-flex">About BitDepth</p>
+            <h1 className="mt-5 max-w-3xl text-[2.4rem] font-extrabold leading-[1.05] text-white sm:mt-6 sm:text-5xl md:text-[62px]">
+              About BitDepth AI Consulting
+            </h1>
+            <p className="mt-5 max-w-3xl text-base leading-7 text-white/72 sm:mt-6 sm:text-lg sm:leading-8">
+              Practical AI consulting built for real business operations — not theory. We help industrial companies design, implement, and scale AI solutions that deliver measurable results.
+            </p>
           </ScrollReveal>
-          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
-            {values.map((value, index) => (
-              <ScrollReveal key={value.title} index={index}>
-                <div className="surface-card-dark h-full p-6 sm:p-8">
-                  <h3 className="text-xl font-semibold text-white">{value.title}</h3>
-                  <p className="mt-4 text-white/75">{value.description}</p>
-                </div>
+          <ScrollReveal index={1} className="relative min-h-[260px] overflow-hidden rounded-[1.5rem] border border-cyan/20 bg-[#061323] shadow-[0_24px_70px_rgba(0,0,0,0.45)] sm:min-h-[360px] sm:rounded-[2rem] lg:min-h-[560px]">
+            <Image src="/images/about-hero.webp" alt="Industrial about hero" fill priority className="object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-br from-navy/70 via-navy/10 to-transparent" />
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="section-dark py-12 md:py-24">
+        <div className="container-shell grid gap-10 lg:grid-cols-[0.95fr,1fr] lg:items-center lg:gap-12">
+          <ScrollReveal>
+            <p className="eyebrow">Founder story</p>
+            <h2 className="mt-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl">Built From Real-World Experience</h2>
+            <p className="mt-4 text-base leading-7 text-white/72 sm:mt-5 sm:text-lg sm:leading-8">
+              My name is Blake Cowan, founder of BitDepth AI Consulting Ltd. I’ve been working in AI consulting since 2019, helping businesses understand how to apply AI in real operational environments. In 2026, I made the decision to build BitDepth into a full-time consulting firm focused on delivering practical, results-driven AI solutions.
+            </p>
+            <p className="mt-4 text-base leading-7 text-white/72 sm:text-lg sm:leading-8">
+              Through years of working with businesses, one thing became clear: most AI projects fail because the data isn’t ready. That insight became the foundation of everything we do.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal index={1} className="relative order-first min-h-[240px] overflow-hidden rounded-[1.5rem] border border-cyan/20 shadow-[0_24px_70px_rgba(0,0,0,0.28)] sm:min-h-[320px] sm:rounded-[2rem] lg:order-none lg:min-h-[520px]">
+            <Image src="/images/about-founder.webp" alt="BitDepth founder portrait" fill className="object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#081221] via-transparent to-[#081221]/10" />
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="bg-offwhite py-12 md:py-24">
+        <div className="container-shell grid gap-10 lg:grid-cols-[1.05fr,0.95fr] lg:items-center lg:gap-12">
+          <ScrollReveal>
+            <p className="eyebrow text-charcoal/60">Core philosophy</p>
+            <h2 className="mt-4 text-3xl font-extrabold leading-tight text-navy sm:text-4xl md:text-5xl">AI Starts With Data — Not Tools</h2>
+            <p className="mt-4 text-base leading-7 text-charcoal/78 sm:mt-5 sm:text-lg sm:leading-8">
+              Reliable, clean data is the backbone of every successful AI system.
+            </p>
+            <ul className="mt-6 space-y-3 text-charcoal/78">
+              <li>• Data collection and integration</li>
+              <li>• Data cleaning and normalization</li>
+              <li>• Structuring data for machine learning systems</li>
+              <li>• Building scalable data pipelines</li>
+            </ul>
+            <p className="mt-6 text-base leading-7 text-charcoal/78 sm:text-lg sm:leading-8">Without this foundation, AI systems fail to deliver value.</p>
+          </ScrollReveal>
+          <ScrollReveal index={1} className="relative order-first min-h-[220px] overflow-hidden rounded-[1.5rem] border border-black/5 shadow-[0_24px_70px_rgba(0,0,0,0.2)] sm:min-h-[320px] sm:rounded-[2rem] lg:order-none lg:min-h-[500px]">
+            <Image src="/images/about-data.webp" alt="Data pipelines and AI visualization" fill className="object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F3B]/70 via-transparent to-transparent" />
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="section-navy-soft py-12 md:py-24">
+        <div className="container-shell grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-center lg:gap-12">
+          <ScrollReveal>
+            <p className="eyebrow">What makes us different</p>
+            <h2 className="mt-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl">Our Approach Is Different</h2>
+            <p className="mt-4 text-base leading-7 text-white/72 sm:mt-5 sm:text-lg sm:leading-8">
+              Most AI consulting firms start by selling tools. We don’t. We begin every engagement with an AI audit to identify where automation makes sense, what data is available (and what’s missing), and which systems will deliver the highest ROI.
+            </p>
+            <p className="mt-4 text-base leading-7 text-white/72 sm:text-lg sm:leading-8">
+              This ensures no wasted investment, faster results, and systems that actually get used.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal index={1} className="rounded-[1.5rem] border border-white/12 bg-white/[0.04] p-6 shadow-[0_25px_70px_rgba(0,0,0,0.35)] sm:p-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan">Audit-first lens</p>
+            <ul className="mt-4 space-y-3 text-white/78">
+              <li>• Identify the highest-impact opportunities before implementation.</li>
+              <li>• Understand your data reality and integration constraints.</li>
+              <li>• Recommend solutions only after evidence-based analysis.</li>
+            </ul>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="bg-offwhite py-12 md:py-24">
+        <div className="container-shell">
+          <ScrollReveal className="max-w-3xl">
+            <p className="eyebrow text-charcoal/60">Capabilities</p>
+            <h2 className="mt-4 text-3xl font-extrabold leading-tight text-navy sm:text-4xl md:text-5xl">What We Do</h2>
+            <p className="mt-4 text-base leading-7 text-charcoal/78 sm:mt-5 sm:text-lg sm:leading-8">
+              We specialize in retrieving, cleaning, structuring, and activating data — then building AI systems and agentic workflows on top of that foundation.
+            </p>
+          </ScrollReveal>
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {capabilityItems.map((item) => (
+              <ScrollReveal key={item} className="rounded-2xl border border-black/5 bg-white p-5 text-left shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
+                <p className="text-xl font-semibold text-navy">{item}</p>
               </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section-space section-accent-left bg-white">
-        <div className="container-shell grid gap-10 lg:grid-cols-[1.15fr,0.85fr] lg:items-center">
+      <section className="section-dark py-12 md:py-24">
+        <div className="container-shell grid gap-10 lg:grid-cols-[1fr,0.95fr] lg:items-center lg:gap-12">
           <ScrollReveal>
-            <p className="eyebrow">Mission & Geography</p>
-            <h2 className="mt-4 text-3xl font-bold text-navy md:text-5xl">Based in Barriere, Serving Western Canada</h2>
-            <p className="mt-6 text-lg leading-8 text-charcoal/82">
-              BitDepth is headquartered in Barriere, British Columbia. Our primary markets are the BC Interior, the Lower Mainland, and Alberta. We work remotely across Western Canada and accept select engagements across all Canadian provinces.
+            <p className="eyebrow">Canadian presence</p>
+            <h2 className="mt-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl">Built in Canada, Serving Industry</h2>
+            <p className="mt-4 text-base leading-7 text-white/72 sm:mt-5 sm:text-lg sm:leading-8">
+              BitDepth AI Consulting is a Canadian-based firm focused on helping businesses across oil &amp; gas, manufacturing, and industrial sectors adopt AI in a practical and effective way. We understand the realities of these industries — and we build solutions that work within them.
             </p>
-            <p className="mt-6 text-lg leading-8 text-charcoal/82">
-              Being based in the BC Interior gives us direct access to the resource, energy, and manufacturing sectors that drive the regional economy. We understand the operational realities of businesses in communities that large consulting firms rarely visit.
+          </ScrollReveal>
+          <ScrollReveal index={1} className="relative order-first min-h-[220px] overflow-hidden rounded-[1.5rem] border border-cyan/20 shadow-[0_24px_70px_rgba(0,0,0,0.28)] sm:min-h-[320px] sm:rounded-[2rem] lg:order-none lg:min-h-[520px]">
+            <Image src="/images/about-cta.webp" alt="Canadian industrial presence" fill className="object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#081221] via-transparent to-[#081221]/10" />
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden py-12 md:py-24">
+        <div className="absolute inset-0">
+          <Image src="/images/about-cta.webp" alt="About page CTA backdrop" fill className="object-cover" />
+          <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(17,24,39,0.88),rgba(11,31,59,0.82),rgba(27,36,52,0.86))]" />
+        </div>
+        <div className="container-shell">
+          <ScrollReveal className="relative rounded-[1.5rem] border border-amber/20 bg-[linear-gradient(135deg,rgba(245,158,11,0.12),rgba(255,255,255,0.02))] px-5 py-8 text-white shadow-[0_30px_80px_rgba(0,0,0,0.35)] backdrop-blur-[2px] sm:px-8 sm:py-10 md:rounded-[2rem] md:px-12 md:py-14">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber">Start with an audit</p>
+            <h2 className="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl">Start With an AI Audit</h2>
+            <p className="mt-4 max-w-3xl text-base text-white/72 sm:mt-5 sm:text-lg">
+              Before you automate anything, understand where AI will actually deliver value. Let’s get your business the information it needs to succeed.
             </p>
+            <div className="mt-6 space-y-2 text-white/80">
+              <p>Phone: <Link href="tel:7808325158" className="text-white hover:text-amber">780-832-5158</Link></p>
+              <p>Email: <Link href="mailto:blake@bitdepthaiconsulting.com" className="text-white hover:text-amber">blake@bitdepthaiconsulting.com</Link></p>
+            </div>
             <div className="mt-8">
-              <Link href="/contact" className="btn-primary inline-flex">
-                Book a Discovery Call
+              <Link href="/contact" className="inline-flex min-h-12 items-center justify-center rounded-lg bg-amber px-6 py-3 text-sm font-semibold text-navy shadow-[0_12px_36px_rgba(245,158,11,0.32)] hover:-translate-y-0.5 hover:bg-amber-400 sm:px-8 sm:py-4 sm:text-base">
+                Book Your AI Assessment
               </Link>
             </div>
-          </ScrollReveal>
-          <ScrollReveal className="surface-card p-6 sm:p-8 md:p-10" index={1}>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan">Mission Statement</p>
-            <h3 className="mt-4 text-2xl font-bold text-navy">We audit first, then build what works.</h3>
-            <p className="mt-6 text-lg leading-8 text-charcoal/82">
-              BitDepth exists to give Canadian industrial and mid-market businesses access to practical, evidence-based AI consulting without vendor pressure, enterprise-level price tags, or vague strategy work that never reaches implementation.
-            </p>
-            <p className="mt-6 text-lg leading-8 text-charcoal/82">
-              We help leadership teams understand their current state, identify the right starting point, and move toward measurable operational outcomes with confidence.
-            </p>
           </ScrollReveal>
         </div>
       </section>
