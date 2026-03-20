@@ -170,25 +170,25 @@ export default function HomePage() {
         <div className="hero-particle left-[22%] top-[68%] h-2.5 w-2.5" style={{ animationDelay: '1.2s' }} />
         <div className="hero-particle right-[14%] top-[22%] h-2 w-2" style={{ animationDelay: '2.1s' }} />
         <div className="hero-particle right-[26%] top-[60%] h-3 w-3" style={{ animationDelay: '3.2s' }} />
-        <div className="container-shell relative grid min-h-[calc(100svh-4rem)] gap-12 py-16 sm:py-20 lg:grid-cols-[1fr,1.05fr] lg:items-center lg:py-28">
+        <div className="container-shell relative grid min-h-[calc(100svh-4rem)] gap-10 py-12 sm:py-16 lg:grid-cols-[1fr,1.05fr] lg:items-center lg:gap-12 lg:py-28">
           <ScrollReveal>
             <p className="industry-pill inline-flex">Premium Industrial AI Consulting</p>
-            <h1 className="mt-6 max-w-3xl text-4xl font-extrabold leading-tight text-white sm:text-5xl md:text-[64px]">
+            <h1 className="mt-5 max-w-3xl text-[2.35rem] font-extrabold leading-[1.05] text-white sm:mt-6 sm:text-5xl md:text-[64px]">
               AI Consulting Firm for Real-World Operations
             </h1>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-white/72 sm:text-xl">
+            <p className="mt-5 max-w-3xl text-base leading-7 text-white/72 sm:mt-6 sm:text-lg sm:leading-8 md:text-xl">
               We deliver AI consulting, machine learning consulting, and digital transformation solutions for oil and gas and manufacturing companies. We start with an AI audit to uncover real operational inefficiencies, then implement the right solution.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
-              <Link href="/contact" className="inline-flex items-center justify-center rounded-lg bg-amber px-6 py-3 text-sm font-semibold text-navy shadow-[0_12px_36px_rgba(245,158,11,0.3)] hover:-translate-y-0.5 hover:bg-amber-400 sm:px-8 sm:py-4 sm:text-base">
+            <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-4">
+              <Link href="/contact" className="inline-flex min-h-12 items-center justify-center rounded-lg bg-amber px-6 py-3 text-sm font-semibold text-navy shadow-[0_12px_36px_rgba(245,158,11,0.3)] hover:-translate-y-0.5 hover:bg-amber-400 sm:px-8 sm:py-4 sm:text-base">
                 Book an AI Audit
               </Link>
-              <Link href="#how-we-work" className="btn-secondary text-white">
+              <Link href="#how-we-work" className="btn-secondary min-h-12 text-white">
                 See How It Works
               </Link>
             </div>
           </ScrollReveal>
-          <ScrollReveal index={1} className="relative min-h-[360px] overflow-hidden rounded-[2rem] border border-cyan/20 bg-[#061323] shadow-[0_24px_70px_rgba(0,0,0,0.45)] lg:min-h-[620px]">
+          <ScrollReveal index={1} className="relative min-h-[300px] overflow-hidden rounded-[1.5rem] border border-cyan/20 bg-[#061323] shadow-[0_24px_70px_rgba(0,0,0,0.45)] sm:min-h-[360px] sm:rounded-[2rem] lg:min-h-[620px]">
             <Image
               src="/images/Home page hero image revised.png"
               alt="Industrial facility with subtle AI overlay lines and data nodes"
@@ -208,9 +208,9 @@ export default function HomePage() {
       </section>
 
       <section className="border-y border-white/10 bg-[#0E1728] py-5 text-white">
-        <div className="container-shell flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div className="container-shell flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan">Built for real-world operations, not theoretical AI.</p>
-          <div className="flex flex-col gap-2 text-sm text-white/65 sm:flex-row sm:flex-wrap sm:items-center sm:gap-5">
+          <div className="flex flex-col gap-2 text-sm leading-6 text-white/65 sm:flex-row sm:flex-wrap sm:items-center sm:gap-5">
             <span>Vendor-neutral AI consulting</span>
             <span className="hidden h-4 w-px bg-white/15 sm:block" />
             <span>Outcome-driven engagements</span>
@@ -220,18 +220,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="how-we-work" className="section-dark section-space">
+      <section id="how-we-work" className="section-dark py-14 md:py-24">
         <div className="container-shell">
           <ScrollReveal className="max-w-3xl">
             <p className="eyebrow">How We Work</p>
-            <h2 className="mt-4 text-3xl font-extrabold text-white sm:text-4xl md:text-5xl">A practical path from AI audit to implementation</h2>
-            <p className="mt-5 text-lg text-white/65">
+            <h2 className="mt-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl">A practical path from AI audit to implementation</h2>
+            <p className="mt-4 text-base text-white/65 sm:mt-5 sm:text-lg">
               We lead with operational reality. Our AI audit services, AI strategy consulting, and AI implementation services are designed to move from assessment to delivery without losing sight of ROI.
             </p>
           </ScrollReveal>
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          <div className="mt-10 grid gap-5 sm:mt-12 lg:grid-cols-3">
             {processSteps.map((item, index) => (
-              <ScrollReveal key={item.title} as="article" className="surface-card-dark h-full p-8" index={index}>
+              <ScrollReveal key={item.title} as="article" className="surface-card-dark h-full p-6 sm:p-8" index={index}>
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan">Step {item.step}</p>
                 <h3 className="mt-5 text-2xl font-semibold text-white">{item.title}</h3>
                 <p className="mt-4 text-white/72">{item.description}</p>
@@ -241,25 +241,25 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-space bg-offwhite">
+      <section className="py-14 md:py-24 bg-offwhite">
         <div className="container-shell">
           <ScrollReveal className="max-w-3xl">
             <p className="eyebrow">Industries</p>
-            <h2 className="mt-4 text-3xl font-extrabold sm:text-4xl md:text-5xl">Industrial AI consulting built for the environments where operations matter most</h2>
-            <p className="mt-5 text-lg text-charcoal/72">
+            <h2 className="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl">Industrial AI consulting built for the environments where operations matter most</h2>
+            <p className="mt-4 text-base text-charcoal/72 sm:mt-5 sm:text-lg">
               We design AI programs for sectors where downtime, quality, and field execution have direct financial consequences.
             </p>
           </ScrollReveal>
-          <div className="mt-12 grid gap-6 lg:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-10 grid gap-5 sm:mt-12 lg:grid-cols-2 xl:grid-cols-4">
             {industries.map((industry, index) => (
               <ScrollReveal key={industry.title} as="article" className="surface-card group h-full overflow-hidden p-0" index={index}>
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-56 overflow-hidden sm:h-64">
                   <Image src={industry.image} alt={industry.alt} fill className="object-cover transition duration-500 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#081221] via-[#081221]/30 to-transparent" />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-semibold text-navy">{industry.title}</h3>
-                  <p className="mt-4 text-charcoal/78">{industry.description}</p>
+                <div className="p-5 sm:p-6">
+                  <h3 className="text-xl font-semibold text-navy sm:text-2xl">{industry.title}</h3>
+                  <p className="mt-3 text-charcoal/78 sm:mt-4">{industry.description}</p>
                   <Link href={industry.href} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan">
                     Learn more <ArrowRight className="h-4 w-4" />
                   </Link>
@@ -270,26 +270,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-navy-soft section-space">
-        <div className="container-shell grid gap-12 lg:grid-cols-[1fr,0.95fr] lg:items-center">
+      <section className="section-navy-soft py-14 md:py-24">
+        <div className="container-shell grid gap-10 lg:grid-cols-[1fr,0.95fr] lg:items-center lg:gap-12">
           <div>
             <ScrollReveal>
               <p className="eyebrow">Services</p>
-              <h2 className="mt-4 text-3xl font-extrabold text-white sm:text-4xl md:text-5xl">Our AI Consulting Services</h2>
-              <p className="mt-5 max-w-2xl text-lg text-white/68">
+              <h2 className="mt-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl">Our AI Consulting Services</h2>
+              <p className="mt-4 max-w-2xl text-base text-white/68 sm:mt-5 sm:text-lg">
                 We bring consulting discipline and implementation depth across AI strategy consulting, machine learning consulting, predictive maintenance, computer vision, Industrial IoT, digital twin solutions, and generative AI automation.
               </p>
             </ScrollReveal>
-            <div className="mt-10 grid gap-5 sm:grid-cols-2">
+            <div className="mt-8 grid gap-4 sm:mt-10 sm:grid-cols-2 sm:gap-5">
               {services.map((service, index) => (
-                <ScrollReveal key={service.title} className="surface-card-dark p-6" index={index}>
-                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                <ScrollReveal key={service.title} className="surface-card-dark p-5 sm:p-6" index={index}>
+                  <h3 className="text-lg font-semibold text-white sm:text-xl">{service.title}</h3>
                   <p className="mt-3 text-white/72">{service.description}</p>
                 </ScrollReveal>
               ))}
             </div>
           </div>
-          <ScrollReveal index={1} className="relative min-h-[360px] overflow-hidden rounded-[2rem] border border-cyan/20 shadow-[0_24px_70px_rgba(0,0,0,0.4)] lg:min-h-[640px]">
+          <ScrollReveal index={1} className="relative order-first min-h-[280px] overflow-hidden rounded-[1.5rem] border border-cyan/20 shadow-[0_24px_70px_rgba(0,0,0,0.4)] sm:min-h-[360px] sm:rounded-[2rem] lg:order-none lg:min-h-[640px]">
             <Image
               src="/images/Industrial data dashboard in dim environment revised.png"
               alt="Industrial environment with AI dashboard overlays and monitoring data"
@@ -301,20 +301,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-space bg-[#F7F8FB]">
+      <section className="py-14 md:py-24 bg-[#F7F8FB]">
         <div className="container-shell">
           <ScrollReveal className="max-w-3xl">
             <p className="eyebrow">Problem to Outcome</p>
-            <h2 className="mt-4 text-3xl font-extrabold sm:text-4xl md:text-5xl">From Operational Problems to Measurable Outcomes</h2>
-            <p className="mt-5 text-lg text-charcoal/72">
+            <h2 className="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl">From Operational Problems to Measurable Outcomes</h2>
+            <p className="mt-4 text-base text-charcoal/72 sm:mt-5 sm:text-lg">
               We focus on measurable business improvement, from predictive maintenance to computer vision quality control and process automation.
             </p>
           </ScrollReveal>
-          <div className="mt-12 grid gap-5 lg:grid-cols-2 xl:grid-cols-5">
+          <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-5 lg:grid-cols-2 xl:grid-cols-5">
             {outcomes.map((item, index) => (
-              <ScrollReveal key={item.problem} className="surface-card h-full p-6" index={index}>
+              <ScrollReveal key={item.problem} className="surface-card h-full p-5 sm:p-6" index={index}>
                 <p className="text-sm font-semibold uppercase tracking-[0.16em] text-charcoal/45">Problem</p>
-                <h3 className="mt-3 text-xl font-semibold text-navy">{item.problem}</h3>
+                <h3 className="mt-3 text-lg font-semibold text-navy sm:text-xl">{item.problem}</h3>
                 <div className="mt-5 h-px w-12 bg-amber" />
                 <p className="mt-5 text-sm font-semibold uppercase tracking-[0.16em] text-charcoal/45">Outcome</p>
                 <p className="mt-3 text-charcoal/78">{item.outcome}</p>
@@ -324,26 +324,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-dark section-space">
+      <section className="section-dark py-14 md:py-24">
         <div className="container-shell grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
           <div>
             <ScrollReveal>
               <p className="eyebrow">Why BitDepth</p>
-              <h2 className="mt-4 text-3xl font-extrabold text-white sm:text-4xl md:text-5xl">We do not sell software.</h2>
+              <h2 className="mt-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl">We do not sell software.</h2>
             </ScrollReveal>
-            <ScrollReveal className="mt-8 space-y-5 text-lg text-white/72" index={1}>
+            <ScrollReveal className="mt-6 space-y-4 text-base text-white/72 sm:mt-8 sm:space-y-5 sm:text-lg" index={1}>
               <p>We are an AI consulting firm that starts with your business, not a product.</p>
               <p>
                 Every engagement begins with an AI audit to uncover real inefficiencies, followed by a vendor-neutral recommendation and implementation plan.
               </p>
             </ScrollReveal>
-            <ScrollReveal className="mt-8 grid gap-4 sm:grid-cols-3" index={2}>
-              <div className="rounded-2xl border border-cyan/15 bg-white/5 p-5 text-white">ROI-driven AI solutions</div>
-              <div className="rounded-2xl border border-cyan/15 bg-white/5 p-5 text-white">Practical implementation</div>
-              <div className="rounded-2xl border border-cyan/15 bg-white/5 p-5 text-white">Industrial-grade reliability</div>
+            <ScrollReveal className="mt-8 grid gap-3 sm:grid-cols-3 sm:gap-4" index={2}>
+              <div className="rounded-2xl border border-cyan/15 bg-white/5 p-4 text-white sm:p-5">ROI-driven AI solutions</div>
+              <div className="rounded-2xl border border-cyan/15 bg-white/5 p-4 text-white sm:p-5">Practical implementation</div>
+              <div className="rounded-2xl border border-cyan/15 bg-white/5 p-4 text-white sm:p-5">Industrial-grade reliability</div>
             </ScrollReveal>
           </div>
-          <ScrollReveal index={1} className="relative min-h-[320px] overflow-hidden rounded-[2rem] border border-cyan/15 shadow-[0_24px_70px_rgba(0,0,0,0.38)] lg:min-h-[520px]">
+          <ScrollReveal index={1} className="relative min-h-[280px] overflow-hidden rounded-[1.5rem] border border-cyan/15 shadow-[0_24px_70px_rgba(0,0,0,0.38)] sm:min-h-[320px] sm:rounded-[2rem] lg:min-h-[520px]">
             <Image
               src="/images/Engineers examining data in high-tech factory revised.png"
               alt="Consulting-style industrial planning session with operational data in view"
@@ -355,16 +355,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24" style={{ background: 'linear-gradient(135deg, #111827 0%, #0B1F3B 65%, #1b2434 100%)' }}>
+      <section className="py-14 md:py-24" style={{ background: 'linear-gradient(135deg, #111827 0%, #0B1F3B 65%, #1b2434 100%)' }}>
         <div className="container-shell">
-          <ScrollReveal className="rounded-[2rem] border border-amber/20 bg-[linear-gradient(135deg,rgba(245,158,11,0.12),rgba(255,255,255,0.02))] px-8 py-10 shadow-[0_30px_80px_rgba(0,0,0,0.35)] md:px-12 md:py-14">
+          <ScrollReveal className="rounded-[1.5rem] border border-amber/20 bg-[linear-gradient(135deg,rgba(245,158,11,0.12),rgba(255,255,255,0.02))] px-5 py-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)] sm:px-8 sm:py-10 md:rounded-[2rem] md:px-12 md:py-14">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber">Start with clarity</p>
-            <h2 className="mt-4 max-w-3xl text-3xl font-extrabold text-white sm:text-4xl md:text-5xl">Start With an AI Audit, Not a Guess</h2>
-            <p className="mt-5 max-w-3xl text-lg text-white/72">
+            <h2 className="mt-4 max-w-3xl text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl">Start With an AI Audit, Not a Guess</h2>
+            <p className="mt-4 max-w-3xl text-base text-white/72 sm:mt-5 sm:text-lg">
               Discover where AI can actually deliver ROI in your business before investing in technology.
             </p>
             <div className="mt-8">
-              <Link href="/contact" className="inline-flex items-center justify-center rounded-lg bg-amber px-6 py-3 text-sm font-semibold text-navy shadow-[0_12px_36px_rgba(245,158,11,0.32)] hover:-translate-y-0.5 hover:bg-amber-400 sm:px-8 sm:py-4 sm:text-base">
+              <Link href="/contact" className="inline-flex min-h-12 items-center justify-center rounded-lg bg-amber px-6 py-3 text-sm font-semibold text-navy shadow-[0_12px_36px_rgba(245,158,11,0.32)] hover:-translate-y-0.5 hover:bg-amber-400 sm:px-8 sm:py-4 sm:text-base">
                 Book Your AI Consultation
               </Link>
             </div>

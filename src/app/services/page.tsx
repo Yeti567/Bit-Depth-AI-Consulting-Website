@@ -3,268 +3,208 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
-import { SectionHeading } from '@/components/ui/section-heading';
 
 export const metadata: Metadata = {
-  title: 'AI Implementation Services for Industrial Operations | BitDepth AI',
+  title: 'AI Consulting Services | Machine Learning, Predictive Maintenance & Industrial AI',
   description:
-    "Explore BitDepth's AI implementation services including discovery audits, workflow automation, custom AI workers, strategy roadmaps, and training for industrial operations.",
+    'Explore AI consulting services including predictive maintenance, machine learning consulting, and industrial IoT solutions for oil & gas and manufacturing.',
   keywords: [
-    'AI implementation services for industrial operations',
+    'AI consulting services',
     'AI strategy consulting',
     'machine learning consulting',
-    'predictive maintenance consulting',
-    'AI process automation consulting',
-    'generative AI consulting',
-    'enterprise AI solutions'
+    'predictive maintenance',
+    'industrial IoT solutions',
+    'computer vision quality control',
+    'digital transformation consulting',
+    'industrial AI'
   ],
   alternates: {
     canonical: '/services'
   },
   openGraph: {
-    title: 'AI Implementation Services for Industrial Operations | BitDepth AI',
+    title: 'AI Consulting Services | Machine Learning, Predictive Maintenance & Industrial AI',
     description:
-      "Explore BitDepth's AI implementation services including discovery audits, workflow automation, custom AI workers, strategy roadmaps, and training for industrial operations.",
+      'Explore AI consulting services including predictive maintenance, machine learning consulting, and industrial IoT solutions for oil & gas and manufacturing.',
     url: '/services',
     type: 'website',
     images: [
       {
-        url: '/images/Services page header.webp',
+        url: '/images/Industrial twilight fusion of tech and energy revised.webp',
         width: 1200,
         height: 630,
-        alt: 'Industrial services planning desk used in the BitDepth services page hero'
+        alt: 'Industrial energy environment with subtle AI-inspired lighting and overlays'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Implementation Services for Industrial Operations | BitDepth AI',
+    title: 'AI Consulting Services | Machine Learning, Predictive Maintenance & Industrial AI',
     description:
-      'Explore BitDepth AI services for audits, workflow automation, custom AI workers, strategy roadmaps, and training.',
-    images: ['/images/Services page header.webp']
+      'Explore AI consulting services including predictive maintenance, machine learning consulting, and industrial IoT solutions for oil and gas and manufacturing.',
+    images: ['/images/Industrial twilight fusion of tech and energy revised.webp']
   }
 };
 
-const toc = [
-  { id: 'ai-opportunity-discovery-audit', label: 'AI Opportunity Discovery Audit' },
-  { id: 'ai-workflow-automation', label: 'AI Workflow Automation' },
-  { id: 'custom-ai-workers', label: 'Custom AI Workers' },
-  { id: 'ai-strategy-and-roadmapping', label: 'AI Strategy and Roadmapping' },
-  { id: 'ai-training-and-enablement', label: 'AI Training and Enablement' }
-];
-
-const comparisonRows = [
-  ['AI Strategy and Roadmap', '$50K to $500K', '$15K to $50K', '$12K to $30K', '$5K to $15K inconsistent'],
-  ['AI Readiness Audit', '$15K to $35K', '$8K to $20K', '$5K to $15K', '$2K to $8K no methodology'],
-  ['Custom AI System Build', '$100K to $1M+', '$50K to $200K', '$10K to $100K', '$10K to $50K high risk'],
-  ['AI Training Workshop', '$10K to $30K', '$5K to $15K', '$2.5K to $7.5K', '$1K to $5K'],
-  ['Managed AI Retainer', '$10K to $50K per month', '$5K to $20K per month', '$1.5K to $5K per month', 'Rarely offered']
+const services = [
+  {
+    id: 'ai-strategy-roadmap',
+    title: 'AI Strategy Consulting & Digital Transformation',
+    text: 'We provide AI strategy consulting and digital transformation consulting to help businesses identify where AI creates real value. Our approach focuses on aligning machine learning, data analytics, and automation with your operational goals.',
+    includes: ['AI audits', 'Opportunity mapping', 'ROI modeling', 'Implementation roadmaps'],
+    image: '/images/Industrial meeting with data analytics revised.webp',
+    alt: 'Industrial strategy meeting with analytics and planning visuals'
+  },
+  {
+    id: 'machine-learning-analytics',
+    title: 'Machine Learning Consulting & Predictive Analytics',
+    text: 'Our machine learning consulting services help organizations unlock insights from their data. We design and deploy predictive analytics systems that improve forecasting, decision-making, and operational performance.',
+    includes: ['Predictive analytics', 'Data modeling', 'Forecasting systems', 'Business intelligence integration'],
+    image: '/images/Industrial control room with data displays revised.webp',
+    alt: 'Industrial control room with live data displays and analytics systems'
+  },
+  {
+    id: 'predictive-maintenance',
+    title: 'Predictive Maintenance Solutions',
+    text: 'Reduce downtime and extend equipment life with AI predictive maintenance systems. We implement condition monitoring, equipment failure prediction, and asset health monitoring solutions.',
+    includes: ['IoT sensor integration', 'Machine learning models', 'Real-time monitoring', 'Maintenance optimization'],
+    image: '/images/Workers with predictive maintenance data revised.png',
+    alt: 'Workers reviewing predictive maintenance signals in an industrial environment'
+  },
+  {
+    id: 'computer-vision',
+    title: 'Computer Vision & Quality Control',
+    text: 'We deploy computer vision systems for automated inspection and quality control. Detect defects, improve production quality, and reduce manual inspection with AI-driven visual systems.',
+    includes: ['Automated inspection', 'Defect detection', 'Machine vision systems', 'Quality analytics'],
+    image: '/images/Automated inspection of metal parts revised.webp',
+    alt: 'Automated inspection system examining manufactured metal parts'
+  },
+  {
+    id: 'industrial-iot-digital-twin',
+    title: 'Industrial IoT & Digital Twin Solutions',
+    text: 'We build Industrial IoT systems and digital twin models to monitor, simulate, and optimize operations in real time.',
+    includes: ['Real-time monitoring', 'Asset tracking', 'Digital twins', 'Operational optimization'],
+    image: '/images/Factory and digital twin in harmony revised.webp',
+    alt: 'Factory environment blended with digital twin visualization'
+  },
+  {
+    id: 'generative-ai-automation',
+    title: 'Generative AI & Process Automation',
+    text: 'We implement generative AI and process automation solutions to streamline workflows, reporting, and decision-making.',
+    includes: ['LLM implementation', 'AI automation workflows', 'Document processing', 'Internal tools'],
+    image: '/images/Modern office with AI-driven systems revised.webp',
+    alt: 'Modern operational workspace supported by AI-driven systems'
+  }
 ];
 
 export default function ServicesPage() {
   return (
     <PageShell>
-      <section className="section-navy section-angle relative overflow-hidden">
-        <div className="pointer-events-none absolute left-1/2 top-1/2 hidden h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan/10 md:block" />
-        <div className="pointer-events-none absolute left-1/2 top-1/2 hidden h-[900px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan/5 md:block" />
-        <div className="container-shell relative grid gap-10 py-16 md:py-20 lg:grid-cols-[1fr,0.9fr] lg:items-center lg:py-28">
+      <section className="section-navy relative overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,180,216,0.12),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(245,158,11,0.08),transparent_28%)]" />
+        <div className="hero-particle left-[8%] top-[22%] h-2 w-2" />
+        <div className="hero-particle left-[24%] top-[68%] h-2.5 w-2.5" style={{ animationDelay: '1.2s' }} />
+        <div className="hero-particle right-[12%] top-[16%] h-2 w-2" style={{ animationDelay: '2s' }} />
+        <div className="hero-particle right-[26%] top-[58%] h-3 w-3" style={{ animationDelay: '3.1s' }} />
+        <div className="container-shell relative grid gap-10 py-12 sm:py-16 lg:grid-cols-[1fr,1.02fr] lg:items-center lg:gap-12 lg:py-28">
           <ScrollReveal>
             <p className="industry-pill inline-flex">Industrial AI Services</p>
-            <h1 className="mt-6 text-4xl font-bold text-white sm:text-5xl md:text-6xl">AI Implementation Services for Industrial Operations</h1>
-            <p className="mt-6 text-lg leading-8 text-white/75">
-              BitDepth delivers AI implementation services built for Canadian businesses in oil and gas and manufacturing. Every engagement begins with a structured discovery audit. We do not build before we understand.
+            <h1 className="mt-5 max-w-3xl text-[2.3rem] font-extrabold leading-[1.05] text-white sm:mt-6 sm:text-5xl md:text-[60px]">
+              AI Consulting Services Built for Real Operations
+            </h1>
+            <p className="mt-5 max-w-3xl text-base leading-7 text-white/72 sm:mt-6 sm:text-lg sm:leading-8 md:text-xl">
+              From AI strategy consulting to predictive maintenance and machine learning consulting, we deliver practical, high-impact solutions for oil and gas and manufacturing companies.
             </p>
-            <p className="mt-6 text-lg leading-8 text-white/75">
-              Our services are designed to move in sequence: audit to identify the best opportunities, strategy to prioritize them, implementation to build them, and training to embed them. Each service can also be engaged independently depending on where you are in your AI journey.
-            </p>
+            <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-4">
+              <Link href="/ai-audit" className="inline-flex min-h-12 items-center justify-center rounded-lg bg-amber px-6 py-3 text-sm font-semibold text-navy shadow-[0_12px_36px_rgba(245,158,11,0.3)] hover:-translate-y-0.5 hover:bg-amber-400 sm:px-8 sm:py-4 sm:text-base">
+                Book an AI Audit
+              </Link>
+              <Link href="/contact" className="btn-secondary min-h-12 text-white">
+                Talk to an Expert
+              </Link>
+            </div>
           </ScrollReveal>
-          <ScrollReveal index={1} className="relative min-h-[260px] overflow-hidden rounded-[2rem] border border-cyan/20 shadow-dark sm:min-h-[320px]">
+          <ScrollReveal index={1} className="relative min-h-[280px] overflow-hidden rounded-[1.5rem] border border-cyan/20 bg-[#061323] shadow-[0_24px_70px_rgba(0,0,0,0.45)] sm:min-h-[360px] sm:rounded-[2rem] lg:min-h-[620px]">
             <Image
-              src="/images/Services page header.webp"
-              alt="Top-down flat lay of a modern industrial desk with dashboards, a hardhat, engineering blueprints, and a tablet"
+              src="/images/Industrial twilight fusion of tech and energy revised.webp"
+              alt="Industrial facility with subtle AI overlay and cinematic lighting"
               fill
+              priority
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/10 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-br from-navy/65 via-navy/20 to-transparent" />
+            <div className="absolute left-[10%] top-[18%] h-2 w-2 rounded-full bg-cyan shadow-[0_0_18px_rgba(0,180,216,0.9)]" />
+            <div className="absolute left-[26%] top-[30%] h-px w-[20%] bg-gradient-to-r from-cyan/70 to-transparent" />
+            <div className="absolute right-[18%] top-[22%] h-2 w-2 rounded-full bg-cyan shadow-[0_0_18px_rgba(0,180,216,0.9)]" />
+            <div className="absolute right-[22%] top-[24%] h-[16%] w-px bg-gradient-to-b from-cyan/70 to-transparent" />
           </ScrollReveal>
         </div>
       </section>
 
-      <section className="section-light-grid section-space">
-        <div className="container-shell grid gap-8 lg:grid-cols-[280px,1fr] lg:items-start">
-          <aside className="hidden lg:block">
-            <div className="sticky top-28 rounded-[2rem] border border-cyan/10 bg-white/80 p-6 shadow-soft backdrop-blur-sm">
-              <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan">Services</h2>
-              <nav className="mt-5 flex flex-col gap-3">
-                {toc.map((item) => (
-                  <Link key={item.id} href={`#${item.id}`} className="text-sm font-semibold text-navy transition hover:text-cyan">
-                    {item.label}
-                  </Link>
-                ))}
-              </nav>
-            </div>
-          </aside>
+      <section className="border-y border-white/10 bg-[#0E1728] py-12 text-white md:py-20">
+        <div className="container-shell max-w-4xl">
+          <ScrollReveal>
+            <p className="text-lg leading-8 text-white/72 sm:text-xl">
+              We do not offer pre-packaged software.
+            </p>
+            <p className="mt-4 text-base leading-7 text-white/68 sm:mt-5 sm:text-lg sm:leading-8">
+              Every engagement begins with an AI audit to identify real inefficiencies, followed by a tailored AI strategy and implementation plan. Our services are designed for companies that need measurable ROI, not experimentation.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
 
-          <div className="space-y-8">
-            <ScrollReveal>
-              <SectionHeading
-                eyebrow="Services"
-                title="A full service stack built around audit-first delivery."
-                description="Each service preserves the same operating model: diagnose first, prioritize clearly, and implement only what fits the business."
-              />
-            </ScrollReveal>
-
-            <ScrollReveal as="article" id="ai-opportunity-discovery-audit" className="surface-card scroll-mt-28 p-6 sm:p-8 md:p-10" index={0}>
-              <h2 className="text-3xl font-bold text-navy">Service 1: AI Opportunity Discovery Audit</h2>
-              <p className="mt-6 text-lg leading-8 text-charcoal/82">
-                The AI audit is the foundation of everything we do. Before any technology is selected or any workflow is changed, we need to understand how your business actually runs.
+      {services.map((service, index) => (
+        <section
+          key={service.id}
+          id={service.id}
+          className={index % 2 === 0 ? 'section-dark py-12 md:py-24' : 'bg-offwhite py-12 md:py-24'}
+        >
+          <div className={`container-shell grid gap-10 lg:grid-cols-[1fr,0.95fr] lg:items-center lg:gap-12 ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+            <ScrollReveal className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
+              <p className={index % 2 === 0 ? 'eyebrow' : 'eyebrow'}>{`Service ${index + 1}`}</p>
+              <h2 className={`mt-4 text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl ${index % 2 === 0 ? 'text-white' : 'text-navy'}`}>
+                {service.title}
+              </h2>
+              <p className={`mt-4 text-base leading-7 sm:mt-5 sm:text-lg sm:leading-8 ${index % 2 === 0 ? 'text-white/72' : 'text-charcoal/78'}`}>
+                {service.text}
               </p>
-              <p className="mt-6 text-lg leading-8 text-charcoal/82">
-                The AI audit services engagement takes two to four weeks and produces four deliverables: a current-state operations map, an AI Readiness Score across five pillars, a prioritized automation opportunity list, and a phased implementation roadmap.
-              </p>
-              <h3 className="mt-8 text-xl font-semibold text-navy">WHAT IS INCLUDED:</h3>
-              <ul className="mt-4 space-y-3 text-charcoal/82">
-                <li>Two to three structured interview sessions with leadership, department managers, and frontline staff</li>
-                <li>Review and assessment of your existing technology stack</li>
-                <li>AI readiness scoring across: data quality, process clarity, technology maturity, organizational readiness, strategic alignment</li>
-                <li>Written findings report with plain-language explanations</li>
-                <li>Prioritized roadmap with estimated ROI ranges for the top three opportunities</li>
-              </ul>
-              <h3 className="mt-8 text-xl font-semibold text-navy">PRICING:</h3>
-              <p className="mt-4 text-charcoal/82">$5,000 to $7,500 fixed price. No surprises. No hourly billing.</p>
-              <h3 className="mt-8 text-xl font-semibold text-navy">WHO THIS IS FOR:</h3>
-              <p className="mt-4 text-charcoal/82">
-                Business owners and operations leaders who want to understand where AI can help before committing to implementation. Also ideal for companies that have been pitched AI tools and want an independent second opinion.
-              </p>
-              <Link href="/ai-audit" className="btn-primary mt-8 inline-flex">Book Your AI Audit - Starting at $5,000</Link>
-            </ScrollReveal>
-
-            <ScrollReveal as="article" id="ai-workflow-automation" className="surface-card scroll-mt-28 p-6 sm:p-8 md:p-10" index={1}>
-              <h2 className="text-3xl font-bold text-navy">Service 2: AI Workflow Automation</h2>
-              <p className="mt-6 text-lg leading-8 text-charcoal/82">
-                AI process automation consulting translates the highest-priority opportunities from your audit into working automated systems. We design, build, test, and hand off automation workflows that reduce manual work, eliminate bottlenecks, and improve operational consistency.
-              </p>
-              <h3 className="mt-8 text-xl font-semibold text-navy">COMMON AUTOMATION APPLICATIONS:</h3>
-              <ul className="mt-4 space-y-3 text-charcoal/82">
-                <li>Invoice and document processing automation</li>
-                <li>Scheduling and dispatch optimization</li>
-                <li>Field report generation and data entry elimination</li>
-                <li>Compliance document tracking and alerting</li>
-                <li>Customer and vendor communication workflows</li>
-                <li>Predictive maintenance alert pipelines</li>
-              </ul>
-              <h3 className="mt-8 text-xl font-semibold text-navy">TECHNOLOGY APPROACH:</h3>
-              <p className="mt-4 text-charcoal/82">
-                We use the right tool for your situation. For straightforward workflows, we build with no-code automation platforms including Make.com and similar tools connected to your existing systems. For complex, data-intensive workflows, we use Python-based pipelines with LLM integration. We do not push a preferred stack.
-              </p>
-              <h3 className="mt-8 text-xl font-semibold text-navy">PRICING:</h3>
-              <p className="mt-4 text-charcoal/82">$15,000 to $75,000 depending on scope. Fixed-price engagements where possible.</p>
-              <Link href="/contact" className="btn-primary mt-8 inline-flex">Book a Discovery Call</Link>
-            </ScrollReveal>
-
-            <ScrollReveal as="article" id="custom-ai-workers" className="surface-card scroll-mt-28 p-6 sm:p-8 md:p-10" index={2}>
-              <h2 className="text-3xl font-bold text-navy">Service 3: Custom AI Workers</h2>
-              <p className="mt-6 text-lg leading-8 text-charcoal/82">
-                A custom AI worker is an AI system that performs a defined job function autonomously. Unlike a general chatbot, it is trained on your internal data, follows your specific processes, and produces outputs that integrate into your existing workflows.
-              </p>
-              <h3 className="mt-8 text-xl font-semibold text-navy">EXAMPLES OF CUSTOM AI WORKERS WE BUILD:</h3>
-              <ul className="mt-4 space-y-3 text-charcoal/82">
-                <li>Internal operations assistant trained on your SOPs, safety procedures, and HR documents</li>
-                <li>Technical documentation processor that extracts structured data from engineering reports</li>
-                <li>Proposal and quote generator using your historical pricing and project data</li>
-                <li>Customer-facing support agent trained on your product and service documentation</li>
-                <li>Regulatory compliance monitor that flags changes relevant to your operations</li>
-              </ul>
-              <h3 className="mt-8 text-xl font-semibold text-navy">TECHNOLOGY:</h3>
-              <p className="mt-4 text-charcoal/82">
-                Built on retrieval-augmented generation (RAG) architecture using your selected LLM provider, your internal data, and a custom agent framework. Delivered as a web widget, API endpoint, or embedded tool depending on your workflow.
-              </p>
-              <h3 className="mt-8 text-xl font-semibold text-navy">PRICING:</h3>
-              <p className="mt-4 text-charcoal/82">Project-based. Scoped after the discovery audit or a paid discovery session.</p>
-              <Link href="/contact" className="btn-primary mt-8 inline-flex">Book a Discovery Call</Link>
-            </ScrollReveal>
-
-            <ScrollReveal as="article" id="ai-strategy-and-roadmapping" className="surface-card scroll-mt-28 p-6 sm:p-8 md:p-10" index={3}>
-              <h2 className="text-3xl font-bold text-navy">Service 4: AI Strategy and Roadmapping</h2>
-              <p className="mt-6 text-lg leading-8 text-charcoal/82">
-                AI strategy consulting for companies that need a structured plan before committing to implementation. This service is for leadership teams that want to understand the full landscape of AI opportunity, build internal alignment, and produce a multi-phase roadmap that governance and finance can approve.
-              </p>
-              <h3 className="mt-8 text-xl font-semibold text-navy">DELIVERABLES:</h3>
-              <ul className="mt-4 space-y-3 text-charcoal/82">
-                <li>Competitive AI landscape review for your industry segment</li>
-                <li>Internal capability assessment and gap analysis</li>
-                <li>Prioritized AI investment roadmap with three-horizon planning</li>
-                <li>Board or leadership-ready presentation deck</li>
-                <li>Risk and compliance assessment including Canadian data privacy considerations</li>
-              </ul>
-              <h3 className="mt-8 text-xl font-semibold text-navy">PRICING:</h3>
-              <p className="mt-4 text-charcoal/82">
-                $12,000 to $30,000 depending on scope and number of stakeholder sessions required.
-              </p>
-              <Link href="/contact" className="btn-primary mt-8 inline-flex">Book a Discovery Call</Link>
-            </ScrollReveal>
-
-            <ScrollReveal as="article" id="ai-training-and-enablement" className="surface-card scroll-mt-28 p-6 sm:p-8 md:p-10" index={4}>
-              <h2 className="text-3xl font-bold text-navy">Service 5: AI Training and Enablement</h2>
-              <p className="mt-6 text-lg leading-8 text-charcoal/82">
-                AI training and workshops designed for Canadian business teams who want to understand AI tools, build internal confidence, and reduce dependence on external vendors over time.
-              </p>
-              <h3 className="mt-8 text-xl font-semibold text-navy">TRAINING FORMATS:</h3>
-              <ul className="mt-4 space-y-3 text-charcoal/82">
-                <li>Half-day executive briefing: AI landscape, strategic implications, and what questions to ask vendors</li>
-                <li>Full-day operations workshop: Hands-on training with AI tools relevant to your team&apos;s actual workflows</li>
-                <li>Ongoing enablement retainer: Monthly sessions to support your team as your AI tools evolve</li>
-              </ul>
-              <h3 className="mt-8 text-xl font-semibold text-navy">WHO THIS IS FOR:</h3>
-              <p className="mt-4 text-charcoal/82">
-                Ideal as a standalone engagement for companies early in their AI journey, or as a follow-on to an implementation to ensure adoption and reduce long-term support costs.
-              </p>
-              <h3 className="mt-8 text-xl font-semibold text-navy">PRICING:</h3>
-              <p className="mt-4 text-charcoal/82">$2,500 to $7,500 for workshops. Retainers from $1,500 per month.</p>
-              <Link href="/contact" className="btn-primary mt-8 inline-flex">Book a Discovery Call</Link>
-            </ScrollReveal>
-
-            <ScrollReveal as="section" className="surface-card overflow-hidden p-6 sm:p-8 md:p-10" index={5}>
-              <h2 className="text-3xl font-bold text-navy">How Our AI Consulting Fees Compare</h2>
-              <div className="mt-8 overflow-x-auto">
-                <table className="min-w-[760px] border-collapse text-left text-sm">
-                  <thead>
-                    <tr className="border-b border-coolgray bg-offwhite text-navy">
-                      <th className="px-4 py-4 font-semibold">Service Type</th>
-                      <th className="px-4 py-4 font-semibold">Enterprise Firms</th>
-                      <th className="px-4 py-4 font-semibold">National Mid-Tier</th>
-                      <th className="px-4 py-4 font-semibold">BitDepth Target</th>
-                      <th className="px-4 py-4 font-semibold">Freelance Consultants</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {comparisonRows.map((row) => (
-                      <tr key={row[0]} className="border-b border-coolgray/60 text-charcoal/82">
-                        {row.map((cell) => (
-                          <td key={cell} className="px-4 py-4 align-top">
-                            {cell}
-                          </td>
-                        ))}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div className="mt-7 sm:mt-8">
+                <p className={`text-sm font-semibold uppercase tracking-[0.16em] ${index % 2 === 0 ? 'text-cyan' : 'text-charcoal/45'}`}>Includes</p>
+                <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                  {service.includes.map((item) => (
+                    <div
+                      key={item}
+                      className={index % 2 === 0 ? 'rounded-2xl border border-cyan/15 bg-white/5 p-4 text-sm text-white sm:text-base' : 'rounded-2xl border border-black/5 bg-white p-4 text-sm text-charcoal shadow-[0_10px_30px_rgba(0,0,0,0.05)] sm:text-base'}
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
               </div>
             </ScrollReveal>
 
-            <ScrollReveal as="section" className="cta-shell px-6 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12" index={6}>
-              <h2 className="text-3xl font-bold text-white">Ready to identify the right AI service for your operations?</h2>
-              <p className="mt-4 max-w-3xl text-lg text-white/65">
-                Start with the audit if you need clarity first, or book a discovery call if you already know which service best fits your current stage.
-              </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
-                <Link href="/ai-audit" className="btn-primary">Book Your AI Audit</Link>
-                <Link href="/contact" className="btn-secondary border-white/20 bg-transparent text-white hover:border-cyan hover:text-cyan">
-                  Book a Discovery Call
-                </Link>
-              </div>
+            <ScrollReveal index={1} className={`relative order-first min-h-[240px] overflow-hidden rounded-[1.5rem] border shadow-[0_24px_70px_rgba(0,0,0,0.28)] sm:min-h-[320px] sm:rounded-[2rem] lg:order-none lg:min-h-[520px] ${index % 2 === 0 ? 'border-cyan/20' : 'border-black/5'} ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
+              <Image src={service.image} alt={service.alt} fill className="object-cover" />
+              <div className={`absolute inset-0 ${index % 2 === 0 ? 'bg-gradient-to-t from-[#081221] via-transparent to-[#081221]/10' : 'bg-gradient-to-t from-[#0B1F3B]/50 via-transparent to-transparent'}`} />
             </ScrollReveal>
           </div>
+        </section>
+      ))}
+
+      <section className="py-12 md:py-24" style={{ background: 'linear-gradient(135deg, #111827 0%, #0B1F3B 65%, #1b2434 100%)' }}>
+        <div className="container-shell">
+          <ScrollReveal className="rounded-[1.5rem] border border-amber/20 bg-[linear-gradient(135deg,rgba(245,158,11,0.12),rgba(255,255,255,0.02))] px-5 py-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)] sm:px-8 sm:py-10 md:rounded-[2rem] md:px-12 md:py-14">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber">Start with clarity</p>
+            <h2 className="mt-4 max-w-3xl text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl">Start With an AI Audit</h2>
+            <p className="mt-4 max-w-3xl text-base text-white/72 sm:mt-5 sm:text-lg">
+              Before investing in AI, understand where it actually delivers ROI.
+            </p>
+            <div className="mt-8">
+              <Link href="/contact" className="inline-flex min-h-12 items-center justify-center rounded-lg bg-amber px-6 py-3 text-sm font-semibold text-navy shadow-[0_12px_36px_rgba(245,158,11,0.32)] hover:-translate-y-0.5 hover:bg-amber-400 sm:px-8 sm:py-4 sm:text-base">
+                Book Your Consultation
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </PageShell>
