@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Facebook } from 'lucide-react';
+import { Facebook, Linkedin } from 'lucide-react';
 
 export function SiteFooter() {
   return (
@@ -102,6 +102,15 @@ export function SiteFooter() {
             >
               <Facebook className="h-4 w-4" aria-hidden />
               <span className="sr-only">Facebook</span>
+            </Link>
+            <Link
+              href="https://www.linkedin.com/company/bitdepth-ai-consulting-ltd"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-white/75 transition hover:text-cyan"
+            >
+              <Linkedin className="h-4 w-4" aria-hidden />
+              <span className="sr-only">LinkedIn</span>
             </Link>
           </div>
         </div>
