@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { Facebook } from 'lucide-react';
 
 export function SiteFooter() {
   return (
@@ -89,9 +90,20 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="container-shell flex flex-col gap-3 py-6 text-[13px] text-white/35 md:flex-row md:items-center md:justify-between">
+        <div className="container-shell flex flex-col gap-4 py-6 text-[13px] text-white/35 md:flex-row md:items-center md:justify-between">
           <p>2026 BitDepth AI Consulting Ltd. Barriere, British Columbia, Canada</p>
-          <p>bitdepthaiconsulting.com</p>
+          <div className="flex flex-col gap-1 text-white/50 sm:flex-row sm:items-center sm:gap-3">
+            <p>bitdepthaiconsulting.com</p>
+            <Link
+              href="https://www.facebook.com/bitpathconsultingltd"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-white/75 transition hover:text-cyan"
+            >
+              <Facebook className="h-4 w-4" aria-hidden />
+              <span className="sr-only">Facebook</span>
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
