@@ -726,8 +726,9 @@ export function generateStaticParams() {
   return Object.keys(resourceArticles).map((slug) => ({ slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const article = resourceArticles[params.slug];
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const article = resourceArticles[slug];
 
   if (!article) {
     return {
@@ -739,7 +740,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     };
   }
 
-  const path = `/resources/${params.slug}`;
+  const path = `/resources/${slug}`;
 
   return {
     title: article.seoTitle ?? `${article.title} | BitDepth AI`,
@@ -771,8 +772,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function ResourceArticlePage({ params }: { params: { slug: string } }) {
-  const article = resourceArticles[params.slug];
+export default async function ResourceArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const article = resourceArticles[slug];
 
   if (!article) {
     notFound();

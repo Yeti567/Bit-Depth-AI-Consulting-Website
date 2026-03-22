@@ -57,42 +57,6 @@ const articles = [
       'Learn why data integrity matters and follow a practical roadmap to build AI-ready data across systems, teams, and workflows.',
     image: '/images/Data Integrity Blog post_2.webp',
     href: '/resources/is-your-data-ready-for-ai'
-  },
-  {
-    title: 'AI in Oil & Gas: Real Use Cases and Applications',
-    description: 'Explore how AI is improving pipeline monitoring, predictive maintenance, and production optimization in oil & gas.',
-    image: '/images/blog-card.webp',
-    href: '/resources/dead-in-the-field-why-predictive-maintenance-cant-wait'
-  },
-  {
-    title: 'Predictive Maintenance: Reducing Downtime with AI',
-    description: 'Learn how machine learning models predict equipment failures before they happen.',
-    image: '/images/blog-card.webp',
-    href: '/resources/dead-in-the-field-why-predictive-maintenance-cant-wait'
-  },
-  {
-    title: 'Manufacturing AI & Industry 4.0 Explained',
-    description: 'A practical look at smart factories, automation, and computer vision systems.',
-    image: '/images/blog-card.webp',
-    href: '/resources/digital-twin-technology-how-smart-manufacturers-are-pulling-ahead'
-  },
-  {
-    title: 'Why Most AI Projects Fail (And How to Fix It)',
-    description: 'Understand the biggest mistakes companies make when adopting AI.',
-    image: '/images/blog-card.webp',
-    href: '/resources/how-to-evaluate-ai-use-cases-in-industrial-operations'
-  },
-  {
-    title: 'Data First: Why Clean Data Is Critical for AI',
-    description: 'Without structured, reliable data, AI systems fail. Here’s how to fix it.',
-    image: '/images/blog-card.webp',
-    href: '/resources/is-your-data-ready-for-ai'
-  },
-  {
-    title: 'AI Automation & Agentic Workflows',
-    description: 'How businesses are using AI agents to automate operations and decision-making.',
-    image: '/images/blog-card.webp',
-    href: '/resources/building-an-ai-roadmap-for-canadian-mid-market-companies'
   }
 ];
 
