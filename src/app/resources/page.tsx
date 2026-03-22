@@ -45,34 +45,47 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    title: "Is Your Data Ready for AI? Here's How to Fix It",
+    description:
+      'Learn why data integrity matters and follow a practical roadmap to build AI-ready data across systems, teams, and workflows.',
+    image: '/images/Data Integrity Blog post_2.webp',
+    href: '/resources/is-your-data-ready-for-ai'
+  },
+  {
     title: 'AI in Oil & Gas: Real Use Cases and Applications',
     description: 'Explore how AI is improving pipeline monitoring, predictive maintenance, and production optimization in oil & gas.',
-    image: '/images/blog-card.webp'
+    image: '/images/blog-card.webp',
+    href: '/resources/dead-in-the-field-why-predictive-maintenance-cant-wait'
   },
   {
     title: 'Predictive Maintenance: Reducing Downtime with AI',
     description: 'Learn how machine learning models predict equipment failures before they happen.',
-    image: '/images/blog-card.webp'
+    image: '/images/blog-card.webp',
+    href: '/resources/dead-in-the-field-why-predictive-maintenance-cant-wait'
   },
   {
     title: 'Manufacturing AI & Industry 4.0 Explained',
     description: 'A practical look at smart factories, automation, and computer vision systems.',
-    image: '/images/blog-card.webp'
+    image: '/images/blog-card.webp',
+    href: '/resources/digital-twin-technology-how-smart-manufacturers-are-pulling-ahead'
   },
   {
     title: 'Why Most AI Projects Fail (And How to Fix It)',
     description: 'Understand the biggest mistakes companies make when adopting AI.',
-    image: '/images/blog-card.webp'
+    image: '/images/blog-card.webp',
+    href: '/resources/how-to-evaluate-ai-use-cases-in-industrial-operations'
   },
   {
     title: 'Data First: Why Clean Data Is Critical for AI',
     description: 'Without structured, reliable data, AI systems fail. Here’s how to fix it.',
-    image: '/images/blog-card.webp'
+    image: '/images/blog-card.webp',
+    href: '/resources/is-your-data-ready-for-ai'
   },
   {
     title: 'AI Automation & Agentic Workflows',
     description: 'How businesses are using AI agents to automate operations and decision-making.',
-    image: '/images/blog-card.webp'
+    image: '/images/blog-card.webp',
+    href: '/resources/building-an-ai-roadmap-for-canadian-mid-market-companies'
   }
 ];
 
@@ -198,7 +211,7 @@ export default function ResourcesPage() {
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="text-xl font-semibold text-white">{article.title}</h3>
                   <p className="mt-3 flex-1 text-sm leading-6 text-white/72">{article.description}</p>
-                  <Link href="/contact" className="mt-6 inline-flex items-center text-sm font-semibold text-cyan hover:text-amber">
+                  <Link href={article.href} className="mt-6 inline-flex items-center text-sm font-semibold text-cyan hover:text-amber">
                     Read More
                     <span className="ml-2 text-lg">→</span>
                   </Link>

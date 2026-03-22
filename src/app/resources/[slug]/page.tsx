@@ -6,13 +6,27 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { SectionHeading } from '@/components/ui/section-heading';
 
- type ResourceContentBlock = {
-  type: 'heading' | 'paragraph';
-  value: string;
- };
+ type ResourceContentBlock =
+  | {
+      type: 'heading';
+      value: string;
+    }
+  | {
+      type: 'heading3';
+      value: string;
+    }
+  | {
+      type: 'heading4';
+      value: string;
+    }
+  | {
+      type: 'paragraph';
+      value: string;
+    };
 
 type ResourceArticle = {
   title: string;
+  seoTitle?: string;
   category: string;
   description: string;
   image: string;
@@ -295,6 +309,162 @@ const resourceArticles: Record<string, ResourceArticle> = {
       { type: 'paragraph', value: 'Q6: How does computer vision integrate with existing quality management and production systems?' },
       { type: 'paragraph', value: 'Modern computer vision platforms are designed for integration with the manufacturing technology ecosystem. Standard integration points include MES systems, where inspection results are linked to production batch and serial number records for traceability; SCADA systems, where inspection data can trigger automated process adjustments or line stops; ERP systems, where quality data feeds into inventory management and customer shipment records; and quality management systems, where non-conformance records are automatically generated from inspection failures. BitDepth AI designs all inspection system integrations based on the specific systems in use at each client facility, ensuring that computer vision data enhances the operational systems your team already depends on rather than creating a separate data silo that requires manual management.' }
     ]
+  },
+  'is-your-data-ready-for-ai': {
+    title: "Is Your Data Ready for AI? Here's How to Fix It",
+    seoTitle: "Is Your Data Ready for AI? Here's How to Fix It",
+    category: 'Data Strategy',
+    description:
+      'Is your data ready for AI? Learn why data integrity matters and follow our step-by-step roadmap to build a reliable AI-ready data foundation.',
+    image: '/images/Data Integrity Blog post_2.webp',
+    imageAlt: 'Data integrity dashboard and connected systems for AI-ready data foundations',
+    body: [
+      {
+        type: 'paragraph',
+        value:
+          'Data integrity is the foundation of every successful AI strategy, yet it is often the most overlooked part of implementation. Most businesses rush to deploy AI tools without first asking a critical question: is our data actually ready?'
+      },
+      {
+        type: 'paragraph',
+        value:
+          'If your data is incomplete, inconsistent, or trapped in disconnected systems, AI produces unreliable outputs no matter how advanced the model is. This guide explains what data integrity means, why it matters, and how to build a reliable AI-ready data foundation step by step.'
+      },
+      { type: 'heading', value: 'Why Data Integrity Is the Starting Point for Any AI Initiative' },
+      {
+        type: 'paragraph',
+        value:
+          'There is a well-known principle in technology: garbage in, garbage out. For AI systems, this principle is non-negotiable. When data quality is poor, model quality drops with it.'
+      },
+      {
+        type: 'paragraph',
+        value:
+          'When an AI system is fed fragmented or outdated data, it does not just return weaker answers. It can return confidently wrong answers. In many cases, this is a data integrity problem, not a model problem.'
+      },
+      {
+        type: 'paragraph',
+        value:
+          'In mid-market businesses, the pattern is familiar: production data in one system, maintenance records in another, financial data in a third, and critical business data in spreadsheets. This creates data silos and blocks enterprise-wide visibility.'
+      },
+      {
+        type: 'paragraph',
+        value:
+          'The fix is not a full technology reset. It is a structured data integrity roadmap executed in the right sequence.'
+      },
+      { type: 'heading', value: 'The Step-by-Step Data Integrity Roadmap' },
+      {
+        type: 'paragraph',
+        value:
+          'Building AI-ready data is an operational process, not a one-time cleanup. This is the framework we use with clients at BitDepth AI Consulting.'
+      },
+      { type: 'heading', value: 'Step 1: Audit Your Existing Data' },
+      {
+        type: 'paragraph',
+        value:
+          'Start with a data audit that maps every source of business data across CRMs, ERPs, cloud tools, spreadsheets, and manual records. Identify where data lives, who owns it, how current it is, and how it is structured.'
+      },
+      { type: 'heading3', value: 'What to check during a data audit' },
+      { type: 'paragraph', value: '• Duplicate records across systems' },
+      { type: 'paragraph', value: '• Missing or incomplete fields' },
+      { type: 'paragraph', value: '• Inconsistent formats for dates, names, and units' },
+      { type: 'paragraph', value: '• Outdated records that no longer reflect current operations' },
+      { type: 'paragraph', value: '• Systems that cannot exchange data cleanly' },
+      { type: 'heading', value: 'Step 2: Standardize and Clean Your Data' },
+      {
+        type: 'paragraph',
+        value:
+          'After the audit, standardize and clean the data. Remove duplicates, resolve formatting conflicts, correct obvious errors, and complete high-priority missing fields.'
+      },
+      {
+        type: 'paragraph',
+        value:
+          'Not all missing values carry the same risk. Some can be tolerated, but gaps in high-impact operational data must be fixed before AI models can be trusted.'
+      },
+      { type: 'heading', value: 'Step 3: Break Down Data Silos' },
+      {
+        type: 'paragraph',
+        value:
+          'Data silos are isolated data sets that teams cannot easily access outside their own department. They are one of the biggest blockers to AI-ready data.'
+      },
+      {
+        type: 'paragraph',
+        value:
+          'Modern lakehouse and integration approaches allow businesses to unify sources without forcing rigid, high-friction migrations. This gives AI systems a full operational view instead of fragmented inputs.'
+      },
+      { type: 'heading', value: 'Step 4: Validate and Test Data Continuously' },
+      {
+        type: 'paragraph',
+        value:
+          'Data integrity is ongoing. After cleanup and integration, implement recurring validation checks to detect drift, new duplicates, broken pipeline inputs, and unusual values before they impact decisions.'
+      },
+      { type: 'heading4', value: 'Core validation checks' },
+      { type: 'paragraph', value: '• Freshness checks on critical tables and feeds' },
+      { type: 'paragraph', value: '• Integrity checks for nulls, ranges, and schema changes' },
+      { type: 'paragraph', value: '• Reconciliation checks between source systems and reporting layers' },
+      { type: 'heading', value: 'Step 5: Govern Data with Clear Ownership' },
+      {
+        type: 'paragraph',
+        value:
+          'Governance means assigning clear ownership for data quality, completeness, and timeliness. When nobody owns a dataset, quality degrades quickly.'
+      },
+      {
+        type: 'paragraph',
+        value:
+          'Strong data governance also supports compliance. If your business handles customer or operationally sensitive data, governance reduces legal and operational risk while improving trust in AI outputs.'
+      },
+      { type: 'heading', value: 'What Strong Data Integrity Makes Possible' },
+      {
+        type: 'paragraph',
+        value:
+          'When data integrity is in place, AI moves from experimentation to reliable execution. Predictive tools become accurate, automation runs with less manual correction, and reporting reflects current operational reality.'
+      },
+      {
+        type: 'paragraph',
+        value:
+          'Clean, connected data also creates alignment. Leadership, operations, and finance make decisions from the same source of truth, which improves speed and confidence.'
+      },
+      { type: 'heading', value: 'Frequently Asked Questions About Data Integrity' },
+      { type: 'heading3', value: 'What is data integrity in simple terms?' },
+      {
+        type: 'paragraph',
+        value:
+          'Data integrity means your business data is accurate, complete, consistent, and up to date across systems, so teams and AI tools can trust it.'
+      },
+      { type: 'heading3', value: 'How do I know if my business has a data integrity problem?' },
+      {
+        type: 'paragraph',
+        value:
+          'Common warning signs include conflicting reports, duplicate customer or vendor records, constant manual fixes, and inconsistent AI outputs.'
+      },
+      { type: 'heading3', value: 'How long does it take to fix data integrity issues?' },
+      {
+        type: 'paragraph',
+        value:
+          'For many mid-market teams, a focused data audit and first cleanup phase takes about two to six weeks. Governance and monitoring continue long term.'
+      },
+      { type: 'heading3', value: 'Do I need new software to improve data integrity?' },
+      {
+        type: 'paragraph',
+        value:
+          'Not always. Many gains come from better processes, better standards, and stronger integration between tools you already use.'
+      },
+      { type: 'heading3', value: 'Is data integrity only important for large enterprises?' },
+      {
+        type: 'paragraph',
+        value:
+          'No. Data integrity is critical at every size, and mid-market businesses often feel the pain fastest because teams have less margin for reporting errors and process rework.'
+      },
+      { type: 'heading', value: 'Start Your Data Integrity Journey Today' },
+      {
+        type: 'paragraph',
+        value:
+          'The businesses that get the most from AI are not always the ones with the biggest budgets. They are the ones that build the right foundation first. Data integrity is that foundation.'
+      },
+      {
+        type: 'paragraph',
+        value:
+          'At BitDepth AI Consulting, we help Canadian businesses build AI-ready data foundations through practical data audits, data governance, and integration planning. If you want to understand how ready your data is, contact us and let us start the conversation.'
+      }
+    ]
   }
 };
 
@@ -318,13 +488,13 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const path = `/resources/${params.slug}`;
 
   return {
-    title: `${article.title} | BitDepth AI`,
+    title: article.seoTitle ?? `${article.title} | BitDepth AI`,
     description: article.description,
     alternates: {
       canonical: path
     },
     openGraph: {
-      title: `${article.title} | BitDepth AI`,
+      title: article.seoTitle ?? `${article.title} | BitDepth AI`,
       description: article.description,
       url: path,
       type: 'article',
@@ -339,7 +509,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${article.title} | BitDepth AI`,
+      title: article.seoTitle ?? `${article.title} | BitDepth AI`,
       description: article.description,
       images: [article.image]
     }
@@ -372,17 +542,39 @@ export default function ResourceArticlePage({ params }: { params: { slug: string
           </ScrollReveal>
 
           <ScrollReveal as="article" className="mt-10 surface-card space-y-6 p-6 sm:p-8 md:p-10" index={2}>
-            {article.body.map((block) =>
-              block.type === 'heading' ? (
-                <h2 key={block.value} className="text-2xl font-bold tracking-tight text-charcoal md:text-3xl">
-                  {block.value}
-                </h2>
-              ) : (
-                <p key={block.value} className="text-lg leading-8 text-charcoal/82">
+            {article.body.map((block) => {
+              const key = `${block.type}-${block.value}`;
+
+              if (block.type === 'heading') {
+                return (
+                  <h2 key={key} className="text-2xl font-bold tracking-tight text-charcoal md:text-3xl">
+                    {block.value}
+                  </h2>
+                );
+              }
+
+              if (block.type === 'heading3') {
+                return (
+                  <h3 key={key} className="text-xl font-semibold tracking-tight text-charcoal md:text-2xl">
+                    {block.value}
+                  </h3>
+                );
+              }
+
+              if (block.type === 'heading4') {
+                return (
+                  <h4 key={key} className="text-lg font-semibold tracking-tight text-charcoal md:text-xl">
+                    {block.value}
+                  </h4>
+                );
+              }
+
+              return (
+                <p key={key} className="text-lg leading-8 text-charcoal/82">
                   {block.value}
                 </p>
-              )
-            )}
+              );
+            })}
           </ScrollReveal>
 
           <ScrollReveal className="mt-8" index={3}>
