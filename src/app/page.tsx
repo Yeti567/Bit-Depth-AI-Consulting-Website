@@ -226,8 +226,8 @@ export default function HomePage() {
               <p>We diagnose your business, identify what’s actually slowing you down, and implement the right solution.</p>
             </div>
             <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-4">
-              <Link href="/contact" className="inline-flex min-h-12 items-center justify-center rounded-lg bg-amber px-6 py-3 text-sm font-semibold text-navy shadow-[0_12px_36px_rgba(245,158,11,0.3)] hover:-translate-y-0.5 hover:bg-amber-400 sm:px-8 sm:py-4 sm:text-base">
-                Start Your AI Diagnostic
+              <Link href="/resources/what-is-an-ai-discovery-audit" className="inline-flex min-h-12 items-center justify-center rounded-lg bg-amber px-6 py-3 text-sm font-semibold text-navy shadow-[0_12px_36px_rgba(245,158,11,0.3)] hover:-translate-y-0.5 hover:bg-amber-400 sm:px-8 sm:py-4 sm:text-base">
+                See What Is in a Discovery Audit
               </Link>
               <Link href="#how-we-work" className="btn-secondary min-h-12 text-white">
                 See How It Works

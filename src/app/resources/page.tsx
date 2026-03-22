@@ -45,6 +45,13 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    title: 'What Is an AI Discovery Audit? A Complete Guide',
+    description:
+      'Learn what an AI discovery audit includes, how long it takes, what it costs, and the roadmap you receive at the end.',
+    image: '/images/What is a discovery audit.webp',
+    href: '/resources/what-is-an-ai-discovery-audit'
+  },
+  {
     title: "Is Your Data Ready for AI? Here's How to Fix It",
     description:
       'Learn why data integrity matters and follow a practical roadmap to build AI-ready data across systems, teams, and workflows.',

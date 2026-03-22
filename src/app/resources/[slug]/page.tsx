@@ -27,6 +27,7 @@ import { SectionHeading } from '@/components/ui/section-heading';
 type ResourceArticle = {
   title: string;
   seoTitle?: string;
+  keywords?: string[];
   category: string;
   description: string;
   image: string;
@@ -465,6 +466,259 @@ const resourceArticles: Record<string, ResourceArticle> = {
           'At BitDepth AI Consulting, we help Canadian businesses build AI-ready data foundations through practical data audits, data governance, and integration planning. If you want to understand how ready your data is, contact us and let us start the conversation.'
       }
     ]
+  },
+  'what-is-an-ai-discovery-audit': {
+    title: 'What Is an AI Discovery Audit?',
+    seoTitle: 'What Is an AI Discovery Audit? A Complete Guide | BitDepth AI Consulting',
+    keywords: [
+      'AI discovery audit',
+      'AI audit',
+      'AI consulting',
+      'AI readiness assessment',
+      'AI implementation',
+      'AI strategy',
+      'AI for oil and gas',
+      'AI for manufacturing'
+    ],
+    category: 'AI Audit Guide',
+    description:
+      'Discover exactly what happens during an AI discovery audit, from stakeholder interviews to your AI roadmap. Learn the process, timeline, cost, and what you get at the end.',
+    image: '/images/What is a discovery audit.webp',
+    imageAlt: 'AI discovery audit planning session with data and workflow analysis',
+    body: [
+      { type: 'heading', value: 'A Complete Guide to What Is Involved, What You Get, and Why It Matters' },
+      {
+        type: 'paragraph',
+        value:
+          'Most business owners know they should be using AI, but they do not know where to start. Which processes should be automated? Is their data good enough? What will it cost? How long before results show up?'
+      },
+      {
+        type: 'paragraph',
+        value:
+          'That is exactly what an AI discovery audit answers. It gives you a clear picture of where you are today and a practical roadmap for where AI can create value.'
+      },
+      {
+        type: 'paragraph',
+        value:
+          'In this guide, we break down what happens during the audit, what you receive at the end, how long it takes, and what it costs.'
+      },
+      { type: 'heading', value: 'What Is an AI Discovery Audit?' },
+      {
+        type: 'paragraph',
+        value:
+          'An AI discovery audit is a short consulting engagement, usually 5 to 15 business days, where an AI consultant studies your business in detail to find where AI can save time, reduce costs, or improve decisions.'
+      },
+      {
+        type: 'paragraph',
+        value:
+          'Think of it as a health check for your operations. Just like a doctor checks your vitals before treatment, an AI consultant reviews your processes before recommending technology.'
+      },
+      {
+        type: 'paragraph',
+        value:
+          'At BitDepth, we use an audit-first approach. We do not push software first. We study your business and explain what will help, what will not, and what return you can expect.'
+      },
+      { type: 'heading', value: 'Who Is an AI Audit For?' },
+      {
+        type: 'paragraph',
+        value:
+          'An AI discovery audit is a strong fit for small and mid-sized businesses that want to use AI but need a clear starting point.'
+      },
+      { type: 'heading3', value: 'Ideal business profiles' },
+      { type: 'paragraph', value: '• Businesses with 15 to 200 employees that need practical AI direction' },
+      { type: 'paragraph', value: '• Oil and gas teams focused on downtime reduction, reporting automation, and field data management' },
+      { type: 'paragraph', value: '• Manufacturing teams focused on defect reduction, maintenance improvement, and supply chain speed' },
+      { type: 'paragraph', value: '• Owners who want an unbiased recommendation before buying tools' },
+      {
+        type: 'paragraph',
+        value:
+          'You do not need to be a tech company. You do not need a data science team. The audit is built for real operational businesses.'
+      },
+      { type: 'heading', value: 'What Happens During an AI Discovery Audit?' },
+      {
+        type: 'paragraph',
+        value:
+          'The process follows four structured phases: stakeholder interviews, technology stack review, process mapping, and AI readiness scoring.'
+      },
+      { type: 'heading', value: 'Phase 1: Stakeholder Interviews' },
+      {
+        type: 'paragraph',
+        value:
+          'We start by interviewing leaders, managers, and frontline staff to understand how work really happens, not just how it appears on a chart.'
+      },
+      { type: 'paragraph', value: 'A standard audit includes 4 to 6 interviews. A deep-dive audit includes 8 to 12 interviews. Each session usually runs 30 to 45 minutes.' },
+      { type: 'heading3', value: 'Common interview questions' },
+      { type: 'paragraph', value: '• Where is your team spending the most time on repetitive tasks?' },
+      { type: 'paragraph', value: '• Which processes break down most often?' },
+      { type: 'paragraph', value: '• What tools does your team rely on daily?' },
+      { type: 'paragraph', value: '• Where does information get duplicated or lost?' },
+      { type: 'paragraph', value: '• If you could automate one thing in 90 days, what would it be?' },
+      {
+        type: 'paragraph',
+        value:
+          'This dual perspective matters. Leadership sees strategy, while frontline teams see friction. A good audit captures both.'
+      },
+      { type: 'heading', value: 'Phase 2: Technology Stack Review' },
+      {
+        type: 'paragraph',
+        value:
+          'Next, we review your software tools, data systems, and integrations to see what you have, what connects, and where the gaps are.'
+      },
+      { type: 'heading3', value: 'What this review includes' },
+      { type: 'paragraph', value: '• Core systems like ERP, CRM, SCADA, and field tools' },
+      { type: 'paragraph', value: '• Data storage and data quality, including access and consistency' },
+      { type: 'paragraph', value: '• Manual work outside systems, such as spreadsheets and email chains' },
+      { type: 'paragraph', value: '• Shadow AI tools already in use without formal process' },
+      {
+        type: 'paragraph',
+        value:
+          'Data readiness is one of the biggest cost drivers in AI implementation. Finding issues early prevents expensive mistakes later.'
+      },
+      { type: 'heading', value: 'Phase 3: Process Mapping' },
+      {
+        type: 'paragraph',
+        value:
+          'We map your high-value workflows in detail. Standard audits usually map 6 to 10 processes. Deep-dive audits map 10 to 20.'
+      },
+      { type: 'heading3', value: 'For each process, we capture' },
+      { type: 'paragraph', value: '• Every step and who performs it' },
+      { type: 'paragraph', value: '• How long each step takes' },
+      { type: 'paragraph', value: '• Where delays, errors, and bottlenecks appear' },
+      { type: 'paragraph', value: '• Where AI can automate, assist, or improve outcomes' },
+      {
+        type: 'paragraph',
+        value:
+          'This is where the opportunity becomes clear. A three-hour daily manual process may be reduced to minutes with the right automation or AI workflow.'
+      },
+      { type: 'heading', value: 'Phase 4: AI Readiness Scorecard and Opportunity Analysis' },
+      {
+        type: 'paragraph',
+        value:
+          'After discovery, we score your organization across five readiness pillars and identify priority use cases with ROI estimates.'
+      },
+      { type: 'heading3', value: 'AI readiness pillars' },
+      { type: 'paragraph', value: '• Data quality' },
+      { type: 'paragraph', value: '• Technology infrastructure' },
+      { type: 'paragraph', value: '• Process maturity' },
+      { type: 'paragraph', value: '• Team readiness' },
+      { type: 'paragraph', value: '• Leadership alignment' },
+      {
+        type: 'paragraph',
+        value:
+          'The scorecard removes guesswork. It shows where you are strong, where you need work, and what to do first.'
+      },
+      { type: 'heading', value: 'What Do You Get at the End?' },
+      {
+        type: 'paragraph',
+        value:
+          'At the end of the audit, you receive a full report and presentation with clear findings, opportunities, and execution steps.'
+      },
+      { type: 'heading3', value: 'Your deliverables include' },
+      { type: 'paragraph', value: '• Technology stack inventory and integration map' },
+      { type: 'paragraph', value: '• Data readiness assessment across key business areas' },
+      { type: 'paragraph', value: '• Documented workflows with baseline effort and time' },
+      { type: 'paragraph', value: '• AI readiness scorecard across all five pillars' },
+      { type: 'paragraph', value: '• Prioritized AI opportunities, from quick wins to larger initiatives' },
+      { type: 'paragraph', value: '• ROI estimates for top use cases' },
+      { type: 'paragraph', value: '• Multi-phase roadmap for 0 to 3, 3 to 12, and 12 to 24 months' },
+      { type: 'paragraph', value: '• Vendor and technology guidance if you decide to implement' },
+      {
+        type: 'paragraph',
+        value:
+          'The roadmap is the core asset. It gives you a practical sequence of actions, with costs and expected outcomes tied to each phase.'
+      },
+      {
+        type: 'paragraph',
+        value:
+          'At BitDepth, part of the audit cost is credited toward implementation when you move forward with us, so you do not pay twice for discovery.'
+      },
+      { type: 'heading', value: 'How Long Does an AI Discovery Audit Take?' },
+      {
+        type: 'paragraph',
+        value:
+          'Timeline depends on business complexity. We typically offer three tiers.'
+      },
+      { type: 'heading3', value: 'Quick Scan (2 to 3 Business Days), $1,500 to $3,000' },
+      {
+        type: 'paragraph',
+        value:
+          'Best for small teams with 1 to 2 core systems. Covers key processes and delivers a basic readiness score plus recommendations.'
+      },
+      { type: 'heading3', value: 'Standard Audit (5 to 8 Business Days), $5,000 to $7,500' },
+      {
+        type: 'paragraph',
+        value:
+          'Our most common option. Includes 4 to 6 interviews, full stack review, 6 to 10 mapped processes, ROI analysis, and a complete roadmap.'
+      },
+      { type: 'heading3', value: 'Deep-Dive Roadmap (10 to 15 Business Days), $8,000 to $15,000+' },
+      {
+        type: 'paragraph',
+        value:
+          'Designed for larger or multi-department operations. Includes 8 to 12 interviews, deeper data analysis, 10 to 20 mapped processes, and a detailed multi-phase roadmap.'
+      },
+      { type: 'heading', value: 'Frequently Asked Questions About AI Discovery Audits' },
+      { type: 'heading3', value: 'Do I need to be a tech company to benefit from an AI audit?' },
+      {
+        type: 'paragraph',
+        value:
+          'No. Most of our clients are in oil and gas, manufacturing, and operational businesses. You do not need a software team to benefit.'
+      },
+      { type: 'heading3', value: 'What if my data is a mess?' },
+      {
+        type: 'paragraph',
+        value:
+          'That is one of the most important reasons to do the audit. We identify data gaps, data silos, and cleanup priorities before costly implementation starts.'
+      },
+      { type: 'heading3', value: 'Will the audit force me to buy specific software?' },
+      {
+        type: 'paragraph',
+        value:
+          'No. We are vendor-neutral. Recommendations are based on your needs, not commissions or platform quotas.'
+      },
+      { type: 'heading3', value: 'How disruptive is the audit process?' },
+      {
+        type: 'paragraph',
+        value:
+          'Minimal disruption. Most analysis happens on our side. Your team mainly joins short, focused interviews.'
+      },
+      { type: 'heading3', value: 'What happens after the audit?' },
+      {
+        type: 'paragraph',
+        value:
+          'You get a clear roadmap. You can execute internally, work with BitDepth, or take the roadmap to another delivery team.'
+      },
+      { type: 'heading3', value: 'How do you keep ROI estimates realistic?' },
+      {
+        type: 'paragraph',
+        value:
+          'We build ROI estimates from your actual process times, error rates, and operating costs, not generic benchmarks.'
+      },
+      { type: 'heading3', value: 'Is an AI audit worth it for smaller businesses?' },
+      {
+        type: 'paragraph',
+        value:
+          'Yes. Small teams often see quick payback from targeted automation opportunities that return hours each week.'
+      },
+      { type: 'heading3', value: 'Can the audit be done remotely?' },
+      {
+        type: 'paragraph',
+        value:
+          'Yes. Interviews and system reviews can be completed remotely. We support companies across Canada through virtual delivery.'
+      },
+      { type: 'heading', value: 'Ready to Find Out Where AI Can Help Your Business?' },
+      {
+        type: 'paragraph',
+        value:
+          'An AI discovery audit is the smartest place to start. You get a clear view of operations, a realistic readiness score, and a roadmap backed by numbers.'
+      },
+      {
+        type: 'paragraph',
+        value:
+          'At BitDepth, we audit first, recommend what fits, and deliver outcomes. If you are in oil and gas or manufacturing and want to see what AI can do for your business, book a free discovery call.'
+      },
+      { type: 'heading4', value: 'Book a Free Discovery Call' },
+      { type: 'paragraph', value: 'Serving Canadian oil and gas and manufacturing companies.' }
+    ]
   }
 };
 
@@ -490,6 +744,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   return {
     title: article.seoTitle ?? `${article.title} | BitDepth AI`,
     description: article.description,
+    keywords: article.keywords,
     alternates: {
       canonical: path
     },
