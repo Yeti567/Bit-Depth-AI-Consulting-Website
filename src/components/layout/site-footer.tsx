@@ -86,6 +86,11 @@ export function SiteFooter() {
                 Privacy Policy
               </Link>
             </li>
+            <li>
+              <Link href="/terms-of-use" className="transition hover:text-cyan">
+                Terms of Use
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

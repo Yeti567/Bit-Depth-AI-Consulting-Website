@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { ArrowRight } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
+import { FAQSchemaScript } from '@/components/ui/faq-schema-script';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
  
 export const metadata: Metadata = {
@@ -181,19 +182,6 @@ const serviceSchema = {
   url: 'https://bitdepthaiconsulting.com/services'
 };
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faqs.map((faq) => ({
-    '@type': 'Question',
-    name: faq.question,
-    acceptedAnswer: {
-      '@type': 'Answer',
-      text: faq.answer
-    }
-  }))
-};
-
 export default function HomePage() {
   return (
     <PageShell>
@@ -203,9 +191,7 @@ export default function HomePage() {
       <Script id="service-schema" type="application/ld+json">
         {JSON.stringify(serviceSchema)}
       </Script>
-      <Script id="faq-schema" type="application/ld+json">
-        {JSON.stringify(faqSchema)}
-      </Script>
+      <FAQSchemaScript faqs={faqs} id="faq-schema" />
       <section className="section-navy relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,180,216,0.12),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(245,158,11,0.08),transparent_28%)]" />
         <div className="hero-particle left-[9%] top-[18%] h-2 w-2" />

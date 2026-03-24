@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import Script from 'next/script';
 import { PageShell } from '@/components/layout/page-shell';
+import { FAQSchemaScript } from '@/components/ui/faq-schema-script';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
@@ -60,59 +60,38 @@ const articles = [
   }
 ];
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is an AI audit and why is it important?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'An AI audit evaluates your operations, data readiness, and automation opportunities so you know where AI will create measurable value before building anything.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'How does BitDepth AI Consulting help oil and gas companies?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We support oil and gas operators with predictive maintenance models, pipeline monitoring, production optimization, and AI-enabled decision support across field operations.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'What does Industry 4.0 mean for manufacturers?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Industry 4.0 combines IoT data, computer vision, AI, and automation to create smart factories with real-time visibility and closed-loop optimization.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Why do most AI projects fail?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Most AI initiatives fail because data is unstructured, success metrics are unclear, or the solution is chosen before the problem is defined. Our audit-first process prevents those issues.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'What does “data-first” AI implementation look like?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Data-first AI means collecting, cleaning, and structuring operational data, establishing governance, and building reliable pipelines before deploying machine learning or automation.'
-      }
-    }
-  ]
-};
+const faqs = [
+  {
+    question: 'What is an AI audit and why is it important?',
+    answer:
+      'An AI audit evaluates your operations, data readiness, and automation opportunities so you know where AI will create measurable value before building anything.'
+  },
+  {
+    question: 'How does BitDepth AI Consulting help oil and gas companies?',
+    answer:
+      'We support oil and gas operators with predictive maintenance models, pipeline monitoring, production optimization, and AI-enabled decision support across field operations.'
+  },
+  {
+    question: 'What does Industry 4.0 mean for manufacturers?',
+    answer:
+      'Industry 4.0 combines IoT data, computer vision, AI, and automation to create smart factories with real-time visibility and closed-loop optimization.'
+  },
+  {
+    question: 'Why do most AI projects fail?',
+    answer:
+      'Most AI initiatives fail because data is unstructured, success metrics are unclear, or the solution is chosen before the problem is defined. Our audit-first process prevents those issues.'
+  },
+  {
+    question: 'What does “data-first” AI implementation look like?',
+    answer:
+      'Data-first AI means collecting, cleaning, and structuring operational data, establishing governance, and building reliable pipelines before deploying machine learning or automation.'
+  }
+];
 
 export default function ResourcesPage() {
   return (
     <PageShell>
-      <Script id="resources-faq-schema" type="application/ld+json">
-        {JSON.stringify(faqSchema)}
-      </Script>
+      <FAQSchemaScript faqs={faqs} id="resources-faq-schema" />
       <section className="section-navy relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,180,216,0.12),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(245,158,11,0.08),transparent_30%)]" />
         <div className="container-shell grid gap-10 py-12 sm:py-16 lg:grid-cols-[1fr,1fr] lg:items-center lg:gap-12 lg:py-28">
