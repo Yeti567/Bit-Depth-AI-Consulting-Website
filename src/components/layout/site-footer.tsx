@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Facebook, Linkedin } from 'lucide-react';
+import { Facebook, Linkedin, Youtube } from 'lucide-react';
 
 export function SiteFooter() {
   return (
@@ -116,6 +116,15 @@ export function SiteFooter() {
             >
               <Linkedin className="h-4 w-4" aria-hidden />
               <span className="sr-only">LinkedIn</span>
+            </Link>
+            <Link
+              href="https://www.youtube.com/channel/UCz6b7iSR3mik1lzlxoAsZMA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-white/75 transition hover:text-cyan"
+            >
+              <Youtube className="h-4 w-4" aria-hidden />
+              <span className="sr-only">YouTube</span>
             </Link>
           </div>
         </div>
