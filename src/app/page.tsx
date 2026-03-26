@@ -218,14 +218,20 @@ export default function HomePage() {
               <Link href="#how-we-work" className="btn-secondary min-h-12 text-white">
                 See How It Works
               </Link>
-              <a
-                href="https://youtu.be/xHJJh52CLtI"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary min-h-12 text-white"
-              >
-                Watch Video
-              </a>
+            </div>
+            <div className="mt-6 max-w-2xl rounded-2xl border border-cyan/20 bg-white/5 p-3 sm:p-4">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-cyan">Watch the AI Discovery Overview</p>
+              <div className="relative aspect-video overflow-hidden rounded-xl border border-white/10 bg-[#020814]">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/xHJJh52CLtI?si=l1KEBIiarKoryEKJ"
+                  title="BitDepth AI Discovery Audit Video"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="absolute inset-0 h-full w-full"
+                />
+              </div>
             </div>
           </ScrollReveal>
           <ScrollReveal index={1} className="relative min-h-[300px] overflow-hidden rounded-[1.5rem] border border-cyan/20 bg-[#061323] shadow-[0_24px_70px_rgba(0,0,0,0.45)] sm:min-h-[360px] sm:rounded-[2rem] lg:min-h-[620px]">
