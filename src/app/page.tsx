@@ -218,6 +218,14 @@ export default function HomePage() {
               <Link href="#how-we-work" className="btn-secondary min-h-12 text-white">
                 See How It Works
               </Link>
+              <a
+                href="https://youtu.be/xHJJh52CLtI"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary min-h-12 text-white"
+              >
+                Watch Video
+              </a>
             </div>
           </ScrollReveal>
           <ScrollReveal index={1} className="relative min-h-[300px] overflow-hidden rounded-[1.5rem] border border-cyan/20 bg-[#061323] shadow-[0_24px_70px_rgba(0,0,0,0.45)] sm:min-h-[360px] sm:rounded-[2rem] lg:min-h-[620px]">
