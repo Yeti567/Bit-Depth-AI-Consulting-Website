@@ -1,16 +1,18 @@
 import type { Metadata } from 'next';
-import { Inter, Source_Sans_3 } from 'next/font/google';
+import { DM_Sans, Syne } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({
+const syne = Syne({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-syne',
+  weight: ['700', '800'],
   display: 'swap'
 });
 
-const sourceSans = Source_Sans_3({
+const dmSans = DM_Sans({
   subsets: ['latin'],
-  variable: '--font-source-sans',
+  variable: '--font-dm-sans',
+  weight: ['300', '400', '500'],
   display: 'swap'
 });
 
@@ -21,15 +23,15 @@ export const metadata: Metadata = {
     template: '%s'
   },
   description:
-    'Vendor-neutral AI consulting for oil & gas, manufacturing, and Canadian mid-market businesses. Audit-first strategy, practical implementation, and measurable ROI.',
+    'BitDepth helps Canadian SMBs eliminate manual work, connect their systems, and make better decisions with AI. We audit first, then build what fits.',
   keywords: [
-    'AI consulting',
+    'AI consulting for Canadian SMBs',
     'vendor-neutral AI consulting',
-    'AI audit',
-    'manufacturing AI',
-    'oil and gas AI',
-    'Kamloops BC AI consulting',
-    'Canadian mid-market AI'
+    'AI opportunity audit',
+    'workflow automation',
+    'custom AI workers',
+    'Canadian AI consulting',
+    'SMB operations consulting'
   ],
   alternates: {
     canonical: '/'
@@ -47,8 +49,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'BitDepth AI Consulting Ltd.',
-    description:
-      'Practical, vendor-neutral AI consulting for industrial and mid-market businesses across Canada.',
+    description: 'Vendor-neutral AI consulting for Canadian SMBs focused on measurable operational outcomes.',
     type: 'website',
     url: 'https://bitdepthaiconsulting.com',
     siteName: 'BitDepth AI Consulting Ltd.',
@@ -65,8 +66,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'BitDepth AI Consulting Ltd.',
-    description:
-      'Practical, vendor-neutral AI consulting for industrial and mid-market businesses across Canada.',
+    description: 'Vendor-neutral AI consulting for Canadian SMBs focused on measurable operational outcomes.',
     images: ['/images/Social Media Profile Card.webp']
   },
   category: 'technology'
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${sourceSans.variable}`}>
+      <body className={`${syne.variable} ${dmSans.variable}`}>
         {children}
       </body>
     </html>

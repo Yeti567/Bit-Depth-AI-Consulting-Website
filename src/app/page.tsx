@@ -1,450 +1,317 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import Script from 'next/script';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, BarChart3, Check, CheckCircle2, Factory, HardHat, Link2, Repeat, Truck, UserCog } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
-import { FAQSchemaScript } from '@/components/ui/faq-schema-script';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
  
 export const metadata: Metadata = {
-  title: 'AI Consulting Firm for Oil & Gas and Manufacturing | BitDepth AI',
+  title: 'AI Consulting for Canadian Businesses | BitDepth AI Consulting',
   description:
-    'BitDepth AI Consulting is a vendor-neutral AI consulting firm providing machine learning consulting, data analytics consulting, predictive maintenance AI, and digital transformation services for oil & gas and manufacturing leaders.',
-  keywords: [
-    'AI consulting firm',
-    'AI consultant',
-    'machine learning consulting',
-    'digital transformation consulting',
-    'data analytics consulting',
-    'AI implementation services',
-    'predictive maintenance AI',
-    'industrial AI solutions',
-    'AI strategy consulting',
-    'AI integration services'
-  ],
+    'BitDepth helps Canadian SMBs eliminate manual work, connect their systems, and make better decisions with AI. We audit first, then build what fits.',
   alternates: {
     canonical: '/'
   },
   openGraph: {
-    title: 'AI Consulting Firm for Oil & Gas and Manufacturing | BitDepth AI',
+    title: 'AI Consulting for Canadian Businesses | BitDepth AI Consulting',
     description:
-      'Vendor-neutral AI consulting, machine learning consulting, predictive maintenance AI, and digital transformation services for industrial companies.',
+      'BitDepth helps Canadian SMBs eliminate manual work, connect their systems, and make better decisions with AI.',
     url: '/',
     type: 'website',
     images: [
       {
-        url: '/images/Home page hero image revised.png',
+        url: '/images/Homepage hero section.webp',
         width: 1200,
         height: 630,
-        alt: 'Industrial facility with subtle AI-inspired overlay lighting for BitDepth AI Consulting homepage'
+        alt: 'Business owner reviewing operational dashboard'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Consulting Firm for Oil & Gas and Manufacturing | BitDepth AI',
-    description:
-      'AI consulting, machine learning consulting, and predictive maintenance AI solutions for real-world operations.',
-    images: ['/images/Home page hero image revised.png']
+    title: 'AI Consulting for Canadian Businesses | BitDepth AI Consulting',
+    description: 'Vendor-neutral AI consulting focused on measurable operational outcomes for Canadian SMBs.',
+    images: ['/images/Homepage hero section.webp']
   }
 };
 
+const painPoints = [
+  {
+    title: 'Data spread across disconnected systems',
+    description: "Your team can't get a clear picture because information lives in 4 different places."
+  },
+  {
+    title: 'Manual processes eating staff time',
+    description: 'Repetitive admin work that should take minutes takes hours every single day.'
+  },
+  {
+    title: 'Decisions made on incomplete information',
+    description: "You're running the business on gut feel because the data isn't visible or usable."
+  },
+  {
+    title: "Systems that don't talk to each other",
+    description: 'Quoting, scheduling, invoicing, and reporting all require manual re-entry.'
+  }
+];
+
 const processSteps = [
   {
-    step: 'Step 1',
+    icon: <BarChart3 className="h-5 w-5 text-cyan" />,
     title: 'Diagnose',
     description:
-      'We run a structured AI audit and data assessment to understand systems, workflows, and bottlenecks.',
-    seo: 'AI audit services • AI strategy consulting'
+      'We run a structured AI Opportunity Audit across your operations, data, and technology stack. We map your processes and identify exactly where AI will deliver the highest ROI.'
   },
   {
-    step: 'Step 2',
+    icon: <Link2 className="h-5 w-5 text-cyan" />,
     title: 'Design',
     description:
-      'We build a roadmap using machine learning, automation, and analytics solutions tailored to your business.',
-    seo: 'machine learning consulting • data analytics consulting'
+      'We build a prioritized roadmap: short-term quick wins and longer-term strategic initiatives with realistic ROI estimates for each.'
   },
   {
-    step: 'Step 3',
+    icon: <Repeat className="h-5 w-5 text-cyan" />,
     title: 'Implement',
     description:
-      'We deliver AI implementation services, integrating systems, building data pipelines, and deploying real solutions.',
-    seo: 'AI implementation services • AI integration services'
+      'We build and deploy the right solution: automations, AI workers, dashboards, or integrations. No unnecessary tech. No wasted budget.'
   }
 ];
 
 const services = [
   {
-    title: 'AI Strategy & AI Consulting',
-    description: 'We help businesses define where AI creates real value, not just where it sounds good.',
-    keywords: ['AI strategy consulting', 'digital transformation consulting', 'business process optimization']
+    icon: <BarChart3 className="h-5 w-5 text-cyan" />,
+    title: 'AI Opportunity Audit',
+    summary: 'Your starting point.',
+    description: 'Structured discovery of where AI will save you the most time and money. Includes roadmap + ROI estimates. From $5,000.'
   },
   {
-    title: 'Machine Learning & Predictive Analytics',
-    description: 'Turn your data into insights and predictions you can act on.',
-    keywords: ['machine learning consulting', 'predictive analytics consultancy', 'data analytics consulting']
+    icon: <Repeat className="h-5 w-5 text-cyan" />,
+    title: 'Workflow Automation',
+    summary: 'Eliminate the manual.',
+    description: 'Automate repetitive processes across invoicing, scheduling, reporting, onboarding, and more. From $5,000.'
   },
   {
-    title: 'Predictive Maintenance & Operations AI',
-    description: 'Reduce downtime and prevent failures before they happen.',
-    keywords: ['predictive maintenance AI', 'equipment failure prediction', 'condition monitoring']
+    icon: <UserCog className="h-5 w-5 text-cyan" />,
+    title: 'Custom AI Workers',
+    summary: 'Your digital workforce.',
+    description: 'Purpose-built AI agents that perform defined job functions inside your business. From $10,000.'
   },
   {
-    title: 'AI Automation & Integration',
-    description: 'Eliminate repetitive work and connect your systems end to end.',
-    keywords: ['AI implementation services', 'process automation consulting', 'RPA + AI workflows']
+    icon: <Link2 className="h-5 w-5 text-cyan" />,
+    title: 'AI Strategy & Roadmapping',
+    summary: 'A clear plan forward.',
+    description: 'Multi-phase AI implementation strategy aligned to your business goals and budget. From $12,000.'
   },
   {
-    title: 'Industrial AI & Data Systems',
-    description: 'Designed for real-world assets, operations, and frontline teams.',
-    keywords: ['industrial AI solutions', 'industrial IoT consulting', 'digital twin systems']
+    icon: <CheckCircle2 className="h-5 w-5 text-cyan" />,
+    title: 'AI Training & Enablement',
+    summary: 'Make it stick.',
+    description: "Workshops and playbooks that ensure your team actually uses the AI you've invested in. From $2,500."
+  }
+];
+
+const differentiators = [
+  {
+    title: "We don't sell software.",
+    description: "We recommend the best solution for your situation, not the one we're paid to push."
+  },
+  {
+    title: 'We start with a diagnosis, not a pitch.',
+    description: 'Every engagement begins with a structured audit. No guessing. No wasted budget.'
+  },
+  {
+    title: 'Built for Canadian SMBs.',
+    description: 'Enterprise-quality AI thinking at mid-market prices. Starting at $5,000, not $50,000.'
+  },
+  {
+    title: 'Measurable ROI.',
+    description: "We estimate ROI before we build anything. If the numbers don't work, we tell you."
   }
 ];
 
 const industries = [
-  {
-    title: 'Oil & Gas',
-    description: 'We focus on predictive maintenance, production optimization, and digital oilfield solutions.',
-    keywords: ['AI in oil and gas', 'predictive maintenance oil and gas', 'digital oilfield solutions'],
-    href: '/industries/oil-and-gas',
-    image: '/images/Workers with predictive maintenance data revised.png',
-    alt: 'Industrial field workers reviewing predictive maintenance data in an oil and gas environment'
-  },
-  {
-    title: 'Manufacturing',
-    description: 'Industry 4.0 consulting for smart factories, quality, and throughput.',
-    keywords: ['manufacturing AI consulting', 'Industry 4.0 consulting', 'smart factory solutions'],
-    href: '/industries/manufacturing',
-    image: '/images/High-tech manufacturing in action revised.png',
-    alt: 'Advanced manufacturing line with high-tech production activity'
-  }
+  { icon: <HardHat className="h-6 w-6" />, label: 'Trades & Construction' },
+  { icon: <UserCog className="h-6 w-6" />, label: 'Field Services' },
+  { icon: <Factory className="h-6 w-6" />, label: 'Manufacturing' },
+  { icon: <CheckCircle2 className="h-6 w-6" />, label: 'Professional Services' },
+  { icon: <Truck className="h-6 w-6" />, label: 'Transportation & Logistics' },
+  { icon: <BarChart3 className="h-6 w-6" />, label: 'Oil & Gas Services' }
 ];
-
-const valuePoints = [
-  'No vendor bias; we recommend what fits your business',
-  'Built for real operations, not theory',
-  'Focused on measurable ROI',
-  'Designed for SMB and mid-market companies'
-];
-
-const faqs = [
-  {
-    question: 'What does an AI consulting firm do?',
-    answer:
-      'An AI consulting firm like BitDepth evaluates your operations, data, and systems to design practical machine learning consulting, digital transformation consulting, and AI implementation services that deliver measurable ROI.'
-  },
-  {
-    question: 'How can AI improve industrial operations?',
-    answer:
-      'AI improves industrial operations by unifying data analytics consulting, predictive maintenance AI, and automation so teams eliminate manual work, reduce downtime, and make faster decisions based on live data.'
-  },
-  {
-    question: 'What is predictive maintenance AI?',
-    answer:
-      'Predictive maintenance AI uses sensor data, machine learning models, and industrial AI solutions to predict failures before they happen, allowing oil & gas and manufacturing companies to schedule repairs and avoid unplanned shutdowns.'
-  },
-  {
-    question: 'Do you provide AI implementation services?',
-    answer:
-      'Yes. BitDepth AI Consulting delivers AI implementation services and AI integration services, including data pipelines, automation workflows, and deployment support so solutions run reliably in production environments.'
-  }
-];
-
-const organizationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'BitDepth AI Consulting Ltd.',
-  url: 'https://bitdepthaiconsulting.com',
-  logo: 'https://bitdepthaiconsulting.com/images/Social Media Profile Card.webp',
-  description:
-    'Vendor-neutral AI consulting firm delivering machine learning consulting, digital transformation consulting, predictive maintenance AI, and industrial AI solutions for oil & gas and manufacturing companies.',
-  sameAs: ['https://www.linkedin.com/company/bitdepth-ai-consulting/']
-};
-
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'Industrial AI Consulting Services',
-  provider: {
-    '@type': 'Organization',
-    name: 'BitDepth AI Consulting Ltd.',
-    url: 'https://bitdepthaiconsulting.com'
-  },
-  areaServed: 'Canada',
-  serviceType: [
-    'AI consulting firm',
-    'machine learning consulting',
-    'digital transformation consulting',
-    'predictive maintenance AI',
-    'industrial AI solutions'
-  ],
-  url: 'https://bitdepthaiconsulting.com/services'
-};
 
 export default function HomePage() {
   return (
     <PageShell>
-      <Script id="organization-schema" type="application/ld+json">
-        {JSON.stringify(organizationSchema)}
-      </Script>
-      <Script id="service-schema" type="application/ld+json">
-        {JSON.stringify(serviceSchema)}
-      </Script>
-      <FAQSchemaScript faqs={faqs} id="faq-schema" />
-      <section className="section-navy relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,180,216,0.12),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(245,158,11,0.08),transparent_28%)]" />
-        <div className="hero-particle left-[9%] top-[18%] h-2 w-2" />
-        <div className="hero-particle left-[22%] top-[68%] h-2.5 w-2.5" style={{ animationDelay: '1.2s' }} />
-        <div className="hero-particle right-[14%] top-[22%] h-2 w-2" style={{ animationDelay: '2.1s' }} />
-        <div className="hero-particle right-[26%] top-[60%] h-3 w-3" style={{ animationDelay: '3.2s' }} />
-        <div className="container-shell relative grid min-h-[calc(100svh-4rem)] gap-10 py-12 sm:py-16 lg:grid-cols-[1fr,1.05fr] lg:items-center lg:gap-12 lg:py-28">
+      <section className="section-navy dot-grid relative overflow-hidden section-space">
+        <div className="container-shell grid gap-10 lg:grid-cols-[1.2fr,0.8fr] lg:items-center">
           <ScrollReveal>
-            <p className="industry-pill inline-flex">Independent Industrial AI Consulting</p>
-            <h1 className="mt-5 max-w-3xl text-[2.35rem] font-extrabold leading-[1.05] text-white sm:mt-6 sm:text-5xl md:text-[64px]">
-              AI Consulting Firm for Industrial &amp; Operational Businesses
+            <span className="eyebrow-pill">Vendor-Neutral AI Consulting</span>
+            <h1 className="mt-5 max-w-3xl text-4xl font-extrabold leading-tight text-white md:text-6xl">
+              Fix the inefficiencies slowing down your business.
             </h1>
-            <p className="mt-5 max-w-3xl text-base leading-7 text-white/72 sm:mt-6 sm:text-lg sm:leading-8 md:text-xl">
-              We provide AI consulting, machine learning consulting, and digital transformation services to eliminate inefficiencies, reduce downtime, and unlock better decisions from your data.
+            <p className="mt-5 max-w-3xl text-lg text-white/78">
+              Most businesses don&apos;t have an AI problem, they have a systems and data problem. We identify exactly where time and money are being lost, then implement the right solution.
             </p>
-            <div className="mt-5 space-y-2 text-base text-white/72 sm:space-y-1">
-              <p>We don’t sell software.</p>
-              <p>We diagnose your business, identify what’s actually slowing you down, and implement the right solution.</p>
-            </div>
-            <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-4">
-              <Link href="/resources/what-is-an-ai-discovery-audit" className="inline-flex min-h-12 items-center justify-center rounded-lg bg-amber px-6 py-3 text-sm font-semibold text-navy shadow-[0_12px_36px_rgba(245,158,11,0.3)] hover:-translate-y-0.5 hover:bg-amber-400 sm:px-8 sm:py-4 sm:text-base">
-                See What Is in a Discovery Audit
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <Link href="/ai-audit" className="btn-primary">
+                Book an AI Audit
               </Link>
-              <Link href="#how-we-work" className="btn-secondary min-h-12 text-white">
+              <Link href="#how-we-work" className="btn-outline">
                 See How It Works
               </Link>
             </div>
-            <div className="mt-6 max-w-2xl rounded-2xl border border-cyan/20 bg-white/5 p-3 sm:p-4">
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-cyan">Watch the AI Discovery Overview</p>
-              <div className="relative aspect-video overflow-hidden rounded-xl border border-white/10 bg-[#020814]">
-                <iframe
-                  src="https://www.youtube-nocookie.com/embed/xHJJh52CLtI?si=l1KEBIiarKoryEKJ"
-                  title="BitDepth AI Discovery Audit Video"
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                  className="absolute inset-0 h-full w-full"
-                />
-              </div>
-            </div>
+            <p className="mt-5 text-sm text-white/64">Vendor-neutral · No software sales · Canadian-owned · Starting at $5,000</p>
           </ScrollReveal>
-          <ScrollReveal index={1} className="relative min-h-[300px] overflow-hidden rounded-[1.5rem] border border-cyan/20 bg-[#061323] shadow-[0_24px_70px_rgba(0,0,0,0.45)] sm:min-h-[360px] sm:rounded-[2rem] lg:min-h-[620px]">
-            <Image
-              src="/images/Home page hero image revised.png"
-              alt="Industrial facility with subtle AI overlay lines and data nodes"
-              fill
-              priority
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-br from-navy/65 via-navy/20 to-transparent" />
-            <div className="absolute left-[10%] top-[15%] h-2 w-2 rounded-full bg-cyan shadow-[0_0_18px_rgba(0,180,216,0.9)]" />
-            <div className="absolute left-[26%] top-[28%] h-px w-[18%] bg-gradient-to-r from-cyan/70 to-transparent" />
-            <div className="absolute right-[18%] top-[20%] h-2 w-2 rounded-full bg-cyan shadow-[0_0_18px_rgba(0,180,216,0.9)]" />
-            <div className="absolute right-[24%] top-[22%] h-[16%] w-px bg-gradient-to-b from-cyan/70 to-transparent" />
-            <div className="absolute bottom-[18%] left-[18%] h-2 w-2 rounded-full bg-cyan shadow-[0_0_18px_rgba(0,180,216,0.9)]" />
-            <div className="absolute bottom-[22%] left-[20%] h-px w-[22%] bg-gradient-to-r from-cyan/70 to-transparent" />
+          <ScrollReveal index={1} className="relative min-h-[340px] overflow-hidden rounded-2xl border border-[var(--color-border)]">
+            <Image src="/images/Homepage hero section.webp" alt="Business owner reviewing operational dashboard" fill priority className="object-cover" />
           </ScrollReveal>
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-[#0E1728] py-5 text-white">
-        <div className="container-shell flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan">Helping companies with</p>
-          <div className="flex flex-col gap-2 text-sm leading-6 text-white/70 sm:flex-row sm:flex-wrap sm:items-center sm:gap-5">
-            <span>Predictive maintenance</span>
-            <span className="hidden h-4 w-px bg-white/15 sm:block" />
-            <span>Data analytics &amp; reporting</span>
-            <span className="hidden h-4 w-px bg-white/15 sm:block" />
-            <span>Process automation</span>
-            <span className="hidden h-4 w-px bg-white/15 sm:block" />
-            <span>AI implementation</span>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-14 md:py-24 bg-offwhite">
+      <section className="section-offwhite section-space">
         <div className="container-shell">
-          <ScrollReveal className="max-w-3xl">
-            <p className="eyebrow text-charcoal/60">The real problem</p>
-            <h2 className="mt-4 text-3xl font-extrabold leading-tight text-navy sm:text-4xl md:text-5xl">Most Businesses Don’t Have an AI Problem, They Have an Operations Problem</h2>
-            <p className="mt-6 text-base leading-7 text-charcoal/78 sm:text-lg">
-              We solve the operational blockers that prevent AI from making an impact:
+          <ScrollReveal className="mx-auto max-w-3xl text-center">
+            <p className="eyebrow">The Real Problem</p>
+            <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">You don&apos;t need more technology. You need clarity on what&apos;s breaking down.</h2>
+            <p className="mt-5 text-[var(--color-slate)]">
+              We solve the operational blockers that prevent AI from making any impact. Before building anything, we diagnose exactly where your business is losing time and money.
             </p>
-            <ul className="mt-6 space-y-3 text-base text-charcoal/78 sm:text-lg">
-              <li>• Data is spread across systems</li>
-              <li>• Teams rely on manual processes and spreadsheets</li>
-              <li>• Decisions are delayed or based on incomplete information</li>
-              <li>• Systems don’t talk to each other</li>
-            </ul>
-            <p className="mt-6 text-base text-charcoal/78 sm:text-lg">This is where AI consulting actually creates value.</p>
           </ScrollReveal>
-        </div>
-      </section>
-
-      <section id="how-we-work" className="section-dark py-14 md:py-24">
-        <div className="container-shell">
-          <ScrollReveal className="max-w-3xl">
-            <p className="eyebrow">Our process</p>
-            <h2 className="mt-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl">How Our AI Consulting Process Works</h2>
-          </ScrollReveal>
-          <div className="mt-10 grid gap-5 sm:mt-12 lg:grid-cols-3">
-            {processSteps.map((item, index) => (
-              <ScrollReveal key={item.title} as="article" className="surface-card-dark h-full p-6 sm:p-8" index={index}>
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan">{item.step}</p>
-                <h3 className="mt-5 text-2xl font-semibold text-white">{item.title}</h3>
-                <p className="mt-4 text-white/72">{item.description}</p>
-                <p className="mt-6 text-sm font-semibold uppercase tracking-[0.18em] text-white/60">{item.seo}</p>
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            {painPoints.map((point, index) => (
+              <ScrollReveal key={point.title} index={index} className="card-light border-l-4 border-l-cyan p-6">
+                <h3 className="text-xl font-bold">{point.title}</h3>
+                <p className="mt-3 text-[var(--color-slate)]">{point.description}</p>
               </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section-navy-soft py-14 md:py-24">
-        <div className="container-shell grid gap-10 lg:grid-cols-[1fr,0.95fr] lg:items-center lg:gap-12">
-          <div>
-            <ScrollReveal>
-              <p className="eyebrow">Services</p>
-              <h2 className="mt-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl">AI Consulting Services</h2>
-            </ScrollReveal>
-            <div className="mt-8 grid gap-4 sm:mt-10">
-              {services.map((service, index) => (
-                <ScrollReveal key={service.title} className="surface-card-dark p-5 sm:p-6" index={index}>
-                  <h3 className="text-lg font-semibold text-white sm:text-xl">{service.title}</h3>
-                  <p className="mt-3 text-white/72">{service.description}</p>
-                  <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-white/55">
-                    {service.keywords.map((keyword) => (
-                      <span key={keyword} className="rounded-full border border-white/15 px-3 py-1 text-[11px]">
-                        {keyword}
-                      </span>
-                    ))}
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
-          </div>
-          <ScrollReveal index={1} className="relative order-first min-h-[280px] overflow-hidden rounded-[1.5rem] border border-cyan/20 shadow-[0_24px_70px_rgba(0,0,0,0.4)] sm:min-h-[360px] sm:rounded-[2rem] lg:order-none lg:min-h-[640px]">
-            <Image
-              src="/images/Industrial data dashboard in dim environment revised.png"
-              alt="Industrial environment with AI dashboard overlays and monitoring data"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-navy/10" />
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <section className="py-14 md:py-24 bg-[#F7F8FB]">
+      <section id="how-we-work" className="section-navy section-space">
         <div className="container-shell">
-          <ScrollReveal className="max-w-3xl">
-            <p className="eyebrow">Industries</p>
-            <h2 className="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl">Industries We Work With</h2>
-            <p className="mt-4 text-base text-charcoal/72 sm:mt-5 sm:text-lg">We focus on industries where operations, assets, and data matter.</p>
+          <ScrollReveal className="mx-auto max-w-3xl text-center">
+            <h2 className="text-3xl font-extrabold text-white md:text-5xl">How Our AI Consulting Process Works</h2>
           </ScrollReveal>
-          <div className="mt-10 grid gap-5 sm:mt-12 lg:grid-cols-2">
-            {industries.map((industry, index) => (
-              <ScrollReveal key={industry.title} as="article" className="surface-card group h-full overflow-hidden p-0" index={index}>
-                <div className="relative h-56 overflow-hidden sm:h-64">
-                  <Image src={industry.image} alt={industry.alt} fill className="object-cover transition duration-500 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#081221] via-[#081221]/30 to-transparent" />
-                </div>
-                <div className="p-5 sm:p-6">
-                  <h3 className="text-xl font-semibold text-navy sm:text-2xl">{industry.title}</h3>
-                  <p className="mt-3 text-charcoal/78 sm:mt-4">{industry.description}</p>
-                  <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-charcoal/55">
-                    {industry.keywords.map((keyword) => (
-                      <span key={keyword} className="rounded-full border border-charcoal/15 px-3 py-1 text-[11px]">
-                        {keyword}
-                      </span>
-                    ))}
-                  </div>
-                  <Link href={industry.href} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan">
-                    Learn more <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </div>
+          <div className="relative mt-12 grid gap-5 lg:grid-cols-3">
+            <div className="absolute left-[16%] right-[16%] top-9 hidden h-px bg-cyan/40 lg:block" />
+            {processSteps.map((step, index) => (
+              <ScrollReveal key={step.title} index={index} className="card-dark relative p-6">
+                <p className="text-5xl font-extrabold text-cyan/80">{index + 1}</p>
+                <div className="mt-3 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-cyan/35 bg-cyan/10">{step.icon}</div>
+                <h3 className="mt-4 text-2xl font-bold text-white">{step.title}</h3>
+                <p className="mt-3 text-white/70">{step.description}</p>
               </ScrollReveal>
             ))}
           </div>
+          <ScrollReveal className="mt-10 text-center">
+            <Link href="/ai-audit" className="btn-primary">
+              See What&apos;s in an AI Audit
+            </Link>
+          </ScrollReveal>
         </div>
       </section>
 
-      <section className="section-dark py-14 md:py-24">
+      <section className="section-offwhite section-space">
+        <div className="container-shell">
+          <ScrollReveal className="max-w-3xl">
+            <h2 className="text-3xl font-extrabold md:text-5xl">AI Consulting Services</h2>
+            <p className="mt-4 text-[var(--color-slate)]">Each service is designed to meet your business at its current stage.</p>
+          </ScrollReveal>
+          <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            {services.map((service, index) => (
+              <ScrollReveal key={service.title} index={index} className="card-dark p-6">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-cyan/30 bg-cyan/10">{service.icon}</div>
+                <h3 className="mt-4 text-xl font-bold text-white">{service.title}</h3>
+                <p className="mt-2 font-medium text-cyan">{service.summary}</p>
+                <p className="mt-3 text-white/72">{service.description}</p>
+                <Link href="/services" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-cyan">
+                  Learn More <ArrowRight className="h-4 w-4" />
+                </Link>
+              </ScrollReveal>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link href="/services" className="btn-primary">
+              View All Services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-navy section-space">
         <div className="container-shell grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
-          <div>
-            <ScrollReveal>
-              <p className="eyebrow">Why BitDepth AI Consulting</p>
-              <h2 className="mt-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl">Why BitDepth AI Consulting</h2>
-            </ScrollReveal>
-            <div className="mt-6 grid gap-3 sm:mt-8">
-              {valuePoints.map((point, index) => (
-                <ScrollReveal key={point} className="rounded-2xl border border-cyan/15 bg-white/5 p-4 text-white sm:p-5" index={index}>
-                  {point}
+          <ScrollReveal>
+            <h2 className="text-3xl font-extrabold text-white md:text-5xl">Why BitDepth AI Consulting</h2>
+            <div className="mt-8 space-y-4">
+              {differentiators.map((item, index) => (
+                <ScrollReveal key={item.title} index={index} className="rounded-xl border border-[var(--color-border)] bg-white/5 p-5">
+                  <p className="inline-flex items-start gap-3 text-white">
+                    <Check className="mt-1 h-4 w-4 shrink-0 text-cyan" />
+                    <span>
+                      <strong>{item.title}</strong> {item.description}
+                    </span>
+                  </p>
                 </ScrollReveal>
               ))}
             </div>
-          </div>
-          <ScrollReveal index={1} className="relative min-h-[280px] overflow-hidden rounded-[1.5rem] border border-cyan/15 shadow-[0_24px_70px_rgba(0,0,0,0.38)] sm:min-h-[320px] sm:rounded-[2rem] lg:min-h-[520px]">
-            <Image
-              src="/images/Engineers examining data in high-tech factory revised.png"
-              alt="Consulting-style industrial planning session with operational data in view"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#081221] via-transparent to-[#081221]/20" />
+          </ScrollReveal>
+          <ScrollReveal index={1} className="relative min-h-[420px] overflow-hidden rounded-2xl border border-[var(--color-border)]">
+            <Image src="/images/Home page BC Canada section.webp" alt="Consultant and owner reviewing strategy roadmap" fill className="object-cover" />
           </ScrollReveal>
         </div>
       </section>
 
-      <section className="bg-offwhite py-14 md:py-24">
+      <section className="section-offwhite section-space">
         <div className="container-shell">
           <ScrollReveal className="max-w-3xl">
-            <p className="eyebrow text-charcoal/60">AI Consulting FAQs</p>
-            <h2 className="mt-4 text-3xl font-extrabold leading-tight text-navy sm:text-4xl md:text-5xl">Answers for AI and Industrial Teams</h2>
-            <p className="mt-4 text-base text-charcoal/75 sm:text-lg">
-              Clear answers for leaders evaluating AI consulting, predictive maintenance AI, and AI implementation services.
-            </p>
+            <h2 className="text-3xl font-extrabold md:text-5xl">Industries We Work With</h2>
+            <p className="mt-4 text-[var(--color-slate)]">We focus on businesses where operations, people, and data drive results.</p>
           </ScrollReveal>
-          <div className="mt-8 space-y-5">
-            {faqs.map((faq) => (
-              <ScrollReveal key={faq.question} className="surface-card border border-black/5 p-5 sm:p-6">
-                <h3 className="text-xl font-semibold text-navy">{faq.question}</h3>
-                <p className="mt-3 text-charcoal/78">{faq.answer}</p>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {industries.map((industry, index) => (
+              <ScrollReveal
+                key={industry.label}
+                index={index}
+                className="rounded-xl border border-transparent bg-white p-5 shadow-[0_10px_28px_rgba(11,31,59,0.08)] transition hover:border-[var(--color-border)]"
+              >
+                <div className="text-cyan">{industry.icon}</div>
+                <p className="mt-3 text-lg font-semibold text-[var(--color-navy)]">{industry.label}</p>
               </ScrollReveal>
             ))}
           </div>
+          <div className="mt-10 text-center">
+            <Link href="/industries" className="btn-primary">
+              Explore Industries
+            </Link>
+          </div>
         </div>
       </section>
 
-      <section className="py-14 md:py-24" style={{ background: 'linear-gradient(135deg, #111827 0%, #0B1F3B 65%, #1b2434 100%)' }}>
-        <div className="container-shell">
-          <ScrollReveal className="rounded-[1.5rem] border border-amber/20 bg-[linear-gradient(135deg,rgba(245,158,11,0.12),rgba(255,255,255,0.02))] px-5 py-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)] sm:px-8 sm:py-10 md:rounded-[2rem] md:px-12 md:py-14">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber">Start with a diagnostic, not a guess</p>
-            <h2 className="mt-4 max-w-3xl text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl">Start with a Diagnostic, Not a Guess</h2>
-            <p className="mt-4 max-w-3xl text-base text-white/72 sm:mt-5 sm:text-lg">
+      <section className="section-charcoal py-14">
+        <div className="container-shell grid gap-8 text-center md:grid-cols-3">
+          <div>
+            <p className="text-4xl font-extrabold text-cyan">$5,000</p>
+            <p className="mt-2 text-white/65">Starting audit price</p>
+          </div>
+          <div>
+            <p className="text-4xl font-extrabold text-cyan">5–10 Days</p>
+            <p className="mt-2 text-white/65">Typical audit timeline</p>
+          </div>
+          <div>
+            <p className="text-4xl font-extrabold text-cyan">$2M–$50M</p>
+            <p className="mt-2 text-white/65">Revenue range we serve</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-navy section-space border-t border-t-cyan/30">
+        <div className="container-shell text-center">
+          <ScrollReveal className="mx-auto max-w-3xl">
+            <h2 className="text-3xl font-extrabold text-white md:text-5xl">Start With a Diagnostic, Not a Guess.</h2>
+            <p className="mt-5 text-white/72">
               Before building anything, we identify exactly where time is being lost, where money is leaking, and where AI will actually make an impact.
             </p>
-            <div className="mt-8">
-              <Link href="/contact" className="inline-flex min-h-12 items-center justify-center rounded-lg bg-amber px-6 py-3 text-sm font-semibold text-navy shadow-[0_12px_36px_rgba(245,158,11,0.32)] hover:-translate-y-0.5 hover:bg-amber-400 sm:px-8 sm:py-4 sm:text-base">
-                Book Your AI Diagnostic
-              </Link>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <section className="bg-[#060E1A] py-10 text-sm text-white/70">
-        <div className="container-shell">
-          <ScrollReveal>
-            <p>
-              BitDepth AI Consulting is an AI consulting firm providing machine learning consulting, data analytics consulting, and AI implementation services for industrial businesses. We specialize in predictive maintenance, industrial automation, and digital transformation for oil &amp; gas and manufacturing companies.
-            </p>
+            <Link href="/contact" className="btn-primary mt-8">
+              Book Your AI Diagnostic
+            </Link>
           </ScrollReveal>
         </div>
       </section>

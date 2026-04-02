@@ -4,7 +4,7 @@ import { Facebook, Linkedin, Youtube } from 'lucide-react';
 
 export function SiteFooter() {
   return (
-    <footer className="border-t-2 border-cyan bg-[#080F1C] bg-footer-radial text-white">
+    <footer className="section-charcoal border-t border-[var(--color-border)] text-white">
       <div className="container-shell grid gap-12 py-16 md:grid-cols-[1.4fr,1fr,1fr,1fr]">
         <div className="space-y-4">
           <Link href="/" className="relative block h-12 w-[220px]" aria-label="BitDepth AI Consulting home">
@@ -16,7 +16,12 @@ export function SiteFooter() {
               className="object-contain object-left"
             />
           </Link>
-          <p className="max-w-md text-sm text-white/60">Vendor-Neutral AI Consulting for Real Operational Outcomes</p>
+          <p className="max-w-md text-sm text-white/60">Vendor-Neutral AI Consulting for Real Operational Outcomes.</p>
+          <div className="flex flex-wrap gap-2 text-[11px]">
+            <span className="rounded-lg border border-cyan/35 bg-cyan/10 px-3 py-1 text-cyan">Audit First</span>
+            <span className="rounded-lg border border-cyan/35 bg-cyan/10 px-3 py-1 text-cyan">Recommend What Fits</span>
+            <span className="rounded-lg border border-cyan/35 bg-cyan/10 px-3 py-1 text-cyan">Deliver Outcomes</span>
+          </div>
         </div>
         <div>
           <h2 className="mb-4 text-[13px] font-semibold uppercase tracking-[0.1em] text-white">Services</h2>
@@ -52,13 +57,33 @@ export function SiteFooter() {
           <h2 className="mb-4 text-[13px] font-semibold uppercase tracking-[0.1em] text-white">Industries</h2>
           <ul className="space-y-3 text-sm text-white/50">
             <li>
-              <Link href="/industries/oil-and-gas" className="transition hover:text-cyan">
-                Oil and Gas
+              <Link href="/industries" className="transition hover:text-cyan">
+                Trades &amp; Construction
               </Link>
             </li>
             <li>
-              <Link href="/industries/manufacturing" className="transition hover:text-cyan">
+              <Link href="/industries" className="transition hover:text-cyan">
+                Field Services
+              </Link>
+            </li>
+            <li>
+              <Link href="/industries" className="transition hover:text-cyan">
                 Manufacturing
+              </Link>
+            </li>
+            <li>
+              <Link href="/industries" className="transition hover:text-cyan">
+                Professional Services
+              </Link>
+            </li>
+            <li>
+              <Link href="/industries" className="transition hover:text-cyan">
+                Transportation &amp; Logistics
+              </Link>
+            </li>
+            <li>
+              <Link href="/industries" className="transition hover:text-cyan">
+                Oil &amp; Gas Services
               </Link>
             </li>
           </ul>
@@ -96,9 +121,8 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-white/10">
         <div className="container-shell flex flex-col gap-4 py-6 text-[13px] text-white/35 md:flex-row md:items-center md:justify-between">
-          <p>2026 BitDepth AI Consulting Ltd. Barriere, British Columbia, Canada</p>
+          <p>© 2026 BitDepth AI Consulting Ltd. | Barriere, British Columbia, Canada</p>
           <div className="flex flex-col gap-1 text-white/50 sm:flex-row sm:items-center sm:gap-3">
-            <p>bitdepthaiconsulting.com</p>
             <Link
               href="https://www.facebook.com/bitpathconsultingltd"
               target="_blank"

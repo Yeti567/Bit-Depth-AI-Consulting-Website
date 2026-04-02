@@ -19,8 +19,8 @@ const config: Config = {
         coolgray: '#CBD5E1'
       },
       fontFamily: {
-        heading: ['var(--font-inter)', 'Arial', 'Helvetica', 'sans-serif'],
-        body: ['var(--font-source-sans)', 'Arial', 'Helvetica', 'sans-serif']
+        heading: ['var(--font-syne)', 'Arial', 'Helvetica', 'sans-serif'],
+        body: ['var(--font-dm-sans)', 'Arial', 'Helvetica', 'sans-serif']
       },
       boxShadow: {
         soft: '0 16px 40px rgba(11, 31, 59, 0.08)',

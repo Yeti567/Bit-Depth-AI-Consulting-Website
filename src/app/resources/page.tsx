@@ -2,194 +2,139 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PageShell } from '@/components/layout/page-shell';
-import { FAQSchemaScript } from '@/components/ui/faq-schema-script';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'AI Insights & Resources | BitDepth AI Consulting Blog',
+  title: 'Resources for Canadian Business Leaders | BitDepth AI Consulting',
   description:
-    'BitDepth AI Consulting shares practical insights on AI consulting, predictive maintenance, industrial automation, and machine learning for oil & gas and manufacturing teams.',
-  keywords: [
-    'AI consulting resources',
-    'AI blog for industry',
-    'predictive maintenance insights',
-    'industrial AI articles',
-    'machine learning blog',
-    'AI automation workflows'
-  ],
+    'Practical guides, articles, and tools to help Canadian business owners and operations leaders make better AI decisions.',
   alternates: {
     canonical: '/resources'
   },
   openGraph: {
-    title: 'AI Insights & Resources | BitDepth AI Consulting Blog',
+    title: 'Resources for Canadian Business Leaders | BitDepth AI Consulting',
     description:
-      'Practical AI strategies for industrial operators covering AI audits, predictive maintenance, Industry 4.0, agentic workflows, and clean data foundations.',
+      'Practical guides and articles to help Canadian SMBs evaluate AI opportunities and make better operational decisions.',
     url: '/resources',
     type: 'website',
     images: [
       {
-        url: '/images/blog-hero.webp',
+        url: '/images/resources-hero.png',
         width: 1200,
         height: 630,
-        alt: 'Industrial blog hero for BitDepth AI Consulting resources'
+        alt: 'Business leader reviewing a practical AI report'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Insights & Resources | BitDepth AI Consulting Blog',
-    description: 'Explore BitDepth AI’s resource hub for AI audits, predictive maintenance, Industry 4.0, and automation.',
-    images: ['/images/blog-hero.webp']
+    title: 'Resources for Canadian Business Leaders | BitDepth AI Consulting',
+    description: 'Practical AI resources for Canadian SMB operators and business leaders.',
+    images: ['/images/resources-hero.png']
   }
 };
 
 const articles = [
   {
-    title: 'What Is an AI Discovery Audit? A Complete Guide',
+    title: 'What Is an AI Discovery Audit?',
     description:
-      'Learn what an AI discovery audit includes, how long it takes, what it costs, and the roadmap you receive at the end.',
+      'Learn what an AI discovery audit includes, how long it takes, and what roadmap you should expect at the end.',
     image: '/images/What is a discovery audit.webp',
-    href: '/resources/what-is-an-ai-discovery-audit'
+    href: '/resources/what-is-an-ai-discovery-audit',
+    category: 'Guide',
+    readTime: '8 min read'
   },
   {
-    title: "Is Your Data Ready for AI? Here's How to Fix It",
+    title: "You Don\'t Have an AI Problem — You Have a Systems Problem",
     description:
-      'Learn why data integrity matters and follow a practical roadmap to build AI-ready data across systems, teams, and workflows.',
+      'How disconnected systems create hidden operational drag and what to fix before investing in AI tools.',
     image: '/images/Data Integrity Blog post_2.webp',
-    href: '/resources/is-your-data-ready-for-ai'
-  }
-];
-
-const faqs = [
-  {
-    question: 'What is an AI audit and why is it important?',
-    answer:
-      'An AI audit evaluates your operations, data readiness, and automation opportunities so you know where AI will create measurable value before building anything.'
+    href: '/resources',
+    category: 'Operations',
+    readTime: '6 min read'
   },
   {
-    question: 'How does BitDepth AI Consulting help oil and gas companies?',
-    answer:
-      'We support oil and gas operators with predictive maintenance models, pipeline monitoring, production optimization, and AI-enabled decision support across field operations.'
+    title: 'The 5 Signs Your Business Is Ready for AI Automation',
+    description: 'A practical checklist for owners and operations leaders evaluating where automation will deliver measurable ROI.',
+    image: '/images/blog-card.webp',
+    href: '/resources',
+    category: 'Checklist',
+    readTime: '5 min read'
   },
   {
-    question: 'What does Industry 4.0 mean for manufacturers?',
-    answer:
-      'Industry 4.0 combines IoT data, computer vision, AI, and automation to create smart factories with real-time visibility and closed-loop optimization.'
-  },
-  {
-    question: 'Why do most AI projects fail?',
-    answer:
-      'Most AI initiatives fail because data is unstructured, success metrics are unclear, or the solution is chosen before the problem is defined. Our audit-first process prevents those issues.'
-  },
-  {
-    question: 'What does “data-first” AI implementation look like?',
-    answer:
-      'Data-first AI means collecting, cleaning, and structuring operational data, establishing governance, and building reliable pipelines before deploying machine learning or automation.'
+    title: 'What to Expect From Your First AI Consulting Engagement',
+    description: 'A step-by-step look at the discovery, roadmap, and implementation process for first-time AI consulting clients.',
+    image: '/images/blog-featured.webp',
+    href: '/resources',
+    category: 'Playbook',
+    readTime: '7 min read'
   }
 ];
 
 export default function ResourcesPage() {
   return (
     <PageShell>
-      <FAQSchemaScript faqs={faqs} id="resources-faq-schema" />
-      <section className="section-navy relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,180,216,0.12),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(245,158,11,0.08),transparent_30%)]" />
-        <div className="container-shell grid gap-10 py-12 sm:py-16 lg:grid-cols-[1fr,1fr] lg:items-center lg:gap-12 lg:py-28">
+      <section className="section-navy dot-grid section-space">
+        <div className="container-shell grid gap-10 lg:grid-cols-[1fr,1fr] lg:items-center lg:gap-12">
           <ScrollReveal>
-            <p className="industry-pill inline-flex">Resources</p>
-            <h1 className="mt-5 max-w-3xl text-[2.4rem] font-extrabold leading-[1.05] text-white sm:mt-6 sm:text-5xl md:text-[62px]">
-              AI Insights & Resources
+            <h1 className="text-4xl font-extrabold text-white md:text-6xl">
+              Resources for Canadian Business Leaders
             </h1>
-            <p className="mt-4 max-w-3xl text-base leading-7 text-white/72 sm:mt-5 sm:text-lg sm:leading-8">
-              Practical insights on AI consulting, predictive maintenance, machine learning, and industrial automation.
-            </p>
-            <p className="mt-4 max-w-3xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">
-              Learn how AI is transforming oil &amp; gas, manufacturing, and industrial operations with real-world strategies and use cases.
+            <p className="mt-5 text-lg text-white/74">
+              Practical guides, articles, and tools to help you understand AI and make better decisions for your business.
             </p>
           </ScrollReveal>
-          <ScrollReveal index={1} className="relative min-h-[260px] overflow-hidden rounded-[1.6rem] border border-cyan/20 bg-[#061323] shadow-[0_24px_70px_rgba(0,0,0,0.45)] sm:min-h-[360px] sm:rounded-[2rem] lg:min-h-[560px]">
-            <Image src="/images/blog-hero.webp" alt="Industrial blog hero visuals" fill priority className="object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-br from-navy/70 via-navy/10 to-transparent" />
+          <ScrollReveal index={1} className="relative min-h-[300px] overflow-hidden rounded-2xl border border-[var(--color-border)]">
+            <Image src="/images/resources-hero.png" alt="Business professional reviewing practical AI guide" fill priority className="object-cover" />
           </ScrollReveal>
         </div>
       </section>
 
-      <section className="bg-offwhite py-12 md:py-20">
-        <div className="container-shell grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-center lg:gap-12">
-          <ScrollReveal className="order-2 lg:order-1">
-            <p className="eyebrow text-charcoal/60">Featured article</p>
-            <h2 className="mt-4 text-3xl font-extrabold leading-tight text-navy sm:text-4xl md:text-5xl">
-              How AI Audits Identify High-Impact Opportunities in Your Business
-            </h2>
-            <p className="mt-4 text-base leading-7 text-charcoal/80 sm:mt-5 sm:text-lg sm:leading-8">
-              Before implementing AI, businesses need to understand where it actually creates value. This guide breaks down how AI audits uncover automation opportunities, data gaps, and ROI-driven use cases.
-            </p>
-            <div className="mt-7">
-              <Link href="/contact" className="inline-flex min-h-12 items-center justify-center rounded-lg bg-amber px-6 py-3 text-sm font-semibold text-navy shadow-[0_12px_36px_rgba(245,158,11,0.3)] hover:-translate-y-0.5 hover:bg-amber-400 sm:px-8 sm:py-4 sm:text-base">
-                Read Article
+      <section className="section-offwhite section-space">
+        <div className="container-shell">
+          <ScrollReveal className="card-light grid gap-8 overflow-hidden p-0 lg:grid-cols-[1.05fr,0.95fr] lg:items-center">
+            <div className="p-6 sm:p-8">
+              <p className="eyebrow">Featured Resource</p>
+              <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">What Is an AI Discovery Audit?</h2>
+              <p className="mt-4 text-[var(--color-slate)]">
+                A complete guide to what happens in a discovery audit, what you receive, and how it helps you avoid wasting your first AI budget.
+              </p>
+              <Link href="/resources/what-is-an-ai-discovery-audit" className="btn-primary mt-7">
+                Read More
               </Link>
             </div>
-          </ScrollReveal>
-          <ScrollReveal index={1} className="order-1 relative min-h-[240px] overflow-hidden rounded-[1.6rem] border border-black/5 bg-white shadow-[0_24px_70px_rgba(0,0,0,0.15)] sm:min-h-[320px] sm:rounded-[2rem] lg:order-2 lg:min-h-[520px]">
-            <Image src="/images/blog-featured.webp" alt="Featured AI audit article" fill className="object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F3B]/70 via-transparent to-transparent" />
+            <div className="relative min-h-[260px] w-full lg:min-h-[360px]">
+              <Image src="/images/What is a discovery audit.webp" alt="Featured AI discovery audit article" fill className="object-cover" />
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
-      <section className="section-dark py-12 md:py-24">
+      <section className="section-offwhite section-space pt-0">
         <div className="container-shell">
           <ScrollReveal className="max-w-3xl">
-            <p className="eyebrow">Latest insights</p>
-            <h2 className="mt-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl">
-              Practical AI Articles for Industrial Leaders
-            </h2>
-            <p className="mt-4 text-base leading-7 text-white/70 sm:mt-5 sm:text-lg sm:leading-8">
-              Curated playbooks on AI strategy, clean data, predictive maintenance, and automation.
-            </p>
+            <h2 className="text-3xl font-extrabold md:text-5xl">Resource Library</h2>
           </ScrollReveal>
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {articles.map((article) => (
-              <ScrollReveal
-                key={article.title}
-                className="flex flex-col overflow-hidden rounded-[1.5rem] border border-white/12 bg-white/5 shadow-[0_24px_70px_rgba(0,0,0,0.25)]"
-              >
-                <div className="relative h-52 w-full">
+            {articles.slice(1).map((article, index) => (
+              <ScrollReveal key={article.title} index={index} className="card-light overflow-hidden p-0">
+                <div className="relative h-48 w-full">
                   <Image src={article.image} alt={article.title} fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#06152B] via-transparent to-transparent" />
                 </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <h3 className="text-xl font-semibold text-white">{article.title}</h3>
-                  <p className="mt-3 flex-1 text-sm leading-6 text-white/72">{article.description}</p>
-                  <Link href={article.href} className="mt-6 inline-flex items-center text-sm font-semibold text-cyan hover:text-amber">
-                    Read More
-                    <span className="ml-2 text-lg">→</span>
-                  </Link>
+                <div className="p-6">
+                  <span className="inline-flex rounded-lg border border-cyan/40 bg-cyan/10 px-3 py-1 text-xs font-semibold text-cyan">{article.category}</span>
+                  <h3 className="mt-4 text-xl font-bold text-[var(--color-navy)]">{article.title}</h3>
+                  <p className="mt-3 text-sm text-[var(--color-slate)]">{article.description}</p>
+                  <div className="mt-5 flex items-center justify-between">
+                    <span className="text-xs text-[var(--color-slate)]">{article.readTime}</span>
+                    <Link href={article.href} className="text-sm font-semibold text-cyan">
+                      Read →
+                    </Link>
+                  </div>
                 </div>
               </ScrollReveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="relative overflow-hidden py-12 md:py-24">
-        <div className="absolute inset-0">
-          <Image src="/images/blog-cta.webp" alt="Industrial CTA background" fill className="object-cover" />
-          <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(11,23,43,0.94),rgba(8,18,33,0.78))]" />
-        </div>
-        <div className="container-shell">
-          <ScrollReveal className="relative rounded-[1.5rem] border border-amber/25 bg-[linear-gradient(135deg,rgba(245,158,11,0.15),rgba(255,255,255,0.03))] px-5 py-8 text-white shadow-[0_30px_80px_rgba(0,0,0,0.35)] backdrop-blur-[2px] sm:px-8 sm:py-10 md:rounded-[2rem] md:px-12 md:py-14">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-amber">Start with an audit</p>
-            <h2 className="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl">Start With an AI Audit</h2>
-            <p className="mt-4 max-w-3xl text-base text-white/80 sm:mt-5 sm:text-lg">
-              Before applying AI, understand where it will deliver real value in your business.
-            </p>
-            <div className="mt-8">
-              <Link href="/contact" className="inline-flex min-h-12 items-center justify-center rounded-lg bg-amber px-6 py-3 text-sm font-semibold text-navy shadow-[0_12px_36px_rgba(245,158,11,0.32)] hover:-translate-y-0.5 hover:bg-amber-400 sm:px-8 sm:py-4 sm:text-base">
-                Book Your AI Assessment
-              </Link>
-            </div>
-          </ScrollReveal>
         </div>
       </section>
     </PageShell>
