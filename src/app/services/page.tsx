@@ -7,30 +7,33 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 export const metadata: Metadata = {
   title: 'AI Consulting Services for Canadian SMBs | BitDepth AI',
   description:
-    'From AI audits to workflow automation and custom AI workers, BitDepth builds practical AI solutions for Canadian businesses between $2M and $50M in revenue.',
+    'From AI audits to workflow automation and custom AI workers — BitDepth builds AI solutions for Canadian businesses. Vendor-neutral. Starting at $5,000.',
   alternates: {
-    canonical: '/services'
+    canonical: 'https://bitdepthaiconsulting.com/services'
   },
   openGraph: {
-    title: 'AI Consulting Services for Canadian SMBs | BitDepth AI',
+    title: 'AI Consulting Services | BitDepth AI Consulting',
     description:
-      'From AI audits to workflow automation and custom AI workers, BitDepth builds practical AI solutions for Canadian businesses.',
-    url: '/services',
+      'Five AI service lines for Canadian SMBs: AI audits, workflow automation, custom AI workers, strategy, and training. No software sales. Just outcomes.',
+    url: 'https://bitdepthaiconsulting.com/services',
     type: 'website',
+    siteName: 'BitDepth AI Consulting',
     images: [
       {
-        url: '/images/services-hero.png',
+        url: '/images/og-services.jpg',
         width: 1200,
         height: 630,
-        alt: 'Business workflow planning desk with diagrams and dashboard'
+        alt: 'BitDepth AI Consulting services social sharing card'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Consulting Services for Canadian SMBs | BitDepth AI',
-    description: 'Practical AI services from audit to implementation for Canadian SMB operators.',
-    images: ['/images/services-hero.png']
+    site: '@bitdepthai',
+    title: 'AI Consulting Services | BitDepth AI Consulting',
+    description:
+      'Five AI service lines for Canadian SMBs: AI audits, workflow automation, custom AI workers, strategy, and training. No software sales. Just outcomes.',
+    images: ['/images/og-services.jpg']
   }
 };
 
@@ -123,6 +126,35 @@ export default function ServicesPage() {
             <Link href="/ai-audit" className="btn-primary mt-6 w-full text-sm">
               Book an Audit
             </Link>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="section-offwhite pt-0">
+        <div className="container-shell">
+          <ScrollReveal className="my-10 rounded-xl bg-cyan px-7 py-7 md:px-12 md:py-7">
+            <div className="flex flex-col items-center gap-5 text-center md:flex-row md:items-center md:justify-between md:text-left">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center text-[var(--color-navy)]">
+                <svg viewBox="0 0 24 24" className="h-9 w-9" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z" />
+                  <path d="M9 12l2 2 4-4" />
+                </svg>
+              </div>
+
+              <div className="flex-1">
+                <p className="font-heading text-[17px] font-bold text-[var(--color-navy)]">Audit Credit Guarantee</p>
+                <p className="mt-1 text-[15px] text-[color:rgba(11,31,59,0.8)]">
+                  Proceed with any implementation within 90 days and your full audit fee is credited against your project — dollar for dollar.
+                </p>
+              </div>
+
+              <Link
+                href="/ai-audit#audit-credit-details"
+                className="w-full rounded-lg border-[1.5px] border-[var(--color-navy)] bg-transparent px-6 py-2.5 text-center text-sm font-semibold text-[var(--color-navy)] transition hover:bg-[rgba(11,31,59,0.1)] md:w-auto"
+              >
+                See How It Works
+              </Link>
+            </div>
           </ScrollReveal>
         </div>
       </section>

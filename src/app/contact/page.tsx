@@ -4,23 +4,35 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'Contact BitDepth AI Consulting | Start Your AI Audit',
+  title: 'Book an AI Audit or Discovery Call | BitDepth AI Consulting',
   description:
-    'Tell BitDepth about your business operations and we will recommend the best AI starting point for your team.',
+    'Ready to find out where AI can save your business time and money? Book an AI Opportunity Audit or a free discovery call with BitDepth AI Consulting.',
   alternates: {
-    canonical: '/contact'
+    canonical: 'https://bitdepthaiconsulting.com/contact'
   },
   openGraph: {
-    title: 'Contact BitDepth AI Consulting | Start Your AI Audit',
+    title: 'Contact BitDepth AI Consulting',
     description:
-      'Tell BitDepth about your business operations and get a clear recommended starting point.',
-    url: '/contact',
-    type: 'website'
+      'Book your AI Opportunity Audit or a free 30-minute discovery call. BitDepth serves Canadian SMBs across BC and Alberta. No pressure — if AI isn\'t the right move, we\'ll tell you.',
+    url: 'https://bitdepthaiconsulting.com/contact',
+    type: 'website',
+    siteName: 'BitDepth AI Consulting',
+    images: [
+      {
+        url: '/images/og-contact.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'BitDepth AI Consulting contact social sharing card'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact BitDepth AI Consulting | Start Your AI Audit',
-    description: 'Book a practical discovery call to identify your AI starting point.'
+    site: '@bitdepthai',
+    title: 'Contact BitDepth AI Consulting',
+    description:
+      'Book your AI Opportunity Audit or a free 30-minute discovery call. BitDepth serves Canadian SMBs across BC and Alberta. No pressure — if AI isn\'t the right move, we\'ll tell you.',
+    images: ['/images/og-contact.jpg']
   }
 };
 

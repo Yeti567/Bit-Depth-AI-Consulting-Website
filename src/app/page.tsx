@@ -8,30 +8,33 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 export const metadata: Metadata = {
   title: 'AI Consulting for Canadian Businesses | BitDepth AI Consulting',
   description:
-    'BitDepth helps Canadian SMBs eliminate manual work, connect their systems, and make better decisions with AI. We audit first, then build what fits.',
+    'BitDepth helps Canadian SMBs eliminate manual work, connect systems, and make better decisions with AI. We audit first, then build what fits. Starting at $5,000.',
   alternates: {
-    canonical: '/'
+    canonical: 'https://bitdepthaiconsulting.com/'
   },
   openGraph: {
     title: 'AI Consulting for Canadian Businesses | BitDepth AI Consulting',
     description:
-      'BitDepth helps Canadian SMBs eliminate manual work, connect their systems, and make better decisions with AI.',
-    url: '/',
+      'Vendor-neutral AI consulting for Canadian businesses from $2M to $50M. We diagnose operations, identify high-ROI opportunities, and build the right solution.',
+    url: 'https://bitdepthaiconsulting.com/',
     type: 'website',
+    siteName: 'BitDepth AI Consulting',
     images: [
       {
-        url: '/images/Homepage hero section.webp',
+        url: '/images/og-home.jpg',
         width: 1200,
         height: 630,
-        alt: 'Business owner reviewing operational dashboard'
+        alt: 'BitDepth AI Consulting homepage social sharing card'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@bitdepthai',
     title: 'AI Consulting for Canadian Businesses | BitDepth AI Consulting',
-    description: 'Vendor-neutral AI consulting focused on measurable operational outcomes for Canadian SMBs.',
-    images: ['/images/Homepage hero section.webp']
+    description:
+      'Vendor-neutral AI consulting for Canadian businesses from $2M to $50M. We diagnose operations, identify high-ROI opportunities, and build the right solution.',
+    images: ['/images/og-home.jpg']
   }
 };
 
@@ -205,6 +208,79 @@ export default function HomePage() {
             <Link href="/ai-audit" className="btn-primary">
               See What&apos;s in an AI Audit
             </Link>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="section-charcoal border-y border-[var(--color-border)] py-20">
+        <div className="container-shell grid gap-10 lg:grid-cols-[1.5fr,1fr] lg:items-center">
+          <ScrollReveal>
+            <span className="inline-flex rounded-full border border-cyan px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.1em] text-cyan">
+              The Audit Credit Guarantee
+            </span>
+            <h2 className="mt-5 text-3xl font-extrabold text-white md:text-5xl">Your Audit Pays for Itself. Guaranteed.</h2>
+            <p className="mt-5 max-w-3xl text-white/78">
+              When you complete an AI Opportunity Audit with BitDepth and move forward with any recommended implementation, we credit the full cost of your audit
+              — dollar for dollar — against your project invoice. No conditions. No minimums. No fine print.
+            </p>
+            <p className="mt-4 max-w-3xl text-white/78">
+              This is how confident we are in what the audit finds. If the numbers don&apos;t justify building, we&apos;ll tell you that too — and you&apos;ll still
+              have a clear operational roadmap worth far more than you paid for it.
+            </p>
+
+            <div className="mt-7 space-y-3 text-white/80">
+              <p className="inline-flex items-start gap-3">
+                <Check className="mt-1 h-4 w-4 shrink-0 text-cyan" />
+                <span>
+                  <strong className="text-white">Full credit</strong> — 100% of your audit fee applied to implementation
+                </span>
+              </p>
+              <p className="inline-flex items-start gap-3">
+                <Check className="mt-1 h-4 w-4 shrink-0 text-cyan" />
+                <span>
+                  <strong className="text-white">90-day window</strong> — Proceed at your pace, not ours
+                </span>
+              </p>
+              <p className="inline-flex items-start gap-3">
+                <Check className="mt-1 h-4 w-4 shrink-0 text-cyan" />
+                <span>
+                  <strong className="text-white">Any service</strong> — Applies to automation, AI workers, strategy, or training
+                </span>
+              </p>
+            </div>
+
+            <Link href="/ai-audit" className="btn-primary mt-8">
+              Book Your Audit
+            </Link>
+          </ScrollReveal>
+
+          <ScrollReveal index={1} className="mx-auto w-full max-w-md rounded-2xl border-2 border-cyan bg-[var(--color-navy)] px-8 py-10 text-center">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-cyan text-[var(--color-navy)]">
+              <svg viewBox="0 0 24 24" className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z" />
+                <path d="M9 12l2 2 4-4" />
+              </svg>
+            </div>
+            <p className="mt-5 font-heading text-[52px] font-extrabold leading-none text-cyan">100%</p>
+            <p className="mt-2 text-base font-medium text-[var(--color-offwhite)]">Audit Credit</p>
+            <div className="my-6 h-px w-full bg-[var(--color-border)]" />
+            <div className="space-y-3 text-sm text-white/80">
+              <p className="flex items-center justify-between gap-4">
+                <span>Credit window:</span>
+                <span className="font-semibold text-white">90 days</span>
+              </p>
+              <p className="flex items-center justify-between gap-4">
+                <span>Applies to:</span>
+                <span className="font-semibold text-white">Any implementation</span>
+              </p>
+              <p className="flex items-center justify-between gap-4">
+                <span>Minimum build:</span>
+                <span className="font-semibold text-white">None</span>
+              </p>
+            </div>
+            <p className="mt-6 text-center text-xs text-[var(--color-slate)]">
+              Credit applied to implementation invoice at time of project sign-off. Valid for 90 days from audit delivery date.
+            </p>
           </ScrollReveal>
         </div>
       </section>

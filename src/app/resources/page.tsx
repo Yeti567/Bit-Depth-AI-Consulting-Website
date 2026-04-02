@@ -5,32 +5,35 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'Resources for Canadian Business Leaders | BitDepth AI Consulting',
+  title: 'AI Resources for Canadian Business Leaders | BitDepth AI',
   description:
-    'Practical guides, articles, and tools to help Canadian business owners and operations leaders make better AI decisions.',
+    'Practical guides, articles, and tools to help Canadian SMB owners understand AI, identify opportunities, and make better technology decisions.',
   alternates: {
-    canonical: '/resources'
+    canonical: 'https://bitdepthaiconsulting.com/resources'
   },
   openGraph: {
-    title: 'Resources for Canadian Business Leaders | BitDepth AI Consulting',
+    title: 'AI Resources for Canadian Businesses | BitDepth AI Consulting',
     description:
-      'Practical guides and articles to help Canadian SMBs evaluate AI opportunities and make better operational decisions.',
-    url: '/resources',
+      'Free guides and articles from BitDepth on practical AI for Canadian SMBs — including what to expect from an AI audit, signs your business is ready for automation, and more.',
+    url: 'https://bitdepthaiconsulting.com/resources',
     type: 'website',
+    siteName: 'BitDepth AI Consulting',
     images: [
       {
-        url: '/images/resources-hero.png',
+        url: '/images/og-resources.jpg',
         width: 1200,
         height: 630,
-        alt: 'Business leader reviewing a practical AI report'
+        alt: 'BitDepth AI Consulting resources social sharing card'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Resources for Canadian Business Leaders | BitDepth AI Consulting',
-    description: 'Practical AI resources for Canadian SMB operators and business leaders.',
-    images: ['/images/resources-hero.png']
+    site: '@bitdepthai',
+    title: 'AI Resources for Canadian Businesses | BitDepth AI Consulting',
+    description:
+      'Free guides and articles from BitDepth on practical AI for Canadian SMBs — including what to expect from an AI audit, signs your business is ready for automation, and more.',
+    images: ['/images/og-resources.jpg']
   }
 };
 

@@ -7,30 +7,33 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 export const metadata: Metadata = {
   title: 'Industries We Serve | BitDepth AI Consulting',
   description:
-    'BitDepth serves Canadian SMBs in trades, construction, field services, professional services, manufacturing, transportation, and oil & gas services.',
+    'BitDepth serves Canadian SMBs in trades, construction, field services, professional services, manufacturing, transportation, and oil & gas. Practical AI for operations-driven businesses.',
   alternates: {
-    canonical: '/industries'
+    canonical: 'https://bitdepthaiconsulting.com/industries'
   },
   openGraph: {
     title: 'Industries We Serve | BitDepth AI Consulting',
     description:
-      'BitDepth serves Canadian SMBs in trades, construction, field services, professional services, manufacturing, transportation, and oil & gas services.',
-    url: '/industries',
+      'We work with Canadian businesses where operations, people, and data drive results — trades, field services, manufacturing, professional services, logistics, and oil & gas.',
+    url: 'https://bitdepthaiconsulting.com/industries',
     type: 'website',
+    siteName: 'BitDepth AI Consulting',
     images: [
       {
-        url: '/images/industries-hero.png',
+        url: '/images/og-industries.jpg',
         width: 1200,
         height: 630,
-        alt: 'Diverse Canadian business landscape across multiple industries'
+        alt: 'BitDepth AI Consulting industries social sharing card'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@bitdepthai',
     title: 'Industries We Serve | BitDepth AI Consulting',
-    description: 'Practical AI consulting for operationally complex Canadian SMB industries.',
-    images: ['/images/industries-hero.png']
+    description:
+      'We work with Canadian businesses where operations, people, and data drive results — trades, field services, manufacturing, professional services, logistics, and oil & gas.',
+    images: ['/images/og-industries.jpg']
   }
 };
 

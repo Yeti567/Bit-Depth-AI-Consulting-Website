@@ -19,11 +19,11 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL('https://bitdepthaiconsulting.com'),
   title: {
-    default: 'BitDepth AI Consulting Ltd.',
+    default: 'AI Consulting for Canadian Businesses | BitDepth AI Consulting',
     template: '%s'
   },
   description:
-    'BitDepth helps Canadian SMBs eliminate manual work, connect their systems, and make better decisions with AI. We audit first, then build what fits.',
+    'BitDepth helps Canadian SMBs cut manual work, connect systems, and make better decisions with AI. We audit first, then build what fits. Starting at $5,000.',
   keywords: [
     'AI consulting for Canadian SMBs',
     'vendor-neutral AI consulting',
@@ -34,7 +34,12 @@ export const metadata: Metadata = {
     'SMB operations consulting'
   ],
   alternates: {
-    canonical: '/'
+    canonical: 'https://bitdepthaiconsulting.com/'
+  },
+  authors: [{ name: 'BitDepth AI Consulting Ltd.' }],
+  other: {
+    'geo.region': 'CA-BC',
+    'geo.placename': 'Barriere, British Columbia, Canada'
   },
   robots: {
     index: true,
@@ -48,15 +53,16 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: 'BitDepth AI Consulting Ltd.',
-    description: 'Vendor-neutral AI consulting for Canadian SMBs focused on measurable operational outcomes.',
+    title: 'AI Consulting for Canadian Businesses | BitDepth AI Consulting',
+    description:
+      'Vendor-neutral AI consulting for Canadian businesses from $2M to $50M. We diagnose operations, identify high-ROI opportunities, and build the right solution.',
     type: 'website',
     url: 'https://bitdepthaiconsulting.com',
-    siteName: 'BitDepth AI Consulting Ltd.',
+    siteName: 'BitDepth AI Consulting',
     locale: 'en_CA',
     images: [
       {
-        url: '/images/Social Media Profile Card.webp',
+        url: '/images/og-home.jpg',
         width: 1200,
         height: 630,
         alt: 'BitDepth AI Consulting social sharing card'
@@ -65,9 +71,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BitDepth AI Consulting Ltd.',
-    description: 'Vendor-neutral AI consulting for Canadian SMBs focused on measurable operational outcomes.',
-    images: ['/images/Social Media Profile Card.webp']
+    site: '@bitdepthai',
+    title: 'AI Consulting for Canadian Businesses | BitDepth AI Consulting',
+    description:
+      'Vendor-neutral AI consulting for Canadian businesses from $2M to $50M. We diagnose operations, identify high-ROI opportunities, and build the right solution.',
+    images: ['/images/og-home.jpg']
   },
   category: 'technology'
 };

@@ -6,9 +6,9 @@ import { IndustrySegmentTabs } from '@/components/ui/industry-segment-tabs';
 import { CtaBanner } from '@/components/ui/cta-banner';
 
 export const metadata: Metadata = {
-  title: 'Manufacturing AI Consulting and Industry 4.0 Solutions | BitDepth AI',
+  title: 'AI Consulting for Manufacturing Companies | BitDepth AI',
   description:
-    'BitDepth delivers manufacturing AI consulting for smart factory implementation, computer vision quality control, predictive maintenance, and supply chain optimization in Western Canada.',
+    'BitDepth helps Canadian manufacturers improve quality control, optimize production scheduling, and reduce manual reporting with practical AI solutions.',
   keywords: [
     'manufacturing AI consulting and Industry 4.0 solutions',
     'smart manufacturing AI',
@@ -20,29 +20,31 @@ export const metadata: Metadata = {
     'AI process automation consulting'
   ],
   alternates: {
-    canonical: '/industries/manufacturing'
+    canonical: 'https://bitdepthaiconsulting.com/industries/manufacturing'
   },
   openGraph: {
-    title: 'Manufacturing AI Consulting and Industry 4.0 Solutions | BitDepth AI',
+    title: 'AI for Manufacturing | BitDepth AI Consulting',
     description:
-      'BitDepth delivers manufacturing AI consulting for smart factory implementation, quality control, predictive maintenance, and supply chain optimization in Western Canada.',
-    url: '/industries/manufacturing',
+      'AI consulting for Canadian manufacturers — quality control, production scheduling, supply chain visibility, and operational automation. Practical builds, measurable ROI.',
+    url: 'https://bitdepthaiconsulting.com/industries/manufacturing',
     type: 'website',
+    siteName: 'BitDepth AI Consulting',
     images: [
       {
-        url: '/images/Manufacturing page hero.webp',
+        url: '/images/og-manufacturing.jpg',
         width: 1200,
         height: 630,
-        alt: 'Wide-angle manufacturing floor with automated machinery, robotic arms, and conveyor systems'
+        alt: 'BitDepth AI Consulting manufacturing social sharing card'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Manufacturing AI Consulting and Industry 4.0 Solutions | BitDepth AI',
+    site: '@bitdepthai',
+    title: 'AI for Manufacturing | BitDepth AI Consulting',
     description:
-      'Practical manufacturing AI consulting for smart factory implementation, computer vision quality control, predictive maintenance, and logistics optimization.',
-    images: ['/images/Manufacturing page hero.webp']
+      'AI consulting for Canadian manufacturers — quality control, production scheduling, supply chain visibility, and operational automation. Practical builds, measurable ROI.',
+    images: ['/images/og-manufacturing.jpg']
   }
 };
 

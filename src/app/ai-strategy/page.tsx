@@ -4,32 +4,35 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'Our AI Consulting Approach | BitDepth AI',
+  title: 'Our AI Consulting Approach | Diagnose, Design, Implement | BitDepth AI',
   description:
-    'BitDepth uses a structured Diagnose → Design → Implement methodology. We start every engagement with a discovery audit, not a sales pitch.',
+    'BitDepth uses a structured three-phase methodology — Diagnose, Design, Implement. Every engagement starts with a discovery audit, not a sales pitch.',
   alternates: {
-    canonical: '/ai-strategy'
+    canonical: 'https://bitdepthaiconsulting.com/ai-strategy'
   },
   openGraph: {
-    title: 'Our AI Consulting Approach | BitDepth AI',
+    title: 'Our AI Consulting Methodology | BitDepth AI',
     description:
-      'BitDepth uses a structured Diagnose → Design → Implement methodology starting with a discovery audit.',
-    url: '/ai-strategy',
+      'Learn how BitDepth\'s Diagnose → Design → Implement approach eliminates wasted AI spend and delivers measurable outcomes for Canadian SMBs.',
+    url: 'https://bitdepthaiconsulting.com/ai-strategy',
     type: 'website',
+    siteName: 'BitDepth AI Consulting',
     images: [
       {
-        url: '/images/methodology-diagram.png',
+        url: '/images/og-strategy.jpg',
         width: 1200,
         height: 630,
-        alt: 'Diagnose Design Implement methodology diagram'
+        alt: 'BitDepth AI consulting methodology social sharing card'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Our AI Consulting Approach | BitDepth AI',
-    description: 'Structured AI methodology built for measurable business outcomes.',
-    images: ['/images/methodology-diagram.png']
+    site: '@bitdepthai',
+    title: 'Our AI Consulting Methodology | BitDepth AI',
+    description:
+      'Learn how BitDepth\'s Diagnose → Design → Implement approach eliminates wasted AI spend and delivers measurable outcomes for Canadian SMBs.',
+    images: ['/images/og-strategy.jpg']
   }
 };
 

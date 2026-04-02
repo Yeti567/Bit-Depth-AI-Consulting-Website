@@ -7,30 +7,33 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 export const metadata: Metadata = {
   title: 'About BitDepth AI Consulting | Vendor-Neutral AI for Canadian SMBs',
   description:
-    'BitDepth AI Consulting Ltd. is a vendor-neutral AI advisory firm based in BC, Canada. We audit first, recommend what fits, and deliver real outcomes.',
+    'BitDepth AI Consulting Ltd. is a vendor-neutral AI advisory firm based in British Columbia, Canada. We audit first, recommend what fits, and deliver real operational outcomes.',
   alternates: {
-    canonical: '/about'
+    canonical: 'https://bitdepthaiconsulting.com/about'
   },
   openGraph: {
-    title: 'About BitDepth AI Consulting | Vendor-Neutral AI for Canadian SMBs',
+    title: 'About BitDepth AI Consulting',
     description:
-      'BitDepth is a vendor-neutral Canadian AI advisory firm focused on measurable operational outcomes for SMBs.',
-    url: '/about',
+      'Built for Canadian SMBs that were being underserved by enterprise consultancies and under-qualified freelancers. BitDepth delivers enterprise-quality AI thinking at mid-market prices.',
+    url: 'https://bitdepthaiconsulting.com/about',
     type: 'website',
+    siteName: 'BitDepth AI Consulting',
     images: [
       {
-        url: '/images/about-hero.webp',
+        url: '/images/og-about.jpg',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting team and strategy workspace'
+        alt: 'BitDepth AI Consulting about social sharing card'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About BitDepth AI Consulting | Vendor-Neutral AI for Canadian SMBs',
-    description: 'Learn why BitDepth was built to deliver practical AI outcomes for Canadian SMB operators.',
-    images: ['/images/about-hero.webp']
+    site: '@bitdepthai',
+    title: 'About BitDepth AI Consulting',
+    description:
+      'Built for Canadian SMBs that were being underserved by enterprise consultancies and under-qualified freelancers. BitDepth delivers enterprise-quality AI thinking at mid-market prices.',
+    images: ['/images/og-about.jpg']
   }
 };
 

@@ -5,9 +5,9 @@ import { PageShell } from '@/components/layout/page-shell';
 import { IndustrySegmentTabs } from '@/components/ui/industry-segment-tabs';
 
 export const metadata: Metadata = {
-  title: 'AI Consulting for Oil and Gas Digital Transformation | BitDepth AI',
+  title: 'AI Consulting for Oil & Gas Services Companies | BitDepth AI',
   description:
-    'BitDepth delivers vendor-neutral AI consulting for oil and gas companies. Predictive maintenance, reservoir modeling, pipeline integrity, and oilfield automation for upstream, midstream, and downstream operations.',
+    'BitDepth helps oil and gas services companies automate field tickets, streamline subcontractor management, and eliminate invoice processing delays with practical AI.',
   keywords: [
     'AI consulting for oil and gas digital transformation',
     'predictive maintenance oil and gas',
@@ -19,29 +19,31 @@ export const metadata: Metadata = {
     'generative AI for oil and gas'
   ],
   alternates: {
-    canonical: '/industries/oil-and-gas'
+    canonical: 'https://bitdepthaiconsulting.com/industries/oil-and-gas'
   },
   openGraph: {
-    title: 'AI Consulting for Oil and Gas Digital Transformation | BitDepth AI',
+    title: 'AI for Oil & Gas Services | BitDepth AI Consulting',
     description:
-      'BitDepth delivers vendor-neutral AI consulting for oil and gas companies across upstream, midstream, and downstream operations.',
-    url: '/industries/oil-and-gas',
+      'Practical AI for oilfield service companies — invoice automation, subcontractor management, field data capture, and compliance document processing.',
+    url: 'https://bitdepthaiconsulting.com/industries/oil-and-gas',
     type: 'website',
+    siteName: 'BitDepth AI Consulting',
     images: [
       {
-        url: '/images/Oil and gas page hero.webp',
+        url: '/images/og-oil-gas.jpg',
         width: 1200,
         height: 630,
-        alt: 'Dramatic oil and gas processing plant at twilight with flame stacks and industrial towers'
+        alt: 'BitDepth AI Consulting oil and gas services social sharing card'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Consulting for Oil and Gas Digital Transformation | BitDepth AI',
+    site: '@bitdepthai',
+    title: 'AI for Oil & Gas Services | BitDepth AI Consulting',
     description:
-      'Vendor-neutral AI consulting for oil and gas operators focused on maintenance, reservoir modeling, pipeline integrity, and automation.',
-    images: ['/images/Oil and gas page hero.webp']
+      'Practical AI for oilfield service companies — invoice automation, subcontractor management, field data capture, and compliance document processing.',
+    images: ['/images/og-oil-gas.jpg']
   }
 };
 
