@@ -1,19 +1,12 @@
 import type { Metadata, Viewport } from 'next';
-import { DM_Sans, Syne } from 'next/font/google';
+import { Barlow } from 'next/font/google';
 import './globals.css';
 
-const syne = Syne({
+const barlow = Barlow({
   subsets: ['latin'],
-  variable: '--font-syne',
-  weight: ['700', '800'],
-  display: 'swap'
-});
-
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  variable: '--font-dm-sans',
-  weight: ['300', '400', '500'],
-  display: 'swap'
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-barlow'
 });
 
 export const viewport: Viewport = {
@@ -90,7 +83,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${syne.variable} ${dmSans.variable}`}>
+      <body className={`${barlow.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>

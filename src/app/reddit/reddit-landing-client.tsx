@@ -188,7 +188,7 @@ export function RedditLandingClient() {
               <h1 className="mt-6 max-w-4xl text-[2.2rem] font-extrabold leading-[1.05] tracking-[-0.03em] text-white sm:text-5xl md:text-[60px]">
                 Your business doesn&apos;t need more AI tools. It needs a system that works.
               </h1>
-              <p className="mt-6 max-w-3xl font-[var(--font-source-sans)] text-base leading-7 text-[#9CA3AF] sm:text-xl sm:leading-8">
+              <p className="mt-6 max-w-3xl font-[var(--font-barlow)] text-base leading-7 text-[#9CA3AF] sm:text-xl sm:leading-8">
                 We diagnose the operational problems costing you time and money, then build the AI systems that actually
                 fix them. No vendor lock-in. No wasted pilots.
               </p>
@@ -231,7 +231,7 @@ export function RedditLandingClient() {
                       <Icon className="h-5 w-5" aria-hidden />
                     </div>
                     <h3 className="mt-4 text-xl font-semibold text-white">{card.title}</h3>
-                    <p className="mt-2 font-[var(--font-source-sans)] text-base leading-7 text-[#9CA3AF]">{card.description}</p>
+                    <p className="mt-2 font-[var(--font-barlow)] text-base leading-7 text-[#9CA3AF]">{card.description}</p>
                   </article>
                 );
               })}
@@ -257,7 +257,7 @@ export function RedditLandingClient() {
             </div>
 
             <div className="mt-6 rounded-2xl border border-red-400/30 bg-red-400/5 p-6">
-              <p className="border-l-4 border-red-400 pl-4 font-[var(--font-source-sans)] text-base leading-7 text-[#D1D5DB] sm:text-lg">
+              <p className="border-l-4 border-red-400 pl-4 font-[var(--font-barlow)] text-base leading-7 text-[#D1D5DB] sm:text-lg">
                 AI doesn&apos;t fix broken processes, it exposes them. Most companies try to layer AI on top of messy data.
                 That is expensive guessing. We diagnose first, then build on a stable foundation.
               </p>
@@ -298,7 +298,7 @@ export function RedditLandingClient() {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white">{step.title}</h3>
-                      <p className="mt-2 font-[var(--font-source-sans)] leading-7 text-[#9CA3AF]">{step.description}</p>
+                      <p className="mt-2 font-[var(--font-barlow)] leading-7 text-[#9CA3AF]">{step.description}</p>
                       <div className="mt-4 flex flex-wrap gap-2">
                         {step.tags.map((tag) => (
                           <span key={tag} className="rounded-full border border-[#00B4D8]/35 bg-[#00B4D8]/10 px-3 py-1 text-xs font-semibold text-[#A7F2FF]">
@@ -321,7 +321,7 @@ export function RedditLandingClient() {
               {testimonials.map((item) => (
                 <article key={item.author} className="rounded-2xl border border-[#4B5563]/50 bg-[rgba(31,41,51,0.5)] p-6">
                   <Quote className="h-8 w-8 text-[#00B4D8]/60" aria-hidden />
-                  <p className="mt-4 font-[var(--font-source-sans)] text-lg italic leading-8 text-[#D1D5DB]">{item.quote}</p>
+                  <p className="mt-4 font-[var(--font-barlow)] text-lg italic leading-8 text-[#D1D5DB]">{item.quote}</p>
                   <p className="mt-5 text-sm font-semibold text-white">{item.author}</p>
                   <p className="text-sm text-[#9CA3AF]">{item.role}</p>
                 </article>
@@ -407,7 +407,7 @@ export function RedditLandingClient() {
                     </button>
                     <div className={`grid transition-[grid-template-rows] duration-300 ${isOpen ? 'mt-3 grid-rows-[1fr]' : 'grid-rows-[0fr]'}`.trim()}>
                       <div id={panelId} className="overflow-hidden">
-                        <p className="font-[var(--font-source-sans)] leading-7 text-[#9CA3AF]">{faq.answer}</p>
+                        <p className="font-[var(--font-barlow)] leading-7 text-[#9CA3AF]">{faq.answer}</p>
                       </div>
                     </div>
                   </article>
@@ -422,7 +422,7 @@ export function RedditLandingClient() {
           <div className="container-shell relative">
             <div className="mx-auto max-w-4xl rounded-2xl border border-[#00B4D8]/30 bg-[rgba(6,15,31,0.65)] px-6 py-9 text-center sm:px-10 sm:py-12">
               <h2 className="text-3xl font-extrabold tracking-[-0.02em] text-white sm:text-4xl md:text-5xl">Stop guessing. Start with a diagnostic.</h2>
-              <p className="mx-auto mt-5 max-w-3xl font-[var(--font-source-sans)] text-base leading-7 text-[#9CA3AF] sm:text-lg">
+              <p className="mx-auto mt-5 max-w-3xl font-[var(--font-barlow)] text-base leading-7 text-[#9CA3AF] sm:text-lg">
                 One 30-minute call. No cost. No obligation. Just clarity on where your business is losing time and
                 money, and whether AI can fix it.
               </p>
