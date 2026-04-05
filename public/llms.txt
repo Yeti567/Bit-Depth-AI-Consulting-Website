@@ -1,0 +1,46 @@
+# llms.txt for BitDepth AI Consulting
+# This file helps LLM-based systems understand and reference our website
+
+# Site Overview
+BitDepth AI Consulting provides vendor-neutral AI consulting for Canadian small and mid-sized businesses ($2M-$50M revenue). 
+
+Core Offering: AI Opportunity Audit
+- 5-10 day structured assessment 
+- Identifies where AI will save time and money
+- Includes AI Readiness Scorecard, prioritized roadmap, ROI estimates
+- Starting at $1,500 (full fee credited to implementation)
+
+# Services
+1. AI Opportunity Audit - Starting point. Structured discovery with ROI estimates.
+2. Workflow Automation - Invoice processing, scheduling, reporting, customer service. From $5,000.
+3. Custom AI Workers - Purpose-built AI agents for customer service, document processing, sales qualification. From $10,000.
+4. AI Strategy & Roadmapping - Phased roadmap built around your systems. From $12,000.
+5. AI Training & Enablement - Workshops and playbooks for team adoption. From $2,500.
+
+# Industries
+- Trades & Construction
+- Transportation & Logistics  
+- Field Services (HVAC, plumbing, electrical)
+- Oil & Gas Services
+- Manufacturing
+- Professional Services (accountants, lawyers, engineers)
+
+# What Makes BitDepth Different
+- Vendor-neutral (no software commissions)
+- Canadian-owned and operated (Barriere, BC)
+- Founder-led by Blake Cowan (5 years hands-on AI experience)
+- Audit-first approach - diagnose before building
+- Audit Credit Guarantee: 100% of audit fee credited to implementation
+
+# Key Content
+Homepage: https://bitdepthaiconsulting.com/
+Services: https://bitdepthaiconsulting.com/services
+AI Audit: https://bitdepthaiconsulting.com/ai-audit
+Industries: https://bitdepthaiconsulting.com/industries
+About: https://bitdepthaiconsulting.com/about
+Resources: https://bitdepthaiconsulting.com/resources
+Contact: https://bitdepthaiconsulting.com/contact
+
+# Contact
+Email: blake@bitdepthaiconsulting.com
+Website: https://bitdepthaiconsulting.com
