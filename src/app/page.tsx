@@ -4,6 +4,9 @@ import Link from 'next/link';
 import { ArrowRight, BarChart3, Check, CheckCircle2, Factory, HardHat, Link2, Repeat, Truck, UserCog } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { FAQSchemaScript } from '@/components/ui/faq-schema-script';
+import { buildOrganizationSchema, buildWebSiteSchema } from '@/lib/schema';
+import Script from 'next/script';
  
 export const metadata: Metadata = {
   title: 'AI Consulting for Canadian Businesses | BitDepth AI Consulting',
@@ -139,9 +142,39 @@ const industries = [
   { icon: <BarChart3 className="h-6 w-6" />, label: 'Oil & Gas Services' }
 ];
 
+const homepageFaq = [
+  {
+    question: 'What makes you qualified to do this?',
+    answer: "Blake has five years of hands-on AI implementation experience, working behind the scenes for companies across North America. He's done this work — not managed people who do it. When you hire BitDepth, you're getting that experience applied directly to your business."
+  },
+  {
+    question: "What if the audit doesn't find anything useful?",
+    answer: "That's a real outcome and we'll tell you if it applies to you. If your business isn't ready for AI, you'll leave with a clear picture of what needs to be in place before it makes sense — and a prioritized plan to get there. That roadmap has value on its own."
+  },
+  {
+    question: 'How much of my time will this take?',
+    answer: "We try to keep your team's involvement focused and efficient. The audit typically requires a few structured interviews and the ability to walk us through your key systems and workflows. Most clients find it takes less time than they expected."
+  },
+  {
+    question: 'Is the outcome guaranteed?',
+    answer: "We guarantee the audit credit — 100% of what you pay for the audit is credited against any implementation you choose to move forward with. What we can't guarantee is a specific ROI, because that depends on your business, your data, and how you execute. What we can guarantee is that we'll be honest with you about what we find, including if the numbers don't justify building anything yet."
+  },
+  {
+    question: 'How does the audit credit actually work?',
+    answer: 'Simple. You pay for the audit. We deliver it. If you decide to move forward with any implementation — automation, AI workers, strategy, training — the full audit fee comes off your project invoice. No minimums, no conditions beyond the 90-day window. You pay the difference.'
+  }
+];
+
 export default function HomePage() {
   return (
     <PageShell>
+      <Script id="organization-schema" type="application/ld+json">
+        {JSON.stringify(buildOrganizationSchema())}
+      </Script>
+      <Script id="website-schema" type="application/ld+json">
+        {JSON.stringify(buildWebSiteSchema())}
+      </Script>
+      <FAQSchemaScript faqs={homepageFaq} id="homepage-faq-schema" />
       <section className="section-navy dot-grid relative overflow-hidden section-space">
         <div className="container-shell grid gap-10 lg:grid-cols-[1.2fr,0.8fr] lg:items-center">
           <ScrollReveal>
