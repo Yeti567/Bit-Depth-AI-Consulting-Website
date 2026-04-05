@@ -55,7 +55,7 @@ const faqs = [
   {
     question: 'What does an AI audit actually look like day to day?',
     answer:
-      'We start with a short intake call to understand your business and get access to the information we need. From there we run structured interviews with you and your key staff, typically 4 to 12 people depending on the audit tier. We map your workflows, review your technology stack, and assess your data environment. Most of the work happens on our end. Your team\'s time commitment is focused and manageable. At the end you get a readout call where we walk you through everything we found.'
+      'We start with a short intake call to understand your business and get access to the information we need. From there we run structured interviews with you and your key staff, typically 4 to 12 people depending on the audit tier. We map your workflows, review your technology stack, and assess your data environment. Most of the work happens on our end. Your team\'s time commitment is focused and manageable. At the end you get a readout call where we walk you through everything we found. For a detailed walkthrough, see our article: What Can I Expect in an AI Discovery Audit?'
   },
   {
     question: 'How long does the audit take?',

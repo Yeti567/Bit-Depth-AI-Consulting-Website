@@ -247,6 +247,11 @@ export default function HomePage() {
             <Link href="/ai-audit" className="btn-primary">
               See What&apos;s in an AI Audit
             </Link>
+            <p className="mt-4 text-sm text-white/60">
+              <Link href="/resources/what-can-i-expect-in-an-ai-discovery-audit" className="text-cyan hover:text-cyan/80 underline">
+                Read the complete audit walkthrough
+              </Link>
+            </p>
           </ScrollReveal>
         </div>
       </section>

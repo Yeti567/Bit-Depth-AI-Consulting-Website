@@ -120,6 +120,11 @@ export default function ServicesPage() {
               <li>ROI estimates for your top 3–5 use cases</li>
               <li>A 90-day implementation roadmap you can act on immediately</li>
             </ul>
+            <p className="mt-5 text-[var(--color-slate)]">
+              <Link href="/resources/what-can-i-expect-in-an-ai-discovery-audit" className="text-cyan hover:text-cyan/80 underline">
+                Read: What Can I Expect in an AI Discovery Audit?
+              </Link>
+            </p>
           </ScrollReveal>
           <ScrollReveal index={1} className="card-dark p-6">
             <h3 className="text-xl font-bold text-white">Pricing Tiers</h3>
