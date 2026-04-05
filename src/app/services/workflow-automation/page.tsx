@@ -45,12 +45,12 @@ const automationCards = [
   {
     title: 'Invoice Processing and Accounts Payable',
     description:
-      'Invoices received, matched to purchase orders, flagged for exceptions, and routed for approval — automatically. No manual data entry, no missed payments, no approval bottlenecks sitting in an inbox.'
+      'Invoices received, matched to purchase orders, flagged for exceptions, and routed for approval. automatically. No manual data entry, no missed payments, no approval bottlenecks sitting in an inbox.'
   },
   {
     title: 'Scheduling and Dispatch',
     description:
-      'Jobs assigned, crews scheduled, and dispatch notifications sent based on availability, location, and priority — without a dispatcher manually managing every change.'
+      'Jobs assigned, crews scheduled, and dispatch notifications sent based on availability, location, and priority. without a dispatcher manually managing every change.'
   },
   {
     title: 'Customer Service and Inquiry Response',
@@ -60,7 +60,7 @@ const automationCards = [
   {
     title: 'Report Generation',
     description:
-      'Weekly and monthly reports built and delivered automatically from your live business data — no more pulling numbers from three different systems and formatting them by hand every time.'
+      'Weekly and monthly reports built and delivered automatically from your live business data no more pulling numbers from three different systems and formatting them by hand every time.'
   },
   {
     title: 'HR and Onboarding Documents',
@@ -70,17 +70,17 @@ const automationCards = [
   {
     title: 'Sales Lead Qualification and CRM Updates',
     description:
-      'New leads assessed, scored, and entered into your CRM automatically. Follow-up tasks created. Sales staff notified with the context they need to act — without anyone doing data entry.'
+      'New leads assessed, scored, and entered into your CRM automatically. Follow-up tasks created. Sales staff notified with the context they need to act. without anyone doing data entry.'
   },
   {
     title: 'Document Routing and Approvals',
     description:
-      'Documents classified, routed to the right person, and tracked through the approval process automatically — with escalation triggers when something is overdue.'
+      'Documents classified, routed to the right person, and tracked through the approval process automatically. with escalation triggers when something is overdue.'
   },
   {
     title: 'Client Communication and Follow-Up',
     description:
-      'Appointment reminders, status updates, follow-up sequences, and satisfaction check-ins — sent automatically at the right time without staff having to remember to do it.'
+      'Appointment reminders, status updates, follow-up sequences, and satisfaction check-ins sent automatically at the right time without staff having to remember to do it.'
   }
 ];
 
@@ -119,7 +119,7 @@ export default function WorkflowAutomationPage() {
                 Your Team Is Spending Hours Every Week Doing Things a System Should Be Handling
               </h1>
               <p className="mt-5 text-lg text-white/74">
-                Workflow automation replaces repetitive manual processes with reliable systems that run without supervision — across every industry, every department, and every size of business.
+                Workflow automation replaces repetitive manual processes with reliable systems that run without supervision. across every industry, every department, and every size of business.
               </p>
               <Link href="/ai-audit" className="btn-primary mt-8">
                 Book an Audit First
@@ -138,7 +138,7 @@ export default function WorkflowAutomationPage() {
         </div>
       </section>
 
-      {/* Section 1 — The Real Problem */}
+      {/* Section X: The Real Problem */}
       <section className="section-offwhite section-space">
         <div className="container-shell">
           <div className="grid gap-8 lg:grid-cols-[1.2fr,0.8fr] lg:items-center">
@@ -147,13 +147,13 @@ export default function WorkflowAutomationPage() {
                 The Problem Is Not Your People. It Is the Process.
               </h2>
               <p className="mt-5 text-[var(--color-slate)] leading-7">
-                Every business has them — tasks that happen the same way every single day, handled manually by someone who has better things to do. Data re-entered from one system into another. Invoices processed by hand. Reports built from scratch every week by pulling numbers from three different places. Approval requests that sit in someone&apos;s inbox until they remember to look.
+                Every business has them tasks that happen the same way every single day, handled manually by someone who has better things to do. Data re-entered from one system into another. Invoices processed by hand. Reports built from scratch every week by pulling numbers from three different places. Approval requests that sit in someone&apos;s inbox until they remember to look.
               </p>
               <p className="mt-4 text-[var(--color-slate)] leading-7">
                 These are not signs of a bad team. They are signs of a business that has outgrown its manual processes but has not yet replaced them with something better.
               </p>
               <p className="mt-4 text-[var(--color-slate)] leading-7">
-                The cost is not just time. Every manual step is a place where errors creep in, things fall through the cracks, and your best people spend their energy on work that adds no real value. AI changes that. Not by replacing your team — but by handling the work that should never have required a human in the first place.
+                The cost is not just time. Every manual step is a place where errors creep in, things fall through the cracks, and your best people spend their energy on work that adds no real value. AI changes that. Not by replacing your team. but by handling the work that should never have required a human in the first place.
               </p>
             </ScrollReveal>
             <ScrollReveal index={1} className="relative min-h-[280px] overflow-hidden rounded-2xl border border-[var(--color-border)]">
@@ -168,7 +168,7 @@ export default function WorkflowAutomationPage() {
         </div>
       </section>
 
-      {/* Section 2 — The Systems Problem */}
+      {/* Section X: The Systems Problem */}
       <section className="section-navy section-space">
         <div className="container-shell max-w-4xl">
           <ScrollReveal>
@@ -182,7 +182,7 @@ export default function WorkflowAutomationPage() {
               These tools work. People are comfortable with them. And nobody wants to replace them.
             </p>
             <p className="mt-4 text-white/74 leading-7">
-              The good news is they do not have to. Modern automation tools can connect to almost any existing system — pulling data out, pushing data in, and creating workflows that bridge the gaps between tools that were never designed to talk to each other.
+              The good news is they do not have to. Modern automation tools can connect to almost any existing system pulling data out, pushing data in, and creating workflows that bridge the gaps between tools that were never designed to talk to each other.
             </p>
             <p className="mt-4 text-cyan font-medium">
               You do not have to rip out what works. You just have to connect it. That is exactly what we do.
@@ -191,7 +191,7 @@ export default function WorkflowAutomationPage() {
         </div>
       </section>
 
-      {/* Section 3 — What We Automate */}
+      {/* Section X: What We Automate */}
       <section className="section-offwhite section-space">
         <div className="container-shell">
           <ScrollReveal className="mb-10 max-w-3xl">
@@ -214,7 +214,7 @@ export default function WorkflowAutomationPage() {
         </div>
       </section>
 
-      {/* Section 4 — How It Works */}
+      {/* Section X: How It Works */}
       <section className="section-navy section-space">
         <div className="container-shell">
           <ScrollReveal className="mb-10 text-center">
@@ -236,7 +236,7 @@ export default function WorkflowAutomationPage() {
               <p className="text-sm font-semibold text-cyan">Step 2</p>
               <h3 className="mt-2 text-xl font-bold text-white">Build Around What You Have</h3>
               <p className="mt-3 text-sm text-white/74 leading-6">
-                We do not ask you to replace your existing systems. We build automation that connects to the tools you already use — bridging the gaps and eliminating the manual steps between them.
+                We do not ask you to replace your existing systems. We build automation that connects to the tools you already use bridging the gaps and eliminating the manual steps between them.
               </p>
             </ScrollReveal>
 
@@ -251,7 +251,7 @@ export default function WorkflowAutomationPage() {
         </div>
       </section>
 
-      {/* Section 5 — Pricing */}
+      {/* Section X: Pricing */}
       <section className="section-offwhite section-space">
         <div className="container-shell">
           <ScrollReveal className="mb-10 text-center">
@@ -292,7 +292,7 @@ export default function WorkflowAutomationPage() {
 
           <ScrollReveal className="mt-8 rounded-xl border border-[var(--color-border)] bg-white p-6 text-center">
             <p className="text-[var(--color-slate)]">
-              <strong className="text-[var(--color-navy)]">Ongoing support retainer:</strong> $1,500–$4,000 per month — monitoring, maintenance, and continuous improvement of your automation suite.
+              <strong className="text-[var(--color-navy)]">Ongoing support retainer:</strong> $1,500–$4,000 per month monitoring, maintenance, and continuous improvement of your automation suite.
             </p>
           </ScrollReveal>
 

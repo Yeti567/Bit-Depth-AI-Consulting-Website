@@ -8,14 +8,14 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 export const metadata: Metadata = {
   title: 'AI Consulting for Manufacturing Companies | BitDepth AI',
   description:
-    'Phased predictive maintenance, production scheduling, and inventory optimization — built around what your manufacturing business actually has, not what is ideal.',
+    'Phased predictive maintenance, production scheduling, and inventory optimization built around what your manufacturing business actually has, not what is ideal.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/industries/manufacturing'
   },
   openGraph: {
     title: 'AI Consulting for Manufacturing Companies | BitDepth AI',
     description:
-      'Phased predictive maintenance, production scheduling, and inventory optimization — built around what your manufacturing business actually has, not what is ideal.',
+      'Phased predictive maintenance, production scheduling, and inventory optimization built around what your manufacturing business actually has, not what is ideal.',
     url: 'https://bitdepthaiconsulting.com/industries/manufacturing',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     site: '@bitdepthai',
     title: 'AI Consulting for Manufacturing Companies | BitDepth AI',
     description:
-      'Phased predictive maintenance, production scheduling, and inventory optimization — built around what your manufacturing business actually has, not what is ideal.',
+      'Phased predictive maintenance, production scheduling, and inventory optimization built around what your manufacturing business actually has, not what is ideal.',
     images: ['/images/og-manufacturing.webp']
   }
 };
@@ -55,7 +55,7 @@ const solutions = [
   },
   {
     title: 'Production Scheduling Optimization',
-    description: 'AI-assisted scheduling that accounts for equipment availability, material supply, order deadlines, and labour — reducing bottlenecks and improving throughput without adding headcount.'
+    description: 'AI-assisted scheduling that accounts for equipment availability, material supply, order deadlines, and labour reducing bottlenecks and improving throughput without adding headcount.'
   },
   {
     title: 'Inventory and Supply Chain Visibility',
@@ -63,7 +63,7 @@ const solutions = [
   },
   {
     title: 'Quality Control Automation',
-    description: 'Automated inspection and defect detection at key production stages — catching problems earlier and reducing the cost of rework and waste.'
+    description: 'Automated inspection and defect detection at key production stages catching problems earlier and reducing the cost of rework and waste.'
   }
 ];
 
@@ -123,13 +123,13 @@ export default function ManufacturingPage() {
               </h2>
               <div className="mt-6 space-y-4 text-[var(--color-charcoal)] leading-relaxed">
                 <p>
-                  There is a version of manufacturing AI that consultants love to sell — sensors on everything, real-time dashboards, fully automated production lines. That version costs a fortune and is irrelevant to most manufacturers outside of the largest enterprises.
+                  There is a version of manufacturing AI that consultants love to sell sensors on everything, real-time dashboards, fully automated production lines. That version costs a fortune and is irrelevant to most manufacturers outside of the largest enterprises.
                 </p>
                 <p>
                   The practical version looks different. You identify which equipment is new enough or critical enough to justify monitoring. You build predictive maintenance into those assets first. As older equipment gets replaced, you bring each new addition online with the right infrastructure from day one. Over time, your operation modernizes without a single massive disruption or investment.
                 </p>
                 <p>
-                  In the meantime, there are almost always scheduling, inventory, and quality control opportunities that don&apos;t require any new hardware at all — just better use of the data you already have.
+                  In the meantime, there are almost always scheduling, inventory, and quality control opportunities that don&apos;t require any new hardware at all just better use of the data you already have.
                 </p>
               </div>
             </ScrollReveal>
@@ -191,7 +191,7 @@ export default function ManufacturingPage() {
               You Don&apos;t Have to Modernize Everything at Once
             </h2>
             <p className="mt-5 text-lg text-white/70">
-              A discovery audit will show you where AI creates real value in your operation given what you actually have — not what a textbook says you should have. Book a call and we&apos;ll give you an honest assessment.
+              A discovery audit will show you where AI creates real value in your operation given what you actually have not what a textbook says you should have. Book a call and we&apos;ll give you an honest assessment.
             </p>
             <Link href="/contact" className="btn-primary mt-8">
               Book a Free Discovery Call

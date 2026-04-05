@@ -51,7 +51,7 @@ const revenueLosses = [
 const solutions = [
   {
     title: 'Automated Booking With Deposit Collection',
-    description: 'An online booking system where clients select their own appointment time, provide relevant intake information, and put down a deposit — all before they ever speak to anyone in your office. Serious clients book. Time-wasters don\'t.'
+    description: 'An online booking system where clients select their own appointment time, provide relevant intake information, and put down a deposit. all before they ever speak to anyone in your office. Serious clients book. Time-wasters don\'t.'
   },
   {
     title: 'Appointment Reminders and No-Show Reduction',
@@ -59,11 +59,11 @@ const solutions = [
   },
   {
     title: 'Client Intake and Onboarding Automation',
-    description: 'Intake forms, document collection, conflict checks, and onboarding sequences — automated and consistent every time, regardless of who is working that day.'
+    description: 'Intake forms, document collection, conflict checks, and onboarding sequences. automated and consistent every time, regardless of who is working that day.'
   },
   {
     title: 'Internal Knowledge Base',
-    description: 'An AI-powered internal system where staff can find policies, procedures, templates, and client information instantly — without interrupting a colleague or digging through shared drives.'
+    description: 'An AI-powered internal system where staff can find policies, procedures, templates, and client information instantly. without interrupting a colleague or digging through shared drives.'
   },
   {
     title: 'Document Preparation Assistance',
@@ -127,7 +127,7 @@ export default function ProfessionalServicesPage() {
               </h2>
               <div className="mt-6 space-y-4 text-[var(--color-charcoal)] leading-relaxed">
                 <p>
-                  A professional books a two-hour consultation. The client doesn&apos;t show. That slot is gone — unbillable, unrecoverable, and it cost your staff time to set it up in the first place. Multiply that across a week, a month, a year, and the number gets uncomfortable quickly.
+                  A professional books a two-hour consultation. The client doesn&apos;t show. That slot is gone unbillable, unrecoverable, and it cost your staff time to set it up in the first place. Multiply that across a week, a month, a year, and the number gets uncomfortable quickly.
                 </p>
                 <p>
                   The fix is not complicated. Automated appointment booking with a required deposit filters out the time-wasters before they ever get on your calendar. Automated reminders reduce no-shows dramatically. And when a client does cancel, an automated waitlist fills the slot without anyone making a phone call.

@@ -7,14 +7,14 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 export const metadata: Metadata = {
   title: 'About BitDepth AI Consulting | Blake Cowan | Barriere BC Canada',
   description:
-    'BitDepth AI Consulting is founder-led by Blake Cowan — five years of hands-on AI experience, backgrounds in construction, trucking, and safety. Canadian-owned and operated.',
+    'BitDepth AI Consulting is founder-led by Blake Cowan five years of hands-on AI experience, backgrounds in construction, trucking, and safety. Canadian-owned and operated.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/about'
   },
   openGraph: {
     title: 'About BitDepth AI Consulting | Blake Cowan | Barriere BC Canada',
     description:
-      'BitDepth AI Consulting is founder-led by Blake Cowan — five years of hands-on AI experience, backgrounds in construction, trucking, and safety. Canadian-owned and operated.',
+      'BitDepth AI Consulting is founder-led by Blake Cowan five years of hands-on AI experience, backgrounds in construction, trucking, and safety. Canadian-owned and operated.',
     url: 'https://bitdepthaiconsulting.com/about',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     site: '@bitdepthai',
     title: 'About BitDepth AI Consulting | Blake Cowan | Barriere BC Canada',
     description:
-      'BitDepth AI Consulting is founder-led by Blake Cowan — five years of hands-on AI experience, backgrounds in construction, trucking, and safety. Canadian-owned and operated.',
+      'BitDepth AI Consulting is founder-led by Blake Cowan five years of hands-on AI experience, backgrounds in construction, trucking, and safety. Canadian-owned and operated.',
     images: ['/images/og-about.webp']
   }
 };
@@ -47,12 +47,12 @@ const howBlakeWorks = [
   {
     title: 'Straight Talk, Always',
     description:
-      "Blake comes from industries where bad advice costs people real money — sometimes their safety. That background shaped how he consults. If AI isn't right for your business yet, he'll tell you. If the numbers don't justify a build, he'll tell you that too. You'll always know where you stand."
+      "Blake comes from industries where bad advice costs people real money. sometimes their safety. That background shaped how he consults. If AI isn't right for your business yet, he'll tell you. If the numbers don't justify a build, he'll tell you that too. You'll always know where you stand."
   },
   {
     title: 'Built for the Long Run',
     description:
-      "BitDepth isn't looking for quick engagements. The goal is to be your AI consultant for years — helping you move forward as your business grows and as the technology keeps evolving. The audit is the starting point. Where it goes from there is up to you."
+      "BitDepth isn't looking for quick engagements. The goal is to be your AI consultant for years helping you move forward as your business grows and as the technology keeps evolving. The audit is the starting point. Where it goes from there is up to you."
   }
 ];
 
@@ -66,7 +66,7 @@ export default function AboutPage() {
               There's a Real Person Behind This Business. Here's Who He Is.
             </h1>
             <p className="mt-5 text-lg text-white/74">
-              BitDepth AI Consulting is Blake Cowan — one consultant, one standard of work, and no interest in wasting your time or your money.
+              BitDepth AI Consulting is Blake Cowan one consultant, one standard of work, and no interest in wasting your time or your money.
             </p>
           </ScrollReveal>
           <ScrollReveal
@@ -87,7 +87,7 @@ export default function AboutPage() {
                 I didn't start my career in technology. I spent years working in construction and building, then in trucking, then as a safety consultant. In every one of those industries, I learned the same lesson: the details matter, corners cut early cost you more later, and if your foundation isn't solid, everything built on top of it is at risk.
               </p>
               <p>
-                That thinking followed me into AI. For the last five years, I've worked behind the scenes doing AI consulting and implementation for companies — mostly in the United States — building the same systems, automations, and strategies I now offer through BitDepth. I wasn't selling. I was doing the work.
+                That thinking followed me into AI. For the last five years, I've worked behind the scenes doing AI consulting and implementation for companies mostly in the United States building the same systems, automations, and strategies I now offer through BitDepth. I wasn't selling. I was doing the work.
               </p>
               <p>
                 I started BitDepth because I kept seeing the same gap: Canadian businesses were either being ignored by the big consulting firms, overcharged for work that didn't deliver, or sold software by people who called themselves AI consultants. Canada deserves better than that. That's why BitDepth exists.
@@ -114,7 +114,7 @@ export default function AboutPage() {
           <ScrollReveal>
             <h2 className="text-3xl font-extrabold text-white md:text-5xl">Proudly Canadian</h2>
             <p className="mt-6 text-lg text-white/74">
-              BitDepth is a Canadian-owned and operated business. If you're a Canadian company, know that you're working with someone who understands this market, believes in it, and wants to see Canadian businesses succeed. We'll work with anyone, anywhere — but there's something personal about helping businesses in our own backyard.
+              BitDepth is a Canadian-owned and operated business. If you're a Canadian company, know that you're working with someone who understands this market, believes in it, and wants to see Canadian businesses succeed. We'll work with anyone, anywhere. but there's something personal about helping businesses in our own backyard.
             </p>
           </ScrollReveal>
         </div>
@@ -141,7 +141,7 @@ export default function AboutPage() {
           <ScrollReveal>
             <h2 className="text-3xl font-extrabold text-white md:text-5xl">Credentials and Compliance</h2>
             <ul className="mt-6 space-y-3 text-lg text-white/74">
-              <li>Vendor-neutral — no software commissions, ever</li>
+              <li>Vendor-neutral no software commissions, ever</li>
               <li>Canadian-owned and operated</li>
               <li>PIPEDA and BC PIPA compliant</li>
               <li>Five years of hands-on AI implementation experience</li>

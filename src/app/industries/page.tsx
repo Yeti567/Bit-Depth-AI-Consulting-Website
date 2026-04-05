@@ -67,7 +67,7 @@ const industries = [
   {
     icon: <Factory className="h-6 w-6" />,
     title: 'Manufacturing',
-    pain: 'Predictive maintenance and smarter scheduling — built around what you actually have, not what\'s ideal.',
+    pain: 'Predictive maintenance and smarter scheduling built around what you actually have, not what\'s ideal.',
     href: '/industries/manufacturing'
   },
   {
@@ -90,7 +90,7 @@ export default function IndustriesPage() {
               We Work With Industries Where Operations, People, and Profit Are Always on the Line
             </h1>
             <p className="mt-5 text-lg text-white/74">
-              Every business on this list shares the same core problem — money and time are being lost in places that are hard to see until it&apos;s too late. AI doesn&apos;t fix that by being clever. It fixes it by making the invisible visible: where the profit is leaking, where the bottlenecks are hiding, and where your team is spending time on things a system should be handling.
+              Every business on this list shares the same core problem money and time are being lost in places that are hard to see until it&apos;s too late. AI doesn&apos;t fix that by being clever. It fixes it by making the invisible visible: where the profit is leaking, where the bottlenecks are hiding, and where your team is spending time on things a system should be handling.
             </p>
             <p className="mt-4 text-lg text-white/74">
               We&apos;ve worked in some of these industries firsthand. We understand the pressure. And we know that a $5,000 audit that finds a $50,000 profit leak pays for itself before the ink is dry.

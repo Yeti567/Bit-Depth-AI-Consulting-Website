@@ -7,14 +7,14 @@ import { buildArticleSchema } from '@/lib/schema';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: "You Don't Have an AI Problem — You Have a Systems Problem | BitDepth AI",
+  title: "You Don't Have an AI Problem you Have a Systems Problem | BitDepth AI",
   description:
     'Disconnected systems are the real reason AI fails in most businesses. Here is what to fix before you invest in any AI tool or automation.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/resources/you-dont-have-an-ai-problem'
   },
   openGraph: {
-    title: "You Don't Have an AI Problem — You Have a Systems Problem | BitDepth AI",
+    title: "You Don't Have an AI Problem you Have a Systems Problem | BitDepth AI",
     description:
       'Disconnected systems are the real reason AI fails in most businesses. Here is what to fix before you invest in any AI tool or automation.',
     url: 'https://bitdepthaiconsulting.com/resources/you-dont-have-an-ai-problem',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: "You Don't Have an AI Problem — You Have a Systems Problem | BitDepth AI",
+    title: "You Don't Have an AI Problem you Have a Systems Problem | BitDepth AI",
     description:
       'Disconnected systems are the real reason AI fails in most businesses. Here is what to fix before you invest in any AI tool or automation.',
     images: ['/images/resources-article-1.webp']
@@ -64,7 +64,7 @@ export default function YouDontHaveAnAIProblemPage() {
     <PageShell>
       <Script id="article-schema" type="application/ld+json">
         {JSON.stringify(buildArticleSchema(
-          "You Don't Have an AI Problem — You Have a Systems Problem",
+          "You Don't Have an AI Problem you Have a Systems Problem",
           'https://bitdepthaiconsulting.com/resources/you-dont-have-an-ai-problem',
           'https://bitdepthaiconsulting.com/images/resources-article-1.webp'
         ))}
@@ -84,7 +84,7 @@ export default function YouDontHaveAnAIProblemPage() {
               <span className="text-sm text-white/60">6 min read</span>
             </div>
             <h1 className="mt-6 text-4xl font-extrabold text-white md:text-5xl">
-              You Don&apos;t Have an AI Problem — You Have a Systems Problem
+              You Don&apos;t Have an AI Problem you Have a Systems Problem
             </h1>
           </ScrollReveal>
         </div>
@@ -143,7 +143,7 @@ export default function YouDontHaveAnAIProblemPage() {
           <ScrollReveal className="mt-12">
             <h2 className="text-2xl font-extrabold text-[var(--color-navy)] md:text-3xl">How to Know If You Have a Systems Problem</h2>
             <p className="mt-5 text-[var(--color-slate)] leading-relaxed">
-              Ask yourself these questions. Can you pull a report right now that shows you exactly how each project or crew performed last month — revenue, costs, and margin — without manually compiling it from multiple sources? Can a new employee find the information they need to do their job without asking a colleague? If your most experienced person left tomorrow, would their knowledge still exist somewhere in your business? If the answer to any of these is no, you have a systems problem. And that is the right thing to fix first.
+              Ask yourself these questions. Can you pull a report right now that shows you exactly how each project or crew performed last month revenue, costs, and margin. without manually compiling it from multiple sources? Can a new employee find the information they need to do their job without asking a colleague? If your most experienced person left tomorrow, would their knowledge still exist somewhere in your business? If the answer to any of these is no, you have a systems problem. And that is the right thing to fix first.
             </p>
           </ScrollReveal>
         </div>

@@ -8,14 +8,14 @@ import { LeadMagnet } from '@/components/ui/lead-magnet';
 export const metadata: Metadata = {
   title: 'AI Resources for Canadian Business Owners | BitDepth AI',
   description:
-    'Practical guides and articles to help Canadian business owners understand AI before they invest in it. No hype, no jargon — just straight answers.',
+    'Practical guides and articles to help Canadian business owners understand AI before they invest in it. No hype, no jargon just straight answers.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/resources'
   },
   openGraph: {
     title: 'AI Resources for Canadian Business Owners | BitDepth AI',
     description:
-      'Practical guides and articles to help Canadian business owners understand AI before they invest in it. No hype, no jargon — just straight answers.',
+      'Practical guides and articles to help Canadian business owners understand AI before they invest in it. No hype, no jargon just straight answers.',
     url: 'https://bitdepthaiconsulting.com/resources',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
@@ -34,14 +34,14 @@ export const metadata: Metadata = {
     site: '@bitdepthai',
     title: 'AI Resources for Canadian Business Owners | BitDepth AI',
     description:
-      'Practical guides and articles to help Canadian business owners understand AI before they invest in it. No hype, no jargon — just straight answers.',
+      'Practical guides and articles to help Canadian business owners understand AI before they invest in it. No hype, no jargon just straight answers.',
     images: ['/images/og-resources.webp']
   }
 };
 
 const articles = [
   {
-    title: "You Don't Have an AI Problem — You Have a Systems Problem",
+    title: "You Don't Have an AI Problem you Have a Systems Problem",
     description: 'How disconnected systems create hidden operational drag and what to fix before investing in AI tools.',
     image: '/images/resources-article-1.webp',
     href: '/resources/you-dont-have-an-ai-problem',

@@ -28,7 +28,7 @@ export function buildAIAuditFaqSchema() {
         name: 'What does an AI audit actually look like day to day?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'We start with a short intake call to understand your business and get access to the information we need. From there we run structured interviews with you and your key staff — typically 4 to 12 people depending on the audit tier. We map your workflows, review your technology stack, and assess your data environment. Most of the work happens on our end. Your team\'s time commitment is focused and manageable. At the end you get a readout call where we walk you through everything we found.'
+          text: 'We start with a short intake call to understand your business and get access to the information we need. From there we run structured interviews with you and your key staff typically 4 to 12 people depending on the audit tier. We map your workflows, review your technology stack, and assess your data environment. Most of the work happens on our end. Your team\'s time commitment is focused and manageable. At the end you get a readout call where we walk you through everything we found.'
         }
       },
       {
@@ -44,7 +44,7 @@ export function buildAIAuditFaqSchema() {
         name: 'What if the audit finds that we are not ready for AI?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'That is still a successful outcome. If your data is not clean or your systems are not integrated enough to support AI yet, we will tell you exactly what needs to be in place and give you a prioritized plan to get there. That foundation work has real value — and it means when you do invest in AI it will actually work.'
+          text: 'That is still a successful outcome. If your data is not clean or your systems are not integrated enough to support AI yet, we will tell you exactly what needs to be in place and give you a prioritized plan to get there. That foundation work has real value. and it means when you do invest in AI it will actually work.'
         }
       },
       {
@@ -52,7 +52,7 @@ export function buildAIAuditFaqSchema() {
         name: 'What if the numbers do not justify building anything?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'We will tell you. Honestly. We are not in the business of selling implementations that do not make financial sense. If the ROI is not there we will say so — and you will still walk away with a clear picture of your operations and a roadmap for the future.'
+          text: 'We will tell you. Honestly. We are not in the business of selling implementations that do not make financial sense. If the ROI is not there we will say so. and you will still walk away with a clear picture of your operations and a roadmap for the future.'
         }
       },
       {
@@ -60,7 +60,7 @@ export function buildAIAuditFaqSchema() {
         name: 'What exactly are the terms of the audit credit guarantee?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'When you complete any tier of the BitDepth AI Opportunity Audit, the full fee you paid is credited against your first implementation engagement — provided you sign your implementation agreement within 90 days of receiving your audit deliverables. The credit applies to any BitDepth implementation service: workflow automation, custom AI workers, AI strategy and roadmapping, or training and enablement. There is no minimum project size. The credit has no cash value, is non-transferable, and applies to your first implementation engagement only.'
+          text: 'When you complete any tier of the BitDepth AI Opportunity Audit, the full fee you paid is credited against your first implementation engagement provided you sign your implementation agreement within 90 days of receiving your audit deliverables. The credit applies to any BitDepth implementation service: workflow automation, custom AI workers, AI strategy and roadmapping, or training and enablement. There is no minimum project size. The credit has no cash value, is non-transferable, and applies to your first implementation engagement only.'
         }
       }
     ]

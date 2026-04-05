@@ -72,12 +72,12 @@ const processSteps = [
 
 const testimonials = [
   {
-    quote: '[Client testimonial about time savings and ROI — will be replaced]',
+    quote: '[Client testimonial about time savings and ROI will be replaced]',
     author: 'Operations Leader',
     role: 'Industrial Services'
   },
   {
-    quote: '[Client testimonial about clarity and practical approach — will be replaced]',
+    quote: '[Client testimonial about clarity and practical approach will be replaced]',
     author: 'General Manager',
     role: 'Mid-Market Manufacturing'
   }

@@ -51,7 +51,7 @@ const revenueLosses = [
 const solutions = [
   {
     title: 'Automated Appointment Booking',
-    description: 'A chatbot or booking system that answers inquiries, presents available time slots, and confirms appointments — without the owner or office staff having to be available in real time.'
+    description: 'A chatbot or booking system that answers inquiries, presents available time slots, and confirms appointments. without the owner or office staff having to be available in real time.'
   },
   {
     title: 'Callback and Follow-Up Automation',
@@ -59,11 +59,11 @@ const solutions = [
   },
   {
     title: 'Invoice and Payment Automation',
-    description: 'Invoices generated and sent automatically when a job is marked complete — so the owner gets paid faster without doing paperwork at 9pm.'
+    description: 'Invoices generated and sent automatically when a job is marked complete. so the owner gets paid faster without doing paperwork at 9pm.'
   },
   {
     title: 'Client Follow-Up Sequences',
-    description: 'Automated reminders for annual maintenance, seasonal tune-ups, or service renewals — so past clients come back without you having to remember to call them.'
+    description: 'Automated reminders for annual maintenance, seasonal tune-ups, or service renewals. so past clients come back without you having to remember to call them.'
   }
 ];
 
@@ -123,13 +123,13 @@ export default function FieldServicesPage() {
               </h2>
               <div className="mt-6 space-y-4 text-[var(--color-charcoal)] leading-relaxed">
                 <p>
-                  Most field service businesses are run by the owner. The owner is on a job. A potential client calls, gets voicemail, and calls the next company on Google. That job — and every future job from that client — is gone.
+                  Most field service businesses are run by the owner. The owner is on a job. A potential client calls, gets voicemail, and calls the next company on Google. That job. and every future job from that client is gone.
                 </p>
                 <p>
                   This is not a staffing problem. It is a systems problem. An AI-powered chatbot or automated booking system can answer that call, collect the client&apos;s information, offer available time slots, and either book the appointment or ensure a callback happens the same day.
                 </p>
                 <p>
-                  The technology exists, it is not expensive, and it works around the clock without taking a lunch break. The businesses that implement this are not just capturing more leads — they are building a reputation for being responsive while their competitors go to voicemail.
+                  The technology exists, it is not expensive, and it works around the clock without taking a lunch break. The businesses that implement this are not just capturing more leads. they are building a reputation for being responsive while their competitors go to voicemail.
                 </p>
               </div>
             </ScrollReveal>

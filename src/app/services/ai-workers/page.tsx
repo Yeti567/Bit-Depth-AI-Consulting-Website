@@ -9,14 +9,14 @@ import Script from 'next/script';
 export const metadata: Metadata = {
   title: 'Custom AI Workers for Canadian SMBs | BitDepth AI',
   description:
-    'Purpose-built AI agents that perform defined job functions inside your business — customer service, document processing, sales qualification, and finance reconciliation.',
+    'Purpose-built AI agents that perform defined job functions inside your business customer service, document processing, sales qualification, and finance reconciliation.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/services/ai-workers'
   },
   openGraph: {
     title: 'Custom AI Workers for Canadian SMBs | BitDepth AI',
     description:
-      'Purpose-built AI agents that perform defined job functions inside your business — customer service, document processing, sales qualification, and finance reconciliation.',
+      'Purpose-built AI agents that perform defined job functions inside your business customer service, document processing, sales qualification, and finance reconciliation.',
     url: 'https://bitdepthaiconsulting.com/services/ai-workers',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     site: '@bitdepthai',
     title: 'Custom AI Workers for Canadian SMBs | BitDepth AI',
     description:
-      'Purpose-built AI agents that perform defined job functions inside your business — customer service, document processing, sales qualification, and finance reconciliation.',
+      'Purpose-built AI agents that perform defined job functions inside your business customer service, document processing, sales qualification, and finance reconciliation.',
     images: ['/images/og-ai-workers.webp']
   }
 };
@@ -72,7 +72,7 @@ const aiWorkerExamples = [
   {
     title: 'Finance Reconciliation Agent',
     whatItDoes:
-      'Matches invoices to purchase orders, flags discrepancies and exceptions, routes items for approval, and maintains a clean audit trail — without manual review of every transaction.',
+      'Matches invoices to purchase orders, flags discrepancies and exceptions, routes items for approval, and maintains a clean audit trail. without manual review of every transaction.',
     bestFor:
       'Construction, oil and gas services, transportation, and any business managing high volumes of subcontractor invoices or field-generated costs.'
   }
@@ -84,7 +84,7 @@ export default function AIWorkersPage() {
       <Script id="service-schema" type="application/ld+json">
         {JSON.stringify(buildServiceSchema(
           'Custom AI Workers for Canadian SMBs',
-          'Purpose-built AI agents that perform defined job functions inside your business — customer service, document processing, sales qualification, and finance reconciliation.',
+          'Purpose-built AI agents that perform defined job functions inside your business customer service, document processing, sales qualification, and finance reconciliation.',
           'https://bitdepthaiconsulting.com/services/ai-workers',
           'Custom AI Workers'
         ))}
@@ -132,7 +132,7 @@ export default function AIWorkersPage() {
         </div>
       </section>
 
-      {/* Section 1 — The Real Problem */}
+      {/* Section X: The Real Problem */}
       <section className="section-offwhite section-space">
         <div className="container-shell">
           <div className="grid gap-8 lg:grid-cols-[1.2fr,0.8fr] lg:items-center">
@@ -141,13 +141,13 @@ export default function AIWorkersPage() {
                 Some Functions Need More Than a One-Time Automation. They Need Someone to Own Them.
               </h2>
               <p className="mt-5 text-[var(--color-slate)] leading-7">
-                Workflow automation handles a process. An AI Worker handles a role. The difference matters. An automation fires when triggered and completes a defined task. An AI Worker operates continuously — monitoring, responding, processing, and acting within its defined function without needing to be triggered every time.
+                Workflow automation handles a process. An AI Worker handles a role. The difference matters. An automation fires when triggered and completes a defined task. An AI Worker operates continuously monitoring, responding, processing, and acting within its defined function without needing to be triggered every time.
               </p>
               <p className="mt-4 text-[var(--color-slate)] leading-7">
                 Think about the functions in your business that currently require a person to be available, attentive, and consistent. Answering customer inquiries. Qualifying incoming leads. Processing documents as they arrive. Reconciling invoices against purchase orders. These are not one-time tasks. They are ongoing job functions.
               </p>
               <p className="mt-4 text-[var(--color-slate)] leading-7">
-                And they do not always need a human to do them — they need something reliable that shows up every day and does the work correctly. AI is moving fast. Things that were not possible six months ago are standard practice today. Businesses that are waiting for the technology to prove itself are already falling behind the ones that are quietly using it to get more done with the same team.
+                And they do not always need a human to do them. they need something reliable that shows up every day and does the work correctly. AI is moving fast. Things that were not possible six months ago are standard practice today. Businesses that are waiting for the technology to prove itself are already falling behind the ones that are quietly using it to get more done with the same team.
               </p>
             </ScrollReveal>
             <ScrollReveal index={1} className="relative min-h-[280px] overflow-hidden rounded-2xl border border-[var(--color-border)]">
@@ -162,7 +162,7 @@ export default function AIWorkersPage() {
         </div>
       </section>
 
-      {/* Section 2 — AI Worker Examples */}
+      {/* Section X: AI Worker Examples */}
       <section className="section-navy section-space">
         <div className="container-shell">
           <ScrollReveal className="mb-10 max-w-3xl">
@@ -190,7 +190,7 @@ export default function AIWorkersPage() {
         </div>
       </section>
 
-      {/* Section 3 — How It Works */}
+      {/* Section X: How It Works */}
       <section className="section-offwhite section-space">
         <div className="container-shell">
           <ScrollReveal className="mb-10 text-center">
@@ -204,7 +204,7 @@ export default function AIWorkersPage() {
               <p className="text-sm font-semibold text-cyan">Step 1</p>
               <h3 className="mt-2 text-xl font-bold text-[var(--color-navy)]">Define the Role</h3>
               <p className="mt-3 text-sm text-[var(--color-slate)] leading-6">
-                We start by understanding exactly what job function the AI Worker needs to perform — what inputs it receives, what decisions it needs to make, what outputs it produces, and what edge cases require human escalation.
+                We start by understanding exactly what job function the AI Worker needs to perform. what inputs it receives, what decisions it needs to make, what outputs it produces, and what edge cases require human escalation.
               </p>
             </ScrollReveal>
 
@@ -212,7 +212,7 @@ export default function AIWorkersPage() {
               <p className="text-sm font-semibold text-cyan">Step 2</p>
               <h3 className="mt-2 text-xl font-bold text-[var(--color-navy)]">Audit First</h3>
               <p className="mt-3 text-sm text-[var(--color-slate)] leading-6">
-                If you have not completed an AI Opportunity Audit, we recommend starting there. The audit ensures we are building the right AI Worker for the right problem — and that your data and systems are ready to support it.
+                If you have not completed an AI Opportunity Audit, we recommend starting there. The audit ensures we are building the right AI Worker for the right problem. and that your data and systems are ready to support it.
               </p>
             </ScrollReveal>
 
@@ -235,7 +235,7 @@ export default function AIWorkersPage() {
         </div>
       </section>
 
-      {/* Section 4 — Pricing */}
+      {/* Section X: Pricing */}
       <section className="section-navy section-space">
         <div className="container-shell">
           <ScrollReveal className="mb-10 text-center">
@@ -281,7 +281,7 @@ export default function AIWorkersPage() {
               Not Sure Which AI Worker Your Business Needs?
             </h2>
             <p className="mt-5 text-[var(--color-slate)] leading-7">
-              Start with the audit. We will identify exactly which job functions in your business are the best candidates for an AI Worker — and give you honest ROI estimates before you commit to building anything.
+              Start with the audit. We will identify exactly which job functions in your business are the best candidates for an AI Worker. and give you honest ROI estimates before you commit to building anything.
             </p>
             <Link href="/ai-audit" className="btn-primary mt-8">
               Book Your AI Audit

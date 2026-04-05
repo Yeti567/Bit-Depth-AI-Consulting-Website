@@ -51,7 +51,7 @@ const moneyLosses = [
 const solutions = [
   {
     title: 'Dispatch Support and Optimization',
-    description: 'AI-assisted dispatching that reduces errors, flags scheduling conflicts, and helps your dispatcher make better decisions faster — without replacing the human judgment that still matters.'
+    description: 'AI-assisted dispatching that reduces errors, flags scheduling conflicts, and helps your dispatcher make better decisions faster. without replacing the human judgment that still matters.'
   },
   {
     title: 'Real-Time Cost Tracking Against Revenue',
@@ -59,7 +59,7 @@ const solutions = [
   },
   {
     title: 'Client Communication Automation',
-    description: 'Automated status updates, delivery confirmations, and exception alerts — so your clients feel taken care of without your staff spending half their day on the phone.'
+    description: 'Automated status updates, delivery confirmations, and exception alerts. so your clients feel taken care of without your staff spending half their day on the phone.'
   },
   {
     title: 'Driver and Employee Self-Service',
@@ -67,7 +67,7 @@ const solutions = [
   },
   {
     title: 'Compliance Document Automation',
-    description: 'Trip logs, inspection records, and regulatory paperwork — processed and filed consistently so compliance doesn\'t depend on someone remembering to do it.'
+    description: 'Trip logs, inspection records, and regulatory paperwork processed and filed consistently so compliance doesn\'t depend on someone remembering to do it.'
   }
 ];
 
@@ -107,7 +107,7 @@ export default function TransportationPage() {
             <ScrollReveal>
               <span className="eyebrow-pill">Industries / Transportation</span>
               <h1 className="mt-5 text-4xl font-extrabold text-white md:text-5xl lg:text-6xl leading-tight">
-                Driver Shortages, Dispatch Errors, Fuel Costs, and Demanding Clients. AI Won&apos;t Solve All of It — But It Will Make All of It More Manageable.
+                Driver Shortages, Dispatch Errors, Fuel Costs, and Demanding Clients. AI Won&apos;t Solve All of It. But It Will Make All of It More Manageable.
               </h1>
               <p className="mt-6 text-lg text-white/80 leading-relaxed">
                 Trucking is one of the most operationally complex businesses there is. The margins are tight and the pressure never stops.
@@ -130,7 +130,7 @@ export default function TransportationPage() {
                   Finding qualified drivers is a constant battle. Dispatchers are managing too many moving pieces and making mistakes under pressure. Clients want real-time updates and get frustrated when they don&apos;t get them.
                 </p>
                 <p>
-                  Fuel costs and route inefficiencies don&apos;t show up until the accountant runs the numbers months later — and by then there&apos;s nothing you can do about it.
+                  Fuel costs and route inefficiencies don&apos;t show up until the accountant runs the numbers months later. and by then there&apos;s nothing you can do about it.
                 </p>
                 <p>
                   The businesses that are pulling ahead in this industry are not doing it by working harder. They are doing it by automating the parts that don&apos;t need a human and freeing up their people to focus on the parts that do.

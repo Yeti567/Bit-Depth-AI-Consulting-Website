@@ -148,11 +148,11 @@ const industries = [
 const homepageFaq = [
   {
     question: 'What makes you qualified to do this?',
-    answer: "Blake has five years of hands-on AI implementation experience, working behind the scenes for companies across North America. He's done this work — not managed people who do it. When you hire BitDepth, you're getting that experience applied directly to your business."
+    answer: "Blake has five years of hands-on AI implementation experience, working behind the scenes for companies across North America. He's done this work. He has not managed people who do it. When you hire BitDepth, you're getting that experience applied directly to your business."
   },
   {
     question: "What if the audit doesn't find anything useful?",
-    answer: "That's a real outcome and we'll tell you if it applies to you. If your business isn't ready for AI, you'll leave with a clear picture of what needs to be in place before it makes sense — and a prioritized plan to get there. That roadmap has value on its own."
+    answer: "That's a real outcome and we'll tell you if it applies to you. If your business isn't ready for AI, you'll leave with a clear picture of what needs to be in place before it makes sense, plus a prioritized plan to get there. That roadmap has value on its own."
   },
   {
     question: 'How much of my time will this take?',
@@ -160,11 +160,11 @@ const homepageFaq = [
   },
   {
     question: 'Is the outcome guaranteed?',
-    answer: "We guarantee the audit credit — 100% of what you pay for the audit is credited against any implementation you choose to move forward with. What we can't guarantee is a specific ROI, because that depends on your business, your data, and how you execute. What we can guarantee is that we'll be honest with you about what we find, including if the numbers don't justify building anything yet."
+    answer: "We guarantee the audit credit: 100% of what you pay for the audit is credited against any implementation you choose to move forward with. What we can't guarantee is a specific ROI, because that depends on your business, your data, and how you execute. What we can guarantee is that we'll be honest with you about what we find, including if the numbers don't justify building anything yet."
   },
   {
     question: 'How does the audit credit actually work?',
-    answer: 'Simple. You pay for the audit. We deliver it. If you decide to move forward with any implementation — automation, AI workers, strategy, training — the full audit fee comes off your project invoice. No minimums, no conditions beyond the 90-day window. You pay the difference.'
+    answer: 'Simple. You pay for the audit. We deliver it. If you decide to move forward with any implementation (automation, AI workers, strategy, or training), the full audit fee comes off your project invoice. No minimums, no conditions beyond the 90-day window. You pay the difference.'
   }
 ];
 
@@ -259,31 +259,29 @@ export default function HomePage() {
             </span>
             <h2 className="mt-5 text-3xl font-extrabold text-white md:text-5xl">Your Audit Pays for Itself. Guaranteed.</h2>
             <p className="mt-5 max-w-3xl text-white/78">
-              When you complete an AI Opportunity Audit with BitDepth and move forward with any recommended implementation, we credit the full cost of your audit
-              — dollar for dollar — against your project invoice. No conditions. No minimums. No fine print.
+              When you complete an AI Opportunity Audit with BitDepth and move forward with any recommended implementation, we credit the full cost of your audit, dollar for dollar, against your project invoice. No conditions. No minimums. No fine print.
             </p>
             <p className="mt-4 max-w-3xl text-white/78">
-              This is how confident we are in what the audit finds. If the numbers don&apos;t justify building, we&apos;ll tell you that too — and you&apos;ll still
-              have a clear operational roadmap worth far more than you paid for it.
+              This is how confident we are in what the audit finds. If the numbers don&apos;t justify building, we&apos;ll tell you that too. You&apos;ll still have a clear operational roadmap worth far more than you paid for it.
             </p>
 
             <div className="mt-7 space-y-3 text-white/80">
               <p className="inline-flex items-start gap-3">
                 <Check className="mt-1 h-4 w-4 shrink-0 text-cyan" />
                 <span>
-                  <strong className="text-white">Full credit</strong> — 100% of your audit fee applied to implementation
+                  <strong className="text-white">Full credit:</strong> 100% of your audit fee applied to implementation
                 </span>
               </p>
               <p className="inline-flex items-start gap-3">
                 <Check className="mt-1 h-4 w-4 shrink-0 text-cyan" />
                 <span>
-                  <strong className="text-white">90-day window</strong> — Proceed at your pace, not ours
+                  <strong className="text-white">90-day window:</strong> Proceed at your pace, not ours
                 </span>
               </p>
               <p className="inline-flex items-start gap-3">
                 <Check className="mt-1 h-4 w-4 shrink-0 text-cyan" />
                 <span>
-                  <strong className="text-white">Any service</strong> — Applies to automation, AI workers, strategy, or training
+                  <strong className="text-white">Any service:</strong> Applies to automation, AI workers, strategy, or training
                 </span>
               </p>
             </div>
@@ -384,12 +382,12 @@ export default function HomePage() {
           <div className="mt-8 max-w-3xl space-y-4 text-[var(--color-charcoal)]">
             <ScrollReveal>
               <p className="text-lg leading-relaxed">
-                Blake has spent the last five years working in AI — not as a salesperson, but hands-on behind the scenes, doing the same work he now does for BitDepth clients. Most of that experience was built working with companies in the United States.
+                Blake has spent the last five years working in AI. Not as a salesperson, but hands-on behind the scenes, doing the same work he now does for BitDepth clients. Most of that experience was built working with companies in the United States.
               </p>
             </ScrollReveal>
             <ScrollReveal index={1}>
               <p className="text-lg leading-relaxed">
-                He started BitDepth because he saw that Canada was underserved — businesses here deserve access to the same quality of AI consulting that larger US markets take for granted.
+                He started BitDepth because he saw that Canada was underserved. Businesses here deserve access to the same quality of AI consulting that larger US markets take for granted.
               </p>
             </ScrollReveal>
             <ScrollReveal index={2}>
@@ -409,17 +407,17 @@ export default function HomePage() {
           <div className="mt-10 max-w-3xl mx-auto space-y-6 text-white/80">
             <ScrollReveal>
               <p className="text-lg leading-relaxed">
-                Most businesses aren&apos;t ready for AI yet — and that&apos;s not a criticism, it&apos;s just the reality. AI is still new, expectations are high, and a lot of companies are going to be disappointed because they jumped in before their data and processes were ready to support it.
+                Most businesses aren&apos;t ready for AI yet. That&apos;s not a criticism; it&apos;s just the reality. AI is still new, expectations are high, and a lot of companies are going to be disappointed because they jumped in before their data and processes were ready to support it.
               </p>
             </ScrollReveal>
             <ScrollReveal index={1}>
               <p className="text-lg leading-relaxed">
-                Before we recommend anything, we run a discovery audit. We tell you exactly where you stand. What&apos;s working, what isn&apos;t, and what needs to be fixed before AI will do you any good. That honesty is the most valuable thing we offer.
+                Before we recommend anything, we run a discovery audit. We tell you exactly where you stand. What's working, what isn't, and what needs to be fixed before AI will do you any good. That honesty is the most valuable thing we offer.
               </p>
             </ScrollReveal>
             <ScrollReveal index={2}>
               <p className="text-lg leading-relaxed">
-                BitDepth is lean by design. Blake works with a small group of trusted consultants, which keeps costs reasonable and means you&apos;re always dealing with someone who actually knows your file. We work with small and mid-sized businesses — that&apos;s not a limitation, it&apos;s a deliberate choice. These are the companies we understand best and where we can make the biggest difference.
+                BitDepth is lean by design. Blake works with a small group of trusted consultants, which keeps costs reasonable and means you're always dealing with someone who actually knows your file. We work with small and mid-sized businesses. That's not a limitation; it's a deliberate choice. These are the companies we understand best and where we can make the biggest difference.
               </p>
             </ScrollReveal>
           </div>
@@ -435,13 +433,13 @@ export default function HomePage() {
             <ScrollReveal className="rounded-xl border border-[var(--color-border)] bg-white p-6 shadow-[0_10px_28px_rgba(11,31,59,0.08)]">
               <h3 className="text-lg font-bold text-[var(--color-navy)]">What makes you qualified to do this?</h3>
               <p className="mt-3 text-[var(--color-slate)] leading-relaxed">
-                Blake has five years of hands-on AI implementation experience, working behind the scenes for companies across North America. He&apos;s done this work — not managed people who do it. When you hire BitDepth, you&apos;re getting that experience applied directly to your business.
+                Blake has five years of hands-on AI implementation experience, working behind the scenes for companies across North America. He's done this work. He has not managed people who do it. When you hire BitDepth, you're getting that experience applied directly to your business.
               </p>
             </ScrollReveal>
             <ScrollReveal index={1} className="rounded-xl border border-[var(--color-border)] bg-white p-6 shadow-[0_10px_28px_rgba(11,31,59,0.08)]">
               <h3 className="text-lg font-bold text-[var(--color-navy)]">What if the audit doesn&apos;t find anything useful?</h3>
               <p className="mt-3 text-[var(--color-slate)] leading-relaxed">
-                That&apos;s a real outcome and we&apos;ll tell you if it applies to you. If your business isn&apos;t ready for AI, you&apos;ll leave with a clear picture of what needs to be in place before it makes sense — and a prioritized plan to get there. That roadmap has value on its own.
+                That's a real outcome and we'll tell you if it applies to you. If your business isn't ready for AI, you'll leave with a clear picture of what needs to be in place before it makes sense, plus a prioritized plan to get there. That roadmap has value on its own.
               </p>
             </ScrollReveal>
             <ScrollReveal index={2} className="rounded-xl border border-[var(--color-border)] bg-white p-6 shadow-[0_10px_28px_rgba(11,31,59,0.08)]">
@@ -453,13 +451,13 @@ export default function HomePage() {
             <ScrollReveal index={3} className="rounded-xl border border-[var(--color-border)] bg-white p-6 shadow-[0_10px_28px_rgba(11,31,59,0.08)]">
               <h3 className="text-lg font-bold text-[var(--color-navy)]">Is the outcome guaranteed?</h3>
               <p className="mt-3 text-[var(--color-slate)] leading-relaxed">
-                We guarantee the audit credit — 100% of what you pay for the audit is credited against any implementation you choose to move forward with. What we can&apos;t guarantee is a specific ROI, because that depends on your business, your data, and how you execute. What we can guarantee is that we&apos;ll be honest with you about what we find, including if the numbers don&apos;t justify building anything yet.
+                We guarantee the audit credit: 100% of what you pay for the audit is credited against any implementation you choose to move forward with. What we can't guarantee is a specific ROI, because that depends on your business, your data, and how you execute. What we can guarantee is that we'll be honest with you about what we find, including if the numbers don't justify building anything yet.
               </p>
             </ScrollReveal>
             <ScrollReveal index={4} className="rounded-xl border border-[var(--color-border)] bg-white p-6 shadow-[0_10px_28px_rgba(11,31,59,0.08)]">
               <h3 className="text-lg font-bold text-[var(--color-navy)]">How does the audit credit actually work?</h3>
               <p className="mt-3 text-[var(--color-slate)] leading-relaxed">
-                Simple. You pay for the audit. We deliver it. If you decide to move forward with any implementation — automation, AI workers, strategy, training — the full audit fee comes off your project invoice. No minimums, no conditions beyond the 90-day window. You pay the difference.
+                Simple. You pay for the audit. We deliver it. If you decide to move forward with any implementation (automation, AI workers, strategy, or training), the full audit fee comes off your project invoice. No minimums, no conditions beyond the 90-day window. You pay the difference.
               </p>
             </ScrollReveal>
           </div>
@@ -509,7 +507,7 @@ export default function HomePage() {
           <ScrollReveal className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-extrabold text-white md:text-5xl">What You&apos;ll Walk Away With</h2>
             <p className="mt-4 text-white/70">
-              By the end of your audit, you will have a clear, honest picture of where your business stands relative to AI — not a sales pitch for what to buy next.
+              By the end of your audit, you will have a clear, honest picture of where your business stands relative to AI. That is not a sales pitch for what to buy next.
             </p>
           </ScrollReveal>
           <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -525,14 +523,14 @@ export default function HomePage() {
                 <Check className="h-5 w-5 text-cyan" />
               </div>
               <h3 className="mt-4 text-lg font-bold text-white">AI Readiness Scorecard</h3>
-              <p className="mt-2 text-white/70">Across five key pillars — know exactly where you stand.</p>
+              <p className="mt-2 text-white/70">Across five key pillars: know exactly where you stand.</p>
             </ScrollReveal>
             <ScrollReveal index={2} className="card-dark p-6">
               <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-cyan/30 bg-cyan/10">
                 <Check className="h-5 w-5 text-cyan" />
               </div>
               <h3 className="mt-4 text-lg font-bold text-white">Prioritized Opportunities</h3>
-              <p className="mt-2 text-white/70">Ranked by impact and feasibility — focus on what matters.</p>
+              <p className="mt-2 text-white/70">Ranked by impact and feasibility: focus on what matters.</p>
             </ScrollReveal>
             <ScrollReveal index={3} className="card-dark p-6">
               <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-cyan/30 bg-cyan/10">

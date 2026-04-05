@@ -27,7 +27,7 @@ export function ContactForm() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="mt-4 text-xl font-bold text-[var(--color-navy)]">Thanks — we&apos;ve received your message.</h3>
+        <h3 className="mt-4 text-xl font-bold text-[var(--color-navy)]">Thanks we&apos;ve received your message.</h3>
         <p className="mt-3 text-[var(--color-slate)]">
           Blake will review it and follow up within 1 business day. If your situation is urgent, email{' '}
           <a href="mailto:blake@bitdepthaiconsulting.com" className="text-cyan hover:underline">

@@ -8,14 +8,14 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 export const metadata: Metadata = {
   title: 'AI Consulting for Trades & Construction Companies | BitDepth AI',
   description:
-    'Stop finding out which crews lost money at year end. Real-time job costing, automated documents, and safety compliance — built for Canadian construction companies.',
+    'Stop finding out which crews lost money at year end. Real-time job costing, automated documents, and safety compliance built for Canadian construction companies.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/industries/construction'
   },
   openGraph: {
     title: 'AI Consulting for Trades & Construction Companies | BitDepth AI',
     description:
-      'Stop finding out which crews lost money at year end. Real-time job costing, automated documents, and safety compliance — built for Canadian construction companies.',
+      'Stop finding out which crews lost money at year end. Real-time job costing, automated documents, and safety compliance built for Canadian construction companies.',
     url: 'https://bitdepthaiconsulting.com/industries/construction',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     site: '@bitdepthai',
     title: 'AI Consulting for Trades & Construction Companies | BitDepth AI',
     description:
-      'Stop finding out which crews lost money at year end. Real-time job costing, automated documents, and safety compliance — built for Canadian construction companies.',
+      'Stop finding out which crews lost money at year end. Real-time job costing, automated documents, and safety compliance built for Canadian construction companies.',
     images: ['/images/og-construction.webp']
   }
 };
@@ -51,15 +51,15 @@ const profitLeaks = [
 const solutions = [
   {
     title: 'Real-Time Job Costing Visibility',
-    description: 'Connect your field data to your estimated budgets so you can see which projects and crews are on track and which ones need attention — while there\'s still time to act.'
+    description: 'Connect your field data to your estimated budgets so you can see which projects and crews are on track and which ones need attention while there\'s still time to act.'
   },
   {
     title: 'Automated Document Processing',
-    description: 'Subcontractor invoices, field reports, purchase orders, and safety documents — processed, categorized, and routed automatically instead of sitting in someone\'s inbox.'
+    description: 'Subcontractor invoices, field reports, purchase orders, and safety documents processed, categorized, and routed automatically instead of sitting in someone\'s inbox.'
   },
   {
     title: 'Safety and Compliance Automation',
-    description: 'Safety documentation, incident reports, toolbox talks, and COR preparation — built into your workflow so compliance isn\'t a separate job someone has to remember to do.'
+    description: 'Safety documentation, incident reports, toolbox talks, and COR preparation built into your workflow so compliance isn\'t a separate job someone has to remember to do.'
   },
   {
     title: 'Estimating Feedback Loops',
@@ -103,7 +103,7 @@ export default function ConstructionPage() {
             <ScrollReveal>
               <span className="eyebrow-pill">Industries / Construction</span>
               <h1 className="mt-5 text-4xl font-extrabold text-white md:text-5xl lg:text-6xl leading-tight">
-                You Won&apos;t Know Which Crews Are Losing Money Until It&apos;s Too Late — Unless You Fix That Now
+                You Won&apos;t Know Which Crews Are Losing Money Until It&apos;s Too Late unless You Fix That Now
               </h1>
               <p className="mt-6 text-lg text-white/80 leading-relaxed">
                 Construction companies run multiple crews, multiple projects, and multiple budgets simultaneously. Without real-time visibility, profit leaks go undetected for months.
@@ -123,13 +123,13 @@ export default function ConstructionPage() {
               </h2>
               <div className="mt-6 space-y-4 text-[var(--color-charcoal)] leading-relaxed">
                 <p>
-                  Most construction companies do a solid job estimating. The problem isn&apos;t the estimate — it&apos;s what happens between the estimate and the final accounting. Labour overruns, material waste, subcontractor delays, equipment downtime — these things add up quietly across multiple crews and multiple sites.
+                  Most construction companies do a solid job estimating. The problem isn&apos;t the estimate it&apos;s what happens between the estimate and the final accounting. Labour overruns, material waste, subcontractor delays, equipment downtime. these things add up quietly across multiple crews and multiple sites.
                 </p>
                 <p>
                   By the time your accountant tells you a project lost money, it&apos;s ancient history. You can&apos;t fix what already happened. AI changes that by connecting your estimated budgets to your actual field costs in real time.
                 </p>
                 <p>
-                  When a crew starts trending over budget, you know about it while you can still do something. You stop finding out at year end. You start managing as you go. This is not complicated technology — it is the difference between running your business on information and running it on hope.
+                  When a crew starts trending over budget, you know about it while you can still do something. You stop finding out at year end. You start managing as you go. This is not complicated technology it is the difference between running your business on information and running it on hope.
                 </p>
               </div>
             </ScrollReveal>

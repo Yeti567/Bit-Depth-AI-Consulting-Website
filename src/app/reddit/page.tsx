@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI That Works — For How You Actually Work.',
+    title: 'AI That Works. For How You Actually Work.',
     description: 'Free 30-minute discovery call for Canadian small and mid-market operational businesses.',
     images: ['/images/Industrial energy with digital precision landing.png']
   }

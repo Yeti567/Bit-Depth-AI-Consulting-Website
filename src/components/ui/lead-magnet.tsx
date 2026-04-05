@@ -73,7 +73,7 @@ export function LeadMagnet({ source }: LeadMagnetProps) {
           You&apos;re all set.
         </h3>
         <p className="mt-3 text-[var(--color-slate)]">
-          Check your inbox — it&apos;ll be there within a few minutes. If you don&apos;t see it, check your junk folder.
+          Check your inbox it&apos;ll be there within a few minutes. If you don&apos;t see it, check your junk folder.
         </p>
       </ScrollReveal>
     );
@@ -139,7 +139,7 @@ export function LeadMagnet({ source }: LeadMagnetProps) {
           </button>
 
           <p className="mt-4 text-xs text-[var(--color-slate)]">
-            No spam. Unsubscribe anytime. Canadian data handling — PIPEDA compliant.
+            No spam. Unsubscribe anytime. Canadian data handling pIPEDA compliant.
           </p>
         </form>
       </ScrollReveal>

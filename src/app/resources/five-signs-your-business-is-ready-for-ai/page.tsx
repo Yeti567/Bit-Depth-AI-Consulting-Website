@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 const readinessSigns = [
   {
     title: 'You have at least one process that happens the same way every time',
-    description: 'AI and automation work best on repetitive, consistent processes. If you can describe a task as a series of steps that always happen in the same order, that task is automatable. If every instance of the task is completely different, it probably is not — at least not yet. The question to ask is: could you write down the steps for this process and have someone else follow them reliably? If yes, a system can probably do it too.'
+    description: 'AI and automation work best on repetitive, consistent processes. If you can describe a task as a series of steps that always happen in the same order, that task is automatable. If every instance of the task is completely different, it probably is not. at least not yet. The question to ask is: could you write down the steps for this process and have someone else follow them reliably? If yes, a system can probably do it too.'
   },
   {
     title: 'You have data and you mostly trust it',
@@ -51,7 +51,7 @@ const readinessSigns = [
   },
   {
     title: 'You know where you are losing time or money',
-    description: 'The best AI implementations target a specific, known problem. Not a vague sense that things could be more efficient — a specific process that takes too long, a specific cost that is higher than it should be, a specific function that is consuming more staff time than it deserves. If you can name the problem, we can find a solution. If the problem is just a general feeling that the business should run better, the audit will help you identify the specific targets.'
+    description: 'The best AI implementations target a specific, known problem. Not a vague sense that things could be more efficient. a specific process that takes too long, a specific cost that is higher than it should be, a specific function that is consuming more staff time than it deserves. If you can name the problem, we can find a solution. If the problem is just a general feeling that the business should run better, the audit will help you identify the specific targets.'
   },
   {
     title: 'Your team is open to changing how they work',
@@ -59,7 +59,7 @@ const readinessSigns = [
   },
   {
     title: 'You have someone who owns the outcome',
-    description: 'Every successful AI implementation has a person inside the business who owns it — who cares whether it works, follows up when something goes wrong, and champions adoption with the rest of the team. This does not have to be a technical person. It just has to be someone with enough authority and interest to keep the project moving after the consultant leaves. If nobody in your business owns the outcome, the implementation will drift.'
+    description: 'Every successful AI implementation has a person inside the business who owns it who cares whether it works, follows up when something goes wrong, and champions adoption with the rest of the team. This does not have to be a technical person. It just has to be someone with enough authority and interest to keep the project moving after the consultant leaves. If nobody in your business owns the outcome, the implementation will drift.'
   }
 ];
 
@@ -107,7 +107,7 @@ export default function FiveSignsReadyForAIPage() {
               />
             </div>
             <p className="text-lg leading-relaxed text-[var(--color-slate)]">
-              A lot of businesses want to implement AI. Fewer are actually ready for it. That gap — between wanting AI and being ready for it — is where most first attempts fail. This checklist is not about whether AI is right for your industry. It is about whether your business specifically is in a position to get real value from it right now. Work through these five signs honestly. If you check all five, you are ready to move. If you are missing one or two, you will know exactly what to fix first.
+              A lot of businesses want to implement AI. Fewer are actually ready for it. That gap. between wanting AI and being ready for it is where most first attempts fail. This checklist is not about whether AI is right for your industry. It is about whether your business specifically is in a position to get real value from it right now. Work through these five signs honestly. If you check all five, you are ready to move. If you are missing one or two, you will know exactly what to fix first.
             </p>
           </ScrollReveal>
 
@@ -136,7 +136,7 @@ export default function FiveSignsReadyForAIPage() {
           <ScrollReveal className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-extrabold text-white md:text-4xl">Not Sure How You Score?</h2>
             <p className="mt-5 text-white/74">
-              That is what the audit is for. We assess your readiness across five operational pillars and tell you honestly where you stand — and what to address before you invest in building anything.
+              That is what the audit is for. We assess your readiness across five operational pillars and tell you honestly where you stand. and what to address before you invest in building anything.
             </p>
             <Link href="/ai-audit" className="btn-primary mt-8">
               Book Your AI Audit

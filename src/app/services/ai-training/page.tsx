@@ -52,14 +52,14 @@ const trainingOptions = [
     title: 'Role-Specific AI Playbooks',
     price: '$1,500–$3,000 per playbook',
     whatItCovers:
-      'A step-by-step guide for how a specific role in your business should use AI day to day — which tools to use, how to use them, what to watch for, and what to escalate to a human. Written for the person doing the job, not for a technical audience.',
+      'A step-by-step guide for how a specific role in your business should use AI day to day which tools to use, how to use them, what to watch for, and what to escalate to a human. Written for the person doing the job, not for a technical audience.',
     format: 'Written playbook delivered as a PDF and editable document, with a one-hour walkthrough session included.'
   },
   {
     title: 'Prompt Engineering Workshop',
     price: '$3,500–$6,000',
     whatItCovers:
-      'How to get reliable, consistent, useful output from AI tools your team is already using — including ChatGPT, Claude, Copilot, and industry-specific AI tools. The difference between a prompt that produces garbage and one that produces something you can actually use is learnable. This workshop teaches it.',
+      'How to get reliable, consistent, useful output from AI tools your team is already using. including ChatGPT, Claude, Copilot, and industry-specific AI tools. The difference between a prompt that produces garbage and one that produces something you can actually use is learnable. This workshop teaches it.',
     format: 'Half-day hands-on workshop with real examples from your industry. Delivered remotely or on-site.'
   },
   {
@@ -143,7 +143,7 @@ export default function AITrainingPage() {
         </div>
       </section>
 
-      {/* Section 1 — The Real Problem */}
+      {/* Section X: The Real Problem */}
       <section className="section-offwhite section-space">
         <div className="container-shell">
           <div className="grid gap-8 lg:grid-cols-[1.2fr,0.8fr] lg:items-center">
@@ -155,10 +155,10 @@ export default function AITrainingPage() {
                 Every industry has seen it. A new system gets implemented. The vendor trains the team. Everyone nods along. And six weeks later half the team is doing things the old way because the new way felt unfamiliar or nobody was sure they were using it correctly.
               </p>
               <p className="mt-4 text-[var(--color-slate)] leading-7">
-                This is not a people problem. It is a change management problem. People are not resistant to better tools — they are resistant to uncertainty. When they do not understand how a tool works, when they are not confident it will give them reliable results, and when nobody has shown them specifically how it applies to their job, they default to what they already know.
+                This is not a people problem. It is a change management problem. People are not resistant to better tools. they are resistant to uncertainty. When they do not understand how a tool works, when they are not confident it will give them reliable results, and when nobody has shown them specifically how it applies to their job, they default to what they already know.
               </p>
               <p className="mt-4 text-[var(--color-slate)] leading-7">
-                AI is particularly vulnerable to this because it is still new enough that most people have a mixture of skepticism and anxiety about it. Training that addresses both — that builds genuine understanding and genuine confidence — is what makes the difference between an implementation that delivers ROI and one that collects dust.
+                AI is particularly vulnerable to this because it is still new enough that most people have a mixture of skepticism and anxiety about it. Training that addresses both that builds genuine understanding and genuine confidence is what makes the difference between an implementation that delivers ROI and one that collects dust.
               </p>
             </ScrollReveal>
             <ScrollReveal index={1} className="relative min-h-[280px] overflow-hidden rounded-2xl border border-[var(--color-border)]">
@@ -173,7 +173,7 @@ export default function AITrainingPage() {
         </div>
       </section>
 
-      {/* Section 2 — Training Options */}
+      {/* Section X: Training Options */}
       <section className="section-navy section-space">
         <div className="container-shell">
           <ScrollReveal className="mb-10 max-w-3xl">
@@ -204,7 +204,7 @@ export default function AITrainingPage() {
         </div>
       </section>
 
-      {/* Section 3 — Who This Is For */}
+      {/* Section X: Who This Is For */}
       <section className="section-offwhite section-space">
         <div className="container-shell">
           <ScrollReveal className="mb-10 text-center">
@@ -222,7 +222,7 @@ export default function AITrainingPage() {
         </div>
       </section>
 
-      {/* Section 4 — Pricing */}
+      {/* Section X: Pricing */}
       <section className="section-navy section-space">
         <div className="container-shell max-w-3xl">
           <ScrollReveal className="text-center">
@@ -252,7 +252,7 @@ export default function AITrainingPage() {
 
           <ScrollReveal className="mt-6 text-center text-white/74">
             <p className="leading-7">
-              All training is delivered remotely via Zoom or on-site depending on your preference and location. Custom training packages combining multiple options are available — contact us to discuss what makes sense for your team.
+              All training is delivered remotely via Zoom or on-site depending on your preference and location. Custom training packages combining multiple options are available contact us to discuss what makes sense for your team.
             </p>
           </ScrollReveal>
         </div>

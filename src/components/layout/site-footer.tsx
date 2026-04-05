@@ -111,7 +111,7 @@ export function SiteFooter() {
                 blake@bitdepthaiconsulting.com
               </Link>
             </li>
-            {/* TODO: Add phone number here once a business line is established — format: +1 (XXX) XXX-XXXX */}
+            {/* TODO: Add phone number here once a business line is established. format: +1 (XXX) XXX-XXXX */}
             <li>
               <Link href="/privacy-policy" className="transition hover:text-cyan">
                 Privacy Policy

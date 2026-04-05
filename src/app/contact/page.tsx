@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Contact BitDepth AI Consulting',
     description:
-      'Book your AI Opportunity Audit or a free 30-minute discovery call. BitDepth serves Canadian SMBs across BC and Alberta. No pressure — if AI isn\'t the right move, we\'ll tell you.',
+      'Book your AI Opportunity Audit or a free 30-minute discovery call. BitDepth serves Canadian SMBs across BC and Alberta. No pressure if AI isn\'t the right move, we\'ll tell you.',
     url: 'https://bitdepthaiconsulting.com/contact',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     site: '@bitdepthai',
     title: 'Contact BitDepth AI Consulting',
     description:
-      'Book your AI Opportunity Audit or a free 30-minute discovery call. BitDepth serves Canadian SMBs across BC and Alberta. No pressure — if AI isn\'t the right move, we\'ll tell you.',
+      'Book your AI Opportunity Audit or a free 30-minute discovery call. BitDepth serves Canadian SMBs across BC and Alberta. No pressure if AI isn\'t the right move, we\'ll tell you.',
     images: ['/images/og-contact.jpg']
   }
 };

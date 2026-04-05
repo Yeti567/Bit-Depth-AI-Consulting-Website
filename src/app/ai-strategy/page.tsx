@@ -6,7 +6,7 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 export const metadata: Metadata = {
   title: 'Our AI Consulting Approach | Diagnose, Design, Implement | BitDepth AI',
   description:
-    'BitDepth uses a structured three-phase methodology — Diagnose, Design, Implement. Every engagement starts with a discovery audit, not a sales pitch.',
+    'BitDepth uses a structured three-phase methodology diagnose, Design, Implement. Every engagement starts with a discovery audit, not a sales pitch.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/ai-strategy'
   },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 
 const phases = [
   {
-    title: 'Phase 1 — Diagnose',
+    title: 'Phase 1: Diagnose',
     steps: [
       'Kickoff and stakeholder interviews',
       'Technology stack inventory',
@@ -48,7 +48,7 @@ const phases = [
     ]
   },
   {
-    title: 'Phase 2 — Design',
+    title: 'Phase 2: Design',
     steps: [
       'Opportunity prioritization (quick wins vs. strategic)',
       'ROI modelling for top use cases',
@@ -57,7 +57,7 @@ const phases = [
     ]
   },
   {
-    title: 'Phase 3 — Implement',
+    title: 'Phase 3: Implement',
     steps: ['Build, test, and deploy', 'Team training and handover', 'Documentation and SOPs', 'Optional ongoing managed service retainer']
   }
 ];

@@ -59,7 +59,7 @@ const solutions = [
   },
   {
     title: 'Field Ticket and Invoice Automation',
-    description: 'Field tickets processed, verified against scope, and routed for approval automatically — so invoicing happens in hours instead of days and discrepancies get flagged before they become disputes.'
+    description: 'Field tickets processed, verified against scope, and routed for approval automatically. so invoicing happens in hours instead of days and discrepancies get flagged before they become disputes.'
   },
   {
     title: 'Predictive Maintenance Planning',
@@ -67,7 +67,7 @@ const solutions = [
   },
   {
     title: 'Safety and Compliance Documentation',
-    description: 'Automated safety documentation, incident reporting, and regulatory compliance across multiple sites — consistent, auditable, and not dependent on someone remembering to fill out a form.'
+    description: 'Automated safety documentation, incident reporting, and regulatory compliance across multiple sites consistent, auditable, and not dependent on someone remembering to fill out a form.'
   }
 ];
 
