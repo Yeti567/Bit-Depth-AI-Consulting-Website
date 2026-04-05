@@ -41,6 +41,14 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    title: 'What Can I Expect in an AI Discovery Audit?',
+    description: 'A complete walkthrough of the audit process, from stakeholder interviews to ROI calculations and the 90-day implementation roadmap.',
+    image: '/images/ai-discovery-audit-featured.webp.webp',
+    href: '/resources/what-can-i-expect-in-an-ai-discovery-audit',
+    category: 'Guide',
+    readTime: '8 min read'
+  },
+  {
     title: "You Don't Have an AI Problem you Have a Systems Problem",
     description: 'How disconnected systems create hidden operational drag and what to fix before investing in AI tools.',
     image: '/images/resources-article-1.webp',
