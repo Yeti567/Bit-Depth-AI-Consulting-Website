@@ -1,6 +1,6 @@
 export const navigation = [
   { label: 'Services', href: '/services' },
-  { label: 'How It Works', href: '/ai-strategy' },
+  { label: 'Our Approach', href: '/ai-strategy' },
   { label: 'Industries', href: '/industries' },
   { label: 'AI Audit', href: '/ai-audit' },
   { label: 'Resources', href: '/resources' },

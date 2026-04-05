@@ -5,6 +5,8 @@ import { ArrowRight, BarChart3, Check, CheckCircle2, Factory, HardHat, Link2, Re
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { FAQSchemaScript } from '@/components/ui/faq-schema-script';
+import { CaseStudies } from '@/components/ui/case-studies';
+import { LeadMagnet } from '@/components/ui/lead-magnet';
 import { buildOrganizationSchema, buildWebSiteSchema, buildLocalBusinessSchema } from '@/lib/schema';
 import Script from 'next/script';
  
@@ -461,6 +463,18 @@ export default function HomePage() {
               </p>
             </ScrollReveal>
           </div>
+        </div>
+      </section>
+
+      <section className="section-offwhite section-space">
+        <div className="container-shell">
+          <CaseStudies />
+        </div>
+      </section>
+
+      <section className="section-charcoal section-space">
+        <div className="container-shell">
+          <LeadMagnet source="homepage" />
         </div>
       </section>
 

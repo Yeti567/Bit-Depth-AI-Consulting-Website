@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { LeadMagnet } from '@/components/ui/lead-magnet';
 
 export const metadata: Metadata = {
   title: 'AI Resources for Canadian Business Owners | BitDepth AI',
@@ -120,6 +121,12 @@ export default function ResourcesPage() {
               />
             </div>
           </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="section-charcoal section-space">
+        <div className="container-shell">
+          <LeadMagnet source="resources" />
         </div>
       </section>
 

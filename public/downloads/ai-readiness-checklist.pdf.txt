@@ -1,0 +1,6 @@
+TODO: Replace this file with the actual AI Readiness Checklist PDF before launch.
+
+File should be named: ai-readiness-checklist.pdf
+Location: /public/downloads/
+
+This placeholder file ensures the download URL https://bitdepthaiconsulting.com/downloads/ai-readiness-checklist.pdf resolves correctly.

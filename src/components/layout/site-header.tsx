@@ -50,7 +50,13 @@ export function SiteHeader({ simplified = false }: { simplified?: boolean }) {
             ))}
           </nav>
         ) : null}
-        <div className="hidden md:flex">
+        <div className="hidden items-center gap-4 md:flex">
+          <Link
+            href="mailto:blake@bitdepthaiconsulting.com"
+            className="text-sm text-white/60 transition hover:text-cyan"
+          >
+            blake@bitdepthaiconsulting.com
+          </Link>
           <Link href="/ai-audit" className="btn-primary text-sm">
             Book Your AI Audit
           </Link>

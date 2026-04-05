@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { ContactForm } from '@/components/ui/contact-form';
 
 export const metadata: Metadata = {
   title: 'Book an AI Audit or Discovery Call | BitDepth AI Consulting',
@@ -59,27 +60,7 @@ export default function ContactPage() {
           <ScrollReveal>
             <h1 className="text-4xl font-extrabold md:text-6xl">Let&apos;s Talk About Your Business</h1>
             <p className="mt-4 text-[var(--color-slate)]">Tell us what you&apos;re trying to improve. We&apos;ll help you find the right AI starting point.</p>
-            <form className="card-light mt-8 grid gap-4 p-6" action="mailto:blake@bitdepthaiconsulting.com" method="post" encType="text/plain">
-              <input type="text" name="name" placeholder="Name" required />
-              <input type="text" name="company" placeholder="Company Name" required />
-              <input type="email" name="email" placeholder="Email" required />
-              <input type="tel" name="phone" placeholder="Phone (optional)" />
-              <select name="interest" defaultValue="" required>
-                <option value="" disabled>
-                  What are you most interested in?
-                </option>
-                <option value="ai-audit">AI Audit</option>
-                <option value="workflow-automation">Workflow Automation</option>
-                <option value="ai-workers">AI Workers</option>
-                <option value="strategy">Strategy</option>
-                <option value="training">Training</option>
-                <option value="not-sure">Not sure yet</option>
-              </select>
-              <textarea name="message" placeholder="Message (optional)" className="min-h-32" />
-              <button type="submit" className="btn-primary w-full sm:w-fit">
-                Send My Inquiry
-              </button>
-            </form>
+            <ContactForm />
           </ScrollReveal>
 
           <ScrollReveal index={1} className="card-light p-6">

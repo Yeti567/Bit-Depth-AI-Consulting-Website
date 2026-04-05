@@ -18,6 +18,55 @@ export function buildFaqSchema(faqs: FAQItem[]) {
   };
 }
 
+export function buildAIAuditFaqSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What does an AI audit actually look like day to day?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We start with a short intake call to understand your business and get access to the information we need. From there we run structured interviews with you and your key staff — typically 4 to 12 people depending on the audit tier. We map your workflows, review your technology stack, and assess your data environment. Most of the work happens on our end. Your team\'s time commitment is focused and manageable. At the end you get a readout call where we walk you through everything we found.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How long does the AI audit take?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Most standard audits take 5 to 8 business days. Quick scans can be done in 2 to 3 days. Deep-dive roadmaps for larger or more complex businesses take 10 to 15 days.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What if the audit finds that we are not ready for AI?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'That is still a successful outcome. If your data is not clean or your systems are not integrated enough to support AI yet, we will tell you exactly what needs to be in place and give you a prioritized plan to get there. That foundation work has real value — and it means when you do invest in AI it will actually work.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What if the numbers do not justify building anything?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We will tell you. Honestly. We are not in the business of selling implementations that do not make financial sense. If the ROI is not there we will say so — and you will still walk away with a clear picture of your operations and a roadmap for the future.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What exactly are the terms of the audit credit guarantee?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'When you complete any tier of the BitDepth AI Opportunity Audit, the full fee you paid is credited against your first implementation engagement — provided you sign your implementation agreement within 90 days of receiving your audit deliverables. The credit applies to any BitDepth implementation service: workflow automation, custom AI workers, AI strategy and roadmapping, or training and enablement. There is no minimum project size. The credit has no cash value, is non-transferable, and applies to your first implementation engagement only.'
+        }
+      }
+    ]
+  };
+}
+
 export function buildOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
@@ -52,7 +101,6 @@ export function buildOrganizationSchema() {
     },
     sameAs: [
       'https://www.linkedin.com/company/bitdepth-ai-consulting-ltd',
-      'https://www.facebook.com/bitpathconsultingltd',
       'https://www.youtube.com/channel/UCz6b7iSR3mik1lzlxoAsZMA'
     ],
     areaServed: {
@@ -81,37 +129,36 @@ export function buildLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    name: 'BitDepth AI Consulting',
-    description: 'Vendor-neutral AI consulting for Canadian small and mid-sized businesses',
+    name: 'BitDepth AI Consulting Ltd.',
+    description: 'Vendor-neutral AI consulting for Canadian small and mid-sized businesses. We identify where time and money are being lost, then implement the right AI solution.',
     url: 'https://bitdepthaiconsulting.com',
-    telephone: 'PHONE NUMBER NEEDED',
-    email: 'blake@bitdepthaiconsulting.com',
+    logo: 'https://bitdepthaiconsulting.com/images/logo svg transparent.svg',
+    founder: {
+      '@type': 'Person',
+      name: 'Blake Cowan'
+    },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '02 Birch Lane',
       addressLocality: 'Barriere',
       addressRegion: 'BC',
-      postalCode: 'V0E 1E0',
       addressCountry: 'CA'
     },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 51.1833,
-      longitude: -120.1333
-    },
-    priceRange: '$$$',
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '09:00',
-        closes: '17:00'
-      }
+    areaServed: [
+      { '@type': 'Country', name: 'Canada' },
+      { '@type': 'Country', name: 'United States' }
     ],
-    areaServed: {
-      '@type': 'Country',
-      name: 'Canada'
-    }
+    serviceType: [
+      'AI Opportunity Audit',
+      'Workflow Automation',
+      'Custom AI Workers',
+      'AI Strategy and Roadmapping',
+      'AI Training and Enablement'
+    ],
+    priceRange: '$$',
+    sameAs: [
+      'https://www.linkedin.com/company/bitdepth-ai-consulting-ltd',
+      'https://www.youtube.com/channel/UCz6b7iSR3mik1lzlxoAsZMA'
+    ]
   };
 }
 

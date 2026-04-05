@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Facebook, Linkedin, Youtube } from 'lucide-react';
+import { Linkedin, Youtube } from 'lucide-react';
 
 export function SiteFooter() {
   return (
@@ -107,6 +107,12 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link href="mailto:blake@bitdepthaiconsulting.com" className="transition hover:text-cyan">
+                blake@bitdepthaiconsulting.com
+              </Link>
+            </li>
+            {/* TODO: Add phone number here once a business line is established — format: +1 (XXX) XXX-XXXX */}
+            <li>
               <Link href="/privacy-policy" className="transition hover:text-cyan">
                 Privacy Policy
               </Link>
@@ -123,15 +129,6 @@ export function SiteFooter() {
         <div className="container-shell flex flex-col gap-4 py-6 text-[13px] text-white/35 md:flex-row md:items-center md:justify-between">
           <p>© 2026 BitDepth AI Consulting Ltd. | Barriere, British Columbia, Canada</p>
           <div className="flex flex-col gap-1 text-white/50 sm:flex-row sm:items-center sm:gap-3">
-            <Link
-              href="https://www.facebook.com/bitpathconsultingltd"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-white/75 transition hover:text-cyan"
-            >
-              <Facebook className="h-4 w-4" aria-hidden />
-              <span className="sr-only">Facebook</span>
-            </Link>
             <Link
               href="https://www.linkedin.com/company/bitdepth-ai-consulting-ltd"
               target="_blank"

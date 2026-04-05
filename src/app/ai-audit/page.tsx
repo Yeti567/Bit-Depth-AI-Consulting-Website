@@ -1,8 +1,11 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import Script from 'next/script';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { CaseStudies } from '@/components/ui/case-studies';
+import { buildAIAuditFaqSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'AI Opportunity Audit for Canadian Businesses | BitDepth AI',
@@ -80,6 +83,9 @@ const faqs = [
 export default function AIAuditPage() {
   return (
     <PageShell>
+      <Script id="ai-audit-faq-schema" type="application/ld+json">
+        {JSON.stringify(buildAIAuditFaqSchema())}
+      </Script>
       <section className="section-navy dot-grid section-space">
         <div className="container-shell grid gap-10 lg:grid-cols-[1fr,1fr] lg:items-center">
           <ScrollReveal>
@@ -271,6 +277,12 @@ You Pay: $15,500`}
               window is 90 days from audit delivery date. Credit is non-transferable and has no cash value. Valid on first implementation engagement only.
             </p>
           </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="section-offwhite section-space">
+        <div className="container-shell">
+          <CaseStudies />
         </div>
       </section>
 
