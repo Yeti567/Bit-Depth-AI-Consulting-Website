@@ -38,37 +38,41 @@ export const metadata: Metadata = {
 };
 
 const deliverables = [
-  'Stakeholder interviews (4–12 people)',
-  'Technology stack inventory and integration map',
-  'Process mapping: 6–20 workflows',
-  'AI Readiness Scorecard (5 pillars)',
-  'Prioritized opportunity list: quick wins vs. strategic initiatives',
-  'ROI estimates for top 3–5 use cases',
-  '90-day AI implementation roadmap'
+  'A complete map of your current systems and where the gaps are',
+  'An AI Readiness Scorecard across five key operational pillars',
+  'A prioritized opportunity list — quick wins and longer-term initiatives ranked by impact and feasibility',
+  'ROI estimates for your top 3–5 use cases so you know the numbers before you commit to anything',
+  'A 90-day implementation roadmap you can act on immediately',
+  'A set of quick wins — lower-cost faster implementations that will pay for themselves in the near term',
+  'Honest advice — including if AI is not the right move for your business right now'
 ];
 
 const faqs = [
   {
-    question: 'What does an AI audit actually look like day-to-day?',
+    question: 'What does an AI audit actually look like day to day?',
     answer:
-      'We run interviews, map workflows, review systems, and score readiness over 5–10 days. You get a clear list of opportunities, ROI estimates, and a practical roadmap.'
+      'We start with a short intake call to understand your business and get access to the information we need. From there we run structured interviews with you and your key staff — typically 4 to 12 people depending on the audit tier. We map your workflows, review your technology stack, and assess your data environment. Most of the work happens on our end. Your team\'s time commitment is focused and manageable. At the end you get a readout call where we walk you through everything we found.'
   },
   {
     question: 'How long does the audit take?',
-    answer: 'Most audits take 5–8 business days. Quick scans can take 2–3 days, and deep dives can take 10–15 days.'
+    answer: 'Most standard audits take 5 to 8 business days. Quick scans can be done in 2 to 3 days. Deep-dive roadmaps for larger or more complex businesses take 10 to 15 days.'
   },
   {
-    question: 'Will we need to do a lot of preparation before you start?',
-    answer: 'No heavy prep is required. We provide a short intake checklist and guide your team through interviews and discovery sessions.'
+    question: 'Do we need to do a lot of preparation before you start?',
+    answer: 'No heavy preparation required. We provide a short intake checklist and guide your team through the process. Most clients find it takes less time than they expected.'
   },
   {
-    question: "What if we're not ready for AI after the audit?",
-    answer: 'That is still a successful outcome. If readiness is low, we provide a prioritized foundation plan so you can build toward AI confidently.'
+    question: 'What if the audit finds that we are not ready for AI?',
+    answer: 'That is still a successful outcome. If your data is not clean or your systems are not integrated enough to support AI yet, we will tell you exactly what needs to be in place and give you a prioritized plan to get there. That foundation work has real value — and it means when you do invest in AI it will actually work.'
   },
   {
-    question: 'What exactly are the terms of the Audit Credit Guarantee?',
+    question: 'What if the numbers do not justify building anything?',
+    answer: 'We will tell you. Honestly. We are not in the business of selling implementations that do not make financial sense. If the ROI is not there we will say so — and you will still walk away with a clear picture of your operations and a roadmap for the future.'
+  },
+  {
+    question: 'What exactly are the terms of the audit credit guarantee?',
     answer:
-      'The Audit Credit Guarantee is straightforward. When you complete any tier of the BitDepth AI Opportunity Audit, the full fee you paid for that audit is credited against your first implementation engagement — provided you sign your implementation agreement within 90 days of receiving your audit deliverables.\n\nThe credit applies to any BitDepth implementation service: AI workflow automation, custom AI workers, AI strategy and roadmapping, or AI training and enablement engagements. It is applied as a line-item deduction on your implementation invoice.\n\nThere is no minimum project size required to use the credit. The credit has no cash value, is non-transferable, and applies to your first implementation engagement only.\n\nIf you are not ready to proceed within 90 days, just let us know — we handle extensions on a case-by-case basis for clients with a legitimate reason for delay.'
+      'When you complete any tier of the BitDepth AI Opportunity Audit, the full fee you paid is credited against your first implementation engagement — provided you sign your implementation agreement within 90 days of receiving your audit deliverables. The credit applies to any BitDepth implementation service: workflow automation, custom AI workers, AI strategy and roadmapping, or training and enablement. It is applied as a line-item deduction on your implementation invoice. There is no minimum project size. The credit has no cash value, is non-transferable, and applies to your first implementation engagement only. Extensions are handled on a case-by-case basis for clients with a legitimate reason for delay.'
   }
 ];
 
@@ -80,17 +84,17 @@ export default function AIAuditPage() {
           <ScrollReveal>
             <p className="eyebrow">Our Entry Offer</p>
             <h1 className="mt-5 text-4xl font-extrabold text-white md:text-6xl">
-              Find Out Exactly Where AI Will Save Your Business Time and Money
+              Find Out Exactly Where AI Will Save Your Business Time and Money — Before You Spend a Dollar on It
             </h1>
             <p className="mt-5 text-lg text-white/74">
-              Most businesses waste their first AI budget on the wrong thing. The AI Opportunity Audit eliminates that risk. In 5–10 business days, we give you a clear, prioritized picture of where AI will make the biggest impact, with ROI estimates to back it up.
+              Most businesses waste their first AI budget on the wrong thing. The AI Opportunity Audit eliminates that risk. In 5–10 business days you get a clear prioritized picture of where AI will make the biggest impact in your business — with honest ROI estimates to back it up.
             </p>
             <Link href="/contact" className="btn-primary mt-8">
               Book Your Audit
             </Link>
           </ScrollReveal>
           <ScrollReveal index={1} className="relative min-h-[340px] overflow-hidden rounded-2xl border border-[var(--color-border)]">
-            <Image src="/images/audit-process.png" alt="Consultant presenting roadmap to business owners" fill priority className="object-cover" />
+            <Image src="/images/ai-audit-hero.webp" alt="Business owner and consultant reviewing AI readiness dashboard together at boardroom table" fill priority className="object-cover" />
           </ScrollReveal>
         </div>
       </section>
@@ -98,7 +102,7 @@ export default function AIAuditPage() {
       <section className="section-offwhite section-space">
         <div className="container-shell">
           <ScrollReveal className="max-w-3xl">
-            <h2 className="text-3xl font-extrabold md:text-5xl">What You Get</h2>
+            <h2 className="text-3xl font-extrabold md:text-5xl">What You Get at the End of the Audit</h2>
           </ScrollReveal>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             {deliverables.map((item, index) => (
@@ -110,6 +114,17 @@ export default function AIAuditPage() {
               </ScrollReveal>
             ))}
           </div>
+          <ScrollReveal className="mt-12">
+            <div className="relative mx-auto max-w-3xl overflow-hidden rounded-2xl border border-[var(--color-border)]">
+              <Image
+                src="/images/ai-audit-supporting.webp"
+                alt="Printed AI readiness roadmap beside a laptop showing prioritized business opportunities"
+                width={800}
+                height={500}
+                className="h-auto w-full object-cover"
+              />
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -218,17 +233,15 @@ export default function AIAuditPage() {
                 <p className="text-sm font-semibold text-cyan">Step 1</p>
                 <h4 className="mt-2 text-xl font-bold">Complete Your Audit</h4>
                 <p className="mt-3 text-sm text-white/74">
-                  We deliver your AI Opportunity Audit — including your roadmap, AI Readiness Scorecard, and ROI estimates. This is a standalone deliverable
-                  with real value, regardless of what comes next.
+                  We deliver your AI Opportunity Audit — your roadmap, AI Readiness Scorecard, and ROI estimates. This is a standalone deliverable with real value regardless of what comes next. You will know exactly where your business stands.
                 </p>
               </div>
 
               <div className="rounded-xl border border-[var(--color-border)] bg-white/5 p-5">
                 <p className="text-sm font-semibold text-cyan">Step 2</p>
-                <h4 className="mt-2 text-xl font-bold">Review the Recommendations</h4>
+                <h4 className="mt-2 text-xl font-bold">Review the Recommendations at Your Own Pace</h4>
                 <p className="mt-3 text-sm text-white/74">
-                  You review the findings at your own pace. If the numbers make sense and you want to move forward, you let us know. No pressure, no
-                  follow-up calls unless you want them.
+                  You review the findings on your own timeline. If the numbers make sense and you want to move forward, you let us know. There are no follow-up pressure calls unless you want them. If the audit finds that AI is not right for your business yet, we will tell you that honestly — and you will still have a clear operational roadmap worth more than you paid for it.
                 </p>
               </div>
 
@@ -236,8 +249,7 @@ export default function AIAuditPage() {
                 <p className="text-sm font-semibold text-cyan">Step 3</p>
                 <h4 className="mt-2 text-xl font-bold">Your Audit Fee Disappears</h4>
                 <p className="mt-3 text-sm text-white/74">
-                  When you sign your implementation agreement, your full audit fee is deducted from your project invoice — dollar for dollar. You pay only
-                  the difference.
+                  When you sign your implementation agreement, your full audit fee is deducted from your project invoice dollar for dollar. You pay only the difference. No minimums. No conditions beyond the 90-day window.
                 </p>
               </div>
             </div>
@@ -282,13 +294,18 @@ You Pay: $15,500`}
       <section className="section-navy section-space">
         <div className="container-shell">
           <ScrollReveal className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-extrabold text-white md:text-5xl">The Audit Pays for Itself.</h2>
+            <h2 className="text-3xl font-extrabold text-white md:text-5xl">If We Find $50,000 a Year in Recoverable Time and Efficiency, the $5,000 Audit Fee Is the Best Investment You Will Make This Year</h2>
             <p className="mt-5 text-white/74">
-              If we find $50,000/year in recoverable time and efficiency, the $5,000 audit fee is the best investment you&apos;ll make this year.
+              The audit is not a sales pitch. It is a diagnosis. You will know exactly where your business stands, what the opportunities are, and what they are worth — before you commit to building anything. And if you move forward with us, the fee comes straight off your project.
             </p>
             <Link href="/contact" className="btn-primary mt-8">
               Book Your AI Audit
             </Link>
+            <div className="mt-6">
+              <Link href="/contact" className="text-sm text-cyan hover:text-cyan/80 underline">
+                Have questions first? Book a free discovery call
+              </Link>
+            </div>
           </ScrollReveal>
         </div>
       </section>
