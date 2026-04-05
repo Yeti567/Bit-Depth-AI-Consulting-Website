@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ArrowRight, HardHat, Truck, UserCog, Factory, CheckCircle2, BarChart3 } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
@@ -39,48 +40,59 @@ export const metadata: Metadata = {
 
 const industries = [
   {
+    icon: <HardHat className="h-6 w-6" />,
     title: 'Trades & Construction',
-    pain: 'Job costing chaos, subcontractor coordination, and manual field reports slow everything down.',
-    useCases: ['Automated job reporting', 'AI-assisted estimating', 'Document processing']
+    pain: "You don't know which crews are making money until the year is over. We fix that.",
+    href: '/industries/construction'
   },
   {
-    title: 'Field Services',
-    pain: 'Dispatch inefficiency, technician scheduling friction, and invoice delays impact cash flow.',
-    useCases: ['Scheduling optimization', 'Automated invoicing', 'Service history AI']
-  },
-  {
-    title: 'Manufacturing',
-    pain: 'Quality control issues, production scheduling pressure, and supply chain blind spots reduce throughput.',
-    useCases: ['Defect detection', 'AI scheduling', 'Inventory optimization']
-  },
-  {
-    title: 'Professional Services',
-    pain: 'Document-heavy workflows, knowledge management gaps, and slow client onboarding reduce billable time.',
-    useCases: ['Document automation', 'AI knowledge base', 'Client intake workflows']
-  },
-  {
+    icon: <Truck className="h-6 w-6" />,
     title: 'Transportation & Logistics',
-    pain: 'Route planning, compliance paperwork, and driver scheduling complexity create avoidable waste.',
-    useCases: ['Route AI', 'Automated compliance docs', 'Dispatch optimization']
+    pain: 'Dispatching, driver shortages, fuel costs, and demanding clients. AI helps you manage all of it.',
+    href: '/industries/transportation'
   },
   {
+    icon: <UserCog className="h-6 w-6" />,
+    title: 'Field Services',
+    pain: "If the phone isn't getting answered, you're losing jobs. We fix that without hiring anyone.",
+    href: '/industries/field-services'
+  },
+  {
+    icon: <BarChart3 className="h-6 w-6" />,
     title: 'Oil & Gas Services',
-    pain: 'Subcontractor coordination, field ticket processing, and compliance reporting are often fragmented.',
-    useCases: ['Invoice automation', 'Field data capture', 'Regulatory document AI']
+    pain: "Your systems don't talk to each other. Your data is siloed. That costs you more than you think.",
+    href: '/industries/oil-gas'
+  },
+  {
+    icon: <Factory className="h-6 w-6" />,
+    title: 'Manufacturing',
+    pain: 'Predictive maintenance and smarter scheduling — built around what you actually have, not what\'s ideal.',
+    href: '/industries/manufacturing'
+  },
+  {
+    icon: <CheckCircle2 className="h-6 w-6" />,
+    title: 'Professional Services',
+    pain: 'No-shows, scheduling chaos, and document overload. AI handles the admin so you can bill more hours.',
+    href: '/industries/professional-services'
   }
 ];
 
 export default function IndustriesPage() {
   return (
     <PageShell>
+      {/* Hero Section */}
       <section className="section-navy dot-grid section-space">
         <div className="container-shell grid gap-10 lg:grid-cols-[1fr,1fr] lg:items-center lg:gap-12">
           <ScrollReveal>
-            <h1 className="text-4xl font-extrabold text-white md:text-6xl">
-              We Work With Businesses Where Operations Drive Results
+            <span className="eyebrow-pill">Industries</span>
+            <h1 className="mt-5 text-4xl font-extrabold text-white md:text-6xl">
+              We Work With Industries Where Operations, People, and Profit Are Always on the Line
             </h1>
             <p className="mt-5 text-lg text-white/74">
-              Our clients run field teams, manage subcontractors, process high volumes of documents, and make time-sensitive decisions. These are the businesses that benefit most from practical AI.
+              Every business on this list shares the same core problem — money and time are being lost in places that are hard to see until it&apos;s too late. AI doesn&apos;t fix that by being clever. It fixes it by making the invisible visible: where the profit is leaking, where the bottlenecks are hiding, and where your team is spending time on things a system should be handling.
+            </p>
+            <p className="mt-4 text-lg text-white/74">
+              We&apos;ve worked in some of these industries firsthand. We understand the pressure. And we know that a $5,000 audit that finds a $50,000 profit leak pays for itself before the ink is dry.
             </p>
           </ScrollReveal>
           <ScrollReveal index={1} className="relative min-h-[320px] overflow-hidden rounded-2xl border border-[var(--color-border)]">
@@ -89,24 +101,36 @@ export default function IndustriesPage() {
         </div>
       </section>
 
+      {/* Industry Cards Grid */}
       <section className="section-offwhite section-space">
         <div className="container-shell">
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {industries.map((industry, index) => (
-              <ScrollReveal key={industry.title} index={index} className="card-light p-6">
-                <h3 className="text-2xl font-bold">{industry.title}</h3>
-                <p className="mt-4 text-[var(--color-slate)]">{industry.pain}</p>
-                <ul className="list-check mt-5 space-y-2 text-[var(--color-slate)]">
-                  {industry.useCases.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-                <Link href="/contact" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan">
-                  Learn More →
+              <ScrollReveal key={industry.title} index={index} className="card-light p-6 flex flex-col">
+                <div className="text-cyan">{industry.icon}</div>
+                <h3 className="mt-4 text-2xl font-bold text-[var(--color-navy)]">{industry.title}</h3>
+                <p className="mt-3 text-[var(--color-slate)] flex-grow">{industry.pain}</p>
+                <Link href={industry.href} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan hover:text-[var(--color-cyan-dark)] transition-colors">
+                  Learn More <ArrowRight className="h-4 w-4" />
                 </Link>
               </ScrollReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Closing CTA Section */}
+      <section className="section-charcoal section-space">
+        <div className="container-shell">
+          <ScrollReveal className="mx-auto max-w-3xl text-center">
+            <h2 className="text-3xl font-extrabold text-white md:text-5xl">Don&apos;t See Your Industry?</h2>
+            <p className="mt-5 text-lg text-white/70">
+              If your business runs on operations, people, and data, there&apos;s almost certainly an AI opportunity inside it. Book a free discovery call and we&apos;ll tell you honestly whether we can help.
+            </p>
+            <Link href="/contact" className="btn-primary mt-8">
+              Book a Discovery Call
+            </Link>
+          </ScrollReveal>
         </div>
       </section>
     </PageShell>

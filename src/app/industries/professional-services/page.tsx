@@ -6,71 +6,71 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'AI Consulting for Oil & Gas Services Companies | BitDepth AI',
+  title: 'AI Consulting for Professional Services Firms | BitDepth AI',
   description:
-    'BitDepth helps oil and gas services companies connect siloed systems, get real-time field visibility, automate field ticket processing, and improve compliance documentation.',
+    'BitDepth helps accountants, lawyers, engineers, consultants, and healthcare providers automate scheduling, reduce no-shows, and eliminate admin work with AI solutions.',
   alternates: {
-    canonical: 'https://bitdepthaiconsulting.com/industries/oil-and-gas'
+    canonical: 'https://bitdepthaiconsulting.com/industries/professional-services'
   },
   openGraph: {
-    title: 'AI Consulting for Oil & Gas Services Companies | BitDepth AI',
+    title: 'AI Consulting for Professional Services Firms | BitDepth AI',
     description:
-      'Data integration, crew-level profit visibility, field ticket automation, and compliance documentation for oil & gas services companies.',
-    url: 'https://bitdepthaiconsulting.com/industries/oil-and-gas',
+      'Automated booking with deposits, appointment reminders, client intake automation, internal knowledge bases, and document assistance for professional services firms.',
+    url: 'https://bitdepthaiconsulting.com/industries/professional-services',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
     images: [
       {
-        url: '/images/og-oil-gas.jpg',
+        url: '/images/og-professional-services.jpg',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting for oil and gas services social sharing card'
+        alt: 'BitDepth AI Consulting for professional services social sharing card'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Consulting for Oil & Gas Services Companies | BitDepth AI',
+    title: 'AI Consulting for Professional Services Firms | BitDepth AI',
     description:
-      'Data integration, crew-level profit visibility, field ticket automation, and compliance documentation for oil & gas services companies.',
-    images: ['/images/og-oil-gas.jpg']
+      'Automated booking with deposits, appointment reminders, client intake automation, internal knowledge bases, and document assistance for professional services firms.',
+    images: ['/images/og-professional-services.jpg']
   }
 };
 
-const moneyLosses = [
-  'Field data that never reaches head office in time to act on',
-  'Multiple crews with no real-time visibility into budget versus actual costs',
-  'Subcontractor invoices approved without verification against field records',
-  'Equipment failures that could have been predicted with basic monitoring',
-  'Compliance and safety documentation done manually across multiple sites',
-  'Field ticket processing that takes days instead of hours'
+const revenueLosses = [
+  'No-shows and last-minute cancellations with no deposit or consequence system',
+  'Scheduling done manually by staff who have other responsibilities',
+  'Client intake and onboarding paperwork handled by hand every single time',
+  'Follow-up emails and reminders written individually instead of automated',
+  'Document review and preparation that takes hours of professional time',
+  'Knowledge management gaps where staff cannot find what they need without asking someone'
 ];
 
 const solutions = [
   {
-    title: 'Data Integration and Centralization',
-    description: 'Connect your field systems so data flows to where it needs to go automatically. Head office gets real-time visibility. Field managers keep their autonomy. Everyone works from the same information.'
+    title: 'Automated Booking With Deposit Collection',
+    description: 'An online booking system where clients select their own appointment time, provide relevant intake information, and put down a deposit — all before they ever speak to anyone in your office. Serious clients book. Time-wasters don\'t.'
   },
   {
-    title: 'Crew-Level Profit Visibility',
-    description: 'Compare estimated budgets against actual field costs at the crew level in real time. Know which operations are profitable and which ones are trending the wrong direction while you can still do something about it.'
+    title: 'Appointment Reminders and No-Show Reduction',
+    description: 'Automated text and email reminders at 48 hours, 24 hours, and the morning of the appointment. No-show rates drop significantly. Your staff stops spending time on confirmation calls.'
   },
   {
-    title: 'Field Ticket and Invoice Automation',
-    description: 'Field tickets processed, verified against scope, and routed for approval automatically — so invoicing happens in hours instead of days and discrepancies get flagged before they become disputes.'
+    title: 'Client Intake and Onboarding Automation',
+    description: 'Intake forms, document collection, conflict checks, and onboarding sequences — automated and consistent every time, regardless of who is working that day.'
   },
   {
-    title: 'Predictive Maintenance Planning',
-    description: 'For newer equipment and additions, build in condition monitoring and failure prediction where it makes economic sense. For older equipment where sensors are not practical, develop a replacement roadmap that brings more assets online over time.'
+    title: 'Internal Knowledge Base',
+    description: 'An AI-powered internal system where staff can find policies, procedures, templates, and client information instantly — without interrupting a colleague or digging through shared drives.'
   },
   {
-    title: 'Safety and Compliance Documentation',
-    description: 'Automated safety documentation, incident reporting, and regulatory compliance across multiple sites — consistent, auditable, and not dependent on someone remembering to fill out a form.'
+    title: 'Document Preparation Assistance',
+    description: 'AI-assisted drafting and document preparation that reduces the time professionals spend on routine correspondence, standard agreements, and repetitive client communications.'
   }
 ];
 
-export default function OilAndGasPage() {
+export default function ProfessionalServicesPage() {
   return (
     <PageShell>
       {/* Breadcrumb */}
@@ -84,7 +84,7 @@ export default function OilAndGasPage() {
             <ChevronRight className="h-4 w-4" />
             <Link href="/industries" className="hover:text-cyan transition-colors">Industries</Link>
             <ChevronRight className="h-4 w-4" />
-            <span className="text-white">Oil & Gas Services</span>
+            <span className="text-white">Professional Services</span>
           </nav>
         </div>
       </div>
@@ -93,8 +93,8 @@ export default function OilAndGasPage() {
       <section className="relative overflow-hidden bg-[var(--color-navy)]">
         <div className="absolute inset-0">
           <Image
-            src="/images/1775381591191_Industry_s_oil_and_gas_hero_image.webp"
-            alt="Wide shot of oil field services operation at golden hour with pump jacks and service trucks"
+            src="/images/1775381591190_Industry_Professional_Services_Hero_Image.webp"
+            alt="Professional services consultant reviewing data and analytics at modern office desk"
             fill
             priority
             className="object-cover"
@@ -104,12 +104,12 @@ export default function OilAndGasPage() {
         <div className="container-shell relative py-16 sm:py-20 md:py-28">
           <div className="max-w-4xl">
             <ScrollReveal>
-              <span className="eyebrow-pill">Industries / Oil & Gas</span>
+              <span className="eyebrow-pill">Industries / Professional Services</span>
               <h1 className="mt-5 text-4xl font-extrabold text-white md:text-5xl lg:text-6xl leading-tight">
-                Your Systems Don&apos;t Talk to Each Other. Your Data Sits in Silos. And Head Office Is Always the Last to Know.
+                Your Time Is Billable. Every Hour Spent on Admin, Scheduling, and Chasing Clients Is an Hour You&apos;re Not Getting Paid For.
               </h1>
               <p className="mt-6 text-lg text-white/80 leading-relaxed">
-                Oil and gas services companies are running some of the most complex operations in the country on systems that were never designed to work together.
+                Accountants, lawyers, engineers, consultants, and healthcare providers all share the same problem: too much time on the business, not enough time in it.
               </p>
             </ScrollReveal>
           </div>
@@ -122,24 +122,24 @@ export default function OilAndGasPage() {
           <div className="grid gap-10 lg:grid-cols-[1fr,1fr] lg:items-center">
             <ScrollReveal>
               <h2 className="text-3xl font-extrabold text-[var(--color-navy)] md:text-4xl">
-                Every Field Runs Its Own System. None of Them Talk to Each Other.
+                The No-Show Problem Is Costing You More Than You Think
               </h2>
               <div className="mt-6 space-y-4 text-[var(--color-charcoal)] leading-relaxed">
                 <p>
-                  This is the single biggest operational problem in oil and gas services. Each field has its own data, its own system, and its own people who understand it. That knowledge stays local. Head office gets reports when someone has time to write them, which means decisions get made on information that is days or weeks old.
+                  A professional books a two-hour consultation. The client doesn&apos;t show. That slot is gone — unbillable, unrecoverable, and it cost your staff time to set it up in the first place. Multiply that across a week, a month, a year, and the number gets uncomfortable quickly.
                 </p>
                 <p>
-                  Meanwhile, crews are running over budget, equipment is failing without warning, subcontractors are invoicing for work that hasn&apos;t been verified, and compliance documentation is being done by hand.
+                  The fix is not complicated. Automated appointment booking with a required deposit filters out the time-wasters before they ever get on your calendar. Automated reminders reduce no-shows dramatically. And when a client does cancel, an automated waitlist fills the slot without anyone making a phone call.
                 </p>
                 <p>
-                  The first job in an oil and gas services engagement is almost always the same: figure out how to get the data talking to each other. Once you have a single source of truth, everything else becomes possible.
+                  Beyond scheduling, professional services firms are drowning in documents, client intake, and repetitive correspondence that AI handles faster and more consistently than any staff member.
                 </p>
               </div>
             </ScrollReveal>
             <ScrollReveal index={1} className="relative min-h-[300px] sm:min-h-[400px] overflow-hidden rounded-2xl border border-[var(--color-border)]">
               <Image
-                src="/images/1775381591189_Field_operations_in_action.webp"
-                alt="Oil field operations manager reviewing field operations dashboard on laptop in site trailer"
+                src="/images/1775381591188_Appointment_confirmation_and_desk_setup.webp"
+                alt="Smartphone and laptop showing automated appointment booking confirmation for a professional services firm"
                 fill
                 className="object-cover"
               />
@@ -148,16 +148,16 @@ export default function OilAndGasPage() {
         </div>
       </section>
 
-      {/* Section 2 - Where the Money Goes */}
+      {/* Section 2 - Where the Revenue Goes */}
       <section className="section-navy section-space">
         <div className="container-shell">
           <ScrollReveal className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-extrabold text-white md:text-4xl">
-              Where Oil & Gas Services Companies Lose Money and Time
+              Where Professional Services Firms Lose Billable Time
             </h2>
           </ScrollReveal>
           <div className="mt-10 grid gap-4 md:grid-cols-2">
-            {moneyLosses.map((item, index) => (
+            {revenueLosses.map((item, index) => (
               <ScrollReveal key={index} index={index} className="card-dark p-5 flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-cyan shrink-0 mt-0.5" />
                 <span className="text-white/90">{item}</span>
@@ -172,7 +172,7 @@ export default function OilAndGasPage() {
         <div className="container-shell">
           <ScrollReveal className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-extrabold text-[var(--color-navy)] md:text-4xl">
-              What AI Actually Fixes in an Oil & Gas Services Business
+              What AI Actually Fixes in a Professional Services Business
             </h2>
           </ScrollReveal>
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -191,10 +191,10 @@ export default function OilAndGasPage() {
         <div className="container-shell">
           <ScrollReveal className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-extrabold text-white md:text-4xl">
-              If Your Fields Aren&apos;t Talking to Each Other, You&apos;re Flying Blind
+              Find Out How Many Billable Hours You&apos;re Losing to Admin
             </h2>
             <p className="mt-5 text-lg text-white/70">
-              A discovery audit will map your current systems, identify where the data gaps are, and give you a prioritized plan for connecting them. Book a call and we&apos;ll tell you honestly what we think we can find.
+              A discovery audit will show you exactly where your firm is losing time it should be billing. Book a call and we&apos;ll give you an honest no-pressure assessment.
             </p>
             <Link href="/contact" className="btn-primary mt-8">
               Book a Free Discovery Call

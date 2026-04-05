@@ -6,67 +6,67 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'AI Consulting for Manufacturing Companies | BitDepth AI',
+  title: 'AI Consulting for Trades & Construction Companies | BitDepth AI',
   description:
-    'BitDepth helps Canadian manufacturers implement phased predictive maintenance, optimize production scheduling, and improve inventory visibility with practical AI solutions.',
+    'BitDepth helps construction companies get real-time job costing visibility, automate document processing, and fix profit leaks before they drain the budget.',
   alternates: {
-    canonical: 'https://bitdepthaiconsulting.com/industries/manufacturing'
+    canonical: 'https://bitdepthaiconsulting.com/industries/construction'
   },
   openGraph: {
-    title: 'AI Consulting for Manufacturing Companies | BitDepth AI',
+    title: 'AI Consulting for Trades & Construction Companies | BitDepth AI',
     description:
-      'Phased predictive maintenance, production scheduling optimization, inventory visibility, and quality control automation for Canadian manufacturers.',
-    url: 'https://bitdepthaiconsulting.com/industries/manufacturing',
+      'Real-time job costing, automated document processing, and profit leak detection for construction companies.',
+    url: 'https://bitdepthaiconsulting.com/industries/construction',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
     images: [
       {
-        url: '/images/og-manufacturing.jpg',
+        url: '/images/og-construction.jpg',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting for manufacturing social sharing card'
+        alt: 'BitDepth AI Consulting for construction social sharing card'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Consulting for Manufacturing Companies | BitDepth AI',
+    title: 'AI Consulting for Trades & Construction Companies | BitDepth AI',
     description:
-      'Phased predictive maintenance, production scheduling optimization, inventory visibility, and quality control automation for Canadian manufacturers.',
-    images: ['/images/og-manufacturing.jpg']
+      'Real-time job costing, automated document processing, and profit leak detection for construction companies.',
+    images: ['/images/og-construction.jpg']
   }
 };
 
-const moneyLosses = [
-  'Unplanned equipment downtime on assets with no condition monitoring',
-  'Production scheduling done manually without visibility into downstream bottlenecks',
-  'Inventory levels managed by intuition rather than data',
-  'Quality control checks that catch problems after production instead of during',
-  'Maintenance scheduled by calendar instead of by actual equipment condition',
-  'Reporting that depends on someone compiling data from multiple systems by hand'
+const profitLeaks = [
+  'Crews running over budget with no early warning system',
+  'Manual timesheets that don\'t connect to job costing',
+  'Material orders that don\'t reconcile against project budgets until it\'s too late',
+  'Subcontractor invoices approved without checking against scope',
+  'Estimating that doesn\'t feed back from actual job performance',
+  'Safety and compliance documentation done manually and inconsistently'
 ];
 
 const solutions = [
   {
-    title: 'Phased Predictive Maintenance',
-    description: 'Start with your newest and most critical equipment. Build in condition monitoring and failure prediction where it makes economic sense. Create a roadmap for expanding coverage as equipment is replaced over time.'
+    title: 'Real-Time Job Costing Visibility',
+    description: 'Connect your field data to your estimated budgets so you can see which projects and crews are on track and which ones need attention — while there\'s still time to act.'
   },
   {
-    title: 'Production Scheduling Optimization',
-    description: 'AI-assisted scheduling that accounts for equipment availability, material supply, order deadlines, and labour — reducing bottlenecks and improving throughput without adding headcount.'
+    title: 'Automated Document Processing',
+    description: 'Subcontractor invoices, field reports, purchase orders, and safety documents — processed, categorized, and routed automatically instead of sitting in someone\'s inbox.'
   },
   {
-    title: 'Inventory and Supply Chain Visibility',
-    description: 'Connect purchasing, inventory, and production data so you are not over-ordering, under-ordering, or discovering shortages when the line is already running.'
+    title: 'Safety and Compliance Automation',
+    description: 'Safety documentation, incident reports, toolbox talks, and COR preparation — built into your workflow so compliance isn\'t a separate job someone has to remember to do.'
   },
   {
-    title: 'Quality Control Automation',
-    description: 'Automated inspection and defect detection at key production stages — catching problems earlier and reducing the cost of rework and waste.'
+    title: 'Estimating Feedback Loops',
+    description: 'Feed actual job performance data back into your estimating process so your next bid is built on what jobs actually cost, not what you hoped they would cost.'
   }
 ];
 
-export default function ManufacturingPage() {
+export default function ConstructionPage() {
   return (
     <PageShell>
       {/* Breadcrumb */}
@@ -80,7 +80,7 @@ export default function ManufacturingPage() {
             <ChevronRight className="h-4 w-4" />
             <Link href="/industries" className="hover:text-cyan transition-colors">Industries</Link>
             <ChevronRight className="h-4 w-4" />
-            <span className="text-white">Manufacturing</span>
+            <span className="text-white">Trades & Construction</span>
           </nav>
         </div>
       </div>
@@ -89,8 +89,8 @@ export default function ManufacturingPage() {
       <section className="relative overflow-hidden bg-[var(--color-navy)]">
         <div className="absolute inset-0">
           <Image
-            src="/images/1775381591186_Modern_CNC_manufacturing_facility_in_action.webp"
-            alt="Worker in safety gear operating CNC machine in modern Canadian manufacturing facility"
+            src="/images/1775381591191_Industry_s_Construction_Hero_Image.webp"
+            alt="Aerial view of active commercial construction site at sunrise"
             fill
             priority
             className="object-cover"
@@ -100,12 +100,12 @@ export default function ManufacturingPage() {
         <div className="container-shell relative py-16 sm:py-20 md:py-28">
           <div className="max-w-4xl">
             <ScrollReveal>
-              <span className="eyebrow-pill">Industries / Manufacturing</span>
+              <span className="eyebrow-pill">Industries / Construction</span>
               <h1 className="mt-5 text-4xl font-extrabold text-white md:text-5xl lg:text-6xl leading-tight">
-                You Can&apos;t Put Sensors on Everything. But You Can Build a Smarter Plan Starting With What You Have.
+                You Won&apos;t Know Which Crews Are Losing Money Until It&apos;s Too Late — Unless You Fix That Now
               </h1>
               <p className="mt-6 text-lg text-white/80 leading-relaxed">
-                Manufacturing AI doesn&apos;t have to be an all-or-nothing transformation. The smartest companies start where the data already exists and build from there.
+                Construction companies run multiple crews, multiple projects, and multiple budgets simultaneously. Without real-time visibility, profit leaks go undetected for months.
               </p>
             </ScrollReveal>
           </div>
@@ -118,24 +118,24 @@ export default function ManufacturingPage() {
           <div className="grid gap-10 lg:grid-cols-[1fr,1fr] lg:items-center">
             <ScrollReveal>
               <h2 className="text-3xl font-extrabold text-[var(--color-navy)] md:text-4xl">
-                Predictive Maintenance Sounds Great. But Not Every Machine Is Worth Instrumenting.
+                The Job Looked Fine on Paper. Then the Year Ended.
               </h2>
               <div className="mt-6 space-y-4 text-[var(--color-charcoal)] leading-relaxed">
                 <p>
-                  There is a version of manufacturing AI that consultants love to sell — sensors on everything, real-time dashboards, fully automated production lines. That version costs a fortune and is irrelevant to most manufacturers outside of the largest enterprises.
+                  Most construction companies do a solid job estimating. The problem isn&apos;t the estimate — it&apos;s what happens between the estimate and the final accounting. Labour overruns, material waste, subcontractor delays, equipment downtime — these things add up quietly across multiple crews and multiple sites.
                 </p>
                 <p>
-                  The practical version looks different. You identify which equipment is new enough or critical enough to justify monitoring. You build predictive maintenance into those assets first. As older equipment gets replaced, you bring each new addition online with the right infrastructure from day one. Over time, your operation modernizes without a single massive disruption or investment.
+                  By the time your accountant tells you a project lost money, it&apos;s ancient history. You can&apos;t fix what already happened. AI changes that by connecting your estimated budgets to your actual field costs in real time.
                 </p>
                 <p>
-                  In the meantime, there are almost always scheduling, inventory, and quality control opportunities that don&apos;t require any new hardware at all — just better use of the data you already have.
+                  When a crew starts trending over budget, you know about it while you can still do something. You stop finding out at year end. You start managing as you go. This is not complicated technology — it is the difference between running your business on information and running it on hope.
                 </p>
               </div>
             </ScrollReveal>
             <ScrollReveal index={1} className="relative min-h-[300px] sm:min-h-[400px] overflow-hidden rounded-2xl border border-[var(--color-border)]">
               <Image
-                src="/images/1775381591188_Technician_installing_sensor_in_industrial_facility.webp"
-                alt="Maintenance technician attaching sensor to industrial equipment while reviewing maintenance dashboard on tablet"
+                src="/images/1775381591189_Industries_Construction_Supporting_Image.webp"
+                alt="Construction site supervisor reviewing budget dashboard on tablet at active job site"
                 fill
                 className="object-cover"
               />
@@ -144,16 +144,16 @@ export default function ManufacturingPage() {
         </div>
       </section>
 
-      {/* Section 2 - Where the Money Goes */}
+      {/* Section 2 - Where the Profit Leaks */}
       <section className="section-navy section-space">
         <div className="container-shell">
           <ScrollReveal className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-extrabold text-white md:text-4xl">
-              Where Manufacturing Companies Lose Time and Output
+              Where Construction Companies Throw Money Off a Cliff
             </h2>
           </ScrollReveal>
           <div className="mt-10 grid gap-4 md:grid-cols-2">
-            {moneyLosses.map((item, index) => (
+            {profitLeaks.map((item, index) => (
               <ScrollReveal key={index} index={index} className="card-dark p-5 flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-cyan shrink-0 mt-0.5" />
                 <span className="text-white/90">{item}</span>
@@ -168,7 +168,7 @@ export default function ManufacturingPage() {
         <div className="container-shell">
           <ScrollReveal className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-extrabold text-[var(--color-navy)] md:text-4xl">
-              What AI Actually Fixes in a Manufacturing Business
+              What AI Actually Fixes in a Construction Business
             </h2>
           </ScrollReveal>
           <div className="mt-10 grid gap-5 md:grid-cols-2">
@@ -187,10 +187,10 @@ export default function ManufacturingPage() {
         <div className="container-shell">
           <ScrollReveal className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-extrabold text-white md:text-4xl">
-              You Don&apos;t Have to Modernize Everything at Once
+              Find Out Where Your Business Is Leaking Profit
             </h2>
             <p className="mt-5 text-lg text-white/70">
-              A discovery audit will show you where AI creates real value in your operation given what you actually have — not what a textbook says you should have. Book a call and we&apos;ll give you an honest assessment.
+              The audit starts at $5,000. If it finds one crew that was trending $30,000 over budget and you catch it three months early, the math is obvious. Book a discovery call and we&apos;ll tell you honestly what we think we can find.
             </p>
             <Link href="/contact" className="btn-primary mt-8">
               Book a Free Discovery Call

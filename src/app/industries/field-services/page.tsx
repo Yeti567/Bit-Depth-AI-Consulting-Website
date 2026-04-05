@@ -6,67 +6,67 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'AI Consulting for Manufacturing Companies | BitDepth AI',
+  title: 'AI Consulting for Field Services Companies | BitDepth AI',
   description:
-    'BitDepth helps Canadian manufacturers implement phased predictive maintenance, optimize production scheduling, and improve inventory visibility with practical AI solutions.',
+    'BitDepth helps HVAC, plumbing, electrical, and equipment repair businesses capture more leads, automate appointment booking, and reduce no-shows with AI solutions.',
   alternates: {
-    canonical: 'https://bitdepthaiconsulting.com/industries/manufacturing'
+    canonical: 'https://bitdepthaiconsulting.com/industries/field-services'
   },
   openGraph: {
-    title: 'AI Consulting for Manufacturing Companies | BitDepth AI',
+    title: 'AI Consulting for Field Services Companies | BitDepth AI',
     description:
-      'Phased predictive maintenance, production scheduling optimization, inventory visibility, and quality control automation for Canadian manufacturers.',
-    url: 'https://bitdepthaiconsulting.com/industries/manufacturing',
+      'Automated appointment booking, callback automation, invoice processing, and client follow-up for field services businesses.',
+    url: 'https://bitdepthaiconsulting.com/industries/field-services',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
     images: [
       {
-        url: '/images/og-manufacturing.jpg',
+        url: '/images/og-field-services.jpg',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting for manufacturing social sharing card'
+        alt: 'BitDepth AI Consulting for field services social sharing card'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Consulting for Manufacturing Companies | BitDepth AI',
+    title: 'AI Consulting for Field Services Companies | BitDepth AI',
     description:
-      'Phased predictive maintenance, production scheduling optimization, inventory visibility, and quality control automation for Canadian manufacturers.',
-    images: ['/images/og-manufacturing.jpg']
+      'Automated appointment booking, callback automation, invoice processing, and client follow-up for field services businesses.',
+    images: ['/images/og-field-services.jpg']
   }
 };
 
-const moneyLosses = [
-  'Unplanned equipment downtime on assets with no condition monitoring',
-  'Production scheduling done manually without visibility into downstream bottlenecks',
-  'Inventory levels managed by intuition rather than data',
-  'Quality control checks that catch problems after production instead of during',
-  'Maintenance scheduled by calendar instead of by actual equipment condition',
-  'Reporting that depends on someone compiling data from multiple systems by hand'
+const revenueLosses = [
+  'Missed calls during job hours with no follow-up system',
+  'Appointment scheduling done manually by whoever picks up the phone',
+  'No-shows and last-minute cancellations with no deposit or confirmation system',
+  'Invoicing delays because the owner is still in the field at end of day',
+  'No system to follow up with past clients for seasonal maintenance or repeat work',
+  'Scheduling conflicts and double-bookings from manual calendar management'
 ];
 
 const solutions = [
   {
-    title: 'Phased Predictive Maintenance',
-    description: 'Start with your newest and most critical equipment. Build in condition monitoring and failure prediction where it makes economic sense. Create a roadmap for expanding coverage as equipment is replaced over time.'
+    title: 'Automated Appointment Booking',
+    description: 'A chatbot or booking system that answers inquiries, presents available time slots, and confirms appointments — without the owner or office staff having to be available in real time.'
   },
   {
-    title: 'Production Scheduling Optimization',
-    description: 'AI-assisted scheduling that accounts for equipment availability, material supply, order deadlines, and labour — reducing bottlenecks and improving throughput without adding headcount.'
+    title: 'Callback and Follow-Up Automation',
+    description: 'When a live booking isn\'t possible, automated systems capture the lead and trigger a callback reminder so no inquiry falls through the cracks.'
   },
   {
-    title: 'Inventory and Supply Chain Visibility',
-    description: 'Connect purchasing, inventory, and production data so you are not over-ordering, under-ordering, or discovering shortages when the line is already running.'
+    title: 'Invoice and Payment Automation',
+    description: 'Invoices generated and sent automatically when a job is marked complete — so the owner gets paid faster without doing paperwork at 9pm.'
   },
   {
-    title: 'Quality Control Automation',
-    description: 'Automated inspection and defect detection at key production stages — catching problems earlier and reducing the cost of rework and waste.'
+    title: 'Client Follow-Up Sequences',
+    description: 'Automated reminders for annual maintenance, seasonal tune-ups, or service renewals — so past clients come back without you having to remember to call them.'
   }
 ];
 
-export default function ManufacturingPage() {
+export default function FieldServicesPage() {
   return (
     <PageShell>
       {/* Breadcrumb */}
@@ -80,7 +80,7 @@ export default function ManufacturingPage() {
             <ChevronRight className="h-4 w-4" />
             <Link href="/industries" className="hover:text-cyan transition-colors">Industries</Link>
             <ChevronRight className="h-4 w-4" />
-            <span className="text-white">Manufacturing</span>
+            <span className="text-white">Field Services</span>
           </nav>
         </div>
       </div>
@@ -89,8 +89,8 @@ export default function ManufacturingPage() {
       <section className="relative overflow-hidden bg-[var(--color-navy)]">
         <div className="absolute inset-0">
           <Image
-            src="/images/1775381591186_Modern_CNC_manufacturing_facility_in_action.webp"
-            alt="Worker in safety gear operating CNC machine in modern Canadian manufacturing facility"
+            src="/images/1775381591189_Industrial_Field_Services_Hero_Image.webp"
+            alt="HVAC technician servicing rooftop unit with Toronto skyline in background"
             fill
             priority
             className="object-cover"
@@ -100,12 +100,12 @@ export default function ManufacturingPage() {
         <div className="container-shell relative py-16 sm:py-20 md:py-28">
           <div className="max-w-4xl">
             <ScrollReveal>
-              <span className="eyebrow-pill">Industries / Manufacturing</span>
+              <span className="eyebrow-pill">Industries / Field Services</span>
               <h1 className="mt-5 text-4xl font-extrabold text-white md:text-5xl lg:text-6xl leading-tight">
-                You Can&apos;t Put Sensors on Everything. But You Can Build a Smarter Plan Starting With What You Have.
+                If the Phone Isn&apos;t Getting Answered, You&apos;re Losing Jobs to Someone Who Is
               </h1>
               <p className="mt-6 text-lg text-white/80 leading-relaxed">
-                Manufacturing AI doesn&apos;t have to be an all-or-nothing transformation. The smartest companies start where the data already exists and build from there.
+                HVAC, plumbing, electrical, and equipment repair businesses lose more revenue to missed calls and slow follow-up than almost any other operational problem.
               </p>
             </ScrollReveal>
           </div>
@@ -118,24 +118,24 @@ export default function ManufacturingPage() {
           <div className="grid gap-10 lg:grid-cols-[1fr,1fr] lg:items-center">
             <ScrollReveal>
               <h2 className="text-3xl font-extrabold text-[var(--color-navy)] md:text-4xl">
-                Predictive Maintenance Sounds Great. But Not Every Machine Is Worth Instrumenting.
+                The Owner Is in the Field. The Phone Is Ringing. Nobody Is Answering.
               </h2>
               <div className="mt-6 space-y-4 text-[var(--color-charcoal)] leading-relaxed">
                 <p>
-                  There is a version of manufacturing AI that consultants love to sell — sensors on everything, real-time dashboards, fully automated production lines. That version costs a fortune and is irrelevant to most manufacturers outside of the largest enterprises.
+                  Most field service businesses are run by the owner. The owner is on a job. A potential client calls, gets voicemail, and calls the next company on Google. That job — and every future job from that client — is gone.
                 </p>
                 <p>
-                  The practical version looks different. You identify which equipment is new enough or critical enough to justify monitoring. You build predictive maintenance into those assets first. As older equipment gets replaced, you bring each new addition online with the right infrastructure from day one. Over time, your operation modernizes without a single massive disruption or investment.
+                  This is not a staffing problem. It is a systems problem. An AI-powered chatbot or automated booking system can answer that call, collect the client&apos;s information, offer available time slots, and either book the appointment or ensure a callback happens the same day.
                 </p>
                 <p>
-                  In the meantime, there are almost always scheduling, inventory, and quality control opportunities that don&apos;t require any new hardware at all — just better use of the data you already have.
+                  The technology exists, it is not expensive, and it works around the clock without taking a lunch break. The businesses that implement this are not just capturing more leads — they are building a reputation for being responsive while their competitors go to voicemail.
                 </p>
               </div>
             </ScrollReveal>
             <ScrollReveal index={1} className="relative min-h-[300px] sm:min-h-[400px] overflow-hidden rounded-2xl border border-[var(--color-border)]">
               <Image
-                src="/images/1775381591188_Technician_installing_sensor_in_industrial_facility.webp"
-                alt="Maintenance technician attaching sensor to industrial equipment while reviewing maintenance dashboard on tablet"
+                src="/images/1775381591190_Industry_Field_Services_Booking_Appointment_Online.webp"
+                alt="Tradesperson in work gloves holding smartphone showing automated appointment booking app"
                 fill
                 className="object-cover"
               />
@@ -144,16 +144,16 @@ export default function ManufacturingPage() {
         </div>
       </section>
 
-      {/* Section 2 - Where the Money Goes */}
+      {/* Section 2 - Where the Revenue Goes */}
       <section className="section-navy section-space">
         <div className="container-shell">
           <ScrollReveal className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-extrabold text-white md:text-4xl">
-              Where Manufacturing Companies Lose Time and Output
+              Where Field Service Companies Lose Work They Never Know They Lost
             </h2>
           </ScrollReveal>
           <div className="mt-10 grid gap-4 md:grid-cols-2">
-            {moneyLosses.map((item, index) => (
+            {revenueLosses.map((item, index) => (
               <ScrollReveal key={index} index={index} className="card-dark p-5 flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-cyan shrink-0 mt-0.5" />
                 <span className="text-white/90">{item}</span>
@@ -168,7 +168,7 @@ export default function ManufacturingPage() {
         <div className="container-shell">
           <ScrollReveal className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-extrabold text-[var(--color-navy)] md:text-4xl">
-              What AI Actually Fixes in a Manufacturing Business
+              What AI Actually Fixes in a Field Services Business
             </h2>
           </ScrollReveal>
           <div className="mt-10 grid gap-5 md:grid-cols-2">
@@ -187,10 +187,10 @@ export default function ManufacturingPage() {
         <div className="container-shell">
           <ScrollReveal className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-extrabold text-white md:text-4xl">
-              You Don&apos;t Have to Modernize Everything at Once
+              Find Out How Many Jobs You&apos;re Losing to Voicemail
             </h2>
             <p className="mt-5 text-lg text-white/70">
-              A discovery audit will show you where AI creates real value in your operation given what you actually have — not what a textbook says you should have. Book a call and we&apos;ll give you an honest assessment.
+              A discovery audit will show you exactly where your business is losing revenue it should be capturing. Book a call and we&apos;ll give you an honest assessment.
             </p>
             <Link href="/contact" className="btn-primary mt-8">
               Book a Free Discovery Call
