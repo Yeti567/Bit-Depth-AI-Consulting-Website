@@ -3,37 +3,40 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { buildServiceSchema } from '@/lib/schema';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'AI Training & Enablement | Workshops & Playbooks | BitDepth AI',
+  title: 'AI Training & Enablement for Business Teams | BitDepth AI',
   description:
-    'Make sure your team actually uses the AI tools you invested in. Role-specific playbooks, hands-on workshops, and adoption bootcamps tailored to your business.',
+    'Workshops, playbooks, and hands-on training to make sure your team actually uses the AI you have invested in. Delivered remotely or on-site across Canada.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/services/ai-training'
   },
   openGraph: {
-    title: 'AI Training & Enablement | BitDepth AI Consulting',
+    title: 'AI Training & Enablement for Business Teams | BitDepth AI',
     description:
-      'The best AI implementation fails if your team does not use it. Training and enablement that drives real adoption.',
+      'Workshops, playbooks, and hands-on training to make sure your team actually uses the AI you have invested in. Delivered remotely or on-site across Canada.',
     url: 'https://bitdepthaiconsulting.com/services/ai-training',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
+    locale: 'en_CA',
     images: [
       {
-        url: '/images/ai-training-hero.webp',
+        url: '/images/og-ai-training.webp',
         width: 1200,
         height: 630,
-        alt: 'Small group of employees attending hands-on AI training workshop around large screen in modern meeting room'
+        alt: 'AI training and enablement for business teams'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Training & Enablement | BitDepth AI Consulting',
+    title: 'AI Training & Enablement for Business Teams | BitDepth AI',
     description:
-      'The best AI implementation fails if your team does not use it. Training and enablement that drives real adoption.',
-    images: ['/images/ai-training-hero.webp']
+      'Workshops, playbooks, and hands-on training to make sure your team actually uses the AI you have invested in. Delivered remotely or on-site across Canada.',
+    images: ['/images/og-ai-training.webp']
   }
 };
 
@@ -89,6 +92,14 @@ const scenarios = [
 export default function AITrainingPage() {
   return (
     <PageShell>
+      <Script id="service-schema" type="application/ld+json">
+        {JSON.stringify(buildServiceSchema(
+          'AI Training & Enablement for Business Teams',
+          'Workshops, playbooks, and hands-on training to make sure your team actually uses the AI you have invested in. Delivered remotely or on-site across Canada.',
+          'https://bitdepthaiconsulting.com/services/ai-training',
+          'AI Training'
+        ))}
+      </Script>
       {/* Hero Section */}
       <section className="section-navy dot-grid section-space">
         <div className="container-shell">

@@ -5,35 +5,36 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'AI Opportunity Discovery Audit | Starting at $5,000 | BitDepth AI',
+  title: 'AI Opportunity Audit for Canadian Businesses | BitDepth AI',
   description:
-    'BitDepth\'s AI Opportunity Audit is a structured 5–10 day assessment that identifies exactly where AI will save your business the most time and money — with ROI estimates and a 90-day roadmap.',
+    "Find out exactly where AI will save your business time and money before you spend a dollar on it. Audits from $1,500. Full fee credited to any implementation.",
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/ai-audit'
   },
   openGraph: {
-    title: 'AI Opportunity Discovery Audit | BitDepth AI Consulting',
+    title: 'AI Opportunity Audit for Canadian Businesses | BitDepth AI',
     description:
-      'Find out exactly where AI will deliver ROI in your business. BitDepth\'s structured audit maps your operations, scores your AI readiness, and produces a prioritized roadmap. Starting at $5,000.',
+      "Find out exactly where AI will save your business time and money before you spend a dollar on it. Audits from $1,500. Full fee credited to any implementation.",
     url: 'https://bitdepthaiconsulting.com/ai-audit',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
+    locale: 'en_CA',
     images: [
       {
-        url: '/images/og-audit.jpg',
+        url: '/images/og-audit.webp',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting audit social sharing card'
+        alt: 'BitDepth AI Opportunity Audit for Canadian businesses'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Opportunity Discovery Audit | BitDepth AI Consulting',
+    title: 'AI Opportunity Audit for Canadian Businesses | BitDepth AI',
     description:
-      'Find out exactly where AI will deliver ROI in your business. BitDepth\'s structured audit maps your operations, scores your AI readiness, and produces a prioritized roadmap. Starting at $5,000.',
-    images: ['/images/og-audit.jpg']
+      "Find out exactly where AI will save your business time and money before you spend a dollar on it. Audits from $1,500. Full fee credited to any implementation.",
+    images: ['/images/og-audit.webp']
   }
 };
 

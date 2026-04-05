@@ -8,23 +8,24 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 export const metadata: Metadata = {
   title: 'AI Consulting for Professional Services Firms | BitDepth AI',
   description:
-    'BitDepth helps accountants, lawyers, engineers, consultants, and healthcare providers automate scheduling, reduce no-shows, and eliminate admin work with AI solutions.',
+    'Reduce no-shows, automate scheduling and intake, and reclaim billable hours. AI consulting for accountants, lawyers, engineers, and consultants across Canada.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/industries/professional-services'
   },
   openGraph: {
     title: 'AI Consulting for Professional Services Firms | BitDepth AI',
     description:
-      'Automated booking with deposits, appointment reminders, client intake automation, internal knowledge bases, and document assistance for professional services firms.',
+      'Reduce no-shows, automate scheduling and intake, and reclaim billable hours. AI consulting for accountants, lawyers, engineers, and consultants across Canada.',
     url: 'https://bitdepthaiconsulting.com/industries/professional-services',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
+    locale: 'en_CA',
     images: [
       {
-        url: '/images/og-professional-services.jpg',
+        url: '/images/og-professional-services.webp',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting for professional services social sharing card'
+        alt: 'AI consulting for Canadian professional services firms'
       }
     ]
   },
@@ -33,8 +34,8 @@ export const metadata: Metadata = {
     site: '@bitdepthai',
     title: 'AI Consulting for Professional Services Firms | BitDepth AI',
     description:
-      'Automated booking with deposits, appointment reminders, client intake automation, internal knowledge bases, and document assistance for professional services firms.',
-    images: ['/images/og-professional-services.jpg']
+      'Reduce no-shows, automate scheduling and intake, and reclaim billable hours. AI consulting for accountants, lawyers, engineers, and consultants across Canada.',
+    images: ['/images/og-professional-services.webp']
   }
 };
 

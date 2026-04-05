@@ -8,23 +8,24 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 export const metadata: Metadata = {
   title: 'AI Consulting for Trades & Construction Companies | BitDepth AI',
   description:
-    'BitDepth helps construction companies get real-time job costing visibility, automate document processing, and fix profit leaks before they drain the budget.',
+    'Stop finding out which crews lost money at year end. Real-time job costing, automated documents, and safety compliance — built for Canadian construction companies.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/industries/construction'
   },
   openGraph: {
     title: 'AI Consulting for Trades & Construction Companies | BitDepth AI',
     description:
-      'Real-time job costing, automated document processing, and profit leak detection for construction companies.',
+      'Stop finding out which crews lost money at year end. Real-time job costing, automated documents, and safety compliance — built for Canadian construction companies.',
     url: 'https://bitdepthaiconsulting.com/industries/construction',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
+    locale: 'en_CA',
     images: [
       {
-        url: '/images/og-construction.jpg',
+        url: '/images/og-construction.webp',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting for construction social sharing card'
+        alt: 'AI consulting for Canadian construction and trades companies'
       }
     ]
   },
@@ -33,8 +34,8 @@ export const metadata: Metadata = {
     site: '@bitdepthai',
     title: 'AI Consulting for Trades & Construction Companies | BitDepth AI',
     description:
-      'Real-time job costing, automated document processing, and profit leak detection for construction companies.',
-    images: ['/images/og-construction.jpg']
+      'Stop finding out which crews lost money at year end. Real-time job costing, automated documents, and safety compliance — built for Canadian construction companies.',
+    images: ['/images/og-construction.webp']
   }
 };
 

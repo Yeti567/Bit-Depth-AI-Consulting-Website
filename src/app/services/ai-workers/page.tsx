@@ -3,37 +3,40 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { buildServiceSchema } from '@/lib/schema';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'Custom AI Workers | Digital Workforce | BitDepth AI',
+  title: 'Custom AI Workers for Canadian SMBs | BitDepth AI',
   description:
-    'Purpose-built AI agents that perform defined job functions inside your business. Operations assistants, sales agents, document processors — custom built and continuously managed.',
+    'Purpose-built AI agents that perform defined job functions inside your business — customer service, document processing, sales qualification, and finance reconciliation.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/services/ai-workers'
   },
   openGraph: {
-    title: 'Custom AI Workers | BitDepth AI Consulting',
+    title: 'Custom AI Workers for Canadian SMBs | BitDepth AI',
     description:
-      'Add a highly capable digital team member who works around the clock, never makes the same mistake twice, and costs a fraction of a full-time hire.',
+      'Purpose-built AI agents that perform defined job functions inside your business — customer service, document processing, sales qualification, and finance reconciliation.',
     url: 'https://bitdepthaiconsulting.com/services/ai-workers',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
+    locale: 'en_CA',
     images: [
       {
-        url: '/images/ai-workers-hero.webp',
+        url: '/images/og-ai-workers.webp',
         width: 1200,
         height: 630,
-        alt: 'Professional working alongside AI assistant interface actively processing business tasks on second monitor'
+        alt: 'Custom AI workers for Canadian SMBs'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'Custom AI Workers | BitDepth AI Consulting',
+    title: 'Custom AI Workers for Canadian SMBs | BitDepth AI',
     description:
-      'Add a highly capable digital team member who works around the clock, never makes the same mistake twice, and costs a fraction of a full-time hire.',
-    images: ['/images/ai-workers-hero.webp']
+      'Purpose-built AI agents that perform defined job functions inside your business — customer service, document processing, sales qualification, and finance reconciliation.',
+    images: ['/images/og-ai-workers.webp']
   }
 };
 
@@ -78,6 +81,14 @@ const aiWorkerExamples = [
 export default function AIWorkersPage() {
   return (
     <PageShell>
+      <Script id="service-schema" type="application/ld+json">
+        {JSON.stringify(buildServiceSchema(
+          'Custom AI Workers for Canadian SMBs',
+          'Purpose-built AI agents that perform defined job functions inside your business — customer service, document processing, sales qualification, and finance reconciliation.',
+          'https://bitdepthaiconsulting.com/services/ai-workers',
+          'Custom AI Workers'
+        ))}
+      </Script>
       {/* Hero Section */}
       <section className="section-navy dot-grid section-space">
         <div className="container-shell">

@@ -3,27 +3,30 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { buildArticleSchema } from '@/lib/schema';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'What to Expect From Your First AI Consulting Engagement | BitDepth AI',
   description:
-    'A step-by-step look at the discovery, roadmap, and implementation process for first-time AI consulting clients.',
+    'A step-by-step walkthrough of the BitDepth discovery, audit, roadmap, and implementation process for first-time AI consulting clients.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/resources/what-to-expect-from-your-first-ai-consulting-engagement'
   },
   openGraph: {
     title: 'What to Expect From Your First AI Consulting Engagement | BitDepth AI',
     description:
-      'A step-by-step look at the discovery, roadmap, and implementation process for first-time AI consulting clients.',
+      'A step-by-step walkthrough of the BitDepth discovery, audit, roadmap, and implementation process for first-time AI consulting clients.',
     url: 'https://bitdepthaiconsulting.com/resources/what-to-expect-from-your-first-ai-consulting-engagement',
     type: 'article',
     siteName: 'BitDepth AI Consulting',
+    locale: 'en_CA',
     images: [
       {
         url: '/images/resources-article-3.webp',
         width: 1200,
         height: 630,
-        alt: 'Consultant and business owner shaking hands across desk with roadmap and laptop visible'
+        alt: 'AI consulting engagement process walkthrough'
       }
     ]
   },
@@ -32,7 +35,7 @@ export const metadata: Metadata = {
     site: '@bitdepthai',
     title: 'What to Expect From Your First AI Consulting Engagement | BitDepth AI',
     description:
-      'A step-by-step look at the discovery, roadmap, and implementation process for first-time AI consulting clients.',
+      'A step-by-step walkthrough of the BitDepth discovery, audit, roadmap, and implementation process for first-time AI consulting clients.',
     images: ['/images/resources-article-3.webp']
   }
 };
@@ -40,6 +43,13 @@ export const metadata: Metadata = {
 export default function WhatToExpectPage() {
   return (
     <PageShell>
+      <Script id="article-schema" type="application/ld+json">
+        {JSON.stringify(buildArticleSchema(
+          'What to Expect From Your First AI Consulting Engagement',
+          'https://bitdepthaiconsulting.com/resources/what-to-expect-from-your-first-ai-consulting-engagement',
+          'https://bitdepthaiconsulting.com/images/resources-article-3.webp'
+        ))}
+      </Script>
       <section className="section-navy dot-grid section-space">
         <div className="container-shell">
           <ScrollReveal className="max-w-4xl">

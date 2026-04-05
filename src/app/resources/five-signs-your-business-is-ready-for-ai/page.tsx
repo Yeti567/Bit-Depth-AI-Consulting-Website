@@ -3,27 +3,30 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { buildArticleSchema } from '@/lib/schema';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'The 5 Signs Your Business Is Ready for AI Automation | BitDepth AI',
   description:
-    'A practical checklist for owners and operations leaders evaluating where automation will deliver measurable ROI.',
+    'A practical checklist for Canadian business owners evaluating whether their business is ready for AI automation and where to start.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/resources/five-signs-your-business-is-ready-for-ai'
   },
   openGraph: {
     title: 'The 5 Signs Your Business Is Ready for AI Automation | BitDepth AI',
     description:
-      'A practical checklist for owners and operations leaders evaluating where automation will deliver measurable ROI.',
+      'A practical checklist for Canadian business owners evaluating whether their business is ready for AI automation and where to start.',
     url: 'https://bitdepthaiconsulting.com/resources/five-signs-your-business-is-ready-for-ai',
     type: 'article',
     siteName: 'BitDepth AI Consulting',
+    locale: 'en_CA',
     images: [
       {
         url: '/images/resources-article-2.webp',
         width: 1200,
         height: 630,
-        alt: 'Business owner holding checklist clipboard in modern office setting'
+        alt: 'Business owner evaluating AI readiness checklist'
       }
     ]
   },
@@ -32,7 +35,7 @@ export const metadata: Metadata = {
     site: '@bitdepthai',
     title: 'The 5 Signs Your Business Is Ready for AI Automation | BitDepth AI',
     description:
-      'A practical checklist for owners and operations leaders evaluating where automation will deliver measurable ROI.',
+      'A practical checklist for Canadian business owners evaluating whether their business is ready for AI automation and where to start.',
     images: ['/images/resources-article-2.webp']
   }
 };
@@ -63,6 +66,13 @@ const readinessSigns = [
 export default function FiveSignsReadyForAIPage() {
   return (
     <PageShell>
+      <Script id="article-schema" type="application/ld+json">
+        {JSON.stringify(buildArticleSchema(
+          'The 5 Signs Your Business Is Ready for AI Automation',
+          'https://bitdepthaiconsulting.com/resources/five-signs-your-business-is-ready-for-ai',
+          'https://bitdepthaiconsulting.com/images/resources-article-2.webp'
+        ))}
+      </Script>
       <section className="section-navy dot-grid section-space">
         <div className="container-shell">
           <ScrollReveal className="max-w-4xl">

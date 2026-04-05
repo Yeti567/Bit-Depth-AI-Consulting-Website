@@ -5,39 +5,40 @@ import { ArrowRight, BarChart3, Check, CheckCircle2, Factory, HardHat, Link2, Re
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { FAQSchemaScript } from '@/components/ui/faq-schema-script';
-import { buildOrganizationSchema, buildWebSiteSchema } from '@/lib/schema';
+import { buildOrganizationSchema, buildWebSiteSchema, buildLocalBusinessSchema } from '@/lib/schema';
 import Script from 'next/script';
  
 export const metadata: Metadata = {
-  title: 'AI Consulting for Canadian Businesses | BitDepth AI Consulting',
+  title: 'AI Consulting for Canadian Businesses | BitDepth AI',
   description:
-    'BitDepth helps Canadian SMBs eliminate manual work, connect systems, and make better decisions with AI. We audit first, then build what fits. Starting at $5,000.',
+    'Vendor-neutral AI consulting for Canadian small and mid-sized businesses. We audit first, then build what fits. Starting at $5,000. Book a free discovery call.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/'
   },
   openGraph: {
-    title: 'AI Consulting for Canadian Businesses | BitDepth AI Consulting',
+    title: 'AI Consulting for Canadian Businesses | BitDepth AI',
     description:
-      'Vendor-neutral AI consulting for Canadian businesses from $2M to $50M. We diagnose operations, identify high-ROI opportunities, and build the right solution.',
+      'Vendor-neutral AI consulting for Canadian small and mid-sized businesses. We audit first, then build what fits. Starting at $5,000. Book a free discovery call.',
     url: 'https://bitdepthaiconsulting.com/',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
+    locale: 'en_CA',
     images: [
       {
-        url: '/images/og-home.jpg',
+        url: '/images/og-home.webp',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting homepage social sharing card'
+        alt: 'BitDepth AI Consulting - Vendor-neutral AI consulting for Canadian SMBs'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Consulting for Canadian Businesses | BitDepth AI Consulting',
+    title: 'AI Consulting for Canadian Businesses | BitDepth AI',
     description:
-      'Vendor-neutral AI consulting for Canadian businesses from $2M to $50M. We diagnose operations, identify high-ROI opportunities, and build the right solution.',
-    images: ['/images/og-home.jpg']
+      'Vendor-neutral AI consulting for Canadian small and mid-sized businesses. We audit first, then build what fits. Starting at $5,000. Book a free discovery call.',
+    images: ['/images/og-home.webp']
   }
 };
 
@@ -170,6 +171,9 @@ export default function HomePage() {
     <PageShell>
       <Script id="organization-schema" type="application/ld+json">
         {JSON.stringify(buildOrganizationSchema())}
+      </Script>
+      <Script id="localbusiness-schema" type="application/ld+json">
+        {JSON.stringify(buildLocalBusinessSchema())}
       </Script>
       <Script id="website-schema" type="application/ld+json">
         {JSON.stringify(buildWebSiteSchema())}

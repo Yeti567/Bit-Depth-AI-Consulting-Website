@@ -3,37 +3,40 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { buildServiceSchema } from '@/lib/schema';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'AI Strategy & Roadmapping | From $12,000 | BitDepth AI',
+  title: 'AI Strategy & Roadmapping for Canadian Businesses | BitDepth AI',
   description:
-    'A clear, phased, realistic plan for how AI fits into your business. Current state assessment, gap analysis, vendor recommendations, and a multi-phase implementation roadmap.',
+    'Not ready to build yet? Get a clear phased AI roadmap built around your actual systems, data, and budget. Vendor-neutral. Honest. Starting at $12,000.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/services/ai-strategy'
   },
   openGraph: {
-    title: 'AI Strategy & Roadmapping | BitDepth AI Consulting',
+    title: 'AI Strategy & Roadmapping for Canadian Businesses | BitDepth AI',
     description:
-      'You know AI is coming. Get a clear plan for where to start, what to build first, and whether your business is actually ready.',
+      'Not ready to build yet? Get a clear phased AI roadmap built around your actual systems, data, and budget. Vendor-neutral. Honest. Starting at $12,000.',
     url: 'https://bitdepthaiconsulting.com/services/ai-strategy',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
+    locale: 'en_CA',
     images: [
       {
-        url: '/images/ai-strategy-hero.webp',
+        url: '/images/og-ai-strategy.webp',
         width: 1200,
         height: 630,
-        alt: 'Business owner and consultant reviewing phased strategic roadmap on whiteboard in professional office'
+        alt: 'AI strategy and roadmapping for Canadian businesses'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Strategy & Roadmapping | BitDepth AI Consulting',
+    title: 'AI Strategy & Roadmapping for Canadian Businesses | BitDepth AI',
     description:
-      'You know AI is coming. Get a clear plan for where to start, what to build first, and whether your business is actually ready.',
-    images: ['/images/ai-strategy-hero.webp']
+      'Not ready to build yet? Get a clear phased AI roadmap built around your actual systems, data, and budget. Vendor-neutral. Honest. Starting at $12,000.',
+    images: ['/images/og-ai-strategy.webp']
   }
 };
 
@@ -73,6 +76,14 @@ const deliverables = [
 export default function AIStrategyPage() {
   return (
     <PageShell>
+      <Script id="service-schema" type="application/ld+json">
+        {JSON.stringify(buildServiceSchema(
+          'AI Strategy & Roadmapping for Canadian Businesses',
+          'Not ready to build yet? Get a clear phased AI roadmap built around your actual systems, data, and budget. Vendor-neutral. Honest. Starting at $12,000.',
+          'https://bitdepthaiconsulting.com/services/ai-strategy',
+          'AI Strategy'
+        ))}
+      </Script>
       {/* Hero Section */}
       <section className="section-navy dot-grid section-space">
         <div className="container-shell">

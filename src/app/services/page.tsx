@@ -8,33 +8,34 @@ import { ServiceAnchorNav } from '@/components/service-anchor-nav';
 export const metadata: Metadata = {
   title: 'AI Consulting Services for Canadian SMBs | BitDepth AI',
   description:
-    'From AI audits to workflow automation and custom AI workers — BitDepth builds AI solutions for Canadian businesses. Vendor-neutral. Starting at $5,000.',
+    'Five AI consulting services built for Canadian businesses — from discovery audits to workflow automation, custom AI workers, strategy, and training. Starting at $1,500.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/services'
   },
   openGraph: {
-    title: 'AI Consulting Services | BitDepth AI Consulting',
+    title: 'AI Consulting Services for Canadian SMBs | BitDepth AI',
     description:
-      'Five AI service lines for Canadian SMBs: AI audits, workflow automation, custom AI workers, strategy, and training. No software sales. Just outcomes.',
+      'Five AI consulting services built for Canadian businesses — from discovery audits to workflow automation, custom AI workers, strategy, and training. Starting at $1,500.',
     url: 'https://bitdepthaiconsulting.com/services',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
+    locale: 'en_CA',
     images: [
       {
-        url: '/images/og-services.jpg',
+        url: '/images/og-services.webp',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting services social sharing card'
+        alt: 'BitDepth AI Consulting services for Canadian SMBs'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Consulting Services | BitDepth AI Consulting',
+    title: 'AI Consulting Services for Canadian SMBs | BitDepth AI',
     description:
-      'Five AI service lines for Canadian SMBs: AI audits, workflow automation, custom AI workers, strategy, and training. No software sales. Just outcomes.',
-    images: ['/images/og-services.jpg']
+      'Five AI consulting services built for Canadian businesses — from discovery audits to workflow automation, custom AI workers, strategy, and training. Starting at $1,500.',
+    images: ['/images/og-services.webp']
   }
 };
 

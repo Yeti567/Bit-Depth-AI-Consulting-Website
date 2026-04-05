@@ -4,36 +4,40 @@ import Link from 'next/link';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
+import { buildServiceSchema } from '@/lib/schema';
+import Script from 'next/script';
+
 export const metadata: Metadata = {
-  title: 'Workflow Automation Services | $5K–$100K+ | BitDepth AI',
+  title: 'AI Workflow Automation for Canadian Businesses | BitDepth AI',
   description:
-    'Replace repetitive manual processes with reliable automation systems. BitDepth designs and builds workflow automation for Canadian SMBs — invoice processing, scheduling, reporting, and more.',
+    'Replace repetitive manual processes with reliable automated systems. Invoice processing, scheduling, reporting, customer service, and more. Starting at $5,000.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/services/workflow-automation'
   },
   openGraph: {
-    title: 'Workflow Automation Services | BitDepth AI Consulting',
+    title: 'AI Workflow Automation for Canadian Businesses | BitDepth AI',
     description:
-      'Stop paying people to do what a system should handle. Custom workflow automation built for your existing tools and processes.',
+      'Replace repetitive manual processes with reliable automated systems. Invoice processing, scheduling, reporting, customer service, and more. Starting at $5,000.',
     url: 'https://bitdepthaiconsulting.com/services/workflow-automation',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
+    locale: 'en_CA',
     images: [
       {
-        url: '/images/workflow-automation-hero.webp',
+        url: '/images/og-workflow-automation.webp',
         width: 1200,
         height: 630,
-        alt: 'Split view showing manual paper-based process versus clean automated digital dashboard'
+        alt: 'AI workflow automation for Canadian businesses'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'Workflow Automation Services | BitDepth AI Consulting',
+    title: 'AI Workflow Automation for Canadian Businesses | BitDepth AI',
     description:
-      'Stop paying people to do what a system should handle. Custom workflow automation built for your existing tools and processes.',
-    images: ['/images/workflow-automation-hero.webp']
+      'Replace repetitive manual processes with reliable automated systems. Invoice processing, scheduling, reporting, customer service, and more. Starting at $5,000.',
+    images: ['/images/og-workflow-automation.webp']
   }
 };
 
@@ -83,6 +87,14 @@ const automationCards = [
 export default function WorkflowAutomationPage() {
   return (
     <PageShell>
+      <Script id="service-schema" type="application/ld+json">
+        {JSON.stringify(buildServiceSchema(
+          'AI Workflow Automation for Canadian Businesses',
+          'Replace repetitive manual processes with reliable automated systems. Invoice processing, scheduling, reporting, customer service, and more. Starting at $5,000.',
+          'https://bitdepthaiconsulting.com/services/workflow-automation',
+          'Workflow Automation'
+        ))}
+      </Script>
       {/* Hero Section */}
       <section className="section-navy dot-grid section-space">
         <div className="container-shell">

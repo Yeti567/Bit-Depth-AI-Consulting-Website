@@ -1,3 +1,8 @@
+// SEO implemented by Windsurf — BitDepth AI Consulting — bitdepthaiconsulting.com
+// Reminder: Submit sitemap at https://search.google.com/search-console
+// Reminder: Add phone number to LocalBusiness schema in homepage structured data (src/lib/schema.ts)
+// Reminder: Verify Open Graph images display correctly by testing URLs in LinkedIn Post Inspector at https://www.linkedin.com/post-inspector/
+
 import type { Metadata, Viewport } from 'next';
 import { Barlow } from 'next/font/google';
 import './globals.css';

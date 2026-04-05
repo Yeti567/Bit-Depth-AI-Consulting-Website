@@ -8,23 +8,24 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 export const metadata: Metadata = {
   title: 'AI Consulting for Manufacturing Companies | BitDepth AI',
   description:
-    'BitDepth helps Canadian manufacturers implement phased predictive maintenance, optimize production scheduling, and improve inventory visibility with practical AI solutions.',
+    'Phased predictive maintenance, production scheduling, and inventory optimization — built around what your manufacturing business actually has, not what is ideal.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/industries/manufacturing'
   },
   openGraph: {
     title: 'AI Consulting for Manufacturing Companies | BitDepth AI',
     description:
-      'Phased predictive maintenance, production scheduling optimization, inventory visibility, and quality control automation for Canadian manufacturers.',
+      'Phased predictive maintenance, production scheduling, and inventory optimization — built around what your manufacturing business actually has, not what is ideal.',
     url: 'https://bitdepthaiconsulting.com/industries/manufacturing',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
+    locale: 'en_CA',
     images: [
       {
-        url: '/images/og-manufacturing.jpg',
+        url: '/images/og-manufacturing.webp',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting for manufacturing social sharing card'
+        alt: 'AI consulting for Canadian manufacturing companies'
       }
     ]
   },
@@ -33,8 +34,8 @@ export const metadata: Metadata = {
     site: '@bitdepthai',
     title: 'AI Consulting for Manufacturing Companies | BitDepth AI',
     description:
-      'Phased predictive maintenance, production scheduling optimization, inventory visibility, and quality control automation for Canadian manufacturers.',
-    images: ['/images/og-manufacturing.jpg']
+      'Phased predictive maintenance, production scheduling, and inventory optimization — built around what your manufacturing business actually has, not what is ideal.',
+    images: ['/images/og-manufacturing.webp']
   }
 };
 

@@ -26,10 +26,14 @@ export function buildOrganizationSchema() {
     alternateName: 'BitDepth',
     url: 'https://bitdepthaiconsulting.com',
     logo: 'https://bitdepthaiconsulting.com/images/logo svg transparent.svg',
-    description: 'Vendor-neutral AI consulting for Canadian SMBs. We audit first, then build what fits.',
+    description: 'Vendor-neutral AI consulting for Canadian small and mid-sized businesses',
     founder: {
       '@type': 'Person',
       name: 'Blake Cowan'
+    },
+    foundingLocation: {
+      '@type': 'Place',
+      name: 'Barriere, British Columbia, Canada'
     },
     address: {
       '@type': 'PostalAddress',
@@ -47,7 +51,9 @@ export function buildOrganizationSchema() {
       availableLanguage: 'English'
     },
     sameAs: [
-      'https://twitter.com/bitdepthai'
+      'https://www.linkedin.com/company/bitdepth-ai-consulting-ltd',
+      'https://www.facebook.com/bitpathconsultingltd',
+      'https://www.youtube.com/channel/UCz6b7iSR3mik1lzlxoAsZMA'
     ],
     areaServed: {
       '@type': 'Country',
@@ -76,9 +82,9 @@ export function buildLocalBusinessSchema() {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: 'BitDepth AI Consulting',
-    description: 'AI consulting and implementation for Canadian small and mid-sized businesses.',
+    description: 'Vendor-neutral AI consulting for Canadian small and mid-sized businesses',
     url: 'https://bitdepthaiconsulting.com',
-    telephone: '+1-780-832-5158',
+    telephone: 'PHONE NUMBER NEEDED',
     email: 'blake@bitdepthaiconsulting.com',
     address: {
       '@type': 'PostalAddress',
@@ -93,7 +99,7 @@ export function buildLocalBusinessSchema() {
       latitude: 51.1833,
       longitude: -120.1333
     },
-    priceRange: '$$',
+    priceRange: '$$$',
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -101,6 +107,89 @@ export function buildLocalBusinessSchema() {
         opens: '09:00',
         closes: '17:00'
       }
-    ]
+    ],
+    areaServed: {
+      '@type': 'Country',
+      name: 'Canada'
+    }
+  };
+}
+
+export function buildServiceSchema(
+  name: string,
+  description: string,
+  url: string,
+  serviceType: string = 'AI Consulting'
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType,
+    provider: {
+      '@type': 'Organization',
+      name: 'BitDepth AI Consulting',
+      url: 'https://bitdepthaiconsulting.com'
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'Canada'
+    },
+    url,
+    name,
+    description
+  };
+}
+
+export function buildArticleSchema(
+  headline: string,
+  url: string,
+  imageUrl: string,
+  datePublished: string = new Date().toISOString().split('T')[0]
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline,
+    author: {
+      '@type': 'Person',
+      name: 'Blake Cowan'
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'BitDepth AI Consulting',
+      url: 'https://bitdepthaiconsulting.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://bitdepthaiconsulting.com/images/logo svg transparent.svg'
+      }
+    },
+    datePublished,
+    url,
+    image: {
+      '@type': 'ImageObject',
+      url: imageUrl
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': url
+    }
+  };
+}
+
+export interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
+export function buildBreadcrumbSchema(items: BreadcrumbItem[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.url
+    }))
   };
 }

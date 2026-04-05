@@ -5,35 +5,36 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'About BitDepth AI Consulting | Vendor-Neutral AI for Canadian SMBs',
+  title: 'About BitDepth AI Consulting | Blake Cowan | Barriere BC Canada',
   description:
-    'BitDepth AI Consulting Ltd. is a vendor-neutral AI advisory firm based in British Columbia, Canada. We audit first, recommend what fits, and deliver real operational outcomes.',
+    'BitDepth AI Consulting is founder-led by Blake Cowan — five years of hands-on AI experience, backgrounds in construction, trucking, and safety. Canadian-owned and operated.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/about'
   },
   openGraph: {
-    title: 'About BitDepth AI Consulting',
+    title: 'About BitDepth AI Consulting | Blake Cowan | Barriere BC Canada',
     description:
-      'Built for Canadian SMBs that were being underserved by enterprise consultancies and under-qualified freelancers. BitDepth delivers enterprise-quality AI thinking at mid-market prices.',
+      'BitDepth AI Consulting is founder-led by Blake Cowan — five years of hands-on AI experience, backgrounds in construction, trucking, and safety. Canadian-owned and operated.',
     url: 'https://bitdepthaiconsulting.com/about',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
+    locale: 'en_CA',
     images: [
       {
-        url: '/images/og-about.jpg',
+        url: '/images/og-about.webp',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting about social sharing card'
+        alt: 'About BitDepth AI Consulting and founder Blake Cowan'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'About BitDepth AI Consulting',
+    title: 'About BitDepth AI Consulting | Blake Cowan | Barriere BC Canada',
     description:
-      'Built for Canadian SMBs that were being underserved by enterprise consultancies and under-qualified freelancers. BitDepth delivers enterprise-quality AI thinking at mid-market prices.',
-    images: ['/images/og-about.jpg']
+      'BitDepth AI Consulting is founder-led by Blake Cowan — five years of hands-on AI experience, backgrounds in construction, trucking, and safety. Canadian-owned and operated.',
+    images: ['/images/og-about.webp']
   }
 };
 

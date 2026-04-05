@@ -8,23 +8,24 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 export const metadata: Metadata = {
   title: 'AI Consulting for Oil & Gas Services Companies | BitDepth AI',
   description:
-    'BitDepth helps oil and gas services companies connect siloed systems, get real-time field visibility, automate field ticket processing, and improve compliance documentation.',
+    'Connect your field systems, get real-time crew cost visibility, and automate field tickets and compliance documentation. Built for Canadian oil and gas services companies.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/industries/oil-and-gas'
   },
   openGraph: {
     title: 'AI Consulting for Oil & Gas Services Companies | BitDepth AI',
     description:
-      'Data integration, crew-level profit visibility, field ticket automation, and compliance documentation for oil & gas services companies.',
+      'Connect your field systems, get real-time crew cost visibility, and automate field tickets and compliance documentation. Built for Canadian oil and gas services companies.',
     url: 'https://bitdepthaiconsulting.com/industries/oil-and-gas',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
+    locale: 'en_CA',
     images: [
       {
-        url: '/images/og-oil-gas.jpg',
+        url: '/images/og-oil-gas.webp',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting for oil and gas services social sharing card'
+        alt: 'AI consulting for Canadian oil and gas services companies'
       }
     ]
   },
@@ -33,8 +34,8 @@ export const metadata: Metadata = {
     site: '@bitdepthai',
     title: 'AI Consulting for Oil & Gas Services Companies | BitDepth AI',
     description:
-      'Data integration, crew-level profit visibility, field ticket automation, and compliance documentation for oil & gas services companies.',
-    images: ['/images/og-oil-gas.jpg']
+      'Connect your field systems, get real-time crew cost visibility, and automate field tickets and compliance documentation. Built for Canadian oil and gas services companies.',
+    images: ['/images/og-oil-gas.webp']
   }
 };
 

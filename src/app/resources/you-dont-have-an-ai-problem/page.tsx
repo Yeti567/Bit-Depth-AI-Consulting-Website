@@ -3,27 +3,30 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { buildArticleSchema } from '@/lib/schema';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: "You Don't Have an AI Problem — You Have a Systems Problem | BitDepth AI",
   description:
-    'How disconnected systems create hidden operational drag and what to fix before investing in AI tools.',
+    'Disconnected systems are the real reason AI fails in most businesses. Here is what to fix before you invest in any AI tool or automation.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/resources/you-dont-have-an-ai-problem'
   },
   openGraph: {
     title: "You Don't Have an AI Problem — You Have a Systems Problem | BitDepth AI",
     description:
-      'How disconnected systems create hidden operational drag and what to fix before investing in AI tools.',
+      'Disconnected systems are the real reason AI fails in most businesses. Here is what to fix before you invest in any AI tool or automation.',
     url: 'https://bitdepthaiconsulting.com/resources/you-dont-have-an-ai-problem',
     type: 'article',
     siteName: 'BitDepth AI Consulting',
+    locale: 'en_CA',
     images: [
       {
         url: '/images/resources-article-1.webp',
         width: 1200,
         height: 630,
-        alt: 'Tangled cables connecting multiple disconnected devices representing fragmented business systems'
+        alt: 'Disconnected systems create operational drag that prevents AI success'
       }
     ]
   },
@@ -32,7 +35,7 @@ export const metadata: Metadata = {
     site: '@bitdepthai',
     title: "You Don't Have an AI Problem — You Have a Systems Problem | BitDepth AI",
     description:
-      'How disconnected systems create hidden operational drag and what to fix before investing in AI tools.',
+      'Disconnected systems are the real reason AI fails in most businesses. Here is what to fix before you invest in any AI tool or automation.',
     images: ['/images/resources-article-1.webp']
   }
 };
@@ -59,6 +62,13 @@ const systemsProblems = [
 export default function YouDontHaveAnAIProblemPage() {
   return (
     <PageShell>
+      <Script id="article-schema" type="application/ld+json">
+        {JSON.stringify(buildArticleSchema(
+          "You Don't Have an AI Problem — You Have a Systems Problem",
+          'https://bitdepthaiconsulting.com/resources/you-dont-have-an-ai-problem',
+          'https://bitdepthaiconsulting.com/images/resources-article-1.webp'
+        ))}
+      </Script>
       <section className="section-navy dot-grid section-space">
         <div className="container-shell">
           <ScrollReveal className="max-w-4xl">

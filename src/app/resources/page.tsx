@@ -5,35 +5,36 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'Practical AI Resources for Canadian Business Owners | BitDepth AI',
+  title: 'AI Resources for Canadian Business Owners | BitDepth AI',
   description:
-    'No hype. No jargon. Just straight answers to the questions Canadian business owners are actually asking about AI.',
+    'Practical guides and articles to help Canadian business owners understand AI before they invest in it. No hype, no jargon — just straight answers.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/resources'
   },
   openGraph: {
-    title: 'Practical AI Resources for Canadian Business Owners | BitDepth AI Consulting',
+    title: 'AI Resources for Canadian Business Owners | BitDepth AI',
     description:
-      'No hype. No jargon. Just straight answers to the questions Canadian business owners are actually asking about AI.',
+      'Practical guides and articles to help Canadian business owners understand AI before they invest in it. No hype, no jargon — just straight answers.',
     url: 'https://bitdepthaiconsulting.com/resources',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
+    locale: 'en_CA',
     images: [
       {
-        url: '/images/og-resources.jpg',
+        url: '/images/og-resources.webp',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting resources social sharing card'
+        alt: 'AI resources for Canadian business owners'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'Practical AI Resources for Canadian Business Owners | BitDepth AI Consulting',
+    title: 'AI Resources for Canadian Business Owners | BitDepth AI',
     description:
-      'No hype. No jargon. Just straight answers to the questions Canadian business owners are actually asking about AI.',
-    images: ['/images/og-resources.jpg']
+      'Practical guides and articles to help Canadian business owners understand AI before they invest in it. No hype, no jargon — just straight answers.',
+    images: ['/images/og-resources.webp']
   }
 };
 

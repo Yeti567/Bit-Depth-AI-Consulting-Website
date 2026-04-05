@@ -8,23 +8,24 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 export const metadata: Metadata = {
   title: 'AI Consulting for Transportation & Logistics Companies | BitDepth AI',
   description:
-    'BitDepth helps transportation companies optimize dispatch, reduce fuel costs, automate compliance, and improve driver scheduling with practical AI solutions.',
+    'Dispatch support, real-time cost tracking, driver self-service, and compliance automation for Canadian trucking and logistics companies. Starting with an AI audit.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/industries/transportation'
   },
   openGraph: {
     title: 'AI Consulting for Transportation & Logistics Companies | BitDepth AI',
     description:
-      'Dispatch optimization, fuel cost tracking, compliance automation, and driver self-service for transportation companies.',
+      'Dispatch support, real-time cost tracking, driver self-service, and compliance automation for Canadian trucking and logistics companies. Starting with an AI audit.',
     url: 'https://bitdepthaiconsulting.com/industries/transportation',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
+    locale: 'en_CA',
     images: [
       {
-        url: '/images/og-transportation.jpg',
+        url: '/images/og-transportation.webp',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting for transportation social sharing card'
+        alt: 'AI consulting for Canadian transportation and logistics companies'
       }
     ]
   },
@@ -33,8 +34,8 @@ export const metadata: Metadata = {
     site: '@bitdepthai',
     title: 'AI Consulting for Transportation & Logistics Companies | BitDepth AI',
     description:
-      'Dispatch optimization, fuel cost tracking, compliance automation, and driver self-service for transportation companies.',
-    images: ['/images/og-transportation.jpg']
+      'Dispatch support, real-time cost tracking, driver self-service, and compliance automation for Canadian trucking and logistics companies. Starting with an AI audit.',
+    images: ['/images/og-transportation.webp']
   }
 };
 

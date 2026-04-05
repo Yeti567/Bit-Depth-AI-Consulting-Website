@@ -8,23 +8,24 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 export const metadata: Metadata = {
   title: 'AI Consulting for Field Services Companies | BitDepth AI',
   description:
-    'BitDepth helps HVAC, plumbing, electrical, and equipment repair businesses capture more leads, automate appointment booking, and reduce no-shows with AI solutions.',
+    "Stop losing jobs to voicemail. Automated booking, follow-up, invoicing, and client communication for HVAC, plumbing, electrical, and field service businesses.",
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/industries/field-services'
   },
   openGraph: {
     title: 'AI Consulting for Field Services Companies | BitDepth AI',
     description:
-      'Automated appointment booking, callback automation, invoice processing, and client follow-up for field services businesses.',
+      "Stop losing jobs to voicemail. Automated booking, follow-up, invoicing, and client communication for HVAC, plumbing, electrical, and field service businesses.",
     url: 'https://bitdepthaiconsulting.com/industries/field-services',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
+    locale: 'en_CA',
     images: [
       {
-        url: '/images/og-field-services.jpg',
+        url: '/images/og-field-services.webp',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting for field services social sharing card'
+        alt: 'AI consulting for Canadian field services businesses'
       }
     ]
   },
@@ -33,8 +34,8 @@ export const metadata: Metadata = {
     site: '@bitdepthai',
     title: 'AI Consulting for Field Services Companies | BitDepth AI',
     description:
-      'Automated appointment booking, callback automation, invoice processing, and client follow-up for field services businesses.',
-    images: ['/images/og-field-services.jpg']
+      "Stop losing jobs to voicemail. Automated booking, follow-up, invoicing, and client communication for HVAC, plumbing, electrical, and field service businesses.",
+    images: ['/images/og-field-services.webp']
   }
 };
 
