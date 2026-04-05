@@ -338,6 +338,98 @@ export default function HomePage() {
       <section className="section-offwhite section-space">
         <div className="container-shell">
           <ScrollReveal className="max-w-3xl">
+            <p className="eyebrow">Meet the Founder</p>
+            <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">Blake Cowan</h2>
+            <p className="mt-2 text-lg font-semibold text-[var(--color-cyan)]">Founder, BitDepth AI Consulting</p>
+          </ScrollReveal>
+          <div className="mt-8 max-w-3xl space-y-4 text-[var(--color-charcoal)]">
+            <ScrollReveal>
+              <p className="text-lg leading-relaxed">
+                Blake has spent the last five years working in AI — not as a salesperson, but hands-on behind the scenes, doing the same work he now does for BitDepth clients. Most of that experience was built working with companies in the United States.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal index={1}>
+              <p className="text-lg leading-relaxed">
+                He started BitDepth because he saw that Canada was underserved — businesses here deserve access to the same quality of AI consulting that larger US markets take for granted.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal index={2}>
+              <p className="text-lg leading-relaxed">
+                One thing Blake learned early in his career: data and systems have to be solid before AI can do anything useful. Build on a shaky foundation and everything you build with AI becomes a house of cards. That belief shapes everything BitDepth does.
+              </p>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-navy section-space">
+        <div className="container-shell">
+          <ScrollReveal className="mx-auto max-w-3xl text-center">
+            <h2 className="text-3xl font-extrabold text-white md:text-5xl">How We Think About AI</h2>
+          </ScrollReveal>
+          <div className="mt-10 max-w-3xl mx-auto space-y-6 text-white/80">
+            <ScrollReveal>
+              <p className="text-lg leading-relaxed">
+                Most businesses aren&apos;t ready for AI yet — and that&apos;s not a criticism, it&apos;s just the reality. AI is still new, expectations are high, and a lot of companies are going to be disappointed because they jumped in before their data and processes were ready to support it.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal index={1}>
+              <p className="text-lg leading-relaxed">
+                Before we recommend anything, we run a discovery audit. We tell you exactly where you stand. What&apos;s working, what isn&apos;t, and what needs to be fixed before AI will do you any good. That honesty is the most valuable thing we offer.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal index={2}>
+              <p className="text-lg leading-relaxed">
+                BitDepth is lean by design. Blake works with a small group of trusted consultants, which keeps costs reasonable and means you&apos;re always dealing with someone who actually knows your file. We work with small and mid-sized businesses — that&apos;s not a limitation, it&apos;s a deliberate choice. These are the companies we understand best and where we can make the biggest difference.
+              </p>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-offwhite section-space">
+        <div className="container-shell">
+          <ScrollReveal className="mx-auto max-w-3xl text-center">
+            <h2 className="text-3xl font-extrabold md:text-5xl">Frequently Asked Questions</h2>
+          </ScrollReveal>
+          <div className="mt-10 max-w-3xl mx-auto space-y-4">
+            <ScrollReveal className="rounded-xl border border-[var(--color-border)] bg-white p-6 shadow-[0_10px_28px_rgba(11,31,59,0.08)]">
+              <h3 className="text-lg font-bold text-[var(--color-navy)]">What makes you qualified to do this?</h3>
+              <p className="mt-3 text-[var(--color-slate)] leading-relaxed">
+                Blake has five years of hands-on AI implementation experience, working behind the scenes for companies across North America. He&apos;s done this work — not managed people who do it. When you hire BitDepth, you&apos;re getting that experience applied directly to your business.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal index={1} className="rounded-xl border border-[var(--color-border)] bg-white p-6 shadow-[0_10px_28px_rgba(11,31,59,0.08)]">
+              <h3 className="text-lg font-bold text-[var(--color-navy)]">What if the audit doesn&apos;t find anything useful?</h3>
+              <p className="mt-3 text-[var(--color-slate)] leading-relaxed">
+                That&apos;s a real outcome and we&apos;ll tell you if it applies to you. If your business isn&apos;t ready for AI, you&apos;ll leave with a clear picture of what needs to be in place before it makes sense — and a prioritized plan to get there. That roadmap has value on its own.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal index={2} className="rounded-xl border border-[var(--color-border)] bg-white p-6 shadow-[0_10px_28px_rgba(11,31,59,0.08)]">
+              <h3 className="text-lg font-bold text-[var(--color-navy)]">How much of my time will this take?</h3>
+              <p className="mt-3 text-[var(--color-slate)] leading-relaxed">
+                We try to keep your team&apos;s involvement focused and efficient. The audit typically requires a few structured interviews and the ability to walk us through your key systems and workflows. Most clients find it takes less time than they expected.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal index={3} className="rounded-xl border border-[var(--color-border)] bg-white p-6 shadow-[0_10px_28px_rgba(11,31,59,0.08)]">
+              <h3 className="text-lg font-bold text-[var(--color-navy)]">Is the outcome guaranteed?</h3>
+              <p className="mt-3 text-[var(--color-slate)] leading-relaxed">
+                We guarantee the audit credit — 100% of what you pay for the audit is credited against any implementation you choose to move forward with. What we can&apos;t guarantee is a specific ROI, because that depends on your business, your data, and how you execute. What we can guarantee is that we&apos;ll be honest with you about what we find, including if the numbers don&apos;t justify building anything yet.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal index={4} className="rounded-xl border border-[var(--color-border)] bg-white p-6 shadow-[0_10px_28px_rgba(11,31,59,0.08)]">
+              <h3 className="text-lg font-bold text-[var(--color-navy)]">How does the audit credit actually work?</h3>
+              <p className="mt-3 text-[var(--color-slate)] leading-relaxed">
+                Simple. You pay for the audit. We deliver it. If you decide to move forward with any implementation — automation, AI workers, strategy, training — the full audit fee comes off your project invoice. No minimums, no conditions beyond the 90-day window. You pay the difference.
+              </p>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-offwhite section-space">
+        <div className="container-shell">
+          <ScrollReveal className="max-w-3xl">
             <h2 className="text-3xl font-extrabold md:text-5xl">Industries We Work With</h2>
             <p className="mt-4 text-[var(--color-slate)]">We focus on businesses where operations, people, and data drive results.</p>
           </ScrollReveal>
@@ -358,6 +450,66 @@ export default function HomePage() {
               Explore Industries
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section className="section-charcoal section-space">
+        <div className="container-shell">
+          <ScrollReveal className="mx-auto max-w-3xl text-center">
+            <h2 className="text-3xl font-extrabold text-white md:text-5xl">What You&apos;ll Walk Away With</h2>
+            <p className="mt-4 text-white/70">
+              By the end of your audit, you will have a clear, honest picture of where your business stands relative to AI — not a sales pitch for what to buy next.
+            </p>
+          </ScrollReveal>
+          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <ScrollReveal className="card-dark p-6">
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-cyan/30 bg-cyan/10">
+                <Check className="h-5 w-5 text-cyan" />
+              </div>
+              <h3 className="mt-4 text-lg font-bold text-white">Current Systems Map</h3>
+              <p className="mt-2 text-white/70">A map of your current systems and where the gaps are.</p>
+            </ScrollReveal>
+            <ScrollReveal index={1} className="card-dark p-6">
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-cyan/30 bg-cyan/10">
+                <Check className="h-5 w-5 text-cyan" />
+              </div>
+              <h3 className="mt-4 text-lg font-bold text-white">AI Readiness Scorecard</h3>
+              <p className="mt-2 text-white/70">Across five key pillars — know exactly where you stand.</p>
+            </ScrollReveal>
+            <ScrollReveal index={2} className="card-dark p-6">
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-cyan/30 bg-cyan/10">
+                <Check className="h-5 w-5 text-cyan" />
+              </div>
+              <h3 className="mt-4 text-lg font-bold text-white">Prioritized Opportunities</h3>
+              <p className="mt-2 text-white/70">Ranked by impact and feasibility — focus on what matters.</p>
+            </ScrollReveal>
+            <ScrollReveal index={3} className="card-dark p-6">
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-cyan/30 bg-cyan/10">
+                <Check className="h-5 w-5 text-cyan" />
+              </div>
+              <h3 className="mt-4 text-lg font-bold text-white">ROI Estimates</h3>
+              <p className="mt-2 text-white/70">Realistic numbers for your top use cases.</p>
+            </ScrollReveal>
+            <ScrollReveal index={4} className="card-dark p-6">
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-cyan/30 bg-cyan/10">
+                <Check className="h-5 w-5 text-cyan" />
+              </div>
+              <h3 className="mt-4 text-lg font-bold text-white">Quick Wins</h3>
+              <p className="mt-2 text-white/70">Lower-cost, faster implementations that pay for themselves.</p>
+            </ScrollReveal>
+            <ScrollReveal index={5} className="card-dark p-6">
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-cyan/30 bg-cyan/10">
+                <Check className="h-5 w-5 text-cyan" />
+              </div>
+              <h3 className="mt-4 text-lg font-bold text-white">Long-Term Roadmap</h3>
+              <p className="mt-2 text-white/70">Where AI can take your business as it grows.</p>
+            </ScrollReveal>
+          </div>
+          <ScrollReveal className="mt-10 max-w-3xl mx-auto text-center">
+            <p className="text-white/70 leading-relaxed">
+              We&apos;re not looking for a two-month engagement. We want to be the AI consultant you come back to as your business grows and as the technology keeps evolving. The audit is the starting point, not the finish line.
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
