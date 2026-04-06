@@ -94,7 +94,7 @@ export default function TransportationPage() {
       <section className="relative overflow-hidden bg-[var(--color-navy)]">
         <div className="absolute inset-0">
           <Image
-            src="/images/1775382018876_Industry_Trucking_Hero_Image.webp"
+            src="/images/Industry Trucking Hero Image.webp"
             alt="Fleet of semi-trucks parked at Canadian logistics yard at dusk with mountains in background"
             fill
             priority
@@ -139,7 +139,7 @@ export default function TransportationPage() {
             </ScrollReveal>
             <ScrollReveal index={1} className="relative min-h-[300px] sm:min-h-[400px] overflow-hidden rounded-2xl border border-[var(--color-border)]">
               <Image
-                src="/images/1775382018876_Logistics_dispatcher_at_a_busy_desk.webp"
+                src="/images/Logistics dispatcher at a busy desk.webp"
                 alt="Logistics dispatcher with headset reviewing route maps and driver schedules across multiple screens"
                 fill
                 className="object-cover"

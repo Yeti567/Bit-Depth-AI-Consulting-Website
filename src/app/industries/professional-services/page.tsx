@@ -94,7 +94,7 @@ export default function ProfessionalServicesPage() {
       <section className="relative overflow-hidden bg-[var(--color-navy)]">
         <div className="absolute inset-0">
           <Image
-            src="/images/1775381591190_Industry_Professional_Services_Hero_Image.webp"
+            src="/images/Industry Professional Services Hero Image.webp"
             alt="Professional services consultant reviewing data and analytics at modern office desk"
             fill
             priority
@@ -139,7 +139,7 @@ export default function ProfessionalServicesPage() {
             </ScrollReveal>
             <ScrollReveal index={1} className="relative min-h-[300px] sm:min-h-[400px] overflow-hidden rounded-2xl border border-[var(--color-border)]">
               <Image
-                src="/images/1775381591188_Appointment_confirmation_and_desk_setup.webp"
+                src="/images/Appointment confirmation and desk setup.webp"
                 alt="Smartphone and laptop showing automated appointment booking confirmation for a professional services firm"
                 fill
                 className="object-cover"

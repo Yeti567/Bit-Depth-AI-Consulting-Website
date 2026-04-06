@@ -90,7 +90,7 @@ export default function ConstructionPage() {
       <section className="relative overflow-hidden bg-[var(--color-navy)]">
         <div className="absolute inset-0">
           <Image
-            src="/images/1775381591191_Industry_s_Construction_Hero_Image.webp"
+            src="/images/Industry's Construction Hero Image.webp"
             alt="Aerial view of active commercial construction site at sunrise"
             fill
             priority
@@ -135,7 +135,7 @@ export default function ConstructionPage() {
             </ScrollReveal>
             <ScrollReveal index={1} className="relative min-h-[300px] sm:min-h-[400px] overflow-hidden rounded-2xl border border-[var(--color-border)]">
               <Image
-                src="/images/1775381591189_Industries_Construction_Supporting_Image.webp"
+                src="/images/Industries Construction Supporting Image.webp"
                 alt="Construction site supervisor reviewing budget dashboard on tablet at active job site"
                 fill
                 className="object-cover"

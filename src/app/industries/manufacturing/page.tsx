@@ -90,7 +90,7 @@ export default function ManufacturingPage() {
       <section className="relative overflow-hidden bg-[var(--color-navy)]">
         <div className="absolute inset-0">
           <Image
-            src="/images/1775381591186_Modern_CNC_manufacturing_facility_in_action.webp"
+            src="/images/Modern CNC manufacturing facility in action.webp"
             alt="Worker in safety gear operating CNC machine in modern Canadian manufacturing facility"
             fill
             priority
@@ -135,7 +135,7 @@ export default function ManufacturingPage() {
             </ScrollReveal>
             <ScrollReveal index={1} className="relative min-h-[300px] sm:min-h-[400px] overflow-hidden rounded-2xl border border-[var(--color-border)]">
               <Image
-                src="/images/1775381591188_Technician_installing_sensor_in_industrial_facility.webp"
+                src="/images/Technician installing sensor in industrial facility.webp"
                 alt="Maintenance technician attaching sensor to industrial equipment while reviewing maintenance dashboard on tablet"
                 fill
                 className="object-cover"

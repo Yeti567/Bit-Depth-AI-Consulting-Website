@@ -94,7 +94,7 @@ export default function OilAndGasPage() {
       <section className="relative overflow-hidden bg-[var(--color-navy)]">
         <div className="absolute inset-0">
           <Image
-            src="/images/1775381591191_Industry_s_oil_and_gas_hero_image.webp"
+            src="/images/Industry's oil and gas hero image.webp"
             alt="Wide shot of oil field services operation at golden hour with pump jacks and service trucks"
             fill
             priority
@@ -139,7 +139,7 @@ export default function OilAndGasPage() {
             </ScrollReveal>
             <ScrollReveal index={1} className="relative min-h-[300px] sm:min-h-[400px] overflow-hidden rounded-2xl border border-[var(--color-border)]">
               <Image
-                src="/images/1775381591189_Field_operations_in_action.webp"
+                src="/images/Field operations in action.webp"
                 alt="Oil field operations manager reviewing field operations dashboard on laptop in site trailer"
                 fill
                 className="object-cover"

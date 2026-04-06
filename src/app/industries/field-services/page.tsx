@@ -90,7 +90,7 @@ export default function FieldServicesPage() {
       <section className="relative overflow-hidden bg-[var(--color-navy)]">
         <div className="absolute inset-0">
           <Image
-            src="/images/1775381591189_Industrial_Field_Services_Hero_Image.webp"
+            src="/images/Industrial Field Services Hero Image.webp"
             alt="HVAC technician servicing rooftop unit with Toronto skyline in background"
             fill
             priority
@@ -135,7 +135,7 @@ export default function FieldServicesPage() {
             </ScrollReveal>
             <ScrollReveal index={1} className="relative min-h-[300px] sm:min-h-[400px] overflow-hidden rounded-2xl border border-[var(--color-border)]">
               <Image
-                src="/images/1775381591190_Industry_Field_Services_Booking_Appointment_Online.webp"
+                src="/images/Industry Field Services Booking Appointment Online.webp"
                 alt="Tradesperson in work gloves holding smartphone showing automated appointment booking app"
                 fill
                 className="object-cover"
