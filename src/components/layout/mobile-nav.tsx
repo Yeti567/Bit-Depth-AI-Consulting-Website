@@ -45,7 +45,7 @@ export function MobileNav() {
               </Link>
             ))}
             <Link 
-              href="/ai-audit" 
+              href="/contact" 
               className="mt-6 block w-full rounded-lg bg-[#00B4D8] px-7 py-3.5 text-center font-semibold text-[#0B1F3B]" 
               onClick={() => setOpen(false)}
             >

@@ -57,7 +57,7 @@ export function SiteHeader({ simplified = false }: { simplified?: boolean }) {
           >
             blake@bitdepthaiconsulting.com
           </Link>
-          <Link href="/ai-audit" className="btn-primary text-sm">
+          <Link href="/contact" className="btn-primary text-sm">
             Book Your AI Audit
           </Link>
         </div>
