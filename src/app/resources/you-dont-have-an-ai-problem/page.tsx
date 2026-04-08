@@ -95,7 +95,7 @@ export default function YouDontHaveAnAIProblemPage() {
           <ScrollReveal>
             <div className="relative mb-10 overflow-hidden rounded-2xl border border-[var(--color-border)]">
               <Image
-                src="/images/resources-article-1.webp"
+                src="/images/resources-article-1.webp.webp"
                 alt="Tangled cables connecting multiple disconnected devices representing fragmented business systems"
                 width={1200}
                 height={600}

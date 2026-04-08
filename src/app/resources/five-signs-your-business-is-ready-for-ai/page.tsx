@@ -99,7 +99,7 @@ export default function FiveSignsReadyForAIPage() {
           <ScrollReveal>
             <div className="relative mb-10 overflow-hidden rounded-2xl border border-[var(--color-border)]">
               <Image
-                src="/images/resources-article-2.webp"
+                src="/images/resources-article-2.webp.webp"
                 alt="Business owner holding checklist clipboard in modern office setting"
                 width={1200}
                 height={600}

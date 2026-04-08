@@ -51,7 +51,7 @@ const articles = [
   {
     title: "You Don't Have an AI Problem you Have a Systems Problem",
     description: 'How disconnected systems create hidden operational drag and what to fix before investing in AI tools.',
-    image: '/images/resources-article-1.webp',
+    image: '/images/resources-article-1.webp.webp',
     href: '/resources/you-dont-have-an-ai-problem',
     category: 'Operations',
     readTime: '6 min read'
@@ -59,7 +59,7 @@ const articles = [
   {
     title: 'The 5 Signs Your Business Is Ready for AI Automation',
     description: 'A practical checklist for owners and operations leaders evaluating where automation will deliver measurable ROI.',
-    image: '/images/resources-article-2.webp',
+    image: '/images/resources-article-2.webp.webp',
     href: '/resources/five-signs-your-business-is-ready-for-ai',
     category: 'Checklist',
     readTime: '5 min read'
@@ -67,7 +67,7 @@ const articles = [
   {
     title: 'What to Expect From Your First AI Consulting Engagement',
     description: 'A step-by-step look at the discovery, roadmap, and implementation process for first-time AI consulting clients.',
-    image: '/images/resources-article-3.webp',
+    image: '/images/resources-article-3.webp.webp',
     href: '/resources/what-to-expect-from-your-first-ai-consulting-engagement',
     category: 'Playbook',
     readTime: '7 min read'
@@ -88,7 +88,7 @@ export default function ResourcesPage() {
             </p>
           </ScrollReveal>
           <ScrollReveal index={1} className="relative min-h-[340px] overflow-hidden rounded-2xl border border-[var(--color-border)]">
-            <Image src="/images/resources-hero.webp" alt="Canadian business owner reading AI consulting articles on laptop with coffee and notepad" fill priority className="object-cover" />
+            <Image src="/images/resources-hero.webp.webp" alt="Canadian business owner reading AI consulting articles on laptop with coffee and notepad" fill priority className="object-cover" />
           </ScrollReveal>
         </div>
       </section>
@@ -121,7 +121,7 @@ export default function ResourcesPage() {
           <ScrollReveal className="mt-12">
             <div className="relative mx-auto max-w-3xl overflow-hidden rounded-2xl border border-[var(--color-border)]">
               <Image
-                src="/images/resources-supporting.webp"
+                src="/images/resources-supporting.webp.webp"
                 alt="Clean modern desk with laptop showing article page, coffee mug, and notepad"
                 width={800}
                 height={500}

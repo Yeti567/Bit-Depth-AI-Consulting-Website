@@ -76,7 +76,7 @@ export default function WhatToExpectPage() {
           <ScrollReveal>
             <div className="relative mb-10 overflow-hidden rounded-2xl border border-[var(--color-border)]">
               <Image
-                src="/images/resources-article-3.webp"
+                src="/images/resources-article-3.webp.webp"
                 alt="Consultant and business owner shaking hands across desk with roadmap and laptop visible"
                 width={1200}
                 height={600}
