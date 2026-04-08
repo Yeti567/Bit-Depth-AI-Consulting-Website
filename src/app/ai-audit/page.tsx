@@ -101,7 +101,7 @@ export default function AIAuditPage() {
             </Link>
           </ScrollReveal>
           <ScrollReveal index={1} className="relative min-h-[340px] overflow-hidden rounded-2xl border border-[var(--color-border)]">
-            <Image src="/images/ai-audit-hero.webp" alt="Business owner and consultant reviewing AI readiness dashboard together at boardroom table" fill priority className="object-cover" />
+            <Image src="/images/ai-audit-hero.webp.webp" alt="Business owner and consultant reviewing AI readiness dashboard together at boardroom table" fill priority className="object-cover" />
           </ScrollReveal>
         </div>
       </section>
@@ -124,7 +124,7 @@ export default function AIAuditPage() {
           <ScrollReveal className="mt-12">
             <div className="relative mx-auto max-w-3xl overflow-hidden rounded-2xl border border-[var(--color-border)]">
               <Image
-                src="/images/ai-audit-supporting.webp"
+                src="/images/ai-audit-supporting.webp.webp"
                 alt="Printed AI readiness roadmap beside a laptop showing prioritized business opportunities"
                 width={800}
                 height={500}
