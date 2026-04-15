@@ -2,12 +2,11 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Menu, X, ChevronDown, ChevronUp } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { navigation } from '@/lib/site-data';
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
     <div className="md:hidden">
@@ -24,7 +23,7 @@ export function MobileNav() {
       {open ? (
         <div
           id="mobile-menu"
-          className="fixed inset-0 z-50 flex flex-col bg-[#0B1F3B] px-8 pb-8 pt-28"
+          className="fixed inset-0 z-50 flex flex-col bg-[#0B1F3B]/[0.99] px-8 pb-8 pt-28"
         >
           <button
             type="button"
@@ -36,52 +35,14 @@ export function MobileNav() {
           </button>
           <nav className="flex flex-1 flex-col justify-center">
             {navigation.map((item) => (
-              <div key={item.href}>
-                {item.children ? (
-                  <>
-                    <button
-                      type="button"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setOpenDropdown(openDropdown === item.href ? null : item.href);
-                      }}
-                      className="flex w-full items-center justify-between border-b border-[rgba(0,180,216,0.15)] py-4 text-xl font-semibold text-[#F5F7FA] transition hover:text-[#00B4D8]"
-                    >
-                      {item.label}
-                      {openDropdown === item.href ? (
-                        <ChevronUp className="h-5 w-5" />
-                      ) : (
-                        <ChevronDown className="h-5 w-5" />
-                      )}
-                    </button>
-                    {openDropdown === item.href && (
-                      <div className="border-b border-[rgba(0,180,216,0.15)]">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.href}
-                            href={child.href}
-                            className="block py-3 pl-4 text-lg text-white/70 hover:text-[#00B4D8] transition"
-                            onClick={() => {
-                              setOpen(false);
-                              setOpenDropdown(null);
-                            }}
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <Link
-                    href={item.href}
-                    className="block w-full border-b border-[rgba(0,180,216,0.15)] py-4 text-xl font-semibold text-[#F5F7FA] transition hover:text-[#00B4D8]"
-                    onClick={() => setOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                )}
-              </div>
+              <Link
+                key={item.href}
+                href={item.href}
+                className="block w-full border-b border-[rgba(0,180,216,0.15)] py-4 text-xl font-semibold text-[#F5F7FA] transition hover:text-[#00B4D8]"
+                onClick={() => setOpen(false)}
+              >
+                {item.label}
+              </Link>
             ))}
             <Link 
               href="/contact" 
