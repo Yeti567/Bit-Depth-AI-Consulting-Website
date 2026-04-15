@@ -3,11 +3,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 import { navigation } from '@/lib/site-data';
 import { MobileNav } from '@/components/layout/mobile-nav';
 
 export function SiteHeader({ simplified = false }: { simplified?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const onScroll = () => {
@@ -39,14 +41,38 @@ export function SiteHeader({ simplified = false }: { simplified?: boolean }) {
         {!simplified ? (
           <nav className="hidden items-center gap-8 md:flex">
             {navigation.map((item) => (
-              <Link
+              <div
                 key={item.href}
-                href={item.href}
-                className="group relative text-sm font-medium text-white/78 transition hover:text-cyan"
+                className="relative"
+                onMouseEnter={() => setOpenDropdown(item.href)}
+                onMouseLeave={() => setOpenDropdown(null)}
               >
-                {item.label}
-                <span className="absolute -bottom-2 left-0 h-px w-full origin-left scale-x-0 bg-cyan transition-transform duration-200 ease-out group-hover:scale-x-100" />
-              </Link>
+                <Link
+                  href={item.href}
+                  className="group relative flex items-center gap-1 text-sm font-medium text-white/78 transition hover:text-cyan"
+                >
+                  {item.label}
+                  {item.children && (
+                    <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
+                  )}
+                  <span className="absolute -bottom-2 left-0 h-px w-full origin-left scale-x-0 bg-cyan transition-transform duration-200 ease-out group-hover:scale-x-100" />
+                </Link>
+                {item.children && openDropdown === item.href && (
+                  <div className="absolute left-0 top-full mt-2 w-56 rounded-lg bg-[rgba(11,31,59,0.98)] border border-white/10 shadow-xl backdrop-blur-xl">
+                    <div className="py-2">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          className="block px-4 py-2 text-sm text-white/70 hover:bg-white/10 hover:text-cyan transition-colors"
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             ))}
           </nav>
         ) : null}

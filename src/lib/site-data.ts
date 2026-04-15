@@ -2,7 +2,14 @@ export const navigation = [
   { label: 'Services', href: '/services' },
   { label: 'Our Approach', href: '/ai-strategy' },
   { label: 'Industries', href: '/industries' },
-  { label: 'AI Audit', href: '/ai-audit' },
+  { 
+    label: 'AI Audit', 
+    href: '/ai-audit',
+    children: [
+      { label: 'AI Opportunity Audit', href: '/ai-audit' },
+      { label: 'AI Readiness Assessment', href: '/ai-readiness-assessment' }
+    ]
+  },
   { label: 'Resources', href: '/resources' },
   { label: 'About', href: '/about' }
 ];

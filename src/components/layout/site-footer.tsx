@@ -27,8 +27,13 @@ export function SiteFooter() {
           <h2 className="mb-4 text-[13px] font-semibold uppercase tracking-[0.1em] text-white">Services</h2>
           <ul className="space-y-3 text-sm text-white/50">
             <li>
-              <Link href="/services" className="transition hover:text-cyan">
+              <Link href="/ai-audit" className="transition hover:text-cyan">
                 AI Opportunity Audit
+              </Link>
+            </li>
+            <li>
+              <Link href="/ai-readiness-assessment" className="transition hover:text-cyan">
+                AI Readiness Assessment
               </Link>
             </li>
             <li>
