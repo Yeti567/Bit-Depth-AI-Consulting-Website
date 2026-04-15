@@ -1,12 +1,95 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { Menu, X } from 'lucide-react';
 import { navigation } from '@/lib/site-data';
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const overlay = open ? (
+    <div
+      id="mobile-menu"
+      style={{
+        position: 'fixed',
+        inset: 0,
+        zIndex: 9999,
+        backgroundColor: '#0B1F3B',
+        display: 'flex',
+        flexDirection: 'column',
+        padding: '112px 32px 32px',
+      }}
+    >
+      <button
+        type="button"
+        aria-label="Close navigation"
+        style={{
+          position: 'absolute',
+          right: '28px',
+          top: '28px',
+          display: 'inline-flex',
+          height: '44px',
+          width: '44px',
+          alignItems: 'center',
+          justifyContent: 'center',
+          borderRadius: '9999px',
+          border: '1px solid rgba(255,255,255,0.2)',
+          background: 'rgba(255,255,255,0.1)',
+          color: '#F5F7FA',
+          cursor: 'pointer',
+        }}
+        onClick={() => setOpen(false)}
+      >
+        <X size={20} />
+      </button>
+      <nav style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', flex: 1 }}>
+        {navigation.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            style={{
+              display: 'block',
+              width: '100%',
+              borderBottom: '1px solid rgba(0,180,216,0.15)',
+              padding: '16px 0',
+              fontSize: '20px',
+              fontWeight: 600,
+              color: '#F5F7FA',
+              textDecoration: 'none',
+            }}
+            onClick={() => setOpen(false)}
+          >
+            {item.label}
+          </Link>
+        ))}
+        <Link
+          href="/contact"
+          style={{
+            display: 'block',
+            width: '100%',
+            marginTop: '24px',
+            borderRadius: '8px',
+            backgroundColor: '#00B4D8',
+            padding: '14px 28px',
+            textAlign: 'center',
+            fontWeight: 600,
+            color: '#0B1F3B',
+            textDecoration: 'none',
+          }}
+          onClick={() => setOpen(false)}
+        >
+          Book Your AI Audit
+        </Link>
+      </nav>
+    </div>
+  ) : null;
 
   return (
     <div className="md:hidden">
@@ -20,41 +103,7 @@ export function MobileNav() {
       >
         {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
       </button>
-      {open ? (
-        <div
-          id="mobile-menu"
-          className="fixed inset-0 z-50 flex flex-col px-8 pb-8 pt-28"
-          style={{ backgroundColor: '#000000', color: '#ffffff' }}
-        >
-          <button
-            type="button"
-            aria-label="Close navigation"
-            className="absolute right-7 top-8 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-[#F5F7FA]"
-            onClick={() => setOpen(false)}
-          >
-            <X className="h-5 w-5" />
-          </button>
-          <nav className="flex flex-1 flex-col justify-center">
-            {navigation.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="block w-full border-b border-[rgba(0,180,216,0.15)] py-4 text-xl font-semibold text-[#F5F7FA] transition hover:text-[#00B4D8]"
-                onClick={() => setOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
-            <Link 
-              href="/contact" 
-              className="mt-6 block w-full rounded-lg bg-[#00B4D8] px-7 py-3.5 text-center font-semibold text-[#0B1F3B]" 
-              onClick={() => setOpen(false)}
-            >
-              Book Your AI Audit
-            </Link>
-          </nav>
-        </div>
-      ) : null}
+      {mounted && createPortal(overlay, document.body)}
     </div>
   );
 }
