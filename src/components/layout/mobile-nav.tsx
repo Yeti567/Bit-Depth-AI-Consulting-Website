@@ -23,7 +23,8 @@ export function MobileNav() {
       {open ? (
         <div
           id="mobile-menu"
-          className="fixed inset-0 z-50 flex flex-col bg-[#0B1F3B]/[0.99] px-8 pb-8 pt-28"
+          className="fixed inset-0 z-50 flex flex-col px-8 pb-8 pt-28"
+          style={{ backgroundColor: '#0B1F3B' }}
         >
           <button
             type="button"
