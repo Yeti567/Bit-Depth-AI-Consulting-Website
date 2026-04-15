@@ -41,25 +41,25 @@ export function SiteHeader({ simplified = false }: { simplified?: boolean }) {
         {!simplified ? (
           <nav className="hidden items-center gap-8 md:flex">
             {navigation.map((item) => (
-              <div
-                key={item.href}
-                className="relative"
-                onMouseEnter={() => item.children && setOpenDropdown(item.href)}
-                onMouseLeave={() => setOpenDropdown(null)}
-              >
-                <div className="group relative flex items-center">
-                  <Link
-                    href={item.href}
-                    className="text-sm font-medium text-white/78 transition hover:text-cyan"
-                  >
-                    {item.label}
-                    <span className="absolute -bottom-2 left-0 h-px w-full origin-left scale-x-0 bg-cyan transition-transform duration-200 ease-out group-hover:scale-x-100" />
-                  </Link>
-                  {item.children && (
+              item.children ? (
+                <div
+                  key={item.href}
+                  className="relative"
+                  onMouseEnter={() => setOpenDropdown(item.href)}
+                  onMouseLeave={() => setOpenDropdown(null)}
+                >
+                  <div className="flex items-center">
+                    <Link
+                      href={item.href}
+                      className="text-sm font-medium text-white/78 transition hover:text-cyan"
+                    >
+                      {item.label}
+                    </Link>
                     <button
                       type="button"
                       onClick={(e) => {
                         e.preventDefault();
+                        e.stopPropagation();
                         setOpenDropdown(openDropdown === item.href ? null : item.href);
                       }}
                       className="ml-1 p-1 text-white/78 hover:text-cyan transition-colors"
@@ -69,25 +69,34 @@ export function SiteHeader({ simplified = false }: { simplified?: boolean }) {
                         className={`h-4 w-4 transition-transform ${openDropdown === item.href ? 'rotate-180' : ''}`} 
                       />
                     </button>
+                  </div>
+                  {openDropdown === item.href && (
+                    <div className="absolute left-0 top-full pt-2">
+                      <div className="w-56 rounded-lg bg-[rgba(11,31,59,0.98)] border border-white/10 shadow-xl backdrop-blur-xl py-2">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            className="block px-4 py-2 text-sm text-white/70 hover:bg-white/10 hover:text-cyan transition-colors"
+                            onClick={() => setOpenDropdown(null)}
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
                   )}
                 </div>
-                {item.children && openDropdown === item.href && (
-                  <div className="absolute left-0 top-full mt-2 w-56 rounded-lg bg-[rgba(11,31,59,0.98)] border border-white/10 shadow-xl backdrop-blur-xl">
-                    <div className="py-2">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          className="block px-4 py-2 text-sm text-white/70 hover:bg-white/10 hover:text-cyan transition-colors"
-                          onClick={() => setOpenDropdown(null)}
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
+              ) : (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="group relative text-sm font-medium text-white/78 transition hover:text-cyan"
+                >
+                  {item.label}
+                  <span className="absolute -bottom-2 left-0 h-px w-full origin-left scale-x-0 bg-cyan transition-transform duration-200 ease-out group-hover:scale-x-100" />
+                </Link>
+              )
             ))}
           </nav>
         ) : null}
