@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
 :root {
   --color-navy: #0b1f3b;
   --color-charcoal: #1f2933;
@@ -12,6 +14,20 @@
   --color-cyan-dark: #0090b0;
   --color-border: rgba(0, 180, 216, 0.15);
   color-scheme: light;
+  
+  /* Assessment-specific colors */
+  --bg-primary: #0B1426;
+  --bg-secondary: #0D1B2A;
+  --bg-card: rgba(13, 27, 42, 0.7);
+  --text-primary: #FFFFFF;
+  --text-secondary: #E0E6ED;
+  --text-muted: #8899AA;
+  --text-dim: #667788;
+  --accent-cyan: #00D4FF;
+  --accent-blue-1: #00B4D8;
+  --accent-blue-2: #0096C7;
+  --accent-blue-3: #0077B6;
+  --accent-navy: #023E8A;
 }
 
 html {
@@ -21,9 +37,13 @@ html {
 }
 
 * {
-  font-family: var(--font-barlow), 'Barlow', sans-serif;
+  font-family: var(--font-barlow), 'Barlow', 'DM Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.assessment-font {
+  font-family: 'DM Sans', sans-serif;
 }
 
 body {
@@ -124,6 +144,60 @@ textarea::placeholder {
 }
 
 @layer components {
+  /* Assessment-specific styles */
+  .assessment-bg {
+    position: relative;
+    background-color: #0B1426;
+  }
+
+  .assessment-bg::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .assessment-glow-cyan {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .assessment-glow-navy {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(2, 62, 138, 0.2) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .assessment-card {
+    background: rgba(13, 27, 42, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+  }
+
+  .assessment-btn-glow:hover {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  }
+
+  .assessment-progress-gradient {
+    background: linear-gradient(90deg, #023E8A 0%, #00D4FF 100%);
+  }
+
   .container-shell {
     width: 100%;
     max-width: 1200px;
