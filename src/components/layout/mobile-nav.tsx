@@ -24,7 +24,7 @@ export function MobileNav() {
         <div
           id="mobile-menu"
           className="fixed inset-0 z-50 flex flex-col px-8 pb-8 pt-28"
-          style={{ backgroundColor: '#0B1F3B' }}
+          style={{ backgroundColor: '#000000', color: '#ffffff' }}
         >
           <button
             type="button"
