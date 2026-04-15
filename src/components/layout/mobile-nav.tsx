@@ -40,7 +40,11 @@ export function MobileNav() {
                 {item.children ? (
                   <>
                     <button
-                      onClick={() => setOpenDropdown(openDropdown === item.href ? null : item.href)}
+                      type="button"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setOpenDropdown(openDropdown === item.href ? null : item.href);
+                      }}
                       className="flex w-full items-center justify-between border-b border-[rgba(0,180,216,0.15)] py-4 text-xl font-semibold text-[#F5F7FA] transition hover:text-[#00B4D8]"
                     >
                       {item.label}
