@@ -87,9 +87,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=true" />
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-1KBYH51CSC"></script>
         <script
@@ -104,7 +103,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           }}
         />
       </head>
-      <body className={`${barlow.variable} font-sans antialiased`}>
+      <body className={`${barlow.variable} font-sans antialiased`} suppressHydrationWarning>
         {children}
       </body>
     </html>

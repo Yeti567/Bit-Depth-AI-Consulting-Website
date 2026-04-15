@@ -43,7 +43,7 @@ export function LeadGate({ totalScore, grade, tierLabel, pillarScores, onUnlock 
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
-    
+
     try {
       // Send data to backend API
       const response = await fetch('/api/assessment/lead', {
@@ -71,18 +71,15 @@ export function LeadGate({ totalScore, grade, tierLabel, pillarScores, onUnlock 
             industry: data.industry,
           });
         }
-        
-        // Unlock results
-        onUnlock();
       } else {
-        console.error('Failed to submit form');
-        alert('There was an error submitting your information. Please try again.');
+        console.warn('Lead submission returned non-OK status, but unlocking results anyway');
       }
     } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('There was an error submitting your information. Please try again.');
+      console.warn('Lead submission failed, but unlocking results anyway:', error);
     } finally {
       setIsSubmitting(false);
+      // Always unlock results - don't block users from their report
+      onUnlock();
     }
   };
 
