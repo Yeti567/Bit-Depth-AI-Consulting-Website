@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
       try {
         const resend = new Resend(process.env.RESEND_API_KEY);
         await resend.emails.send({
-          from: 'BitDepth AI <noreply@bitdepthaiconsulting.com>',
+          from: 'BitDepth AI <onboarding@resend.dev>',
           to: 'blake@bitdepthaiconsulting.com',
           subject: `New AI Readiness Assessment Lead - ${company}`,
           html: `
@@ -44,11 +44,11 @@ export async function POST(request: NextRequest) {
             <p><strong>Grade:</strong> ${grade} - ${tier}</p>
             <p><strong>Pillar Scores:</strong></p>
             <ul>
-              <li>Data Quality: ${pillar_scores.data_quality}/20</li>
-              <li>Process Clarity: ${pillar_scores.process_clarity}/20</li>
-              <li>Technology Stack: ${pillar_scores.technology_stack}/20</li>
-              <li>Team Readiness: ${pillar_scores.team_readiness}/20</li>
-              <li>Strategic Alignment: ${pillar_scores.strategic_alignment}/20</li>
+              <li>Data Quality: ${pillar_scores?.['data-quality'] ?? 0}/20</li>
+              <li>Process Clarity: ${pillar_scores?.['process-clarity'] ?? 0}/20</li>
+              <li>Technology Stack: ${pillar_scores?.['technology-stack'] ?? 0}/20</li>
+              <li>Team Readiness: ${pillar_scores?.['team-readiness'] ?? 0}/20</li>
+              <li>Strategic Alignment: ${pillar_scores?.['strategic-alignment'] ?? 0}/20</li>
             </ul>
             <p><strong>Submitted:</strong> ${submitted_at}</p>
           `,
