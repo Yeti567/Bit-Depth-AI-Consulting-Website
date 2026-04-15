@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
       try {
         const resend = new Resend(process.env.RESEND_API_KEY);
         await resend.emails.send({
-          from: 'BitDepth AI <onboarding@resend.dev>',
+          from: 'BitDepth AI <noreply@bitdepthaiconsulting.com>',
           to: 'blake@bitdepthaiconsulting.com',
           subject: `New AI Readiness Assessment Lead - ${company}`,
           html: `
