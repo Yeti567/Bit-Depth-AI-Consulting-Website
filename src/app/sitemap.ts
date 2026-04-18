@@ -4,9 +4,16 @@
 // Reminder: Verify Open Graph images display correctly by testing URLs in LinkedIn Post Inspector at https://www.linkedin.com/post-inspector/
 
 import { MetadataRoute } from 'next';
+import { generateStaticParams } from '@/app/resources/[slug]/page';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://bitdepthaiconsulting.com';
+  const resourceEntries = generateStaticParams().map(({ slug }) => ({
+    url: `${baseUrl}/resources/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
 
   return [
     {
@@ -117,30 +124,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
-    {
-      url: `${baseUrl}/resources/you-dont-have-an-ai-problem`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/resources/five-signs-your-business-is-ready-for-ai`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/resources/what-to-expect-from-your-first-ai-consulting-engagement`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/resources/what-can-i-expect-in-an-ai-discovery-audit`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
+    ...resourceEntries,
     {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),

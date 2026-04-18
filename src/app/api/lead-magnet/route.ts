@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import { Resend } from 'resend';
 
 interface LeadSubmission {
   firstName: string;
@@ -9,19 +10,34 @@ interface LeadSubmission {
   timestamp: string;
 }
 
-// TODO: Replace with actual email provider integration
-// This stub uses console.log for development. Replace with Resend, Nodemailer, or SendGrid.
 async function sendConfirmationEmail(firstName: string, email: string): Promise<void> {
-  // TODO: Integrate with your email provider here
-  // eslint-disable-next-line no-console
-  console.log(`[EMAIL STUB] Sending AI Readiness Checklist to ${firstName} at ${email}`);
-  // Example with Resend (once configured):
-  // await resend.emails.send({
-  //   from: 'BitDepth AI Consulting <blake@bitdepthaiconsulting.com>',
-  //   to: email,
-  //   subject: 'Your AI Readiness Checklist is here',
-  //   html: `<p>Hi ${firstName},</p><p>Thanks for requesting the AI Readiness Checklist. Download it here: <a href="https://bitdepthaiconsulting.com/downloads/ai-readiness-checklist.pdf">AI Readiness Checklist PDF</a></p>`,
-  // });
+  const apiKey = process.env.RESEND_API_KEY;
+
+  if (!apiKey) {
+    throw new Error('RESEND_API_KEY is not configured.');
+  }
+
+  const resend = new Resend(apiKey);
+
+  await resend.emails.send({
+    from: 'BitDepth AI <noreply@bitdepthaiconsulting.com>',
+    to: email,
+    bcc: ['blake@bitdepthaiconsulting.com'],
+    subject: 'Your AI Readiness Checklist',
+    html: `
+      <h2>Your AI Readiness Checklist</h2>
+      <p>Hi ${firstName},</p>
+      <p>Thanks for requesting the BitDepth AI Readiness Checklist.</p>
+      <p>
+        You can download it here:
+        <a href="https://bitdepthaiconsulting.com/downloads/ai-readiness-checklist.pdf">
+          Download the checklist
+        </a>
+      </p>
+      <p>If you have questions about where your business stands with AI, reply to this email and Blake will be happy to help.</p>
+      <p>BitDepth AI Consulting</p>
+    `,
+  });
 }
 
 export async function POST(request: NextRequest): Promise<NextResponse> {
@@ -109,10 +125,9 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       { status: 200 }
     );
   } catch (error) {
-    // eslint-disable-next-line no-console
     console.error('Lead magnet submission error:', error);
     return NextResponse.json(
-      { success: false, error: 'An unexpected error occurred. Please try again.' },
+      { success: false, error: 'We could not send your checklist right now. Please try again in a few minutes.' },
       { status: 500 }
     );
   }
