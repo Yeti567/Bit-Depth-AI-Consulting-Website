@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Privacy Policy | BitDepth AI Consulting',
   description: 'Review the BitDepth AI Consulting privacy policy and our approach to collecting, using, and protecting personal information.',
   alternates: {
-    canonical: '/privacy-policy'
+    canonical: 'https://bitdepthaiconsulting.com/privacy-policy'
   },
   robots: {
     index: true,
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Privacy Policy | BitDepth AI Consulting',
     description: 'Review the BitDepth AI Consulting privacy policy and our approach to handling personal information.',
-    url: '/privacy-policy',
+    url: 'https://bitdepthaiconsulting.com/privacy-policy',
     type: 'article',
     images: [
       {

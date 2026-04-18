@@ -1,6 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
+function escapeHtml(value: unknown): string {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -41,6 +50,18 @@ export async function POST(request: NextRequest) {
       strategicAlignment: pillar_scores?.['strategic-alignment'] ?? 0,
     };
 
+    const safe = {
+      name: escapeHtml(name),
+      email: escapeHtml(email),
+      company: escapeHtml(company),
+      industry: escapeHtml(industry),
+      phone: escapeHtml(phone),
+      total_score: escapeHtml(total_score),
+      grade: escapeHtml(grade),
+      tier: escapeHtml(tier),
+      submitted_at: escapeHtml(submitted_at),
+    };
+
     await Promise.all([
       resend.emails.send({
         from: 'BitDepth AI <noreply@bitdepthaiconsulting.com>',
@@ -48,13 +69,13 @@ export async function POST(request: NextRequest) {
         subject: `New AI Readiness Assessment Lead - ${company}`,
         html: `
           <h2>New AI Readiness Assessment Lead</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Company:</strong> ${company}</p>
-          <p><strong>Industry:</strong> ${industry}</p>
-          ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ''}
-          <p><strong>AI Readiness Score:</strong> ${total_score}/100</p>
-          <p><strong>Grade:</strong> ${grade} - ${tier}</p>
+          <p><strong>Name:</strong> ${safe.name}</p>
+          <p><strong>Email:</strong> ${safe.email}</p>
+          <p><strong>Company:</strong> ${safe.company}</p>
+          <p><strong>Industry:</strong> ${safe.industry}</p>
+          ${phone ? `<p><strong>Phone:</strong> ${safe.phone}</p>` : ''}
+          <p><strong>AI Readiness Score:</strong> ${safe.total_score}/100</p>
+          <p><strong>Grade:</strong> ${safe.grade} - ${safe.tier}</p>
           <p><strong>Pillar Scores:</strong></p>
           <ul>
             <li>Data Quality: ${formattedScores.dataQuality}/20</li>
@@ -63,7 +84,7 @@ export async function POST(request: NextRequest) {
             <li>Team Readiness: ${formattedScores.teamReadiness}/20</li>
             <li>Strategic Alignment: ${formattedScores.strategicAlignment}/20</li>
           </ul>
-          <p><strong>Submitted:</strong> ${submitted_at}</p>
+          <p><strong>Submitted:</strong> ${safe.submitted_at}</p>
         `,
       }),
       resend.emails.send({
@@ -72,11 +93,11 @@ export async function POST(request: NextRequest) {
         subject: 'Your AI Readiness Assessment Results',
         html: `
           <h2>Your AI Readiness Assessment Results</h2>
-          <p>Hi ${name},</p>
+          <p>Hi ${safe.name},</p>
           <p>Thanks for completing the BitDepth AI Readiness Assessment.</p>
-          <p><strong>Total score:</strong> ${total_score}/100</p>
-          <p><strong>Grade:</strong> ${grade}</p>
-          <p><strong>Tier:</strong> ${tier}</p>
+          <p><strong>Total score:</strong> ${safe.total_score}/100</p>
+          <p><strong>Grade:</strong> ${safe.grade}</p>
+          <p><strong>Tier:</strong> ${safe.tier}</p>
           <p><strong>Pillar scores:</strong></p>
           <ul>
             <li>Data Quality: ${formattedScores.dataQuality}/20</li>

@@ -1,16 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
 import { Resend } from 'resend';
 
-interface LeadSubmission {
-  firstName: string;
-  email: string;
-  source: string;
-  timestamp: string;
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
 }
 
-async function sendConfirmationEmail(firstName: string, email: string): Promise<void> {
+async function sendConfirmationEmail(firstName: string, email: string, source: string): Promise<void> {
   const apiKey = process.env.RESEND_API_KEY;
 
   if (!apiKey) {
@@ -18,6 +18,9 @@ async function sendConfirmationEmail(firstName: string, email: string): Promise<
   }
 
   const resend = new Resend(apiKey);
+  const safeFirstName = escapeHtml(firstName);
+  const safeEmail = escapeHtml(email);
+  const safeSource = escapeHtml(source);
 
   await resend.emails.send({
     from: 'BitDepth AI <noreply@bitdepthaiconsulting.com>',
@@ -26,7 +29,7 @@ async function sendConfirmationEmail(firstName: string, email: string): Promise<
     subject: 'Your AI Readiness Checklist',
     html: `
       <h2>Your AI Readiness Checklist</h2>
-      <p>Hi ${firstName},</p>
+      <p>Hi ${safeFirstName},</p>
       <p>Thanks for requesting the BitDepth AI Readiness Checklist.</p>
       <p>
         You can download it here:
@@ -36,6 +39,8 @@ async function sendConfirmationEmail(firstName: string, email: string): Promise<
       </p>
       <p>If you have questions about where your business stands with AI, reply to this email and Blake will be happy to help.</p>
       <p>BitDepth AI Consulting</p>
+      <hr />
+      <p style="color:#888;font-size:12px;">Lead source: ${safeSource} &middot; Email: ${safeEmail}</p>
     `,
   });
 }
@@ -45,7 +50,6 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     const body = await request.json();
     const { firstName, email, source } = body;
 
-    // Validation
     if (!firstName || typeof firstName !== 'string' || firstName.trim().length === 0) {
       return NextResponse.json(
         { success: false, error: 'First name is required.' },
@@ -60,7 +64,6 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       );
     }
 
-    // Email format validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email.trim())) {
       return NextResponse.json(
@@ -71,54 +74,9 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 
     const normalizedEmail = email.trim().toLowerCase();
     const trimmedFirstName = firstName.trim();
+    const normalizedSource = typeof source === 'string' && source.trim().length > 0 ? source.trim() : 'unknown';
 
-    // Prepare data directory and file path
-    const dataDir = path.join(process.cwd(), 'data');
-    const leadsFile = path.join(dataDir, 'leads.json');
-
-    // Create data directory if it doesn't exist
-    if (!fs.existsSync(dataDir)) {
-      fs.mkdirSync(dataDir, { recursive: true });
-    }
-
-    // Read existing leads
-    let leads: LeadSubmission[] = [];
-    if (fs.existsSync(leadsFile)) {
-      try {
-        const fileContent = fs.readFileSync(leadsFile, 'utf-8');
-        leads = JSON.parse(fileContent);
-        if (!Array.isArray(leads)) {
-          leads = [];
-        }
-      } catch {
-        leads = [];
-      }
-    }
-
-    // Check for duplicate email (rate limiting)
-    const existingLead = leads.find((lead) => lead.email === normalizedEmail);
-    if (existingLead) {
-      return NextResponse.json(
-        { success: false, error: 'This email has already been submitted.' },
-        { status: 429 }
-      );
-    }
-
-    // Add new lead
-    const newLead: LeadSubmission = {
-      firstName: trimmedFirstName,
-      email: normalizedEmail,
-      source: source || 'unknown',
-      timestamp: new Date().toISOString(),
-    };
-
-    leads.push(newLead);
-
-    // Write to file
-    fs.writeFileSync(leadsFile, JSON.stringify(leads, null, 2));
-
-    // Send confirmation email
-    await sendConfirmationEmail(trimmedFirstName, normalizedEmail);
+    await sendConfirmationEmail(trimmedFirstName, normalizedEmail, normalizedSource);
 
     return NextResponse.json(
       { success: true },

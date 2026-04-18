@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Terms of Use | BitDepth AI Consulting',
   description: 'Review the standard terms that govern use of the BitDepth AI Consulting website and content.',
   alternates: {
-    canonical: '/terms-of-use'
+    canonical: 'https://bitdepthaiconsulting.com/terms-of-use'
   },
   robots: {
     index: true,
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Terms of Use | BitDepth AI Consulting',
     description: 'Review the terms and conditions for using the BitDepth AI Consulting website.',
-    url: '/terms-of-use',
+    url: 'https://bitdepthaiconsulting.com/terms-of-use',
     type: 'article',
     images: [
       {

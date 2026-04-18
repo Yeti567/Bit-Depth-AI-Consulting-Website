@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { AssessmentApp } from '@/components/assessment/AssessmentApp';
+import { PageShell } from '@/components/layout/page-shell';
 
 export const metadata: Metadata = {
   title: 'Free AI Readiness Assessment | BitDepth AI Consulting',
@@ -20,12 +21,12 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: '/ai-readiness-assessment'
+    canonical: 'https://bitdepthaiconsulting.com/ai-readiness-assessment'
   },
   openGraph: {
     title: 'AI Readiness Assessment | BitDepth AI Consulting',
     description: '25 questions. 8 minutes. Find out where your business stands on AI readiness and get a custom action plan.',
-    url: '/ai-readiness-assessment',
+    url: 'https://bitdepthaiconsulting.com/ai-readiness-assessment',
     siteName: 'BitDepth AI Consulting',
     type: 'website',
     locale: 'en_CA',
@@ -45,14 +46,11 @@ export const metadata: Metadata = {
     images: ['/images/Social Media Profile Card.webp'],
     creator: '@BitDepthAI',
   },
-  verification: {
-    google: 'your-google-verification-code',
-  },
 };
 
 export default function AIReadinessAssessmentPage() {
   return (
-    <>
+    <PageShell>
       <AssessmentApp />
       <script
         type="application/ld+json"
@@ -82,6 +80,6 @@ export default function AIReadinessAssessmentPage() {
           }),
         }}
       />
-    </>
+    </PageShell>
   );
 }

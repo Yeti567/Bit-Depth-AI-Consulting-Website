@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   description:
     'Vendor-neutral AI consulting for Canadian SMBs. Diagnose what is actually slowing your operations, then build AI systems that deliver measurable ROI.',
   alternates: {
-    canonical: '/reddit'
+    canonical: 'https://bitdepthaiconsulting.com/reddit'
   },
   openGraph: {
     title: 'Your business does not need more AI tools. It needs a system that works.',
     description:
       'Book a free 30-minute discovery call. No cost, no commitment, no vendor lock-in.',
-    url: '/reddit',
+    url: 'https://bitdepthaiconsulting.com/reddit',
     type: 'website',
     images: [
       {
