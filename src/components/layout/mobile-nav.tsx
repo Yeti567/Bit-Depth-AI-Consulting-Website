@@ -1,18 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Menu, X } from 'lucide-react';
 import { navigation } from '@/lib/site-data';
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const overlay = open ? (
     <div
@@ -103,7 +98,7 @@ export function MobileNav() {
       >
         {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
       </button>
-      {mounted && createPortal(overlay, document.body)}
+      {typeof document !== 'undefined' && createPortal(overlay, document.body)}
     </div>
   );
 }

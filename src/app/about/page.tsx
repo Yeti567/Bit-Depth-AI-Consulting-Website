@@ -63,7 +63,7 @@ export default function AboutPage() {
         <div className="container-shell grid gap-10 lg:grid-cols-[1.05fr,0.95fr] lg:items-center lg:gap-12">
           <ScrollReveal>
             <h1 className="text-4xl font-extrabold text-white md:text-6xl">
-              There's a Real Person Behind This Business. Here's Who He Is.
+              There&apos;s a Real Person Behind This Business. Here&apos;s Who He Is.
             </h1>
             <p className="mt-5 text-lg text-white/74">
               BitDepth AI Consulting is Blake Cowan one consultant, one standard of work, and no interest in wasting your time or your money.
@@ -81,19 +81,19 @@ export default function AboutPage() {
       <section className="section-offwhite section-space">
         <div className="container-shell max-w-4xl">
           <ScrollReveal>
-            <h2 className="text-3xl font-extrabold text-[var(--color-navy)] md:text-5xl">Blake's Story</h2>
+            <h2 className="text-3xl font-extrabold text-[var(--color-navy)] md:text-5xl">Blake&apos;s Story</h2>
             <div className="mt-6 space-y-4 text-lg text-[var(--color-slate)]">
               <p>
-                I didn't start my career in technology. I spent years working in construction and building, then in trucking, then as a safety consultant. In every one of those industries, I learned the same lesson: the details matter, corners cut early cost you more later, and if your foundation isn't solid, everything built on top of it is at risk.
+                I didn&apos;t start my career in technology. I spent years working in construction and building, then in trucking, then as a safety consultant. In every one of those industries, I learned the same lesson: the details matter, corners cut early cost you more later, and if your foundation isn&apos;t solid, everything built on top of it is at risk.
               </p>
               <p>
-                That thinking followed me into AI. For the last five years, I've worked behind the scenes doing AI consulting and implementation for companies mostly in the United States building the same systems, automations, and strategies I now offer through BitDepth. I wasn't selling. I was doing the work.
+                That thinking followed me into AI. For the last five years, I&apos;ve worked behind the scenes doing AI consulting and implementation for companies mostly in the United States building the same systems, automations, and strategies I now offer through BitDepth. I wasn&apos;t selling. I was doing the work.
               </p>
               <p>
-                I started BitDepth because I kept seeing the same gap: Canadian businesses were either being ignored by the big consulting firms, overcharged for work that didn't deliver, or sold software by people who called themselves AI consultants. Canada deserves better than that. That's why BitDepth exists.
+                I started BitDepth because I kept seeing the same gap: Canadian businesses were either being ignored by the big consulting firms, overcharged for work that didn&apos;t deliver, or sold software by people who called themselves AI consultants. Canada deserves better than that. That&apos;s why BitDepth exists.
               </p>
               <p>
-                I work remotely and serve clients across Canada, the United States, and internationally. Where you're located doesn't matter. What matters is whether we're the right fit for your business.
+                I work remotely and serve clients across Canada, the United States, and internationally. Where you&apos;re located doesn&apos;t matter. What matters is whether we&apos;re the right fit for your business.
               </p>
             </div>
             <div className="mt-8 flex items-center gap-4">
@@ -114,7 +114,7 @@ export default function AboutPage() {
           <ScrollReveal>
             <h2 className="text-3xl font-extrabold text-white md:text-5xl">Proudly Canadian</h2>
             <p className="mt-6 text-lg text-white/74">
-              BitDepth is a Canadian-owned and operated business. If you're a Canadian company, know that you're working with someone who understands this market, believes in it, and wants to see Canadian businesses succeed. We'll work with anyone, anywhere. but there's something personal about helping businesses in our own backyard.
+              BitDepth is a Canadian-owned and operated business. If you&apos;re a Canadian company, know that you&apos;re working with someone who understands this market, believes in it, and wants to see Canadian businesses succeed. We&apos;ll work with anyone, anywhere, but there&apos;s something personal about helping businesses in our own backyard.
             </p>
           </ScrollReveal>
         </div>
@@ -157,10 +157,10 @@ export default function AboutPage() {
         <div className="container-shell">
           <ScrollReveal className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-extrabold text-[var(--color-navy)] md:text-5xl">
-              If You're Serious About AI, Let's Have a Real Conversation.
+              If You&apos;re Serious About AI, Let&apos;s Have a Real Conversation.
             </h2>
             <p className="mt-6 text-lg text-[var(--color-slate)]">
-              Not a sales call. A straight conversation about where your business is, what you're trying to solve, and whether BitDepth is the right fit. If we're not, Blake will tell you that too.
+              Not a sales call. A straight conversation about where your business is, what you&apos;re trying to solve, and whether BitDepth is the right fit. If we&apos;re not, Blake will tell you that too.
             </p>
             <Link href="/contact" className="btn-primary mt-8">
               Book a Free Discovery Call

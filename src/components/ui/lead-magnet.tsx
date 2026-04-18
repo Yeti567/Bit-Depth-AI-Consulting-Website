@@ -57,7 +57,7 @@ export function LeadMagnet({ source }: LeadMagnetProps) {
       }
 
       setIsSubmitted(true);
-    } catch (err) {
+    } catch {
       setError('Failed to submit. Please try again.');
       setIsSubmitting(false);
     }

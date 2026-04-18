@@ -417,12 +417,12 @@ export default function HomePage() {
             </ScrollReveal>
             <ScrollReveal index={1}>
               <p className="text-lg leading-relaxed">
-                Before we recommend anything, we run a discovery audit. We tell you exactly where you stand. What's working, what isn't, and what needs to be fixed before AI will do you any good. That honesty is the most valuable thing we offer.
+                Before we recommend anything, we run a discovery audit. We tell you exactly where you stand. What&apos;s working, what isn&apos;t, and what needs to be fixed before AI will do you any good. That honesty is the most valuable thing we offer.
               </p>
             </ScrollReveal>
             <ScrollReveal index={2}>
               <p className="text-lg leading-relaxed">
-                BitDepth is lean by design. Blake works with a small group of trusted consultants, which keeps costs reasonable and means you're always dealing with someone who actually knows your file. We work with small and mid-sized businesses. That's not a limitation; it's a deliberate choice. These are the companies we understand best and where we can make the biggest difference.
+                BitDepth is lean by design. Blake works with a small group of trusted consultants, which keeps costs reasonable and means you&apos;re always dealing with someone who actually knows your file. We work with small and mid-sized businesses. That&apos;s not a limitation; it&apos;s a deliberate choice. These are the companies we understand best and where we can make the biggest difference.
               </p>
             </ScrollReveal>
           </div>
@@ -438,13 +438,13 @@ export default function HomePage() {
             <ScrollReveal className="rounded-xl border border-[var(--color-border)] bg-white p-6 shadow-[0_10px_28px_rgba(11,31,59,0.08)]">
               <h3 className="text-lg font-bold text-[var(--color-navy)]">What makes you qualified to do this?</h3>
               <p className="mt-3 text-[var(--color-slate)] leading-relaxed">
-                Blake has five years of hands-on AI implementation experience, working behind the scenes for companies across North America. He's done this work. He has not managed people who do it. When you hire BitDepth, you're getting that experience applied directly to your business.
+                Blake has five years of hands-on AI implementation experience, working behind the scenes for companies across North America. He&apos;s done this work. He has not managed people who do it. When you hire BitDepth, you&apos;re getting that experience applied directly to your business.
               </p>
             </ScrollReveal>
             <ScrollReveal index={1} className="rounded-xl border border-[var(--color-border)] bg-white p-6 shadow-[0_10px_28px_rgba(11,31,59,0.08)]">
               <h3 className="text-lg font-bold text-[var(--color-navy)]">What if the audit doesn&apos;t find anything useful?</h3>
               <p className="mt-3 text-[var(--color-slate)] leading-relaxed">
-                That's a real outcome and we'll tell you if it applies to you. If your business isn't ready for AI, you'll leave with a clear picture of what needs to be in place before it makes sense, plus a prioritized plan to get there. That roadmap has value on its own.
+                That&apos;s a real outcome and we&apos;ll tell you if it applies to you. If your business isn&apos;t ready for AI, you&apos;ll leave with a clear picture of what needs to be in place before it makes sense, plus a prioritized plan to get there. That roadmap has value on its own.
               </p>
             </ScrollReveal>
             <ScrollReveal index={2} className="rounded-xl border border-[var(--color-border)] bg-white p-6 shadow-[0_10px_28px_rgba(11,31,59,0.08)]">
@@ -456,7 +456,7 @@ export default function HomePage() {
             <ScrollReveal index={3} className="rounded-xl border border-[var(--color-border)] bg-white p-6 shadow-[0_10px_28px_rgba(11,31,59,0.08)]">
               <h3 className="text-lg font-bold text-[var(--color-navy)]">Is the outcome guaranteed?</h3>
               <p className="mt-3 text-[var(--color-slate)] leading-relaxed">
-                We guarantee the audit credit: 100% of what you pay for the audit is credited against any implementation you choose to move forward with. What we can't guarantee is a specific ROI, because that depends on your business, your data, and how you execute. What we can guarantee is that we'll be honest with you about what we find, including if the numbers don't justify building anything yet.
+                We guarantee the audit credit: 100% of what you pay for the audit is credited against any implementation you choose to move forward with. What we can&apos;t guarantee is a specific ROI, because that depends on your business, your data, and how you execute. What we can guarantee is that we&apos;ll be honest with you about what we find, including if the numbers don&apos;t justify building anything yet.
               </p>
             </ScrollReveal>
             <ScrollReveal index={4} className="rounded-xl border border-[var(--color-border)] bg-white p-6 shadow-[0_10px_28px_rgba(11,31,59,0.08)]">

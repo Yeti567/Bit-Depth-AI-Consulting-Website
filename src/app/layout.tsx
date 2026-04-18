@@ -5,6 +5,7 @@
 
 import type { Metadata, Viewport } from 'next';
 import { Barlow } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 
 const barlow = Barlow({
@@ -89,15 +90,15 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1KBYH51CSC"></script>
-        <script
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-1KBYH51CSC" strategy="afterInteractive" />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-
               gtag('config', 'G-1KBYH51CSC');
             `,
           }}

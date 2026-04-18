@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { trackLeadFormSubmitted } from '@/lib/assessment/analytics';
 
 interface LeadCaptureFormProps {
   totalScore: number;
@@ -38,23 +39,18 @@ export function LeadCaptureForm({ totalScore, grade }: LeadCaptureFormProps) {
         },
         body: JSON.stringify({
           ...data,
-          totalScore,
+          industry: 'Unknown',
+          total_score: totalScore,
           grade,
-          submittedAt: new Date().toISOString(),
+          tier: grade,
+          pillar_scores: {},
+          submitted_at: new Date().toISOString(),
         }),
       });
 
       if (response.ok) {
         setIsSubmitted(true);
-        
-        // Track GA4 event
-        if (typeof window !== 'undefined' && (window as any).gtag) {
-          (window as any).gtag('event', 'lead_form_submitted', {
-            event_category: 'ai_readiness',
-            total_score: totalScore,
-            grade: grade,
-          });
-        }
+        trackLeadFormSubmitted(totalScore, grade);
       } else {
         console.error('Failed to submit form');
         alert('There was an error submitting your information. Please try again.');
@@ -79,7 +75,7 @@ export function LeadCaptureForm({ totalScore, grade }: LeadCaptureFormProps) {
           Thanks, {submittedName}!
         </h3>
         <p className="text-gray-300">
-          We'll be in touch within one business day.
+          We&apos;ll be in touch within one business day.
         </p>
       </div>
     );

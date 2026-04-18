@@ -1,12 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Landing } from './Landing';
 import { QuestionFlow } from './QuestionFlow';
 import { Results } from './Results';
 import { LeadGate } from './LeadGate';
 import { QUESTIONS } from '@/lib/assessment/questions';
-import { PILLARS, PillarId } from '@/lib/assessment/pillars';
+import { PILLARS } from '@/lib/assessment/pillars';
 import { getTier } from '@/lib/assessment/tiers';
 import {
   trackAssessmentStarted,
@@ -16,21 +16,15 @@ import {
 
 type Screen = 'landing' | 'questions' | 'lead-gate' | 'results';
 
+function createInitialPillarScores(): Record<string, number> {
+  return Object.fromEntries(PILLARS.map((pillar) => [pillar.id, 0]));
+}
+
 export function AssessmentApp() {
   const [screen, setScreen] = useState<Screen>('landing');
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number>>({});
-  const [pillarScores, setPillarScores] = useState<Record<string, number>>({});
-  const [runningScore, setRunningScore] = useState(0);
-
-  // Initialize pillar scores
-  useEffect(() => {
-    const initialScores: Record<string, number> = {};
-    PILLARS.forEach(pillar => {
-      initialScores[pillar.id] = 0;
-    });
-    setPillarScores(initialScores);
-  }, []);
+  const [pillarScores, setPillarScores] = useState<Record<string, number>>(createInitialPillarScores);
 
   const handleStart = () => {
     trackAssessmentStarted();
@@ -49,10 +43,6 @@ export function AssessmentApp() {
     newPillarScores[currentQuestion.pillar] = (newPillarScores[currentQuestion.pillar] || 0) + score;
     setPillarScores(newPillarScores);
 
-    // Update running score
-    const newRunningScore = Object.values(newPillarScores).reduce((sum, score) => sum + score, 0);
-    setRunningScore(newRunningScore);
-
     // Track event
     trackQuestionAnswered(currentQuestionIndex + 1, currentQuestion.pillar, score);
 
@@ -67,7 +57,6 @@ export function AssessmentApp() {
   const handlePrevious = () => {
     if (currentQuestionIndex > 0) {
       const previousQuestion = QUESTIONS[currentQuestionIndex - 1];
-      const previousAnswer = answers[previousQuestion.id];
       
       // Remove the answer
       const newAnswers = { ...answers };
@@ -88,7 +77,6 @@ export function AssessmentApp() {
       });
 
       setPillarScores(newPillarScores);
-      setRunningScore(Object.values(newPillarScores).reduce((sum, score) => sum + score, 0));
       setCurrentQuestionIndex(currentQuestionIndex - 1);
     }
   };
@@ -112,16 +100,12 @@ export function AssessmentApp() {
   const handleRestart = () => {
     setCurrentQuestionIndex(0);
     setAnswers({});
-    const initialScores: Record<string, number> = {};
-    PILLARS.forEach(pillar => {
-      initialScores[pillar.id] = 0;
-    });
-    setPillarScores(initialScores);
-    setRunningScore(0);
+    setPillarScores(createInitialPillarScores());
     setScreen('landing');
   };
 
   const totalScore = Object.values(pillarScores).reduce((sum, score) => sum + score, 0);
+  const runningScore = totalScore;
   const tier = getTier(totalScore);
   const currentQuestion = QUESTIONS[currentQuestionIndex];
   const selectedScore = answers[currentQuestion.id] ?? null;

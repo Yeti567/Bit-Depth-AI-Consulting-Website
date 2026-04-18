@@ -39,44 +39,6 @@ export const metadata: Metadata = {
   }
 };
 
-const auditDeliverables = [
-  'Stakeholder interviews (4–12 people)',
-  'Technology stack inventory and integration map',
-  'Process mapping: 6–20 workflows',
-  'AI Readiness Scorecard (5 pillars)',
-  'Prioritized opportunity list: quick wins vs. strategic initiatives',
-  'ROI estimates for top 3–5 use cases',
-  '90-day AI implementation roadmap'
-];
-
-const automationUseCases = [
-  'Invoice processing and AP/AR automation',
-  'HR onboarding document preparation',
-  'Sales lead qualification and CRM enrichment',
-  'Customer service auto-response and ticket triage',
-  'Report generation from structured data',
-  'Scheduling, dispatch, and routing optimization'
-];
-
-const aiWorkers = [
-  {
-    title: 'Operations Assistant',
-    description: 'Answers internal questions, searches SOPs, and surfaces relevant procedures.'
-  },
-  {
-    title: 'Sales Intelligence Agent',
-    description: 'Qualifies leads, enriches CRM data, and drafts follow-up emails.'
-  },
-  {
-    title: 'Document Processing Agent',
-    description: 'Extracts, classifies, and routes documents automatically.'
-  },
-  {
-    title: 'Finance Reconciliation Agent',
-    description: 'Matches invoices to POs, flags exceptions, and routes for approval.'
-  }
-];
-
 export default function ServicesPage() {
   return (
     <PageShell>

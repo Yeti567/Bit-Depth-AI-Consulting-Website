@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { trackLeadFormSubmitted } from '@/lib/assessment/analytics';
 
 interface LeadGateProps {
   totalScore: number;
@@ -62,15 +63,7 @@ export function LeadGate({ totalScore, grade, tierLabel, pillarScores, onUnlock 
       });
 
       if (response.ok) {
-        // Track GA4 event
-        if (typeof window !== 'undefined' && (window as any).gtag) {
-          (window as any).gtag('event', 'lead_form_submitted', {
-            event_category: 'ai_readiness',
-            total_score: totalScore,
-            grade: grade,
-            industry: data.industry,
-          });
-        }
+        trackLeadFormSubmitted(totalScore, grade, data.industry);
       } else {
         console.warn('Lead submission returned non-OK status, but unlocking results anyway');
       }
@@ -216,7 +209,7 @@ export function LeadGate({ totalScore, grade, tierLabel, pillarScores, onUnlock 
             </button>
 
             <p className="text-center text-xs text-gray-500">
-              We'll email you a copy of your report. No spam. No pressure. Just your results.
+              We&apos;ll email you a copy of your report. No spam. No pressure. Just your results.
             </p>
           </form>
         </div>

@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import { PILLARS } from '@/lib/assessment/pillars';
 
 interface RadarChartProps {
@@ -8,14 +7,9 @@ interface RadarChartProps {
 }
 
 export function RadarChart({ pillarScores }: RadarChartProps) {
-  const [animate, setAnimate] = useState(false);
   const size = 280; // Reduced from 320 for better mobile fit
   const center = size / 2;
   const radius = 100; // Reduced from 120 proportionally
-
-  useEffect(() => {
-    setAnimate(true);
-  }, []);
 
   // Calculate points for the radar chart
   const getPoint = (index: number, value: number) => {
@@ -99,7 +93,7 @@ export function RadarChart({ pillarScores }: RadarChartProps) {
           stroke="#00D4FF"
           strokeWidth="2"
           style={{
-            opacity: animate ? 1 : 0,
+            opacity: 1,
             transition: 'opacity 0.8s ease-out',
           }}
         />
@@ -115,7 +109,7 @@ export function RadarChart({ pillarScores }: RadarChartProps) {
               r="6"
               fill="#00D4FF"
               style={{
-                opacity: animate ? 1 : 0,
+                opacity: 1,
                 transition: 'opacity 0.8s ease-out',
               }}
             />
