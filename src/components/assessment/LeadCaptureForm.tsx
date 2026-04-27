@@ -87,7 +87,7 @@ export function LeadCaptureForm({ totalScore, grade }: LeadCaptureFormProps) {
         Want a Deeper Analysis?
       </h3>
       <p className="text-gray-300 mb-6">
-        Book a free discovery call to discuss your AI readiness results and explore how BitDepth can help your business leverage AI.
+        Book a free discovery call to discuss your AI readiness results and explore how Bit Depth can help your business leverage AI.
       </p>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">

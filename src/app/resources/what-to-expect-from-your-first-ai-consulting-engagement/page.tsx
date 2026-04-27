@@ -7,23 +7,23 @@ import { buildArticleSchema } from '@/lib/schema';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'What to Expect From Your First AI Consulting Engagement | BitDepth AI',
+  title: 'What to Expect From Your First AI Consulting Engagement | Bit Depth AI',
   description:
-    'A step-by-step walkthrough of the BitDepth discovery, audit, roadmap, and implementation process for first-time AI consulting clients.',
+    'A step-by-step walkthrough of the Bit Depth discovery, audit, roadmap, and implementation process for first-time AI consulting clients.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/resources/what-to-expect-from-your-first-ai-consulting-engagement'
   },
   openGraph: {
-    title: 'What to Expect From Your First AI Consulting Engagement | BitDepth AI',
+    title: 'What to Expect From Your First AI Consulting Engagement | Bit Depth AI',
     description:
-      'A step-by-step walkthrough of the BitDepth discovery, audit, roadmap, and implementation process for first-time AI consulting clients.',
+      'A step-by-step walkthrough of the Bit Depth discovery, audit, roadmap, and implementation process for first-time AI consulting clients.',
     url: 'https://bitdepthaiconsulting.com/resources/what-to-expect-from-your-first-ai-consulting-engagement',
     type: 'article',
-    siteName: 'BitDepth AI Consulting',
+    siteName: 'Bit Depth AI Consulting',
     locale: 'en_CA',
     images: [
       {
-        url: '/images/resources-article-3.webp',
+        url: '/images/resources-article-3.webp.webp',
         width: 1200,
         height: 630,
         alt: 'AI consulting engagement process walkthrough'
@@ -33,10 +33,10 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'What to Expect From Your First AI Consulting Engagement | BitDepth AI',
+    title: 'What to Expect From Your First AI Consulting Engagement | Bit Depth AI',
     description:
-      'A step-by-step walkthrough of the BitDepth discovery, audit, roadmap, and implementation process for first-time AI consulting clients.',
-    images: ['/images/resources-article-3.webp']
+      'A step-by-step walkthrough of the Bit Depth discovery, audit, roadmap, and implementation process for first-time AI consulting clients.',
+    images: ['/images/resources-article-3.webp.webp']
   }
 };
 
@@ -47,7 +47,8 @@ export default function WhatToExpectPage() {
         {JSON.stringify(buildArticleSchema(
           'What to Expect From Your First AI Consulting Engagement',
           'https://bitdepthaiconsulting.com/resources/what-to-expect-from-your-first-ai-consulting-engagement',
-          'https://bitdepthaiconsulting.com/images/resources-article-3.webp'
+          'https://bitdepthaiconsulting.com/images/resources-article-3.webp.webp',
+          '2026-04-05'
         ))}
       </Script>
       <section className="section-navy dot-grid section-space">
@@ -84,7 +85,7 @@ export default function WhatToExpectPage() {
               />
             </div>
             <p className="text-lg leading-relaxed text-[var(--color-slate)]">
-              If you have never worked with an AI consultant before, you probably have questions. What does the process actually look like? Who needs to be involved from your team? What will you have at the end? And most importantly will it be worth it? This article walks you through exactly what a BitDepth engagement looks like from first call to final deliverable. No surprises. No fine print. Just a clear picture of what you are signing up for.
+              If you have never worked with an AI consultant before, you probably have questions. What does the process actually look like? Who needs to be involved from your team? What will you have at the end? And most importantly will it be worth it? This article walks you through exactly what a Bit Depth engagement looks like from first call to final deliverable. No surprises. No fine print. Just a clear picture of what you are signing up for.
             </p>
           </ScrollReveal>
 

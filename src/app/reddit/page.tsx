@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { RedditLandingClient } from './reddit-landing-client';
 
 export const metadata: Metadata = {
-  title: 'Book Your Free Discovery Call | BitDepth AI Consulting',
+  title: 'Book Your Free Discovery Call | Bit Depth AI Consulting',
   description:
     'Vendor-neutral AI consulting for Canadian SMBs. Diagnose what is actually slowing your operations, then build AI systems that deliver measurable ROI.',
   alternates: {

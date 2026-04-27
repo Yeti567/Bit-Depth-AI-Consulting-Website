@@ -11,36 +11,36 @@ import { buildOrganizationSchema, buildWebSiteSchema, buildLocalBusinessSchema }
 import Script from 'next/script';
  
 export const metadata: Metadata = {
-  title: 'AI Consulting for Canadian Businesses | BitDepth AI',
+  title: 'AI Consulting for Canadian Businesses | Bit Depth AI',
   description:
     'Vendor-neutral AI consulting for Canadian small and mid-sized businesses. We audit first, then build what fits. Starting at $5,000. Book a free discovery call.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/'
   },
   openGraph: {
-    title: 'AI Consulting for Canadian Businesses | BitDepth AI',
+    title: 'AI Consulting for Canadian Businesses | Bit Depth AI',
     description:
       'Vendor-neutral AI consulting for Canadian small and mid-sized businesses. We audit first, then build what fits. Starting at $5,000. Book a free discovery call.',
     url: 'https://bitdepthaiconsulting.com/',
     type: 'website',
-    siteName: 'BitDepth AI Consulting',
+    siteName: 'Bit Depth AI Consulting',
     locale: 'en_CA',
     images: [
       {
-        url: '/images/og-home.webp',
+        url: '/images/og-home.jpg',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting - Vendor-neutral AI consulting for Canadian SMBs'
+        alt: 'Bit Depth AI Consulting - Vendor-neutral AI consulting for Canadian SMBs'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Consulting for Canadian Businesses | BitDepth AI',
+    title: 'AI Consulting for Canadian Businesses | Bit Depth AI',
     description:
       'Vendor-neutral AI consulting for Canadian small and mid-sized businesses. We audit first, then build what fits. Starting at $5,000. Book a free discovery call.',
-    images: ['/images/og-home.webp']
+    images: ['/images/og-home.jpg']
   }
 };
 
@@ -148,7 +148,7 @@ const industries = [
 const homepageFaq = [
   {
     question: 'What makes you qualified to do this?',
-    answer: "Blake has five years of hands-on AI implementation experience, working behind the scenes for companies across North America. He's done this work. He has not managed people who do it. When you hire BitDepth, you're getting that experience applied directly to your business."
+    answer: "Blake has five years of hands-on AI implementation experience, working behind the scenes for companies across North America. He's done this work. He has not managed people who do it. When you hire Bit Depth, you're getting that experience applied directly to your business."
   },
   {
     question: "What if the audit doesn't find anything useful?",
@@ -264,7 +264,7 @@ export default function HomePage() {
             </span>
             <h2 className="mt-5 text-3xl font-extrabold text-white md:text-5xl">Your Audit Pays for Itself. Guaranteed.</h2>
             <p className="mt-5 max-w-3xl text-white/78">
-              When you complete an AI Opportunity Audit with BitDepth and move forward with any recommended implementation, we credit the full cost of your audit, dollar for dollar, against your project invoice. No conditions. No minimums. No fine print.
+              When you complete an AI Opportunity Audit with Bit Depth and move forward with any recommended implementation, we credit the full cost of your audit, dollar for dollar, against your project invoice. No conditions. No minimums. No fine print.
             </p>
             <p className="mt-4 max-w-3xl text-white/78">
               This is how confident we are in what the audit finds. If the numbers don&apos;t justify building, we&apos;ll tell you that too. You&apos;ll still have a clear operational roadmap worth far more than you paid for it.
@@ -357,7 +357,7 @@ export default function HomePage() {
       <section className="section-navy section-space">
         <div className="container-shell grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
           <ScrollReveal>
-            <h2 className="text-3xl font-extrabold text-white md:text-5xl">Why BitDepth AI Consulting</h2>
+            <h2 className="text-3xl font-extrabold text-white md:text-5xl">Why Bit Depth AI Consulting</h2>
             <div className="mt-8 space-y-4">
               {differentiators.map((item, index) => (
                 <ScrollReveal key={item.title} index={index} className="rounded-xl border border-[var(--color-border)] bg-white/5 p-5">
@@ -382,22 +382,22 @@ export default function HomePage() {
           <ScrollReveal className="max-w-3xl">
             <p className="eyebrow">Meet the Founder</p>
             <h2 className="mt-4 text-3xl font-extrabold md:text-5xl">Blake Cowan</h2>
-            <p className="mt-2 text-lg font-semibold text-[var(--color-cyan)]">Founder, BitDepth AI Consulting</p>
+            <p className="mt-2 text-lg font-semibold text-[var(--color-cyan)]">Founder, Bit Depth AI Consulting</p>
           </ScrollReveal>
           <div className="mt-8 max-w-3xl space-y-4 text-[var(--color-charcoal)]">
             <ScrollReveal>
               <p className="text-lg leading-relaxed">
-                Blake has spent the last five years working in AI. Not as a salesperson, but hands-on behind the scenes, doing the same work he now does for BitDepth clients. Most of that experience was built working with companies in the United States.
+                Blake has spent the last five years working in AI. Not as a salesperson, but hands-on behind the scenes, doing the same work he now does for Bit Depth clients. Most of that experience was built working with companies in the United States.
               </p>
             </ScrollReveal>
             <ScrollReveal index={1}>
               <p className="text-lg leading-relaxed">
-                He started BitDepth because he saw that Canada was underserved. Businesses here deserve access to the same quality of AI consulting that larger US markets take for granted.
+                He started Bit Depth because he saw that Canada was underserved. Businesses here deserve access to the same quality of AI consulting that larger US markets take for granted.
               </p>
             </ScrollReveal>
             <ScrollReveal index={2}>
               <p className="text-lg leading-relaxed">
-                One thing Blake learned early in his career: data and systems have to be solid before AI can do anything useful. Build on a shaky foundation and everything you build with AI becomes a house of cards. That belief shapes everything BitDepth does.
+                One thing Blake learned early in his career: data and systems have to be solid before AI can do anything useful. Build on a shaky foundation and everything you build with AI becomes a house of cards. That belief shapes everything Bit Depth does.
               </p>
             </ScrollReveal>
           </div>
@@ -422,7 +422,7 @@ export default function HomePage() {
             </ScrollReveal>
             <ScrollReveal index={2}>
               <p className="text-lg leading-relaxed">
-                BitDepth is lean by design. Blake works with a small group of trusted consultants, which keeps costs reasonable and means you&apos;re always dealing with someone who actually knows your file. We work with small and mid-sized businesses. That&apos;s not a limitation; it&apos;s a deliberate choice. These are the companies we understand best and where we can make the biggest difference.
+                Bit Depth is lean by design. Blake works with a small group of trusted consultants, which keeps costs reasonable and means you&apos;re always dealing with someone who actually knows your file. We work with small and mid-sized businesses. That&apos;s not a limitation; it&apos;s a deliberate choice. These are the companies we understand best and where we can make the biggest difference.
               </p>
             </ScrollReveal>
           </div>
@@ -438,7 +438,7 @@ export default function HomePage() {
             <ScrollReveal className="rounded-xl border border-[var(--color-border)] bg-white p-6 shadow-[0_10px_28px_rgba(11,31,59,0.08)]">
               <h3 className="text-lg font-bold text-[var(--color-navy)]">What makes you qualified to do this?</h3>
               <p className="mt-3 text-[var(--color-slate)] leading-relaxed">
-                Blake has five years of hands-on AI implementation experience, working behind the scenes for companies across North America. He&apos;s done this work. He has not managed people who do it. When you hire BitDepth, you&apos;re getting that experience applied directly to your business.
+                Blake has five years of hands-on AI implementation experience, working behind the scenes for companies across North America. He&apos;s done this work. He has not managed people who do it. When you hire Bit Depth, you&apos;re getting that experience applied directly to your business.
               </p>
             </ScrollReveal>
             <ScrollReveal index={1} className="rounded-xl border border-[var(--color-border)] bg-white p-6 shadow-[0_10px_28px_rgba(11,31,59,0.08)]">

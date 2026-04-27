@@ -6,23 +6,23 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'AI Consulting for Trades & Construction Companies | BitDepth AI',
+  title: 'AI Consulting for Trades & Construction Companies | Bit Depth AI',
   description:
     'Stop finding out which crews lost money at year end. Real-time job costing, automated documents, and safety compliance built for Canadian construction companies.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/industries/construction'
   },
   openGraph: {
-    title: 'AI Consulting for Trades & Construction Companies | BitDepth AI',
+    title: 'AI Consulting for Trades & Construction Companies | Bit Depth AI',
     description:
       'Stop finding out which crews lost money at year end. Real-time job costing, automated documents, and safety compliance built for Canadian construction companies.',
     url: 'https://bitdepthaiconsulting.com/industries/construction',
     type: 'website',
-    siteName: 'BitDepth AI Consulting',
+    siteName: 'Bit Depth AI Consulting',
     locale: 'en_CA',
     images: [
       {
-        url: '/images/og-construction.webp',
+        url: '/images/og-industries.jpg',
         width: 1200,
         height: 630,
         alt: 'AI consulting for Canadian construction and trades companies'
@@ -32,10 +32,10 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Consulting for Trades & Construction Companies | BitDepth AI',
+    title: 'AI Consulting for Trades & Construction Companies | Bit Depth AI',
     description:
       'Stop finding out which crews lost money at year end. Real-time job costing, automated documents, and safety compliance built for Canadian construction companies.',
-    images: ['/images/og-construction.webp']
+    images: ['/images/og-industries.jpg']
   }
 };
 

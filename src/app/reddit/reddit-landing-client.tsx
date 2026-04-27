@@ -161,10 +161,10 @@ export function RedditLandingClient() {
 
       <header className="fixed inset-x-0 top-0 z-50 border-b border-[#00B4D8]/20 bg-[#060F1F]/80 backdrop-blur-md">
         <div className="container-shell flex min-h-16 items-center justify-between gap-3 sm:min-h-20">
-          <Link href="/" className="relative block h-8 w-[140px] sm:h-10 sm:w-[180px]" aria-label="BitDepth AI Consulting home">
+          <Link href="/" className="relative block h-8 w-[140px] sm:h-10 sm:w-[180px]" aria-label="Bit Depth AI Consulting home">
             <Image
               src="/images/logo svg transparent.svg"
-              alt="BitDepth AI Consulting logo"
+              alt="Bit Depth AI Consulting logo"
               fill
               priority
               sizes="(max-width: 640px) 140px, 180px"
@@ -441,10 +441,10 @@ export function RedditLandingClient() {
 
       <footer className="border-t border-[#00B4D8]/20 bg-[#060F1F] py-8">
         <div className="container-shell flex flex-col gap-4 text-sm text-[#9CA3AF] md:flex-row md:items-center md:justify-between">
-          <Link href="/" className="relative block h-8 w-[140px] sm:h-10 sm:w-[180px]" aria-label="BitDepth AI Consulting home">
+          <Link href="/" className="relative block h-8 w-[140px] sm:h-10 sm:w-[180px]" aria-label="Bit Depth AI Consulting home">
             <Image
               src="/images/logo svg transparent.svg"
-              alt="BitDepth AI Consulting logo"
+              alt="Bit Depth AI Consulting logo"
               fill
               sizes="(max-width: 640px) 140px, 180px"
               className="object-contain object-left"
@@ -452,7 +452,7 @@ export function RedditLandingClient() {
           </Link>
 
           <div className="flex flex-col gap-2 md:items-end">
-            <p>© 2026 BitDepth AI Consulting Ltd. Barriere, British Columbia, Canada</p>
+            <p>© 2026 Bit Depth AI Consulting Ltd. Barriere, British Columbia, Canada</p>
             <div className="flex items-center gap-4">
               <Link href="/privacy-policy" className="transition hover:text-[#00D4FF]">
                 Privacy Policy

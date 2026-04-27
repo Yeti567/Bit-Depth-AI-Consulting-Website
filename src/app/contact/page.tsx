@@ -5,34 +5,34 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { ContactForm } from '@/components/ui/contact-form';
 
 export const metadata: Metadata = {
-  title: 'Book an AI Audit or Discovery Call | BitDepth AI Consulting',
+  title: 'Book an AI Audit or Discovery Call | Bit Depth AI Consulting',
   description:
-    'Ready to find out where AI can save your business time and money? Book an AI Opportunity Audit or a free discovery call with BitDepth AI Consulting.',
+    'Ready to find out where AI can save your business time and money? Book an AI Opportunity Audit or a free discovery call with Bit Depth AI Consulting.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/contact'
   },
   openGraph: {
-    title: 'Contact BitDepth AI Consulting',
+    title: 'Contact Bit Depth AI Consulting',
     description:
-      'Book your AI Opportunity Audit or a free 30-minute discovery call. BitDepth serves Canadian SMBs across BC and Alberta. No pressure if AI isn\'t the right move, we\'ll tell you.',
+      'Book your AI Opportunity Audit or a free 30-minute discovery call. Bit Depth serves Canadian SMBs across BC and Alberta. No pressure if AI isn\'t the right move, we\'ll tell you.',
     url: 'https://bitdepthaiconsulting.com/contact',
     type: 'website',
-    siteName: 'BitDepth AI Consulting',
+    siteName: 'Bit Depth AI Consulting',
     images: [
       {
         url: '/images/og-contact.jpg',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting contact social sharing card'
+        alt: 'Bit Depth AI Consulting contact social sharing card'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'Contact BitDepth AI Consulting',
+    title: 'Contact Bit Depth AI Consulting',
     description:
-      'Book your AI Opportunity Audit or a free 30-minute discovery call. BitDepth serves Canadian SMBs across BC and Alberta. No pressure if AI isn\'t the right move, we\'ll tell you.',
+      'Book your AI Opportunity Audit or a free 30-minute discovery call. Bit Depth serves Canadian SMBs across BC and Alberta. No pressure if AI isn\'t the right move, we\'ll tell you.',
     images: ['/images/og-contact.jpg']
   }
 };
@@ -75,7 +75,7 @@ export default function ContactPage() {
             </div>
             <div className="mt-6 text-sm text-[var(--color-slate)]">
               <p>Email: <Link href="mailto:blake@bitdepthaiconsulting.com" className="text-cyan">blake@bitdepthaiconsulting.com</Link></p>
-              <p className="mt-2">LinkedIn: <Link href="https://www.linkedin.com/company/bitdepth-ai-consulting/" target="_blank" rel="noreferrer" className="text-cyan">BitDepth AI Consulting</Link></p>
+              <p className="mt-2">LinkedIn: <Link href="https://www.linkedin.com/company/bitdepth-ai-consulting-ltd" target="_blank" rel="noreferrer" className="text-cyan">Bit Depth AI Consulting</Link></p>
             </div>
             <p className="mt-6 text-sm text-[var(--color-slate)]">
               No sales pressure. If AI isn&apos;t the right move for your business right now, we&apos;ll tell you.

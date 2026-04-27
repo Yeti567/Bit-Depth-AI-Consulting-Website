@@ -7,23 +7,23 @@ import { buildArticleSchema } from '@/lib/schema';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'The 5 Signs Your Business Is Ready for AI Automation | BitDepth AI',
+  title: 'The 5 Signs Your Business Is Ready for AI Automation | Bit Depth AI',
   description:
     'A practical checklist for Canadian business owners evaluating whether their business is ready for AI automation and where to start.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/resources/five-signs-your-business-is-ready-for-ai'
   },
   openGraph: {
-    title: 'The 5 Signs Your Business Is Ready for AI Automation | BitDepth AI',
+    title: 'The 5 Signs Your Business Is Ready for AI Automation | Bit Depth AI',
     description:
       'A practical checklist for Canadian business owners evaluating whether their business is ready for AI automation and where to start.',
     url: 'https://bitdepthaiconsulting.com/resources/five-signs-your-business-is-ready-for-ai',
     type: 'article',
-    siteName: 'BitDepth AI Consulting',
+    siteName: 'Bit Depth AI Consulting',
     locale: 'en_CA',
     images: [
       {
-        url: '/images/resources-article-2.webp',
+        url: '/images/resources-article-2.webp.webp',
         width: 1200,
         height: 630,
         alt: 'Business owner evaluating AI readiness checklist'
@@ -33,10 +33,10 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'The 5 Signs Your Business Is Ready for AI Automation | BitDepth AI',
+    title: 'The 5 Signs Your Business Is Ready for AI Automation | Bit Depth AI',
     description:
       'A practical checklist for Canadian business owners evaluating whether their business is ready for AI automation and where to start.',
-    images: ['/images/resources-article-2.webp']
+    images: ['/images/resources-article-2.webp.webp']
   }
 };
 
@@ -70,7 +70,8 @@ export default function FiveSignsReadyForAIPage() {
         {JSON.stringify(buildArticleSchema(
           'The 5 Signs Your Business Is Ready for AI Automation',
           'https://bitdepthaiconsulting.com/resources/five-signs-your-business-is-ready-for-ai',
-          'https://bitdepthaiconsulting.com/images/resources-article-2.webp'
+          'https://bitdepthaiconsulting.com/images/resources-article-2.webp.webp',
+          '2026-04-05'
         ))}
       </Script>
       <section className="section-navy dot-grid section-space">

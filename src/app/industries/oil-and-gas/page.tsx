@@ -6,23 +6,23 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'AI Consulting for Oil & Gas Services Companies | BitDepth AI',
+  title: 'AI Consulting for Oil & Gas Services Companies | Bit Depth AI',
   description:
     'Connect your field systems, get real-time crew cost visibility, and automate field tickets and compliance documentation. Built for Canadian oil and gas services companies.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/industries/oil-and-gas'
   },
   openGraph: {
-    title: 'AI Consulting for Oil & Gas Services Companies | BitDepth AI',
+    title: 'AI Consulting for Oil & Gas Services Companies | Bit Depth AI',
     description:
       'Connect your field systems, get real-time crew cost visibility, and automate field tickets and compliance documentation. Built for Canadian oil and gas services companies.',
     url: 'https://bitdepthaiconsulting.com/industries/oil-and-gas',
     type: 'website',
-    siteName: 'BitDepth AI Consulting',
+    siteName: 'Bit Depth AI Consulting',
     locale: 'en_CA',
     images: [
       {
-        url: '/images/og-oil-gas.webp',
+        url: '/images/og-oil-gas.jpg',
         width: 1200,
         height: 630,
         alt: 'AI consulting for Canadian oil and gas services companies'
@@ -32,10 +32,10 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Consulting for Oil & Gas Services Companies | BitDepth AI',
+    title: 'AI Consulting for Oil & Gas Services Companies | Bit Depth AI',
     description:
       'Connect your field systems, get real-time crew cost visibility, and automate field tickets and compliance documentation. Built for Canadian oil and gas services companies.',
-    images: ['/images/og-oil-gas.webp']
+    images: ['/images/og-oil-gas.jpg']
   }
 };
 

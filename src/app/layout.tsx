@@ -1,4 +1,4 @@
-// SEO implemented by Windsurf bitDepth AI Consulting bitdepthaiconsulting.com
+// SEO implemented by Windsurf Bit Depth AI Consulting bitdepthaiconsulting.com
 // Reminder: Submit sitemap at https://search.google.com/search-console
 // Reminder: Add phone number to LocalBusiness schema in homepage structured data (src/lib/schema.ts)
 // Reminder: Verify Open Graph images display correctly by testing URLs in LinkedIn Post Inspector at https://www.linkedin.com/post-inspector/
@@ -25,11 +25,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://bitdepthaiconsulting.com'),
   title: {
-    default: 'AI Consulting for Canadian Businesses | BitDepth AI Consulting',
+    default: 'AI Consulting for Canadian Businesses | Bit Depth AI Consulting',
     template: '%s'
   },
   description:
-    'BitDepth helps Canadian SMBs cut manual work, connect systems, and make better decisions with AI. We audit first, then build what fits. Starting at $5,000.',
+    'Bit Depth helps Canadian SMBs cut manual work, connect systems, and make better decisions with AI. We audit first, then build what fits. Starting at $5,000.',
   keywords: [
     'AI consulting for Canadian SMBs',
     'vendor-neutral AI consulting',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/'
   },
-  authors: [{ name: 'BitDepth AI Consulting Ltd.' }],
+  authors: [{ name: 'Bit Depth AI Consulting Ltd.' }],
   other: {
     'geo.region': 'CA-BC',
     'geo.placename': 'Barriere, British Columbia, Canada'
@@ -59,26 +59,26 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: 'AI Consulting for Canadian Businesses | BitDepth AI Consulting',
+    title: 'AI Consulting for Canadian Businesses | Bit Depth AI Consulting',
     description:
       'Vendor-neutral AI consulting for Canadian businesses from $2M to $50M. We diagnose operations, identify high-ROI opportunities, and build the right solution.',
     type: 'website',
     url: 'https://bitdepthaiconsulting.com',
-    siteName: 'BitDepth AI Consulting',
+    siteName: 'Bit Depth AI Consulting',
     locale: 'en_CA',
     images: [
       {
         url: '/images/og-home.jpg',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting social sharing card'
+        alt: 'Bit Depth AI Consulting social sharing card'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Consulting for Canadian Businesses | BitDepth AI Consulting',
+    title: 'AI Consulting for Canadian Businesses | Bit Depth AI Consulting',
     description:
       'Vendor-neutral AI consulting for Canadian businesses from $2M to $50M. We diagnose operations, identify high-ROI opportunities, and build the right solution.',
     images: ['/images/og-home.jpg']

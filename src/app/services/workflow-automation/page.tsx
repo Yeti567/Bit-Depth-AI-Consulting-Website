@@ -8,23 +8,23 @@ import { buildServiceSchema } from '@/lib/schema';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'AI Workflow Automation for Canadian Businesses | BitDepth AI',
+  title: 'AI Workflow Automation for Canadian Businesses | Bit Depth AI',
   description:
     'Replace repetitive manual processes with reliable automated systems. Invoice processing, scheduling, reporting, customer service, and more. Starting at $5,000.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/services/workflow-automation'
   },
   openGraph: {
-    title: 'AI Workflow Automation for Canadian Businesses | BitDepth AI',
+    title: 'AI Workflow Automation for Canadian Businesses | Bit Depth AI',
     description:
       'Replace repetitive manual processes with reliable automated systems. Invoice processing, scheduling, reporting, customer service, and more. Starting at $5,000.',
     url: 'https://bitdepthaiconsulting.com/services/workflow-automation',
     type: 'website',
-    siteName: 'BitDepth AI Consulting',
+    siteName: 'Bit Depth AI Consulting',
     locale: 'en_CA',
     images: [
       {
-        url: '/images/og-workflow-automation.webp',
+        url: '/images/og-services.jpg',
         width: 1200,
         height: 630,
         alt: 'AI workflow automation for Canadian businesses'
@@ -34,10 +34,10 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Workflow Automation for Canadian Businesses | BitDepth AI',
+    title: 'AI Workflow Automation for Canadian Businesses | Bit Depth AI',
     description:
       'Replace repetitive manual processes with reliable automated systems. Invoice processing, scheduling, reporting, customer service, and more. Starting at $5,000.',
-    images: ['/images/og-workflow-automation.webp']
+    images: ['/images/og-services.jpg']
   }
 };
 

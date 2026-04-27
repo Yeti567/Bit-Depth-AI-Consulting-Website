@@ -2,21 +2,56 @@
 
 import { useState } from 'react';
 
+type ContactFormFields = {
+  name: string;
+  company: string;
+  email: string;
+  phone: string;
+  message: string;
+};
+
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError('');
 
-    // Simulate form submission delay for UX
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const payload: ContactFormFields = {
+      name: String(formData.get('name') ?? '').trim(),
+      company: String(formData.get('company') ?? '').trim(),
+      email: String(formData.get('email') ?? '').trim(),
+      phone: String(formData.get('phone') ?? '').trim(),
+      message: String(formData.get('message') ?? '').trim(),
+    };
 
-    // The form uses mailto: action, so the browser will handle the actual submission
-    // We just show the success state after a brief delay
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json();
+      if (!response.ok) {
+        setError(data.error || 'We could not send your message right now. Please try again.');
+        return;
+      }
+
+      form.reset();
+      setIsSubmitted(true);
+    } catch {
+      setError('We could not send your message right now. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -42,9 +77,6 @@ export function ContactForm() {
   return (
     <form
       className="card-light mt-8 grid gap-4 p-6"
-      action="mailto:blake@bitdepthaiconsulting.com"
-      method="post"
-      encType="text/plain"
       onSubmit={handleSubmit}
     >
       <input
@@ -80,6 +112,7 @@ export function ContactForm() {
         required
         className="min-h-32 w-full rounded-lg border border-[var(--color-border)] px-4 py-3 text-sm focus:border-cyan focus:outline-none focus:ring-1 focus:ring-cyan"
       />
+      {error ? <p className="text-sm text-red-600">{error}</p> : null}
       <button
         type="submit"
         disabled={isSubmitting}

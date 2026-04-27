@@ -64,7 +64,7 @@ export async function POST(request: NextRequest) {
 
     await Promise.all([
       resend.emails.send({
-        from: 'BitDepth AI <noreply@bitdepthaiconsulting.com>',
+        from: 'Bit Depth AI <noreply@bitdepthaiconsulting.com>',
         to: 'blake@bitdepthaiconsulting.com',
         subject: `New AI Readiness Assessment Lead - ${company}`,
         html: `
@@ -88,13 +88,13 @@ export async function POST(request: NextRequest) {
         `,
       }),
       resend.emails.send({
-        from: 'BitDepth AI <noreply@bitdepthaiconsulting.com>',
+        from: 'Bit Depth AI <noreply@bitdepthaiconsulting.com>',
         to: email,
         subject: 'Your AI Readiness Assessment Results',
         html: `
           <h2>Your AI Readiness Assessment Results</h2>
           <p>Hi ${safe.name},</p>
-          <p>Thanks for completing the BitDepth AI Readiness Assessment.</p>
+          <p>Thanks for completing the Bit Depth AI Readiness Assessment.</p>
           <p><strong>Total score:</strong> ${safe.total_score}/100</p>
           <p><strong>Grade:</strong> ${safe.grade}</p>
           <p><strong>Tier:</strong> ${safe.tier}</p>
@@ -107,7 +107,7 @@ export async function POST(request: NextRequest) {
             <li>Strategic Alignment: ${formattedScores.strategicAlignment}/20</li>
           </ul>
           <p>If you want help turning these results into a practical roadmap, just reply to this email and we can set up a discovery call.</p>
-          <p>BitDepth AI Consulting</p>
+          <p>Bit Depth AI Consulting</p>
         `,
       }),
     ]);

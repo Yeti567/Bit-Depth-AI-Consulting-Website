@@ -6,23 +6,23 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'AI Consulting for Professional Services Firms | BitDepth AI',
+  title: 'AI Consulting for Professional Services Firms | Bit Depth AI',
   description:
     'Reduce no-shows, automate scheduling and intake, and reclaim billable hours. AI consulting for accountants, lawyers, engineers, and consultants across Canada.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/industries/professional-services'
   },
   openGraph: {
-    title: 'AI Consulting for Professional Services Firms | BitDepth AI',
+    title: 'AI Consulting for Professional Services Firms | Bit Depth AI',
     description:
       'Reduce no-shows, automate scheduling and intake, and reclaim billable hours. AI consulting for accountants, lawyers, engineers, and consultants across Canada.',
     url: 'https://bitdepthaiconsulting.com/industries/professional-services',
     type: 'website',
-    siteName: 'BitDepth AI Consulting',
+    siteName: 'Bit Depth AI Consulting',
     locale: 'en_CA',
     images: [
       {
-        url: '/images/og-professional-services.webp',
+        url: '/images/og-industries.jpg',
         width: 1200,
         height: 630,
         alt: 'AI consulting for Canadian professional services firms'
@@ -32,10 +32,10 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Consulting for Professional Services Firms | BitDepth AI',
+    title: 'AI Consulting for Professional Services Firms | Bit Depth AI',
     description:
       'Reduce no-shows, automate scheduling and intake, and reclaim billable hours. AI consulting for accountants, lawyers, engineers, and consultants across Canada.',
-    images: ['/images/og-professional-services.webp']
+    images: ['/images/og-industries.jpg']
   }
 };
 

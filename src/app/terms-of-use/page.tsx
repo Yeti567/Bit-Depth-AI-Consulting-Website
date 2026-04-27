@@ -4,8 +4,8 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { SectionHeading } from '@/components/ui/section-heading';
 
 export const metadata: Metadata = {
-  title: 'Terms of Use | BitDepth AI Consulting',
-  description: 'Review the standard terms that govern use of the BitDepth AI Consulting website and content.',
+  title: 'Terms of Use | Bit Depth AI Consulting',
+  description: 'Review the standard terms that govern use of the Bit Depth AI Consulting website and content.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/terms-of-use'
   },
@@ -14,8 +14,8 @@ export const metadata: Metadata = {
     follow: true
   },
   openGraph: {
-    title: 'Terms of Use | BitDepth AI Consulting',
-    description: 'Review the terms and conditions for using the BitDepth AI Consulting website.',
+    title: 'Terms of Use | Bit Depth AI Consulting',
+    description: 'Review the terms and conditions for using the Bit Depth AI Consulting website.',
     url: 'https://bitdepthaiconsulting.com/terms-of-use',
     type: 'article',
     images: [
@@ -23,14 +23,14 @@ export const metadata: Metadata = {
         url: '/images/Social Media Profile Card.webp',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting social sharing card'
+        alt: 'Bit Depth AI Consulting social sharing card'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Terms of Use | BitDepth AI Consulting',
-    description: 'Review the terms and conditions for using the BitDepth AI Consulting website.',
+    title: 'Terms of Use | Bit Depth AI Consulting',
+    description: 'Review the terms and conditions for using the Bit Depth AI Consulting website.',
     images: ['/images/Social Media Profile Card.webp']
   }
 };
@@ -44,7 +44,7 @@ export default function TermsOfUsePage() {
             <SectionHeading
               eyebrow="Legal"
               title="Terms of Use"
-              description="These Terms of Use govern your access to and use of the BitDepth AI Consulting Ltd. website."
+              description="These Terms of Use govern your access to and use of the Bit Depth AI Consulting Ltd. website."
             />
           </ScrollReveal>
 
@@ -77,7 +77,7 @@ export default function TermsOfUsePage() {
                 <div className="space-y-3">
                   <h2 className="text-2xl font-bold text-navy">4. Intellectual Property</h2>
                   <p>
-                    All website content, including text, graphics, branding, and design elements, is owned by or licensed to BitDepth AI Consulting Ltd. and protected by applicable intellectual property laws.
+                    All website content, including text, graphics, branding, and design elements, is owned by or licensed to Bit Depth AI Consulting Ltd. and protected by applicable intellectual property laws.
                   </p>
                 </div>
 
@@ -108,14 +108,14 @@ export default function TermsOfUsePage() {
                 <div className="space-y-3">
                   <h2 className="text-2xl font-bold text-navy">8. Limitation of Liability</h2>
                   <p>
-                    To the fullest extent permitted by law, BitDepth AI Consulting Ltd. is not liable for indirect, incidental, consequential, or special damages arising from use of this website.
+                    To the fullest extent permitted by law, Bit Depth AI Consulting Ltd. is not liable for indirect, incidental, consequential, or special damages arising from use of this website.
                   </p>
                 </div>
 
                 <div className="space-y-3">
                   <h2 className="text-2xl font-bold text-navy">9. Indemnification</h2>
                   <p>
-                    You agree to indemnify and hold harmless BitDepth AI Consulting Ltd. from claims arising from your misuse of the website or violation of these Terms of Use.
+                    You agree to indemnify and hold harmless Bit Depth AI Consulting Ltd. from claims arising from your misuse of the website or violation of these Terms of Use.
                   </p>
                 </div>
 
@@ -139,7 +139,7 @@ export default function TermsOfUsePage() {
                     For questions about these Terms of Use, contact:
                   </p>
                   <p>
-                    BitDepth AI Consulting Ltd.<br />
+                    Bit Depth AI Consulting Ltd.<br />
                     Email: blake@bitdepthaiconsulting.com
                   </p>
                 </div>

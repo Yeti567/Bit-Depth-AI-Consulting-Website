@@ -1,8 +1,8 @@
-# llms.txt for BitDepth AI Consulting
+# llms.txt for Bit Depth AI Consulting
 # This file helps LLM-based systems understand and reference our website
 
 # Site Overview
-BitDepth AI Consulting provides vendor-neutral AI consulting for Canadian small and mid-sized businesses ($2M-$50M revenue). 
+Bit Depth AI Consulting provides vendor-neutral AI consulting for Canadian small and mid-sized businesses ($2M-$50M revenue). 
 
 Core Offering: AI Opportunity Audit
 - 5-10 day structured assessment 
@@ -25,7 +25,7 @@ Core Offering: AI Opportunity Audit
 - Manufacturing
 - Professional Services (accountants, lawyers, engineers)
 
-# What Makes BitDepth Different
+# What Makes Bit Depth Different
 - Vendor-neutral (no software commissions)
 - Canadian-owned and operated (Barriere, BC)
 - Founder-led by Blake Cowan (5 years hands-on AI experience)

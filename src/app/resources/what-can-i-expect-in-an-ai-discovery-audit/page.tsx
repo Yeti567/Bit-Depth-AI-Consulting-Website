@@ -7,19 +7,19 @@ import { buildArticleSchema } from '@/lib/schema';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'What Can I Expect in an AI Discovery Audit? | BitDepth AI',
+  title: 'What Can I Expect in an AI Discovery Audit? | Bit Depth AI',
   description:
     'Wondering what an AI discovery audit involves? Learn the step-by-step process, who gets interviewed, and how ROI is calculated for your business.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/resources/what-can-i-expect-in-an-ai-discovery-audit'
   },
   openGraph: {
-    title: 'What Can I Expect in an AI Discovery Audit? | BitDepth AI',
+    title: 'What Can I Expect in an AI Discovery Audit? | Bit Depth AI',
     description:
       'Wondering what an AI discovery audit involves? Learn the step-by-step process, who gets interviewed, and how ROI is calculated for your business.',
     url: 'https://bitdepthaiconsulting.com/resources/what-can-i-expect-in-an-ai-discovery-audit',
     type: 'article',
-    siteName: 'BitDepth AI Consulting',
+    siteName: 'Bit Depth AI Consulting',
     locale: 'en_CA',
     images: [
       {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'What Can I Expect in an AI Discovery Audit? | BitDepth AI',
+    title: 'What Can I Expect in an AI Discovery Audit? | Bit Depth AI',
     description:
       'Wondering what an AI discovery audit involves? Learn the step-by-step process, who gets interviewed, and how ROI is calculated for your business.',
     images: ['/images/ai-discovery-audit-featured.webp.webp']
@@ -70,7 +70,8 @@ export default function AIDiscoveryAuditArticlePage() {
         {JSON.stringify(buildArticleSchema(
           'What Can I Expect in an AI Discovery Audit?',
           'https://bitdepthaiconsulting.com/resources/what-can-i-expect-in-an-ai-discovery-audit',
-          'https://bitdepthaiconsulting.com/images/ai-discovery-audit-featured.webp.webp'
+          'https://bitdepthaiconsulting.com/images/ai-discovery-audit-featured.webp.webp',
+          '2026-04-05'
         ))}
       </Script>
 

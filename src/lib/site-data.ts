@@ -75,7 +75,7 @@ export const industries = [
 
 export const testimonials = [
   {
-    quote: 'BitDepth brings structure to AI decision-making. They helped us separate real opportunities from vendor noise and focus on measurable outcomes.',
+    quote: 'Bit Depth brings structure to AI decision-making. They helped us separate real opportunities from vendor noise and focus on measurable outcomes.',
     name: 'Operations Leader',
     role: 'Canadian Industrial Business'
   },
@@ -98,7 +98,7 @@ export const faqs = [
   },
   {
     question: 'Do you sell software or implementation services tied to a specific vendor?',
-    answer: 'No. BitDepth is vendor-neutral, which means recommendations are based on fit, feasibility, and business outcomes rather than software commissions or partner quotas.'
+    answer: 'No. Bit Depth is vendor-neutral, which means recommendations are based on fit, feasibility, and business outcomes rather than software commissions or partner quotas.'
   },
   {
     question: 'Is this relevant if we are early in our AI journey?',
@@ -133,19 +133,19 @@ export const resources = [
     title: "Dead in the Field: Why Predictive Maintenance Can't Wait",
     category: 'Oil & Gas',
     href: '/resources/dead-in-the-field-why-predictive-maintenance-cant-wait',
-    description: 'Discover how predictive maintenance AI is transforming remote oilfield operations in Canada. BitDepth AI Consulting delivers practical, edge-ready solutions for oil and gas operators.'
+    description: 'Discover how predictive maintenance AI is transforming remote oilfield operations in Canada. Bit Depth AI Consulting delivers practical, edge-ready solutions for oil and gas operators.'
   },
   {
     title: 'Digital Twin Technology: How Smart Manufacturers Are Pulling Ahead',
     category: 'Manufacturing',
     href: '/resources/digital-twin-technology-how-smart-manufacturers-are-pulling-ahead',
-    description: 'Discover how digital twin technology is transforming smart manufacturing. BitDepth AI Consulting delivers industrial IoT, AI predictive maintenance, and Industry 4.0 solutions for manufacturers.'
+    description: 'Discover how digital twin technology is transforming smart manufacturing. Bit Depth AI Consulting delivers industrial IoT, AI predictive maintenance, and Industry 4.0 solutions for manufacturers.'
   },
   {
     title: 'See Every Defect: AI Computer Vision Quality Control',
     category: 'Manufacturing',
     href: '/resources/see-every-defect-ai-computer-vision-quality-control',
-    description: 'Discover how AI computer vision quality control helps manufacturers detect defects, eliminate rework, and achieve automated visual inspection at production speed. BitDepth AI Consulting delivers results.'
+    description: 'Discover how AI computer vision quality control helps manufacturers detect defects, eliminate rework, and achieve automated visual inspection at production speed. Bit Depth AI Consulting delivers results.'
   }
 ];
 

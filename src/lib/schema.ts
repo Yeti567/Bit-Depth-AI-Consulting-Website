@@ -3,6 +3,10 @@ export type FAQItem = {
   answer: string;
 };
 
+const SITE_URL = 'https://bitdepthaiconsulting.com';
+const BRAND_NAME = 'Bit Depth AI Consulting';
+const LOGO_URL = `${SITE_URL}/images/logo%20svg%20transparent.svg`;
+
 export function buildFaqSchema(faqs: FAQItem[]) {
   return {
     '@context': 'https://schema.org',
@@ -60,7 +64,7 @@ export function buildAIAuditFaqSchema() {
         name: 'What exactly are the terms of the audit credit guarantee?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'When you complete any tier of the BitDepth AI Opportunity Audit, the full fee you paid is credited against your first implementation engagement provided you sign your implementation agreement within 90 days of receiving your audit deliverables. The credit applies to any BitDepth implementation service: workflow automation, custom AI workers, AI strategy and roadmapping, or training and enablement. There is no minimum project size. The credit has no cash value, is non-transferable, and applies to your first implementation engagement only.'
+          text: 'When you complete any tier of the Bit Depth AI Opportunity Audit, the full fee you paid is credited against your first implementation engagement provided you sign your implementation agreement within 90 days of receiving your audit deliverables. The credit applies to any Bit Depth implementation service: workflow automation, custom AI workers, AI strategy and roadmapping, or training and enablement. There is no minimum project size. The credit has no cash value, is non-transferable, and applies to your first implementation engagement only.'
         }
       }
     ]
@@ -71,10 +75,10 @@ export function buildOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'BitDepth AI Consulting',
-    alternateName: 'BitDepth',
-    url: 'https://bitdepthaiconsulting.com',
-    logo: 'https://bitdepthaiconsulting.com/images/logo svg transparent.svg',
+    name: BRAND_NAME,
+    alternateName: 'Bit Depth',
+    url: SITE_URL,
+    logo: LOGO_URL,
     description: 'Vendor-neutral AI consulting for Canadian small and mid-sized businesses',
     founder: {
       '@type': 'Person',
@@ -115,11 +119,11 @@ export function buildWebSiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'BitDepth AI Consulting',
-    url: 'https://bitdepthaiconsulting.com',
+    name: BRAND_NAME,
+    url: SITE_URL,
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://bitdepthaiconsulting.com/resources?q={search_term_string}',
+      target: `${SITE_URL}/resources?q={search_term_string}`,
       'query-input': 'required name=search_term_string'
     }
   };
@@ -129,10 +133,10 @@ export function buildLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    name: 'BitDepth AI Consulting Ltd.',
+    name: 'Bit Depth AI Consulting Ltd.',
     description: 'Vendor-neutral AI consulting for Canadian small and mid-sized businesses. We identify where time and money are being lost, then implement the right AI solution.',
-    url: 'https://bitdepthaiconsulting.com',
-    logo: 'https://bitdepthaiconsulting.com/images/logo svg transparent.svg',
+    url: SITE_URL,
+    logo: LOGO_URL,
     founder: {
       '@type': 'Person',
       name: 'Blake Cowan'
@@ -174,8 +178,8 @@ export function buildServiceSchema(
     serviceType,
     provider: {
       '@type': 'Organization',
-      name: 'BitDepth AI Consulting',
-      url: 'https://bitdepthaiconsulting.com'
+      name: BRAND_NAME,
+      url: SITE_URL
     },
     areaServed: {
       '@type': 'Country',
@@ -191,7 +195,7 @@ export function buildArticleSchema(
   headline: string,
   url: string,
   imageUrl: string,
-  datePublished: string = new Date().toISOString().split('T')[0]
+  datePublished: string
 ) {
   return {
     '@context': 'https://schema.org',
@@ -203,11 +207,11 @@ export function buildArticleSchema(
     },
     publisher: {
       '@type': 'Organization',
-      name: 'BitDepth AI Consulting',
-      url: 'https://bitdepthaiconsulting.com',
+      name: BRAND_NAME,
+      url: SITE_URL,
       logo: {
         '@type': 'ImageObject',
-        url: 'https://bitdepthaiconsulting.com/images/logo svg transparent.svg'
+        url: LOGO_URL
       }
     },
     datePublished,

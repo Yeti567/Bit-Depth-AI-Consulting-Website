@@ -7,23 +7,23 @@ import { buildServiceSchema } from '@/lib/schema';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'AI Strategy & Roadmapping for Canadian Businesses | BitDepth AI',
+  title: 'AI Strategy & Roadmapping for Canadian Businesses | Bit Depth AI',
   description:
     'Not ready to build yet? Get a clear phased AI roadmap built around your actual systems, data, and budget. Vendor-neutral. Honest. Starting at $12,000.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/services/ai-strategy'
   },
   openGraph: {
-    title: 'AI Strategy & Roadmapping for Canadian Businesses | BitDepth AI',
+    title: 'AI Strategy & Roadmapping for Canadian Businesses | Bit Depth AI',
     description:
       'Not ready to build yet? Get a clear phased AI roadmap built around your actual systems, data, and budget. Vendor-neutral. Honest. Starting at $12,000.',
     url: 'https://bitdepthaiconsulting.com/services/ai-strategy',
     type: 'website',
-    siteName: 'BitDepth AI Consulting',
+    siteName: 'Bit Depth AI Consulting',
     locale: 'en_CA',
     images: [
       {
-        url: '/images/og-ai-strategy.webp',
+        url: '/images/og-strategy.jpg',
         width: 1200,
         height: 630,
         alt: 'AI strategy and roadmapping for Canadian businesses'
@@ -33,10 +33,10 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Strategy & Roadmapping for Canadian Businesses | BitDepth AI',
+    title: 'AI Strategy & Roadmapping for Canadian Businesses | Bit Depth AI',
     description:
       'Not ready to build yet? Get a clear phased AI roadmap built around your actual systems, data, and budget. Vendor-neutral. Honest. Starting at $12,000.',
-    images: ['/images/og-ai-strategy.webp']
+    images: ['/images/og-strategy.jpg']
   }
 };
 

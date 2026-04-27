@@ -7,10 +7,10 @@ export function SiteFooter() {
     <footer className="section-charcoal border-t border-[var(--color-border)] text-white">
       <div className="container-shell grid gap-12 py-16 md:grid-cols-[1.4fr,1fr,1fr,1fr]">
         <div className="space-y-4">
-          <Link href="/" className="relative block h-12 w-[220px]" aria-label="BitDepth AI Consulting home">
+          <Link href="/" className="relative block h-12 w-[220px]" aria-label="Bit Depth AI Consulting home">
             <Image
               src="/images/logo svg transparent.svg"
-              alt="BitDepth AI Consulting logo"
+              alt="Bit Depth AI Consulting logo"
               fill
               sizes="220px"
               className="object-contain object-left"
@@ -132,7 +132,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-white/10">
         <div className="container-shell flex flex-col gap-4 py-6 text-[13px] text-white/35 md:flex-row md:items-center md:justify-between">
-          <p>© 2026 BitDepth AI Consulting Ltd. | Barriere, British Columbia, Canada</p>
+          <p>© 2026 Bit Depth AI Consulting Ltd. | Barriere, British Columbia, Canada</p>
           <div className="flex flex-col gap-1 text-white/50 sm:flex-row sm:items-center sm:gap-3">
             <Link
               href="https://www.linkedin.com/company/bitdepth-ai-consulting-ltd"

@@ -6,23 +6,23 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'AI Consulting for Transportation & Logistics Companies | BitDepth AI',
+  title: 'AI Consulting for Transportation & Logistics Companies | Bit Depth AI',
   description:
     'Dispatch support, real-time cost tracking, driver self-service, and compliance automation for Canadian trucking and logistics companies. Starting with an AI audit.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/industries/transportation'
   },
   openGraph: {
-    title: 'AI Consulting for Transportation & Logistics Companies | BitDepth AI',
+    title: 'AI Consulting for Transportation & Logistics Companies | Bit Depth AI',
     description:
       'Dispatch support, real-time cost tracking, driver self-service, and compliance automation for Canadian trucking and logistics companies. Starting with an AI audit.',
     url: 'https://bitdepthaiconsulting.com/industries/transportation',
     type: 'website',
-    siteName: 'BitDepth AI Consulting',
+    siteName: 'Bit Depth AI Consulting',
     locale: 'en_CA',
     images: [
       {
-        url: '/images/og-transportation.webp',
+        url: '/images/og-industries.jpg',
         width: 1200,
         height: 630,
         alt: 'AI consulting for Canadian transportation and logistics companies'
@@ -32,10 +32,10 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Consulting for Transportation & Logistics Companies | BitDepth AI',
+    title: 'AI Consulting for Transportation & Logistics Companies | Bit Depth AI',
     description:
       'Dispatch support, real-time cost tracking, driver self-service, and compliance automation for Canadian trucking and logistics companies. Starting with an AI audit.',
-    images: ['/images/og-transportation.webp']
+    images: ['/images/og-industries.jpg']
   }
 };
 

@@ -7,23 +7,23 @@ import { buildServiceSchema } from '@/lib/schema';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'AI Training & Enablement for Business Teams | BitDepth AI',
+  title: 'AI Training & Enablement for Business Teams | Bit Depth AI',
   description:
     'Workshops, playbooks, and hands-on training to make sure your team actually uses the AI you have invested in. Delivered remotely or on-site across Canada.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/services/ai-training'
   },
   openGraph: {
-    title: 'AI Training & Enablement for Business Teams | BitDepth AI',
+    title: 'AI Training & Enablement for Business Teams | Bit Depth AI',
     description:
       'Workshops, playbooks, and hands-on training to make sure your team actually uses the AI you have invested in. Delivered remotely or on-site across Canada.',
     url: 'https://bitdepthaiconsulting.com/services/ai-training',
     type: 'website',
-    siteName: 'BitDepth AI Consulting',
+    siteName: 'Bit Depth AI Consulting',
     locale: 'en_CA',
     images: [
       {
-        url: '/images/og-ai-training.webp',
+        url: '/images/og-services.jpg',
         width: 1200,
         height: 630,
         alt: 'AI training and enablement for business teams'
@@ -33,10 +33,10 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Training & Enablement for Business Teams | BitDepth AI',
+    title: 'AI Training & Enablement for Business Teams | Bit Depth AI',
     description:
       'Workshops, playbooks, and hands-on training to make sure your team actually uses the AI you have invested in. Delivered remotely or on-site across Canada.',
-    images: ['/images/og-ai-training.webp']
+    images: ['/images/og-services.jpg']
   }
 };
 

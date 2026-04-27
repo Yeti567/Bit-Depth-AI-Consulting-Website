@@ -6,23 +6,23 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'AI Consulting for Manufacturing Companies | BitDepth AI',
+  title: 'AI Consulting for Manufacturing Companies | Bit Depth AI',
   description:
     'Phased predictive maintenance, production scheduling, and inventory optimization built around what your manufacturing business actually has, not what is ideal.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/industries/manufacturing'
   },
   openGraph: {
-    title: 'AI Consulting for Manufacturing Companies | BitDepth AI',
+    title: 'AI Consulting for Manufacturing Companies | Bit Depth AI',
     description:
       'Phased predictive maintenance, production scheduling, and inventory optimization built around what your manufacturing business actually has, not what is ideal.',
     url: 'https://bitdepthaiconsulting.com/industries/manufacturing',
     type: 'website',
-    siteName: 'BitDepth AI Consulting',
+    siteName: 'Bit Depth AI Consulting',
     locale: 'en_CA',
     images: [
       {
-        url: '/images/og-manufacturing.webp',
+        url: '/images/og-manufacturing.jpg',
         width: 1200,
         height: 630,
         alt: 'AI consulting for Canadian manufacturing companies'
@@ -32,10 +32,10 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Consulting for Manufacturing Companies | BitDepth AI',
+    title: 'AI Consulting for Manufacturing Companies | Bit Depth AI',
     description:
       'Phased predictive maintenance, production scheduling, and inventory optimization built around what your manufacturing business actually has, not what is ideal.',
-    images: ['/images/og-manufacturing.webp']
+    images: ['/images/og-manufacturing.jpg']
   }
 };
 

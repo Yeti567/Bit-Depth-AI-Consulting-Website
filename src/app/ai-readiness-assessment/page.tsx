@@ -3,12 +3,12 @@ import { AssessmentApp } from '@/components/assessment/AssessmentApp';
 import { PageShell } from '@/components/layout/page-shell';
 
 export const metadata: Metadata = {
-  title: 'Free AI Readiness Assessment | BitDepth AI Consulting',
+  title: 'Free AI Readiness Assessment | Bit Depth AI Consulting',
   description: 'Find out if your business is ready for AI. Take our free 8-minute assessment and get a personalized action plan with scores across 5 key business areas: Data Quality, Process Clarity, Technology Stack, Team Readiness, and Strategic Alignment.',
   keywords: 'AI readiness assessment, business AI readiness, AI adoption, AI strategy, digital transformation, AI consulting, Canadian business AI, SMB AI assessment',
-  authors: [{ name: 'BitDepth AI Consulting' }],
-  creator: 'BitDepth AI Consulting',
-  publisher: 'BitDepth AI Consulting',
+  authors: [{ name: 'Bit Depth AI Consulting' }],
+  creator: 'Bit Depth AI Consulting',
+  publisher: 'Bit Depth AI Consulting',
   robots: {
     index: true,
     follow: true,
@@ -24,10 +24,10 @@ export const metadata: Metadata = {
     canonical: 'https://bitdepthaiconsulting.com/ai-readiness-assessment'
   },
   openGraph: {
-    title: 'AI Readiness Assessment | BitDepth AI Consulting',
+    title: 'AI Readiness Assessment | Bit Depth AI Consulting',
     description: '25 questions. 8 minutes. Find out where your business stands on AI readiness and get a custom action plan.',
     url: 'https://bitdepthaiconsulting.com/ai-readiness-assessment',
-    siteName: 'BitDepth AI Consulting',
+    siteName: 'Bit Depth AI Consulting',
     type: 'website',
     locale: 'en_CA',
     images: [
@@ -35,16 +35,16 @@ export const metadata: Metadata = {
         url: '/images/Social Media Profile Card.webp',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting social sharing card'
+        alt: 'Bit Depth AI Consulting social sharing card'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Readiness Assessment | BitDepth AI Consulting',
+    title: 'AI Readiness Assessment | Bit Depth AI Consulting',
     description: '25 questions. 8 minutes. Find out where your business stands on AI readiness and get a custom action plan.',
     images: ['/images/Social Media Profile Card.webp'],
-    creator: '@BitDepthAI',
+    creator: '@Bit DepthAI',
   },
 };
 
@@ -69,7 +69,7 @@ export default function AIReadinessAssessmentPage() {
             description: 'Free AI readiness assessment for businesses. Evaluate your organization across 5 key areas: Data Quality, Process Clarity, Technology Stack, Team Readiness, and Strategic Alignment.',
             author: {
               '@type': 'Organization',
-              name: 'BitDepth AI Consulting',
+              name: 'Bit Depth AI Consulting',
               url: 'https://bitdepthaiconsulting.com',
             },
             aggregateRating: {

@@ -4,34 +4,34 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'Our AI Consulting Approach | Diagnose, Design, Implement | BitDepth AI',
+  title: 'Our AI Consulting Approach | Diagnose, Design, Implement | Bit Depth AI',
   description:
-    'BitDepth uses a structured three-phase methodology diagnose, Design, Implement. Every engagement starts with a discovery audit, not a sales pitch.',
+    'Bit Depth uses a structured three-phase methodology diagnose, Design, Implement. Every engagement starts with a discovery audit, not a sales pitch.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/ai-strategy'
   },
   openGraph: {
-    title: 'Our AI Consulting Methodology | BitDepth AI',
+    title: 'Our AI Consulting Methodology | Bit Depth AI',
     description:
-      'Learn how BitDepth\'s Diagnose → Design → Implement approach eliminates wasted AI spend and delivers measurable outcomes for Canadian SMBs.',
+      'Learn how Bit Depth\'s Diagnose → Design → Implement approach eliminates wasted AI spend and delivers measurable outcomes for Canadian SMBs.',
     url: 'https://bitdepthaiconsulting.com/ai-strategy',
     type: 'website',
-    siteName: 'BitDepth AI Consulting',
+    siteName: 'Bit Depth AI Consulting',
     images: [
       {
         url: '/images/og-strategy.jpg',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI consulting methodology social sharing card'
+        alt: 'Bit Depth AI consulting methodology social sharing card'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'Our AI Consulting Methodology | BitDepth AI',
+    title: 'Our AI Consulting Methodology | Bit Depth AI',
     description:
-      'Learn how BitDepth\'s Diagnose → Design → Implement approach eliminates wasted AI spend and delivers measurable outcomes for Canadian SMBs.',
+      'Learn how Bit Depth\'s Diagnose → Design → Implement approach eliminates wasted AI spend and delivers measurable outcomes for Canadian SMBs.',
     images: ['/images/og-strategy.jpg']
   }
 };

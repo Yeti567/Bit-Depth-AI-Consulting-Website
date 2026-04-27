@@ -20,6 +20,19 @@ function createInitialPillarScores(): Record<string, number> {
   return Object.fromEntries(PILLARS.map((pillar) => [pillar.id, 0]));
 }
 
+function calculatePillarScores(answers: Record<number, number>): Record<string, number> {
+  const nextScores = createInitialPillarScores();
+
+  Object.entries(answers).forEach(([questionId, score]) => {
+    const question = QUESTIONS.find((item) => item.id === Number(questionId));
+    if (question) {
+      nextScores[question.pillar] += score;
+    }
+  });
+
+  return nextScores;
+}
+
 export function AssessmentApp() {
   const [screen, setScreen] = useState<Screen>('landing');
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -33,20 +46,13 @@ export function AssessmentApp() {
 
   const handleAnswer = (score: number) => {
     const currentQuestion = QUESTIONS[currentQuestionIndex];
-    
-    // Update answers
+
     const newAnswers = { ...answers, [currentQuestion.id]: score };
     setAnswers(newAnswers);
+    setPillarScores(calculatePillarScores(newAnswers));
 
-    // Update pillar scores
-    const newPillarScores = { ...pillarScores };
-    newPillarScores[currentQuestion.pillar] = (newPillarScores[currentQuestion.pillar] || 0) + score;
-    setPillarScores(newPillarScores);
-
-    // Track event
     trackQuestionAnswered(currentQuestionIndex + 1, currentQuestion.pillar, score);
 
-    // Auto-advance after 300ms
     setTimeout(() => {
       if (currentQuestionIndex < QUESTIONS.length - 1) {
         setCurrentQuestionIndex(currentQuestionIndex + 1);
@@ -56,27 +62,6 @@ export function AssessmentApp() {
 
   const handlePrevious = () => {
     if (currentQuestionIndex > 0) {
-      const previousQuestion = QUESTIONS[currentQuestionIndex - 1];
-      
-      // Remove the answer
-      const newAnswers = { ...answers };
-      delete newAnswers[previousQuestion.id];
-      setAnswers(newAnswers);
-
-      // Recalculate pillar scores
-      const newPillarScores: Record<string, number> = {};
-      PILLARS.forEach(pillar => {
-        newPillarScores[pillar.id] = 0;
-      });
-
-      Object.entries(newAnswers).forEach(([questionId, score]) => {
-        const question = QUESTIONS.find(q => q.id === parseInt(questionId));
-        if (question) {
-          newPillarScores[question.pillar] += score;
-        }
-      });
-
-      setPillarScores(newPillarScores);
       setCurrentQuestionIndex(currentQuestionIndex - 1);
     }
   };

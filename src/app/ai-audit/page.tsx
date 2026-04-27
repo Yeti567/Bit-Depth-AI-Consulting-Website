@@ -8,36 +8,36 @@ import { CaseStudies } from '@/components/ui/case-studies';
 import { buildAIAuditFaqSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'AI Opportunity Audit for Canadian Businesses | BitDepth AI',
+  title: 'AI Opportunity Audit for Canadian Businesses | Bit Depth AI',
   description:
     "Find out exactly where AI will save your business time and money before you spend a dollar on it. Audits from $1,500. Full fee credited to any implementation.",
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/ai-audit'
   },
   openGraph: {
-    title: 'AI Opportunity Audit for Canadian Businesses | BitDepth AI',
+    title: 'AI Opportunity Audit for Canadian Businesses | Bit Depth AI',
     description:
       "Find out exactly where AI will save your business time and money before you spend a dollar on it. Audits from $1,500. Full fee credited to any implementation.",
     url: 'https://bitdepthaiconsulting.com/ai-audit',
     type: 'website',
-    siteName: 'BitDepth AI Consulting',
+    siteName: 'Bit Depth AI Consulting',
     locale: 'en_CA',
     images: [
       {
-        url: '/images/og-audit.webp',
+        url: '/images/og-audit.jpg',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Opportunity Audit for Canadian businesses'
+        alt: 'Bit Depth AI Opportunity Audit for Canadian businesses'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Opportunity Audit for Canadian Businesses | BitDepth AI',
+    title: 'AI Opportunity Audit for Canadian Businesses | Bit Depth AI',
     description:
       "Find out exactly where AI will save your business time and money before you spend a dollar on it. Audits from $1,500. Full fee credited to any implementation.",
-    images: ['/images/og-audit.webp']
+    images: ['/images/og-audit.jpg']
   }
 };
 
@@ -76,7 +76,7 @@ const faqs = [
   {
     question: 'What exactly are the terms of the audit credit guarantee?',
     answer:
-      'When you complete any tier of the BitDepth AI Opportunity Audit, the full fee you paid is credited against your first implementation engagement provided you sign your implementation agreement within 90 days of receiving your audit deliverables. The credit applies to any BitDepth implementation service: workflow automation, custom AI workers, AI strategy and roadmapping, or training and enablement. It is applied as a line-item deduction on your implementation invoice. There is no minimum project size. The credit has no cash value, is non-transferable, and applies to your first implementation engagement only. Extensions are handled on a case-by-case basis for clients with a legitimate reason for delay.'
+      'When you complete any tier of the Bit Depth AI Opportunity Audit, the full fee you paid is credited against your first implementation engagement provided you sign your implementation agreement within 90 days of receiving your audit deliverables. The credit applies to any Bit Depth implementation service: workflow automation, custom AI workers, AI strategy and roadmapping, or training and enablement. It is applied as a line-item deduction on your implementation invoice. There is no minimum project size. The credit has no cash value, is non-transferable, and applies to your first implementation engagement only. Extensions are handled on a case-by-case basis for clients with a legitimate reason for delay.'
   }
 ];
 
@@ -273,7 +273,7 @@ You Pay: $15,500`}
             </div>
 
             <p className="mt-6 text-center text-xs text-[var(--color-slate)]">
-              Credit applies to any BitDepth implementation service: workflow automation, custom AI workers, AI strategy, or training engagements. Credit
+              Credit applies to any Bit Depth implementation service: workflow automation, custom AI workers, AI strategy, or training engagements. Credit
               window is 90 days from audit delivery date. Credit is non-transferable and has no cash value. Valid on first implementation engagement only.
             </p>
           </ScrollReveal>

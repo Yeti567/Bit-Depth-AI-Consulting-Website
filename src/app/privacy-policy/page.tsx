@@ -4,8 +4,8 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { SectionHeading } from '@/components/ui/section-heading';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | BitDepth AI Consulting',
-  description: 'Review the BitDepth AI Consulting privacy policy and our approach to collecting, using, and protecting personal information.',
+  title: 'Privacy Policy | Bit Depth AI Consulting',
+  description: 'Review the Bit Depth AI Consulting privacy policy and our approach to collecting, using, and protecting personal information.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/privacy-policy'
   },
@@ -14,8 +14,8 @@ export const metadata: Metadata = {
     follow: true
   },
   openGraph: {
-    title: 'Privacy Policy | BitDepth AI Consulting',
-    description: 'Review the BitDepth AI Consulting privacy policy and our approach to handling personal information.',
+    title: 'Privacy Policy | Bit Depth AI Consulting',
+    description: 'Review the Bit Depth AI Consulting privacy policy and our approach to handling personal information.',
     url: 'https://bitdepthaiconsulting.com/privacy-policy',
     type: 'article',
     images: [
@@ -23,14 +23,14 @@ export const metadata: Metadata = {
         url: '/images/Social Media Profile Card.webp',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting social sharing card'
+        alt: 'Bit Depth AI Consulting social sharing card'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Privacy Policy | BitDepth AI Consulting',
-    description: 'Review the BitDepth AI Consulting privacy policy and our approach to handling personal information.',
+    title: 'Privacy Policy | Bit Depth AI Consulting',
+    description: 'Review the Bit Depth AI Consulting privacy policy and our approach to handling personal information.',
     images: ['/images/Social Media Profile Card.webp']
   }
 };
@@ -44,7 +44,7 @@ export default function PrivacyPolicyPage() {
             <SectionHeading
               eyebrow="Privacy"
               title="Privacy Policy"
-              description="This Privacy Policy describes how BitDepth AI Consulting Ltd. collects, uses, and protects personal information when you use this website."
+              description="This Privacy Policy describes how Bit Depth AI Consulting Ltd. collects, uses, and protects personal information when you use this website."
             />
           </ScrollReveal>
           <ScrollReveal className="mt-10" index={1}>
@@ -57,7 +57,7 @@ export default function PrivacyPolicyPage() {
                 <div className="space-y-3">
                   <h2 className="text-2xl font-bold text-navy">1. Who We Are</h2>
                   <p>
-                    BitDepth AI Consulting Ltd. (“BitDepth,” “we,” “our,” or “us”) provides consulting services and educational content through this website.
+                    Bit Depth AI Consulting Ltd. (“Bit Depth,” “we,” “our,” or “us”) provides consulting services and educational content through this website.
                   </p>
                 </div>
 
@@ -139,7 +139,7 @@ export default function PrivacyPolicyPage() {
                     If you have questions about this Privacy Policy or your personal information, contact:
                   </p>
                   <p>
-                    BitDepth AI Consulting Ltd.<br />
+                    Bit Depth AI Consulting Ltd.<br />
                     Email: blake@bitdepthaiconsulting.com
                   </p>
                 </div>

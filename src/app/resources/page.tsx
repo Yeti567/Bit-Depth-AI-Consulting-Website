@@ -6,23 +6,23 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { LeadMagnet } from '@/components/ui/lead-magnet';
 
 export const metadata: Metadata = {
-  title: 'AI Resources for Canadian Business Owners | BitDepth AI',
+  title: 'AI Resources for Canadian Business Owners | Bit Depth AI',
   description:
     'Practical guides and articles to help Canadian business owners understand AI before they invest in it. No hype, no jargon just straight answers.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/resources'
   },
   openGraph: {
-    title: 'AI Resources for Canadian Business Owners | BitDepth AI',
+    title: 'AI Resources for Canadian Business Owners | Bit Depth AI',
     description:
       'Practical guides and articles to help Canadian business owners understand AI before they invest in it. No hype, no jargon just straight answers.',
     url: 'https://bitdepthaiconsulting.com/resources',
     type: 'website',
-    siteName: 'BitDepth AI Consulting',
+    siteName: 'Bit Depth AI Consulting',
     locale: 'en_CA',
     images: [
       {
-        url: '/images/og-resources.webp',
+        url: '/images/og-resources.jpg',
         width: 1200,
         height: 630,
         alt: 'AI resources for Canadian business owners'
@@ -32,10 +32,10 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Resources for Canadian Business Owners | BitDepth AI',
+    title: 'AI Resources for Canadian Business Owners | Bit Depth AI',
     description:
       'Practical guides and articles to help Canadian business owners understand AI before they invest in it. No hype, no jargon just straight answers.',
-    images: ['/images/og-resources.webp']
+    images: ['/images/og-resources.jpg']
   }
 };
 

@@ -6,36 +6,36 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'AI Consulting by Industry | Trades, Oil & Gas, Trucking | BitDepth AI',
+  title: 'AI Consulting by Industry | Trades, Oil & Gas, Trucking | Bit Depth AI',
   description:
     'Industry-specific AI consulting for trades, construction, transportation, field services, oil and gas, manufacturing, and professional services across Canada.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/industries'
   },
   openGraph: {
-    title: 'AI Consulting by Industry | Trades, Oil & Gas, Trucking | BitDepth AI',
+    title: 'AI Consulting by Industry | Trades, Oil & Gas, Trucking | Bit Depth AI',
     description:
       'Industry-specific AI consulting for trades, construction, transportation, field services, oil and gas, manufacturing, and professional services across Canada.',
     url: 'https://bitdepthaiconsulting.com/industries',
     type: 'website',
-    siteName: 'BitDepth AI Consulting',
+    siteName: 'Bit Depth AI Consulting',
     locale: 'en_CA',
     images: [
       {
-        url: '/images/og-industries.webp',
+        url: '/images/og-industries.jpg',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting industries - trades, construction, transportation, oil and gas'
+        alt: 'Bit Depth AI Consulting industries - trades, construction, transportation, oil and gas'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Consulting by Industry | Trades, Oil & Gas, Trucking | BitDepth AI',
+    title: 'AI Consulting by Industry | Trades, Oil & Gas, Trucking | Bit Depth AI',
     description:
       'Industry-specific AI consulting for trades, construction, transportation, field services, oil and gas, manufacturing, and professional services across Canada.',
-    images: ['/images/og-industries.webp']
+    images: ['/images/og-industries.jpg']
   }
 };
 

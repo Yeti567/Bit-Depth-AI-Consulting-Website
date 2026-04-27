@@ -7,23 +7,23 @@ import { buildArticleSchema } from '@/lib/schema';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: "You Don't Have an AI Problem you Have a Systems Problem | BitDepth AI",
+  title: "You Don't Have an AI Problem you Have a Systems Problem | Bit Depth AI",
   description:
     'Disconnected systems are the real reason AI fails in most businesses. Here is what to fix before you invest in any AI tool or automation.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/resources/you-dont-have-an-ai-problem'
   },
   openGraph: {
-    title: "You Don't Have an AI Problem you Have a Systems Problem | BitDepth AI",
+    title: "You Don't Have an AI Problem you Have a Systems Problem | Bit Depth AI",
     description:
       'Disconnected systems are the real reason AI fails in most businesses. Here is what to fix before you invest in any AI tool or automation.',
     url: 'https://bitdepthaiconsulting.com/resources/you-dont-have-an-ai-problem',
     type: 'article',
-    siteName: 'BitDepth AI Consulting',
+    siteName: 'Bit Depth AI Consulting',
     locale: 'en_CA',
     images: [
       {
-        url: '/images/resources-article-1.webp',
+        url: '/images/resources-article-1.webp.webp',
         width: 1200,
         height: 630,
         alt: 'Disconnected systems create operational drag that prevents AI success'
@@ -33,10 +33,10 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: "You Don't Have an AI Problem you Have a Systems Problem | BitDepth AI",
+    title: "You Don't Have an AI Problem you Have a Systems Problem | Bit Depth AI",
     description:
       'Disconnected systems are the real reason AI fails in most businesses. Here is what to fix before you invest in any AI tool or automation.',
-    images: ['/images/resources-article-1.webp']
+    images: ['/images/resources-article-1.webp.webp']
   }
 };
 
@@ -66,7 +66,8 @@ export default function YouDontHaveAnAIProblemPage() {
         {JSON.stringify(buildArticleSchema(
           "You Don't Have an AI Problem you Have a Systems Problem",
           'https://bitdepthaiconsulting.com/resources/you-dont-have-an-ai-problem',
-          'https://bitdepthaiconsulting.com/images/resources-article-1.webp'
+          'https://bitdepthaiconsulting.com/images/resources-article-1.webp.webp',
+          '2026-04-05'
         ))}
       </Script>
       <section className="section-navy dot-grid section-space">
@@ -154,7 +155,7 @@ export default function YouDontHaveAnAIProblemPage() {
           <ScrollReveal className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-extrabold text-white md:text-4xl">The Audit Starts Here</h2>
             <p className="mt-5 text-white/74">
-              The first thing we do in every BitDepth engagement is assess the systems and data foundation. We tell you what is solid, what is fragile, and what needs to be addressed before AI will deliver any real value. If you are not sure where your business stands, that is exactly what the audit is for.
+              The first thing we do in every Bit Depth engagement is assess the systems and data foundation. We tell you what is solid, what is fragile, and what needs to be addressed before AI will deliver any real value. If you are not sure where your business stands, that is exactly what the audit is for.
             </p>
             <Link href="/ai-audit" className="btn-primary mt-8">
               Book Your AI Audit

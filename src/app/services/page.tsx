@@ -6,36 +6,36 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { ServiceAnchorNav } from '@/components/service-anchor-nav';
 
 export const metadata: Metadata = {
-  title: 'AI Consulting Services for Canadian SMBs | BitDepth AI',
+  title: 'AI Consulting Services for Canadian SMBs | Bit Depth AI',
   description:
     'Five AI consulting services built for Canadian businesses: from discovery audits to workflow automation, custom AI workers, strategy, and training. Starting at $1,500.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/services'
   },
   openGraph: {
-    title: 'AI Consulting Services for Canadian SMBs | BitDepth AI',
+    title: 'AI Consulting Services for Canadian SMBs | Bit Depth AI',
     description:
       'Five AI consulting services built for Canadian businesses: from discovery audits to workflow automation, custom AI workers, strategy, and training. Starting at $1,500.',
     url: 'https://bitdepthaiconsulting.com/services',
     type: 'website',
-    siteName: 'BitDepth AI Consulting',
+    siteName: 'Bit Depth AI Consulting',
     locale: 'en_CA',
     images: [
       {
-        url: '/images/og-services.webp',
+        url: '/images/og-services.jpg',
         width: 1200,
         height: 630,
-        alt: 'BitDepth AI Consulting services for Canadian SMBs'
+        alt: 'Bit Depth AI Consulting services for Canadian SMBs'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Consulting Services for Canadian SMBs | BitDepth AI',
+    title: 'AI Consulting Services for Canadian SMBs | Bit Depth AI',
     description:
       'Five AI consulting services built for Canadian businesses: from discovery audits to workflow automation, custom AI workers, strategy, and training. Starting at $1,500.',
-    images: ['/images/og-services.webp']
+    images: ['/images/og-services.jpg']
   }
 };
 
@@ -297,7 +297,7 @@ export default function ServicesPage() {
           <ScrollReveal className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-extrabold text-white md:text-5xl">Not Sure Where to Start?</h2>
             <p className="mt-5 text-white/74">
-              That&apos;s exactly what the audit is for. Every BitDepth engagement begins with a structured discovery because guessing at the right solution is how businesses waste their first AI budget. The audit costs less than a bad hire, takes less than two weeks, and tells you exactly what to build next. And if you move forward with us, the fee comes straight off your project.
+              That&apos;s exactly what the audit is for. Every Bit Depth engagement begins with a structured discovery because guessing at the right solution is how businesses waste their first AI budget. The audit costs less than a bad hire, takes less than two weeks, and tells you exactly what to build next. And if you move forward with us, the fee comes straight off your project.
             </p>
             <Link href="/ai-audit" className="btn-primary mt-8">
               Book Your AI Audit

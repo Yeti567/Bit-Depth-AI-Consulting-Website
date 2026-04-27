@@ -7,23 +7,23 @@ import { buildServiceSchema } from '@/lib/schema';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'Custom AI Workers for Canadian SMBs | BitDepth AI',
+  title: 'Custom AI Workers for Canadian SMBs | Bit Depth AI',
   description:
     'Purpose-built AI agents that perform defined job functions inside your business customer service, document processing, sales qualification, and finance reconciliation.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/services/ai-workers'
   },
   openGraph: {
-    title: 'Custom AI Workers for Canadian SMBs | BitDepth AI',
+    title: 'Custom AI Workers for Canadian SMBs | Bit Depth AI',
     description:
       'Purpose-built AI agents that perform defined job functions inside your business customer service, document processing, sales qualification, and finance reconciliation.',
     url: 'https://bitdepthaiconsulting.com/services/ai-workers',
     type: 'website',
-    siteName: 'BitDepth AI Consulting',
+    siteName: 'Bit Depth AI Consulting',
     locale: 'en_CA',
     images: [
       {
-        url: '/images/og-ai-workers.webp',
+        url: '/images/og-services.jpg',
         width: 1200,
         height: 630,
         alt: 'Custom AI workers for Canadian SMBs'
@@ -33,10 +33,10 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'Custom AI Workers for Canadian SMBs | BitDepth AI',
+    title: 'Custom AI Workers for Canadian SMBs | Bit Depth AI',
     description:
       'Purpose-built AI agents that perform defined job functions inside your business customer service, document processing, sales qualification, and finance reconciliation.',
-    images: ['/images/og-ai-workers.webp']
+    images: ['/images/og-services.jpg']
   }
 };
 
