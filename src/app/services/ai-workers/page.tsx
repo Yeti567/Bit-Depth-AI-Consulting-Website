@@ -1,22 +1,27 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
-import { PageShell } from '@/components/layout/page-shell';
-import { ScrollReveal } from '@/components/ui/scroll-reveal';
-import { buildServiceSchema } from '@/lib/schema';
 import Script from 'next/script';
+import { PageShell } from '@/components/layout/page-shell';
+import { buildServiceSchema } from '@/lib/schema';
+import {
+  ServiceHero,
+  ProblemBlock,
+  ListBlock,
+  ProcessBlock,
+  PricingBlock,
+  FinalCTA,
+  type ListItem,
+  type ProcessStep
+} from '@/components/ui/service-page-blocks';
 
 export const metadata: Metadata = {
   title: 'Custom AI Workers for Canadian SMBs | Bit Depth AI',
   description:
-    'Purpose-built AI agents that perform defined job functions inside your business customer service, document processing, sales qualification, and finance reconciliation.',
-  alternates: {
-    canonical: 'https://bitdepthaiconsulting.com/services/ai-workers'
-  },
+    'Purpose-built AI agents that perform defined job functions inside your business: customer service, document processing, sales qualification, and finance reconciliation.',
+  alternates: { canonical: 'https://bitdepthaiconsulting.com/services/ai-workers' },
   openGraph: {
     title: 'Custom AI Workers for Canadian SMBs | Bit Depth AI',
     description:
-      'Purpose-built AI agents that perform defined job functions inside your business customer service, document processing, sales qualification, and finance reconciliation.',
+      'Purpose-built AI agents that perform defined job functions inside your business: customer service, document processing, sales qualification, and finance reconciliation.',
     url: 'https://bitdepthaiconsulting.com/services/ai-workers',
     type: 'website',
     siteName: 'Bit Depth AI Consulting',
@@ -35,46 +40,59 @@ export const metadata: Metadata = {
     site: '@bitdepthai',
     title: 'Custom AI Workers for Canadian SMBs | Bit Depth AI',
     description:
-      'Purpose-built AI agents that perform defined job functions inside your business customer service, document processing, sales qualification, and finance reconciliation.',
+      'Purpose-built AI agents that perform defined job functions inside your business.',
     images: ['/images/og-services.jpg']
   }
 };
 
-const aiWorkerExamples = [
+const aiWorkerExamples: ListItem[] = [
   {
     title: 'Operations Assistant',
-    whatItDoes:
-      'Answers internal questions from staff, searches your SOPs and policy documents, surfaces relevant procedures, and helps field teams find the information they need without calling the office.',
-    bestFor:
-      'Businesses with large field teams, multiple locations, or complex internal procedures that staff struggle to navigate.'
+    description:
+      'Answers internal questions from staff, searches your SOPs and policy documents, surfaces relevant procedures, and helps field teams find the information they need without calling the office. Best for businesses with large field teams, multiple locations, or complex internal procedures.'
   },
   {
     title: 'Customer Service Agent',
-    whatItDoes:
-      'Handles incoming customer inquiries around the clock, answers common questions, books appointments, collects information, and escalates to a human only when genuinely needed.',
-    bestFor:
-      'Field service businesses, professional services firms, and any business where the phone not being answered means a lost job.'
+    description:
+      'Handles incoming customer inquiries around the clock, answers common questions, books appointments, collects information, and escalates to a human only when genuinely needed. Best for field service businesses, professional services firms, and any business where the phone not being answered means a lost job.'
   },
   {
     title: 'Sales Intelligence Agent',
-    whatItDoes:
-      'Qualifies incoming leads, enriches CRM records with relevant information, drafts personalized follow-up emails, and ensures no lead falls through the cracks.',
-    bestFor:
-      'Businesses with high lead volume where sales staff are spending too much time on qualification and data entry instead of selling.'
+    description:
+      'Qualifies incoming leads, enriches CRM records with relevant information, drafts personalized follow-up emails, and ensures no lead falls through the cracks. Best for businesses with high lead volume where sales staff spend too much time on qualification and data entry.'
   },
   {
     title: 'Document Processing Agent',
-    whatItDoes:
-      'Receives incoming documents, extracts the relevant information, classifies them by type, and routes them to the right person or system automatically.',
-    bestFor:
-      'Businesses that process high volumes of invoices, field tickets, contracts, or compliance documents.'
+    description:
+      'Receives incoming documents, extracts the relevant information, classifies them by type, and routes them to the right person or system automatically. Best for businesses that process high volumes of invoices, field tickets, contracts, or compliance documents.'
   },
   {
     title: 'Finance Reconciliation Agent',
-    whatItDoes:
-      'Matches invoices to purchase orders, flags discrepancies and exceptions, routes items for approval, and maintains a clean audit trail. without manual review of every transaction.',
-    bestFor:
-      'Construction, oil and gas services, transportation, and any business managing high volumes of subcontractor invoices or field-generated costs.'
+    description:
+      'Matches invoices to purchase orders, flags discrepancies and exceptions, routes items for approval, and maintains a clean audit trail without manual review of every transaction. Best for construction, oil and gas services, transportation, and any business managing high volumes of subcontractor invoices.'
+  }
+];
+
+const processSteps: ProcessStep[] = [
+  {
+    title: 'Define the role',
+    description:
+      'We start by understanding exactly what job function the AI Worker needs to perform: what inputs it receives, what decisions it needs to make, what outputs it produces, and what edge cases require human escalation.'
+  },
+  {
+    title: 'Audit first',
+    description:
+      'If you have not completed an AI Opportunity Audit, we recommend starting there. The audit ensures we are building the right AI Worker for the right problem, and that your data and systems are ready to support it.'
+  },
+  {
+    title: 'Build and test',
+    description:
+      'We build the AI Worker around your actual business data, your actual processes, and your actual systems. We test extensively before deployment to make sure it performs reliably in real conditions.'
+  },
+  {
+    title: 'Deploy and improve',
+    description:
+      'Once deployed, we monitor performance and refine the AI Worker over time. As your business evolves and the technology improves, we update the worker to keep it performing at its best.'
   }
 ];
 
@@ -82,218 +100,93 @@ export default function AIWorkersPage() {
   return (
     <PageShell>
       <Script id="service-schema" type="application/ld+json">
-        {JSON.stringify(buildServiceSchema(
-          'Custom AI Workers for Canadian SMBs',
-          'Purpose-built AI agents that perform defined job functions inside your business customer service, document processing, sales qualification, and finance reconciliation.',
-          'https://bitdepthaiconsulting.com/services/ai-workers',
-          'Custom AI Workers'
-        ))}
+        {JSON.stringify(
+          buildServiceSchema(
+            'Custom AI Workers for Canadian SMBs',
+            'Purpose-built AI agents that perform defined job functions inside your business: customer service, document processing, sales qualification, and finance reconciliation.',
+            'https://bitdepthaiconsulting.com/services/ai-workers',
+            'Custom AI Workers'
+          )
+        )}
       </Script>
-      {/* Hero Section */}
-      <section className="section-navy dot-grid section-space">
-        <div className="container-shell">
-          {/* Breadcrumb */}
-          <ScrollReveal>
-            <nav className="mb-8 text-sm text-white/60">
-              <Link href="/" className="hover:text-cyan transition-colors">
-                Home
-              </Link>
-              <span className="mx-2">{'>'}</span>
-              <Link href="/services" className="hover:text-cyan transition-colors">
-                Services
-              </Link>
-              <span className="mx-2">{'>'}</span>
-              <span className="text-white/80">Custom AI Workers</span>
-            </nav>
-          </ScrollReveal>
 
-          <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
-            <ScrollReveal>
-              <h1 className="text-4xl font-extrabold text-white md:text-5xl lg:text-6xl">
-                What If You Could Add a Highly Capable Team Member Who Works Around the Clock, Never Makes the Same Mistake Twice, and Costs a Fraction of a Full-Time Hire?
-              </h1>
-              <p className="mt-5 text-lg text-white/74">
-                Custom AI Workers are purpose-built AI agents that perform a defined job function inside your business on an ongoing basis. Not a chatbot. Not a generic tool. A digital worker built specifically for how your business operates.
-              </p>
-              <Link href="/ai-audit" className="btn-primary mt-8">
-                Book an Audit First
-              </Link>
-            </ScrollReveal>
-            <ScrollReveal index={1} className="relative min-h-[320px] overflow-hidden rounded-2xl border border-[var(--color-border)]">
-              <Image
-                src="/images/ai-workers-hero.webp.webp"
-                alt="Professional working alongside AI assistant interface actively processing business tasks on second monitor"
-                fill
-                priority
-                className="object-cover"
-              />
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
+      <ServiceHero
+        eyebrow="Custom AI Workers"
+        breadcrumb="Custom AI Workers"
+        title="AI that does a job, not just a task."
+        lead="Custom AI Workers are purpose-built AI agents that perform a defined job function inside your business on an ongoing basis. Not a chatbot. Not a generic tool. A digital worker built specifically for how your business operates."
+        primaryHref="/ai-audit"
+        primaryLabel="Book an AI Audit"
+        secondaryHref="#pricing"
+        secondaryLabel="See pricing"
+        imageSrc="/images/ai-workers-hero.webp.webp"
+        imageAlt="Professional working alongside an AI assistant interface processing business tasks on a second monitor"
+        reassurance="Build from $10,000. Audit fee credited dollar-for-dollar against your build."
+      />
 
-      {/* Section X: The Real Problem */}
-      <section className="section-offwhite section-space">
-        <div className="container-shell">
-          <div className="grid gap-8 lg:grid-cols-[1.2fr,0.8fr] lg:items-center">
-            <ScrollReveal>
-              <h2 className="text-3xl font-extrabold md:text-4xl lg:text-5xl">
-                Some Functions Need More Than a One-Time Automation. They Need Someone to Own Them.
-              </h2>
-              <p className="mt-5 text-[var(--color-slate)] leading-7">
-                Workflow automation handles a process. An AI Worker handles a role. The difference matters. An automation fires when triggered and completes a defined task. An AI Worker operates continuously monitoring, responding, processing, and acting within its defined function without needing to be triggered every time.
-              </p>
-              <p className="mt-4 text-[var(--color-slate)] leading-7">
-                Think about the functions in your business that currently require a person to be available, attentive, and consistent. Answering customer inquiries. Qualifying incoming leads. Processing documents as they arrive. Reconciling invoices against purchase orders. These are not one-time tasks. They are ongoing job functions.
-              </p>
-              <p className="mt-4 text-[var(--color-slate)] leading-7">
-                And they do not always need a human to do them. they need something reliable that shows up every day and does the work correctly. AI is moving fast. Things that were not possible six months ago are standard practice today. Businesses that are waiting for the technology to prove itself are already falling behind the ones that are quietly using it to get more done with the same team.
-              </p>
-            </ScrollReveal>
-            <ScrollReveal index={1} className="relative min-h-[280px] overflow-hidden rounded-2xl border border-[var(--color-border)]">
-              <Image
-                src="/images/ai-workers-supporting.webp.webp"
-                alt="Dashboard showing multiple AI agent status panels for different business functions running simultaneously"
-                fill
-                className="object-cover"
-              />
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
+      <ProblemBlock
+        surface="stone"
+        eyebrow="The difference"
+        title="Some functions need more than a one-time automation. They need someone to own them."
+        paragraphs={[
+          'Workflow automation handles a process. An AI Worker handles a role. The difference matters. An automation fires when triggered and completes a defined task. An AI Worker operates continuously: monitoring, responding, processing, and acting within its defined function without needing to be triggered every time.',
+          'Think about the functions in your business that currently require a person to be available, attentive, and consistent. Answering customer inquiries. Qualifying incoming leads. Processing documents as they arrive. Reconciling invoices against purchase orders. These are not one-time tasks. They are ongoing job functions.',
+          'They do not always need a human to do them. They need something reliable that shows up every day and does the work correctly. Businesses that are waiting for the technology to prove itself are already falling behind the ones that are quietly using it to get more done with the same team.'
+        ]}
+        imageSrc="/images/ai-workers-supporting.webp.webp"
+        imageAlt="Dashboard showing multiple AI agent status panels for different business functions running simultaneously"
+      />
 
-      {/* Section X: AI Worker Examples */}
-      <section className="section-navy section-space">
-        <div className="container-shell">
-          <ScrollReveal className="mb-10 max-w-3xl">
-            <h2 className="text-3xl font-extrabold text-white md:text-4xl lg:text-5xl">
-              What an AI Worker Actually Does
-            </h2>
-            <p className="mt-4 text-white/74">
-              Each AI Worker is built around a specific job function inside your business. Here are the most common ones we build.
-            </p>
-          </ScrollReveal>
+      <ListBlock
+        surface="cream"
+        eyebrow="Examples"
+        title="Five workers we commonly build."
+        lead="Each AI Worker is built around a specific job function. These are the most common ones."
+        items={aiWorkerExamples}
+        columns={2}
+      />
 
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {aiWorkerExamples.map((worker, index) => (
-              <ScrollReveal key={worker.title} index={index} className="rounded-xl border border-[var(--color-border)] bg-white/5 p-6">
-                <h3 className="text-lg font-bold text-white">{worker.title}</h3>
-                <p className="mt-3 text-sm text-white/74 leading-6">
-                  <strong className="text-cyan">What it does:</strong> {worker.whatItDoes}
-                </p>
-                <p className="mt-3 text-sm text-white/60 leading-6">
-                  <strong>Best for:</strong> {worker.bestFor}
-                </p>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ProcessBlock
+        surface="stone"
+        eyebrow="How it works"
+        title="A four-step build."
+        steps={processSteps}
+      />
 
-      {/* Section X: How It Works */}
-      <section className="section-offwhite section-space">
-        <div className="container-shell">
-          <ScrollReveal className="mb-10 text-center">
-            <h2 className="text-3xl font-extrabold md:text-4xl lg:text-5xl">
-              How We Build Your AI Worker
-            </h2>
-          </ScrollReveal>
+      <div id="pricing">
+        <PricingBlock
+          surface="cream"
+          eyebrow="Pricing"
+          title="Build, then maintain."
+          lead="AI Workers are custom built for each client. Pricing depends on the complexity of the role, the number of systems it connects to, and the volume of work it handles."
+          rows={[
+            {
+              label: 'Build',
+              value: 'From $10,000',
+              description: 'One-time fee for design, development, testing, and deployment.'
+            },
+            {
+              label: 'Monthly retainer',
+              value: '$1,500 – $3,000 / mo',
+              description:
+                'Ongoing monitoring, maintenance, performance tuning, and updates as your needs evolve.'
+            }
+          ]}
+          note="If you complete an AI Opportunity Audit first, the full audit fee is credited against your build, dollar for dollar."
+          ctaHref="/ai-audit"
+          ctaLabel="Book an AI Audit"
+        />
+      </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <ScrollReveal className="card-light p-6">
-              <p className="text-sm font-semibold text-cyan">Step 1</p>
-              <h3 className="mt-2 text-xl font-bold text-[var(--color-navy)]">Define the Role</h3>
-              <p className="mt-3 text-sm text-[var(--color-slate)] leading-6">
-                We start by understanding exactly what job function the AI Worker needs to perform. what inputs it receives, what decisions it needs to make, what outputs it produces, and what edge cases require human escalation.
-              </p>
-            </ScrollReveal>
-
-            <ScrollReveal index={1} className="card-light p-6">
-              <p className="text-sm font-semibold text-cyan">Step 2</p>
-              <h3 className="mt-2 text-xl font-bold text-[var(--color-navy)]">Audit First</h3>
-              <p className="mt-3 text-sm text-[var(--color-slate)] leading-6">
-                If you have not completed an AI Opportunity Audit, we recommend starting there. The audit ensures we are building the right AI Worker for the right problem. and that your data and systems are ready to support it.
-              </p>
-            </ScrollReveal>
-
-            <ScrollReveal index={2} className="card-light p-6">
-              <p className="text-sm font-semibold text-cyan">Step 3</p>
-              <h3 className="mt-2 text-xl font-bold text-[var(--color-navy)]">Build and Test</h3>
-              <p className="mt-3 text-sm text-[var(--color-slate)] leading-6">
-                We build the AI Worker around your actual business data, your actual processes, and your actual systems. We test extensively before deployment to make sure it performs reliably in real conditions.
-              </p>
-            </ScrollReveal>
-
-            <ScrollReveal index={3} className="card-light p-6">
-              <p className="text-sm font-semibold text-cyan">Step 4</p>
-              <h3 className="mt-2 text-xl font-bold text-[var(--color-navy)]">Deploy and Improve</h3>
-              <p className="mt-3 text-sm text-[var(--color-slate)] leading-6">
-                Once deployed, we monitor performance and refine the AI Worker over time. As your business evolves and the technology improves, we update the worker to keep it performing at its best.
-              </p>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Section X: Pricing */}
-      <section className="section-navy section-space">
-        <div className="container-shell">
-          <ScrollReveal className="mb-10 text-center">
-            <h2 className="text-3xl font-extrabold text-white md:text-4xl lg:text-5xl">Pricing</h2>
-            <p className="mt-4 text-white/74 max-w-2xl mx-auto">
-              AI Workers are custom built for each client. Pricing depends on the complexity of the role, the number of systems it needs to connect to, and the volume of work it will handle.
-            </p>
-          </ScrollReveal>
-
-          <div className="grid gap-6 md:grid-cols-2 max-w-3xl mx-auto">
-            <ScrollReveal className="rounded-xl border border-[var(--color-border)] bg-white/5 p-6">
-              <h3 className="text-xl font-bold text-white">Build</h3>
-              <p className="mt-4 text-white/78">
-                From <strong className="text-white text-2xl">$10,000</strong>
-              </p>
-              <p className="mt-2 text-sm text-white/60">
-                One-time build fee for design, development, testing, and deployment of your custom AI Worker.
-              </p>
-            </ScrollReveal>
-
-            <ScrollReveal index={1} className="rounded-xl border border-[var(--color-border)] bg-white/5 p-6">
-              <h3 className="text-xl font-bold text-white">Monthly Retainer</h3>
-              <p className="mt-4 text-white/78">
-                <strong className="text-white text-2xl">$1,500–$3,000</strong> per month
-              </p>
-              <p className="mt-2 text-sm text-white/60">
-                Ongoing monitoring, maintenance, performance tuning, and updates as your business needs evolve and the technology improves.
-              </p>
-            </ScrollReveal>
-          </div>
-
-          <ScrollReveal className="mt-6 rounded-lg border-l-[3px] border-l-cyan bg-cyan/10 p-4 text-sm text-white/80 max-w-3xl mx-auto">
-            <strong className="text-cyan">Note:</strong> If you complete an AI Opportunity Audit first, the full audit fee is credited against your build fee dollar for dollar.
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Closing CTA */}
-      <section className="section-offwhite section-space">
-        <div className="container-shell">
-          <ScrollReveal className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-extrabold md:text-4xl lg:text-5xl">
-              Not Sure Which AI Worker Your Business Needs?
-            </h2>
-            <p className="mt-5 text-[var(--color-slate)] leading-7">
-              Start with the audit. We will identify exactly which job functions in your business are the best candidates for an AI Worker. and give you honest ROI estimates before you commit to building anything.
-            </p>
-            <Link href="/ai-audit" className="btn-primary mt-8">
-              Book Your AI Audit
-            </Link>
-            <div className="mt-6">
-              <Link href="/contact" className="text-sm text-cyan hover:text-cyan/80 underline">
-                Have questions? Book a free discovery call
-              </Link>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+      <FinalCTA
+        eyebrow="Where to start"
+        title="Not sure which AI Worker your business needs?"
+        body="Start with the audit. We will identify exactly which job functions in your business are the best candidates for an AI Worker, and give you honest ROI estimates before you commit to building anything."
+        primaryHref="/ai-audit"
+        primaryLabel="Book an AI Audit"
+        secondaryHref="/contact"
+        secondaryLabel="Book a discovery call"
+      />
     </PageShell>
   );
 }

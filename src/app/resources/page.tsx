@@ -4,18 +4,17 @@ import Link from 'next/link';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { LeadMagnet } from '@/components/ui/lead-magnet';
+import { ArticleCard, type ArticleCardData } from '@/components/ui/article-layout';
 
 export const metadata: Metadata = {
   title: 'AI Resources for Canadian Business Owners | Bit Depth AI',
   description:
-    'Practical guides and articles to help Canadian business owners understand AI before they invest in it. No hype, no jargon just straight answers.',
-  alternates: {
-    canonical: 'https://bitdepthaiconsulting.com/resources'
-  },
+    'Practical guides and articles to help Canadian business owners understand AI before they invest in it. No hype, no jargon, just straight answers.',
+  alternates: { canonical: 'https://bitdepthaiconsulting.com/resources' },
   openGraph: {
     title: 'AI Resources for Canadian Business Owners | Bit Depth AI',
     description:
-      'Practical guides and articles to help Canadian business owners understand AI before they invest in it. No hype, no jargon just straight answers.',
+      'Practical guides and articles to help Canadian business owners understand AI before they invest in it. No hype, no jargon, just straight answers.',
     url: 'https://bitdepthaiconsulting.com/resources',
     type: 'website',
     siteName: 'Bit Depth AI Consulting',
@@ -34,39 +33,43 @@ export const metadata: Metadata = {
     site: '@bitdepthai',
     title: 'AI Resources for Canadian Business Owners | Bit Depth AI',
     description:
-      'Practical guides and articles to help Canadian business owners understand AI before they invest in it. No hype, no jargon just straight answers.',
+      'Practical guides and articles to help Canadian business owners understand AI before they invest in it.',
     images: ['/images/og-resources.jpg']
   }
 };
 
-const articles = [
+const articles: ArticleCardData[] = [
   {
-    title: 'What Can I Expect in an AI Discovery Audit?',
-    description: 'A complete walkthrough of the audit process, from stakeholder interviews to ROI calculations and the 90-day implementation roadmap.',
+    title: 'What can I expect in an AI discovery audit?',
+    description:
+      'A complete walkthrough of the audit process, from stakeholder interviews to ROI calculations and the 90-day implementation roadmap.',
     image: '/images/ai-discovery-audit-featured.webp.webp',
     href: '/resources/what-can-i-expect-in-an-ai-discovery-audit',
     category: 'Guide',
     readTime: '8 min read'
   },
   {
-    title: "You Don't Have an AI Problem you Have a Systems Problem",
-    description: 'How disconnected systems create hidden operational drag and what to fix before investing in AI tools.',
+    title: "You don't have an AI problem. You have a systems problem.",
+    description:
+      'How disconnected systems create hidden operational drag, and what to fix before investing in AI tools.',
     image: '/images/resources-article-1.webp.webp',
     href: '/resources/you-dont-have-an-ai-problem',
     category: 'Operations',
     readTime: '6 min read'
   },
   {
-    title: 'The 5 Signs Your Business Is Ready for AI Automation',
-    description: 'A practical checklist for owners and operations leaders evaluating where automation will deliver measurable ROI.',
+    title: 'The 5 signs your business is ready for AI automation',
+    description:
+      'A practical checklist for owners and operations leaders evaluating where automation will deliver measurable ROI.',
     image: '/images/resources-article-2.webp.webp',
     href: '/resources/five-signs-your-business-is-ready-for-ai',
     category: 'Checklist',
     readTime: '5 min read'
   },
   {
-    title: 'What to Expect From Your First AI Consulting Engagement',
-    description: 'A step-by-step look at the discovery, roadmap, and implementation process for first-time AI consulting clients.',
+    title: 'What to expect from your first AI consulting engagement',
+    description:
+      'A step-by-step look at the discovery, roadmap, and implementation process for first-time AI consulting clients.',
     image: '/images/resources-article-3.webp.webp',
     href: '/resources/what-to-expect-from-your-first-ai-consulting-engagement',
     category: 'Playbook',
@@ -77,77 +80,84 @@ const articles = [
 export default function ResourcesPage() {
   return (
     <PageShell>
-      <section className="section-navy dot-grid section-space">
-        <div className="container-shell grid gap-10 lg:grid-cols-[1fr,1fr] lg:items-center">
+      {/* Hero */}
+      <section className="section-offwhite section-space">
+        <div className="container-shell grid gap-12 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
           <ScrollReveal>
-            <h1 className="text-4xl font-extrabold text-white md:text-5xl">
-              Practical Resources for Business Owners Who Want to Understand AI Before They Invest in It
+            <p className="eyebrow">Resources</p>
+            <h1 className="mt-6 max-w-2xl">
+              Practical guides for owners who want to understand AI before they invest.
             </h1>
-            <p className="mt-5 text-lg text-white/74">
-              No hype. No jargon. Just straight answers to the questions Canadian business owners are actually asking about AI.
+            <p className="mt-6 max-w-xl text-lg text-[var(--color-slate)]">
+              No hype. No jargon. Straight answers to the questions Canadian business owners are
+              actually asking about AI.
             </p>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <Link href="/ai-audit" className="btn-primary">
+                Book an AI Audit
+              </Link>
+              <Link href="#articles" className="btn-outline">
+                Browse articles
+              </Link>
+            </div>
           </ScrollReveal>
-          <ScrollReveal index={1} className="relative min-h-[340px] overflow-hidden rounded-2xl border border-[var(--color-border)]">
-            <Image src="/images/resources-hero.webp.webp" alt="Canadian business owner reading AI consulting articles on laptop with coffee and notepad" fill priority className="object-cover" />
+          <ScrollReveal
+            index={1}
+            className="relative aspect-[4/5] overflow-hidden rounded-md border border-[var(--color-border)]"
+          >
+            <Image
+              src="/images/resources-hero.webp.webp"
+              alt="Canadian business owner reading AI consulting articles on a laptop"
+              fill
+              priority
+              className="object-cover"
+            />
           </ScrollReveal>
         </div>
       </section>
 
-      <section className="section-offwhite section-space">
+      {/* Article grid */}
+      <section id="articles" className="section-stone section-space section-rule">
         <div className="container-shell">
-          <ScrollReveal className="max-w-3xl">
-            <h2 className="text-3xl font-extrabold md:text-5xl">Featured Articles</h2>
+          <ScrollReveal className="max-w-2xl">
+            <p className="eyebrow">Featured articles</p>
+            <h2 className="mt-6">Start with these.</h2>
           </ScrollReveal>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {articles.map((article, index) => (
-              <ScrollReveal key={article.title} index={index} className="card-light overflow-hidden p-0">
-                <div className="relative h-48 w-full">
-                  <Image src={article.image} alt={article.title} fill className="object-cover" />
-                </div>
-                <div className="p-6">
-                  <span className="inline-flex rounded-lg border border-cyan/40 bg-cyan/10 px-3 py-1 text-xs font-semibold text-cyan">{article.category}</span>
-                  <h3 className="mt-4 text-xl font-bold text-[var(--color-navy)]">{article.title}</h3>
-                  <p className="mt-3 text-sm text-[var(--color-slate)]">{article.description}</p>
-                  <div className="mt-5 flex items-center justify-between">
-                    <span className="text-xs text-[var(--color-slate)]">{article.readTime}</span>
-                    <Link href={article.href} className="btn-primary text-sm px-4 py-2">
-                      Read Article
-                    </Link>
-                  </div>
-                </div>
+              <ScrollReveal key={article.href} index={index}>
+                <ArticleCard article={article} />
               </ScrollReveal>
             ))}
           </div>
-          <ScrollReveal className="mt-12">
-            <div className="relative mx-auto max-w-3xl overflow-hidden rounded-2xl border border-[var(--color-border)]">
-              <Image
-                src="/images/resources-supporting.webp.webp"
-                alt="Clean modern desk with laptop showing article page, coffee mug, and notepad"
-                width={800}
-                height={500}
-                className="h-auto w-full object-cover"
-              />
-            </div>
-          </ScrollReveal>
         </div>
       </section>
 
-      <section className="section-charcoal section-space">
+      {/* Lead magnet */}
+      <section className="section-offwhite section-space section-rule">
         <div className="container-shell">
           <LeadMagnet source="resources" />
         </div>
       </section>
 
+      {/* Final CTA */}
       <section className="section-navy section-space">
-        <div className="container-shell">
-          <ScrollReveal className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-extrabold text-white md:text-4xl">Not Sure Where to Start?</h2>
-            <p className="mt-5 text-white/74">
-              Book a free discovery call and we will tell you honestly whether AI makes sense for your business right now.
+        <div className="container-shell max-w-3xl text-center">
+          <ScrollReveal>
+            <span className="eyebrow">Not sure where to start</span>
+            <h2 className="mt-6 text-white">A discovery call is free and honest.</h2>
+            <p className="mx-auto mt-6 max-w-xl text-white/75">
+              Book a call and we will tell you honestly whether AI makes sense for your business
+              right now.
             </p>
-            <Link href="/contact" className="btn-primary mt-8">
-              Book a Discovery Call
-            </Link>
+            <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Link href="/contact" className="btn-primary">
+                Book a discovery call
+              </Link>
+              <Link href="/ai-audit" className="btn-outline">
+                Book an AI Audit
+              </Link>
+            </div>
           </ScrollReveal>
         </div>
       </section>

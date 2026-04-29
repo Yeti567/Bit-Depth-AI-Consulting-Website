@@ -16,10 +16,10 @@ export function MobileNav() {
         position: 'fixed',
         inset: 0,
         zIndex: 9999,
-        backgroundColor: '#0B1F3B',
+        backgroundColor: '#1C1F26',
         display: 'flex',
         flexDirection: 'column',
-        padding: '112px 32px 32px',
+        padding: '112px 32px 32px'
       }}
     >
       <button
@@ -36,9 +36,9 @@ export function MobileNav() {
           justifyContent: 'center',
           borderRadius: '9999px',
           border: '1px solid rgba(255,255,255,0.2)',
-          background: 'rgba(255,255,255,0.1)',
-          color: '#F5F7FA',
-          cursor: 'pointer',
+          background: 'rgba(255,255,255,0.08)',
+          color: '#FAF7F2',
+          cursor: 'pointer'
         }}
         onClick={() => setOpen(false)}
       >
@@ -52,12 +52,12 @@ export function MobileNav() {
             style={{
               display: 'block',
               width: '100%',
-              borderBottom: '1px solid rgba(0,180,216,0.15)',
+              borderBottom: '1px solid rgba(255,255,255,0.10)',
               padding: '16px 0',
               fontSize: '20px',
               fontWeight: 600,
-              color: '#F5F7FA',
-              textDecoration: 'none',
+              color: '#FAF7F2',
+              textDecoration: 'none'
             }}
             onClick={() => setOpen(false)}
           >
@@ -65,22 +65,22 @@ export function MobileNav() {
           </Link>
         ))}
         <Link
-          href="/contact"
+          href="/ai-audit"
           style={{
             display: 'block',
             width: '100%',
             marginTop: '24px',
-            borderRadius: '8px',
-            backgroundColor: '#00B4D8',
+            borderRadius: '6px',
+            backgroundColor: '#B85A32',
             padding: '14px 28px',
             textAlign: 'center',
-            fontWeight: 600,
-            color: '#0B1F3B',
-            textDecoration: 'none',
+            fontWeight: 500,
+            color: '#FFFFFF',
+            textDecoration: 'none'
           }}
           onClick={() => setOpen(false)}
         >
-          Book Your AI Audit
+          Book an AI Audit
         </Link>
       </nav>
     </div>

@@ -1,10 +1,8 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
-import { SectionHeading } from '@/components/ui/section-heading';
+import { ArticleHeader, ArticleBody, ArticleCTA } from '@/components/ui/article-layout';
 
  type ResourceContentBlock =
   | {
@@ -782,29 +780,24 @@ export default async function ResourceArticlePage({ params }: { params: Promise<
 
   return (
     <PageShell>
-      <section className="section-light-grid section-space">
-        <div className="container-shell max-w-4xl">
-          <ScrollReveal>
-            <SectionHeading
-              eyebrow={article.category}
-              title={article.title}
-              description={article.description}
-            />
-          </ScrollReveal>
+      <ArticleHeader
+        category={article.category}
+        title={article.title}
+        breadcrumbLabel={article.title}
+        imageSrc={article.image}
+        imageAlt={article.imageAlt}
+        lead={article.description}
+      />
 
-          <ScrollReveal index={1} className="mt-10 overflow-hidden rounded-[2rem] border border-navy/10 shadow-soft">
-            <div className="relative aspect-[16/9] w-full">
-              <Image src={article.image} alt={article.imageAlt} fill className="object-cover" />
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal as="article" className="mt-10 surface-card space-y-6 p-6 sm:p-8 md:p-10" index={2}>
-            {article.body.map((block) => {
-              const key = `${block.type}-${block.value}`;
+      <ArticleBody>
+        <ScrollReveal>
+          <article className="space-y-6">
+            {article.body.map((block, i) => {
+              const key = `${block.type}-${i}`;
 
               if (block.type === 'heading') {
                 return (
-                  <h2 key={key} className="text-2xl font-bold tracking-tight text-charcoal md:text-3xl">
+                  <h2 key={key} className="pt-6 text-[var(--color-navy)]">
                     {block.value}
                   </h2>
                 );
@@ -812,7 +805,7 @@ export default async function ResourceArticlePage({ params }: { params: Promise<
 
               if (block.type === 'heading3') {
                 return (
-                  <h3 key={key} className="text-xl font-semibold tracking-tight text-charcoal md:text-2xl">
+                  <h3 key={key} className="pt-4 text-[var(--color-navy)]">
                     {block.value}
                   </h3>
                 );
@@ -820,27 +813,27 @@ export default async function ResourceArticlePage({ params }: { params: Promise<
 
               if (block.type === 'heading4') {
                 return (
-                  <h4 key={key} className="text-lg font-semibold tracking-tight text-charcoal md:text-xl">
+                  <h4 key={key} className="pt-2 text-[var(--color-navy)]">
                     {block.value}
                   </h4>
                 );
               }
 
               return (
-                <p key={key} className="text-lg leading-8 text-charcoal/82">
+                <p key={key} className="text-[var(--color-charcoal)]">
                   {block.value}
                 </p>
               );
             })}
-          </ScrollReveal>
+          </article>
+        </ScrollReveal>
+      </ArticleBody>
 
-          <ScrollReveal className="mt-8" index={3}>
-            <Link href="/resources" className="btn-secondary">
-              Back to Resources
-            </Link>
-          </ScrollReveal>
-        </div>
-      </section>
+      <ArticleCTA
+        eyebrow="Where to start"
+        title="A discovery call is the next step."
+        body="Tell us where AI could help your business. We will tell you honestly whether it makes sense to start with the audit, or whether something else needs to come first."
+      />
     </PageShell>
   );
 }

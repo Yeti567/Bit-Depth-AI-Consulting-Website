@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, HardHat, Truck, UserCog, Factory, CheckCircle2, BarChart3 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
@@ -9,9 +9,7 @@ export const metadata: Metadata = {
   title: 'AI Consulting by Industry | Trades, Oil & Gas, Trucking | Bit Depth AI',
   description:
     'Industry-specific AI consulting for trades, construction, transportation, field services, oil and gas, manufacturing, and professional services across Canada.',
-  alternates: {
-    canonical: 'https://bitdepthaiconsulting.com/industries'
-  },
+  alternates: { canonical: 'https://bitdepthaiconsulting.com/industries' },
   openGraph: {
     title: 'AI Consulting by Industry | Trades, Oil & Gas, Trucking | Bit Depth AI',
     description:
@@ -25,7 +23,7 @@ export const metadata: Metadata = {
         url: '/images/og-industries.jpg',
         width: 1200,
         height: 630,
-        alt: 'Bit Depth AI Consulting industries - trades, construction, transportation, oil and gas'
+        alt: 'Bit Depth AI Consulting industries'
       }
     ]
   },
@@ -41,39 +39,39 @@ export const metadata: Metadata = {
 
 const industries = [
   {
-    icon: <HardHat className="h-6 w-6" />,
     title: 'Trades & Construction',
-    pain: "You don't know which crews are making money until the year is over. We fix that.",
+    pain:
+      "You don't know which crews are making money until the year is over. We fix that.",
     href: '/industries/construction'
   },
   {
-    icon: <Truck className="h-6 w-6" />,
     title: 'Transportation & Logistics',
-    pain: 'Dispatching, driver shortages, fuel costs, and demanding clients. AI helps you manage all of it.',
+    pain:
+      'Dispatching, driver shortages, fuel costs, and demanding clients. AI helps you manage all of it.',
     href: '/industries/transportation'
   },
   {
-    icon: <UserCog className="h-6 w-6" />,
     title: 'Field Services',
-    pain: "If the phone isn't getting answered, you're losing jobs. We fix that without hiring anyone.",
+    pain:
+      "If the phone isn't getting answered, you're losing jobs. We fix that without hiring anyone.",
     href: '/industries/field-services'
   },
   {
-    icon: <BarChart3 className="h-6 w-6" />,
     title: 'Oil & Gas Services',
-    pain: "Your systems don't talk to each other. Your data is siloed. That costs you more than you think.",
-    href: '/industries/oil-gas'
+    pain:
+      "Your systems don't talk to each other. Your data is siloed. That costs you more than you think.",
+    href: '/industries/oil-and-gas'
   },
   {
-    icon: <Factory className="h-6 w-6" />,
     title: 'Manufacturing',
-    pain: 'Predictive maintenance and smarter scheduling built around what you actually have, not what\'s ideal.',
+    pain:
+      "Predictive maintenance and smarter scheduling, built around what you actually have, not what's ideal.",
     href: '/industries/manufacturing'
   },
   {
-    icon: <CheckCircle2 className="h-6 w-6" />,
     title: 'Professional Services',
-    pain: 'No-shows, scheduling chaos, and document overload. AI handles the admin so you can bill more hours.',
+    pain:
+      'No-shows, scheduling chaos, and document overload. AI handles the admin so you can bill more hours.',
     href: '/industries/professional-services'
   }
 ];
@@ -81,56 +79,101 @@ const industries = [
 export default function IndustriesPage() {
   return (
     <PageShell>
-      {/* Hero Section */}
-      <section className="section-navy dot-grid section-space">
-        <div className="container-shell grid gap-10 lg:grid-cols-[1fr,1fr] lg:items-center lg:gap-12">
+      {/* Hero */}
+      <section className="section-offwhite section-space">
+        <div className="container-shell grid gap-12 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
           <ScrollReveal>
-            <span className="eyebrow-pill">Industries</span>
-            <h1 className="mt-5 text-4xl font-extrabold text-white md:text-6xl">
-              We Work With Industries Where Operations, People, and Profit Are Always on the Line
+            <p className="eyebrow">Industries</p>
+            <h1 className="mt-6 max-w-2xl">
+              Where operations, people, and profit are always on the line.
             </h1>
-            <p className="mt-5 text-lg text-white/74">
-              Every business on this list shares the same core problem money and time are being lost in places that are hard to see until it&apos;s too late. AI doesn&apos;t fix that by being clever. It fixes it by making the invisible visible: where the profit is leaking, where the bottlenecks are hiding, and where your team is spending time on things a system should be handling.
+            <p className="mt-6 max-w-xl text-lg text-[var(--color-slate)]">
+              Every business on this list shares the same core problem: money and time are being
+              lost in places that are hard to see until it&apos;s too late. AI doesn&apos;t fix
+              that by being clever. It fixes it by making the invisible visible.
             </p>
-            <p className="mt-4 text-lg text-white/74">
-              We&apos;ve worked in some of these industries firsthand. We understand the pressure. And we know that a $5,000 audit that finds a $50,000 profit leak pays for itself before the ink is dry.
+            <p className="mt-4 max-w-xl text-lg text-[var(--color-slate)]">
+              We&apos;ve worked in some of these industries firsthand. We understand the pressure.
+              And we know that a <span className="tabular">$5,000</span> audit that finds a{' '}
+              <span className="tabular">$50,000</span> profit leak pays for itself before the ink
+              is dry.
             </p>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <Link href="/ai-audit" className="btn-primary">
+                Book an AI Audit
+              </Link>
+              <Link href="/contact" className="btn-outline">
+                Book a discovery call
+              </Link>
+            </div>
           </ScrollReveal>
-          <ScrollReveal index={1} className="relative min-h-[320px] overflow-hidden rounded-2xl border border-[var(--color-border)]">
-            <Image src="/images/industries-hero.png" alt="Diverse Canadian business landscape" fill priority className="object-cover" />
+          <ScrollReveal
+            index={1}
+            className="relative aspect-[4/5] overflow-hidden rounded-md border border-[var(--color-border)]"
+          >
+            <Image
+              src="/images/industries-hero.png"
+              alt="Canadian businesses across multiple industries"
+              fill
+              priority
+              className="object-cover"
+            />
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Industry Cards Grid */}
-      <section className="section-offwhite section-space">
+      {/* Industry list */}
+      <section className="section-stone section-space section-rule">
         <div className="container-shell">
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <ScrollReveal className="max-w-2xl">
+            <p className="eyebrow">Where we work</p>
+            <h2 className="mt-6">Six industries. One starting point.</h2>
+            <p className="mt-5 text-[var(--color-slate)]">
+              Pick the closest match to your business. The audit fits all of them.
+            </p>
+          </ScrollReveal>
+          <ul className="mt-12 divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">
             {industries.map((industry, index) => (
-              <ScrollReveal key={industry.title} index={index} className="card-light p-6 flex flex-col">
-                <div className="text-cyan">{industry.icon}</div>
-                <h3 className="mt-4 text-2xl font-bold text-[var(--color-navy)]">{industry.title}</h3>
-                <p className="mt-3 text-[var(--color-slate)] flex-grow">{industry.pain}</p>
-                <Link href={industry.href} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan hover:text-[var(--color-cyan-dark)] transition-colors">
-                  Learn More <ArrowRight className="h-4 w-4" />
-                </Link>
+              <ScrollReveal key={industry.title} index={index}>
+                <li>
+                  <Link
+                    href={industry.href}
+                    className="group grid gap-3 py-7 md:grid-cols-[1fr,2fr,auto] md:items-baseline md:gap-10"
+                  >
+                    <h3 className="text-[var(--color-navy)] group-hover:text-[var(--color-cyan)]">
+                      {industry.title}
+                    </h3>
+                    <p className="text-[var(--color-slate)]">{industry.pain}</p>
+                    <span className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-cyan)] md:justify-end">
+                      Learn more <ArrowRight className="h-4 w-4" />
+                    </span>
+                  </Link>
+                </li>
               </ScrollReveal>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
-      {/* Closing CTA Section */}
-      <section className="section-charcoal section-space">
-        <div className="container-shell">
-          <ScrollReveal className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-extrabold text-white md:text-5xl">Don&apos;t See Your Industry?</h2>
-            <p className="mt-5 text-lg text-white/70">
-              If your business runs on operations, people, and data, there&apos;s almost certainly an AI opportunity inside it. Book a free discovery call and we&apos;ll tell you honestly whether we can help.
+      {/* Final CTA */}
+      <section className="section-navy section-space">
+        <div className="container-shell max-w-3xl text-center">
+          <ScrollReveal>
+            <span className="eyebrow">Don&apos;t see your industry</span>
+            <h2 className="mt-6 text-white">If your business runs on operations, we can help.</h2>
+            <p className="mx-auto mt-6 max-w-xl text-white/75">
+              If your business runs on operations, people, and data, there&apos;s almost certainly
+              an AI opportunity inside it. Book a discovery call and we&apos;ll tell you honestly
+              whether we can help.
             </p>
-            <Link href="/contact" className="btn-primary mt-8">
-              Book a Discovery Call
-            </Link>
+            <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Link href="/contact" className="btn-primary">
+                Book a discovery call
+              </Link>
+              <Link href="/ai-audit" className="btn-outline">
+                Book an AI Audit
+              </Link>
+            </div>
           </ScrollReveal>
         </div>
       </section>

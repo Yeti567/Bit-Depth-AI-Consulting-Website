@@ -1,21 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --color-navy: #0b1f3b;
-  --color-charcoal: #1f2933;
-  --color-cyan: #00b4d8;
-  --color-slate: #4b5563;
-  --color-offwhite: #f5f7fa;
-  --color-white: #ffffff;
-  --color-cyan-dark: #0090b0;
-  --color-border: rgba(0, 180, 216, 0.15);
+  /* Restrained Trade palette — see DESIGN.md */
+  --color-navy: #1C1F26;        /* ink */
+  --color-charcoal: #2A2D34;    /* ink-soft */
+  --color-cyan: #B85A32;        /* rust (single accent) */
+  --color-cyan-dark: #8A4023;   /* rust-deep */
+  --color-slate: #5A5D68;
+  --color-offwhite: #FAF7F2;    /* cream canvas */
+  --color-stone: #F0ECE5;
+  --color-white: #FFFFFF;
+  --color-border: rgba(28, 31, 38, 0.10);
+  --color-border-strong: rgba(28, 31, 38, 0.18);
   color-scheme: light;
-  
-  /* Assessment-specific colors */
+
+  /* Assessment app surface — scoped, intentionally distinct */
   --bg-primary: #0B1426;
   --bg-secondary: #0D1B2A;
   --bg-card: rgba(13, 27, 42, 0.7);
@@ -36,115 +37,84 @@ html {
   text-size-adjust: 100%;
 }
 
-* {
-  font-family: var(--font-barlow), 'Barlow', 'DM Sans', sans-serif;
+body {
+  font-family: var(--font-barlow), 'Barlow', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-offwhite);
+  color: var(--color-charcoal);
+  font-size: 17px;
+  line-height: 1.6;
 }
 
 .assessment-font {
   font-family: 'DM Sans', sans-serif;
 }
 
-body {
-  @apply font-body antialiased;
-  background-color: var(--color-offwhite);
-  color: var(--color-charcoal);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-barlow), 'Barlow', sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-barlow), 'Barlow', system-ui, sans-serif;
   font-weight: 700;
   line-height: 1.15;
-  letter-spacing: -0.01em;
-  overflow: visible;
+  letter-spacing: -0.012em;
   color: var(--color-navy);
 }
 
 h1 {
-  font-size: clamp(2rem, 5vw, 3.25rem);
-  font-weight: 700;
-  line-height: 1.1;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  line-height: 1.08;
 }
 
 h2 {
-  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
-  font-weight: 700;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
   line-height: 1.15;
 }
 
 h3 {
-  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 h4 {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
-p,
-li,
-a,
-span,
-label,
-input,
-textarea,
-button {
-  font-family: var(--font-barlow), 'Barlow', sans-serif;
-  font-weight: 400;
-  line-height: 1.65;
-}
-
-h1, h2, h3, h4 {
-  overflow: visible;
-  padding-bottom: 0.05em;
+p, li, a, span, label, input, textarea, button {
+  font-family: var(--font-barlow), 'Barlow', system-ui, sans-serif;
 }
 
 p {
-  @apply leading-7;
+  line-height: 1.6;
 }
 
-a,
-button,
-input,
-textarea,
-select {
-  @apply transition-all duration-200 ease-out;
+a, button, input, textarea, select {
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
-input,
-textarea,
-select {
+input, textarea, select {
   background: var(--color-white);
-  border: 1px solid rgba(75, 85, 99, 0.25);
-  border-radius: 8px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 6px;
   color: var(--color-charcoal);
-  padding: 14px 16px;
-  font-size: 15px;
+  padding: 12px 14px;
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
 }
 
-input:focus,
-textarea:focus,
-select:focus {
+input:focus, textarea:focus, select:focus {
   border-color: var(--color-cyan);
-  box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.15);
+  box-shadow: 0 0 0 3px rgba(184, 90, 50, 0.15);
   outline: none;
 }
 
-input::placeholder,
-textarea::placeholder {
-  color: rgba(75, 85, 99, 0.7);
+input::placeholder, textarea::placeholder {
+  color: var(--color-slate);
+  opacity: 0.7;
 }
 
 @layer components {
-  /* Assessment-specific styles */
+  /* Assessment app — keeps its own dark UI */
   .assessment-bg {
     position: relative;
     background-color: #0B1426;
@@ -198,9 +168,10 @@ textarea::placeholder {
     background: linear-gradient(90deg, #023E8A 0%, #00D4FF 100%);
   }
 
+  /* Marketing surface */
   .container-shell {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 24px;
   }
@@ -209,8 +180,23 @@ textarea::placeholder {
     padding: 96px 0;
   }
 
+  .section-tight {
+    padding: 64px 0;
+  }
+
+  .section-rule {
+    border-top: 1px solid var(--color-border);
+  }
+
   .section-navy {
     background: var(--color-navy);
+    color: var(--color-white);
+  }
+
+  .section-navy h1,
+  .section-navy h2,
+  .section-navy h3,
+  .section-navy h4 {
     color: var(--color-white);
   }
 
@@ -219,46 +205,80 @@ textarea::placeholder {
     color: var(--color-white);
   }
 
+  .section-charcoal h1,
+  .section-charcoal h2,
+  .section-charcoal h3,
+  .section-charcoal h4 {
+    color: var(--color-white);
+  }
+
   .section-offwhite {
     background: var(--color-offwhite);
   }
 
-  .dot-grid {
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-    background-size: 28px 28px;
+  .section-stone {
+    background: var(--color-stone);
   }
 
+  /* Eyebrow: rule + small uppercase label, no pill */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--color-slate);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    font-weight: 600;
+  }
+
+  .eyebrow::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--color-cyan);
+  }
+
+  .section-navy .eyebrow,
+  .section-charcoal .eyebrow {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  /* Legacy pill — kept for any inner pages that still reference it,
+     restyled to match new system rather than the old cyan pill. */
   .eyebrow-pill {
     display: inline-flex;
     align-items: center;
-    border: 1px solid var(--color-cyan);
-    border-radius: 999px;
-    padding: 6px 12px;
-    font-size: 11px;
-    letter-spacing: 0.12em;
+    gap: 12px;
+    color: var(--color-slate);
     text-transform: uppercase;
-    font-weight: 500;
-    color: var(--color-cyan);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    font-weight: 600;
+    border: none;
+    padding: 0;
   }
 
-  .eyebrow {
-    color: var(--color-cyan);
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 0.16em;
-    font-weight: 600;
+  .eyebrow-pill::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--color-cyan);
+  }
+
+  .section-navy .eyebrow-pill,
+  .section-charcoal .eyebrow-pill {
+    color: rgba(255, 255, 255, 0.7);
   }
 
   .btn-primary {
     background: var(--color-cyan);
-    color: var(--color-navy);
-    font-family: var(--font-barlow), 'Barlow', sans-serif;
+    color: var(--color-white);
     font-weight: 500;
-    padding: 14px 28px;
-    border-radius: 8px;
+    padding: 14px 26px;
+    border-radius: 6px;
     border: none;
     cursor: pointer;
-    transition: background 0.2s ease;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -271,12 +291,11 @@ textarea::placeholder {
 
   .btn-outline {
     background: transparent;
-    color: var(--color-offwhite);
-    border: 1.5px solid var(--color-cyan);
-    padding: 13px 27px;
-    border-radius: 8px;
+    color: var(--color-navy);
+    border: 1px solid var(--color-navy);
+    padding: 13px 25px;
+    border-radius: 6px;
     font-weight: 500;
-    transition: all 0.2s ease;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -284,27 +303,45 @@ textarea::placeholder {
   }
 
   .btn-outline:hover {
-    background: rgba(0, 180, 216, 0.1);
+    background: var(--color-navy);
+    color: var(--color-offwhite);
+  }
+
+  .section-navy .btn-outline,
+  .section-charcoal .btn-outline {
+    color: var(--color-offwhite);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+
+  .section-navy .btn-outline:hover,
+  .section-charcoal .btn-outline:hover {
+    background: var(--color-offwhite);
+    color: var(--color-navy);
+    border-color: var(--color-offwhite);
   }
 
   .card-light {
     background: var(--color-white);
-    border-radius: 12px;
-    border: 1px solid rgba(11, 31, 59, 0.06);
-    box-shadow: 0 10px 28px rgba(11, 31, 59, 0.08);
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+  }
+
+  .card-stone {
+    background: var(--color-stone);
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
   }
 
   .card-dark {
     background: var(--color-charcoal);
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 180, 216, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
     color: var(--color-white);
   }
 
   .list-check li {
     position: relative;
-    padding-left: 28px;
+    padding-left: 26px;
   }
 
   .list-check li::before {
@@ -316,25 +353,45 @@ textarea::placeholder {
     font-weight: 700;
   }
 
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Dot-grid intentionally a no-op now; keeps class references safe. */
+  .dot-grid {
+    background-image: none;
+  }
+
   .animate-on-scroll {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 0.65s ease, transform 0.65s ease;
-    transition-delay: calc(var(--index, 0) * 0.08s);
+    transition: opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1), transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: calc(var(--index, 0) * 0.06s);
   }
 
   html.js .animate-on-scroll {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(12px);
   }
 
   html.js .animate-on-scroll.visible {
     opacity: 1;
     transform: translateY(0);
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    html.js .animate-on-scroll,
+    html.js .animate-on-scroll.visible {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
 }
 
 @media (max-width: 767px) {
+  body { font-size: 16px; }
+
   .container-shell {
     padding: 0 20px;
   }
@@ -343,9 +400,7 @@ textarea::placeholder {
     padding: 64px 0;
   }
 
-  input,
-  textarea,
-  select {
-    font-size: 16px;
+  .section-tight {
+    padding: 48px 0;
   }
 }

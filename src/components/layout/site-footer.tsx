@@ -16,16 +16,17 @@ export function SiteFooter() {
               className="object-contain object-left"
             />
           </Link>
-          <p className="max-w-md text-sm text-white/60">Vendor-Neutral AI Consulting for Real Operational Outcomes.</p>
-          <div className="flex flex-wrap gap-2 text-[11px]">
-            <span className="rounded-lg border border-cyan/35 bg-cyan/10 px-3 py-1 text-cyan">Audit First</span>
-            <span className="rounded-lg border border-cyan/35 bg-cyan/10 px-3 py-1 text-cyan">Recommend What Fits</span>
-            <span className="rounded-lg border border-cyan/35 bg-cyan/10 px-3 py-1 text-cyan">Deliver Outcomes</span>
-          </div>
+          <p className="max-w-md text-sm text-white/65">
+            Vendor-neutral AI consulting for Canadian small and mid-sized businesses. We audit
+            first, then build what fits.
+          </p>
+          <p className="text-xs uppercase tracking-[0.14em] text-white/45">
+            Audit first &nbsp;·&nbsp; Recommend what fits &nbsp;·&nbsp; Deliver outcomes
+          </p>
         </div>
         <div>
           <h2 className="mb-4 text-[13px] font-semibold uppercase tracking-[0.1em] text-white">Services</h2>
-          <ul className="space-y-3 text-sm text-white/50">
+          <ul className="space-y-3 text-sm text-white/65">
             <li>
               <Link href="/ai-audit" className="transition hover:text-cyan">
                 AI Opportunity Audit
@@ -60,7 +61,7 @@ export function SiteFooter() {
         </div>
         <div>
           <h2 className="mb-4 text-[13px] font-semibold uppercase tracking-[0.1em] text-white">Industries</h2>
-          <ul className="space-y-3 text-sm text-white/50">
+          <ul className="space-y-3 text-sm text-white/65">
             <li>
               <Link href="/industries" className="transition hover:text-cyan">
                 Trades &amp; Construction
@@ -95,7 +96,7 @@ export function SiteFooter() {
         </div>
         <div>
           <h2 className="mb-4 text-[13px] font-semibold uppercase tracking-[0.1em] text-white">Company</h2>
-          <ul className="space-y-3 text-sm text-white/50">
+          <ul className="space-y-3 text-sm text-white/65">
             <li>
               <Link href="/about" className="transition hover:text-cyan">
                 About
@@ -131,9 +132,9 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="container-shell flex flex-col gap-4 py-6 text-[13px] text-white/35 md:flex-row md:items-center md:justify-between">
-          <p>© 2026 Bit Depth AI Consulting Ltd. | Barriere, British Columbia, Canada</p>
-          <div className="flex flex-col gap-1 text-white/50 sm:flex-row sm:items-center sm:gap-3">
+        <div className="container-shell flex flex-col gap-4 py-6 text-[13px] text-white/45 md:flex-row md:items-center md:justify-between">
+          <p>© 2026 Bit Depth AI Consulting Ltd. &nbsp;·&nbsp; Barriere, British Columbia, Canada</p>
+          <div className="flex flex-col gap-1 text-white/65 sm:flex-row sm:items-center sm:gap-3">
             <Link
               href="https://www.linkedin.com/company/bitdepth-ai-consulting-ltd"
               target="_blank"

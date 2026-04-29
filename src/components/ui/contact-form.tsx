@@ -27,16 +27,14 @@ export function ContactForm() {
       company: String(formData.get('company') ?? '').trim(),
       email: String(formData.get('email') ?? '').trim(),
       phone: String(formData.get('phone') ?? '').trim(),
-      message: String(formData.get('message') ?? '').trim(),
+      message: String(formData.get('message') ?? '').trim()
     };
 
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
       });
 
       const data = await response.json();
@@ -56,16 +54,16 @@ export function ContactForm() {
 
   if (isSubmitted) {
     return (
-      <div className="card-light mt-8 p-6 text-center">
-        <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-cyan/10 text-cyan">
-          <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        <h3 className="mt-4 text-xl font-bold text-[var(--color-navy)]">Thanks we&apos;ve received your message.</h3>
+      <div className="mt-8 rounded-md border border-[var(--color-border)] bg-white p-6 shadow-soft">
+        <p className="eyebrow">Received</p>
+        <h3 className="mt-5 text-[var(--color-navy)]">Thanks. We&apos;ve got your message.</h3>
         <p className="mt-3 text-[var(--color-slate)]">
-          Blake will review it and follow up within 1 business day. If your situation is urgent, email{' '}
-          <a href="mailto:blake@bitdepthaiconsulting.com" className="text-cyan hover:underline">
+          Blake will review it and follow up within one business day. If your situation is urgent,
+          email{' '}
+          <a
+            href="mailto:blake@bitdepthaiconsulting.com"
+            className="text-[var(--color-cyan)] hover:text-[var(--color-cyan-dark)]"
+          >
             blake@bitdepthaiconsulting.com
           </a>{' '}
           directly.
@@ -76,50 +74,93 @@ export function ContactForm() {
 
   return (
     <form
-      className="card-light mt-8 grid gap-4 p-6"
       onSubmit={handleSubmit}
+      noValidate
+      className="mt-8 grid gap-4 rounded-md border border-[var(--color-border)] bg-white p-6 shadow-soft"
     >
-      <input
-        type="text"
-        name="name"
-        placeholder="Full Name"
-        required
-        className="w-full rounded-lg border border-[var(--color-border)] px-4 py-3 text-sm focus:border-cyan focus:outline-none focus:ring-1 focus:ring-cyan"
-      />
-      <input
-        type="text"
-        name="company"
-        placeholder="Company Name"
-        required
-        className="w-full rounded-lg border border-[var(--color-border)] px-4 py-3 text-sm focus:border-cyan focus:outline-none focus:ring-1 focus:ring-cyan"
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Email Address"
-        required
-        className="w-full rounded-lg border border-[var(--color-border)] px-4 py-3 text-sm focus:border-cyan focus:outline-none focus:ring-1 focus:ring-cyan"
-      />
-      <input
-        type="tel"
-        name="phone"
-        placeholder="Phone (optional)"
-        className="w-full rounded-lg border border-[var(--color-border)] px-4 py-3 text-sm focus:border-cyan focus:outline-none focus:ring-1 focus:ring-cyan"
-      />
-      <textarea
-        name="message"
-        placeholder="What are you hoping AI could help you with?"
-        required
-        className="min-h-32 w-full rounded-lg border border-[var(--color-border)] px-4 py-3 text-sm focus:border-cyan focus:outline-none focus:ring-1 focus:ring-cyan"
-      />
-      {error ? <p className="text-sm text-red-600">{error}</p> : null}
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className="btn-primary w-full sm:w-fit disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        {isSubmitting ? 'Sending...' : 'Send My Inquiry'}
-      </button>
+      <div>
+        <label htmlFor="contact-name" className="sr-only">
+          Full name
+        </label>
+        <input
+          id="contact-name"
+          type="text"
+          name="name"
+          autoComplete="name"
+          placeholder="Your full name"
+          required
+        />
+      </div>
+
+      <div>
+        <label htmlFor="contact-company" className="sr-only">
+          Company name
+        </label>
+        <input
+          id="contact-company"
+          type="text"
+          name="company"
+          autoComplete="organization"
+          placeholder="Your company name"
+          required
+        />
+      </div>
+
+      <div>
+        <label htmlFor="contact-email" className="sr-only">
+          Email address
+        </label>
+        <input
+          id="contact-email"
+          type="email"
+          name="email"
+          autoComplete="email"
+          placeholder="Your email address"
+          required
+        />
+      </div>
+
+      <div>
+        <label htmlFor="contact-phone" className="sr-only">
+          Phone number (optional)
+        </label>
+        <input
+          id="contact-phone"
+          type="tel"
+          name="phone"
+          autoComplete="tel"
+          placeholder="Phone number (optional)"
+        />
+      </div>
+
+      <div>
+        <label htmlFor="contact-message" className="sr-only">
+          What are you hoping AI could help you with?
+        </label>
+        <textarea
+          id="contact-message"
+          name="message"
+          rows={5}
+          placeholder="What are you hoping AI could help you with?"
+          required
+        />
+      </div>
+
+      {error ? (
+        <p role="alert" className="text-sm text-red-700">
+          {error}
+        </p>
+      ) : null}
+
+      <div>
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="btn-primary w-full disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
+        >
+          {isSubmitting ? 'Sending…' : 'Send my inquiry'}
+        </button>
+      </div>
     </form>
   );
 }

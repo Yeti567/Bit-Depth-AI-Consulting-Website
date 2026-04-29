@@ -23,21 +23,25 @@ export function ServiceAnchorNav() {
   };
 
   return (
-    <section className="section-offwhite py-6">
+    <nav
+      aria-label="Service sections"
+      className="border-y border-[var(--color-border)] bg-[var(--color-offwhite)]"
+    >
       <div className="container-shell">
-        <div className="flex flex-wrap items-center justify-center gap-3">
+        <ul className="flex flex-wrap items-center gap-x-7 gap-y-3 py-4 text-sm">
           {serviceNavLinks.map((link) => (
-            <a
-              key={link.id}
-              href={`#${link.id}`}
-              onClick={(e) => handleAnchorClick(e, link.id)}
-              className="rounded-full border border-[var(--color-border)] bg-white px-5 py-2.5 text-sm font-medium text-[var(--color-navy)] transition hover:border-cyan hover:bg-cyan/10 hover:text-cyan"
-            >
-              {link.label}
-            </a>
+            <li key={link.id}>
+              <a
+                href={`#${link.id}`}
+                onClick={(e) => handleAnchorClick(e, link.id)}
+                className="text-[var(--color-slate)] hover:text-[var(--color-navy)]"
+              >
+                {link.label}
+              </a>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
-    </section>
+    </nav>
   );
 }
