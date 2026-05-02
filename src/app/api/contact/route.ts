@@ -101,13 +101,16 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 
     if (error) {
       console.error('Contact form: Resend send failed', error);
+      // TEMPORARY: surface the real Resend error to the user so we can debug.
+      // Revert this branch to the friendly message once delivery is working.
+      const detail =
+        (error as { message?: string; name?: string })?.message ??
+        (error as { name?: string })?.name ??
+        JSON.stringify(error);
       return NextResponse.json(
         {
           success: false,
-          error:
-            'We could not send your message right now. Please try again in a few minutes, or email ' +
-            TO_EMAIL +
-            ' directly.'
+          error: 'Resend error: ' + detail
         },
         { status: 502 }
       );
