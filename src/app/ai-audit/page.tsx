@@ -179,7 +179,7 @@ export default function AIAuditPage() {
               where AI will make the biggest impact, with honest ROI estimates to back it up.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact" className="btn-primary">
+              <Link href="/contact?topic=audit" className="btn-primary">
                 Book an AI Audit
               </Link>
               <Link href="#pricing" className="btn-outline">
@@ -289,7 +289,7 @@ export default function AIAuditPage() {
                   {tier.creditWindow}
                 </p>
                 <Link
-                  href="/contact"
+                  href="/contact?topic=audit"
                   className={`${tier.highlight ? 'btn-primary' : 'btn-outline'} mt-5 w-full justify-center`}
                 >
                   Book an AI Audit
@@ -398,7 +398,7 @@ You pay                    $15,500`}
               commit to building anything.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link href="/contact" className="btn-primary">
+              <Link href="/contact?topic=audit" className="btn-primary">
                 Book an AI Audit
               </Link>
               <Link href="/contact" className="btn-outline">

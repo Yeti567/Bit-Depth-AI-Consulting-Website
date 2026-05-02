@@ -100,7 +100,7 @@ export function ArticleCTA({
   eyebrow = 'Where to start',
   title,
   body,
-  primaryHref = '/ai-audit',
+  primaryHref = '/contact?topic=audit',
   primaryLabel = 'Book an AI Audit',
   secondaryHref = '/contact',
   secondaryLabel = 'Book a discovery call'
