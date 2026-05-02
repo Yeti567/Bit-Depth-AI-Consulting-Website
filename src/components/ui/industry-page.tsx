@@ -20,8 +20,8 @@ export interface IndustryPageData {
   // Problem section
   problemTitle: string;
   problemParagraphs: string[];
-  problemImageSrc: string;
-  problemImageAlt: string;
+  problemImageSrc?: string;
+  problemImageAlt?: string;
 
   // Loss list
   lossEyebrow: string;
@@ -105,8 +105,31 @@ export function IndustryPage({ data }: { data: IndustryPageData }) {
       {/* 2. The problem */}
       <section className="section-stone section-space section-rule">
         <div className="container-shell">
-          <div className="grid gap-12 lg:grid-cols-[1.3fr,0.7fr] lg:items-start">
-            <ScrollReveal>
+          {data.problemImageSrc ? (
+            <div className="grid gap-12 lg:grid-cols-[1.3fr,0.7fr] lg:items-start">
+              <ScrollReveal>
+                <p className="eyebrow">The problem</p>
+                <h2 className="mt-6">{data.problemTitle}</h2>
+                <div className="mt-6 space-y-5 text-[var(--color-slate)]">
+                  {data.problemParagraphs.map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
+                </div>
+              </ScrollReveal>
+              <ScrollReveal
+                index={1}
+                className="relative aspect-[4/5] overflow-hidden rounded-md border border-[var(--color-border)] lg:sticky lg:top-24"
+              >
+                <Image
+                  src={data.problemImageSrc}
+                  alt={data.problemImageAlt ?? ''}
+                  fill
+                  className="object-cover"
+                />
+              </ScrollReveal>
+            </div>
+          ) : (
+            <ScrollReveal className="max-w-3xl">
               <p className="eyebrow">The problem</p>
               <h2 className="mt-6">{data.problemTitle}</h2>
               <div className="mt-6 space-y-5 text-[var(--color-slate)]">
@@ -115,18 +138,7 @@ export function IndustryPage({ data }: { data: IndustryPageData }) {
                 ))}
               </div>
             </ScrollReveal>
-            <ScrollReveal
-              index={1}
-              className="relative aspect-[4/5] overflow-hidden rounded-md border border-[var(--color-border)] lg:sticky lg:top-24"
-            >
-              <Image
-                src={data.problemImageSrc}
-                alt={data.problemImageAlt}
-                fill
-                className="object-cover"
-              />
-            </ScrollReveal>
-          </div>
+          )}
         </div>
       </section>
 

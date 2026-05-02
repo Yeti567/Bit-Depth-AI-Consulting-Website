@@ -3,17 +3,26 @@
 @tailwind utilities;
 
 :root {
-  /* Restrained Trade palette — see DESIGN.md */
+  /* Restrained Trade palette, see DESIGN.md */
   --color-navy: #1C1F26;        /* ink */
   --color-charcoal: #2A2D34;    /* ink-soft */
-  --color-cyan: #B85A32;        /* rust (single accent) */
-  --color-cyan-dark: #8A4023;   /* rust-deep */
+  --color-terracotta: #B85A32;       /* burnt orange, single brand accent */
+  --color-terracotta-dark: #8A4023;  /* hover and pressed */
+  --color-terracotta-soft: #D77548;  /* subtle highlights only */
   --color-slate: #5A5D68;
   --color-offwhite: #FAF7F2;    /* cream canvas */
   --color-stone: #F0ECE5;
   --color-white: #FFFFFF;
   --color-border: rgba(28, 31, 38, 0.10);
   --color-border-strong: rgba(28, 31, 38, 0.18);
+
+  /* Legacy aliases. The accent was repainted from cyan to terracotta
+     before this palette was finalized; the original token names remain
+     for back-compat. New code should reference --color-terracotta. */
+  --color-cyan: var(--color-terracotta);
+  --color-cyan-dark: var(--color-terracotta-dark);
+  --color-cyan-glow: var(--color-terracotta-soft);
+
   color-scheme: light;
 
   /* Assessment app surface — scoped, intentionally distinct */
@@ -289,6 +298,11 @@ input::placeholder, textarea::placeholder {
     background: var(--color-cyan-dark);
   }
 
+  .btn-primary:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--color-offwhite), 0 0 0 5px var(--color-terracotta-dark);
+  }
+
   .btn-outline {
     background: transparent;
     color: var(--color-navy);
@@ -305,6 +319,11 @@ input::placeholder, textarea::placeholder {
   .btn-outline:hover {
     background: var(--color-navy);
     color: var(--color-offwhite);
+  }
+
+  .btn-outline:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--color-offwhite), 0 0 0 5px var(--color-navy);
   }
 
   .section-navy .btn-outline,

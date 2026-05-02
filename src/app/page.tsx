@@ -11,14 +11,14 @@ import { buildOrganizationSchema, buildWebSiteSchema, buildLocalBusinessSchema }
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'AI Consulting for Canadian Businesses | Bit Depth AI',
+  title: 'AI and Automation for Canadian Trades and Contractors | Bit Depth AI',
   description:
-    'Vendor-neutral AI consulting for Canadian small and mid-sized businesses. We audit first, then build what fits. Starting at $5,000. Book a free discovery call.',
+    'Vendor-neutral AI consulting for Canadian trades and contractors. We diagnose where the money is leaking, then build the AI and automation that plugs the leak. Audits from $5,000.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/' },
   openGraph: {
-    title: 'AI Consulting for Canadian Businesses | Bit Depth AI',
+    title: 'AI and Automation for Canadian Trades and Contractors | Bit Depth AI',
     description:
-      'Vendor-neutral AI consulting for Canadian small and mid-sized businesses. We audit first, then build what fits. Starting at $5,000. Book a free discovery call.',
+      'Vendor-neutral AI consulting for Canadian trades and contractors. Audit first. Recommend what fits. Deliver outcomes.',
     url: 'https://bitdepthaiconsulting.com/',
     type: 'website',
     siteName: 'Bit Depth AI Consulting',
@@ -28,29 +28,33 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Consulting for Canadian Businesses | Bit Depth AI',
+    title: 'AI and Automation for Canadian Trades and Contractors | Bit Depth AI',
     description:
-      'Vendor-neutral AI consulting for Canadian small and mid-sized businesses. We audit first, then build what fits. Starting at $5,000.',
+      'Vendor-neutral AI consulting for Canadian trades and contractors. Audits from $5,000.',
     images: ['/images/og-home.jpg']
   }
 };
 
 const painPoints = [
   {
-    title: 'Data spread across disconnected systems',
-    description: "Your team can't get a clear picture because information lives in four different places."
+    title: 'Calls go to voicemail and never come back.',
+    description:
+      'Industry data puts missed-call rates at 30 to 50 percent in residential trades. Every missed call is a competitor’s win.'
   },
   {
-    title: 'Manual processes eating staff time',
-    description: 'Repetitive admin work that should take minutes takes hours every single day.'
+    title: 'Estimates take days.',
+    description:
+      'By the time the quote goes out, the homeowner has already booked someone else.'
   },
   {
-    title: 'Decisions made on incomplete information',
-    description: "You're running the business on gut feel because the data isn't visible or usable."
+    title: 'Jobs get re-keyed into three systems.',
+    description:
+      'Dispatch, accounting, and invoicing all live in different places, and your office staff is the integration.'
   },
   {
-    title: "Systems that don't talk to each other",
-    description: 'Quoting, scheduling, invoicing, and reporting all require manual re-entry.'
+    title: 'Owner is the bottleneck.',
+    description:
+      'Quoting, scheduling, follow-ups, and collections all stop when the owner is on a tool.'
   }
 ];
 
@@ -58,52 +62,55 @@ const processSteps = [
   {
     title: 'Diagnose',
     description:
-      'A structured AI Opportunity Audit across your operations, data, and technology stack. We map your processes and identify where AI will deliver the highest ROI.'
+      'A structured AI Opportunity Audit across operations, data, and tech stack. We map your processes and identify where AI will deliver the highest ROI for your specific business.'
   },
   {
     title: 'Design',
     description:
-      'A prioritized roadmap: short-term quick wins and longer-term strategic initiatives, with realistic ROI estimates for each.'
+      'A prioritized roadmap. Short-term quick wins and longer-term strategic initiatives, with realistic ROI estimates for each.'
   },
   {
     title: 'Implement',
     description:
-      'We build and deploy the right solution, automations, AI workers, dashboards, or integrations. No unnecessary tech. No wasted budget.'
+      'We build and deploy the right solution. Automations, AI workers, dashboards, or integrations. No theatre, no wasted budget.'
   }
 ];
 
 const services = [
   {
     title: 'AI Opportunity Audit',
-    summary: 'Your starting point.',
+    href: '/services/ai-audit',
     description:
       'Structured discovery of where AI will save you the most time and money. Includes roadmap and ROI estimates.',
     price: 'From $5,000'
   },
   {
-    title: 'Workflow Automation',
-    summary: 'Eliminate the manual.',
+    title: 'Missed Call Text Back',
+    href: '/services/missed-call-text-back',
     description:
-      'Automate repetitive processes across invoicing, scheduling, reporting, onboarding, and more.',
+      'AI receptionist plus auto-text recovery for every missed call. Canadian compliance built in.',
+    price: 'From $497/mo'
+  },
+  {
+    title: 'Workflow Automation',
+    href: '/services/workflow-automation',
+    description:
+      'Automate repetitive processes across invoicing, scheduling, onboarding, and more.',
     price: 'From $5,000'
   },
   {
     title: 'Custom AI Workers',
-    summary: 'Your digital workforce.',
-    description: 'Purpose-built AI agents that perform defined job functions inside your business.',
+    href: '/services/custom-ai-workers',
+    description:
+      'Purpose-built AI agents that perform defined job functions inside your business.',
     price: 'From $10,000'
   },
   {
-    title: 'AI Strategy & Roadmapping',
-    summary: 'A clear plan forward.',
-    description: 'Multi-phase AI implementation strategy aligned to your business goals and budget.',
+    title: 'AI Implementation',
+    href: '/services/ai-implementation',
+    description:
+      'Multi-phase AI implementation strategy aligned to your business goals and budget.',
     price: 'From $12,000'
-  },
-  {
-    title: 'AI Training & Enablement',
-    summary: 'Make it stick.',
-    description: "Workshops and playbooks that ensure your team actually uses the AI you've invested in.",
-    price: 'From $2,500'
   }
 ];
 
@@ -111,27 +118,27 @@ const homepageFaq = [
   {
     question: 'What makes you qualified to do this?',
     answer:
-      "Blake has five years of hands-on AI implementation experience, working behind the scenes for companies across North America. He's done this work. He has not managed people who do it. When you hire Bit Depth, you're getting that experience applied directly to your business."
+      'Blake has spent the last five years working in AI, first as a salesperson, then hands-on inside the trade and field services industries. When you hire BitDepth, you are getting that experience applied directly to your business, not handed off to a junior.'
   },
   {
-    question: "What if the audit doesn't find anything useful?",
+    question: 'What if the audit does not find anything useful?',
     answer:
-      "That's a real outcome and we'll tell you if it applies to you. If your business isn't ready for AI, you'll leave with a clear picture of what needs to be in place before it makes sense, plus a prioritized plan to get there. That roadmap has value on its own."
+      'That is a real outcome and we will tell you if it applies to you. If your business is not ready for AI yet, you leave with a clear picture of what needs to be in place before it makes sense, plus a prioritized plan to get there. That roadmap has value on its own.'
   },
   {
     question: 'How much of my time will this take?',
     answer:
-      "We try to keep your team's involvement focused and efficient. The audit typically requires a few structured interviews and the ability to walk us through your key systems and workflows. Most clients find it takes less time than they expected."
+      'We keep the owner involvement to about 90 minutes of structured interview, plus access to the people doing the work (dispatcher, lead estimator, office manager). Most clients find the audit takes less time than they expected.'
   },
   {
     question: 'Is the outcome guaranteed?',
     answer:
-      "We guarantee the audit credit: 100% of what you pay for the audit is credited against any implementation you choose to move forward with. What we can't guarantee is a specific ROI, because that depends on your business, your data, and how you execute. What we can guarantee is honesty about what we find, including if the numbers don't justify building anything yet."
+      'We guarantee the audit credit. 100 percent of what you pay for the audit is credited against any implementation you move forward with inside 90 days. What we cannot guarantee is a specific ROI, because that depends on your business, your data, and how you execute. What we can guarantee is honesty about what we find, including if the numbers do not justify building anything yet.'
   },
   {
     question: 'How does the audit credit actually work?',
     answer:
-      'Simple. You pay for the audit. We deliver it. If you decide to move forward with any implementation (automation, AI workers, strategy, or training), the full audit fee comes off your project invoice. No minimums, no conditions beyond the 90-day window. You pay the difference.'
+      'Simple. You pay for the audit. We deliver it. If you decide to move forward with any implementation (Missed Call Text Back, workflow automation, AI workers, or a multi-phase build), the full audit fee comes off your project invoice. No minimums, no conditions beyond the 90-day window.'
   }
 ];
 
@@ -155,20 +162,22 @@ export default function HomePage() {
       <section className="section-offwhite section-space">
         <div className="container-shell grid gap-12 lg:grid-cols-[1.15fr,0.85fr] lg:items-center">
           <ScrollReveal>
-            <p className="eyebrow">Vendor-neutral AI consulting</p>
+            <p className="eyebrow">Vendor-neutral AI consulting for Canadian trades</p>
             <h1 className="mt-6 max-w-2xl text-[var(--color-navy)]">
-              Fix the inefficiencies slowing down your business.
+              Stop bleeding revenue from missed calls and broken admin.
             </h1>
             <p className="mt-6 max-w-xl text-lg text-[var(--color-slate)]">
-              Most businesses don&apos;t have an AI problem. They have a systems and data problem. We
-              identify where time and money are being lost, then implement the right solution.
+              Most Canadian trades and contractors are losing 30 to 50 percent of their inbound
+              calls and re-keying every job into three different systems. We diagnose where the
+              money is leaking, then build the AI and automation that plugs the leak. Audit first.
+              Recommend what fits. Deliver outcomes.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link href="/ai-audit" className="btn-primary">
                 Book an AI Audit
               </Link>
-              <Link href="#how-it-works" className="btn-outline">
-                See how it works
+              <Link href="/services" className="btn-outline">
+                See how we work
               </Link>
             </div>
             <p className="mt-6 text-sm text-[var(--color-slate)]">
@@ -177,8 +186,8 @@ export default function HomePage() {
           </ScrollReveal>
           <ScrollReveal index={1} className="relative aspect-[4/5] overflow-hidden rounded-md border border-[var(--color-border)]">
             <Image
-              src="/images/Homepage hero section.webp"
-              alt="Business owner reviewing operational dashboard"
+              src="/images/hero-home-trades-ontario.webp"
+              alt="Suburban Ontario residential driveway at golden hour with a service van"
               fill
               priority
               className="object-cover"
@@ -192,12 +201,10 @@ export default function HomePage() {
         <div className="container-shell">
           <ScrollReveal className="max-w-2xl">
             <p className="eyebrow">The real problem</p>
-            <h2 className="mt-6">
-              You don&apos;t need more technology. You need clarity on what&apos;s breaking down.
-            </h2>
+            <h2 className="mt-6">You do not need more software. You need to stop the leak.</h2>
             <p className="mt-5 text-[var(--color-slate)]">
-              We solve the operational blockers that prevent AI from making any impact. Before
-              building anything, we diagnose where your business is losing time and money.
+              Most contractors we meet have already bought a CRM, a field service tool, and a
+              quoting platform. The problem is not tools. The problem is the gap between them.
             </p>
           </ScrollReveal>
           <div className="mt-12 grid gap-x-10 gap-y-10 md:grid-cols-2">
@@ -253,11 +260,6 @@ export default function HomePage() {
               implementation, we credit the full cost of your audit, dollar for dollar, against your
               project invoice. No conditions. No minimums. No fine print.
             </p>
-            <p className="mt-4 text-[var(--color-slate)]">
-              That&apos;s how confident we are in what the audit finds. If the numbers don&apos;t
-              justify building, we&apos;ll tell you. You&apos;ll still have an operational roadmap
-              worth far more than you paid for it.
-            </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-3 border-t border-[var(--color-border)] pt-8">
               <div>
                 <p className="text-xs uppercase tracking-[0.14em] text-[var(--color-slate)]">Credit</p>
@@ -298,8 +300,9 @@ export default function HomePage() {
                 className="grid gap-4 py-7 md:grid-cols-[1fr,2fr,auto] md:items-baseline md:gap-10"
               >
                 <div>
-                  <h3 className="text-[var(--color-navy)]">{service.title}</h3>
-                  <p className="mt-1 text-sm text-[var(--color-cyan)]">{service.summary}</p>
+                  <Link href={service.href} className="text-[var(--color-navy)] hover:text-[var(--color-cyan)]">
+                    <h3>{service.title}</h3>
+                  </Link>
                 </div>
                 <p className="text-[var(--color-slate)]">{service.description}</p>
                 <p className="tabular text-sm font-semibold text-[var(--color-navy)] md:text-right">
@@ -328,8 +331,8 @@ export default function HomePage() {
         <div className="container-shell grid gap-12 lg:grid-cols-[0.85fr,1.15fr] lg:items-start">
           <ScrollReveal className="relative aspect-[4/5] overflow-hidden rounded-md border border-[var(--color-border)] lg:sticky lg:top-24">
             <Image
-              src="/images/Home page BC Canada section.webp"
-              alt="Blake Cowan, founder of Bit Depth AI Consulting"
+              src="/images/about-blake-landscape.webp"
+              alt="Thompson River valley in interior British Columbia at golden hour"
               fill
               className="object-cover"
             />
@@ -337,35 +340,38 @@ export default function HomePage() {
           <ScrollReveal index={1}>
             <p className="eyebrow">The founder</p>
             <h2 className="mt-6">Blake Cowan</h2>
-            <p className="mt-1 text-[var(--color-slate)]">Founder, Bit Depth AI Consulting</p>
+            <p className="mt-1 text-[var(--color-slate)]">Founder, BitDepth AI Consulting</p>
             <div className="mt-8 space-y-5 text-[var(--color-charcoal)]">
               <p>
-                Blake has spent the last five years working in AI. Not as a salesperson, but
-                hands-on behind the scenes, doing the same work he now does for Bit Depth clients.
-                Most of that experience was built working with companies in the United States.
+                Blake has spent the last five years working in AI, first as a salesperson, then
+                hands-on inside the trade and field services industries. That experience has been
+                the foundation for everything BitDepth does.
               </p>
               <p>
-                He started Bit Depth because Canada was underserved. Businesses here deserve access
-                to the same quality of AI consulting that larger US markets take for granted.
+                He started BitDepth because Canadian trades and small contractors are one of the
+                most underserved markets in professional services. Large consultancies do not show
+                up. Freelancers do not have a methodology. Nobody is building AI for the way
+                Canadian field service businesses actually run, with one truck, one dispatcher, and
+                an owner who answers their own phone.
               </p>
               <p>
-                One thing Blake learned early: data and systems have to be solid before AI can do
+                One thing Blake learned early. Data and systems have to be solid before AI does
                 anything useful. Build on a shaky foundation and everything you build with AI
-                becomes a house of cards. That belief shapes everything Bit Depth does.
+                becomes a house of cards. That belief shapes how BitDepth runs every engagement.
               </p>
               <p className="border-l border-[var(--color-cyan)] pl-5 text-lg italic text-[var(--color-navy)]">
-                Most businesses aren&apos;t ready for AI yet. That&apos;s not a criticism. It&apos;s
-                the reality. A lot of companies are going to be disappointed because they jumped in
+                Most businesses are not ready for AI yet. That is not a criticism. It is the
+                reality. A lot of companies are going to be disappointed because they jumped in
                 before their data and processes were ready to support it.
               </p>
               <p>
                 Before we recommend anything, we run a discovery audit. We tell you exactly where
-                you stand. What&apos;s working, what isn&apos;t, and what needs fixing before AI
-                will do you any good. That honesty is the most valuable thing we offer.
+                you stand. What is working, what is not, and what needs fixing before AI will do
+                you any good. That honesty is the most valuable thing we offer.
               </p>
               <p>
-                Bit Depth is lean by design. Blake works with a small group of trusted consultants,
-                which keeps costs reasonable and means you&apos;re always dealing with someone who
+                BitDepth is lean by design. Blake works with a small group of trusted consultants,
+                which keeps costs reasonable and means you are always dealing with someone who
                 actually knows your file.
               </p>
             </div>
@@ -373,30 +379,29 @@ export default function HomePage() {
               <div className="flex items-start gap-3">
                 <Check className="mt-1 h-4 w-4 shrink-0 text-[var(--color-cyan)]" />
                 <p className="text-sm text-[var(--color-slate)]">
-                  <strong className="text-[var(--color-navy)]">We don&apos;t sell software.</strong>{' '}
-                  We recommend the right solution, not the one we&apos;re paid to push.
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <Check className="mt-1 h-4 w-4 shrink-0 text-[var(--color-cyan)]" />
-                <p className="text-sm text-[var(--color-slate)]">
-                  <strong className="text-[var(--color-navy)]">Diagnosis, not pitch.</strong> Every
-                  engagement begins with a structured audit.
+                  <strong className="text-[var(--color-navy)]">We do not sell software.</strong>{' '}
+                  We recommend the right solution, not the one we are paid to push.
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <Check className="mt-1 h-4 w-4 shrink-0 text-[var(--color-cyan)]" />
                 <p className="text-sm text-[var(--color-slate)]">
                   <strong className="text-[var(--color-navy)]">Built for Canadian SMBs.</strong>{' '}
-                  Enterprise thinking at <span className="tabular">$5k</span>, not{' '}
-                  <span className="tabular">$50k</span>.
+                  Enterprise thinking at SMB scale, with PIPEDA-aware data handling.
+                </p>
+              </div>
+              <div className="flex items-start gap-3">
+                <Check className="mt-1 h-4 w-4 shrink-0 text-[var(--color-cyan)]" />
+                <p className="text-sm text-[var(--color-slate)]">
+                  <strong className="text-[var(--color-navy)]">Diagnosis, not prescription.</strong>{' '}
+                  Every engagement begins with a structured audit.
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <Check className="mt-1 h-4 w-4 shrink-0 text-[var(--color-cyan)]" />
                 <p className="text-sm text-[var(--color-slate)]">
                   <strong className="text-[var(--color-navy)]">Measurable ROI.</strong> We estimate
-                  ROI before we build. If the numbers don&apos;t work, we tell you.
+                  ROI before we build. If the numbers do not work, we tell you.
                 </p>
               </div>
             </div>
@@ -436,12 +441,12 @@ export default function HomePage() {
             <span className="eyebrow">Start here</span>
             <h2 className="mt-6 text-white">Start with a diagnostic, not a guess.</h2>
             <p className="mx-auto mt-6 max-w-xl text-white/75">
-              Before building anything, we identify where time is being lost, where money is
-              leaking, and where AI will actually make an impact.
+              Before building anything, we identify where the money is leaking and where AI will
+              actually make an impact.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link href="/ai-audit" className="btn-primary">
-                Book an AI Audit
+                Book an Audit
               </Link>
               <Link href="/contact" className="btn-outline">
                 Book a discovery call

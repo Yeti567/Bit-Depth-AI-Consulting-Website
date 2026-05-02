@@ -2,94 +2,63 @@ import type { Metadata } from 'next';
 import { IndustryPage, type IndustryPageData } from '@/components/ui/industry-page';
 
 export const metadata: Metadata = {
-  title: 'AI Consulting for Field Services Companies | Bit Depth AI',
+  title: 'AI for Field Service Businesses in Canada | Bit Depth AI',
   description:
-    'Stop losing jobs to voicemail. Automated booking, follow-up, invoicing, and client communication for HVAC, plumbing, electrical, and field service businesses.',
-  alternates: { canonical: 'https://bitdepthaiconsulting.com/industries/field-services' },
-  openGraph: {
-    title: 'AI Consulting for Field Services Companies | Bit Depth AI',
-    description:
-      'Stop losing jobs to voicemail. Automated booking, follow-up, invoicing, and client communication for HVAC, plumbing, electrical, and field service businesses.',
-    url: 'https://bitdepthaiconsulting.com/industries/field-services',
-    type: 'website',
-    siteName: 'Bit Depth AI Consulting',
-    locale: 'en_CA',
-    images: [
-      {
-        url: '/images/og-industries.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'AI consulting for Canadian field services businesses'
-      }
-    ]
-  },
-  twitter: {
-    card: 'summary_large_image',
-    site: '@bitdepthai',
-    title: 'AI Consulting for Field Services Companies | Bit Depth AI',
-    description:
-      'Stop losing jobs to voicemail. Automated booking, follow-up, invoicing, and client communication for field service businesses.',
-    images: ['/images/og-industries.jpg']
-  }
+    'Renewal automation, route optimization, AI-handled customer comms, and review request automation for pest control, restoration, and commercial cleaning operators.',
+  alternates: { canonical: 'https://bitdepthaiconsulting.com/industries/field-services' }
 };
 
 const data: IndustryPageData = {
-  breadcrumbLabel: 'Field Services',
-  eyebrow: 'Field Services',
-  heroTitle: "If the phone isn't getting answered, you're losing jobs to someone who is.",
+  breadcrumbLabel: 'General Field Services',
+  eyebrow: 'Recurring revenue businesses',
+  heroTitle: 'Protect the recurring revenue without adding admin headcount.',
   heroLead:
-    'HVAC, plumbing, electrical, and equipment repair businesses lose more revenue to missed calls and slow follow-up than almost any other operational problem.',
-  heroImageSrc: '/images/Industrial Field Services Hero Image.webp',
-  heroImageAlt: 'HVAC technician servicing a rooftop unit with a city skyline in the background',
+    'Pest control, restoration, commercial cleaning, and other recurring-revenue field service businesses live and die by renewal rates and route density. We automate the renewals, optimize the routes, and let AI handle the customer comms that used to take a full-time office staffer.',
+  heroImageSrc: '/images/hero-industry-field-services.webp',
+  heroImageAlt: 'Field service technician beside a pickup truck on a rural Ontario road',
 
-  problemTitle: 'The owner is in the field. The phone is ringing. Nobody is answering.',
+  problemTitle: 'The renewal slips because nobody had time to chase it.',
   problemParagraphs: [
-    "Most field service businesses are run by the owner. The owner is on a job. A potential client calls, gets voicemail, and calls the next company on Google. That job, and every future job from that client, is gone.",
-    "This is not a staffing problem. It is a systems problem. An AI-powered chatbot or automated booking system can answer that call, collect the client's information, offer available time slots, and either book the appointment or ensure a callback happens the same day.",
-    'The technology exists, it is not expensive, and it works around the clock without taking a lunch break. The businesses that implement this are not just capturing more leads. They are building a reputation for being responsive while their competitors go to voicemail.'
+    'In recurring-revenue field service businesses, the math is brutal. A renewal you forgot to send is a contract you lost. A route built once and never re-optimized is a margin you stopped earning. A review you never asked for is a referral you never got.',
+    'None of this is a strategy problem. It is an admin-capacity problem. We replace the admin capacity with automations that run on their own.'
   ],
-  problemImageSrc: '/images/Industry Field Services Booking Appointment Online.webp',
-  problemImageAlt:
-    'Tradesperson in work gloves holding a smartphone showing an automated appointment booking app',
 
-  lossEyebrow: 'Lost work',
-  lossTitle: 'Where field service companies lose work they never know they lost.',
+  lossEyebrow: 'What we usually find',
+  lossTitle: 'Where recurring revenue leaks.',
   losses: [
-    'Missed calls during job hours with no follow-up system',
-    'Appointment scheduling done manually by whoever picks up the phone',
-    'No-shows and last-minute cancellations with no deposit or confirmation system',
-    'Invoicing delays because the owner is still in the field at end of day',
-    'No system to follow up with past clients for seasonal maintenance or repeat work',
-    'Scheduling conflicts and double-bookings from manual calendar management'
+    'Renewal reminders go out late, or not at all.',
+    'Routes are built once and never re-optimized.',
+    'Customer comms are inconsistent across techs.',
+    'Reviews and referrals are not actively requested.'
   ],
 
-  solutionsTitle: 'What AI actually fixes in a field services business.',
+  solutionsTitle: 'What we typically build.',
   solutions: [
     {
-      title: 'Automated appointment booking',
+      title: 'Renewal automation with proactive customer outreach',
       description:
-        'A chatbot or booking system that answers inquiries, presents available time slots, and confirms appointments, without the owner or office staff having to be available in real time.'
+        'Renewals go out on time, every time, with personalized customer-specific messaging and a frictionless re-sign flow.'
     },
     {
-      title: 'Callback and follow-up automation',
+      title: 'Route optimization tied to dispatch',
       description:
-        "When a live booking isn't possible, automated systems capture the lead and trigger a callback reminder so no inquiry falls through the cracks."
+        'Routes re-optimize as new jobs come in. Drivers see the right sequence, and you stop paying for windshield time.'
     },
     {
-      title: 'Invoice and payment automation',
+      title: 'AI-handled customer comms with human review on exceptions',
       description:
-        'Invoices generated and sent automatically when a job is marked complete, so the owner gets paid faster without doing paperwork at 9pm.'
+        'Booking confirmations, on-the-way SMS, and post-job follow-ups handled automatically. A human reviews anything outside the normal flow.'
     },
     {
-      title: 'Client follow-up sequences',
+      title: 'Review and referral request automation',
       description:
-        'Automated reminders for annual maintenance, seasonal tune-ups, or service renewals, so past clients come back without you having to remember to call them.'
+        'Every completed job triggers a review or referral ask, timed to the moment customers are most likely to say yes.'
     }
   ],
 
-  ctaTitle: "Find out how many jobs you're losing to voicemail.",
+  ctaTitle: 'Stop trading renewals for admin overload.',
   ctaBody:
-    'A discovery audit will show you exactly where your business is losing revenue it should be capturing. Book a call and we will give you an honest assessment.'
+    'The audit identifies the highest-ROI fix for your specific business. For most recurring-revenue field service operators, renewals or routes pay back the audit inside a quarter.'
 };
 
 export default function FieldServicesPage() {

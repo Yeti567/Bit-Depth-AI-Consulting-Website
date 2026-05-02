@@ -1,42 +1,80 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ArrowRight, Download } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { LeadMagnet } from '@/components/ui/lead-magnet';
 import { ArticleCard, type ArticleCardData } from '@/components/ui/article-layout';
+import { CaseStudies } from '@/components/ui/case-studies';
 
 export const metadata: Metadata = {
-  title: 'AI Resources for Canadian Business Owners | Bit Depth AI',
+  title: 'Resources | BitDepth AI Consulting',
   description:
-    'Practical guides and articles to help Canadian business owners understand AI before they invest in it. No hype, no jargon, just straight answers.',
+    'Plain-language reading on AI for Canadian SMBs. No hype. No vendor pitches. Practical thinking on what AI can do for a Canadian field service business or contractor.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/resources' },
   openGraph: {
-    title: 'AI Resources for Canadian Business Owners | Bit Depth AI',
+    title: 'Resources | BitDepth AI Consulting',
     description:
-      'Practical guides and articles to help Canadian business owners understand AI before they invest in it. No hype, no jargon, just straight answers.',
+      'Plain-language reading on AI for Canadian SMBs. No hype. No vendor pitches.',
     url: 'https://bitdepthaiconsulting.com/resources',
     type: 'website',
-    siteName: 'Bit Depth AI Consulting',
+    siteName: 'BitDepth AI Consulting',
     locale: 'en_CA',
     images: [
       {
         url: '/images/og-resources.jpg',
         width: 1200,
         height: 630,
-        alt: 'AI resources for Canadian business owners'
+        alt: 'AI resources for Canadian trades and contractors'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Resources for Canadian Business Owners | Bit Depth AI',
+    title: 'Resources | BitDepth AI Consulting',
     description:
-      'Practical guides and articles to help Canadian business owners understand AI before they invest in it.',
+      'Plain-language reading on AI for Canadian SMBs. No hype. No vendor pitches.',
     images: ['/images/og-resources.jpg']
   }
 };
+
+interface FeaturedDownload {
+  title: string;
+  description: string;
+  format: string;
+  href: string;
+  cta: string;
+  external?: boolean;
+}
+
+const featuredDownloads: FeaturedDownload[] = [
+  {
+    title: 'The AI Readiness Checklist',
+    description:
+      'A practical 30 point checklist for Canadian business owners evaluating whether AI will actually save them time and money. No fluff, no sales pitch.',
+    format: 'PDF · Free',
+    href: '#lead-magnet',
+    cta: 'Download checklist'
+  },
+  {
+    title: 'Missed Call ROI Calculator',
+    description:
+      'See how much revenue is going to voicemail right now. Three inputs, one number. Most contractors are surprised by what the math says.',
+    format: 'Interactive tool',
+    href: '/services/missed-call-text-back#roi-calculator',
+    cta: 'Open the calculator'
+  },
+  {
+    title: 'COR Readiness Scorecard',
+    description:
+      'A short scorecard that tells Ontario contractors how close they are to COR-ready. Operated by COR Pathway, our sister company.',
+    format: 'PDF · Free',
+    href: '/industries/cor-pathway',
+    cta: 'See the scorecard'
+  }
+];
 
 const articles: ArticleCardData[] = [
   {
@@ -49,7 +87,7 @@ const articles: ArticleCardData[] = [
     readTime: '8 min read'
   },
   {
-    title: "You don't have an AI problem. You have a systems problem.",
+    title: 'You do not have an AI problem. You have a systems problem.',
     description:
       'How disconnected systems create hidden operational drag, and what to fix before investing in AI tools.',
     image: '/images/resources-article-1.webp.webp',
@@ -86,28 +124,26 @@ export default function ResourcesPage() {
           <ScrollReveal>
             <p className="eyebrow">Resources</p>
             <h1 className="mt-6 max-w-2xl">
-              Practical guides for owners who want to understand AI before they invest.
+              Plain-language reading on AI for Canadian SMBs.
             </h1>
             <p className="mt-6 max-w-xl text-lg text-[var(--color-slate)]">
-              No hype. No jargon. Straight answers to the questions Canadian business owners are
-              actually asking about AI.
+              We write the kind of articles we wish someone had written for us when we started.
+              No hype. No vendor pitches. Just clear, practical thinking on what AI can actually
+              do for a Canadian field service business or contractor.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href="/ai-audit" className="btn-primary">
-                Book an AI Audit
+              <Link href="#downloads" className="btn-primary">
+                See the downloads
               </Link>
               <Link href="#articles" className="btn-outline">
                 Browse articles
               </Link>
             </div>
           </ScrollReveal>
-          <ScrollReveal
-            index={1}
-            className="relative aspect-[4/5] overflow-hidden rounded-md border border-[var(--color-border)]"
-          >
+          <ScrollReveal index={1} className="relative aspect-[4/5] overflow-hidden rounded-md border border-[var(--color-border)]">
             <Image
-              src="/images/resources-hero.webp.webp"
-              alt="Canadian business owner reading AI consulting articles on a laptop"
+              src="/images/hero-resources-reading.webp"
+              alt="Top-down flat-lay of a wooden desk with notebook, pen, printed report, coffee, and phone"
               fill
               priority
               className="object-cover"
@@ -116,14 +152,46 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      {/* Article grid */}
-      <section id="articles" className="section-stone section-space section-rule">
+      {/* Featured downloads */}
+      <section id="downloads" className="section-stone section-space section-rule">
         <div className="container-shell">
           <ScrollReveal className="max-w-2xl">
-            <p className="eyebrow">Featured articles</p>
-            <h2 className="mt-6">Start with these.</h2>
+            <p className="eyebrow">Featured downloads</p>
+            <h2 className="mt-6">Three tools to start with.</h2>
           </ScrollReveal>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {featuredDownloads.map((item, index) => (
+              <ScrollReveal key={item.title} index={index}>
+                <article className="flex h-full flex-col rounded-md border border-[var(--color-border)] bg-white p-7">
+                  <div className="flex items-center gap-2">
+                    <Download className="h-4 w-4 text-[var(--color-cyan)]" />
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-slate)]">
+                      {item.format}
+                    </p>
+                  </div>
+                  <h3 className="mt-4 text-[var(--color-navy)]">{item.title}</h3>
+                  <p className="mt-3 flex-1 text-sm text-[var(--color-slate)]">{item.description}</p>
+                  <Link
+                    href={item.href}
+                    className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-[var(--color-cyan)] hover:text-[var(--color-cyan-dark)]"
+                  >
+                    {item.cta} <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </article>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Articles */}
+      <section id="articles" className="section-offwhite section-space section-rule">
+        <div className="container-shell">
+          <ScrollReveal className="max-w-2xl">
+            <p className="eyebrow">Articles</p>
+            <h2 className="mt-6">Recent reading.</h2>
+          </ScrollReveal>
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-2">
             {articles.map((article, index) => (
               <ScrollReveal key={article.href} index={index}>
                 <ArticleCard article={article} />
@@ -133,8 +201,15 @@ export default function ResourcesPage() {
         </div>
       </section>
 
+      {/* Case studies */}
+      <section className="section-stone section-space section-rule">
+        <div className="container-shell">
+          <CaseStudies />
+        </div>
+      </section>
+
       {/* Lead magnet */}
-      <section className="section-offwhite section-space section-rule">
+      <section id="lead-magnet" className="section-offwhite section-space section-rule">
         <div className="container-shell">
           <LeadMagnet source="resources" />
         </div>

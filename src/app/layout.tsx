@@ -1,8 +1,3 @@
-// SEO implemented by Windsurf Bit Depth AI Consulting bitdepthaiconsulting.com
-// Reminder: Submit sitemap at https://search.google.com/search-console
-// Reminder: Add phone number to LocalBusiness schema in homepage structured data (src/lib/schema.ts)
-// Reminder: Verify Open Graph images display correctly by testing URLs in LinkedIn Post Inspector at https://www.linkedin.com/post-inspector/
-
 import type { Metadata, Viewport } from 'next';
 import { Barlow } from 'next/font/google';
 import Script from 'next/script';
@@ -25,27 +20,29 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://bitdepthaiconsulting.com'),
   title: {
-    default: 'AI Consulting for Canadian Businesses | Bit Depth AI Consulting',
+    default: 'AI and Automation for Canadian Trades and Contractors | BitDepth AI',
     template: '%s'
   },
   description:
-    'Bit Depth helps Canadian SMBs cut manual work, connect systems, and make better decisions with AI. We audit first, then build what fits. Starting at $5,000.',
+    'Vendor-neutral AI consulting for Canadian trades and contractors. We diagnose where the money is leaking, then build the AI and automation that plugs the leak. Audits from $5,000.',
   keywords: [
-    'AI consulting for Canadian SMBs',
+    'AI consulting for Canadian trades',
     'vendor-neutral AI consulting',
     'AI opportunity audit',
-    'workflow automation',
+    'missed call text back',
+    'workflow automation for contractors',
     'custom AI workers',
-    'Canadian AI consulting',
-    'SMB operations consulting'
+    'AI for HVAC and plumbing',
+    'AI for electrical contractors',
+    'AI for ICI construction'
   ],
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/'
   },
-  authors: [{ name: 'Bit Depth AI Consulting Ltd.' }],
+  authors: [{ name: 'BitDepth AI Consulting Ltd.' }],
   other: {
-    'geo.region': 'CA-BC',
-    'geo.placename': 'Barriere, British Columbia, Canada'
+    'geo.region': 'CA-ON',
+    'geo.placename': 'Greater Toronto Area, Ontario, Canada'
   },
   robots: {
     index: true,
@@ -59,28 +56,28 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: 'AI Consulting for Canadian Businesses | Bit Depth AI Consulting',
+    title: 'AI and Automation for Canadian Trades and Contractors | BitDepth AI',
     description:
-      'Vendor-neutral AI consulting for Canadian businesses from $2M to $50M. We diagnose operations, identify high-ROI opportunities, and build the right solution.',
+      'Vendor-neutral AI consulting for Canadian trades and contractors. Audit first. Recommend what fits. Deliver outcomes.',
     type: 'website',
     url: 'https://bitdepthaiconsulting.com',
-    siteName: 'Bit Depth AI Consulting',
+    siteName: 'BitDepth AI Consulting',
     locale: 'en_CA',
     images: [
       {
         url: '/images/og-home.jpg',
         width: 1200,
         height: 630,
-        alt: 'Bit Depth AI Consulting social sharing card'
+        alt: 'BitDepth AI Consulting social sharing card'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Consulting for Canadian Businesses | Bit Depth AI Consulting',
+    title: 'AI and Automation for Canadian Trades and Contractors | BitDepth AI',
     description:
-      'Vendor-neutral AI consulting for Canadian businesses from $2M to $50M. We diagnose operations, identify high-ROI opportunities, and build the right solution.',
+      'Vendor-neutral AI consulting for Canadian trades and contractors. Audits from $5,000.',
     images: ['/images/og-home.jpg']
   },
   category: 'technology'

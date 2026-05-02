@@ -14,11 +14,11 @@ interface CaseStudy {
 
 const caseStudies: CaseStudy[] = [
   {
-    industry: 'Trades & Construction',
+    industry: 'Trades and Construction',
     headline:
-      'A 14-person electrical contractor was losing $40K+ per year to invisible job cost overruns.',
+      'A 14-person electrical contractor was losing $40K plus per year to invisible job-cost overruns.',
     body:
-      "The owner had a strong estimating process but no way to track actuals against estimates in real time. Labour hours were tracked on paper timesheets that weren't reconciled until month-end. By then, over-budget jobs were already finished. After an AI Opportunity Audit, we mapped 8 core workflows and identified job costing visibility as the highest-value opportunity. We connected their field time tracking, materials purchasing, and accounting systems into a unified dashboard. Crew leads now get a daily budget snapshot on their phones. The owner sees a live view of every active job against its estimated margin.",
+      'The owner had a strong estimating process but no way to track actuals against estimates in real time. We built a job-cost dashboard pulling from QuickBooks and the dispatch system, so crew leads see a daily budget snapshot and the owner sees a live view of every active job against its estimated margin.',
     results: [
       { metric: '$43,200', label: 'Recovered annual margin in year one' },
       { metric: '3 hrs/week', label: 'Saved on month-end reconciliation' },
@@ -26,27 +26,27 @@ const caseStudies: CaseStudy[] = [
     ]
   },
   {
-    industry: 'Field Services · HVAC',
+    industry: 'Field Services, HVAC',
     headline:
-      'A two-technician HVAC company was losing an estimated 6 to 8 jobs per month to unanswered calls.',
+      'A two-technician HVAC company was losing 6 to 8 jobs per month to unanswered calls.',
     body:
-      'The owner operated in the field full-time. Calls that went to voicemail during working hours rarely converted. Competitors picked them up first. A quick-scan audit, completed in 3 days, confirmed that missed inbound leads were the single largest revenue leak in the business. We implemented an AI-powered booking chatbot on their website and Google Business Profile, connected to their scheduling calendar. The bot answers inquiries, presents available time slots, collects job details, and either books the appointment or sends an immediate callback notification. It runs 24 hours a day.',
+      'The owner operated in the field full-time and calls that went to voicemail rarely converted. We deployed an AI receptionist with after-hours text-back and Jobber-connected auto-booking. The system answers inquiries, presents available time slots, collects job details, and either books the appointment or sends an immediate callback notification, around the clock.',
     results: [
-      { metric: '+22%', label: 'Increase in booked jobs within 60 days' },
-      { metric: '$1,500', label: 'Quick-scan audit investment' },
-      { metric: '6 days', label: 'From audit to chatbot live' }
+      { metric: '+22%', label: 'Increase in booked jobs within 90 days' },
+      { metric: '6 days', label: 'From audit to receptionist live' },
+      { metric: '24/7', label: 'After-hours coverage without hiring' }
     ]
   },
   {
-    industry: 'Transportation & Logistics',
+    industry: 'Transportation and Logistics',
     headline:
       'A 22-truck regional carrier had no real-time visibility into whether individual loads were profitable.',
     body:
-      'Revenue looked fine at the top line. The problem was that fuel costs, driver overtime, and route inefficiencies were quietly eroding margins on specific lanes, and nobody knew until the accountant ran the quarterly numbers. The AI Opportunity Audit mapped their dispatch, payroll, fuel card, and invoicing systems. We built an automated cost-per-load tracking layer that pulls fuel charges, driver wages, and route data against each invoice in real time. Dispatchers now see a margin estimate per load before it is confirmed. Loss-making lanes have been repriced or eliminated.',
+      'Top-line revenue looked fine. The problem was that fuel costs, driver overtime, and route inefficiencies were quietly eroding margin on specific lanes. We connected ELD, fuel card, and dispatch data into a single dashboard. Dispatchers now see a margin estimate per load before it is confirmed, and loss-making lanes have been repriced or eliminated.',
     results: [
-      { metric: '$67,000', label: 'Annualized margin recovered on repriced lanes' },
+      { metric: '$67,000', label: 'Annualized margin recovered on captured loads' },
       { metric: '4.2 hrs/day', label: 'Saved across dispatch and admin' },
-      { metric: '$7,500', label: 'Standard audit investment' }
+      { metric: 'Live', label: 'Per-load margin visibility before dispatch' }
     ]
   }
 ];
@@ -55,7 +55,7 @@ export function CaseStudies() {
   return (
     <div className="w-full">
       <ScrollReveal className="max-w-2xl">
-        <p className="eyebrow">Results</p>
+        <p className="eyebrow">How it works</p>
         <h2 className="mt-6">From the field.</h2>
         <p className="mt-5 text-[var(--color-slate)]">
           Real operational outcomes from businesses like yours. Client details anonymized.

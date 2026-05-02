@@ -13,12 +13,14 @@ OKLCH values are authoritative; hex are approximations for tooling that needs th
 | Ink | `--color-navy` | `#1C1F26` | `oklch(20% 0.015 260)` | Primary text, dark sections |
 | Ink-soft | `--color-charcoal` | `#2A2D34` | `oklch(26% 0.014 260)` | Secondary dark surface |
 | Slate | `--color-slate` | `#5A5D68` | `oklch(45% 0.012 260)` | Body text, muted labels |
-| Rust | `--color-cyan` (accent) | `#B85A32` | `oklch(52% 0.14 40)` | Single brand accent — primary CTAs, key numbers, link color |
-| Rust-deep | `--color-cyan-dark` | `#8A4023` | `oklch(40% 0.13 38)` | Hover/pressed state |
-| Rust-soft | `--color-cyan-glow` | `#D77548` | `oklch(64% 0.13 42)` | Subtle highlights only |
+| Terracotta | `--color-terracotta` (accent) | `#B85A32` | `oklch(52% 0.14 40)` | Single brand accent: primary CTAs, key numbers, link color |
+| Terracotta-deep | `--color-terracotta-dark` | `#8A4023` | `oklch(40% 0.13 38)` | Hover and pressed state |
+| Terracotta-soft | `--color-terracotta-soft` | `#D77548` | `oklch(64% 0.13 42)` | Subtle highlights only |
+
+Legacy aliases `--color-cyan`, `--color-cyan-dark`, `--color-cyan-glow` resolve to the terracotta tokens for back-compat. New code should use the terracotta names.
 | Border | `--color-border` | `rgba(28,31,38,0.10)` | — | All standard borders |
 
-**Strategy: Restrained.** Tinted neutrals + one accent ≤10%. Rust is reserved for: the primary CTA, the audit-credit number, link hovers, and the eyebrow rule. Not for borders, not for icon backgrounds at full saturation, not for whole sections.
+**Strategy: Restrained.** Tinted neutrals + one accent ≤10%. Terracotta is reserved for: the primary CTA, the audit-credit number, link hovers, the eyebrow rule, and the highlighted card border on pricing or decision-tree emphasis cards. Not for full-saturation icon backgrounds, not for whole sections.
 
 **Banned on marketing surface:** cyan `#00B4D8`, navy `#0B1F3B`, dot-grid backgrounds, radial glow gradients, glassmorphism (`backdrop-filter`). The assessment app keeps its own dark UI scoped to `.assessment-*` classes.
 

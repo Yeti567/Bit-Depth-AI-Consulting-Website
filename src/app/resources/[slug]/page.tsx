@@ -720,8 +720,19 @@ const resourceArticles: Record<string, ResourceArticle> = {
   }
 };
 
+const RETIRED_SLUGS = new Set([
+  'dead-in-the-field-why-predictive-maintenance-cant-wait',
+  'digital-twin-technology-how-smart-manufacturers-are-pulling-ahead',
+  'see-every-defect-ai-computer-vision-quality-control',
+  'how-to-evaluate-ai-use-cases-in-industrial-operations',
+  'what-vendor-neutral-ai-consulting-actually-means',
+  'building-an-ai-roadmap-for-canadian-mid-market-companies'
+]);
+
 export function generateStaticParams() {
-  return Object.keys(resourceArticles).map((slug) => ({ slug }));
+  return Object.keys(resourceArticles)
+    .filter((slug) => !RETIRED_SLUGS.has(slug))
+    .map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

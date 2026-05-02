@@ -2,6 +2,23 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Linkedin, Youtube } from 'lucide-react';
 
+const footerServices = [
+  { label: 'AI Opportunity Audit', href: '/services/ai-audit' },
+  { label: 'Missed Call Text Back', href: '/services/missed-call-text-back' },
+  { label: 'AI Implementation', href: '/services/ai-implementation' },
+  { label: 'Workflow Automation', href: '/services/workflow-automation' },
+  { label: 'Custom AI Workers', href: '/services/custom-ai-workers' }
+];
+
+const footerIndustries = [
+  { label: 'HVAC and Plumbing', href: '/industries/hvac-plumbing' },
+  { label: 'Electrical', href: '/industries/electrical' },
+  { label: 'Roofing and ICI Construction', href: '/industries/roofing-ici-construction' },
+  { label: 'Field Services', href: '/industries/field-services' },
+  { label: 'Professional Services', href: '/industries/professional-services' },
+  { label: 'COR Pathway', href: '/industries/cor-pathway' }
+];
+
 export function SiteFooter() {
   return (
     <footer className="section-charcoal border-t border-[var(--color-border)] text-white">
@@ -17,8 +34,8 @@ export function SiteFooter() {
             />
           </Link>
           <p className="max-w-md text-sm text-white/65">
-            Vendor-neutral AI consulting for Canadian small and mid-sized businesses. We audit
-            first, then build what fits.
+            Vendor-neutral AI consulting for Canadian trades and contractors. We audit first, then
+            build what fits.
           </p>
           <p className="text-xs uppercase tracking-[0.14em] text-white/45">
             Audit first &nbsp;·&nbsp; Recommend what fits &nbsp;·&nbsp; Deliver outcomes
@@ -27,71 +44,25 @@ export function SiteFooter() {
         <div>
           <h2 className="mb-4 text-[13px] font-semibold uppercase tracking-[0.1em] text-white">Services</h2>
           <ul className="space-y-3 text-sm text-white/65">
-            <li>
-              <Link href="/ai-audit" className="transition hover:text-cyan">
-                AI Opportunity Audit
-              </Link>
-            </li>
-            <li>
-              <Link href="/ai-readiness-assessment" className="transition hover:text-cyan">
-                AI Readiness Assessment
-              </Link>
-            </li>
-            <li>
-              <Link href="/services" className="transition hover:text-cyan">
-                AI Workflow Automation
-              </Link>
-            </li>
-            <li>
-              <Link href="/services" className="transition hover:text-cyan">
-                Custom AI Workers
-              </Link>
-            </li>
-            <li>
-              <Link href="/services" className="transition hover:text-cyan">
-                AI Strategy
-              </Link>
-            </li>
-            <li>
-              <Link href="/services" className="transition hover:text-cyan">
-                AI Training
-              </Link>
-            </li>
+            {footerServices.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href} className="transition hover:text-cyan">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div>
           <h2 className="mb-4 text-[13px] font-semibold uppercase tracking-[0.1em] text-white">Industries</h2>
           <ul className="space-y-3 text-sm text-white/65">
-            <li>
-              <Link href="/industries" className="transition hover:text-cyan">
-                Trades &amp; Construction
-              </Link>
-            </li>
-            <li>
-              <Link href="/industries" className="transition hover:text-cyan">
-                Field Services
-              </Link>
-            </li>
-            <li>
-              <Link href="/industries" className="transition hover:text-cyan">
-                Manufacturing
-              </Link>
-            </li>
-            <li>
-              <Link href="/industries" className="transition hover:text-cyan">
-                Professional Services
-              </Link>
-            </li>
-            <li>
-              <Link href="/industries" className="transition hover:text-cyan">
-                Transportation &amp; Logistics
-              </Link>
-            </li>
-            <li>
-              <Link href="/industries" className="transition hover:text-cyan">
-                Oil &amp; Gas Services
-              </Link>
-            </li>
+            {footerIndustries.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href} className="transition hover:text-cyan">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div>
@@ -117,7 +88,6 @@ export function SiteFooter() {
                 blake@bitdepthaiconsulting.com
               </Link>
             </li>
-            {/* TODO: Add phone number here once a business line is established. format: +1 (XXX) XXX-XXXX */}
             <li>
               <Link href="/privacy-policy" className="transition hover:text-cyan">
                 Privacy Policy
@@ -133,7 +103,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-white/10">
         <div className="container-shell flex flex-col gap-4 py-6 text-[13px] text-white/45 md:flex-row md:items-center md:justify-between">
-          <p>© 2026 Bit Depth AI Consulting Ltd. &nbsp;·&nbsp; Barriere, British Columbia, Canada</p>
+          <p>© 2026 Bit Depth AI Consulting Ltd. &nbsp;·&nbsp; Serving the GTA, Golden Horseshoe, and across Canada</p>
           <div className="flex flex-col gap-1 text-white/65 sm:flex-row sm:items-center sm:gap-3">
             <Link
               href="https://www.linkedin.com/company/bitdepth-ai-consulting-ltd"

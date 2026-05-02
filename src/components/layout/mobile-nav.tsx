@@ -3,11 +3,17 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Menu, X } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 import { navigation } from '@/lib/site-data';
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
+  const [expanded, setExpanded] = useState<string | null>(null);
+
+  const close = () => {
+    setOpen(false);
+    setExpanded(null);
+  };
 
   const overlay = open ? (
     <div
@@ -19,7 +25,8 @@ export function MobileNav() {
         backgroundColor: '#1C1F26',
         display: 'flex',
         flexDirection: 'column',
-        padding: '112px 32px 32px'
+        padding: '112px 32px 32px',
+        overflowY: 'auto'
       }}
     >
       <button
@@ -40,30 +47,100 @@ export function MobileNav() {
           color: '#FAF7F2',
           cursor: 'pointer'
         }}
-        onClick={() => setOpen(false)}
+        onClick={close}
       >
         <X size={20} />
       </button>
-      <nav style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', flex: 1 }}>
-        {navigation.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            style={{
-              display: 'block',
-              width: '100%',
-              borderBottom: '1px solid rgba(255,255,255,0.10)',
-              padding: '16px 0',
-              fontSize: '20px',
-              fontWeight: 600,
-              color: '#FAF7F2',
-              textDecoration: 'none'
-            }}
-            onClick={() => setOpen(false)}
-          >
-            {item.label}
-          </Link>
-        ))}
+      <nav style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+        {navigation.map((item) => {
+          const isExpanded = expanded === item.href;
+          return (
+            <div
+              key={item.href}
+              style={{ borderBottom: '1px solid rgba(255,255,255,0.10)' }}
+            >
+              {item.children ? (
+                <>
+                  <button
+                    type="button"
+                    onClick={() => setExpanded(isExpanded ? null : item.href)}
+                    aria-expanded={isExpanded}
+                    style={{
+                      display: 'flex',
+                      width: '100%',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      padding: '16px 0',
+                      fontSize: '20px',
+                      fontWeight: 600,
+                      color: '#FAF7F2',
+                      background: 'transparent',
+                      border: 'none',
+                      cursor: 'pointer',
+                      textAlign: 'left'
+                    }}
+                  >
+                    {item.label}
+                    <ChevronDown
+                      size={18}
+                      style={{
+                        transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)',
+                        transition: 'transform 200ms'
+                      }}
+                    />
+                  </button>
+                  {isExpanded ? (
+                    <div style={{ paddingBottom: '12px', display: 'flex', flexDirection: 'column' }}>
+                      <Link
+                        href={item.href}
+                        onClick={close}
+                        style={{
+                          padding: '10px 12px',
+                          fontSize: '15px',
+                          color: 'rgba(250,247,242,0.7)',
+                          textDecoration: 'none'
+                        }}
+                      >
+                        Overview
+                      </Link>
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          onClick={close}
+                          style={{
+                            padding: '10px 12px',
+                            fontSize: '15px',
+                            color: 'rgba(250,247,242,0.85)',
+                            textDecoration: 'none'
+                          }}
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  ) : null}
+                </>
+              ) : (
+                <Link
+                  href={item.href}
+                  style={{
+                    display: 'block',
+                    width: '100%',
+                    padding: '16px 0',
+                    fontSize: '20px',
+                    fontWeight: 600,
+                    color: '#FAF7F2',
+                    textDecoration: 'none'
+                  }}
+                  onClick={close}
+                >
+                  {item.label}
+                </Link>
+              )}
+            </div>
+          );
+        })}
         <Link
           href="/ai-audit"
           style={{
@@ -78,7 +155,7 @@ export function MobileNav() {
             color: '#FFFFFF',
             textDecoration: 'none'
           }}
-          onClick={() => setOpen(false)}
+          onClick={close}
         >
           Book an AI Audit
         </Link>

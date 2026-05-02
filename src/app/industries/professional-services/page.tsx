@@ -1,104 +1,142 @@
 import type { Metadata } from 'next';
-import { IndustryPage, type IndustryPageData } from '@/components/ui/industry-page';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Check } from 'lucide-react';
+import { PageShell } from '@/components/layout/page-shell';
+import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'AI Consulting for Professional Services Firms | Bit Depth AI',
+  title: 'AI for Law Firms, Accounting Practices, and Brokerages | Bit Depth AI',
   description:
-    'Automated booking with deposits, no-show reduction, intake automation, and document preparation for accountants, lawyers, engineers, consultants, and healthcare providers.',
-  alternates: { canonical: 'https://bitdepthaiconsulting.com/industries/professional-services' },
-  openGraph: {
-    title: 'AI Consulting for Professional Services Firms | Bit Depth AI',
+    'Private intake automation, document drafting from precedents, trust-aware billing, and Clio, PCLaw, Karbon, and Dext integrations. Referral and inbound only.',
+  alternates: { canonical: 'https://bitdepthaiconsulting.com/industries/professional-services' }
+};
+
+const builds = [
+  {
+    title: 'Private client intake automation with conflict-checking',
     description:
-      'Automated booking with deposits, no-show reduction, intake automation, and document preparation for professional services firms.',
-    url: 'https://bitdepthaiconsulting.com/industries/professional-services',
-    type: 'website',
-    siteName: 'Bit Depth AI Consulting',
-    locale: 'en_CA',
-    images: [
-      {
-        url: '/images/og-industries.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'AI consulting for Canadian professional services firms'
-      }
-    ]
+      'Intake runs on Canadian-resident infrastructure. Conflict checks happen automatically against your matter database before the file is opened.'
   },
-  twitter: {
-    card: 'summary_large_image',
-    site: '@bitdepthai',
-    title: 'AI Consulting for Professional Services Firms | Bit Depth AI',
+  {
+    title: 'Document drafting from precedents, with full audit trails',
     description:
-      'Automated booking, no-show reduction, intake automation, and document preparation for professional services firms.',
-    images: ['/images/og-industries.jpg']
+      'Drafts pulled from your firm’s own precedent library, with a full record of which clauses were sourced where.'
+  },
+  {
+    title: 'Trust-accounting-aware billing workflows',
+    description:
+      'Trust-aware integrations that respect Law Society and provincial trust accounting rules. No more retainer reconciliation by hand.'
+  },
+  {
+    title: 'Practice management tool integrations',
+    description: 'Connectors for Clio, PCLaw, Karbon, Dext, and the rest of your existing stack.'
   }
-};
-
-const data: IndustryPageData = {
-  breadcrumbLabel: 'Professional Services',
-  eyebrow: 'Professional Services',
-  heroTitle:
-    "Your time is billable. Every hour spent on admin is an hour you're not getting paid for.",
-  heroLead:
-    'Accountants, lawyers, engineers, consultants, and healthcare providers all share the same problem: too much time on the business, not enough time in it.',
-  heroImageSrc: '/images/Industry Professional Services Hero Image.webp',
-  heroImageAlt:
-    'Professional services consultant reviewing data and analytics at a modern office desk',
-
-  problemTitle: 'The no-show problem is costing you more than you think.',
-  problemParagraphs: [
-    "A professional books a two-hour consultation. The client doesn't show. That slot is gone, unbillable, unrecoverable, and it cost your staff time to set it up in the first place. Multiply that across a week, a month, a year, and the number gets uncomfortable quickly.",
-    'The fix is not complicated. Automated appointment booking with a required deposit filters out the time-wasters before they ever get on your calendar. Automated reminders reduce no-shows dramatically. And when a client does cancel, an automated waitlist fills the slot without anyone making a phone call.',
-    'Beyond scheduling, professional services firms are drowning in documents, client intake, and repetitive correspondence that AI handles faster and more consistently than any staff member.'
-  ],
-  problemImageSrc: '/images/Appointment confirmation and desk setup.webp',
-  problemImageAlt:
-    'Smartphone and laptop showing automated appointment booking confirmation for a professional services firm',
-
-  lossEyebrow: 'Billable time lost',
-  lossTitle: 'Where professional services firms lose billable time.',
-  losses: [
-    'No-shows and last-minute cancellations with no deposit or consequence system',
-    'Scheduling done manually by staff who have other responsibilities',
-    'Client intake and onboarding paperwork handled by hand every single time',
-    'Follow-up emails and reminders written individually instead of automated',
-    'Document review and preparation that takes hours of professional time',
-    'Knowledge management gaps where staff cannot find what they need without asking someone'
-  ],
-
-  solutionsTitle: 'What AI actually fixes in a professional services business.',
-  solutions: [
-    {
-      title: 'Automated booking with deposit collection',
-      description:
-        "An online booking system where clients select their own appointment time, provide intake information, and put down a deposit, all before they speak to anyone in your office. Serious clients book. Time-wasters don't."
-    },
-    {
-      title: 'Appointment reminders and no-show reduction',
-      description:
-        'Automated text and email reminders at 48 hours, 24 hours, and the morning of the appointment. No-show rates drop significantly. Your staff stops spending time on confirmation calls.'
-    },
-    {
-      title: 'Client intake and onboarding automation',
-      description:
-        'Intake forms, document collection, conflict checks, and onboarding sequences automated and consistent every time, regardless of who is working that day.'
-    },
-    {
-      title: 'Internal knowledge base',
-      description:
-        'An AI-powered internal system where staff can find policies, procedures, templates, and client information instantly, without interrupting a colleague or digging through shared drives.'
-    },
-    {
-      title: 'Document preparation assistance',
-      description:
-        'AI-assisted drafting and document preparation that reduces the time professionals spend on routine correspondence, standard agreements, and repetitive client communications.'
-    }
-  ],
-
-  ctaTitle: "Find out how many billable hours you're losing to admin.",
-  ctaBody:
-    'A discovery audit will show you exactly where your firm is losing time it should be billing. Book a call and we will give you an honest, no-pressure assessment.'
-};
+];
 
 export default function ProfessionalServicesPage() {
-  return <IndustryPage data={data} />;
+  return (
+    <PageShell>
+      {/* Hero */}
+      <section className="section-offwhite section-space">
+        <div className="container-shell">
+          <nav aria-label="Breadcrumb" className="mb-8 text-sm text-[var(--color-slate)]">
+            <ol className="flex flex-wrap items-center gap-2">
+              <li>
+                <Link href="/" className="hover:text-[var(--color-navy)]">
+                  Home
+                </Link>
+              </li>
+              <li aria-hidden className="text-[var(--color-slate)]/60">/</li>
+              <li>
+                <Link href="/industries" className="hover:text-[var(--color-navy)]">
+                  Industries
+                </Link>
+              </li>
+              <li aria-hidden className="text-[var(--color-slate)]/60">/</li>
+              <li className="text-[var(--color-navy)]">Professional Services</li>
+            </ol>
+          </nav>
+          <div className="grid gap-12 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
+            <ScrollReveal>
+              <p className="eyebrow">Referral and inbound only</p>
+              <h1 className="mt-6 max-w-2xl">
+                AI for law firms, accounting practices, and brokerages that respects confidentiality.
+              </h1>
+              <p className="mt-6 max-w-xl text-lg text-[var(--color-slate)]">
+                Professional services firms have a different problem set: client confidentiality,
+                regulatory restrictions, and trust accounting rules that most AI vendors do not
+                understand. We build private intake automation, document drafting workflows, and
+                trust-aware integrations on Canadian-resident infrastructure.
+              </p>
+              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+                <Link href="/contact" className="btn-primary">
+                  Book a discovery call
+                </Link>
+                <Link href="/ai-audit" className="btn-outline">
+                  Book an AI Audit
+                </Link>
+              </div>
+              <p className="mt-6 text-sm text-[var(--color-slate)]">
+                We currently take professional services engagements on referral and inbound only.
+                Trades and contractors remain our primary focus.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal index={1} className="relative aspect-[4/5] overflow-hidden rounded-md border border-[var(--color-border)]">
+              <Image
+                src="/images/hero-industry-professional-services.webp"
+                alt="Empty professional desk with closed laptop, leather notebook, and coffee mug"
+                fill
+                priority
+                className="object-cover"
+              />
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* What we typically build */}
+      <section className="section-stone section-space section-rule">
+        <div className="container-shell max-w-3xl">
+          <ScrollReveal>
+            <p className="eyebrow">What we typically build</p>
+            <h2 className="mt-6">Four workflows tuned for confidentiality.</h2>
+          </ScrollReveal>
+          <ul className="mt-10 space-y-6">
+            {builds.map((item) => (
+              <li key={item.title} className="flex gap-3 text-[var(--color-charcoal)]">
+                <Check className="mt-1 h-5 w-5 shrink-0 text-[var(--color-cyan)]" />
+                <div>
+                  <h3 className="text-[var(--color-navy)]">{item.title}</h3>
+                  <p className="mt-2 text-[var(--color-slate)]">{item.description}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="section-navy section-space">
+        <div className="container-shell max-w-3xl text-center">
+          <ScrollReveal>
+            <span className="eyebrow">Referrals welcome</span>
+            <h2 className="mt-6 text-white">Tell us what is breaking.</h2>
+            <p className="mx-auto mt-6 max-w-xl text-white/75">
+              The fastest way to start is a discovery call. We will tell you honestly whether the
+              fit is right and whether the work belongs with us or elsewhere.
+            </p>
+            <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Link href="/contact" className="btn-primary">
+                Book a discovery call
+              </Link>
+              <Link href="/ai-audit" className="btn-outline">
+                Book an AI Audit
+              </Link>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+    </PageShell>
+  );
 }

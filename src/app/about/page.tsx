@@ -1,67 +1,81 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Check } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'About Bit Depth AI Consulting | Blake Cowan | Barriere BC Canada',
+  title: 'About BitDepth AI Consulting | Blake Cowan',
   description:
-    'Bit Depth AI Consulting is founder-led by Blake Cowan. Five years of hands-on AI experience, with backgrounds in construction, trucking, and safety. Canadian-owned and operated.',
+    'BitDepth exists because Canadian trades and small contractors are one of the most underserved markets in professional services. Founder-led by Blake Cowan.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/about' },
   openGraph: {
-    title: 'About Bit Depth AI Consulting | Blake Cowan | Barriere BC Canada',
+    title: 'About BitDepth AI Consulting | Blake Cowan',
     description:
-      'Bit Depth AI Consulting is founder-led by Blake Cowan. Five years of hands-on AI experience, with backgrounds in construction, trucking, and safety.',
+      'BitDepth exists because Canadian trades and small contractors are one of the most underserved markets in professional services.',
     url: 'https://bitdepthaiconsulting.com/about',
     type: 'website',
-    siteName: 'Bit Depth AI Consulting',
+    siteName: 'BitDepth AI Consulting',
     locale: 'en_CA',
     images: [
       {
         url: '/images/og-about.jpg',
         width: 1200,
         height: 630,
-        alt: 'About Bit Depth AI Consulting and founder Blake Cowan'
+        alt: 'About BitDepth AI Consulting and founder Blake Cowan'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'About Bit Depth AI Consulting | Blake Cowan | Barriere BC Canada',
+    title: 'About BitDepth AI Consulting | Blake Cowan',
     description:
-      'Bit Depth AI Consulting is founder-led by Blake Cowan. Five years of hands-on AI experience.',
+      'BitDepth exists because Canadian trades and small contractors are one of the most underserved markets in professional services.',
     images: ['/images/og-about.jpg']
   }
 };
 
-const principles = [
+const methodology = [
   {
-    title: 'You get Blake.',
+    title: 'Diagnose',
     description:
-      "This isn't a firm with a sales team and a delivery team. When you work with Bit Depth, you work directly with Blake from the first call to the final deliverable. No handoffs. No junior staff on your file. The person you talk to is the person doing the work."
+      'A structured AI Opportunity Audit across operations, data, and tech stack. We map your processes and identify where AI will deliver the highest ROI for your specific business.'
   },
   {
-    title: 'Straight talk, always.',
+    title: 'Design',
     description:
-      "Blake comes from industries where bad advice costs people real money, sometimes their safety. That background shaped how he consults. If AI isn't right for your business yet, he'll tell you. If the numbers don't justify a build, he'll tell you that too. You'll always know where you stand."
+      'A prioritized roadmap. Short-term quick wins and longer-term strategic initiatives, with realistic ROI estimates for each.'
   },
   {
-    title: 'Built for the long run.',
+    title: 'Implement',
     description:
-      "Bit Depth isn't looking for quick engagements. The goal is to be your AI consultant for years, helping you move forward as your business grows and as the technology keeps evolving. The audit is the starting point. Where it goes from there is up to you."
+      'We build and deploy the right solution. Automations, AI workers, dashboards, or integrations. No theatre, no wasted budget.'
   }
 ];
 
-const credentials = [
-  'Vendor-neutral. No software commissions, ever.',
-  'Canadian-owned and operated.',
-  'PIPEDA and BC PIPA compliant.',
-  'Five years of hands-on AI implementation experience.',
-  'Background in construction, trucking, and safety consulting.',
-  'Serving clients across Canada, the United States, and internationally.',
-  'All engagements conducted remotely via Zoom and digital collaboration tools.'
+const principles = [
+  {
+    title: 'We do not sell software.',
+    description:
+      'We recommend the right solution, even when that means the cheaper one. Vendor-neutral. No reseller agreements, no kickbacks, no preferred-partner commissions.'
+  },
+  {
+    title: 'Diagnosis before prescription.',
+    description:
+      'Every engagement begins with the audit. If we cannot tell you where the leak is, we have no business telling you what to build.'
+  },
+  {
+    title: 'Plain language.',
+    description:
+      'If we cannot explain it to the owner without jargon, we have not understood it well enough yet.'
+  },
+  {
+    title: 'Canadian by default.',
+    description:
+      'PIPEDA-aware data handling. Canadian carrier compliance. Canadian-resident infrastructure where it matters.'
+  }
 ];
 
 const pad2 = (n: number) => String(n).padStart(2, '0');
@@ -73,28 +87,34 @@ export default function AboutPage() {
       <section className="section-offwhite section-space">
         <div className="container-shell grid gap-12 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
           <ScrollReveal>
-            <p className="eyebrow">About</p>
-            <h1 className="mt-6 max-w-2xl">There&apos;s a real person behind this business.</h1>
+            <p className="eyebrow">Why BitDepth</p>
+            <h1 className="mt-6 max-w-2xl">
+              Built for the businesses nobody else was showing up for.
+            </h1>
             <p className="mt-6 max-w-xl text-lg text-[var(--color-slate)]">
-              Bit Depth AI Consulting is Blake Cowan. One consultant, one standard of work, and no
-              interest in wasting your time or your money.
+              BitDepth exists because the Canadian SMB market is the most underserved segment in
+              professional services. Large firms have minimum engagement sizes that price out
+              anyone under $500M revenue. Freelancers do not have a methodology. Nobody was
+              showing up for the trades owner, the residential plumbing company, or the Ontario
+              electrical contractor and giving them honest, practical advice about what AI could
+              actually do for their business.
+            </p>
+            <p className="mt-4 max-w-xl text-[var(--color-slate)]">
+              That is the gap we exist to fill.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact" className="btn-primary">
-                Book a discovery call
-              </Link>
-              <Link href="/ai-audit" className="btn-outline">
+              <Link href="/ai-audit" className="btn-primary">
                 Book an AI Audit
+              </Link>
+              <Link href="/contact" className="btn-outline">
+                Book a discovery call
               </Link>
             </div>
           </ScrollReveal>
-          <ScrollReveal
-            index={1}
-            className="relative aspect-[4/5] overflow-hidden rounded-md border border-[var(--color-border)]"
-          >
+          <ScrollReveal index={1} className="relative aspect-[4/5] overflow-hidden rounded-md border border-[var(--color-border)]">
             <Image
-              src="/images/about-hero.webp"
-              alt="Blake Cowan, founder of Bit Depth AI Consulting"
+              src="/images/about-blake-landscape.webp"
+              alt="Thompson River valley in interior British Columbia at golden hour"
               fill
               priority
               className="object-cover"
@@ -103,92 +123,102 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 2. Blake's Story */}
+      {/* 2. Methodology */}
+      <section className="section-stone section-space section-rule">
+        <div className="container-shell">
+          <ScrollReveal className="max-w-2xl">
+            <p className="eyebrow">Our methodology</p>
+            <h2 className="mt-6">Diagnose. Design. Implement.</h2>
+          </ScrollReveal>
+          <div className="mt-12 grid gap-12 md:grid-cols-3">
+            {methodology.map((step, index) => (
+              <ScrollReveal key={step.title} index={index}>
+                <p className="font-mono text-sm text-[var(--color-cyan)] tabular">{pad2(index + 1)}</p>
+                <h3 className="mt-3 text-[var(--color-navy)]">{step.title}</h3>
+                <p className="mt-3 text-[var(--color-slate)]">{step.description}</p>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Principles */}
+      <section className="section-offwhite section-space section-rule">
+        <div className="container-shell">
+          <ScrollReveal className="max-w-2xl">
+            <p className="eyebrow">Our principles</p>
+            <h2 className="mt-6">Four rules. No exceptions.</h2>
+          </ScrollReveal>
+          <ul className="mt-12 grid gap-x-10 gap-y-8 md:grid-cols-2">
+            {principles.map((principle, index) => (
+              <ScrollReveal key={principle.title} index={index}>
+                <li className="flex gap-3">
+                  <Check className="mt-1 h-5 w-5 shrink-0 text-[var(--color-cyan)]" />
+                  <div>
+                    <h3 className="text-[var(--color-navy)]">{principle.title}</h3>
+                    <p className="mt-2 text-[var(--color-slate)]">{principle.description}</p>
+                  </div>
+                </li>
+              </ScrollReveal>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* 4. Founder section */}
       <section className="section-stone section-space section-rule">
         <div className="container-shell max-w-3xl">
           <ScrollReveal>
-            <p className="eyebrow">Blake&apos;s story</p>
-            <h2 className="mt-6">In his own words.</h2>
+            <p className="eyebrow">The founder</p>
+            <h2 className="mt-6">Blake Cowan.</h2>
+            <p className="mt-1 text-[var(--color-slate)]">Founder, BitDepth AI Consulting</p>
           </ScrollReveal>
           <div className="mt-10 space-y-5 text-[var(--color-charcoal)]">
             <ScrollReveal>
               <p>
-                I didn&apos;t start my career in technology. I spent years working in construction
-                and building, then in trucking, then as a safety consultant. In every one of those
-                industries, I learned the same lesson: the details matter, corners cut early cost
-                you more later, and if your foundation isn&apos;t solid, everything built on top of
-                it is at risk.
+                Blake has spent the last five years working in AI, first as a salesperson, then
+                hands-on inside the trade and field services industries. That experience has been
+                the foundation for everything BitDepth does.
               </p>
             </ScrollReveal>
             <ScrollReveal index={1}>
               <p>
-                That thinking followed me into AI. For the last five years, I&apos;ve worked behind
-                the scenes doing AI consulting and implementation for companies, mostly in the
-                United States, building the same systems, automations, and strategies I now offer
-                through Bit Depth. I wasn&apos;t selling. I was doing the work.
+                He started BitDepth because Canadian trades and small contractors are one of the
+                most underserved markets in professional services. Large consultancies do not show
+                up. Freelancers do not have a methodology. Nobody is building AI for the way
+                Canadian field service businesses actually run, with one truck, one dispatcher,
+                and an owner who answers their own phone.
               </p>
             </ScrollReveal>
             <ScrollReveal index={2}>
               <p>
-                I started Bit Depth because I kept seeing the same gap. Canadian businesses were
-                either being ignored by the big consulting firms, overcharged for work that
-                didn&apos;t deliver, or sold software by people who called themselves AI consultants.
-                Canada deserves better than that. That&apos;s why Bit Depth exists, and that&apos;s
-                why it&apos;s Canadian-owned and operated.
+                One thing Blake learned early. Data and systems have to be solid before AI does
+                anything useful. Build on a shaky foundation and everything you build with AI
+                becomes a house of cards. That belief shapes how BitDepth runs every engagement.
               </p>
             </ScrollReveal>
             <ScrollReveal index={3}>
+              <p className="border-l border-[var(--color-cyan)] pl-5 text-lg italic text-[var(--color-navy)]">
+                Most businesses are not ready for AI yet. That is not a criticism. It is the
+                reality. A lot of companies are going to be disappointed because they jumped in
+                before their data and processes were ready to support it.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal index={4}>
               <p>
-                I work remotely and serve clients across Canada, the United States, and
-                internationally. Where you&apos;re located doesn&apos;t matter. What matters is
-                whether we&apos;re the right fit for your business.
+                Before we recommend anything, we run a discovery audit. We tell you exactly where
+                you stand. What is working, what is not, and what needs fixing before AI will do
+                you any good. That honesty is the most valuable thing we offer.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal index={5}>
+              <p>
+                BitDepth is lean by design. Blake works with a small group of trusted consultants,
+                which keeps costs reasonable and means you are always dealing with someone who
+                actually knows your file.
               </p>
             </ScrollReveal>
           </div>
-          <ScrollReveal index={4} className="mt-10 border-t border-[var(--color-border)] pt-6">
-            <p className="text-sm text-[var(--color-slate)]">
-              <span className="font-semibold text-[var(--color-navy)]">Blake Cowan</span> &nbsp;·&nbsp;
-              Founder, Bit Depth AI Consulting &nbsp;·&nbsp; Barriere, British Columbia
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* 3. How Blake Works */}
-      <section className="section-offwhite section-space section-rule">
-        <div className="container-shell">
-          <ScrollReveal className="max-w-2xl">
-            <p className="eyebrow">How Blake works</p>
-            <h2 className="mt-6">Three principles. No exceptions.</h2>
-          </ScrollReveal>
-          <ol className="mt-12 grid gap-12 md:grid-cols-3">
-            {principles.map((principle, index) => (
-              <ScrollReveal key={principle.title} index={index}>
-                <li>
-                  <p className="font-mono text-sm text-[var(--color-cyan)] tabular">{pad2(index + 1)}</p>
-                  <h3 className="mt-3 text-[var(--color-navy)]">{principle.title}</h3>
-                  <p className="mt-3 text-[var(--color-slate)]">{principle.description}</p>
-                </li>
-              </ScrollReveal>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      {/* 4. Credentials */}
-      <section className="section-stone section-space section-rule">
-        <div className="container-shell max-w-3xl">
-          <ScrollReveal>
-            <p className="eyebrow">Credentials and compliance</p>
-            <h2 className="mt-6">For the record.</h2>
-          </ScrollReveal>
-          <ul className="mt-10 divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">
-            {credentials.map((item, index) => (
-              <ScrollReveal key={item} index={index}>
-                <li className="py-4 text-[var(--color-charcoal)]">{item}</li>
-              </ScrollReveal>
-            ))}
-          </ul>
         </div>
       </section>
 
@@ -197,13 +227,11 @@ export default function AboutPage() {
         <div className="container-shell max-w-3xl text-center">
           <ScrollReveal>
             <span className="eyebrow">Real conversation</span>
-            <h2 className="mt-6 text-white">
-              If you&apos;re serious about AI, let&apos;s talk.
-            </h2>
+            <h2 className="mt-6 text-white">If you are serious about AI, let us talk.</h2>
             <p className="mx-auto mt-6 max-w-xl text-white/75">
-              Not a sales call. A straight conversation about where your business is, what
-              you&apos;re trying to solve, and whether Bit Depth is the right fit. If we&apos;re
-              not, Blake will tell you that too.
+              Not a sales call. A straight conversation about where your business is, what you
+              are trying to solve, and whether BitDepth is the right fit. If we are not, Blake
+              will tell you that too.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link href="/contact" className="btn-primary">

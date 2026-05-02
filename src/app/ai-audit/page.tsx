@@ -63,7 +63,7 @@ interface Tier {
 const tiers: Tier[] = [
   {
     name: 'Quick scan',
-    price: '$1,500 – $3,000',
+    price: '$1,500 to $3,000',
     duration: '2 to 3 business days',
     fit: 'Micro SMB · 1 to 2 systems · 1 to 2 teams',
     bullets: [
@@ -76,7 +76,7 @@ const tiers: Tier[] = [
   },
   {
     name: 'Standard audit',
-    price: '$5,000 – $7,500',
+    price: '$5,000 to $7,500',
     duration: '5 to 8 business days',
     fit: 'SMB · 15 to 150 staff · 3+ departments',
     bullets: [
@@ -92,7 +92,7 @@ const tiers: Tier[] = [
   },
   {
     name: 'Deep-dive roadmap',
-    price: '$8,000 – $15,000+',
+    price: '$8,000 to $15,000+',
     duration: '10 to 15 business days',
     fit: 'Larger SMB · multiple departments · multi-location',
     bullets: [
