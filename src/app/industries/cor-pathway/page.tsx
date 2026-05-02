@@ -6,9 +6,9 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'COR Pathway Crossover | Bit Depth AI',
+  title: 'COR Certification for Ontario Contractors | BitDepth AI',
   description:
-    'COR Pathway is BitDepth\'s sister company. It delivers COR certification and works alongside BitDepth on the back-office automation. Decide which entry point fits your situation.',
+    'COR Pathway, BitDepth sister company, delivers full COR certification for Ontario contractors. BitDepth automates the operational systems around it. Decide which entry point fits.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/industries/cor-pathway' }
 };
 
@@ -39,7 +39,7 @@ export default function CorPathwayPage() {
             <ScrollReveal>
               <p className="eyebrow">Sister company crossover</p>
               <h1 className="mt-6 max-w-2xl">
-                Pick the right entry point: COR Pathway or BitDepth.
+                COR certification for Ontario contractors. Pick the right entry point.
               </h1>
               <p className="mt-6 max-w-xl text-lg text-[var(--color-slate)]">
                 COR Pathway is our sister company. They deliver COR certification and work

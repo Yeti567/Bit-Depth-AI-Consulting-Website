@@ -92,12 +92,12 @@ export default function AboutPage() {
               Built for the businesses nobody else was showing up for.
             </h1>
             <p className="mt-6 max-w-xl text-lg text-[var(--color-slate)]">
-              BitDepth exists because the Canadian SMB market is the most underserved segment in
-              professional services. Large firms have minimum engagement sizes that price out
-              anyone under $500M revenue. Freelancers do not have a methodology. Nobody was
-              showing up for the trades owner, the residential plumbing company, or the Ontario
-              electrical contractor and giving them honest, practical advice about what AI could
-              actually do for their business.
+              BitDepth AI Consulting exists because Canadian trades and contractors are the most
+              underserved segment in professional services. Large firms have minimum engagement
+              sizes that price out anyone under $500M revenue. Freelancers do not have a
+              methodology. Nobody was showing up for the trades owner, the residential plumbing
+              company, or the Ontario electrical contractor and giving them honest, practical
+              advice about what AI could actually do for their business.
             </p>
             <p className="mt-4 max-w-xl text-[var(--color-slate)]">
               That is the gap we exist to fill.

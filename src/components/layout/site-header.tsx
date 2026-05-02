@@ -98,11 +98,11 @@ export function SiteHeader({ simplified = false }: { simplified?: boolean }) {
         <Link
           href="/"
           className="relative block h-8 w-[140px] shrink-0 sm:h-10 sm:w-[180px]"
-          aria-label="Bit Depth AI Consulting home"
+          aria-label="BitDepth AI Consulting home"
         >
           <Image
             src="/images/logo svg transparent.svg"
-            alt="Bit Depth AI Consulting logo"
+            alt="BitDepth AI Consulting logo"
             fill
             priority
             sizes="(max-width: 640px) 140px, 180px"

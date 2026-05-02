@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Script from 'next/script';
 import { Check } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { buildServiceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Workflow Automation for Canadian Trades | Bit Depth AI',
+  title: 'Workflow Automation for Canadian Trades | BitDepth AI',
   description:
     'Stop your office from being the integration. We connect quote-to-job, field-to-office, customer comms, and compliance flows. From $5,000 per workflow.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/services/workflow-automation' }
@@ -34,12 +36,22 @@ const automations = [
 export default function WorkflowAutomationPage() {
   return (
     <PageShell>
+      <Script id="service-workflow-automation-schema" type="application/ld+json">
+        {JSON.stringify(
+          buildServiceSchema(
+            'Workflow Automation',
+            'Connect quote-to-job, field-to-office, customer comms, and compliance flows. From $5,000 per workflow.',
+            'https://bitdepthaiconsulting.com/services/workflow-automation',
+            'Business Process Automation'
+          )
+        )}
+      </Script>
       {/* Hero */}
       <section className="section-offwhite section-space">
         <div className="container-shell max-w-3xl">
           <ScrollReveal>
             <p className="eyebrow">Eliminate the manual</p>
-            <h1 className="mt-6">Stop your office from being the integration.</h1>
+            <h1 className="mt-6">Workflow Automation for trades and contractors. Stop your office from being the integration.</h1>
             <p className="mt-6 text-lg text-[var(--color-slate)]">
               When jobs get re-keyed into three systems, your office staff is the integration
               layer. We connect the systems instead, so a job moves from quote to invoice without

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { IndustryPage, type IndustryPageData } from '@/components/ui/industry-page';
 
 export const metadata: Metadata = {
-  title: 'AI for HVAC and Plumbing Contractors | Bit Depth AI',
+  title: 'AI for HVAC and Plumbing Contractors | BitDepth AI',
   description:
     'Stop losing 30 to 50 percent of your inbound calls. AI receptionist, auto-quote drafting, and ServiceTitan or Jobber connectors for residential HVAC and plumbing.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/industries/hvac-plumbing' }
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const data: IndustryPageData = {
   breadcrumbLabel: 'HVAC and Plumbing',
   eyebrow: 'Primary vertical',
-  heroTitle: 'Stop bleeding 30 to 50 percent of your inbound calls.',
+  heroTitle: 'AI for HVAC and plumbing. Stop the inbound call leak.',
   heroLead:
     'Residential HVAC and plumbing is where missed calls hurt the most. Average tickets sit between $450 and $3,725 according to industry benchmarks, and SearchLight Digital pegs the average HVAC cost-per-lead at $104. One recovered emergency job pays for our service for the year.',
   heroImageSrc: '/images/hero-industry-hvac-plumbing.webp',

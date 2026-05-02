@@ -6,33 +6,33 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'Industries We Serve | Bit Depth AI Consulting',
+  title: 'AI Consulting by Industry: Trades, ICI, Field Services | BitDepth AI',
   description:
-    'Built for Canadian field service businesses. HVAC and plumbing, electrical, roofing and ICI construction, field services, professional services, and the COR Pathway crossover.',
+    'AI consulting built for Canadian field service businesses. HVAC and plumbing, electrical, roofing and ICI construction, field services, professional services, and the COR Pathway crossover.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/industries' },
   openGraph: {
-    title: 'Industries We Serve | Bit Depth AI Consulting',
+    title: 'AI Consulting by Industry: Trades, ICI, Field Services | BitDepth AI',
     description:
       'Built for Canadian field service businesses. HVAC and plumbing, electrical, roofing and ICI construction, field services, professional services, and the COR Pathway crossover.',
     url: 'https://bitdepthaiconsulting.com/industries',
     type: 'website',
-    siteName: 'Bit Depth AI Consulting',
+    siteName: 'BitDepth AI Consulting',
     locale: 'en_CA',
     images: [
       {
         url: '/images/og-industries.jpg',
         width: 1200,
         height: 630,
-        alt: 'Bit Depth AI Consulting industries'
+        alt: 'BitDepth AI Consulting industries'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'Industries We Serve | Bit Depth AI Consulting',
+    title: 'AI Consulting by Industry: Trades, ICI, Field Services | BitDepth AI',
     description:
-      'Built for Canadian field service businesses. HVAC, electrical, roofing and ICI, field services, professional services, COR Pathway.',
+      'AI consulting for Canadian trades and contractors. HVAC, electrical, roofing and ICI, field services, professional services, COR Pathway.',
     images: ['/images/og-industries.jpg']
   }
 };

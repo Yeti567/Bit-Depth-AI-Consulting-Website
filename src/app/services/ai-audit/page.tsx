@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import Script from 'next/script';
 import { Check } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { buildServiceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'AI Opportunity Audit | Bit Depth AI',
+  title: 'AI Opportunity Audit for Canadian Trades | BitDepth AI',
   description:
     'A structured 14 day diagnostic of your trades or contractor business. $5,000 flat. 100 percent credited toward implementation within 90 days.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/services/ai-audit' }
@@ -38,12 +40,22 @@ const notFor = [
 export default function ServiceAiAuditPage() {
   return (
     <PageShell>
+      <Script id="service-ai-audit-schema" type="application/ld+json">
+        {JSON.stringify(
+          buildServiceSchema(
+            'AI Opportunity Audit',
+            'A structured 14 day diagnostic of your trades or contractor business. $5,000 flat. 100 percent credited toward implementation within 90 days.',
+            'https://bitdepthaiconsulting.com/services/ai-audit',
+            'AI Consulting'
+          )
+        )}
+      </Script>
       {/* Hero */}
       <section className="section-offwhite section-space">
         <div className="container-shell grid gap-12 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
           <ScrollReveal>
             <p className="eyebrow">The flagship offer</p>
-            <h1 className="mt-6 max-w-2xl">A $5,000 audit that pays for itself, or you do not pay.</h1>
+            <h1 className="mt-6 max-w-2xl">The AI Opportunity Audit. A $5,000 diagnostic that pays for itself, or you do not pay.</h1>
             <p className="mt-6 max-w-xl text-lg text-[var(--color-slate)]">
               The AI Opportunity Audit is a structured 14 day diagnostic of your business. We
               interview the owner and the people doing the work, map the processes, look at the

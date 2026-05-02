@@ -3,14 +3,14 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'Terms of Use | Bit Depth AI Consulting',
+  title: 'Terms of Use | BitDepth AI Consulting',
   description:
-    'Review the standard terms that govern use of the Bit Depth AI Consulting website and content.',
+    'Review the standard terms that govern use of the BitDepth AI Consulting website and content.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/terms-of-use' },
   robots: { index: true, follow: true },
   openGraph: {
-    title: 'Terms of Use | Bit Depth AI Consulting',
-    description: 'Review the terms and conditions for using the Bit Depth AI Consulting website.',
+    title: 'Terms of Use | BitDepth AI Consulting',
+    description: 'Review the terms and conditions for using the BitDepth AI Consulting website.',
     url: 'https://bitdepthaiconsulting.com/terms-of-use',
     type: 'article',
     images: [
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
         url: '/images/Social Media Profile Card.webp',
         width: 1200,
         height: 630,
-        alt: 'Bit Depth AI Consulting'
+        alt: 'BitDepth AI Consulting'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Terms of Use | Bit Depth AI Consulting',
-    description: 'Review the terms and conditions for using the Bit Depth AI Consulting website.',
+    title: 'Terms of Use | BitDepth AI Consulting',
+    description: 'Review the terms and conditions for using the BitDepth AI Consulting website.',
     images: ['/images/Social Media Profile Card.webp']
   }
 };
@@ -64,7 +64,7 @@ const sections = [
     body: (
       <p>
         All website content, including text, graphics, branding, and design elements, is owned by
-        or licensed to Bit Depth AI Consulting Ltd. and protected by applicable intellectual
+        or licensed to BitDepth AI Consulting Ltd. and protected by applicable intellectual
         property laws.
       </p>
     )
@@ -105,7 +105,7 @@ const sections = [
     title: 'Limitation of liability.',
     body: (
       <p>
-        To the fullest extent permitted by law, Bit Depth AI Consulting Ltd. is not liable for
+        To the fullest extent permitted by law, BitDepth AI Consulting Ltd. is not liable for
         indirect, incidental, consequential, or special damages arising from use of this website.
       </p>
     )
@@ -114,7 +114,7 @@ const sections = [
     title: 'Indemnification.',
     body: (
       <p>
-        You agree to indemnify and hold harmless Bit Depth AI Consulting Ltd. from claims arising
+        You agree to indemnify and hold harmless BitDepth AI Consulting Ltd. from claims arising
         from your misuse of the website or violation of these Terms of Use.
       </p>
     )
@@ -141,7 +141,7 @@ const sections = [
     title: 'Contact.',
     body: (
       <p>
-        Bit Depth AI Consulting Ltd. &nbsp;·&nbsp; Email:{' '}
+        BitDepth AI Consulting Ltd. &nbsp;·&nbsp; Email:{' '}
         <a
           href="mailto:blake@bitdepthaiconsulting.com"
           className="text-[var(--color-cyan)] hover:text-[var(--color-cyan-dark)]"
@@ -164,7 +164,7 @@ export default function TermsOfUsePage() {
             <p className="eyebrow">Legal</p>
             <h1 className="mt-6">Terms of use.</h1>
             <p className="mt-6 text-lg text-[var(--color-slate)]">
-              These terms govern your access to and use of the Bit Depth AI Consulting Ltd.
+              These terms govern your access to and use of the BitDepth AI Consulting Ltd.
               website.
             </p>
             <p className="mt-4 text-sm text-[var(--color-slate)]">Effective date: March 23, 2026.</p>

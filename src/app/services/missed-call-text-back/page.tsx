@@ -1,13 +1,15 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import Script from 'next/script';
 import { Check } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { MissedCallRoiCalculator } from '@/components/ui/missed-call-roi-calculator';
+import { buildServiceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Missed Call Text Back and AI Receptionist | Bit Depth AI',
+  title: 'Missed Call Text Back and AI Receptionist | BitDepth AI',
   description:
     'Stop losing 30 to 50 percent of your inbound calls. AI receptionist, sub-five-second text-back, and Canadian carrier compliance. From $497 per month.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/services/missed-call-text-back' }
@@ -56,13 +58,23 @@ const pricingTiers: PricingTier[] = [
 export default function MissedCallTextBackPage() {
   return (
     <PageShell>
+      <Script id="service-mctb-schema" type="application/ld+json">
+        {JSON.stringify(
+          buildServiceSchema(
+            'Missed Call Text Back and AI Receptionist',
+            'AI receptionist plus auto-text recovery for every missed call. Canadian carrier compliance built in. From $497 per month.',
+            'https://bitdepthaiconsulting.com/services/missed-call-text-back',
+            'AI Receptionist'
+          )
+        )}
+      </Script>
       {/* Hero */}
       <section className="section-offwhite section-space">
         <div className="container-shell grid gap-12 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
           <ScrollReveal>
             <p className="eyebrow">The inbound wedge</p>
             <h1 className="mt-6 max-w-2xl">
-              Stop losing 30 to 50 percent of your inbound calls.
+              Missed Call Text Back. Stop losing 30 to 50 percent of your inbound calls.
             </h1>
             <p className="mt-6 max-w-xl text-lg text-[var(--color-slate)]">
               Most Canadian trades miss between three and ten calls a day. Every missed call goes

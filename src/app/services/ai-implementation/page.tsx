@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Script from 'next/script';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { buildServiceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'AI Implementation for Canadian Trades | Bit Depth AI',
+  title: 'AI Implementation for Canadian Trades | BitDepth AI',
   description:
     'Phased implementation of AI workers, integrations, dashboards, and automations the audit identified. Audit fee credited 100 percent within 90 days.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/services/ai-implementation' }
@@ -36,12 +38,22 @@ const pad2 = (n: number) => String(n).padStart(2, '0');
 export default function AiImplementationPage() {
   return (
     <PageShell>
+      <Script id="service-ai-implementation-schema" type="application/ld+json">
+        {JSON.stringify(
+          buildServiceSchema(
+            'AI Implementation',
+            'Phased implementation of AI workers, integrations, dashboards, and automations identified in the audit. Audit fee credited 100 percent within 90 days.',
+            'https://bitdepthaiconsulting.com/services/ai-implementation',
+            'AI Consulting'
+          )
+        )}
+      </Script>
       {/* Hero */}
       <section className="section-offwhite section-space">
         <div className="container-shell max-w-3xl">
           <ScrollReveal>
             <p className="eyebrow">After the audit</p>
-            <h1 className="mt-6">Build what the audit recommended.</h1>
+            <h1 className="mt-6">AI Implementation for Canadian trades. Build what the audit recommended.</h1>
             <p className="mt-6 text-lg text-[var(--color-slate)]">
               Most clients move from the audit straight into a phased implementation. We build the
               integrations, the AI workers, the dashboards, or the automations the audit identified,

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { IndustryPage, type IndustryPageData } from '@/components/ui/industry-page';
 
 export const metadata: Metadata = {
-  title: 'AI for Field Service Businesses in Canada | Bit Depth AI',
+  title: 'AI for Field Service Businesses in Canada | BitDepth AI',
   description:
     'Renewal automation, route optimization, AI-handled customer comms, and review request automation for pest control, restoration, and commercial cleaning operators.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/industries/field-services' }
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const data: IndustryPageData = {
   breadcrumbLabel: 'General Field Services',
   eyebrow: 'Recurring revenue businesses',
-  heroTitle: 'Protect the recurring revenue without adding admin headcount.',
+  heroTitle: 'AI for field services. Protect renewals without adding admin headcount.',
   heroLead:
     'Pest control, restoration, commercial cleaning, and other recurring-revenue field service businesses live and die by renewal rates and route density. We automate the renewals, optimize the routes, and let AI handle the customer comms that used to take a full-time office staffer.',
   heroImageSrc: '/images/hero-industry-field-services.webp',

@@ -47,7 +47,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     };
 
     await resend.emails.send({
-      from: 'Bit Depth AI <noreply@bitdepthaiconsulting.com>',
+      from: 'BitDepth AI <noreply@bitdepthaiconsulting.com>',
       to: 'blake@bitdepthaiconsulting.com',
       replyTo: String(email).trim().toLowerCase(),
       subject: `New Contact Inquiry - ${String(company).trim()}`,

@@ -6,7 +6,7 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'AI for Roofing and ICI Construction in Ontario | Bit Depth AI',
+  title: 'AI for Roofing and ICI Construction in Ontario | BitDepth AI',
   description:
     'Compliance documentation, sub-contractor pre-qualification, AuditSoft pre-population, and bid response automation for Ontario roofing and ICI contractors.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/industries/roofing-ici-construction' }
@@ -71,7 +71,7 @@ export default function RoofingIciConstructionPage() {
             <ScrollReveal>
               <p className="eyebrow">Tertiary vertical, COR-tied</p>
               <h1 className="mt-6 max-w-2xl">
-                Stop letting safety paperwork eat your weekends.
+                AI for roofing and ICI construction. Stop the safety paperwork tax.
               </h1>
               <p className="mt-6 max-w-xl text-lg text-[var(--color-slate)]">
                 The City of Toronto OHSMS rule took effect March 31, 2025. Bill 30 (Working for

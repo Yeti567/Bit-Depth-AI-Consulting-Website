@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Script from 'next/script';
 import { Check } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { buildServiceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Custom AI Workers for Trades and Contractors | Bit Depth AI',
+  title: 'Custom AI Workers for Trades and Contractors | BitDepth AI',
   description:
     'Purpose-built AI agents that perform defined job functions inside your business. Intake, estimating, compliance, and AR follow-up. From $10,000.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/services/custom-ai-workers' }
@@ -33,12 +35,22 @@ const workers = [
 export default function CustomAiWorkersPage() {
   return (
     <PageShell>
+      <Script id="service-custom-ai-workers-schema" type="application/ld+json">
+        {JSON.stringify(
+          buildServiceSchema(
+            'Custom AI Workers',
+            'Purpose-built AI agents that perform defined job functions inside your business. Intake, estimating, compliance, and AR follow-up. From $10,000.',
+            'https://bitdepthaiconsulting.com/services/custom-ai-workers',
+            'AI Consulting'
+          )
+        )}
+      </Script>
       {/* Hero */}
       <section className="section-offwhite section-space">
         <div className="container-shell max-w-3xl">
           <ScrollReveal>
             <p className="eyebrow">A new job function</p>
-            <h1 className="mt-6">Purpose-built AI agents for defined work.</h1>
+            <h1 className="mt-6">Custom AI Workers. Purpose-built AI agents for defined work.</h1>
             <p className="mt-6 text-lg text-[var(--color-slate)]">
               A custom AI worker is an agent that performs a specific job inside your business, day
               after day, without supervision. Not a chatbot. A piece of software that does work a

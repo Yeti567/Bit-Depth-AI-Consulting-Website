@@ -8,20 +8,20 @@ import { buildArticleSchema } from '@/lib/schema';
 const TITLE = 'What to expect from your first AI consulting engagement.';
 
 export const metadata: Metadata = {
-  title: `${TITLE} | Bit Depth AI`,
+  title: `${TITLE} | BitDepth AI`,
   description:
-    'A step-by-step walkthrough of the Bit Depth discovery, audit, roadmap, and implementation process for first-time AI consulting clients.',
+    'A step-by-step walkthrough of the BitDepth discovery, audit, roadmap, and implementation process for first-time AI consulting clients.',
   alternates: {
     canonical:
       'https://bitdepthaiconsulting.com/resources/what-to-expect-from-your-first-ai-consulting-engagement'
   },
   openGraph: {
-    title: `${TITLE} | Bit Depth AI`,
+    title: `${TITLE} | BitDepth AI`,
     description:
-      'A step-by-step walkthrough of the Bit Depth discovery, audit, roadmap, and implementation process.',
+      'A step-by-step walkthrough of the BitDepth discovery, audit, roadmap, and implementation process.',
     url: 'https://bitdepthaiconsulting.com/resources/what-to-expect-from-your-first-ai-consulting-engagement',
     type: 'article',
-    siteName: 'Bit Depth AI Consulting',
+    siteName: 'BitDepth AI Consulting',
     locale: 'en_CA',
     images: [
       {
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: `${TITLE} | Bit Depth AI`,
+    title: `${TITLE} | BitDepth AI`,
     description:
-      'A step-by-step walkthrough of the Bit Depth discovery, audit, roadmap, and implementation process.',
+      'A step-by-step walkthrough of the BitDepth discovery, audit, roadmap, and implementation process.',
     images: ['/images/resources-article-3.webp.webp']
   }
 };
@@ -92,7 +92,7 @@ export default function WhatToExpectPage() {
         breadcrumbLabel="Your first engagement"
         imageSrc="/images/resources-article-3.webp.webp"
         imageAlt="Consultant and business owner shaking hands across a desk with a roadmap and laptop visible"
-        lead="If you have never worked with an AI consultant before, you probably have questions. What does the process actually look like? Who needs to be involved? What will you have at the end? And most importantly, will it be worth it? This article walks you through exactly what a Bit Depth engagement looks like, from first call to final deliverable. No surprises. No fine print."
+        lead="If you have never worked with an AI consultant before, you probably have questions. What does the process actually look like? Who needs to be involved? What will you have at the end? And most importantly, will it be worth it? This article walks you through exactly what a BitDepth engagement looks like, from first call to final deliverable. No surprises. No fine print."
       />
 
       <ArticleBody>

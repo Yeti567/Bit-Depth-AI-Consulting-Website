@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { IndustryPage, type IndustryPageData } from '@/components/ui/industry-page';
 
 export const metadata: Metadata = {
-  title: 'AI for Ontario Electrical Contractors | Bit Depth AI',
+  title: 'AI for Ontario Electrical Contractors | BitDepth AI',
   description:
     'ESA notification automation, permit tracking, apprentice hour capture, and real-time job-cost dashboards for Ontario electrical contractors.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/industries/electrical' }

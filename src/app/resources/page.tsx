@@ -9,14 +9,14 @@ import { ArticleCard, type ArticleCardData } from '@/components/ui/article-layou
 import { CaseStudies } from '@/components/ui/case-studies';
 
 export const metadata: Metadata = {
-  title: 'Resources | BitDepth AI Consulting',
+  title: 'AI Resources for Canadian Trades and Contractors | BitDepth AI',
   description:
-    'Plain-language reading on AI for Canadian SMBs. No hype. No vendor pitches. Practical thinking on what AI can do for a Canadian field service business or contractor.',
+    'Plain-language guides, downloads, and case studies on AI for Canadian trades and contractors. No hype. No vendor pitches. Practical thinking on what AI can actually do.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/resources' },
   openGraph: {
-    title: 'Resources | BitDepth AI Consulting',
+    title: 'AI Resources for Canadian Trades and Contractors | BitDepth AI',
     description:
-      'Plain-language reading on AI for Canadian SMBs. No hype. No vendor pitches.',
+      'Plain-language guides, downloads, and case studies on AI for Canadian trades and contractors.',
     url: 'https://bitdepthaiconsulting.com/resources',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'Resources | BitDepth AI Consulting',
+    title: 'AI Resources for Canadian Trades and Contractors | BitDepth AI',
     description:
-      'Plain-language reading on AI for Canadian SMBs. No hype. No vendor pitches.',
+      'Plain-language guides, downloads, and case studies on AI for Canadian trades and contractors.',
     images: ['/images/og-resources.jpg']
   }
 };
@@ -124,12 +124,12 @@ export default function ResourcesPage() {
           <ScrollReveal>
             <p className="eyebrow">Resources</p>
             <h1 className="mt-6 max-w-2xl">
-              Plain-language reading on AI for Canadian SMBs.
+              AI resources for Canadian trades and contractors.
             </h1>
             <p className="mt-6 max-w-xl text-lg text-[var(--color-slate)]">
-              We write the kind of articles we wish someone had written for us when we started.
-              No hype. No vendor pitches. Just clear, practical thinking on what AI can actually
-              do for a Canadian field service business or contractor.
+              Plain-language guides, downloads, and case studies on AI for Canadian field service
+              businesses. No hype. No vendor pitches. Just clear, practical thinking on what AI
+              can actually do for a contractor.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link href="#downloads" className="btn-primary">

@@ -8,19 +8,19 @@ import { buildArticleSchema } from '@/lib/schema';
 const TITLE = "You don't have an AI problem. You have a systems problem.";
 
 export const metadata: Metadata = {
-  title: `${TITLE} | Bit Depth AI`,
+  title: `${TITLE} | BitDepth AI`,
   description:
     'Disconnected systems are the real reason AI fails in most businesses. Here is what to fix before you invest in any AI tool or automation.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/resources/you-dont-have-an-ai-problem'
   },
   openGraph: {
-    title: `${TITLE} | Bit Depth AI`,
+    title: `${TITLE} | BitDepth AI`,
     description:
       'Disconnected systems are the real reason AI fails in most businesses. Here is what to fix before you invest in any AI tool or automation.',
     url: 'https://bitdepthaiconsulting.com/resources/you-dont-have-an-ai-problem',
     type: 'article',
-    siteName: 'Bit Depth AI Consulting',
+    siteName: 'BitDepth AI Consulting',
     locale: 'en_CA',
     images: [
       {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: `${TITLE} | Bit Depth AI`,
+    title: `${TITLE} | BitDepth AI`,
     description:
       'Disconnected systems are the real reason AI fails in most businesses.',
     images: ['/images/resources-article-1.webp.webp']
@@ -163,7 +163,7 @@ export default function YouDontHaveAnAIProblemPage() {
 
       <ArticleCTA
         title="The audit starts here."
-        body="The first thing we do in every Bit Depth engagement is assess the systems and data foundation. We tell you what is solid, what is fragile, and what needs to be addressed before AI will deliver any real value."
+        body="The first thing we do in every BitDepth engagement is assess the systems and data foundation. We tell you what is solid, what is fragile, and what needs to be addressed before AI will deliver any real value."
       />
     </PageShell>
   );

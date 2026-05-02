@@ -39,11 +39,11 @@ const resourceArticles: Record<string, ResourceArticle> = {
     category: 'Guide',
     description: 'A practical framework for identifying AI opportunities with measurable operational value.',
     image: '/images/Blog Resources Header.webp',
-    imageAlt: 'Bit Depth AI resources article header image',
+    imageAlt: 'BitDepth AI resources article header image',
     body: [
       { type: 'paragraph', value: 'Most AI projects fail at the use-case selection stage. Teams choose ideas based on novelty instead of operational impact, implementation feasibility, and available data quality.' },
       { type: 'paragraph', value: 'A practical evaluation process starts by mapping where delay, rework, downtime, or manual reporting currently consume team capacity. These are often the highest-leverage starting points for AI adoption.' },
-      { type: 'paragraph', value: 'Bit Depth recommends scoring candidate use cases across business impact, data readiness, implementation effort, and organizational readiness before committing budget.' }
+      { type: 'paragraph', value: 'BitDepth recommends scoring candidate use cases across business impact, data readiness, implementation effort, and organizational readiness before committing budget.' }
     ]
   },
   'what-vendor-neutral-ai-consulting-actually-means': {
@@ -51,7 +51,7 @@ const resourceArticles: Record<string, ResourceArticle> = {
     category: 'Perspective',
     description: 'Why independent advice matters when comparing platforms, pilots, and long-term architecture choices.',
     image: '/images/Blog Resources Header.webp',
-    imageAlt: 'Bit Depth AI resources article header image',
+    imageAlt: 'BitDepth AI resources article header image',
     body: [
       { type: 'paragraph', value: 'Vendor-neutral consulting means recommendations are based on fit and outcomes, not software partnerships, referral fees, or platform quotas.' },
       { type: 'paragraph', value: 'For industrial and mid-market businesses, this matters because platform lock-in can increase cost and reduce flexibility as operations evolve.' },
@@ -63,7 +63,7 @@ const resourceArticles: Record<string, ResourceArticle> = {
     category: 'Roadmap',
     description: 'How leadership teams can move from curiosity to a disciplined implementation plan.',
     image: '/images/Blog Resources Header.webp',
-    imageAlt: 'Bit Depth AI resources article header image',
+    imageAlt: 'BitDepth AI resources article header image',
     body: [
       { type: 'paragraph', value: 'A useful roadmap aligns AI opportunities to business priorities, available operating budget, and internal delivery capacity over time.' },
       { type: 'paragraph', value: 'Rather than launching multiple pilots at once, most teams get better results by sequencing one to two high-value initiatives with clear success metrics.' },
@@ -73,14 +73,14 @@ const resourceArticles: Record<string, ResourceArticle> = {
   'dead-in-the-field-why-predictive-maintenance-cant-wait': {
     title: "Dead in the Field: Why Predictive Maintenance Can't Wait",
     category: 'Oil & Gas',
-    description: 'Discover how predictive maintenance AI is transforming remote oilfield operations in Canada. Bit Depth AI Consulting delivers practical, edge-ready solutions for oil and gas operators.',
+    description: 'Discover how predictive maintenance AI is transforming remote oilfield operations in Canada. BitDepth AI Consulting delivers practical, edge-ready solutions for oil and gas operators.',
     image: '/images/Predictive Maintenance Blog.webp',
     imageAlt: 'Predictive maintenance systems supporting remote oilfield operations',
     body: [
       { type: 'heading', value: 'Introduction' },
       { type: 'paragraph', value: 'The oilfield does not forgive surprises. A pump failure at a remote wellsite 300 kilometres from the nearest service centre does not just stop production: it triggers a cascade of costs, safety risks, and logistical nightmares that can take days or even weeks to resolve. Yet for decades, the upstream oil and gas industry has relied on reactive maintenance strategies that treat equipment failure as an inevitable fact of life rather than a preventable event.' },
       { type: 'paragraph', value: 'That reality is changing. Predictive maintenance, powered by artificial intelligence, Industrial IoT sensors, and advanced machine learning models, is transforming how operators manage their assets across remote oilfield sites. Instead of waiting for a failure and then scrambling to respond, modern operations can now detect the early warning signs of equipment degradation weeks before a breakdown occurs, schedule maintenance during planned downtime, and dispatch crews with the right parts and the right information.' },
-      { type: 'paragraph', value: 'This article explores the specific challenges that remote oilfield locations pose for traditional maintenance programs, examines how predictive maintenance technology addresses those challenges, and outlines how Bit Depth AI Consulting delivers practical, scalable AI solutions to oil and gas operators in Canada and beyond.' },
+      { type: 'paragraph', value: 'This article explores the specific challenges that remote oilfield locations pose for traditional maintenance programs, examines how predictive maintenance technology addresses those challenges, and outlines how BitDepth AI Consulting delivers practical, scalable AI solutions to oil and gas operators in Canada and beyond.' },
       { type: 'heading', value: 'Predictive Maintenance' },
       { type: 'paragraph', value: "Predictive maintenance is no longer a future concept in oil and gas, it is the competitive standard that separates operators who control their costs from those who are controlled by them. For companies running equipment across remote oilfield sites in northern Alberta, northeastern British Columbia, Saskatchewan, and offshore platforms, the shift to AI-driven predictive maintenance is not just about technology. It is about survival in one of the world's most demanding and cost-sensitive operating environments." },
       { type: 'heading', value: 'What Predictive Maintenance Actually Means in an Oil and Gas Context' },
@@ -120,15 +120,15 @@ const resourceArticles: Record<string, ResourceArticle> = {
       { type: 'heading', value: 'Beyond Cost Reduction: Safety and ESG Value' },
       { type: 'paragraph', value: 'The value of predictive maintenance extends beyond the direct financial return. In oilfield environments, equipment failures do not just cost money, they create safety hazards and environmental risks. A failed seal on a high-pressure separator, an overheated motor in a compressor building, or a crack propagating in a pipeline can have consequences far more serious than deferred production.' },
       { type: 'paragraph', value: 'Predictive maintenance supports safety by detecting failure conditions before they escalate to incidents. It supports environmental compliance by reducing the likelihood of unplanned releases. And it strengthens ESG reporting by demonstrating a proactive, data-driven approach to asset integrity management, an increasingly important factor for investors and regulators across the Canadian energy sector.' },
-      { type: 'heading', value: 'How Bit Depth AI Consulting Delivers Predictive Maintenance Solutions' },
-      { type: 'paragraph', value: 'Bit Depth AI Consulting specializes in translating advanced AI and machine learning capabilities into practical operational solutions for oil and gas operators in Canada. Our approach to predictive maintenance is built around three core principles: deployability in remote environments, integration with existing operational systems, and measurable business outcomes.' },
+      { type: 'heading', value: 'How BitDepth AI Consulting Delivers Predictive Maintenance Solutions' },
+      { type: 'paragraph', value: 'BitDepth AI Consulting specializes in translating advanced AI and machine learning capabilities into practical operational solutions for oil and gas operators in Canada. Our approach to predictive maintenance is built around three core principles: deployability in remote environments, integration with existing operational systems, and measurable business outcomes.' },
       { type: 'heading', value: 'Phase 1: AI Readiness Assessment and Asset Prioritization' },
       { type: 'heading', value: 'Understanding Your Current State' },
       { type: 'paragraph', value: 'Every predictive maintenance engagement begins with a structured assessment of the client\'s current maintenance posture, asset inventory, existing instrumentation, data infrastructure, and connectivity environment. We do not apply a one-size-fits-all sensor deployment strategy. We work with operators to identify the highest-value assets, those where a failure carries the greatest production, safety, or environmental consequence, and build the business case for prioritized deployment.' },
       { type: 'paragraph', value: 'This phase also includes a review of existing SCADA, historian, and CMMS systems to identify integration opportunities and data gaps. Many operators already have more usable data than they realize. Our assessments frequently uncover historical sensor data that has never been connected to an analytical platform.' },
       { type: 'heading', value: 'Phase 2: Solution Architecture and Technology Selection' },
       { type: 'heading', value: 'Designing for Remote Realities' },
-      { type: 'paragraph', value: 'Based on the assessment findings, Bit Depth AI develops a tailored solution architecture that accounts for the specific connectivity, environmental, and operational conditions at each site. We specify sensor types, edge computing hardware, communication protocols, and cloud platform configurations appropriate for the operating environment.' },
+      { type: 'paragraph', value: 'Based on the assessment findings, BitDepth AI develops a tailored solution architecture that accounts for the specific connectivity, environmental, and operational conditions at each site. We specify sensor types, edge computing hardware, communication protocols, and cloud platform configurations appropriate for the operating environment.' },
       { type: 'paragraph', value: 'For remote sites with intermittent connectivity, we design edge-first architectures where AI inference runs locally and synchronizes with central platforms during available connection windows. For sites with SCADA infrastructure already in place, we build integrations that surface predictive alerts within familiar operator interfaces rather than requiring personnel to learn entirely new systems.' },
       { type: 'heading', value: 'Phase 3: Model Development and Deployment' },
       { type: 'heading', value: 'Building Intelligence on Your Equipment Data' },
@@ -136,39 +136,39 @@ const resourceArticles: Record<string, ResourceArticle> = {
       { type: 'paragraph', value: 'We deploy using phased rollout strategies that start with the highest-priority assets, validate model performance against real operating conditions, and expand coverage systematically as confidence is established. This approach minimizes implementation risk and generates early wins that build organizational confidence in the technology.' },
       { type: 'heading', value: 'Phase 4: Integration, Training, and Ongoing Optimization' },
       { type: 'heading', value: 'Making It Work for Your People' },
-      { type: 'paragraph', value: 'Technology that your people do not trust or understand does not deliver value. Bit Depth AI provides structured training programs for field operators, reliability engineers, and maintenance planners that focus on practical use rather than theoretical concepts. We help teams understand what the alerts mean, how to verify AI recommendations against field observations, and how to feed back their field knowledge to improve model accuracy over time.' },
+      { type: 'paragraph', value: 'Technology that your people do not trust or understand does not deliver value. BitDepth AI provides structured training programs for field operators, reliability engineers, and maintenance planners that focus on practical use rather than theoretical concepts. We help teams understand what the alerts mean, how to verify AI recommendations against field observations, and how to feed back their field knowledge to improve model accuracy over time.' },
       { type: 'paragraph', value: 'Our ongoing support model includes regular model performance reviews, threshold calibration updates as equipment ages or operational conditions change, and continuous monitoring of alert accuracy. We treat predictive maintenance as an ongoing operational program, not a one-time technology deployment.' },
       { type: 'heading', value: 'Conclusion: The Cost of Waiting Is Higher Than the Cost of Starting' },
       { type: 'paragraph', value: 'The predictive maintenance revolution in the oilfield is not coming, it is already here. Operators who have made the shift to AI-driven asset monitoring are experiencing measurable reductions in unplanned downtime, lower maintenance costs, improved safety records, and stronger positions in an increasingly ESG-sensitive investment environment.' },
       { type: 'paragraph', value: 'For operators running remote oilfield assets in northern Canada, the case is especially compelling. The logistical costs of emergency response at remote sites, the safety consequences of unmonitored equipment failures, and the production losses associated with extended unplanned shutdowns all make preventable failures extraordinarily expensive. Predictive maintenance does not eliminate all failures, but it converts unexpected catastrophic events into planned, manageable interventions.' },
-      { type: 'paragraph', value: 'Bit Depth AI Consulting brings the expertise, the technology partnerships, and the remote-environment experience to help oil and gas operators implement predictive maintenance programs that deliver real operational value. Whether you are managing a single remote battery or a complex network of wells, pipelines, and processing facilities across a large operating area, the path to predictive operations starts with a single conversation.' },
-      { type: 'paragraph', value: 'Contact Bit Depth AI Consulting today to schedule your AI Readiness Assessment and take the first step toward turning your equipment data into your most valuable operational asset.' },
+      { type: 'paragraph', value: 'BitDepth AI Consulting brings the expertise, the technology partnerships, and the remote-environment experience to help oil and gas operators implement predictive maintenance programs that deliver real operational value. Whether you are managing a single remote battery or a complex network of wells, pipelines, and processing facilities across a large operating area, the path to predictive operations starts with a single conversation.' },
+      { type: 'paragraph', value: 'Contact BitDepth AI Consulting today to schedule your AI Readiness Assessment and take the first step toward turning your equipment data into your most valuable operational asset.' },
       { type: 'heading', value: 'Frequently Asked Questions About Predictive Maintenance in the Oilfield' },
       { type: 'paragraph', value: 'Q1: What is the difference between predictive maintenance and preventive maintenance?' },
       { type: 'paragraph', value: 'Preventive maintenance follows a fixed schedule, equipment is serviced every 30 days, or every 500 operating hours, regardless of its actual condition. Predictive maintenance uses real-time sensor data and AI analysis to determine when maintenance is actually needed based on the condition of the equipment. This means maintenance is performed only when necessary, reducing unnecessary service interventions and preventing failures that would occur between scheduled service dates. In remote oilfield environments, this distinction is particularly important because preventive maintenance schedules rarely account for the actual operating conditions and load cycles that equipment experiences.' },
       { type: 'paragraph', value: 'Q2: Can predictive maintenance work at remote sites with poor internet connectivity?' },
-      { type: 'paragraph', value: 'Yes, and this is specifically where proper solution architecture makes all the difference. Effective predictive maintenance for remote oilfield sites uses edge computing devices deployed at the wellsite that run AI inference locally, without requiring a constant cloud connection. Sensor data is processed on-site, critical alerts are generated and delivered to field personnel through satellite or cellular connections when available, and data is buffered locally for synchronization when connectivity is restored. This store-and-forward architecture ensures that monitoring and alerting continue even when the satellite link is unavailable. Bit Depth AI designs all remote site deployments with edge-first architectures specifically to address this reality.' },
+      { type: 'paragraph', value: 'Yes, and this is specifically where proper solution architecture makes all the difference. Effective predictive maintenance for remote oilfield sites uses edge computing devices deployed at the wellsite that run AI inference locally, without requiring a constant cloud connection. Sensor data is processed on-site, critical alerts are generated and delivered to field personnel through satellite or cellular connections when available, and data is buffered locally for synchronization when connectivity is restored. This store-and-forward architecture ensures that monitoring and alerting continue even when the satellite link is unavailable. BitDepth AI designs all remote site deployments with edge-first architectures specifically to address this reality.' },
       { type: 'paragraph', value: 'Q3: How long does it take to see a return on investment from a predictive maintenance program?' },
       { type: 'paragraph', value: 'The timeline varies depending on equipment type, failure history, and the size of the deployment, but most operators begin to see measurable returns within the first six to twelve months. The clearest returns come when the system prevents a failure that would have resulted in emergency mobilization to a remote site. A single avoided emergency callout at a remote northern site can offset months of monitoring program costs. Over a 12-to-24-month period, operators typically see reductions in overall maintenance spend, lower parts costs through planned procurement rather than emergency sourcing, and meaningful reductions in unplanned production downtime.' },
       { type: 'paragraph', value: 'Q4: Does predictive maintenance require replacing all existing sensors and equipment?' },
-      { type: 'paragraph', value: 'No. A well-designed predictive maintenance program works with a combination of existing instrumentation and targeted new sensor deployments. Many oilfield facilities already have pressure transmitters, temperature sensors, and flow meters connected to SCADA systems. A significant amount of predictive value can be extracted from these existing data streams with the right analytical platform and model development. Where gaps exist in monitoring coverage, for example, on rotating equipment that lacks vibration sensors, targeted wireless sensor additions can fill those gaps cost-effectively. Bit Depth AI conducts a thorough asset and instrumentation assessment in the initial phase of every engagement to maximize the use of existing infrastructure.' },
+      { type: 'paragraph', value: 'No. A well-designed predictive maintenance program works with a combination of existing instrumentation and targeted new sensor deployments. Many oilfield facilities already have pressure transmitters, temperature sensors, and flow meters connected to SCADA systems. A significant amount of predictive value can be extracted from these existing data streams with the right analytical platform and model development. Where gaps exist in monitoring coverage, for example, on rotating equipment that lacks vibration sensors, targeted wireless sensor additions can fill those gaps cost-effectively. BitDepth AI conducts a thorough asset and instrumentation assessment in the initial phase of every engagement to maximize the use of existing infrastructure.' },
       { type: 'paragraph', value: 'Q5: What types of oilfield equipment benefit most from predictive maintenance?' },
       { type: 'paragraph', value: 'The highest-value applications in upstream oil and gas operations include electrical submersible pumps, reciprocating and centrifugal compressors, rod pump jack units, separators and treaters, gas dehydration units, and pipeline segments subject to corrosion or pressure cycling. In midstream applications, pipeline integrity monitoring and pump station equipment represent significant opportunities. The common thread across all of these applications is rotating or pressure-bearing equipment with clear failure signatures that can be detected through vibration, temperature, pressure, or acoustic monitoring before catastrophic failure occurs.' },
-      { type: 'paragraph', value: 'Q6: How does Bit Depth AI handle the data privacy and cybersecurity concerns associated with connecting oilfield equipment to AI platforms?' },
-      { type: 'paragraph', value: 'Data security is a foundational requirement in any operational technology environment, and Bit Depth AI treats it as such from the start of every engagement. Our solution architectures follow established OT cybersecurity frameworks, with clear network segmentation between field instrumentation networks and enterprise or cloud systems. We do not require operators to expose SCADA systems directly to the internet. Data transmission between edge devices and cloud platforms is encrypted, access is controlled through role-based authentication, and all integrations are designed in compliance with industry security standards. We conduct a cybersecurity review as part of the initial assessment phase and provide recommendations for any gaps identified in the existing OT network architecture.' }
+      { type: 'paragraph', value: 'Q6: How does BitDepth AI handle the data privacy and cybersecurity concerns associated with connecting oilfield equipment to AI platforms?' },
+      { type: 'paragraph', value: 'Data security is a foundational requirement in any operational technology environment, and BitDepth AI treats it as such from the start of every engagement. Our solution architectures follow established OT cybersecurity frameworks, with clear network segmentation between field instrumentation networks and enterprise or cloud systems. We do not require operators to expose SCADA systems directly to the internet. Data transmission between edge devices and cloud platforms is encrypted, access is controlled through role-based authentication, and all integrations are designed in compliance with industry security standards. We conduct a cybersecurity review as part of the initial assessment phase and provide recommendations for any gaps identified in the existing OT network architecture.' }
     ]
   },
   'digital-twin-technology-how-smart-manufacturers-are-pulling-ahead': {
     title: 'Digital Twin Technology: How Smart Manufacturers Are Pulling Ahead',
     category: 'Manufacturing',
-    description: 'Discover how digital twin technology is transforming smart manufacturing. Bit Depth AI Consulting delivers industrial IoT, AI predictive maintenance, and Industry 4.0 solutions for manufacturers.',
+    description: 'Discover how digital twin technology is transforming smart manufacturing. BitDepth AI Consulting delivers industrial IoT, AI predictive maintenance, and Industry 4.0 solutions for manufacturers.',
     image: '/images/Digital Twin Blog.webp',
     imageAlt: 'Digital twin technology visual for smart manufacturing operations',
     body: [
       { type: 'heading', value: 'Introduction' },
       { type: 'paragraph', value: 'Imagine being able to pause your factory floor, run every possible scenario, test every process change, and identify every bottleneck, without stopping a single machine or risking a single dollar of production. That is what a digital twin makes possible. For manufacturers who are still making decisions based on spreadsheets, intuition, and scheduled inspections, this level of operational intelligence represents a fundamental shift in how production is managed and optimized.' },
       { type: 'paragraph', value: 'Digital twin technology has moved well beyond the realm of large aerospace and automotive companies with billion-dollar R&D budgets. In 2026, it is accessible to mid-market manufacturers across Canada and globally, delivered through cloud-based platforms, affordable Industrial IoT sensor networks, and AI-powered analytics that translate raw machine data into clear, actionable insights.' },
-      { type: 'paragraph', value: 'This article explains what a digital twin actually is, how it applies across the manufacturing environment, why the business case has never been stronger, and how Bit Depth AI Consulting helps manufacturers at every stage of maturity build and operate digital twin programs that deliver measurable results.' },
+      { type: 'paragraph', value: 'This article explains what a digital twin actually is, how it applies across the manufacturing environment, why the business case has never been stronger, and how BitDepth AI Consulting helps manufacturers at every stage of maturity build and operate digital twin programs that deliver measurable results.' },
       { type: 'paragraph', value: 'Digital twin technology is transforming manufacturing operations by giving engineers, plant managers, and operations teams a living, real-time replica of their physical assets, production lines, and entire facilities. For manufacturers navigating the shift to Industry 4.0 and smart factory operations, the digital twin is no longer an experimental concept. It is the connective tissue between the physical world of machines, materials, and people, and the digital world of data, analytics, and AI-driven decision-making.' },
       { type: 'heading', value: 'What a Digital Twin Actually Is in a Manufacturing Context' },
       { type: 'paragraph', value: 'A digital twin is a dynamic virtual model of a physical asset, process, or system that is continuously updated with real-time data from its physical counterpart. Unlike a simulation, which uses static or historical data to model a single scenario, a digital twin is a living model. It receives a constant stream of sensor data from the physical asset, reflects the current state of that asset at all times, and evolves alongside it throughout its operational life.' },
@@ -195,15 +195,15 @@ const resourceArticles: Record<string, ResourceArticle> = {
       { type: 'paragraph', value: 'One of the most significant shifts in the digital twin landscape over the past two years is the accessibility of the technology for mid-market manufacturers. Enterprise-scale digital twin programs at companies like Siemens, Boeing, or General Electric are well publicized, but the perception that digital twin technology requires a massive technology budget and a dedicated data science team is no longer accurate.' },
       { type: 'paragraph', value: 'Cloud-based digital twin platforms, wireless IIoT sensor networks, and modular implementation approaches have brought the technology within reach of manufacturers with revenues between four and twenty million dollars. The key is starting with a focused, high-value use case rather than attempting to build a comprehensive facility-wide twin in a single program. A single critical machine with a history of unplanned failures is a legitimate and financially viable starting point. The return from preventing two or three unexpected shutdowns on that asset can fund the expansion of the program to additional equipment and processes.' },
       { type: 'paragraph', value: 'As of 2025, more than 40 percent of manufacturers were in the pilot phase of digital twin adoption, signaling a broad transition toward wider enterprise rollout. Manufacturers who establish their digital twin foundations today will be positioned ahead of competitors who wait until the technology becomes industry-standard practice.' },
-      { type: 'heading', value: 'How Bit Depth AI Consulting Builds Digital Twin Programs for Manufacturers' },
-      { type: 'paragraph', value: 'Bit Depth AI Consulting specializes in practical AI and machine learning implementation for industrial clients. Our approach to digital twin programs in manufacturing is grounded in three commitments: we start with your highest-value problem, we build on your existing infrastructure wherever possible, and we measure everything against operational outcomes that matter to your business.' },
+      { type: 'heading', value: 'How BitDepth AI Consulting Builds Digital Twin Programs for Manufacturers' },
+      { type: 'paragraph', value: 'BitDepth AI Consulting specializes in practical AI and machine learning implementation for industrial clients. Our approach to digital twin programs in manufacturing is grounded in three commitments: we start with your highest-value problem, we build on your existing infrastructure wherever possible, and we measure everything against operational outcomes that matter to your business.' },
       { type: 'heading', value: 'Step 1: Manufacturing AI Readiness Assessment' },
       { type: 'heading', value: 'Understanding Your Starting Point' },
       { type: 'paragraph', value: 'Every digital twin engagement begins with a structured assessment of the manufacturer\'s existing data infrastructure, sensor coverage, machine connectivity, production pain points, and maintenance history. We identify which assets carry the highest failure risk or production impact, what data is already being collected, and where the gaps are. This assessment produces a prioritized digital twin roadmap with a clear business case for each recommended implementation phase.' },
       { type: 'paragraph', value: 'Many manufacturers are surprised to discover how much usable data already exists in their historian systems, SCADA platforms, and maintenance records. Our assessments frequently identify valuable historical data that has never been connected to an analytical platform, providing a foundation for model development that accelerates time to value.' },
       { type: 'heading', value: 'Step 2: Pilot Program Design and Deployment' },
       { type: 'heading', value: 'Proving Value Before Scaling' },
-      { type: 'paragraph', value: 'Based on the assessment, Bit Depth AI designs a focused pilot program targeting the highest-priority asset or process. We specify the sensor types and placement, edge computing requirements, data integration architecture, and the AI models to be developed and deployed. Pilot programs are designed to demonstrate measurable results within 60 to 90 days, providing the evidence needed to justify broader program investment.' },
+      { type: 'paragraph', value: 'Based on the assessment, BitDepth AI designs a focused pilot program targeting the highest-priority asset or process. We specify the sensor types and placement, edge computing requirements, data integration architecture, and the AI models to be developed and deployed. Pilot programs are designed to demonstrate measurable results within 60 to 90 days, providing the evidence needed to justify broader program investment.' },
       { type: 'paragraph', value: 'We do not advocate for specific vendor platforms or technology stacks ahead of the assessment findings. Technology selection is driven by the client\'s existing infrastructure, connectivity environment, scalability requirements, and budget, not by vendor relationships.' },
       { type: 'heading', value: 'Step 3: Model Development and Integration' },
       { type: 'heading', value: 'Building Intelligence on Your Production Data' },
@@ -211,19 +211,19 @@ const resourceArticles: Record<string, ResourceArticle> = {
       { type: 'paragraph', value: 'We provide structured training for operations, maintenance, and engineering personnel that focuses on practical use of the digital twin, interpretation of predictive alerts, and the feedback loop between field observations and model improvement over time.' },
       { type: 'heading', value: 'Step 4: Ongoing Optimization and Program Expansion' },
       { type: 'heading', value: 'Scaling What Works' },
-      { type: 'paragraph', value: 'A digital twin program that is not continuously refined loses accuracy as equipment ages, operating conditions shift, and production changes. Bit Depth AI provides ongoing model calibration, alert threshold adjustment, and performance reporting as part of our support model. As the pilot program demonstrates value, we support expansion to additional assets, processes, and facilities in a phased approach that manages risk and maximizes return at each stage.' },
+      { type: 'paragraph', value: 'A digital twin program that is not continuously refined loses accuracy as equipment ages, operating conditions shift, and production changes. BitDepth AI provides ongoing model calibration, alert threshold adjustment, and performance reporting as part of our support model. As the pilot program demonstrates value, we support expansion to additional assets, processes, and facilities in a phased approach that manages risk and maximizes return at each stage.' },
       { type: 'heading', value: 'Conclusion: The Factory of the Future Is Being Built Right Now' },
       { type: 'paragraph', value: 'The digital twin is not a technology trend that manufacturers can afford to evaluate indefinitely. The gap between manufacturers who have established real-time operational intelligence and those still relying on reactive, calendar-based approaches is widening every quarter. The companies building digital twin programs today are accumulating the data history, model accuracy, and operational experience that will define their competitive position for the next decade.' },
       { type: 'paragraph', value: 'The good news for mid-market manufacturers is that the path to digital twin capability does not require a complete infrastructure overhaul or a multi-year enterprise technology program. It requires a clear problem, the right sensor data, a well-designed AI model, and an implementation partner who understands both the technology and the operational realities of a manufacturing environment.' },
-      { type: 'paragraph', value: 'Bit Depth AI Consulting brings all three. Whether you are looking to eliminate unplanned downtime on a critical production asset, optimize throughput on a constrained production line, or build the foundation for a broader smart factory transformation, the digital twin is the tool and Bit Depth AI is the team to make it operational.' },
-      { type: 'paragraph', value: 'Contact Bit Depth AI Consulting today to schedule your Manufacturing AI Readiness Assessment and discover where your first digital twin will deliver the greatest return.' },
+      { type: 'paragraph', value: 'BitDepth AI Consulting brings all three. Whether you are looking to eliminate unplanned downtime on a critical production asset, optimize throughput on a constrained production line, or build the foundation for a broader smart factory transformation, the digital twin is the tool and BitDepth AI is the team to make it operational.' },
+      { type: 'paragraph', value: 'Contact BitDepth AI Consulting today to schedule your Manufacturing AI Readiness Assessment and discover where your first digital twin will deliver the greatest return.' },
       { type: 'heading', value: 'Frequently Asked Questions About Digital Twins in Manufacturing' },
       { type: 'paragraph', value: 'Q1: What is the difference between a digital twin and a simulation?' },
       { type: 'paragraph', value: 'A simulation uses static or historical data to model a system at a single point in time for a specific scenario. A digital twin is a living model that receives continuous real-time data from its physical counterpart and evolves alongside it. The key distinction is the ongoing, bi-directional data connection. A digital twin does not just model what a machine might do under certain conditions. It reflects what that machine is actually doing right now and uses that current-state awareness to predict what it will do next.' },
       { type: 'paragraph', value: 'Q2: How expensive is it to implement a digital twin for a manufacturing operation?' },
       { type: 'paragraph', value: 'The cost varies significantly depending on the scope and complexity of the deployment. A focused pilot program targeting a single critical machine or production line is far more affordable than a comprehensive facility-wide implementation. Cloud-based platforms and wireless IIoT sensors have reduced entry costs considerably compared to earlier generations of the technology. The more useful question to ask is not what it costs to implement, but what it costs not to. When the financial impact of unplanned downtime, quality defects, and over-servicing is quantified, the ROI case for a targeted digital twin program typically becomes clear within the first year of operation.' },
       { type: 'paragraph', value: 'Q3: Do we need to replace all of our existing equipment and sensors to implement a digital twin?' },
-      { type: 'paragraph', value: 'No. A well-designed digital twin program starts with the data that already exists in your operation. Many manufacturers have pressure transmitters, temperature sensors, flow meters, and production counters already connected to SCADA or historian systems that represent a significant foundation for model development. Targeted wireless sensor additions fill the gaps where monitoring coverage is insufficient. Bit Depth AI conducts a thorough instrumentation assessment at the start of every engagement specifically to maximize the use of existing infrastructure and minimize unnecessary capital expenditure.' },
+      { type: 'paragraph', value: 'No. A well-designed digital twin program starts with the data that already exists in your operation. Many manufacturers have pressure transmitters, temperature sensors, flow meters, and production counters already connected to SCADA or historian systems that represent a significant foundation for model development. Targeted wireless sensor additions fill the gaps where monitoring coverage is insufficient. BitDepth AI conducts a thorough instrumentation assessment at the start of every engagement specifically to maximize the use of existing infrastructure and minimize unnecessary capital expenditure.' },
       { type: 'paragraph', value: 'Q4: How long does it take to see results from a digital twin implementation?' },
       { type: 'paragraph', value: 'Most manufacturers begin to see measurable results within three to six months of deploying a focused pilot program, particularly in predictive maintenance applications where the first prevented failure event often demonstrates a clear and quantifiable return. Full program ROI, including efficiency improvements and quality gains across a broader asset base, typically materializes within 12 to 36 months depending on program scope. The critical factor is starting with a high-priority, well-defined use case that has a clear baseline to measure against.' },
       { type: 'paragraph', value: 'Q5: Can digital twin technology work for a smaller manufacturing operation, or is it only practical for large enterprises?' },
@@ -235,14 +235,14 @@ const resourceArticles: Record<string, ResourceArticle> = {
   'see-every-defect-ai-computer-vision-quality-control': {
     title: 'See Every Defect: AI Computer Vision Quality Control',
     category: 'Manufacturing',
-    description: 'Discover how AI computer vision quality control helps manufacturers detect defects, eliminate rework, and achieve automated visual inspection at production speed. Bit Depth AI Consulting delivers results.',
+    description: 'Discover how AI computer vision quality control helps manufacturers detect defects, eliminate rework, and achieve automated visual inspection at production speed. BitDepth AI Consulting delivers results.',
     image: '/images/Computer Vision Quality Control Blog.webp',
     imageAlt: 'AI computer vision quality control system inspecting manufactured products',
     body: [
       { type: 'heading', value: 'Introduction' },
       { type: 'paragraph', value: 'Every defective product that leaves your facility carries a cost far greater than the scrap bin. It carries the cost of a customer complaint, a warranty claim, a potential recall, and most importantly, a crack in your reputation that takes far longer to repair than the defect itself. For decades, manufacturers accepted a certain level of inspection error as an unavoidable reality of human-led quality control. That reality has fundamentally changed.' },
       { type: 'paragraph', value: 'Computer vision quality control, powered by AI and machine learning, is replacing manual inspection processes across manufacturing industries with systems that operate at full production speed, detect microscopic defects invisible to the human eye, and maintain 100 percent consistency across every shift, every day, without fatigue or distraction. The technology has matured from a specialized tool for high-volume electronics and automotive lines into an accessible, scalable solution for manufacturers of all sizes and across all sectors.' },
-      { type: 'paragraph', value: 'This article explains how computer vision quality control works, where it delivers the greatest value across manufacturing operations, why the shift from manual to automated visual inspection is accelerating in 2026, and how Bit Depth AI Consulting helps manufacturers implement AI-powered inspection systems that produce measurable results from day one.' },
+      { type: 'paragraph', value: 'This article explains how computer vision quality control works, where it delivers the greatest value across manufacturing operations, why the shift from manual to automated visual inspection is accelerating in 2026, and how BitDepth AI Consulting helps manufacturers implement AI-powered inspection systems that produce measurable results from day one.' },
       { type: 'paragraph', value: 'Computer vision quality control is transforming manufacturing by replacing manual inspection with AI-powered imaging systems that detect defects, verify assemblies, and enforce quality standards at production line speed. For manufacturers under pressure to eliminate rework, reduce scrap, meet tightening customer tolerances, and protect their brand, the shift to automated visual inspection is not just an efficiency upgrade. It is a competitive necessity.' },
       { type: 'heading', value: 'What Computer Vision Quality Control Actually Does' },
       { type: 'paragraph', value: 'Computer vision quality control is the application of high-speed industrial cameras, specialized lighting systems, and AI-powered deep learning algorithms to inspect products and components in real time on the production line. Unlike rule-based machine vision systems of earlier generations, which required manual programming of specific defect criteria and failed when product variations or lighting conditions changed, modern AI-driven computer vision systems learn from image data.' },
@@ -278,22 +278,22 @@ const resourceArticles: Record<string, ResourceArticle> = {
       { type: 'paragraph', value: 'The machine vision market was valued at approximately 20.4 billion dollars in 2024 and is projected to exceed 41.7 billion dollars by 2030, driven heavily by the adoption of AI-first inspection systems in manufacturing. Over 70 percent of manufacturers surveyed in 2026 reported plans to deploy AI-based visual inspection within 18 months, reflecting a broad industry consensus that automated inspection is transitioning from competitive advantage to baseline requirement.' },
       { type: 'paragraph', value: 'The technology itself is advancing rapidly. Edge AI processing, where deep learning inference runs directly on vision hardware at the production line rather than depending on cloud connectivity, has reduced inspection latency to sub-millisecond speeds, making real-time closed-loop process control based on vision data a practical reality. Hyperspectral imaging, which captures light across wavelengths beyond human visible range, is enabling detection of material composition anomalies, contamination, and subsurface defects that conventional RGB imaging cannot see. 3D vision systems using structured light projection and laser triangulation bring full dimensional metrology into the inspection process.' },
       { type: 'paragraph', value: 'The trajectory points clearly toward what industry analysts describe as the closed-loop smart factory: a production environment where computer vision systems do not just detect defects but feed data back to robotic systems and process controllers to correct the process in real time, before the next unit is produced.' },
-      { type: 'heading', value: 'How Bit Depth AI Consulting Implements Computer Vision Quality Control' },
-      { type: 'paragraph', value: 'Bit Depth AI Consulting brings practical AI implementation expertise to manufacturers ready to transition from manual inspection to computer vision quality control. Our approach is built around your specific production environment, defect profile, and quality objectives. We do not sell technology platforms. We design and deliver complete inspection solutions that work in your facility, on your production line, with your team.' },
+      { type: 'heading', value: 'How BitDepth AI Consulting Implements Computer Vision Quality Control' },
+      { type: 'paragraph', value: 'BitDepth AI Consulting brings practical AI implementation expertise to manufacturers ready to transition from manual inspection to computer vision quality control. Our approach is built around your specific production environment, defect profile, and quality objectives. We do not sell technology platforms. We design and deliver complete inspection solutions that work in your facility, on your production line, with your team.' },
       { type: 'heading', value: 'Assessment and Use Case Definition' },
       { type: 'heading', value: 'Starting with Your Highest-Impact Inspection Problem' },
       { type: 'paragraph', value: 'Every engagement begins with a structured quality assessment that maps your current inspection process, documents your defect history, identifies your highest-cost quality escapes, and evaluates the physical production environment for camera placement, lighting design, and line integration requirements. We build a clear business case for computer vision implementation based on your actual quality costs, not industry averages, giving you a defensible ROI projection before any capital is committed.' },
       { type: 'heading', value: 'System Design and Model Development' },
       { type: 'heading', value: 'Engineering the Right Solution for Your Line' },
-      { type: 'paragraph', value: 'Bit Depth AI designs inspection systems using the camera technology, lighting architecture, and edge processing hardware appropriate for your specific inspection requirements. Our AI model development process uses image datasets from your production environment, including examples of your actual defect types and your acceptable product variation range, to train models that distinguish reliably between defects and normal variation without generating false rejects that disrupt production flow.' },
+      { type: 'paragraph', value: 'BitDepth AI designs inspection systems using the camera technology, lighting architecture, and edge processing hardware appropriate for your specific inspection requirements. Our AI model development process uses image datasets from your production environment, including examples of your actual defect types and your acceptable product variation range, to train models that distinguish reliably between defects and normal variation without generating false rejects that disrupt production flow.' },
       { type: 'paragraph', value: 'Integration with your existing MES, SCADA, and quality management systems ensures that inspection data flows directly into your production analytics and non-conformance management processes, creating the traceability and audit trail that customer quality requirements and regulatory frameworks increasingly demand.' },
       { type: 'heading', value: 'Deployment, Validation, and Ongoing Support' },
       { type: 'heading', value: 'Making It Operational and Keeping It Sharp' },
-      { type: 'paragraph', value: 'Computer vision models require ongoing calibration as products change, production conditions evolve, and new defect types emerge. Bit Depth AI provides structured model retraining and performance monitoring as part of our ongoing support service, ensuring that inspection accuracy is maintained over time. We also provide practical training for quality, maintenance, and engineering personnel that builds the internal capability your team needs to operate and expand the system confidently.' },
+      { type: 'paragraph', value: 'Computer vision models require ongoing calibration as products change, production conditions evolve, and new defect types emerge. BitDepth AI provides structured model retraining and performance monitoring as part of our ongoing support service, ensuring that inspection accuracy is maintained over time. We also provide practical training for quality, maintenance, and engineering personnel that builds the internal capability your team needs to operate and expand the system confidently.' },
       { type: 'heading', value: 'Conclusion: Zero Defects Is No Longer a Goal. It Is a Requirement.' },
       { type: 'paragraph', value: 'The standard for manufacturing quality in 2026 has been reset by the performance of AI-powered computer vision systems. When your competitors are inspecting 100 percent of their output at 99 percent accuracy, at full line speed, around the clock, the gap between their quality performance and yours becomes measurable in customer retention, contract renewals, and market share.' },
       { type: 'paragraph', value: 'Computer vision quality control is no longer the exclusive domain of tier-one automotive manufacturers and high-volume electronics assemblers. It is within reach for mid-market manufacturers across every sector, deployable in a phased approach that starts with your highest-impact inspection problem and expands as value is proven. The technology is mature, the ROI is documented, and the implementation path is well established.' },
-      { type: 'paragraph', value: 'Bit Depth AI Consulting has the expertise to take your quality control program from manual inspection to AI-powered automated visual inspection efficiently and practically, with a clear focus on the operational outcomes that matter most to your business. Contact us today to schedule your Manufacturing AI Readiness Assessment and find out where computer vision will deliver the greatest return in your operation.' },
+      { type: 'paragraph', value: 'BitDepth AI Consulting has the expertise to take your quality control program from manual inspection to AI-powered automated visual inspection efficiently and practically, with a clear focus on the operational outcomes that matter most to your business. Contact us today to schedule your Manufacturing AI Readiness Assessment and find out where computer vision will deliver the greatest return in your operation.' },
       { type: 'heading', value: 'Frequently Asked Questions About Computer Vision Quality Control' },
       { type: 'paragraph', value: 'Q1: How accurate is computer vision quality control compared to manual inspection?' },
       { type: 'paragraph', value: 'AI-powered computer vision systems consistently achieve defect detection accuracy of 95 to 99 percent in production environments, with some applications reaching 100 percent in controlled conditions. Human inspectors typically achieve accuracy around 87 percent under normal conditions, a figure that declines further as shift length increases and fatigue accumulates. The accuracy advantage of computer vision is compounded by consistency: an AI system applies the same standard to every unit regardless of time of day, production pressure, or operator experience level. For manufacturers where a single escaped defect can trigger a customer complaint, recall event, or regulatory action, this accuracy gap is not marginal. It is the difference between a quality program that reliably protects the brand and one that does not.' },
@@ -306,7 +306,7 @@ const resourceArticles: Record<string, ResourceArticle> = {
       { type: 'paragraph', value: 'Q5: Does computer vision quality control replace quality inspectors?' },
       { type: 'paragraph', value: 'In most implementations, computer vision does not eliminate quality inspection personnel. It reallocates them from repetitive, high-volume visual inspection tasks to higher-value activities: root cause analysis of defect trends, process improvement projects, supplier quality management, and oversight of the automated inspection system itself. Quality engineers and inspectors who understand the production process and the defect history of the equipment are essential contributors to AI model training and ongoing performance improvement. The manufacturers who achieve the best results from computer vision quality control are those who treat it as a collaboration between AI capability and human expertise, not as a replacement for the people who understand their production environment.' },
       { type: 'paragraph', value: 'Q6: How does computer vision integrate with existing quality management and production systems?' },
-      { type: 'paragraph', value: 'Modern computer vision platforms are designed for integration with the manufacturing technology ecosystem. Standard integration points include MES systems, where inspection results are linked to production batch and serial number records for traceability; SCADA systems, where inspection data can trigger automated process adjustments or line stops; ERP systems, where quality data feeds into inventory management and customer shipment records; and quality management systems, where non-conformance records are automatically generated from inspection failures. Bit Depth AI designs all inspection system integrations based on the specific systems in use at each client facility, ensuring that computer vision data enhances the operational systems your team already depends on rather than creating a separate data silo that requires manual management.' }
+      { type: 'paragraph', value: 'Modern computer vision platforms are designed for integration with the manufacturing technology ecosystem. Standard integration points include MES systems, where inspection results are linked to production batch and serial number records for traceability; SCADA systems, where inspection data can trigger automated process adjustments or line stops; ERP systems, where quality data feeds into inventory management and customer shipment records; and quality management systems, where non-conformance records are automatically generated from inspection failures. BitDepth AI designs all inspection system integrations based on the specific systems in use at each client facility, ensuring that computer vision data enhances the operational systems your team already depends on rather than creating a separate data silo that requires manual management.' }
     ]
   },
   'is-your-data-ready-for-ai': {
@@ -353,7 +353,7 @@ const resourceArticles: Record<string, ResourceArticle> = {
       {
         type: 'paragraph',
         value:
-          'Building AI-ready data is an operational process, not a one-time cleanup. This is the framework we use with clients at Bit Depth AI Consulting.'
+          'Building AI-ready data is an operational process, not a one-time cleanup. This is the framework we use with clients at BitDepth AI Consulting.'
       },
       { type: 'heading', value: 'Step 1: Audit Your Existing Data' },
       {
@@ -461,13 +461,13 @@ const resourceArticles: Record<string, ResourceArticle> = {
       {
         type: 'paragraph',
         value:
-          'At Bit Depth AI Consulting, we help Canadian businesses build AI-ready data foundations through practical data audits, data governance, and integration planning. If you want to understand how ready your data is, contact us and let us start the conversation.'
+          'At BitDepth AI Consulting, we help Canadian businesses build AI-ready data foundations through practical data audits, data governance, and integration planning. If you want to understand how ready your data is, contact us and let us start the conversation.'
       }
     ]
   },
   'what-is-an-ai-discovery-audit': {
     title: 'What Is an AI Discovery Audit?',
-    seoTitle: 'What Is an AI Discovery Audit? A Complete Guide | Bit Depth AI Consulting',
+    seoTitle: 'What Is an AI Discovery Audit? A Complete Guide | BitDepth AI Consulting',
     keywords: [
       'AI discovery audit',
       'AI audit',
@@ -514,7 +514,7 @@ const resourceArticles: Record<string, ResourceArticle> = {
       {
         type: 'paragraph',
         value:
-          'At Bit Depth, we use an audit-first approach. We do not push software first. We study your business and explain what will help, what will not, and what return you can expect.'
+          'At BitDepth, we use an audit-first approach. We do not push software first. We study your business and explain what will help, what will not, and what return you can expect.'
       },
       { type: 'heading', value: 'Who Is an AI Audit For?' },
       {
@@ -628,7 +628,7 @@ const resourceArticles: Record<string, ResourceArticle> = {
       {
         type: 'paragraph',
         value:
-          'At Bit Depth, part of the audit cost is credited toward implementation when you move forward with us, so you do not pay twice for discovery.'
+          'At BitDepth, part of the audit cost is credited toward implementation when you move forward with us, so you do not pay twice for discovery.'
       },
       { type: 'heading', value: 'How Long Does an AI Discovery Audit Take?' },
       {
@@ -683,7 +683,7 @@ const resourceArticles: Record<string, ResourceArticle> = {
       {
         type: 'paragraph',
         value:
-          'You get a clear roadmap. You can execute internally, work with Bit Depth, or take the roadmap to another delivery team.'
+          'You get a clear roadmap. You can execute internally, work with BitDepth, or take the roadmap to another delivery team.'
       },
       { type: 'heading3', value: 'How do you keep ROI estimates realistic?' },
       {
@@ -712,7 +712,7 @@ const resourceArticles: Record<string, ResourceArticle> = {
       {
         type: 'paragraph',
         value:
-          'At Bit Depth, we audit first, recommend what fits, and deliver outcomes. If you are in oil and gas or manufacturing and want to see what AI can do for your business, book a free discovery call.'
+          'At BitDepth, we audit first, recommend what fits, and deliver outcomes. If you are in oil and gas or manufacturing and want to see what AI can do for your business, book a free discovery call.'
       },
       { type: 'heading4', value: 'Book a Free Discovery Call' },
       { type: 'paragraph', value: 'Serving Canadian oil and gas and manufacturing companies.' }
@@ -741,7 +741,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!article) {
     return {
-      title: 'Resource Not Found | Bit Depth AI',
+      title: 'Resource Not Found | BitDepth AI',
       robots: {
         index: false,
         follow: true
@@ -752,14 +752,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const path = `/resources/${slug}`;
 
   return {
-    title: article.seoTitle ?? `${article.title} | Bit Depth AI`,
+    title: article.seoTitle ?? `${article.title} | BitDepth AI`,
     description: article.description,
     keywords: article.keywords,
     alternates: {
       canonical: path
     },
     openGraph: {
-      title: article.seoTitle ?? `${article.title} | Bit Depth AI`,
+      title: article.seoTitle ?? `${article.title} | BitDepth AI`,
       description: article.description,
       url: path,
       type: 'article',
@@ -774,7 +774,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     twitter: {
       card: 'summary_large_image',
-      title: article.seoTitle ?? `${article.title} | Bit Depth AI`,
+      title: article.seoTitle ?? `${article.title} | BitDepth AI`,
       description: article.description,
       images: [article.image]
     }

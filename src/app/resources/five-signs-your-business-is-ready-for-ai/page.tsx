@@ -8,20 +8,20 @@ import { buildArticleSchema } from '@/lib/schema';
 const TITLE = 'The 5 signs your business is ready for AI automation.';
 
 export const metadata: Metadata = {
-  title: `${TITLE} | Bit Depth AI`,
+  title: `${TITLE} | BitDepth AI`,
   description:
     'A practical checklist for Canadian business owners evaluating whether their business is ready for AI automation and where to start.',
   alternates: {
     canonical: 'https://bitdepthaiconsulting.com/resources/five-signs-your-business-is-ready-for-ai'
   },
   openGraph: {
-    title: `${TITLE} | Bit Depth AI`,
+    title: `${TITLE} | BitDepth AI`,
     description:
       'A practical checklist for Canadian business owners evaluating whether their business is ready for AI automation.',
     url:
       'https://bitdepthaiconsulting.com/resources/five-signs-your-business-is-ready-for-ai',
     type: 'article',
-    siteName: 'Bit Depth AI Consulting',
+    siteName: 'BitDepth AI Consulting',
     locale: 'en_CA',
     images: [
       {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: `${TITLE} | Bit Depth AI`,
+    title: `${TITLE} | BitDepth AI`,
     description:
       'A practical checklist for Canadian business owners evaluating whether their business is ready for AI automation.',
     images: ['/images/resources-article-2.webp.webp']

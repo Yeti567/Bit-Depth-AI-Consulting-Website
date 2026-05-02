@@ -11,24 +11,24 @@ import { buildOrganizationSchema, buildWebSiteSchema, buildLocalBusinessSchema }
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'AI and Automation for Canadian Trades and Contractors | Bit Depth AI',
+  title: 'AI and Automation for Canadian Trades and Contractors | BitDepth AI',
   description:
     'Vendor-neutral AI consulting for Canadian trades and contractors. We diagnose where the money is leaking, then build the AI and automation that plugs the leak. Audits from $5,000.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/' },
   openGraph: {
-    title: 'AI and Automation for Canadian Trades and Contractors | Bit Depth AI',
+    title: 'AI and Automation for Canadian Trades and Contractors | BitDepth AI',
     description:
       'Vendor-neutral AI consulting for Canadian trades and contractors. Audit first. Recommend what fits. Deliver outcomes.',
     url: 'https://bitdepthaiconsulting.com/',
     type: 'website',
-    siteName: 'Bit Depth AI Consulting',
+    siteName: 'BitDepth AI Consulting',
     locale: 'en_CA',
-    images: [{ url: '/images/og-home.jpg', width: 1200, height: 630, alt: 'Bit Depth AI Consulting' }]
+    images: [{ url: '/images/og-home.jpg', width: 1200, height: 630, alt: 'BitDepth AI Consulting' }]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI and Automation for Canadian Trades and Contractors | Bit Depth AI',
+    title: 'AI and Automation for Canadian Trades and Contractors | BitDepth AI',
     description:
       'Vendor-neutral AI consulting for Canadian trades and contractors. Audits from $5,000.',
     images: ['/images/og-home.jpg']

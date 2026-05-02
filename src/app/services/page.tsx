@@ -6,28 +6,28 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'Services | Bit Depth AI Consulting',
+  title: 'AI Consulting Services for Canadian Trades | BitDepth AI',
   description:
-    'Five offers, one methodology. Audit, Missed Call Text Back, AI Implementation, Workflow Automation, and Custom AI Workers for Canadian trades and contractors.',
+    'Five AI consulting services for Canadian trades and contractors: AI Opportunity Audit, Missed Call Text Back, AI Implementation, Workflow Automation, and Custom AI Workers.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/services' },
   openGraph: {
-    title: 'Services | Bit Depth AI Consulting',
+    title: 'AI Consulting Services for Canadian Trades | BitDepth AI',
     description:
       'Five offers, one methodology. Audit, Missed Call Text Back, AI Implementation, Workflow Automation, and Custom AI Workers for Canadian trades and contractors.',
     url: 'https://bitdepthaiconsulting.com/services',
     type: 'website',
-    siteName: 'Bit Depth AI Consulting',
+    siteName: 'BitDepth AI Consulting',
     locale: 'en_CA',
     images: [
-      { url: '/images/og-services.jpg', width: 1200, height: 630, alt: 'Bit Depth AI Consulting services' }
+      { url: '/images/og-services.jpg', width: 1200, height: 630, alt: 'BitDepth AI Consulting services' }
     ]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'Services | Bit Depth AI Consulting',
+    title: 'AI Consulting Services for Canadian Trades | BitDepth AI',
     description:
-      'Five offers, one methodology. Trades-led admin automation for Canadian contractors.',
+      'Five AI services for Canadian trades and contractors. Audit, Missed Call Text Back, Implementation, Workflow Automation, Custom AI Workers.',
     images: ['/images/og-services.jpg']
   }
 };
@@ -98,10 +98,11 @@ export default function ServicesPage() {
         <div className="container-shell grid gap-12 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
           <ScrollReveal>
             <p className="eyebrow">Services</p>
-            <h1 className="mt-6 max-w-2xl">Five offers, one methodology.</h1>
+            <h1 className="mt-6 max-w-2xl">Five AI services for Canadian trades and contractors.</h1>
             <p className="mt-6 max-w-xl text-lg text-[var(--color-slate)]">
-              We start with an audit. Everything else either comes out of the audit or feeds back
-              into it. Pick where you are and we will tell you the right next step.
+              Every BitDepth engagement starts with an AI Opportunity Audit. Everything else
+              comes out of the audit or feeds back into it. Pick where you are and we will tell
+              you the right next step.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link href="/ai-audit" className="btn-primary">

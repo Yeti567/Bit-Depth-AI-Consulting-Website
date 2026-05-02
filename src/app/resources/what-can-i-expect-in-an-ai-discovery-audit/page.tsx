@@ -9,7 +9,7 @@ import { buildArticleSchema } from '@/lib/schema';
 const TITLE = 'What can I expect in an AI discovery audit?';
 
 export const metadata: Metadata = {
-  title: `${TITLE} | Bit Depth AI`,
+  title: `${TITLE} | BitDepth AI`,
   description:
     'Wondering what an AI discovery audit involves? Learn the step-by-step process, who gets interviewed, and how ROI is calculated for your business.',
   alternates: {
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
       'https://bitdepthaiconsulting.com/resources/what-can-i-expect-in-an-ai-discovery-audit'
   },
   openGraph: {
-    title: `${TITLE} | Bit Depth AI`,
+    title: `${TITLE} | BitDepth AI`,
     description:
       'Wondering what an AI discovery audit involves? Learn the step-by-step process, who gets interviewed, and how ROI is calculated.',
     url:
       'https://bitdepthaiconsulting.com/resources/what-can-i-expect-in-an-ai-discovery-audit',
     type: 'article',
-    siteName: 'Bit Depth AI Consulting',
+    siteName: 'BitDepth AI Consulting',
     locale: 'en_CA',
     images: [
       {
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: `${TITLE} | Bit Depth AI`,
+    title: `${TITLE} | BitDepth AI`,
     description:
       'Wondering what an AI discovery audit involves? Learn the step-by-step process, who gets interviewed, and how ROI is calculated.',
     images: ['/images/ai-discovery-audit-featured.webp.webp']

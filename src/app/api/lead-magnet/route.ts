@@ -23,14 +23,14 @@ async function sendConfirmationEmail(firstName: string, email: string, source: s
   const safeSource = escapeHtml(source);
 
   await resend.emails.send({
-    from: 'Bit Depth AI <noreply@bitdepthaiconsulting.com>',
+    from: 'BitDepth AI <noreply@bitdepthaiconsulting.com>',
     to: email,
     bcc: ['blake@bitdepthaiconsulting.com'],
     subject: 'Your AI Readiness Checklist',
     html: `
       <h2>Your AI Readiness Checklist</h2>
       <p>Hi ${safeFirstName},</p>
-      <p>Thanks for requesting the Bit Depth AI Readiness Checklist.</p>
+      <p>Thanks for requesting the BitDepth AI Readiness Checklist.</p>
       <p>
         You can download it here:
         <a href="https://bitdepthaiconsulting.com/downloads/ai-readiness-checklist.pdf">
@@ -38,7 +38,7 @@ async function sendConfirmationEmail(firstName: string, email: string, source: s
         </a>
       </p>
       <p>If you have questions about where your business stands with AI, reply to this email and Blake will be happy to help.</p>
-      <p>Bit Depth AI Consulting</p>
+      <p>BitDepth AI Consulting</p>
       <hr />
       <p style="color:#888;font-size:12px;">Lead source: ${safeSource} &middot; Email: ${safeEmail}</p>
     `,

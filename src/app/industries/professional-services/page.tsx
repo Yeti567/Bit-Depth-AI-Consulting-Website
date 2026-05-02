@@ -6,7 +6,7 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
 export const metadata: Metadata = {
-  title: 'AI for Law Firms, Accounting Practices, and Brokerages | Bit Depth AI',
+  title: 'AI for Law Firms, Accountants, and Brokerages | BitDepth AI',
   description:
     'Private intake automation, document drafting from precedents, trust-aware billing, and Clio, PCLaw, Karbon, and Dext integrations. Referral and inbound only.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/industries/professional-services' }
