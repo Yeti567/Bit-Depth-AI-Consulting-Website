@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type ContactFormFields = {
   name: string;
@@ -8,12 +8,33 @@ type ContactFormFields = {
   email: string;
   phone: string;
   message: string;
+  topic: string;
+};
+
+const TOPIC_DEFAULTS: Record<string, { label: string; message: string }> = {
+  audit: {
+    label: 'Booking an AI Opportunity Audit',
+    message:
+      'I would like to book an AI Opportunity Audit. A bit about my business:\n\n'
+  }
 };
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
+  const [topic, setTopic] = useState<string>('');
+  const [defaultMessage, setDefaultMessage] = useState<string>('');
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const params = new URLSearchParams(window.location.search);
+    const t = params.get('topic') ?? '';
+    if (t && TOPIC_DEFAULTS[t]) {
+      setTopic(t);
+      setDefaultMessage(TOPIC_DEFAULTS[t].message);
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -27,7 +48,8 @@ export function ContactForm() {
       company: String(formData.get('company') ?? '').trim(),
       email: String(formData.get('email') ?? '').trim(),
       phone: String(formData.get('phone') ?? '').trim(),
-      message: String(formData.get('message') ?? '').trim()
+      message: String(formData.get('message') ?? '').trim(),
+      topic
     };
 
     try {
@@ -72,12 +94,24 @@ export function ContactForm() {
     );
   }
 
+  const topicConfig = topic ? TOPIC_DEFAULTS[topic] : null;
+
   return (
     <form
       onSubmit={handleSubmit}
       noValidate
       className="mt-8 grid gap-4 rounded-md border border-[var(--color-border)] bg-white p-6 shadow-soft"
     >
+      {topicConfig ? (
+        <div className="rounded border border-[var(--color-terracotta)] bg-[var(--color-offwhite)] px-4 py-3">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-terracotta)]">
+            {topicConfig.label}
+          </p>
+          <p className="mt-1 text-sm text-[var(--color-charcoal)]">
+            Fill the form below and we will reply within one business day to schedule the kickoff.
+          </p>
+        </div>
+      ) : null}
       <div>
         <label htmlFor="contact-name" className="sr-only">
           Full name
@@ -143,6 +177,8 @@ export function ContactForm() {
           rows={5}
           placeholder="What are you hoping AI could help you with?"
           required
+          defaultValue={defaultMessage}
+          key={defaultMessage}
         />
       </div>
 
@@ -158,7 +194,11 @@ export function ContactForm() {
           disabled={isSubmitting}
           className="btn-primary w-full disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
         >
-          {isSubmitting ? 'Sending…' : 'Send my inquiry'}
+          {isSubmitting
+            ? 'Sending…'
+            : topic === 'audit'
+              ? 'Book my AI Audit'
+              : 'Send my inquiry'}
         </button>
       </div>
     </form>

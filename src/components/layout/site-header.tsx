@@ -128,7 +128,7 @@ export function SiteHeader({ simplified = false }: { simplified?: boolean }) {
           </nav>
         ) : null}
         <div className="hidden items-center gap-4 md:flex">
-          <Link href="/ai-audit" className="btn-primary text-sm">
+          <Link href="/contact?topic=audit" className="btn-primary text-sm">
             Book an AI Audit
           </Link>
         </div>

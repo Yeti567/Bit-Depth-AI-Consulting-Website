@@ -173,7 +173,7 @@ export default function HomePage() {
               Recommend what fits. Deliver outcomes.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href="/ai-audit" className="btn-primary">
+              <Link href="/contact?topic=audit" className="btn-primary">
                 Book an AI Audit
               </Link>
               <Link href="/services" className="btn-outline">
@@ -236,7 +236,7 @@ export default function HomePage() {
             ))}
           </div>
           <ScrollReveal className="mt-12">
-            <Link href="/ai-audit" className="btn-primary">
+            <Link href="/contact?topic=audit" className="btn-primary">
               Book an AI Audit
             </Link>
             <Link
@@ -274,7 +274,7 @@ export default function HomePage() {
                 <p className="mt-2 text-[var(--color-navy)]">Any implementation</p>
               </div>
             </div>
-            <Link href="/ai-audit" className="btn-primary mt-10">
+            <Link href="/contact?topic=audit" className="btn-primary mt-10">
               Book an AI Audit
             </Link>
           </ScrollReveal>
@@ -445,7 +445,7 @@ export default function HomePage() {
               actually make an impact.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link href="/ai-audit" className="btn-primary">
+              <Link href="/contact?topic=audit" className="btn-primary">
                 Book an Audit
               </Link>
               <Link href="/contact" className="btn-outline">

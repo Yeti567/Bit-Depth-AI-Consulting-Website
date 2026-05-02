@@ -60,7 +60,7 @@ export default function AiImplementationPage() {
               in priority order, with the full audit fee credited against the first invoice.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href="/ai-audit" className="btn-primary">
+              <Link href="/contact?topic=audit" className="btn-primary">
                 Book an AI Audit
               </Link>
             </div>
@@ -108,7 +108,7 @@ export default function AiImplementationPage() {
               invoice.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link href="/ai-audit" className="btn-primary">
+              <Link href="/contact?topic=audit" className="btn-primary">
                 Book an AI Audit
               </Link>
               <Link href="/contact" className="btn-outline">

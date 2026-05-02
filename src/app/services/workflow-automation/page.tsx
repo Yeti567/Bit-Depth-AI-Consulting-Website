@@ -58,7 +58,7 @@ export default function WorkflowAutomationPage() {
               anyone re-typing anything.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href="/ai-audit" className="btn-primary">
+              <Link href="/contact?topic=audit" className="btn-primary">
                 Book an AI Audit to find the highest-ROI automations first
               </Link>
             </div>
@@ -102,7 +102,7 @@ export default function WorkflowAutomationPage() {
               audit identifies the highest-ROI flow before any work begins.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link href="/ai-audit" className="btn-primary">
+              <Link href="/contact?topic=audit" className="btn-primary">
                 Book an AI Audit
               </Link>
               <Link href="/contact" className="btn-outline">

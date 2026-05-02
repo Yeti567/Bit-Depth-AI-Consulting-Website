@@ -87,7 +87,7 @@ export default function MissedCallTextBackPage() {
               <Link href="/contact" className="btn-primary">
                 See if it fits your business
               </Link>
-              <Link href="/ai-audit" className="btn-outline">
+              <Link href="/contact?topic=audit" className="btn-outline">
                 Book an AI Audit
               </Link>
             </div>
@@ -189,7 +189,7 @@ export default function MissedCallTextBackPage() {
               <Link href="/contact" className="btn-primary">
                 See if it fits your business
               </Link>
-              <Link href="/ai-audit" className="btn-outline">
+              <Link href="/contact?topic=audit" className="btn-outline">
                 Book an AI Audit
               </Link>
             </div>

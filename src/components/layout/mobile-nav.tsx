@@ -142,7 +142,7 @@ export function MobileNav() {
           );
         })}
         <Link
-          href="/ai-audit"
+          href="/contact?topic=audit"
           style={{
             display: 'block',
             width: '100%',

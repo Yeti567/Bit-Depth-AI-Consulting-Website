@@ -78,7 +78,7 @@ export function IndustryPage({ data }: { data: IndustryPageData }) {
               <h1 className="mt-6 max-w-2xl">{data.heroTitle}</h1>
               <p className="mt-6 max-w-xl text-lg text-[var(--color-slate)]">{data.heroLead}</p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                <Link href="/ai-audit" className="btn-primary">
+                <Link href="/contact?topic=audit" className="btn-primary">
                   Book an AI Audit
                 </Link>
                 <Link href="/contact" className="btn-outline">
@@ -192,7 +192,7 @@ export function IndustryPage({ data }: { data: IndustryPageData }) {
             <h2 className="mt-6 text-white">{data.ctaTitle}</h2>
             <p className="mx-auto mt-6 max-w-xl text-white/75">{data.ctaBody}</p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link href="/ai-audit" className="btn-primary">
+              <Link href="/contact?topic=audit" className="btn-primary">
                 Book an AI Audit
               </Link>
               <Link href="/contact" className="btn-outline">

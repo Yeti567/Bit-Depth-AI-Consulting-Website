@@ -58,7 +58,7 @@ export default function CustomAiWorkersPage() {
               processes, then maintain it.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href="/ai-audit" className="btn-primary">
+              <Link href="/contact?topic=audit" className="btn-primary">
                 Book an AI Audit to identify which job function is the right first AI worker
               </Link>
             </div>
@@ -102,7 +102,7 @@ export default function CustomAiWorkersPage() {
               role before any work begins.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link href="/ai-audit" className="btn-primary">
+              <Link href="/contact?topic=audit" className="btn-primary">
                 Book an AI Audit
               </Link>
               <Link href="/contact" className="btn-outline">

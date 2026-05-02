@@ -49,7 +49,7 @@ export default function CorPathwayPage() {
                 we will route the COR work through Pathway as part of the implementation.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                <Link href="/ai-audit" className="btn-primary">
+                <Link href="/contact?topic=audit" className="btn-primary">
                   Book an AI Audit
                 </Link>
                 <Link href="/contact" className="btn-outline">
@@ -135,7 +135,7 @@ export default function CorPathwayPage() {
                     <span className="tabular font-semibold text-[var(--color-navy)]">100%</span> credited toward implementation.
                   </p>
                 </div>
-                <Link href="/ai-audit" className="btn-primary mt-6 self-start">
+                <Link href="/contact?topic=audit" className="btn-primary mt-6 self-start">
                   Book an AI Audit
                 </Link>
               </article>
@@ -189,7 +189,7 @@ export default function CorPathwayPage() {
               <Link href="/contact" className="btn-primary">
                 Book a discovery call
               </Link>
-              <Link href="/ai-audit" className="btn-outline">
+              <Link href="/contact?topic=audit" className="btn-outline">
                 Book an AI Audit
               </Link>
             </div>

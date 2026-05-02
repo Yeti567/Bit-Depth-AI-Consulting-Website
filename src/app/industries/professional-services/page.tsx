@@ -73,7 +73,7 @@ export default function ProfessionalServicesPage() {
                 <Link href="/contact" className="btn-primary">
                   Book a discovery call
                 </Link>
-                <Link href="/ai-audit" className="btn-outline">
+                <Link href="/contact?topic=audit" className="btn-outline">
                   Book an AI Audit
                 </Link>
               </div>
@@ -130,7 +130,7 @@ export default function ProfessionalServicesPage() {
               <Link href="/contact" className="btn-primary">
                 Book a discovery call
               </Link>
-              <Link href="/ai-audit" className="btn-outline">
+              <Link href="/contact?topic=audit" className="btn-outline">
                 Book an AI Audit
               </Link>
             </div>

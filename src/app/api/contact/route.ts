@@ -13,7 +13,7 @@ function escapeHtml(value: unknown): string {
 export async function POST(request: NextRequest): Promise<NextResponse> {
   try {
     const body = await request.json();
-    const { name, company, email, phone, message } = body;
+    const { name, company, email, phone, message, topic } = body;
 
     if (!name || !company || !email || !message) {
       return NextResponse.json(
@@ -46,13 +46,17 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       message: escapeHtml(message).replace(/\n/g, '<br />'),
     };
 
+    const isAuditBooking = topic === 'audit';
+    const subjectPrefix = isAuditBooking ? 'AI AUDIT BOOKING' : 'New Contact Inquiry';
+    const headingLabel = isAuditBooking ? 'AI Audit Booking Request' : 'New Contact Inquiry';
+
     await resend.emails.send({
       from: 'BitDepth AI <noreply@bitdepthaiconsulting.com>',
       to: 'blake@bitdepthaiconsulting.com',
       replyTo: String(email).trim().toLowerCase(),
-      subject: `New Contact Inquiry - ${String(company).trim()}`,
+      subject: `${subjectPrefix} - ${String(company).trim()}`,
       html: `
-        <h2>New Contact Inquiry</h2>
+        <h2>${headingLabel}</h2>
         <p><strong>Name:</strong> ${safe.name}</p>
         <p><strong>Company:</strong> ${safe.company}</p>
         <p><strong>Email:</strong> ${safe.email}</p>

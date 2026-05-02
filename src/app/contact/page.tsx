@@ -58,7 +58,7 @@ export default function ContactPage() {
               short note describing what is going on. We respond inside one business day.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href="/ai-audit" className="btn-primary">
+              <Link href="/contact?topic=audit" className="btn-primary">
                 Book an AI Audit
               </Link>
             </div>

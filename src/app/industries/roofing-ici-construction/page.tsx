@@ -92,7 +92,7 @@ export default function RoofingIciConstructionPage() {
                 , which works alongside BitDepth on every COR engagement.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                <Link href="/ai-audit" className="btn-primary">
+                <Link href="/contact?topic=audit" className="btn-primary">
                   Book an AI Audit
                 </Link>
                 <Link href="/industries/cor-pathway" className="btn-outline">
@@ -186,7 +186,7 @@ export default function RoofingIciConstructionPage() {
               ICI contractors, that is compliance documentation or sub-contractor pre-qualification.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link href="/ai-audit" className="btn-primary">
+              <Link href="/contact?topic=audit" className="btn-primary">
                 Book an AI Audit
               </Link>
               <Link href="/contact" className="btn-outline">
