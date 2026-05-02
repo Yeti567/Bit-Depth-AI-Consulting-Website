@@ -100,7 +100,7 @@ export function ContactForm() {
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="mt-8 grid gap-4 rounded-md border border-[var(--color-border)] bg-white p-6 shadow-soft"
+      className="mt-8 grid gap-5 rounded-md border border-[var(--color-border)] bg-white p-6 shadow-soft sm:p-8"
     >
       {topicConfig ? (
         <div className="rounded border border-[var(--color-terracotta)] bg-[var(--color-offwhite)] px-4 py-3">
@@ -112,59 +112,66 @@ export function ContactForm() {
           </p>
         </div>
       ) : null}
-      <div>
-        <label htmlFor="contact-name" className="sr-only">
-          Full name
-        </label>
-        <input
-          id="contact-name"
-          type="text"
-          name="name"
-          autoComplete="name"
-          placeholder="Your full name"
-          required
-        />
-      </div>
 
-      <div>
-        <label htmlFor="contact-company" className="sr-only">
-          Company name
-        </label>
-        <input
-          id="contact-company"
-          type="text"
-          name="company"
-          autoComplete="organization"
-          placeholder="Your company name"
-          required
-        />
-      </div>
+      <div className="grid gap-5 sm:grid-cols-2">
+        <div>
+          <label htmlFor="contact-name" className="sr-only">
+            Full name
+          </label>
+          <input
+            id="contact-name"
+            type="text"
+            name="name"
+            autoComplete="name"
+            placeholder="Your full name"
+            required
+            className="w-full"
+          />
+        </div>
 
-      <div>
-        <label htmlFor="contact-email" className="sr-only">
-          Email address
-        </label>
-        <input
-          id="contact-email"
-          type="email"
-          name="email"
-          autoComplete="email"
-          placeholder="Your email address"
-          required
-        />
-      </div>
+        <div>
+          <label htmlFor="contact-company" className="sr-only">
+            Company name
+          </label>
+          <input
+            id="contact-company"
+            type="text"
+            name="company"
+            autoComplete="organization"
+            placeholder="Your company name"
+            required
+            className="w-full"
+          />
+        </div>
 
-      <div>
-        <label htmlFor="contact-phone" className="sr-only">
-          Phone number (optional)
-        </label>
-        <input
-          id="contact-phone"
-          type="tel"
-          name="phone"
-          autoComplete="tel"
-          placeholder="Phone number (optional)"
-        />
+        <div>
+          <label htmlFor="contact-email" className="sr-only">
+            Email address
+          </label>
+          <input
+            id="contact-email"
+            type="email"
+            name="email"
+            autoComplete="email"
+            placeholder="Your email address"
+            required
+            className="w-full"
+          />
+        </div>
+
+        <div>
+          <label htmlFor="contact-phone" className="sr-only">
+            Phone number (optional)
+          </label>
+          <input
+            id="contact-phone"
+            type="tel"
+            name="phone"
+            autoComplete="tel"
+            placeholder="Phone number (optional)"
+            className="w-full"
+          />
+        </div>
       </div>
 
       <div>
@@ -174,11 +181,12 @@ export function ContactForm() {
         <textarea
           id="contact-message"
           name="message"
-          rows={5}
+          rows={6}
           placeholder="What are you hoping AI could help you with?"
           required
           defaultValue={defaultMessage}
           key={defaultMessage}
+          className="w-full"
         />
       </div>
 
