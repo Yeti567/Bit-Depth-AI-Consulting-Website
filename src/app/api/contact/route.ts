@@ -4,7 +4,10 @@ import { Resend } from 'resend';
 export const runtime = 'nodejs';
 
 const TO_EMAIL = 'blake@bitdepthaiconsulting.com';
-const FROM_EMAIL = 'BitDepth AI <blake@bitdepthaiconsulting.com>';
+// Default From address. Override with the RESEND_FROM_EMAIL env var if you
+// want to send from a different verified address (e.g. while a new domain
+// is mid-verification, set it to "BitDepth AI <onboarding@resend.dev>").
+const DEFAULT_FROM_EMAIL = 'BitDepth AI <blake@bitdepthaiconsulting.com>';
 const BASE_SUBJECT = 'New Website Contact Form Submission';
 
 function escapeHtml(value: unknown): string {
@@ -77,8 +80,10 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     const label = topicLabel(topic);
     const subject = label ? `${BASE_SUBJECT} - ${label}` : BASE_SUBJECT;
 
+    const fromAddress = process.env.RESEND_FROM_EMAIL?.trim() || DEFAULT_FROM_EMAIL;
+
     const { error } = await resend.emails.send({
-      from: FROM_EMAIL,
+      from: fromAddress,
       to: TO_EMAIL,
       replyTo: trimmedEmail.toLowerCase(),
       subject,
