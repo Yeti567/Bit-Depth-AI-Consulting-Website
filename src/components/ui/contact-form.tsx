@@ -9,6 +9,7 @@ type ContactFormFields = {
   phone: string;
   message: string;
   topic: string;
+  website: string;
 };
 
 const TOPIC_DEFAULTS: Record<string, { label: string; message: string }> = {
@@ -49,7 +50,8 @@ export function ContactForm() {
       email: String(formData.get('email') ?? '').trim(),
       phone: String(formData.get('phone') ?? '').trim(),
       message: String(formData.get('message') ?? '').trim(),
-      topic
+      topic,
+      website: String(formData.get('website') ?? '')
     };
 
     try {
@@ -112,6 +114,29 @@ export function ContactForm() {
           </p>
         </div>
       ) : null}
+
+      {/* Honeypot. Real users never see or fill this. Bots crawling the DOM
+          will fill it and the server silently drops the submission. */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          left: '-10000px',
+          top: 'auto',
+          width: '1px',
+          height: '1px',
+          overflow: 'hidden'
+        }}
+      >
+        <label htmlFor="contact-website">Leave this field empty</label>
+        <input
+          id="contact-website"
+          type="text"
+          name="website"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div>

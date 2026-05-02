@@ -1,6 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
+export const runtime = 'nodejs';
+
+const TO_EMAIL = 'blake@bitdepthaiconsulting.com';
+const FROM_EMAIL = 'BitDepth AI <blake@bitdepthaiconsulting.com>';
+const BASE_SUBJECT = 'New Website Contact Form Submission';
+
 function escapeHtml(value: unknown): string {
   return String(value ?? '')
     .replace(/&/g, '&amp;')
@@ -10,10 +16,24 @@ function escapeHtml(value: unknown): string {
     .replace(/'/g, '&#39;');
 }
 
+function topicLabel(topic: unknown): string | null {
+  if (typeof topic !== 'string') return null;
+  const map: Record<string, string> = {
+    audit: 'AI Opportunity Audit booking'
+  };
+  return map[topic] ?? null;
+}
+
 export async function POST(request: NextRequest): Promise<NextResponse> {
   try {
     const body = await request.json();
-    const { name, company, email, phone, message, topic } = body;
+    const { name, company, email, phone, message, topic, website } = body ?? {};
+
+    // Honeypot. Real users never see or fill the "website" field.
+    // If it has a value, silently accept and drop the submission.
+    if (typeof website === 'string' && website.trim().length > 0) {
+      return NextResponse.json({ success: true });
+    }
 
     if (!name || !company || !email || !message) {
       return NextResponse.json(
@@ -23,7 +43,8 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(String(email).trim())) {
+    const trimmedEmail = String(email).trim();
+    if (!emailRegex.test(trimmedEmail)) {
       return NextResponse.json(
         { success: false, error: 'Please enter a valid email address.' },
         { status: 400 }
@@ -31,8 +52,15 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     }
 
     if (!process.env.RESEND_API_KEY) {
+      console.error('Contact form: RESEND_API_KEY is not set in this environment.');
       return NextResponse.json(
-        { success: false, error: 'Email delivery is not configured.' },
+        {
+          success: false,
+          error:
+            'Email delivery is not configured on the server. Please contact us directly at ' +
+            TO_EMAIL +
+            '.'
+        },
         { status: 503 }
       );
     }
@@ -41,36 +69,56 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     const safe = {
       name: escapeHtml(name),
       company: escapeHtml(company),
-      email: escapeHtml(email),
+      email: escapeHtml(trimmedEmail),
       phone: escapeHtml(phone),
-      message: escapeHtml(message).replace(/\n/g, '<br />'),
+      message: escapeHtml(message).replace(/\n/g, '<br />')
     };
 
-    const isAuditBooking = topic === 'audit';
-    const subjectPrefix = isAuditBooking ? 'AI AUDIT BOOKING' : 'New Contact Inquiry';
-    const headingLabel = isAuditBooking ? 'AI Audit Booking Request' : 'New Contact Inquiry';
+    const label = topicLabel(topic);
+    const subject = label ? `${BASE_SUBJECT} - ${label}` : BASE_SUBJECT;
 
-    await resend.emails.send({
-      from: 'BitDepth AI <noreply@bitdepthaiconsulting.com>',
-      to: 'blake@bitdepthaiconsulting.com',
-      replyTo: String(email).trim().toLowerCase(),
-      subject: `${subjectPrefix} - ${String(company).trim()}`,
+    const { error } = await resend.emails.send({
+      from: FROM_EMAIL,
+      to: TO_EMAIL,
+      replyTo: trimmedEmail.toLowerCase(),
+      subject,
       html: `
-        <h2>${headingLabel}</h2>
+        <h2>${escapeHtml(BASE_SUBJECT)}</h2>
+        ${label ? `<p><strong>Topic:</strong> ${escapeHtml(label)}</p>` : ''}
         <p><strong>Name:</strong> ${safe.name}</p>
         <p><strong>Company:</strong> ${safe.company}</p>
         <p><strong>Email:</strong> ${safe.email}</p>
         ${phone ? `<p><strong>Phone:</strong> ${safe.phone}</p>` : ''}
         <p><strong>Message:</strong></p>
         <p>${safe.message}</p>
-      `,
+      `
     });
 
+    if (error) {
+      console.error('Contact form: Resend send failed', error);
+      return NextResponse.json(
+        {
+          success: false,
+          error:
+            'We could not send your message right now. Please try again in a few minutes, or email ' +
+            TO_EMAIL +
+            ' directly.'
+        },
+        { status: 502 }
+      );
+    }
+
     return NextResponse.json({ success: true });
-  } catch (error) {
-    console.error('Contact form submission error:', error);
+  } catch (err) {
+    console.error('Contact form: unexpected error', err);
     return NextResponse.json(
-      { success: false, error: 'We could not send your message right now. Please try again shortly.' },
+      {
+        success: false,
+        error:
+          'Something went wrong on our end. Please try again, or email ' +
+          TO_EMAIL +
+          ' directly.'
+      },
       { status: 500 }
     );
   }
