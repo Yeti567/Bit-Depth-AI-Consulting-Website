@@ -6,7 +6,7 @@ import { generateStaticParams } from '@/app/resources/[slug]/page';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://bitdepthaiconsulting.com';
-  const lastModified = '2026-05-01';
+  const lastModified = '2026-05-05';
 
   const retiredResourceSlugs = new Set([
     'dead-in-the-field-why-predictive-maintenance-cant-wait',
