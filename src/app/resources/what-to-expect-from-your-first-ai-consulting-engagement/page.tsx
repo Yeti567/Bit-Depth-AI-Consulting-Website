@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { ArticleHeader, ArticleBody, ArticleCTA } from '@/components/ui/article-layout';
+import { AuthorBox } from '@/components/ui/article-byline';
 import { buildArticleSchema } from '@/lib/schema';
 import { BreadcrumbSchema, buildResourceBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 
@@ -98,6 +99,8 @@ export default function WhatToExpectPage() {
         imageSrc="/images/resources-article-3.webp.webp"
         imageAlt="Consultant and business owner shaking hands across a desk with a roadmap and laptop visible"
         lead="If you have never worked with an AI consultant before, you probably have questions. What does the process actually look like? Who needs to be involved? What will you have at the end? And most importantly, will it be worth it? This article walks you through exactly what a BitDepth engagement looks like, from first call to final deliverable. No surprises. No fine print."
+        publishedAt="2026-04-05"
+        updatedAt="2026-05-06"
       />
 
       <ArticleBody>
@@ -130,6 +133,7 @@ export default function WhatToExpectPage() {
             was worth it.
           </p>
         </ScrollReveal>
+        <AuthorBox />
       </ArticleBody>
 
       <ArticleCTA

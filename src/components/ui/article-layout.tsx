@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { ArticleByline } from '@/components/ui/article-byline';
 
 interface ArticleHeaderProps {
   category: string;
@@ -10,6 +11,8 @@ interface ArticleHeaderProps {
   imageSrc: string;
   imageAlt: string;
   lead?: string;
+  publishedAt?: string;
+  updatedAt?: string;
 }
 
 export function ArticleHeader({
@@ -19,7 +22,9 @@ export function ArticleHeader({
   breadcrumbLabel,
   imageSrc,
   imageAlt,
-  lead
+  lead,
+  publishedAt,
+  updatedAt
 }: ArticleHeaderProps) {
   return (
     <section className="section-offwhite section-space">
@@ -57,6 +62,8 @@ export function ArticleHeader({
           </p>
 
           <h1 className="mt-6">{title}</h1>
+
+          {publishedAt ? <ArticleByline publishedAt={publishedAt} updatedAt={updatedAt} /> : null}
 
           {lead ? (
             <p className="mt-6 text-lg text-[var(--color-slate)]">{lead}</p>

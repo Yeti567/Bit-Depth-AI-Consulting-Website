@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { ArticleHeader, ArticleBody, ArticleCTA } from '@/components/ui/article-layout';
+import { AuthorBox } from '@/components/ui/article-byline';
 import { buildArticleSchema } from '@/lib/schema';
 import { BreadcrumbSchema, buildResourceBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 
@@ -92,6 +93,8 @@ export default function YouDontHaveAnAIProblemPage() {
         breadcrumbLabel="You don't have an AI problem"
         imageSrc="/images/resources-article-1.webp.webp"
         imageAlt="Tangled cables connecting multiple disconnected devices, representing fragmented business systems"
+        publishedAt="2026-04-05"
+        updatedAt="2026-05-06"
       />
 
       <ArticleBody>
@@ -164,6 +167,7 @@ export default function YouDontHaveAnAIProblemPage() {
             to fix first.
           </p>
         </ScrollReveal>
+        <AuthorBox />
       </ArticleBody>
 
       <ArticleCTA

@@ -22,7 +22,7 @@ const builds = [
   {
     title: 'Document drafting from precedents, with full audit trails',
     description:
-      'Drafts pulled from your firm’s own precedent library, with a full record of which clauses were sourced where.'
+      "Drafts pulled from your firm's own precedent library, with a full record of which clauses were sourced where."
   },
   {
     title: 'Trust-accounting-aware billing workflows',

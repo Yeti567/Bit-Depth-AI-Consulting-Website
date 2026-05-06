@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { ArticleHeader, ArticleBody, ArticleCTA } from '@/components/ui/article-layout';
+import { AuthorBox } from '@/components/ui/article-byline';
 import { buildArticleSchema } from '@/lib/schema';
 import { BreadcrumbSchema, buildResourceBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 
@@ -99,6 +100,8 @@ export default function FiveSignsReadyForAIPage() {
         imageSrc="/images/resources-article-2.webp.webp"
         imageAlt="Business owner holding a checklist clipboard in a modern office"
         lead="A lot of businesses want to implement AI. Fewer are actually ready for it. That gap, between wanting AI and being ready for it, is where most first attempts fail. Work through these five signs honestly. If you check all five, you are ready to move. If you are missing one or two, you will know exactly what to fix first."
+        publishedAt="2026-04-05"
+        updatedAt="2026-05-06"
       />
 
       <ArticleBody>
@@ -117,6 +120,7 @@ export default function FiveSignsReadyForAIPage() {
             ))}
           </ol>
         </ScrollReveal>
+        <AuthorBox />
       </ArticleBody>
 
       <ArticleCTA

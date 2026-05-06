@@ -41,7 +41,7 @@ const painPoints = [
   {
     title: 'Calls go to voicemail and never come back.',
     description:
-      'Industry data puts missed-call rates at 30 to 50 percent in residential trades. Every missed call is a competitor’s win.'
+      "Industry data puts missed-call rates at 30 to 50 percent in residential trades. Every missed call is a competitor's win."
   },
   {
     title: 'Estimates take days.',

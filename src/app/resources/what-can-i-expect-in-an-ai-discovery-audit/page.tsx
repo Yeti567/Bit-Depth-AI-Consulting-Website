@@ -4,6 +4,7 @@ import Script from 'next/script';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { ArticleHeader, ArticleBody, ArticleCTA } from '@/components/ui/article-layout';
+import { AuthorBox } from '@/components/ui/article-byline';
 import { buildArticleSchema } from '@/lib/schema';
 import { BreadcrumbSchema, buildResourceBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 
@@ -159,6 +160,8 @@ export default function AIDiscoveryAuditArticlePage() {
         imageSrc="/images/ai-discovery-audit-featured.webp.webp"
         imageAlt="A consultant presenting AI workflow data to a business team in a modern boardroom"
         lead="An AI discovery audit is one of the smartest first steps a business can take before spending a single dollar on AI tools. This article walks you through what to expect, who gets involved, and what you will walk away with."
+        publishedAt="2026-04-05"
+        updatedAt="2026-05-06"
       />
 
       <ArticleBody>
@@ -368,6 +371,7 @@ export default function AIDiscoveryAuditArticlePage() {
             ))}
           </div>
         </ScrollReveal>
+        <AuthorBox />
       </ArticleBody>
 
       <ArticleCTA

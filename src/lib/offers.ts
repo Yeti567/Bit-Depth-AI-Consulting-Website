@@ -52,6 +52,15 @@ export const OFFERS = {
     bestFor: 'Trades and field-service businesses handling inbound voice and web leads',
     primaryCta: 'Book a fit check',
     href: '/services/ai-booking-agent'
+  },
+  aiImplementation: {
+    name: 'AI Implementation',
+    price: 'From $12,000',
+    priceNumeric: 12000,
+    currency: 'CAD',
+    bestFor: 'Companies with a completed audit ready to build the recommended automations',
+    primaryCta: 'Book a discovery call',
+    href: '/services/ai-implementation'
   }
 } as const;
 

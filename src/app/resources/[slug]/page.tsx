@@ -4,6 +4,7 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import Script from 'next/script';
 import { ArticleHeader, ArticleBody, ArticleCTA } from '@/components/ui/article-layout';
+import { AuthorBox } from '@/components/ui/article-byline';
 import { buildArticleSchema } from '@/lib/schema';
 import { BreadcrumbSchema, buildResourceBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 
@@ -525,6 +526,8 @@ export default async function ResourceArticlePage({ params }: { params: Promise<
         imageSrc={article.image}
         imageAlt={article.imageAlt}
         lead={article.description}
+        publishedAt="2026-04-05"
+        updatedAt="2026-05-06"
       />
 
       <ArticleBody>
@@ -565,6 +568,7 @@ export default async function ResourceArticlePage({ params }: { params: Promise<
             })}
           </article>
         </ScrollReveal>
+        <AuthorBox />
       </ArticleBody>
 
       <ArticleCTA
