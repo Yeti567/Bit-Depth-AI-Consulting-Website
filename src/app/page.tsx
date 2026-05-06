@@ -7,6 +7,7 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { FAQSchemaScript } from '@/components/ui/faq-schema-script';
 import { CaseStudies } from '@/components/ui/case-studies';
 import { LeadMagnet } from '@/components/ui/lead-magnet';
+import { TrustAndControl } from '@/components/sections/trust-and-control';
 import { buildOrganizationSchema, buildWebSiteSchema, buildLocalBusinessSchema } from '@/lib/schema';
 import Script from 'next/script';
 
@@ -408,6 +409,9 @@ export default function HomePage() {
           </ScrollReveal>
         </div>
       </section>
+
+      {/* 7b. Trust and control */}
+      <TrustAndControl />
 
       {/* 8. FAQ */}
       <section className="section-stone section-space section-rule">

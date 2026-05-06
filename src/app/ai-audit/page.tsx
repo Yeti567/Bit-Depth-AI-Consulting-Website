@@ -41,13 +41,11 @@ export const metadata: Metadata = {
 };
 
 const deliverables = [
-  'A complete map of your current systems and where the gaps are.',
-  'An AI Readiness Scorecard across five operational pillars.',
-  'A prioritized opportunity list, ranked by impact and feasibility.',
-  'ROI estimates for your top 3 to 5 use cases, so you know the numbers before you commit.',
-  'A 90-day implementation roadmap you can act on immediately.',
-  'A set of quick wins, lower-cost implementations that pay for themselves in the near term.',
-  'Honest advice, including if AI is not the right move for your business right now.'
+  'A written AI Readiness Scorecard across five pillars: Data Quality, Process Clarity, Technology Stack, Team Readiness, and Strategic Alignment.',
+  'An Opportunity Matrix mapping every identified opportunity into Quick Wins, Big Swings, Nice to Haves, and Deprioritize.',
+  'Five to ten quick wins ranked by effort versus impact, with rough ROI for each.',
+  'A 90-day implementation roadmap if you choose to proceed.',
+  'A clear, vendor-neutral recommendation. We do not sell software. We tell you what to use and why.'
 ];
 
 interface Tier {
@@ -207,7 +205,7 @@ export default function AIAuditPage() {
       <section className="section-stone section-space section-rule">
         <div className="container-shell">
           <ScrollReveal className="max-w-2xl">
-            <p className="eyebrow">What you get</p>
+            <p className="eyebrow">What you walk away with</p>
             <h2 className="mt-6">By the end of the audit.</h2>
             <p className="mt-5 text-[var(--color-slate)]">
               Every audit produces the same set of deliverables. The depth scales with the tier.
@@ -233,6 +231,18 @@ export default function AIAuditPage() {
                 className="h-auto w-full object-cover"
               />
             </div>
+          </ScrollReveal>
+          <ScrollReveal className="mt-10 mx-auto max-w-3xl">
+            <p className="text-[var(--color-slate)]">
+              Wondering how we actually build the automations once the audit is done? See{' '}
+              <Link
+                href="/how-we-build"
+                className="font-semibold text-[var(--color-cyan)] hover:text-[var(--color-cyan-dark)]"
+              >
+                How we build
+              </Link>{' '}
+              for plain-English answers on safety, control, testing, and ongoing support.
+            </p>
           </ScrollReveal>
         </div>
       </section>

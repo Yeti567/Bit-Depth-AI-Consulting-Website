@@ -9,6 +9,7 @@ export const navigation: NavItem[] = [
     href: '/services',
     children: [
       { label: 'AI Opportunity Audit', href: '/services/ai-audit' },
+      { label: 'How We Build', href: '/how-we-build' },
       { label: 'Missed Call Text Back', href: '/services/missed-call-text-back' },
       { label: 'AI Implementation', href: '/services/ai-implementation' },
       { label: 'Workflow Automation', href: '/services/workflow-automation' },

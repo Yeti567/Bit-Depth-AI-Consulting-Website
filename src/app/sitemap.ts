@@ -6,7 +6,7 @@ import { generateStaticParams } from '@/app/resources/[slug]/page';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://bitdepthaiconsulting.com';
-  const lastModified = '2026-05-05';
+  const lastModified = '2026-05-06';
 
   const retiredResourceSlugs = new Set([
     'dead-in-the-field-why-predictive-maintenance-cant-wait',
@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     [
       { url: baseUrl, changeFrequency: 'weekly', priority: 1.0 },
       { url: `${baseUrl}/ai-audit`, changeFrequency: 'weekly', priority: 0.95 },
+      { url: `${baseUrl}/how-we-build`, changeFrequency: 'monthly', priority: 0.8 },
       { url: `${baseUrl}/services`, changeFrequency: 'weekly', priority: 0.9 },
       { url: `${baseUrl}/services/ai-audit`, changeFrequency: 'monthly', priority: 0.85 },
       { url: `${baseUrl}/services/missed-call-text-back`, changeFrequency: 'monthly', priority: 0.85 },
