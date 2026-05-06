@@ -7,7 +7,7 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { BookingAgentHowItWorks } from '@/components/sections/booking-agent-how-it-works';
 import { buildServiceSchema } from '@/lib/schema';
 
-const PAGE_URL = 'https://bitdepthaiconsulting.com/ai-booking-agent';
+const PAGE_URL = 'https://bitdepthaiconsulting.com/services/ai-booking-agent';
 const CALENDLY_URL = 'https://calendly.com/blake-bitdepthaiconsulting/30min';
 
 export const metadata: Metadata = {
@@ -50,19 +50,13 @@ const limits = [
   'It will not lock you in. Your data, your phone number, your customer records stay yours.'
 ];
 
-const websiteChatbotIncludes = [
-  'Embedded on your existing website',
-  'Trained on approved company knowledge',
-  'Lead capture and basic appointment booking',
-  'Monthly tuning and reporting'
-];
-
-const phoneAgentIncludes = [
+const bookingAgentIncludes = [
   'Connects to your existing phone number through call forwarding',
   'Voice answering for missed and after-hours calls',
+  'Trained on approved company knowledge: services, pricing rules, hours, and policies',
   'Appointment booking written to your calendar or dispatch system',
-  'Weekly reporting and ongoing tuning',
-  'Monthly cost depends on call volume, integrations, and rules'
+  'Lead capture and qualification handed to your team with the full conversation attached',
+  'Weekly reporting and ongoing tuning included'
 ];
 
 export default function AiBookingAgentPage() {
@@ -99,7 +93,7 @@ export default function AiBookingAgentPage() {
               >
                 Book a setup call
               </Link>
-              <Link href="/profit-leak-review" className="btn-outline">
+              <Link href="/services/profit-leak-review" className="btn-outline">
                 Or start with a Profit Leak Review
               </Link>
             </div>
@@ -191,57 +185,33 @@ export default function AiBookingAgentPage() {
 
       {/* Pricing */}
       <section className="section-stone section-space section-rule">
-        <div className="container-shell">
-          <ScrollReveal className="max-w-2xl">
+        <div className="container-shell max-w-3xl">
+          <ScrollReveal>
             <p className="eyebrow">Pricing</p>
             <h2 className="mt-6">Pricing.</h2>
-            <p className="mt-5 text-[var(--color-charcoal)]">
-              Pricing depends on call volume, booking rules, integrations, and reporting
-              requirements. Most clients land in this range:
+            <p className="mt-5 font-serif text-3xl text-[var(--color-navy)] tabular">
+              From $299 per month
+            </p>
+            <p className="mt-3 text-[var(--color-charcoal)]">
+              Flat monthly. No call-volume surprises. Setup, training, and the first thirty days
+              of post-launch monitoring are included.
             </p>
           </ScrollReveal>
-          <div className="mt-12 grid gap-10 md:grid-cols-2">
-            <ScrollReveal>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-slate)]">
-                Website chatbot starter
-              </p>
-              <p className="mt-3 font-serif text-2xl text-[var(--color-navy)] tabular">
-                From $600 setup, $250 per month
-              </p>
-              <ul className="mt-5 space-y-3">
-                {websiteChatbotIncludes.map((line) => (
-                  <li key={line} className="flex gap-3 text-[var(--color-charcoal)]">
-                    <Check
-                      className="mt-1 h-4 w-4 shrink-0 text-[var(--color-terracotta)]"
-                      aria-hidden="true"
-                    />
-                    <span>{line}</span>
-                  </li>
-                ))}
-              </ul>
-            </ScrollReveal>
-            <ScrollReveal index={1}>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-slate)]">
-                Phone-based AI booking agent
-              </p>
-              <p className="mt-3 font-serif text-2xl text-[var(--color-navy)] tabular">
-                From $1,500 setup, varies monthly
-              </p>
-              <ul className="mt-5 space-y-3">
-                {phoneAgentIncludes.map((line) => (
-                  <li key={line} className="flex gap-3 text-[var(--color-charcoal)]">
-                    <Check
-                      className="mt-1 h-4 w-4 shrink-0 text-[var(--color-terracotta)]"
-                      aria-hidden="true"
-                    />
-                    <span>{line}</span>
-                  </li>
-                ))}
-              </ul>
-            </ScrollReveal>
-          </div>
-          <ScrollReveal index={2} className="mt-10 max-w-3xl">
-            <p className="text-[var(--color-slate)]">
+          <ScrollReveal index={1} className="mt-8">
+            <ul className="space-y-3">
+              {bookingAgentIncludes.map((line) => (
+                <li key={line} className="flex gap-3 text-[var(--color-charcoal)]">
+                  <Check
+                    className="mt-1 h-4 w-4 shrink-0 text-[var(--color-terracotta)]"
+                    aria-hidden="true"
+                  />
+                  <span>{line}</span>
+                </li>
+              ))}
+            </ul>
+          </ScrollReveal>
+          <ScrollReveal index={2} className="mt-8">
+            <p className="text-sm text-[var(--color-slate)]">
               Every build includes a thirty-day post-launch monitoring period. We do not ship
               and disappear.
             </p>
@@ -311,7 +281,7 @@ export default function AiBookingAgentPage() {
               >
                 Book a setup call
               </Link>
-              <Link href="/profit-leak-review" className="btn-outline">
+              <Link href="/services/profit-leak-review" className="btn-outline">
                 Start with a Profit Leak Review for $250
               </Link>
             </div>

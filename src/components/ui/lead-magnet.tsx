@@ -80,7 +80,7 @@ export function LeadMagnet({ source }: LeadMagnetProps) {
         <p className="eyebrow">Free download</p>
         <h2 className="mt-6 text-[var(--color-navy)]">The AI readiness checklist.</h2>
         <p className="mt-5 max-w-2xl text-[var(--color-slate)]">
-          A practical 20-point checklist for Canadian business owners evaluating whether AI will
+          A practical 30-point checklist for Canadian business owners evaluating whether AI will
           actually save them time and money. No fluff, no sales pitch.
         </p>
       </ScrollReveal>

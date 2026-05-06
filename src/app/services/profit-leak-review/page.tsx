@@ -6,7 +6,7 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { buildServiceSchema } from '@/lib/schema';
 
-const PAGE_URL = 'https://bitdepthaiconsulting.com/profit-leak-review';
+const PAGE_URL = 'https://bitdepthaiconsulting.com/services/profit-leak-review';
 const BOOKING_URL = '/contact?topic=profit-leak-review';
 
 export const metadata: Metadata = {

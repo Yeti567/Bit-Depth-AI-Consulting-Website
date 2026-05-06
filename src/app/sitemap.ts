@@ -8,17 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://bitdepthaiconsulting.com';
   const lastModified = '2026-05-06';
 
-  const retiredResourceSlugs = new Set([
-    'dead-in-the-field-why-predictive-maintenance-cant-wait',
-    'digital-twin-technology-how-smart-manufacturers-are-pulling-ahead',
-    'see-every-defect-ai-computer-vision-quality-control',
-    'how-to-evaluate-ai-use-cases-in-industrial-operations',
-    'what-vendor-neutral-ai-consulting-actually-means',
-    'building-an-ai-roadmap-for-canadian-mid-market-companies'
-  ]);
-
   const resourceEntries = generateStaticParams()
-    .filter(({ slug }) => !retiredResourceSlugs.has(slug))
     .map(({ slug }) => ({
       url: `${baseUrl}/resources/${slug}`,
       lastModified,
@@ -29,16 +19,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries: MetadataRoute.Sitemap = (
     [
       { url: baseUrl, changeFrequency: 'weekly', priority: 1.0 },
-      { url: `${baseUrl}/ai-booking-agent`, changeFrequency: 'monthly', priority: 0.9 },
-      { url: `${baseUrl}/profit-leak-review`, changeFrequency: 'monthly', priority: 0.9 },
-      { url: `${baseUrl}/ai-audit`, changeFrequency: 'weekly', priority: 0.85 },
-      { url: `${baseUrl}/security-and-data`, changeFrequency: 'yearly', priority: 0.6 },
       { url: `${baseUrl}/services`, changeFrequency: 'weekly', priority: 0.9 },
-      { url: `${baseUrl}/services/ai-audit`, changeFrequency: 'monthly', priority: 0.85 },
+      { url: `${baseUrl}/services/ai-booking-agent`, changeFrequency: 'monthly', priority: 0.9 },
+      { url: `${baseUrl}/services/profit-leak-review`, changeFrequency: 'monthly', priority: 0.9 },
+      { url: `${baseUrl}/services/ai-audit`, changeFrequency: 'weekly', priority: 0.95 },
       { url: `${baseUrl}/services/missed-call-text-back`, changeFrequency: 'monthly', priority: 0.85 },
       { url: `${baseUrl}/services/ai-implementation`, changeFrequency: 'monthly', priority: 0.8 },
       { url: `${baseUrl}/services/workflow-automation`, changeFrequency: 'monthly', priority: 0.8 },
       { url: `${baseUrl}/services/custom-ai-workers`, changeFrequency: 'monthly', priority: 0.8 },
+      { url: `${baseUrl}/security-and-data`, changeFrequency: 'yearly', priority: 0.6 },
       { url: `${baseUrl}/industries`, changeFrequency: 'monthly', priority: 0.8 },
       { url: `${baseUrl}/industries/hvac-plumbing`, changeFrequency: 'monthly', priority: 0.8 },
       { url: `${baseUrl}/industries/electrical`, changeFrequency: 'monthly', priority: 0.8 },

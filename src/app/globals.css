@@ -25,7 +25,7 @@
 
   color-scheme: light;
 
-  /* Assessment app surface — scoped, intentionally distinct */
+  /* Assessment app surface, scoped, intentionally distinct */
   --bg-primary: #0B1426;
   --bg-secondary: #0D1B2A;
   --bg-card: rgba(13, 27, 42, 0.7);
@@ -129,7 +129,7 @@ input::placeholder, textarea::placeholder {
 }
 
 @layer components {
-  /* Assessment app — keeps its own dark UI */
+  /* Assessment app, keeps its own dark UI */
   .assessment-bg {
     position: relative;
     background-color: #0B1426;
@@ -259,7 +259,7 @@ input::placeholder, textarea::placeholder {
     color: rgba(255, 255, 255, 0.7);
   }
 
-  /* Legacy pill — kept for any inner pages that still reference it,
+  /* Legacy pill, kept for any inner pages that still reference it,
      restyled to match new system rather than the old cyan pill. */
   .eyebrow-pill {
     display: inline-flex;

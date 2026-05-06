@@ -6,9 +6,14 @@ const nextConfig = {
   allowedDevOrigins: ['127.0.0.1'],
   async redirects() {
     return [
-      // Retired AI Assessment — folded into the audit
-      { source: '/ai-readiness-assessment', destination: '/ai-audit', permanent: true },
-      { source: '/ai-assessment', destination: '/ai-audit', permanent: true },
+      // Retired root-level pages, consolidated under /services/*
+      { source: '/ai-audit', destination: '/services/ai-audit', permanent: true },
+      { source: '/ai-booking-agent', destination: '/services/ai-booking-agent', permanent: true },
+      { source: '/profit-leak-review', destination: '/services/profit-leak-review', permanent: true },
+
+      // Retired AI Assessment, folded into the audit
+      { source: '/ai-readiness-assessment', destination: '/services/ai-audit', permanent: true },
+      { source: '/ai-assessment', destination: '/services/ai-audit', permanent: true },
 
       // Old strategy/training surface → AI Implementation
       { source: '/ai-strategy', destination: '/services/ai-implementation', permanent: true },

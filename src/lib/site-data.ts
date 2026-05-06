@@ -8,9 +8,9 @@ export const navigation: NavItem[] = [
     label: 'Services',
     href: '/services',
     children: [
-      { label: 'AI Booking Agent', href: '/ai-booking-agent' },
-      { label: 'Profit Leak Detection Review', href: '/profit-leak-review' },
-      { label: 'AI Opportunity Audit', href: '/ai-audit' },
+      { label: 'AI Booking Agent', href: '/services/ai-booking-agent' },
+      { label: 'Profit Leak Detection Review', href: '/services/profit-leak-review' },
+      { label: 'AI Opportunity Audit', href: '/services/ai-audit' },
       { label: 'Missed Call Text Back', href: '/services/missed-call-text-back' },
       { label: 'AI Implementation', href: '/services/ai-implementation' },
       { label: 'Workflow Automation', href: '/services/workflow-automation' },

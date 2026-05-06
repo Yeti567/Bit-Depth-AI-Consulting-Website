@@ -85,6 +85,27 @@ export default function ServiceAiAuditPage() {
         </div>
       </section>
 
+      {/* Audit Credit Guarantee */}
+      <section className="section-offwhite section-rule" aria-labelledby="audit-credit-guarantee">
+        <div className="container-shell max-w-3xl py-12 md:py-16">
+          <ScrollReveal>
+            <p className="eyebrow">Risk reversal</p>
+            <h2
+              id="audit-credit-guarantee"
+              className="mt-4 font-serif text-2xl leading-snug text-[var(--color-navy)] sm:text-3xl"
+            >
+              The Audit Credit Guarantee.
+            </h2>
+            <p className="mt-5 text-[var(--color-charcoal)]">
+              The AI Opportunity Audit is $5,000 CAD. If you move into implementation with us
+              within 90 days, the full $5,000 is credited against the implementation fee. You
+              either get a roadmap you can hand to any vendor, or you get the audit free as part
+              of building it.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* What is included */}
       <section className="section-stone section-space section-rule">
         <div className="container-shell max-w-3xl">

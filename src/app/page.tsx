@@ -176,10 +176,10 @@ export default function HomePage() {
               when your team is busy, after-hours, or out on the job.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href="/ai-booking-agent" className="btn-primary">
+              <Link href="/services/ai-booking-agent" className="btn-primary">
                 Recover Missed Calls
               </Link>
-              <Link href="/profit-leak-review" className="btn-outline">
+              <Link href="/services/profit-leak-review" className="btn-outline">
                 Book a Profit Leak Review
               </Link>
             </div>

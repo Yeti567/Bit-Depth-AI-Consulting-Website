@@ -4,7 +4,7 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 export function CtaBanner({
   title,
   description,
-  primaryHref = '/ai-audit',
+  primaryHref = '/services/ai-audit',
   primaryLabel = 'Book Your AI Audit',
   secondaryHref,
   secondaryLabel

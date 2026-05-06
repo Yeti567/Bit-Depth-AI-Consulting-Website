@@ -76,7 +76,7 @@ export function BookingAgentHowItWorks({
         </ol>
         {showCta ? (
           <ScrollReveal index={6} className="mt-12">
-            <Link href="/ai-booking-agent" className="btn-primary">
+            <Link href="/services/ai-booking-agent" className="btn-primary">
               See pricing and setup
             </Link>
           </ScrollReveal>

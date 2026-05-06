@@ -39,13 +39,13 @@ export function ProfitLeakBlock() {
           </ul>
         </ScrollReveal>
         <ScrollReveal index={2} className="mt-9">
-          <Link href="/profit-leak-review" className="btn-primary">
+          <Link href="/services/profit-leak-review" className="btn-primary">
             Book a Profit Leak Review
           </Link>
           <p className="mt-4 text-sm text-[var(--color-slate)]">
             Or{' '}
             <Link
-              href="/ai-audit"
+              href="/services/ai-audit"
               className="font-semibold text-[var(--color-terracotta)] hover:text-[var(--color-terracotta-dark)]"
             >
               learn about the full AI Opportunity Audit

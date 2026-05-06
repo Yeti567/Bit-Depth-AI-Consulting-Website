@@ -369,7 +369,7 @@ export default function AIDiscoveryAuditArticlePage() {
         eyebrow="Ready to find out"
         title="What AI can actually do for your business."
         body="An AI discovery audit is not about technology for its own sake. It is about finding out exactly where your business is losing time and money, and putting a clear, prioritized plan in place to fix it."
-        primaryHref="/ai-audit"
+        primaryHref="/services/ai-audit"
         primaryLabel="Book an AI Audit"
       />
     </PageShell>
