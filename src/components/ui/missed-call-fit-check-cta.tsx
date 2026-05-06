@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const FIT_CHECK_CALENDLY_URL =
-  'https://calendly.com/blake-bitdepthaiconsulting/30min';
+  'https://calendly.com/blake-bitdepthaiconsulting/15min';
 
 interface MissedCallFitCheckCtaProps {
   label?: string;

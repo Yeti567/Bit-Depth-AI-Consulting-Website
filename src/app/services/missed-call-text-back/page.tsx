@@ -164,16 +164,16 @@ const offerStack = [
     body: 'We start with a 60-minute working session. We learn your service categories, your dispatch logic, your pricing rules, your hours, your competitor talking points, your brand voice, and the things you do not want the system to say. The voice and SMS scripts are written from that session, then reviewed with you before anything goes live.'
   },
   {
-    name: 'Voice AI and SMS recovery flow',
-    body: 'Calls answered when your team cannot pick up. Auto-text fires within five seconds of any missed call. After-hours uses a different script. Storm mode and emergency triggers configurable per trade.'
+    name: 'Voice agent and 5-second auto-text deployed and tested in your business',
+    body: 'We stand up the voice and SMS agents on your business number, run live test calls together, and certify the after-hours script and storm-mode triggers before anything points at real customers.'
   },
   {
-    name: 'Canadian carrier registration and compliance setup',
-    body: 'A2P 10DLC sender ID, brand and use-case verification, CASL-compliant opt-out language, and PIPEDA-aligned data handling. We do the paperwork.'
+    name: 'Carrier registration paperwork submitted and approved on your behalf',
+    body: 'A2P 10DLC application, brand and use-case verification, and CASL-compliant opt-out language filed with the major Canadian carriers. You sign one form. We handle the rest of the back-and-forth until the registration is approved.'
   },
   {
-    name: 'CRM or scheduler integration',
-    body: 'Direct connectors to Jobber, ServiceTitan, Housecall Pro, FieldEdge, Kickserv, Workiz, and most modern CRMs. Webhook or Zapier connections to anything else with an API. Confirmed during the fit check before you sign.'
+    name: 'CRM or scheduler integration built, tested, and documented',
+    body: 'We connect the system to your existing scheduler or CRM, send live test leads through it, and hand you a one-page integration map showing exactly where each captured field lands.'
   },
   {
     name: 'Trade-specific configuration',
@@ -463,122 +463,6 @@ export default function MissedCallTextBackPage() {
         </div>
       </section>
 
-      {/* Under the hood */}
-      <section className="section-offwhite section-space section-rule">
-        <div className="container-shell">
-          <ScrollReveal className="max-w-2xl">
-            <p className="eyebrow">The honest version, for people who want to know what they are buying</p>
-            <h2 className="mt-6">The system is four layers, all of which we configure for your business.</h2>
-          </ScrollReveal>
-          <div className="mt-10 grid gap-8 md:grid-cols-2">
-            {layers.map((layer, index) => (
-              <ScrollReveal key={layer.title} index={index} className="max-w-xl">
-                <p className="font-serif text-xl text-[var(--color-navy)]">{layer.title}</p>
-                <p className="mt-3 text-[var(--color-charcoal)]">{layer.body}</p>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Compliance */}
-      <section className="section-offwhite section-space section-rule">
-        <div className="container-shell max-w-3xl">
-          <ScrollReveal>
-            <p className="eyebrow">The legal stuff, translated</p>
-            <h2 className="mt-6">Why Canadian-built matters.</h2>
-            <p className="mt-5 text-[var(--color-slate)]">
-              Most missed-call recovery products on the market are built for the US market. They
-              work fine in Texas and break quietly at the Canadian border. Here is what you
-              actually need to know.
-            </p>
-          </ScrollReveal>
-          <ul className="mt-10 space-y-7">
-            {complianceItems.map((item, index) => (
-              <ScrollReveal key={item.name} index={index} as="li">
-                <p className="font-semibold text-[var(--color-navy)]">{item.name}</p>
-                <p className="mt-2 text-[var(--color-charcoal)]">{item.body}</p>
-              </ScrollReveal>
-            ))}
-          </ul>
-          <ScrollReveal index={3} className="mt-10 border-t border-[var(--color-border)] pt-6">
-            <p className="font-semibold text-[var(--color-navy)]">Why this is not just a checkbox</p>
-            <p className="mt-2 text-[var(--color-charcoal)]">
-              Compliance built in from day one is the difference between a system that works for
-              two months and gets shut down by carrier filtering, and a system that just works.
-              Most US-trained automation agencies do not handle this layer because they do not
-              have to. We do.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Trades playbooks */}
-      <section className="section-offwhite section-space section-rule">
-        <div className="container-shell">
-          <ScrollReveal className="max-w-2xl">
-            <p className="eyebrow">How the system gets configured for your trade</p>
-            <h2 className="mt-6">
-              Generic missed-call tools are why most contractors hate them. We tune for the trade.
-            </h2>
-            <p className="mt-5 text-[var(--color-slate)]">
-              A roofing call is not an HVAC call. A burst pipe is not a panel upgrade. The same
-              generic auto-text fires the same generic question for all of them, and the customer
-              hangs up on the conversation in the first reply. Each trade gets a tuned
-              configuration based on what you actually book, what you actually price, and how your
-              dispatch actually works.
-            </p>
-          </ScrollReveal>
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
-            {playbooks.map((playbook, index) => (
-              <ScrollReveal
-                key={playbook.name}
-                index={index}
-                className="rounded-md border border-[var(--color-border)] bg-white p-6"
-              >
-                <p className="font-serif text-xl text-[var(--color-navy)]">{playbook.name}</p>
-                <ul className="mt-4 space-y-3">
-                  {playbook.items.map((line) => (
-                    <li key={line} className="flex gap-3 text-[var(--color-charcoal)]">
-                      <Check
-                        className="mt-1 h-4 w-4 shrink-0 text-[var(--color-terracotta)]"
-                        aria-hidden="true"
-                      />
-                      <span>{line}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href={playbook.href}
-                  className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-terracotta)] hover:text-[var(--color-terracotta-dark)]"
-                >
-                  See the {playbook.name.toLowerCase()} playbook
-                  <span aria-hidden="true">→</span>
-                </Link>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Offer stack */}
-      <section className="section-offwhite section-space section-rule">
-        <div className="container-shell max-w-3xl">
-          <ScrollReveal>
-            <p className="eyebrow">Your setup includes</p>
-            <h2 className="mt-6">Everything you need to stop the leak, with the work done for you.</h2>
-          </ScrollReveal>
-          <ul className="mt-10 divide-y divide-[var(--color-border)]">
-            {offerStack.map((item, index) => (
-              <ScrollReveal key={item.name} index={index} as="li" className="py-6 first:pt-0">
-                <p className="font-semibold text-[var(--color-navy)]">{item.name}</p>
-                <p className="mt-2 text-[var(--color-slate)]">{item.body}</p>
-              </ScrollReveal>
-            ))}
-          </ul>
-        </div>
-      </section>
-
       {/* Calculator */}
       <section
         id="calculator"
@@ -658,6 +542,117 @@ export default function MissedCallTextBackPage() {
               </ScrollReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Under the hood */}
+      <section className="section-offwhite section-space section-rule">
+        <div className="container-shell">
+          <ScrollReveal className="max-w-2xl">
+            <p className="eyebrow">The honest version, for people who want to know what they are buying</p>
+            <h2 className="mt-6">The system is four layers, all of which we configure for your business.</h2>
+          </ScrollReveal>
+          <div className="mt-10 grid gap-8 md:grid-cols-2">
+            {layers.map((layer, index) => (
+              <ScrollReveal key={layer.title} index={index} className="max-w-xl">
+                <p className="font-serif text-xl text-[var(--color-navy)]">{layer.title}</p>
+                <p className="mt-3 text-[var(--color-charcoal)]">{layer.body}</p>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Compliance */}
+      <section className="section-offwhite section-space section-rule">
+        <div className="container-shell max-w-3xl">
+          <ScrollReveal>
+            <p className="eyebrow">The legal stuff, translated</p>
+            <h2 className="mt-6">
+              Most missed-call recovery products are built for the US market and break quietly at
+              the Canadian border.
+            </h2>
+          </ScrollReveal>
+          <ul className="mt-10 space-y-7">
+            {complianceItems.map((item, index) => (
+              <ScrollReveal key={item.name} index={index} as="li">
+                <p className="font-semibold text-[var(--color-navy)]">{item.name}</p>
+                <p className="mt-2 text-[var(--color-charcoal)]">{item.body}</p>
+              </ScrollReveal>
+            ))}
+          </ul>
+          <ScrollReveal index={3} className="mt-10 border-t border-[var(--color-border)] pt-6">
+            <p className="font-semibold text-[var(--color-navy)]">Why this is not just a checkbox</p>
+            <p className="mt-2 text-[var(--color-charcoal)]">
+              Compliance built in from day one is the difference between a system that works for
+              two months and gets shut down by carrier filtering, and a system that just works.
+              Most US-trained automation agencies do not handle this layer because they do not
+              have to. We do.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Trades playbooks */}
+      <section className="section-offwhite section-space section-rule">
+        <div className="container-shell">
+          <ScrollReveal className="max-w-2xl">
+            <p className="eyebrow">How the system gets configured for your trade</p>
+            <h2 className="mt-6">A roofing call is not an HVAC call.</h2>
+            <p className="mt-5 text-[var(--color-slate)]">
+              A burst pipe is not a panel upgrade. Generic missed-call tools fire the same generic
+              question for all of them, and the customer hangs up on the conversation in the first
+              reply. Each trade gets a tuned configuration based on what you actually book, what
+              you actually price, and how your dispatch actually works.
+            </p>
+          </ScrollReveal>
+          <div className="mt-12 grid gap-8 md:grid-cols-2">
+            {playbooks.map((playbook, index) => (
+              <ScrollReveal
+                key={playbook.name}
+                index={index}
+                className="rounded-md border border-[var(--color-border)] bg-white p-6"
+              >
+                <p className="font-serif text-xl text-[var(--color-navy)]">{playbook.name}</p>
+                <ul className="mt-4 space-y-3">
+                  {playbook.items.map((line) => (
+                    <li key={line} className="flex gap-3 text-[var(--color-charcoal)]">
+                      <Check
+                        className="mt-1 h-4 w-4 shrink-0 text-[var(--color-terracotta)]"
+                        aria-hidden="true"
+                      />
+                      <span>{line}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href={playbook.href}
+                  className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-terracotta)] hover:text-[var(--color-terracotta-dark)]"
+                >
+                  See the {playbook.name.toLowerCase()} playbook
+                  <span aria-hidden="true">→</span>
+                </Link>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Offer stack */}
+      <section className="section-offwhite section-space section-rule">
+        <div className="container-shell max-w-3xl">
+          <ScrollReveal>
+            <p className="eyebrow">What we hand you when we leave</p>
+            <h2 className="mt-6">Everything you need to stop the leak, delivered.</h2>
+          </ScrollReveal>
+          <ul className="mt-10 divide-y divide-[var(--color-border)]">
+            {offerStack.map((item, index) => (
+              <ScrollReveal key={item.name} index={index} as="li" className="py-6 first:pt-0">
+                <p className="font-semibold text-[var(--color-navy)]">{item.name}</p>
+                <p className="mt-2 text-[var(--color-slate)]">{item.body}</p>
+              </ScrollReveal>
+            ))}
+          </ul>
         </div>
       </section>
 

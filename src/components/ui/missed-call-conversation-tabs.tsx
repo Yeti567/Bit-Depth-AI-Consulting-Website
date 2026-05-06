@@ -1,6 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
+const HASH_PREFIX = 'conv-';
 
 type Direction = 'incoming' | 'outgoing';
 
@@ -121,6 +123,23 @@ export function MissedCallConversationTabs() {
   const [activeId, setActiveId] = useState(conversations[0].id);
   const active = conversations.find((c) => c.id === activeId) ?? conversations[0];
 
+  useEffect(() => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash.startsWith(HASH_PREFIX)) {
+      const id = hash.slice(HASH_PREFIX.length);
+      if (conversations.some((c) => c.id === id)) {
+        setActiveId(id);
+      }
+    }
+  }, []);
+
+  const selectTab = (id: string) => {
+    setActiveId(id);
+    if (typeof window !== 'undefined' && window.history?.replaceState) {
+      window.history.replaceState(null, '', `#${HASH_PREFIX}${id}`);
+    }
+  };
+
   return (
     <div>
       <div role="tablist" aria-label="Conversation by trade" className="flex flex-wrap gap-2">
@@ -134,7 +153,7 @@ export function MissedCallConversationTabs() {
               aria-selected={selected}
               aria-controls={`conv-panel-${conversation.id}`}
               id={`conv-tab-${conversation.id}`}
-              onClick={() => setActiveId(conversation.id)}
+              onClick={() => selectTab(conversation.id)}
               className={[
                 'cursor-pointer rounded-full border px-4 py-2 text-sm font-semibold transition',
                 selected
