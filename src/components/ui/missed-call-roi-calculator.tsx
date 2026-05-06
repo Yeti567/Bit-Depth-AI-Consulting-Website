@@ -23,7 +23,7 @@ export function MissedCallRoiCalculator() {
   const [averageJobValue, setAverageJobValue] = useState(450);
   const [opportunityRate, setOpportunityRate] = useState(60);
   const [bookingRate, setBookingRate] = useState(40);
-  const [planName, setPlanName] = useState<PlanName>('Starter');
+  const [planName, setPlanName] = useState<PlanName>('Standard');
 
   const planPrice = useMemo(
     () => PLANS.find((plan) => plan.name === planName)?.price ?? 497,
