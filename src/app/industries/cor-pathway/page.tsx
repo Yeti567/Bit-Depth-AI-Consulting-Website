@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { BreadcrumbSchema, buildIndustryBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'COR Certification for Ontario Contractors | BitDepth AI',
@@ -15,6 +16,10 @@ export const metadata: Metadata = {
 export default function CorPathwayPage() {
   return (
     <PageShell>
+      <BreadcrumbSchema
+        id="industry-cor-pathway-breadcrumbs"
+        items={buildIndustryBreadcrumbs('COR Pathway', 'cor-pathway')}
+      />
       {/* Hero */}
       <section className="section-offwhite section-space">
         <div className="container-shell">

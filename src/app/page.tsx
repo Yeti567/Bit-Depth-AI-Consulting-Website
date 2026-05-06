@@ -11,18 +11,16 @@ import { TrustAndControl } from '@/components/sections/trust-and-control';
 import { BookingAgentHowItWorks } from '@/components/sections/booking-agent-how-it-works';
 import { ProfitLeakBlock } from '@/components/sections/profit-leak-block';
 import { BestFit } from '@/components/sections/best-fit';
-import { buildOrganizationSchema, buildWebSiteSchema, buildLocalBusinessSchema } from '@/lib/schema';
-import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'AI and Automation for Canadian Trades and Contractors | BitDepth AI',
+  title: 'AI Consulting for Canadian Trades and Contractors | BitDepth AI',
   description:
-    'Vendor-neutral AI consulting for Canadian trades and contractors. We diagnose where the money is leaking, then build the AI and automation that plugs the leak. Audits from $5,000.',
+    'Vendor-neutral AI consulting and automation for Canadian HVAC, plumbing, electrical, roofing, ICI, and field-service businesses. Book a Profit Leak Review or AI Opportunity Audit.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/' },
   openGraph: {
-    title: 'AI and Automation for Canadian Trades and Contractors | BitDepth AI',
+    title: 'AI Consulting for Canadian Trades and Contractors | BitDepth AI',
     description:
-      'Vendor-neutral AI consulting for Canadian trades and contractors. Audit first. Recommend what fits. Deliver outcomes.',
+      'Vendor-neutral AI consulting and automation for Canadian HVAC, plumbing, electrical, roofing, ICI, and field-service businesses.',
     url: 'https://bitdepthaiconsulting.com/',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
@@ -32,9 +30,9 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI and Automation for Canadian Trades and Contractors | BitDepth AI',
+    title: 'AI Consulting for Canadian Trades and Contractors | BitDepth AI',
     description:
-      'Vendor-neutral AI consulting for Canadian trades and contractors. Audits from $5,000.',
+      'Vendor-neutral AI consulting and automation for Canadian trades, contractors, and field-service businesses.',
     images: ['/images/og-home.jpg']
   }
 };
@@ -151,15 +149,6 @@ const pad2 = (n: number) => String(n).padStart(2, '0');
 export default function HomePage() {
   return (
     <PageShell>
-      <Script id="organization-schema" type="application/ld+json">
-        {JSON.stringify(buildOrganizationSchema())}
-      </Script>
-      <Script id="localbusiness-schema" type="application/ld+json">
-        {JSON.stringify(buildLocalBusinessSchema())}
-      </Script>
-      <Script id="website-schema" type="application/ld+json">
-        {JSON.stringify(buildWebSiteSchema())}
-      </Script>
       <FAQSchemaScript faqs={homepageFaq} id="homepage-faq-schema" />
 
       {/* 1. Hero */}

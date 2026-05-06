@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import { IndustryPage, type IndustryPageData } from '@/components/ui/industry-page';
+import { BreadcrumbSchema, buildIndustryBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 
 export const metadata: Metadata = {
-  title: 'AI for Ontario Electrical Contractors | BitDepth AI',
+  title: 'AI Automation for Ontario Electrical Contractors | BitDepth AI',
   description:
-    'ESA notification automation, permit tracking, apprentice hour capture, and real-time job-cost dashboards for Ontario electrical contractors.',
+    'Practical AI and automation for Ontario electrical contractors, including ESA notification automation, job costing, and quote follow-up.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/industries/electrical' }
 };
 
@@ -60,5 +61,13 @@ const data: IndustryPageData = {
 };
 
 export default function ElectricalPage() {
-  return <IndustryPage data={data} />;
+  return (
+    <>
+      <BreadcrumbSchema
+        id="industry-electrical-breadcrumbs"
+        items={buildIndustryBreadcrumbs('Electrical Contractors', 'electrical')}
+      />
+      <IndustryPage data={data} />
+    </>
+  );
 }

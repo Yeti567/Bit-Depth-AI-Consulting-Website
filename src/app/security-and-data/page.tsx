@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Check } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { BreadcrumbSchema, buildSimpleBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 
 const PAGE_URL = 'https://bitdepthaiconsulting.com/security-and-data';
 const CALENDLY_URL = 'https://calendly.com/blake-bitdepthaiconsulting/30min';
@@ -11,12 +12,12 @@ const CONTACT_EMAIL = 'blake@bitdepthaiconsulting.com';
 export const metadata: Metadata = {
   title: 'Security and Data Handling | BitDepth AI Consulting',
   description:
-    'Plain-English answers on how we handle your data, train our automations, test before launch, and provide ongoing oversight. No legal language, no buzzwords.',
+    'How BitDepth AI handles your data, approves knowledge sources, applies human oversight, and stays vendor-neutral.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Security and Data Handling | BitDepth AI Consulting',
     description:
-      'Plain-English answers on how we handle your data, train our automations, test before launch, and keep watching after launch.',
+      'How BitDepth AI handles your data, approves knowledge sources, applies human oversight, and stays vendor-neutral.',
     url: PAGE_URL,
     type: 'website',
     siteName: 'BitDepth AI Consulting',
@@ -73,6 +74,10 @@ const includedMonthly = [
 export default function SecurityAndDataPage() {
   return (
     <PageShell>
+      <BreadcrumbSchema
+        id="security-and-data-breadcrumbs"
+        items={buildSimpleBreadcrumbs('Security and Data', 'security-and-data')}
+      />
       {/* Hero */}
       <section className="section-offwhite section-space">
         <div className="container-shell max-w-3xl">

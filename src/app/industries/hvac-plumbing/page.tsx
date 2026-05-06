@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import { IndustryPage, type IndustryPageData } from '@/components/ui/industry-page';
+import { BreadcrumbSchema, buildIndustryBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 
 export const metadata: Metadata = {
-  title: 'AI for HVAC and Plumbing Contractors | BitDepth AI',
+  title: 'AI Automation for HVAC and Plumbing Contractors in Canada | BitDepth AI',
   description:
-    'Stop losing 30 to 50 percent of your inbound calls. AI receptionist, auto-quote drafting, and ServiceTitan or Jobber connectors for residential HVAC and plumbing.',
+    'Practical AI and automation for Canadian HVAC and plumbing companies. Missed-call recovery, quote follow-up, dispatch, and Jobber and ServiceTitan integration.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/industries/hvac-plumbing' }
 };
 
@@ -62,5 +63,13 @@ const data: IndustryPageData = {
 };
 
 export default function HvacPlumbingPage() {
-  return <IndustryPage data={data} />;
+  return (
+    <>
+      <BreadcrumbSchema
+        id="industry-hvac-plumbing-breadcrumbs"
+        items={buildIndustryBreadcrumbs('HVAC and Plumbing', 'hvac-plumbing')}
+      />
+      <IndustryPage data={data} />
+    </>
+  );
 }

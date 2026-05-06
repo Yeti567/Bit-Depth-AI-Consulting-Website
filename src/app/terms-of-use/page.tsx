@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { BreadcrumbSchema, buildSimpleBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'Terms of Use | BitDepth AI Consulting',
@@ -158,6 +159,10 @@ const pad2 = (n: number) => String(n).padStart(2, '0');
 export default function TermsOfUsePage() {
   return (
     <PageShell>
+      <BreadcrumbSchema
+        id="terms-of-use-breadcrumbs"
+        items={buildSimpleBreadcrumbs('Terms of Use', 'terms-of-use')}
+      />
       <section className="section-offwhite section-space">
         <div className="container-shell max-w-3xl">
           <ScrollReveal>

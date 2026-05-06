@@ -2,13 +2,14 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PageShell } from '@/components/layout/page-shell';
+import { BreadcrumbSchema, buildSimpleBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { ContactForm } from '@/components/ui/contact-form';
 
 export const metadata: Metadata = {
-  title: 'Contact | BitDepth AI Consulting',
+  title: 'Contact BitDepth AI Consulting',
   description:
-    'Tell us what is breaking. The fastest way to get help is to book an audit. The second-fastest way is to send a short note. We respond inside one business day.',
+    'Talk to BitDepth AI about an AI audit, missed call text back, or workflow automation for your Canadian trades or field-service business.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/contact' },
   openGraph: {
     title: 'Contact BitDepth AI Consulting',
@@ -47,6 +48,7 @@ const regions = [
 export default function ContactPage() {
   return (
     <PageShell>
+      <BreadcrumbSchema id="contact-breadcrumbs" items={buildSimpleBreadcrumbs('Contact', 'contact')} />
       {/* Hero with photo */}
       <section className="section-offwhite section-space">
         <div className="container-shell grid gap-12 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">

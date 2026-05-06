@@ -4,6 +4,7 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { ArticleHeader, ArticleBody, ArticleCTA } from '@/components/ui/article-layout';
 import { buildArticleSchema } from '@/lib/schema';
+import { BreadcrumbSchema, buildResourceBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 
 const TITLE = 'The 5 signs your business is ready for AI automation.';
 
@@ -75,6 +76,10 @@ const pad2 = (n: number) => String(n).padStart(2, '0');
 export default function FiveSignsReadyForAIPage() {
   return (
     <PageShell>
+      <BreadcrumbSchema
+        id="resource-five-signs-breadcrumbs"
+        items={buildResourceBreadcrumbs(TITLE, 'five-signs-your-business-is-ready-for-ai')}
+      />
       <Script id="article-schema" type="application/ld+json">
         {JSON.stringify(
           buildArticleSchema(

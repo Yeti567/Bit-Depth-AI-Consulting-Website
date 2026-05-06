@@ -13,18 +13,23 @@ import {
 } from '@/components/ui/missed-call-fit-check-cta';
 import { FAQAccordion } from '@/components/ui/faq-accordion';
 import { buildServiceSchema, buildFaqSchema } from '@/lib/schema';
+import { OFFERS } from '@/lib/offers';
+import {
+  BreadcrumbSchema,
+  buildServiceBreadcrumbs
+} from '@/components/ui/breadcrumb-schema';
 
 const PAGE_URL = 'https://bitdepthaiconsulting.com/services/missed-call-text-back';
 
 export const metadata: Metadata = {
-  title: 'Missed Call Text Back for Canadian Trades | BitDepth AI Consulting',
+  title: 'Missed Call Text Back for HVAC, Plumbing, and Trades | BitDepth AI',
   description:
-    'Recover the calls you already paid to attract. BitDepth installs a Canadian-compliant missed-call recovery system for HVAC, plumbing, electrical, and roofing contractors. PIPEDA, CRTC, A2P 10DLC handled. From $497 per month.',
+    'Recover missed calls automatically. Canadian-compliant SMS, A2P 10DLC registered. Built for HVAC, plumbing, electrical, and roofing companies.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Missed Call Text Back for Canadian Trades | BitDepth AI Consulting',
+    title: 'Missed Call Text Back for HVAC, Plumbing, and Trades | BitDepth AI',
     description:
-      'Recover the calls you already paid to attract. Canadian-compliant missed-call recovery for trades. From $497 per month.',
+      'Recover missed calls automatically. Canadian-compliant SMS, A2P 10DLC registered. Built for HVAC, plumbing, electrical, and roofing.',
     url: PAGE_URL,
     type: 'website',
     siteName: 'BitDepth AI Consulting',
@@ -303,16 +308,21 @@ export default function MissedCallTextBackPage() {
       <Script id="service-mctb-schema" type="application/ld+json">
         {JSON.stringify(
           buildServiceSchema(
-            'Missed Call Text Back',
-            'Canadian-compliant missed-call recovery for trades and field-service businesses. Voice AI, SMS recovery within five seconds, CRM integration, and PIPEDA, CRTC, and A2P 10DLC compliance handled end to end. From $497 per month.',
+            OFFERS.missedCallTextBack.name,
+            'Canadian-compliant missed-call recovery for trades and field-service businesses. Voice AI, SMS recovery within five seconds, CRM integration, and PIPEDA, CRTC, and A2P 10DLC compliance handled. From $497 per month.',
             PAGE_URL,
-            'Missed Call Recovery'
+            'Missed Call Recovery',
+            { price: OFFERS.missedCallTextBack.priceNumeric }
           )
         )}
       </Script>
       <Script id="service-mctb-faq-schema" type="application/ld+json">
         {JSON.stringify(buildFaqSchema(faqItems))}
       </Script>
+      <BreadcrumbSchema
+        id="service-mctb-breadcrumbs"
+        items={buildServiceBreadcrumbs(OFFERS.missedCallTextBack.name, 'missed-call-text-back')}
+      />
 
       {/* Hero */}
       <section className="section-offwhite section-space">

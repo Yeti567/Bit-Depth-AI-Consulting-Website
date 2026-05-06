@@ -2,7 +2,10 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import Script from 'next/script';
 import { ArticleHeader, ArticleBody, ArticleCTA } from '@/components/ui/article-layout';
+import { buildArticleSchema } from '@/lib/schema';
+import { BreadcrumbSchema, buildResourceBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 
  type ResourceContentBlock =
   | {
@@ -503,8 +506,18 @@ export default async function ResourceArticlePage({ params }: { params: Promise<
     notFound();
   }
 
+  const articleUrl = `https://bitdepthaiconsulting.com/resources/${slug}`;
+  const articleImage = `https://bitdepthaiconsulting.com${article.image.startsWith('/') ? article.image : `/${article.image}`}`;
+
   return (
     <PageShell>
+      <BreadcrumbSchema
+        id={`resource-${slug}-breadcrumbs`}
+        items={buildResourceBreadcrumbs(article.title, slug)}
+      />
+      <Script id={`resource-${slug}-article-schema`} type="application/ld+json">
+        {JSON.stringify(buildArticleSchema(article.title, articleUrl, articleImage, '2026-04-05'))}
+      </Script>
       <ArticleHeader
         category={article.category}
         title={article.title}

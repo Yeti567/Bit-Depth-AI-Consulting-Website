@@ -4,6 +4,7 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { ArticleHeader, ArticleBody, ArticleCTA } from '@/components/ui/article-layout';
 import { buildArticleSchema } from '@/lib/schema';
+import { BreadcrumbSchema, buildResourceBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 
 const TITLE = 'What to expect from your first AI consulting engagement.';
 
@@ -74,6 +75,10 @@ const pad2 = (n: number) => String(n).padStart(2, '0');
 export default function WhatToExpectPage() {
   return (
     <PageShell>
+      <BreadcrumbSchema
+        id="resource-first-engagement-breadcrumbs"
+        items={buildResourceBreadcrumbs(TITLE, 'what-to-expect-from-your-first-ai-consulting-engagement')}
+      />
       <Script id="article-schema" type="application/ld+json">
         {JSON.stringify(
           buildArticleSchema(

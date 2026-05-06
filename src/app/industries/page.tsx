@@ -4,16 +4,17 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { BreadcrumbSchema, buildSimpleBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 
 export const metadata: Metadata = {
-  title: 'AI Consulting by Industry: Trades, ICI, Field Services | BitDepth AI',
+  title: 'AI Consulting for Canadian Trades, ICI, and Field Services | BitDepth AI',
   description:
-    'AI consulting built for Canadian field service businesses. HVAC and plumbing, electrical, roofing and ICI construction, field services, professional services, and the COR Pathway crossover.',
+    'AI consulting and automation for Canadian HVAC, plumbing, electrical, roofing, ICI construction, field service, and professional services.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/industries' },
   openGraph: {
-    title: 'AI Consulting by Industry: Trades, ICI, Field Services | BitDepth AI',
+    title: 'AI Consulting for Canadian Trades, ICI, and Field Services | BitDepth AI',
     description:
-      'Built for Canadian field service businesses. HVAC and plumbing, electrical, roofing and ICI construction, field services, professional services, and the COR Pathway crossover.',
+      'AI consulting and automation for Canadian HVAC, plumbing, electrical, roofing, ICI, field service, and professional services.',
     url: 'https://bitdepthaiconsulting.com/industries',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Consulting by Industry: Trades, ICI, Field Services | BitDepth AI',
+    title: 'AI Consulting for Canadian Trades, ICI, and Field Services | BitDepth AI',
     description:
       'AI consulting for Canadian trades and contractors. HVAC, electrical, roofing and ICI, field services, professional services, COR Pathway.',
     images: ['/images/og-industries.jpg']
@@ -91,6 +92,7 @@ const industries = [
 export default function IndustriesPage() {
   return (
     <PageShell>
+      <BreadcrumbSchema id="industries-breadcrumbs" items={buildSimpleBreadcrumbs('Industries', 'industries')} />
       {/* Hero */}
       <section className="section-offwhite section-space">
         <div className="container-shell max-w-3xl">

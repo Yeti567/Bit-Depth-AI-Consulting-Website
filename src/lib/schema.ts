@@ -7,9 +7,17 @@ const SITE_URL = 'https://bitdepthaiconsulting.com';
 const BRAND_NAME = 'BitDepth AI Consulting';
 const LEGAL_NAME = 'BitDepth AI Consulting Ltd.';
 const LOGO_URL = `${SITE_URL}/images/logo%20svg%20transparent.svg`;
+const PHONE = '+1-780-832-5158';
+const EMAIL = 'blake@bitdepthaiconsulting.com';
+const LOCALITY = 'Barriere';
+const REGION = 'BC';
+const COUNTRY = 'CA';
+const ORG_ID = `${SITE_URL}/#organization`;
 
 const SERVICE_TYPES = [
   'AI Opportunity Audit',
+  'AI Booking Agent',
+  'Profit Leak Detection Review',
   'Missed Call Text Back',
   'AI Implementation',
   'Workflow Automation',
@@ -83,20 +91,30 @@ export function buildAIAuditFaqSchema() {
 export function buildOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@type': 'ProfessionalService',
+    '@id': ORG_ID,
     name: LEGAL_NAME,
     alternateName: BRAND_NAME,
     url: SITE_URL,
     logo: LOGO_URL,
+    email: EMAIL,
+    telephone: PHONE,
     description:
-      'Vendor-neutral AI consulting for Canadian trades and contractors. We audit first, then build the AI and automation that plugs the leak.',
+      'Vendor-neutral AI consulting and automation for Canadian trades, contractors, and field-service businesses.',
     founder: {
       '@type': 'Person',
       name: 'Blake Cowan'
     },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: LOCALITY,
+      addressRegion: REGION,
+      addressCountry: COUNTRY
+    },
     contactPoint: {
       '@type': 'ContactPoint',
-      email: 'blake@bitdepthaiconsulting.com',
+      email: EMAIL,
+      telephone: PHONE,
       contactType: 'sales',
       availableLanguage: 'English',
       areaServed: 'CA'
@@ -105,11 +123,16 @@ export function buildOrganizationSchema() {
       'https://www.linkedin.com/company/bitdepth-ai-consulting-ltd',
       'https://www.youtube.com/channel/UCz6b7iSR3mik1lzlxoAsZMA'
     ],
-    areaServed: {
-      '@type': 'Country',
-      name: 'Canada'
-    },
-    serviceType: SERVICE_TYPES
+    areaServed: [
+      { '@type': 'AdministrativeArea', name: 'British Columbia' },
+      { '@type': 'AdministrativeArea', name: 'Alberta' },
+      { '@type': 'AdministrativeArea', name: 'Greater Toronto Area' },
+      { '@type': 'AdministrativeArea', name: 'Golden Horseshoe' },
+      { '@type': 'AdministrativeArea', name: 'Ontario' },
+      { '@type': 'Country', name: 'Canada' }
+    ],
+    serviceType: SERVICE_TYPES,
+    priceRange: '$$'
   };
 }
 
@@ -133,14 +156,24 @@ export function buildLocalBusinessSchema() {
     '@type': 'ProfessionalService',
     name: LEGAL_NAME,
     description:
-      'Vendor-neutral AI consulting for Canadian trades and contractors. We diagnose where the money is leaking, then build the AI and automation that plugs the leak.',
+      'Vendor-neutral AI consulting and automation for Canadian trades, contractors, and field-service businesses.',
     url: SITE_URL,
     logo: LOGO_URL,
+    email: EMAIL,
+    telephone: PHONE,
     founder: {
       '@type': 'Person',
       name: 'Blake Cowan'
     },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: LOCALITY,
+      addressRegion: REGION,
+      addressCountry: COUNTRY
+    },
     areaServed: [
+      { '@type': 'AdministrativeArea', name: 'British Columbia' },
+      { '@type': 'AdministrativeArea', name: 'Alberta' },
       { '@type': 'AdministrativeArea', name: 'Greater Toronto Area' },
       { '@type': 'AdministrativeArea', name: 'Golden Horseshoe' },
       { '@type': 'AdministrativeArea', name: 'Ontario' },
@@ -155,18 +188,26 @@ export function buildLocalBusinessSchema() {
   };
 }
 
+interface ServiceOffer {
+  price: number;
+  priceCurrency?: string;
+  description?: string;
+}
+
 export function buildServiceSchema(
   name: string,
   description: string,
   url: string,
-  serviceType: string = 'AI Consulting'
+  serviceType: string = 'AI Consulting',
+  offer?: ServiceOffer
 ) {
-  return {
+  const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'Service',
     serviceType,
     provider: {
-      '@type': 'Organization',
+      '@type': 'ProfessionalService',
+      '@id': ORG_ID,
       name: LEGAL_NAME,
       url: SITE_URL
     },
@@ -178,13 +219,26 @@ export function buildServiceSchema(
     name,
     description
   };
+
+  if (offer) {
+    schema.offers = {
+      '@type': 'Offer',
+      price: offer.price,
+      priceCurrency: offer.priceCurrency ?? 'CAD',
+      description: offer.description ?? name,
+      url
+    };
+  }
+
+  return schema;
 }
 
 export function buildArticleSchema(
   headline: string,
   url: string,
   imageUrl: string,
-  datePublished: string
+  datePublished: string,
+  dateModified?: string
 ) {
   return {
     '@context': 'https://schema.org',
@@ -192,10 +246,12 @@ export function buildArticleSchema(
     headline,
     author: {
       '@type': 'Person',
-      name: 'Blake Cowan'
+      name: 'Blake Cowan',
+      url: `${SITE_URL}/about`
     },
     publisher: {
       '@type': 'Organization',
+      '@id': ORG_ID,
       name: BRAND_NAME,
       url: SITE_URL,
       logo: {
@@ -204,6 +260,7 @@ export function buildArticleSchema(
       }
     },
     datePublished,
+    dateModified: dateModified ?? datePublished,
     url,
     image: {
       '@type': 'ImageObject',

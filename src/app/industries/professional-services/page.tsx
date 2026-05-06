@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Check } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { BreadcrumbSchema, buildIndustryBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'AI for Law Firms, Accountants, and Brokerages | BitDepth AI',
@@ -37,6 +38,10 @@ const builds = [
 export default function ProfessionalServicesPage() {
   return (
     <PageShell>
+      <BreadcrumbSchema
+        id="industry-professional-services-breadcrumbs"
+        items={buildIndustryBreadcrumbs('Professional Services', 'professional-services')}
+      />
       {/* Hero */}
       <section className="section-offwhite section-space">
         <div className="container-shell">

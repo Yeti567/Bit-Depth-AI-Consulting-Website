@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { IndustryPage, type IndustryPageData } from '@/components/ui/industry-page';
+import { BreadcrumbSchema, buildIndustryBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'AI for Field Service Businesses in Canada | BitDepth AI',
@@ -62,5 +63,13 @@ const data: IndustryPageData = {
 };
 
 export default function FieldServicesPage() {
-  return <IndustryPage data={data} />;
+  return (
+    <>
+      <BreadcrumbSchema
+        id="industry-field-services-breadcrumbs"
+        items={buildIndustryBreadcrumbs('Field Services', 'field-services')}
+      />
+      <IndustryPage data={data} />
+    </>
+  );
 }

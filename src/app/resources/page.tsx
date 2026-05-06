@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ArrowRight, Download } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { BreadcrumbSchema, buildSimpleBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 import { LeadMagnet } from '@/components/ui/lead-magnet';
 import { ArticleCard, type ArticleCardData } from '@/components/ui/article-layout';
 import { CaseStudies } from '@/components/ui/case-studies';
@@ -118,6 +119,7 @@ const articles: ArticleCardData[] = [
 export default function ResourcesPage() {
   return (
     <PageShell>
+      <BreadcrumbSchema id="resources-breadcrumbs" items={buildSimpleBreadcrumbs('Resources', 'resources')} />
       {/* Hero */}
       <section className="section-offwhite section-space">
         <div className="container-shell grid gap-12 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">

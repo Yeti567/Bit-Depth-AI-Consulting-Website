@@ -29,6 +29,7 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { FAQAccordion } from '@/components/ui/faq-accordion';
 import { FAQSchemaScript } from '@/components/ui/faq-schema-script';
+import { BreadcrumbSchema, buildSimpleBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 import { MissedRevenueCalculator } from './calculator';
 
 const PAGE_URL = 'https://bitdepthaiconsulting.com/missed-call-revenue-recovery';
@@ -200,6 +201,10 @@ const serviceSchema = {
 export default function MissedCallRevenueRecoveryPage() {
   return (
     <PageShell simplifiedHeader>
+      <BreadcrumbSchema
+        id="missed-call-revenue-recovery-breadcrumbs"
+        items={buildSimpleBreadcrumbs('Missed Call Revenue Recovery', 'missed-call-revenue-recovery')}
+      />
       <Script id="service-schema" type="application/ld+json">
         {JSON.stringify(serviceSchema)}
       </Script>

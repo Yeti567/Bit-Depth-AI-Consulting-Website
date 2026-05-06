@@ -6,19 +6,24 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { BookingAgentHowItWorks } from '@/components/sections/booking-agent-how-it-works';
 import { buildServiceSchema } from '@/lib/schema';
+import { OFFERS } from '@/lib/offers';
+import {
+  BreadcrumbSchema,
+  buildServiceBreadcrumbs
+} from '@/components/ui/breadcrumb-schema';
 
 const PAGE_URL = 'https://bitdepthaiconsulting.com/services/ai-booking-agent';
 const CALENDLY_URL = 'https://calendly.com/blake-bitdepthaiconsulting/30min';
 
 export const metadata: Metadata = {
-  title: 'AI Booking Agent for Trades and Service Businesses | BitDepth AI Consulting',
+  title: 'AI Booking Agent for Trades and Field Services | BitDepth AI',
   description:
-    'Stop losing jobs when you miss a call. Our AI booking agent answers calls, responds to leads, and books appointments when your team is busy or after-hours. Built for HVAC, plumbing, electrical, roofing, and field service.',
+    'An AI receptionist that answers your phones, qualifies leads, and books jobs into your calendar. Built for Canadian trades and field-service businesses.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'AI Booking Agent for Trades and Service Businesses | BitDepth AI Consulting',
+    title: 'AI Booking Agent for Trades and Field Services | BitDepth AI',
     description:
-      'AI booking agent that answers calls, responds to leads, and books appointments when your team is busy. For trades and field-service businesses with ten or more employees.',
+      'AI receptionist that answers phones, qualifies leads, and books jobs into your calendar. Built for Canadian trades and field-service businesses.',
     url: PAGE_URL,
     type: 'website',
     siteName: 'BitDepth AI Consulting',
@@ -65,13 +70,18 @@ export default function AiBookingAgentPage() {
       <Script id="service-booking-agent-schema" type="application/ld+json">
         {JSON.stringify(
           buildServiceSchema(
-            'AI Booking Agent',
-            'AI booking agent for trades and service businesses. Answers calls, responds to website leads, and books appointments when your team is busy or after-hours. Canadian-built and vendor-neutral.',
+            OFFERS.aiBookingAgent.name,
+            'An AI receptionist that answers your phones, qualifies leads, and books jobs into your calendar. Built for Canadian trades and field-service businesses.',
             PAGE_URL,
-            'AI Booking Agent'
+            'AI Booking Agent',
+            { price: OFFERS.aiBookingAgent.priceNumeric }
           )
         )}
       </Script>
+      <BreadcrumbSchema
+        id="service-ai-booking-agent-breadcrumbs"
+        items={buildServiceBreadcrumbs(OFFERS.aiBookingAgent.name, 'ai-booking-agent')}
+      />
 
       {/* Hero */}
       <section className="section-offwhite section-space">

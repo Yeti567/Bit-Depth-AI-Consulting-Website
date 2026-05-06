@@ -5,11 +5,16 @@ import { Check } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { buildServiceSchema } from '@/lib/schema';
+import { OFFERS } from '@/lib/offers';
+import {
+  BreadcrumbSchema,
+  buildServiceBreadcrumbs
+} from '@/components/ui/breadcrumb-schema';
 
 export const metadata: Metadata = {
-  title: 'Workflow Automation for Canadian Trades | BitDepth AI',
+  title: 'Workflow Automation for Canadian Contractors | BitDepth AI',
   description:
-    'Stop your office from being the integration. We connect quote-to-job, field-to-office, customer comms, and compliance flows. From $5,000 per workflow.',
+    'Automation for Jobber, ServiceTitan, QuickBooks, and Housecall Pro. Quote to job, field notes to invoice, follow-ups, and customer updates without the admin burden.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/services/workflow-automation' }
 };
 
@@ -39,13 +44,18 @@ export default function WorkflowAutomationPage() {
       <Script id="service-workflow-automation-schema" type="application/ld+json">
         {JSON.stringify(
           buildServiceSchema(
-            'Workflow Automation',
-            'Connect quote-to-job, field-to-office, customer comms, and compliance flows. From $5,000 per workflow.',
+            OFFERS.workflowAutomation.name,
+            'Automation for Jobber, ServiceTitan, QuickBooks, and Housecall Pro. Quote to job, field notes to invoice, follow-ups, and customer updates without the admin burden.',
             'https://bitdepthaiconsulting.com/services/workflow-automation',
-            'Business Process Automation'
+            'Business Process Automation',
+            { price: OFFERS.workflowAutomation.priceNumeric }
           )
         )}
       </Script>
+      <BreadcrumbSchema
+        id="service-workflow-automation-breadcrumbs"
+        items={buildServiceBreadcrumbs(OFFERS.workflowAutomation.name, 'workflow-automation')}
+      />
       {/* Hero */}
       <section className="section-offwhite section-space">
         <div className="container-shell max-w-3xl">

@@ -4,11 +4,15 @@ import Script from 'next/script';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { buildServiceSchema } from '@/lib/schema';
+import {
+  BreadcrumbSchema,
+  buildServiceBreadcrumbs
+} from '@/components/ui/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'AI Implementation for Canadian Trades | BitDepth AI',
   description:
-    'Phased implementation of AI workers, integrations, dashboards, and automations the audit identified. Audit fee credited 100 percent within 90 days.',
+    'Phased AI implementation for Canadian contractors and field-service businesses. Sprint-based delivery, clear acceptance criteria, ongoing support.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/services/ai-implementation' }
 };
 
@@ -42,12 +46,16 @@ export default function AiImplementationPage() {
         {JSON.stringify(
           buildServiceSchema(
             'AI Implementation',
-            'Phased implementation of AI workers, integrations, dashboards, and automations identified in the audit. Audit fee credited 100 percent within 90 days.',
+            'Phased AI implementation for Canadian contractors and field-service businesses. Sprint-based delivery, clear acceptance criteria, ongoing support.',
             'https://bitdepthaiconsulting.com/services/ai-implementation',
             'AI Consulting'
           )
         )}
       </Script>
+      <BreadcrumbSchema
+        id="service-ai-implementation-breadcrumbs"
+        items={buildServiceBreadcrumbs('AI Implementation', 'ai-implementation')}
+      />
       {/* Hero */}
       <section className="section-offwhite section-space">
         <div className="container-shell max-w-3xl">

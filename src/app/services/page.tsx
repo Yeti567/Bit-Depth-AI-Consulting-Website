@@ -4,16 +4,17 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { BreadcrumbSchema, buildSimpleBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 
 export const metadata: Metadata = {
-  title: 'AI Consulting Services for Canadian Trades | BitDepth AI',
+  title: 'AI and Automation Services for Canadian Trades | BitDepth AI',
   description:
-    'Five AI consulting services for Canadian trades and contractors: AI Opportunity Audit, Missed Call Text Back, AI Implementation, Workflow Automation, and Custom AI Workers.',
+    'AI Opportunity Audits, Missed Call Text Back, Workflow Automation, Custom AI Workers, and AI Implementation for Canadian contractors and field-service businesses.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/services' },
   openGraph: {
-    title: 'AI Consulting Services for Canadian Trades | BitDepth AI',
+    title: 'AI and Automation Services for Canadian Trades | BitDepth AI',
     description:
-      'Five offers, one methodology. Audit, Missed Call Text Back, AI Implementation, Workflow Automation, and Custom AI Workers for Canadian trades and contractors.',
+      'AI Opportunity Audits, Missed Call Text Back, Workflow Automation, Custom AI Workers, and AI Implementation for Canadian contractors.',
     url: 'https://bitdepthaiconsulting.com/services',
     type: 'website',
     siteName: 'BitDepth AI Consulting',
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI Consulting Services for Canadian Trades | BitDepth AI',
+    title: 'AI and Automation Services for Canadian Trades | BitDepth AI',
     description:
       'Five AI services for Canadian trades and contractors. Audit, Missed Call Text Back, Implementation, Workflow Automation, Custom AI Workers.',
     images: ['/images/og-services.jpg']
@@ -93,6 +94,7 @@ const pad2 = (n: number) => String(n).padStart(2, '0');
 export default function ServicesPage() {
   return (
     <PageShell>
+      <BreadcrumbSchema id="services-breadcrumbs" items={buildSimpleBreadcrumbs('Services', 'services')} />
       {/* Hero */}
       <section className="section-offwhite section-space">
         <div className="container-shell grid gap-12 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">

@@ -6,7 +6,7 @@ import { generateStaticParams } from '@/app/resources/[slug]/page';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://bitdepthaiconsulting.com';
-  const lastModified = '2026-05-06';
+  const lastModified = new Date().toISOString().slice(0, 10);
 
   const resourceEntries = generateStaticParams()
     .map(({ slug }) => ({
@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       { url: `${baseUrl}/services/profit-leak-review`, changeFrequency: 'monthly', priority: 0.9 },
       { url: `${baseUrl}/services/ai-audit`, changeFrequency: 'weekly', priority: 0.95 },
       { url: `${baseUrl}/services/missed-call-text-back`, changeFrequency: 'monthly', priority: 0.85 },
+      { url: `${baseUrl}/missed-call-revenue-recovery`, changeFrequency: 'monthly', priority: 0.7 },
       { url: `${baseUrl}/services/ai-implementation`, changeFrequency: 'monthly', priority: 0.8 },
       { url: `${baseUrl}/services/workflow-automation`, changeFrequency: 'monthly', priority: 0.8 },
       { url: `${baseUrl}/services/custom-ai-workers`, changeFrequency: 'monthly', priority: 0.8 },

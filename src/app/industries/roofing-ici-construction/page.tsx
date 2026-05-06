@@ -4,11 +4,12 @@ import Link from 'next/link';
 import { Check } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { BreadcrumbSchema, buildIndustryBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 
 export const metadata: Metadata = {
-  title: 'AI for Roofing and ICI Construction in Ontario | BitDepth AI',
+  title: 'AI Automation for Roofing and ICI Contractors in Ontario | BitDepth AI',
   description:
-    'Compliance documentation, sub-contractor pre-qualification, AuditSoft pre-population, and bid response automation for Ontario roofing and ICI contractors.',
+    'Practical AI and automation for roofing and ICI construction firms, including COR documentation, safety paperwork, and field-to-office workflows.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/industries/roofing-ici-construction' }
 };
 
@@ -47,6 +48,10 @@ const pad2 = (n: number) => String(n).padStart(2, '0');
 export default function RoofingIciConstructionPage() {
   return (
     <PageShell>
+      <BreadcrumbSchema
+        id="industry-roofing-ici-breadcrumbs"
+        items={buildIndustryBreadcrumbs('Roofing and ICI Construction', 'roofing-ici-construction')}
+      />
       {/* Hero */}
       <section className="section-offwhite section-space">
         <div className="container-shell">

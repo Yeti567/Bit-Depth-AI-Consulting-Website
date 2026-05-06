@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Check } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { BreadcrumbSchema, buildSimpleBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'About BitDepth AI Consulting | Blake Cowan',
@@ -83,6 +84,7 @@ const pad2 = (n: number) => String(n).padStart(2, '0');
 export default function AboutPage() {
   return (
     <PageShell>
+      <BreadcrumbSchema id="about-breadcrumbs" items={buildSimpleBreadcrumbs('About', 'about')} />
       {/* 1. Hero */}
       <section className="section-offwhite section-space">
         <div className="container-shell grid gap-12 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">

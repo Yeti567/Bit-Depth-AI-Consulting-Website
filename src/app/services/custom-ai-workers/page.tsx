@@ -5,11 +5,16 @@ import { Check } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { buildServiceSchema } from '@/lib/schema';
+import { OFFERS } from '@/lib/offers';
+import {
+  BreadcrumbSchema,
+  buildServiceBreadcrumbs
+} from '@/components/ui/breadcrumb-schema';
 
 export const metadata: Metadata = {
   title: 'Custom AI Workers for Trades and Contractors | BitDepth AI',
   description:
-    'Purpose-built AI agents that perform defined job functions inside your business. Intake, estimating, compliance, and AR follow-up. From $10,000.',
+    'Custom AI workers that take repeatable roles off your team. Defined scope, defined guardrails, defined cost.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/services/custom-ai-workers' }
 };
 
@@ -38,13 +43,18 @@ export default function CustomAiWorkersPage() {
       <Script id="service-custom-ai-workers-schema" type="application/ld+json">
         {JSON.stringify(
           buildServiceSchema(
-            'Custom AI Workers',
-            'Purpose-built AI agents that perform defined job functions inside your business. Intake, estimating, compliance, and AR follow-up. From $10,000.',
+            OFFERS.customAiWorkers.name,
+            'Custom AI workers that take repeatable roles off your team. Defined scope, defined guardrails, defined cost.',
             'https://bitdepthaiconsulting.com/services/custom-ai-workers',
-            'AI Consulting'
+            'AI Consulting',
+            { price: OFFERS.customAiWorkers.priceNumeric }
           )
         )}
       </Script>
+      <BreadcrumbSchema
+        id="service-custom-ai-workers-breadcrumbs"
+        items={buildServiceBreadcrumbs(OFFERS.customAiWorkers.name, 'custom-ai-workers')}
+      />
       {/* Hero */}
       <section className="section-offwhite section-space">
         <div className="container-shell max-w-3xl">

@@ -5,19 +5,24 @@ import { Check } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { buildServiceSchema } from '@/lib/schema';
+import { OFFERS } from '@/lib/offers';
+import {
+  BreadcrumbSchema,
+  buildServiceBreadcrumbs
+} from '@/components/ui/breadcrumb-schema';
 
 const PAGE_URL = 'https://bitdepthaiconsulting.com/services/profit-leak-review';
 const BOOKING_URL = '/contact?topic=profit-leak-review';
 
 export const metadata: Metadata = {
-  title: 'Profit Leak Detection Review | BitDepth AI Consulting',
+  title: 'Profit Leak Detection Review for Trades and Service Businesses | BitDepth AI',
   description:
-    'For $250, we review where your business is losing revenue through missed calls, slow quote follow-up, and broken booking workflows. Written report, credited 100 percent toward implementation.',
+    'A $250, two-week diagnostic that finds where missed calls, slow quotes, and broken admin are leaking revenue from your business.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Profit Leak Detection Review | BitDepth AI Consulting',
+    title: 'Profit Leak Detection Review for Trades and Service Businesses | BitDepth AI',
     description:
-      'A focused review of the three places trades and service businesses lose the most money. $250. Credited toward implementation.',
+      'A $250, two-week diagnostic that finds where missed calls, slow quotes, and broken admin are leaking revenue.',
     url: PAGE_URL,
     type: 'website',
     siteName: 'BitDepth AI Consulting',
@@ -118,13 +123,18 @@ export default function ProfitLeakReviewPage() {
       <Script id="service-profit-leak-schema" type="application/ld+json">
         {JSON.stringify(
           buildServiceSchema(
-            'Profit Leak Detection Review',
-            'A focused $250 review of where Canadian trades and service businesses lose revenue through missed calls, slow quote follow-up, and broken booking workflows. Written report delivered within five business days. Credited toward implementation.',
+            OFFERS.profitLeakReview.name,
+            'A $250, two-week diagnostic that finds where missed calls, slow quotes, and broken admin are leaking revenue. Written report. Credited toward implementation.',
             PAGE_URL,
-            'Profit Leak Detection Review'
+            'Profit Leak Detection Review',
+            { price: OFFERS.profitLeakReview.priceNumeric }
           )
         )}
       </Script>
+      <BreadcrumbSchema
+        id="service-profit-leak-review-breadcrumbs"
+        items={buildServiceBreadcrumbs(OFFERS.profitLeakReview.name, 'profit-leak-review')}
+      />
 
       {/* Hero */}
       <section className="section-offwhite section-space">

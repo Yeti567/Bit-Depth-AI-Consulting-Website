@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Barlow } from 'next/font/google';
 import Script from 'next/script';
+import { buildOrganizationSchema, buildWebSiteSchema } from '@/lib/schema';
 import './globals.css';
 
 const barlow = Barlow({
@@ -20,11 +21,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://bitdepthaiconsulting.com'),
   title: {
-    default: 'AI and Automation for Canadian Trades and Contractors | BitDepth AI',
+    default: 'AI Consulting for Canadian Trades and Contractors | BitDepth AI',
     template: '%s'
   },
   description:
-    'Vendor-neutral AI consulting for Canadian trades and contractors. We diagnose where the money is leaking, then build the AI and automation that plugs the leak. Audits from $5,000.',
+    'Vendor-neutral AI consulting and automation for Canadian HVAC, plumbing, electrical, roofing, ICI, and field-service businesses. Book a Profit Leak Review or AI Opportunity Audit.',
   keywords: [
     'AI consulting for Canadian trades',
     'vendor-neutral AI consulting',
@@ -56,9 +57,9 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: 'AI and Automation for Canadian Trades and Contractors | BitDepth AI',
+    title: 'AI Consulting for Canadian Trades and Contractors | BitDepth AI',
     description:
-      'Vendor-neutral AI consulting for Canadian trades and contractors. Audit first. Recommend what fits. Deliver outcomes.',
+      'Vendor-neutral AI consulting and automation for Canadian HVAC, plumbing, electrical, roofing, ICI, and field-service businesses.',
     type: 'website',
     url: 'https://bitdepthaiconsulting.com',
     siteName: 'BitDepth AI Consulting',
@@ -75,9 +76,9 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bitdepthai',
-    title: 'AI and Automation for Canadian Trades and Contractors | BitDepth AI',
+    title: 'AI Consulting for Canadian Trades and Contractors | BitDepth AI',
     description:
-      'Vendor-neutral AI consulting for Canadian trades and contractors. Audits from $5,000.',
+      'Vendor-neutral AI consulting and automation for Canadian trades and contractors.',
     images: ['/images/og-home.jpg']
   },
   category: 'technology'
@@ -100,6 +101,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             `,
           }}
         />
+        <Script id="org-schema" type="application/ld+json" strategy="beforeInteractive">
+          {JSON.stringify(buildOrganizationSchema())}
+        </Script>
+        <Script id="website-schema" type="application/ld+json" strategy="beforeInteractive">
+          {JSON.stringify(buildWebSiteSchema())}
+        </Script>
       </head>
       <body className={`${barlow.variable} font-sans antialiased`} suppressHydrationWarning>
         {children}

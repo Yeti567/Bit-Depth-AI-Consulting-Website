@@ -5,6 +5,7 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { ArticleHeader, ArticleBody, ArticleCTA } from '@/components/ui/article-layout';
 import { buildArticleSchema } from '@/lib/schema';
+import { BreadcrumbSchema, buildResourceBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 
 const TITLE = 'What can I expect in an AI discovery audit?';
 
@@ -135,6 +136,10 @@ const pad2 = (n: number) => String(n).padStart(2, '0');
 export default function AIDiscoveryAuditArticlePage() {
   return (
     <PageShell>
+      <BreadcrumbSchema
+        id="resource-discovery-audit-breadcrumbs"
+        items={buildResourceBreadcrumbs(TITLE, 'what-can-i-expect-in-an-ai-discovery-audit')}
+      />
       <Script id="article-schema" type="application/ld+json">
         {JSON.stringify(
           buildArticleSchema(

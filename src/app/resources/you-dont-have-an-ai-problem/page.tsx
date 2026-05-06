@@ -4,6 +4,7 @@ import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { ArticleHeader, ArticleBody, ArticleCTA } from '@/components/ui/article-layout';
 import { buildArticleSchema } from '@/lib/schema';
+import { BreadcrumbSchema, buildResourceBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 
 const TITLE = "You don't have an AI problem. You have a systems problem.";
 
@@ -69,6 +70,10 @@ const pad2 = (n: number) => String(n).padStart(2, '0');
 export default function YouDontHaveAnAIProblemPage() {
   return (
     <PageShell>
+      <BreadcrumbSchema
+        id="resource-systems-problem-breadcrumbs"
+        items={buildResourceBreadcrumbs(TITLE, 'you-dont-have-an-ai-problem')}
+      />
       <Script id="article-schema" type="application/ld+json">
         {JSON.stringify(
           buildArticleSchema(

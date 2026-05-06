@@ -6,11 +6,16 @@ import { Check } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { buildServiceSchema } from '@/lib/schema';
+import { OFFERS } from '@/lib/offers';
+import {
+  BreadcrumbSchema,
+  buildServiceBreadcrumbs
+} from '@/components/ui/breadcrumb-schema';
 
 export const metadata: Metadata = {
-  title: 'AI Opportunity Audit for Canadian Trades | BitDepth AI',
+  title: 'AI Opportunity Audit for Contractors and Field Services | BitDepth AI',
   description:
-    'A structured 14 day diagnostic of your trades or contractor business. $5,000 flat. 100 percent credited toward implementation within 90 days.',
+    'A 14-day, $5,000 fixed-price AI Opportunity Audit for Canadian trades and field-service businesses. The full fee is credited toward implementation within 90 days.',
   alternates: { canonical: 'https://bitdepthaiconsulting.com/services/ai-audit' }
 };
 
@@ -43,13 +48,18 @@ export default function ServiceAiAuditPage() {
       <Script id="service-ai-audit-schema" type="application/ld+json">
         {JSON.stringify(
           buildServiceSchema(
-            'AI Opportunity Audit',
+            OFFERS.aiAudit.name,
             'A structured 14 day diagnostic of your trades or contractor business. $5,000 flat. 100 percent credited toward implementation within 90 days.',
             'https://bitdepthaiconsulting.com/services/ai-audit',
-            'AI Consulting'
+            'AI Consulting',
+            { price: OFFERS.aiAudit.priceNumeric }
           )
         )}
       </Script>
+      <BreadcrumbSchema
+        id="service-ai-audit-breadcrumbs"
+        items={buildServiceBreadcrumbs(OFFERS.aiAudit.name, 'ai-audit')}
+      />
       {/* Hero */}
       <section className="section-offwhite section-space">
         <div className="container-shell grid gap-12 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
