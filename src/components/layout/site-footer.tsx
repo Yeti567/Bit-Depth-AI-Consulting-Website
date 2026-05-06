@@ -3,8 +3,9 @@ import Link from 'next/link';
 import { Linkedin, Youtube } from 'lucide-react';
 
 const footerServices = [
-  { label: 'AI Opportunity Audit', href: '/services/ai-audit' },
-  { label: 'How We Build', href: '/how-we-build' },
+  { label: 'AI Booking Agent', href: '/ai-booking-agent' },
+  { label: 'Profit Leak Detection Review', href: '/profit-leak-review' },
+  { label: 'AI Opportunity Audit', href: '/ai-audit' },
   { label: 'Missed Call Text Back', href: '/services/missed-call-text-back' },
   { label: 'AI Implementation', href: '/services/ai-implementation' },
   { label: 'Workflow Automation', href: '/services/workflow-automation' },
@@ -77,6 +78,11 @@ export function SiteFooter() {
             <li>
               <Link href="/resources" className="transition hover:text-cyan">
                 Resources
+              </Link>
+            </li>
+            <li>
+              <Link href="/security-and-data" className="transition hover:text-cyan">
+                Security and Data
               </Link>
             </li>
             <li>

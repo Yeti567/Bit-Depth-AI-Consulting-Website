@@ -54,8 +54,8 @@ export function TrustAndControl() {
         </div>
 
         <ScrollReveal index={3} className="mt-12">
-          <Link href="/how-we-build" className="btn-primary">
-            See how we build it
+          <Link href="/security-and-data" className="btn-primary">
+            Read about security and data
           </Link>
         </ScrollReveal>
       </div>

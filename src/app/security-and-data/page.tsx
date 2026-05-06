@@ -4,18 +4,20 @@ import { Check } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 
-const FIT_CALL_URL = 'https://calendly.com/blake-bitdepthaiconsulting/30min';
+const PAGE_URL = 'https://bitdepthaiconsulting.com/security-and-data';
+const CALENDLY_URL = 'https://calendly.com/blake-bitdepthaiconsulting/30min';
+const CONTACT_EMAIL = 'blake@bitdepthaiconsulting.com';
 
 export const metadata: Metadata = {
-  title: 'How We Build AI Automations | BitDepth AI Consulting',
+  title: 'Security and Data Handling | BitDepth AI Consulting',
   description:
-    'Every automation we build is grounded in approved company knowledge, tested before launch, and watched after launch. Safety, control, testing, and ongoing support, explained plainly.',
-  alternates: { canonical: 'https://bitdepthaiconsulting.com/how-we-build' },
+    'Plain-English answers on how we handle your data, train our automations, test before launch, and provide ongoing oversight. No legal language, no buzzwords.',
+  alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'How We Build AI Automations | BitDepth AI Consulting',
+    title: 'Security and Data Handling | BitDepth AI Consulting',
     description:
-      'Safety, control, testing, and ongoing support, explained plainly. Plain-English answers to the questions every owner asks before letting AI talk to a customer.',
-    url: 'https://bitdepthaiconsulting.com/how-we-build',
+      'Plain-English answers on how we handle your data, train our automations, test before launch, and keep watching after launch.',
+    url: PAGE_URL,
     type: 'website',
     siteName: 'BitDepth AI Consulting',
     locale: 'en_CA'
@@ -24,10 +26,11 @@ export const metadata: Metadata = {
 
 const safetyBullets = [
   'Your data stays in your systems whenever the workflow allows it.',
-  'Third-party platforms used only when contractually protected.',
-  'Your data is not used to train public models.',
+  'Third-party AI platforms used only when contractually protected.',
+  'Your data is not used to train public AI models.',
   'Role-based access. The AI sees only what it needs.',
-  'You decide what the AI is allowed to access. Not us. Not the vendor.'
+  'You decide what the AI is allowed to access. Not us. Not the vendor.',
+  'NDAs available on request, signed before any review or audit work begins.'
 ];
 
 const chatbotSources = [
@@ -52,7 +55,7 @@ const testingSteps = [
   'Pricing questions, including the ones where the answer should be "I will have someone call you"',
   'Scheduling scenarios across business hours, weekends, and holidays',
   'After-hours behaviour, including the handoff path',
-  'Angry, confused, or vague customer messages, including fragmented typing and ALL CAPS',
+  'Angry, confused, or vague customer messages',
   'Hand-off triggers: when the AI should stop and bring in a person',
   'Failure modes: what happens when the integration is down or the data is wrong'
 ];
@@ -67,57 +70,20 @@ const includedMonthly = [
   'Reasonable support requests'
 ];
 
-const quickWins = [
-  {
-    title: 'Missed call text back.',
-    body: 'Every missed call gets an automatic text inside one minute, recovering the lead before it calls a competitor.'
-  },
-  {
-    title: 'Quote follow-up reminders.',
-    body: 'Outstanding quotes get automated reminders on the day they are most likely to convert.'
-  },
-  {
-    title: 'Intake form cleanup.',
-    body: 'Form fields that are slowing down your team or your customers, identified and fixed.'
-  },
-  {
-    title: 'CRM field standardization.',
-    body: 'The fields nobody fills in correctly, restructured so the data is actually useful.'
-  },
-  {
-    title: 'Automated customer reminders.',
-    body: 'Appointment, service, and follow-up reminders that cut no-shows.'
-  },
-  {
-    title: 'Invoice follow-up.',
-    body: 'Polite, scheduled reminders on overdue invoices, before they age out.'
-  },
-  {
-    title: 'Dispatch notifications.',
-    body: 'Customers get accurate "on the way" and "arriving in 30 minutes" messages without anyone in the office sending them.'
-  },
-  {
-    title: 'Review request automation.',
-    body: 'A request for a review goes out at the right moment after a job, not a week late.'
-  },
-  {
-    title: 'Internal reporting dashboards.',
-    body: 'The numbers your operations manager spends two hours pulling every Monday, automated.'
-  }
-];
-
-export default function HowWeBuildPage() {
+export default function SecurityAndDataPage() {
   return (
     <PageShell>
       {/* Hero */}
       <section className="section-offwhite section-space">
         <div className="container-shell max-w-3xl">
           <ScrollReveal>
-            <p className="eyebrow">How we build</p>
-            <h1 className="mt-6">How we build AI that does not embarrass your business.</h1>
+            <p className="eyebrow">Security and data handling</p>
+            <h1 className="mt-6">
+              We do not turn AI loose on your customers and hope for the best.
+            </h1>
             <p className="mt-6 text-lg text-[var(--color-slate)]">
-              Plain-English answers to the questions every owner asks before letting AI talk to a
-              customer.
+              Plain-English answers on how we handle your data, train our automations, test
+              before launch, and keep watching after launch.
             </p>
           </ScrollReveal>
         </div>
@@ -129,10 +95,10 @@ export default function HowWeBuildPage() {
           <ScrollReveal>
             <p className="text-[var(--color-charcoal)]">
               The fear is reasonable. AI gets tones wrong, makes things up, quotes prices it
-              should not quote, and recommends competitors when it should be selling for you. The
-              first ninety percent works. It is the last ten percent that will embarrass you. Our
-              job is to take that ten percent off the table before anything goes live, and to
-              keep watching after it does. Here is how we do it.
+              should not quote, and leaks information it should not see. The first ninety
+              percent works. It is the last ten percent that will embarrass you. Our job is to
+              take that ten percent off the table before anything goes live, and to keep
+              watching after it does.
             </p>
           </ScrollReveal>
         </div>
@@ -144,7 +110,7 @@ export default function HowWeBuildPage() {
           <div className="grid gap-12 lg:grid-cols-[1.1fr,0.9fr]">
             <ScrollReveal className="max-w-xl space-y-5 text-[var(--color-charcoal)]">
               <p className="eyebrow">Where your data lives</p>
-              <h2 className="mt-4">AI safety and control</h2>
+              <h2 className="mt-4">AI safety and control.</h2>
               <p>
                 Client information generally does not leave the systems where it already lives.
                 Whenever possible, we connect AI tools to your existing systems rather than
@@ -183,29 +149,28 @@ export default function HowWeBuildPage() {
       <section className="section-offwhite section-space section-rule">
         <div className="container-shell max-w-3xl">
           <ScrollReveal>
-            <p className="eyebrow">Chatbot knowledge</p>
-            <h2 className="mt-6">What your chatbot is allowed to know.</h2>
+            <p className="eyebrow">Approved knowledge</p>
+            <h2 className="mt-6">What your booking agent or chatbot is allowed to know.</h2>
             <div className="mt-6 space-y-5 text-[var(--color-charcoal)]">
               <p>
-                A chatbot is only as trustworthy as the information it has been trained on. We
-                build chatbots that answer from a knowledge base you approve before launch. That
-                base can include your website pages, your service manuals, your policies, your
-                pricing rules, and your FAQ documents. Nothing else. The chatbot is restricted to
-                what you have authorized.
+                A booking agent is only as trustworthy as the information it has been trained
+                on. We build agents that answer from a knowledge base you approve before launch.
+                That base can include your website pages, service manuals, policies, pricing
+                rules, and FAQ documents. Nothing else. The agent is restricted to what you have
+                authorized.
               </p>
               <p>
-                When the chatbot does not know an answer, it does not guess. It tells the
-                customer it is not sure, collects the contact information, and hands the
-                conversation to a person on your team. It is built so it cannot recommend
-                competitors, invent prices, or promise warranties and availability that do not
-                exist.
+                When the agent does not know an answer, it does not guess. It tells the customer
+                it is not sure, collects the contact information, and hands the conversation to
+                a person on your team. It cannot recommend competitors, invent prices, or
+                promise warranties and availability that do not exist.
               </p>
             </div>
           </ScrollReveal>
           <div className="mt-10 grid gap-10 md:grid-cols-2">
             <ScrollReveal index={1}>
               <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-slate)]">
-                Sources we can train the chatbot on
+                Sources we can train on
               </p>
               <ul className="mt-5 space-y-2 text-[var(--color-charcoal)]">
                 {chatbotSources.map((line) => (
@@ -221,7 +186,7 @@ export default function HowWeBuildPage() {
             </ScrollReveal>
             <ScrollReveal index={2}>
               <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-slate)]">
-                Hard rules every chatbot follows
+                Hard rules every agent follows
               </p>
               <ul className="mt-5 space-y-2 text-[var(--color-charcoal)]">
                 {chatbotRules.map((line) => (
@@ -239,7 +204,7 @@ export default function HowWeBuildPage() {
         </div>
       </section>
 
-      {/* Testing before launch */}
+      {/* Testing */}
       <section className="section-offwhite section-space section-rule">
         <div className="container-shell max-w-3xl">
           <ScrollReveal>
@@ -286,10 +251,10 @@ export default function HowWeBuildPage() {
               </p>
               <p>
                 You define the topics the AI is not allowed to answer. You define the topics it
-                must escalate. We monitor early conversations after launch, usually for the first
-                thirty days, and tune the system based on real customer interactions. If the AI
-                gives a bad answer, we can review the log, identify the cause, and adjust within
-                hours.
+                must escalate. We monitor early conversations after launch, usually for the
+                first thirty days, and tune the system based on real customer interactions. If
+                the AI gives a bad answer, we can review the log, identify the cause, and adjust
+                within hours.
               </p>
             </div>
           </ScrollReveal>
@@ -355,33 +320,24 @@ export default function HowWeBuildPage() {
         </div>
       </section>
 
-      {/* Quick wins from the audit */}
+      {/* Vendor neutrality */}
       <section className="section-offwhite section-space section-rule">
-        <div className="container-shell">
-          <ScrollReveal className="max-w-2xl">
-            <p className="eyebrow">From the audit</p>
-            <h2 className="mt-6">Quick wins we usually find in an audit.</h2>
-            <p className="mt-5 text-[var(--color-slate)]">
-              Most discovery audits surface five to ten quick wins. These are the small
-              operational fixes that pay for themselves within weeks: things you can implement
-              right away, with low effort and clear return. They are included in your audit
-              deliverable, ranked by effort versus impact, with a rough ROI estimate for each.
-            </p>
-          </ScrollReveal>
-          <div className="mt-12 grid gap-x-10 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
-            {quickWins.map((win, index) => (
-              <ScrollReveal key={win.title} index={index}>
-                <p className="font-semibold text-[var(--color-navy)]">{win.title}</p>
-                <p className="mt-2 text-[var(--color-slate)]">{win.body}</p>
-              </ScrollReveal>
-            ))}
-          </div>
-          <ScrollReveal index={9} className="mt-12 max-w-3xl">
-            <p className="text-[var(--color-slate)]">
-              Each quick win in your audit is scored on a simple matrix: effort versus impact.
-              The ones in the top-left corner (low effort, high impact) usually pay for the
-              audit itself within the first ninety days.
-            </p>
+        <div className="container-shell max-w-3xl">
+          <ScrollReveal>
+            <p className="eyebrow">Vendor neutrality</p>
+            <h2 className="mt-6">Vendor neutrality.</h2>
+            <div className="mt-6 space-y-5 text-[var(--color-charcoal)]">
+              <p>
+                We do not sell software. We are not a reseller. We do not get paid by any
+                platform vendor for recommending their tools. Our recommendations are based on
+                what fits your business, your existing systems, and your budget.
+              </p>
+              <p>
+                If a tool you already own is the right answer, that is the answer. If the right
+                answer is a tool we have never used, we will tell you and help you find the
+                right partner. The work is the recommendation, not the sale.
+              </p>
+            </div>
           </ScrollReveal>
         </div>
       </section>
@@ -390,29 +346,27 @@ export default function HowWeBuildPage() {
       <section className="section-navy section-space">
         <div className="container-shell max-w-3xl text-center">
           <ScrollReveal>
-            <span className="eyebrow justify-center">Still have questions</span>
-            <h2 className="mt-6 text-white">
-              Still have questions? That is exactly what the audit is for.
-            </h2>
+            <span className="eyebrow justify-center">Ask</span>
+            <h2 className="mt-6 text-white">Have a specific question we did not answer?</h2>
             <p className="mx-auto mt-6 max-w-xl text-white/75">
-              The AI Opportunity Audit is a structured diagnosis of where AI fits in your
-              business and where it does not. It starts at $5,000 CAD, and one hundred percent of
-              that is credited toward your implementation when you proceed within ninety days.
-              If we cannot find a path to clear ROI, we tell you that, on the record, in
-              writing.
+              Ask. Most of the questions buyers raise about safety and data we have heard
+              before, and the answer is usually shorter and simpler than the question.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link
-                href={FIT_CALL_URL}
+                href={CALENDLY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
               >
-                Book a discovery call
+                Book a thirty-minute call
               </Link>
-              <Link href="/ai-audit" className="btn-outline">
-                Learn about the audit
-              </Link>
+              <a
+                href={`mailto:${CONTACT_EMAIL}`}
+                className="text-sm font-semibold text-white/80 hover:text-white"
+              >
+                Or email {CONTACT_EMAIL}
+              </a>
             </div>
           </ScrollReveal>
         </div>

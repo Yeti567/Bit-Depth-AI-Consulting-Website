@@ -8,6 +8,9 @@ import { FAQSchemaScript } from '@/components/ui/faq-schema-script';
 import { CaseStudies } from '@/components/ui/case-studies';
 import { LeadMagnet } from '@/components/ui/lead-magnet';
 import { TrustAndControl } from '@/components/sections/trust-and-control';
+import { BookingAgentHowItWorks } from '@/components/sections/booking-agent-how-it-works';
+import { ProfitLeakBlock } from '@/components/sections/profit-leak-block';
+import { BestFit } from '@/components/sections/best-fit';
 import { buildOrganizationSchema, buildWebSiteSchema, buildLocalBusinessSchema } from '@/lib/schema';
 import Script from 'next/script';
 
@@ -163,26 +166,26 @@ export default function HomePage() {
       <section className="section-offwhite section-space">
         <div className="container-shell grid gap-12 lg:grid-cols-[1.15fr,0.85fr] lg:items-center">
           <ScrollReveal>
-            <p className="eyebrow">Vendor-neutral AI consulting for Canadian trades</p>
+            <p className="eyebrow">AI for Canadian trades and service businesses</p>
             <h1 className="mt-6 max-w-2xl text-[var(--color-navy)]">
-              Stop bleeding revenue from missed calls and broken admin.
+              Stop losing jobs when you miss a call.
             </h1>
             <p className="mt-6 max-w-xl text-lg text-[var(--color-slate)]">
-              Most Canadian trades and contractors are losing 30 to 50 percent of their inbound
-              calls and re-keying every job into three different systems. We diagnose where the
-              money is leaking, then build the AI and automation that plugs the leak. Audit first.
-              Recommend what fits. Deliver outcomes.
+              BitDepth builds AI booking agents for trades and service businesses that answer
+              calls, respond to website leads, answer customer questions, and book appointments
+              when your team is busy, after-hours, or out on the job.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact?topic=audit" className="btn-primary">
-                Book an AI Audit
+              <Link href="/ai-booking-agent" className="btn-primary">
+                Recover Missed Calls
               </Link>
-              <Link href="/services" className="btn-outline">
-                See how we work
+              <Link href="/profit-leak-review" className="btn-outline">
+                Book a Profit Leak Review
               </Link>
             </div>
             <p className="mt-6 text-sm text-[var(--color-slate)]">
-              No software sales. Canadian-owned. Starting at <span className="tabular">$5,000</span>.
+              No software sales. Canadian-owned. Built for HVAC, plumbing, electrical, roofing,
+              and field service.
             </p>
           </ScrollReveal>
           <ScrollReveal index={1} className="relative aspect-[4/5] overflow-hidden rounded-md border border-[var(--color-border)]">
@@ -196,6 +199,12 @@ export default function HomePage() {
           </ScrollReveal>
         </div>
       </section>
+
+      {/* 1b. How the AI Booking Agent Works */}
+      <BookingAgentHowItWorks />
+
+      {/* 1c. Profit Leak block */}
+      <ProfitLeakBlock />
 
       {/* 2. The Real Problem */}
       <section className="section-stone section-space section-rule">
@@ -249,6 +258,9 @@ export default function HomePage() {
           </ScrollReveal>
         </div>
       </section>
+
+      {/* 3b. Best Fit */}
+      <BestFit />
 
       {/* 4. Audit Credit Guarantee */}
       <section className="section-stone section-space section-rule">

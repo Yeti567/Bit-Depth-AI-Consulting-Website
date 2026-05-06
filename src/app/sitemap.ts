@@ -29,8 +29,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries: MetadataRoute.Sitemap = (
     [
       { url: baseUrl, changeFrequency: 'weekly', priority: 1.0 },
-      { url: `${baseUrl}/ai-audit`, changeFrequency: 'weekly', priority: 0.95 },
-      { url: `${baseUrl}/how-we-build`, changeFrequency: 'monthly', priority: 0.8 },
+      { url: `${baseUrl}/ai-booking-agent`, changeFrequency: 'monthly', priority: 0.9 },
+      { url: `${baseUrl}/profit-leak-review`, changeFrequency: 'monthly', priority: 0.9 },
+      { url: `${baseUrl}/ai-audit`, changeFrequency: 'weekly', priority: 0.85 },
+      { url: `${baseUrl}/security-and-data`, changeFrequency: 'yearly', priority: 0.6 },
       { url: `${baseUrl}/services`, changeFrequency: 'weekly', priority: 0.9 },
       { url: `${baseUrl}/services/ai-audit`, changeFrequency: 'monthly', priority: 0.85 },
       { url: `${baseUrl}/services/missed-call-text-back`, changeFrequency: 'monthly', priority: 0.85 },

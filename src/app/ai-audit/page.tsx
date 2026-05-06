@@ -167,7 +167,7 @@ export default function AIAuditPage() {
       <section className="section-offwhite section-space">
         <div className="container-shell grid gap-12 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
           <ScrollReveal>
-            <p className="eyebrow">Our entry offer</p>
+            <p className="eyebrow">Strategic next step</p>
             <h1 className="mt-6 max-w-2xl">
               Know where AI pays off before you spend a dollar.
             </h1>
@@ -175,6 +175,16 @@ export default function AIAuditPage() {
               Most businesses waste their first AI budget on the wrong thing. The AI Opportunity
               Audit eliminates that risk. In 5 to 10 business days you get a prioritized picture of
               where AI will make the biggest impact, with honest ROI estimates to back it up.
+            </p>
+            <p className="mt-4 max-w-xl text-[var(--color-slate)]">
+              For owners ready to plan a real implementation. Not sure yet? Start with a{' '}
+              <Link
+                href="/profit-leak-review"
+                className="font-semibold text-[var(--color-cyan)] hover:text-[var(--color-cyan-dark)]"
+              >
+                Profit Leak Detection Review for $250
+              </Link>
+              .
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link href="/contact?topic=audit" className="btn-primary">
@@ -236,12 +246,91 @@ export default function AIAuditPage() {
             <p className="text-[var(--color-slate)]">
               Wondering how we actually build the automations once the audit is done? See{' '}
               <Link
-                href="/how-we-build"
+                href="/security-and-data"
                 className="font-semibold text-[var(--color-cyan)] hover:text-[var(--color-cyan-dark)]"
               >
-                How we build
+                How we handle security and data
               </Link>{' '}
               for plain-English answers on safety, control, testing, and ongoing support.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* 2b. Quick wins we usually find */}
+      <section className="section-offwhite section-space section-rule">
+        <div className="container-shell">
+          <ScrollReveal className="max-w-2xl">
+            <p className="eyebrow">Quick wins</p>
+            <h3 className="mt-6 font-serif text-2xl text-[var(--color-navy)]">
+              Quick wins we usually find.
+            </h3>
+            <p className="mt-5 text-[var(--color-slate)]">
+              Most discovery audits surface five to ten quick wins. These are the small
+              operational fixes that pay for themselves within weeks: things you can implement
+              right away, with low effort and clear return. They are included in the audit
+              deliverable, ranked by effort versus impact, with a rough ROI estimate for each.
+            </p>
+          </ScrollReveal>
+          <div className="mt-12 grid gap-x-10 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                title: 'Missed call text back.',
+                body:
+                  'Every missed call gets an automatic text inside one minute, recovering the lead before it calls a competitor.'
+              },
+              {
+                title: 'Quote follow-up reminders.',
+                body:
+                  'Outstanding quotes get automated reminders on the day they are most likely to convert.'
+              },
+              {
+                title: 'Intake form cleanup.',
+                body:
+                  'Form fields that are slowing down your team or your customers, identified and fixed.'
+              },
+              {
+                title: 'CRM field standardization.',
+                body:
+                  'The fields nobody fills in correctly, restructured so the data is actually useful.'
+              },
+              {
+                title: 'Automated customer reminders.',
+                body:
+                  'Appointment, service, and follow-up reminders that cut no-shows.'
+              },
+              {
+                title: 'Invoice follow-up.',
+                body:
+                  'Polite, scheduled reminders on overdue invoices, before they age out.'
+              },
+              {
+                title: 'Dispatch notifications.',
+                body:
+                  'Customers get accurate "on the way" and "arriving in 30 minutes" messages without anyone in the office sending them.'
+              },
+              {
+                title: 'Review request automation.',
+                body:
+                  'A request for a review goes out at the right moment after a job, not a week late.'
+              },
+              {
+                title: 'Internal reporting dashboards.',
+                body:
+                  'The numbers your operations manager spends two hours pulling every Monday, automated.'
+              }
+            ].map((win, index) => (
+              <ScrollReveal key={win.title} index={index}>
+                <p className="font-semibold text-[var(--color-navy)]">{win.title}</p>
+                <p className="mt-2 text-[var(--color-slate)]">{win.body}</p>
+              </ScrollReveal>
+            ))}
+          </div>
+          <ScrollReveal index={9} className="mt-12 max-w-3xl">
+            <p className="text-[var(--color-slate)]">
+              Each quick win in your audit is scored on a simple matrix: effort versus impact.
+              The ones in the top-left corner (low effort, high impact) usually pay for the
+              audit itself within the first ninety days.
             </p>
           </ScrollReveal>
         </div>
@@ -392,6 +481,71 @@ You pay                    $15,500`}
         </div>
       </section>
 
+      {/* 6b. How the audit fits in */}
+      <section className="section-offwhite section-space section-rule">
+        <div className="container-shell max-w-3xl">
+          <ScrollReveal>
+            <p className="eyebrow">Where it fits</p>
+            <h3 className="mt-6 font-serif text-2xl text-[var(--color-navy)]">
+              How the audit fits in.
+            </h3>
+            <p className="mt-5 text-[var(--color-charcoal)]">
+              The AI Opportunity Audit sits in the middle of a three-step path. The Profit Leak
+              Detection Review is the soft entry: a focused, $250 diagnostic for owners who
+              suspect a problem but want a cheap, written second opinion before committing. The
+              audit is the deeper engagement: a full operational scan with a structured
+              deliverable, designed to drive a real implementation. The implementation is the
+              build itself.
+            </p>
+          </ScrollReveal>
+          <div className="mt-10 grid gap-8 md:grid-cols-3">
+            <ScrollReveal index={1} className="border-t border-[var(--color-border)] pt-6">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-slate)]">
+                Step 1
+              </p>
+              <p className="mt-2 font-semibold text-[var(--color-navy)]">
+                Profit Leak Review ($250)
+              </p>
+              <p className="mt-3 text-[var(--color-charcoal)]">
+                Three-leak diagnostic. Five-page report. Best if you are not yet sure where the
+                problem is.
+              </p>
+              <Link
+                href="/profit-leak-review"
+                className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-cyan)] hover:text-[var(--color-cyan-dark)]"
+              >
+                Learn more
+                <span aria-hidden="true">→</span>
+              </Link>
+            </ScrollReveal>
+            <ScrollReveal index={2} className="border-t border-[var(--color-cyan)] pt-6">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-cyan)]">
+                Step 2 (you are here)
+              </p>
+              <p className="mt-2 font-semibold text-[var(--color-navy)]">
+                AI Opportunity Audit ($5,000)
+              </p>
+              <p className="mt-3 text-[var(--color-charcoal)]">
+                Five-pillar scorecard. Opportunity matrix. Ninety-day roadmap. Best if you are
+                ready to plan a real implementation.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal index={3} className="border-t border-[var(--color-border)] pt-6">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[var(--color-slate)]">
+                Step 3
+              </p>
+              <p className="mt-2 font-semibold text-[var(--color-navy)]">
+                Implementation (scoped after audit)
+              </p>
+              <p className="mt-3 text-[var(--color-charcoal)]">
+                The build itself. Audit fee credited 100 percent if you proceed within ninety
+                days.
+              </p>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* 7. Final CTA */}
       <section className="section-navy section-space">
         <div className="container-shell max-w-3xl text-center">
@@ -415,6 +569,16 @@ You pay                    $15,500`}
                 Book a discovery call
               </Link>
             </div>
+            <p className="mt-6 text-sm text-white/70">
+              Not ready for the full audit?{' '}
+              <Link
+                href="/profit-leak-review"
+                className="font-semibold text-white hover:text-white/85"
+              >
+                Start with a Profit Leak Review for $250
+              </Link>
+              .
+            </p>
           </ScrollReveal>
         </div>
       </section>
