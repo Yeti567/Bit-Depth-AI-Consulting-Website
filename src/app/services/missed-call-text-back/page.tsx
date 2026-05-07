@@ -794,7 +794,7 @@ export default function MissedCallTextBackPage() {
               >
                 Book a 15-minute fit check
               </Link>
-              <Link href="/contact?topic=audit" className="btn-outline">
+              <Link href="/contact?topic=audit#contact-form" className="btn-outline">
                 Book an AI Audit instead
               </Link>
             </div>

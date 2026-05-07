@@ -17,6 +17,11 @@ const TOPIC_DEFAULTS: Record<string, { label: string; message: string }> = {
     label: 'Booking an AI Opportunity Audit',
     message:
       'I would like to book an AI Opportunity Audit. A bit about my business:\n\n'
+  },
+  'profit-leak-review': {
+    label: 'Booking a Profit Leak Detection Review',
+    message:
+      'I would like to book a $250 Profit Leak Detection Review. A bit about my business:\n\n'
   }
 };
 
@@ -231,7 +236,9 @@ export function ContactForm() {
             ? 'Sending…'
             : topic === 'audit'
               ? 'Book my AI Audit'
-              : 'Send my inquiry'}
+              : topic === 'profit-leak-review'
+                ? 'Book my Profit Leak Review'
+                : 'Send my inquiry'}
         </button>
       </div>
     </form>

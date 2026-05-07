@@ -12,7 +12,7 @@ import {
 } from '@/components/ui/breadcrumb-schema';
 
 const PAGE_URL = 'https://bitdepthaiconsulting.com/services/profit-leak-review';
-const BOOKING_URL = '/contact?topic=profit-leak-review';
+const BOOKING_URL = '/contact?topic=profit-leak-review#contact-form';
 
 export const metadata: Metadata = {
   title: 'Profit Leak Detection Review for Trades and Service Businesses | BitDepth AI',

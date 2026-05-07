@@ -105,7 +105,7 @@ export default function AboutPage() {
               That is the gap we exist to fill.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact?topic=audit" className="btn-primary">
+              <Link href="/contact?topic=audit#contact-form" className="btn-primary">
                 Book an AI Audit
               </Link>
               <Link href="/contact" className="btn-outline">
@@ -239,7 +239,7 @@ export default function AboutPage() {
               <Link href="/contact" className="btn-primary">
                 Book a discovery call
               </Link>
-              <Link href="/contact?topic=audit" className="btn-outline">
+              <Link href="/contact?topic=audit#contact-form" className="btn-outline">
                 Book an AI Audit
               </Link>
             </div>

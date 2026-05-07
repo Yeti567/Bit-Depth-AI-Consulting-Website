@@ -210,7 +210,7 @@ const data: ServicePageData = {
     title: 'Connect the tools you already pay for.',
     body:
       'Two to three working sessions, one written diagnostic, real numbers on where the work is being done twice. The audit fee is credited toward the build. Audit first. Recommend what fits. Deliver outcomes.',
-    primaryHref: '/contact?topic=audit',
+    primaryHref: '/contact?topic=audit#contact-form',
     primaryLabel: 'Book an AI Audit',
     secondaryHref: '/services/profit-leak-review',
     secondaryLabel: 'Start with a Profit Leak Review for $250'

@@ -142,7 +142,7 @@ export function MobileNav() {
           );
         })}
         <Link
-          href="/contact?topic=audit"
+          href="/contact?topic=audit#contact-form"
           style={{
             display: 'block',
             width: '100%',

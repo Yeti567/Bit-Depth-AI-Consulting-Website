@@ -198,7 +198,7 @@ const data: ServicePageData = {
     title: 'The roadmap, built right.',
     body:
       'Sprint cadence, written acceptance, pilot before launch, ongoing support after. Audit first. Recommend what fits. Deliver outcomes.',
-    primaryHref: '/contact?topic=audit',
+    primaryHref: '/contact?topic=audit#contact-form',
     primaryLabel: 'Book an AI Audit',
     secondaryHref: '/services/profit-leak-review',
     secondaryLabel: 'Start with a Profit Leak Review for $250'

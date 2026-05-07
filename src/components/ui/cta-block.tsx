@@ -27,7 +27,7 @@ const VARIANTS: Record<CtaIntent, CtaConfig> = {
     eyebrow: 'Strategic next step',
     title: 'Ready to plan a real implementation? Book the audit.',
     body: 'A structured 14-day diagnostic. $5,000 flat. The full fee is credited toward implementation if you proceed within 90 days. You either get a roadmap you can hand to any vendor, or you get the audit free as part of building it.',
-    primaryHref: '/contact?topic=audit',
+    primaryHref: '/contact?topic=audit#contact-form',
     primaryLabel: 'Book an AI Opportunity Audit',
     secondaryHref: '/services/profit-leak-review',
     secondaryLabel: 'Not ready? Start with a $250 Profit Leak Review'

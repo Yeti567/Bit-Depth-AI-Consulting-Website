@@ -198,7 +198,7 @@ const data: ServicePageData = {
     title: 'Hire a worker that does one thing well.',
     body:
       'Job description, sandbox build, pilot, roll-out. A named human owner on your team. Ongoing service every month. Audit first. Recommend what fits. Deliver outcomes.',
-    primaryHref: '/contact?topic=audit',
+    primaryHref: '/contact?topic=audit#contact-form',
     primaryLabel: 'Book an AI Audit',
     secondaryHref: '/services/profit-leak-review',
     secondaryLabel: 'Start with a Profit Leak Review for $250'

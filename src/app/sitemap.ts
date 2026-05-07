@@ -39,6 +39,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       { url: `${baseUrl}/about`, changeFrequency: 'monthly', priority: 0.7 },
       { url: `${baseUrl}/locations/barriere-bc-ai-consulting`, changeFrequency: 'monthly', priority: 0.7 },
       { url: `${baseUrl}/resources`, changeFrequency: 'weekly', priority: 0.7 },
+      { url: `${baseUrl}/resources/five-signs-your-business-is-ready-for-ai`, changeFrequency: 'monthly', priority: 0.7 },
+      { url: `${baseUrl}/resources/what-can-i-expect-in-an-ai-discovery-audit`, changeFrequency: 'monthly', priority: 0.7 },
+      { url: `${baseUrl}/resources/what-to-expect-from-your-first-ai-consulting-engagement`, changeFrequency: 'monthly', priority: 0.7 },
+      { url: `${baseUrl}/resources/you-dont-have-an-ai-problem`, changeFrequency: 'monthly', priority: 0.7 },
       { url: `${baseUrl}/contact`, changeFrequency: 'monthly', priority: 0.6 },
       { url: `${baseUrl}/privacy-policy`, changeFrequency: 'yearly', priority: 0.3 },
       { url: `${baseUrl}/terms-of-use`, changeFrequency: 'yearly', priority: 0.3 }

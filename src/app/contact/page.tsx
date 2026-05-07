@@ -60,8 +60,11 @@ export default function ContactPage() {
               short note describing what is going on. We respond inside one business day.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact?topic=audit" className="btn-primary">
+              <Link href="/contact?topic=audit#contact-form" className="btn-primary">
                 Book an AI Audit
+              </Link>
+              <Link href="/contact?topic=profit-leak-review#contact-form" className="btn-outline">
+                Book a Profit Leak Review
               </Link>
             </div>
           </ScrollReveal>
@@ -78,7 +81,10 @@ export default function ContactPage() {
       </section>
 
       {/* Form + direct contact */}
-      <section className="section-stone section-space section-rule">
+      <section
+        id="contact-form"
+        className="section-stone section-space section-rule scroll-mt-24"
+      >
         <div className="container-shell grid gap-12 lg:grid-cols-[1.15fr,0.85fr] lg:items-start">
           <ScrollReveal>
             <p className="eyebrow">Contact form</p>

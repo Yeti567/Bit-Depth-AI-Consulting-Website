@@ -117,7 +117,7 @@ export default function BarriereBcLocationPage() {
               field-service businesses across British Columbia, Alberta, and Ontario.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact?topic=audit" className="btn-primary">
+              <Link href="/contact?topic=audit#contact-form" className="btn-primary">
                 Book an AI Audit
               </Link>
               <Link href="/services/profit-leak-review" className="btn-outline">
@@ -312,7 +312,7 @@ export default function BarriereBcLocationPage() {
               within 90 days.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link href="/contact?topic=audit" className="btn-primary">
+              <Link href="/contact?topic=audit#contact-form" className="btn-primary">
                 Book an AI Audit
               </Link>
               <Link href="/services/profit-leak-review" className="btn-outline">

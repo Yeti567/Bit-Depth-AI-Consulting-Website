@@ -105,7 +105,7 @@ export function ServicePage({ data }: { data: ServicePageData }) {
             <h1 className="mt-6">{data.hero.title}</h1>
             <p className="mt-6 text-lg text-[var(--color-slate)]">{data.hero.subhead}</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact?topic=audit" className="btn-primary">
+              <Link href="/contact?topic=audit#contact-form" className="btn-primary">
                 {data.offer.primaryCta}
               </Link>
               <Link href="/services/profit-leak-review" className="btn-outline">
