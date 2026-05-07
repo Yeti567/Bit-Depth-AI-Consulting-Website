@@ -25,7 +25,7 @@ export function SiteFooter() {
   return (
     <footer className="section-charcoal border-t border-[var(--color-border)] text-white">
       <div className="container-shell grid gap-12 py-16 md:grid-cols-[1.4fr,1fr,1fr,1fr]">
-        <div className="space-y-4">
+        <div className="space-y-5">
           <Link href="/" className="relative block h-12 w-[220px]" aria-label="BitDepth AI Consulting home">
             <Image
               src="/images/logo svg transparent.svg"
@@ -39,6 +39,30 @@ export function SiteFooter() {
             Vendor-neutral AI consulting for Canadian trades and contractors. We audit first, then
             build what fits.
           </p>
+          <address className="not-italic text-sm text-white/65">
+            <p className="font-semibold text-white">BitDepth AI Consulting Ltd.</p>
+            <p className="mt-1">Barriere, BC, Canada</p>
+            <p className="mt-1">
+              <Link
+                href="tel:+17808325158"
+                className="transition hover:text-cyan"
+              >
+                +1 (780) 832-5158
+              </Link>
+            </p>
+            <p>
+              <Link
+                href="mailto:blake@bitdepthaiconsulting.com"
+                className="transition hover:text-cyan"
+              >
+                blake@bitdepthaiconsulting.com
+              </Link>
+            </p>
+            <p className="mt-3 text-xs text-white/55">
+              Serving the Greater Toronto Area, Golden Horseshoe, British Columbia, Alberta, and
+              remote across Canada.
+            </p>
+          </address>
           <p className="text-xs uppercase tracking-[0.14em] text-white/45">
             Audit first &nbsp;·&nbsp; Recommend what fits &nbsp;·&nbsp; Deliver outcomes
           </p>
@@ -91,8 +115,8 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
-              <Link href="mailto:blake@bitdepthaiconsulting.com" className="transition hover:text-cyan">
-                blake@bitdepthaiconsulting.com
+              <Link href="/locations/barriere-bc-ai-consulting" className="transition hover:text-cyan">
+                Barriere, BC
               </Link>
             </li>
             <li>
@@ -110,7 +134,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-white/10">
         <div className="container-shell flex flex-col gap-4 py-6 text-[13px] text-white/45 md:flex-row md:items-center md:justify-between">
-          <p>© 2026 BitDepth AI Consulting Ltd. &nbsp;·&nbsp; Serving the GTA, Golden Horseshoe, and across Canada</p>
+          <p>© 2026 BitDepth AI Consulting Ltd. &nbsp;·&nbsp; Based in Barriere, BC. Serving Canada.</p>
           <div className="flex flex-col gap-1 text-white/65 sm:flex-row sm:items-center sm:gap-3">
             <Link
               href="https://www.linkedin.com/company/bitdepth-ai-consulting-ltd"

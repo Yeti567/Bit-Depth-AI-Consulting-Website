@@ -38,10 +38,10 @@ export const metadata: Metadata = {
 };
 
 const regions = [
+  'Barriere, BC and the BC interior',
+  'Alberta',
   'Greater Toronto Area',
   'Golden Horseshoe',
-  'BC Interior',
-  'Alberta',
   'Remote across Canada'
 ];
 
@@ -92,7 +92,17 @@ export default function ContactPage() {
           <ScrollReveal index={1} className="lg:sticky lg:top-24">
             <p className="eyebrow">Direct contact</p>
             <h2 className="mt-6">Skip the form if you want.</h2>
-            <div className="mt-8 space-y-4 text-[var(--color-charcoal)]">
+            <address className="mt-8 space-y-4 not-italic text-[var(--color-charcoal)]">
+              <p className="text-sm">
+                <span className="font-semibold text-[var(--color-navy)]">Phone</span>
+                <br />
+                <Link
+                  href="tel:+17808325158"
+                  className="text-[var(--color-cyan)] hover:text-[var(--color-cyan-dark)]"
+                >
+                  +1 (780) 832-5158
+                </Link>
+              </p>
               <p className="text-sm">
                 <span className="font-semibold text-[var(--color-navy)]">Email</span>
                 <br />
@@ -115,7 +125,7 @@ export default function ContactPage() {
                   BitDepth AI Consulting
                 </Link>
               </p>
-            </div>
+            </address>
 
             <div className="mt-10 border-t border-[var(--color-border)] pt-6">
               <p className="text-xs uppercase tracking-[0.14em] text-[var(--color-slate)]">
@@ -130,11 +140,19 @@ export default function ContactPage() {
 
             <div className="mt-8 border-t border-[var(--color-border)] pt-6">
               <p className="text-xs uppercase tracking-[0.14em] text-[var(--color-slate)]">
-                Ontario presence
+                Where we are based
               </p>
               <p className="mt-3 text-sm text-[var(--color-charcoal)]">
-                Virtual office in the Greater Toronto Area, with quarterly in-person visits
-                across the Golden Horseshoe and southern Ontario for client engagements.
+                Barriere, British Columbia. Most engagements run remotely from there, with
+                quarterly in-person visits across the Golden Horseshoe and southern Ontario for
+                client work that needs an on-site presence.{' '}
+                <Link
+                  href="/locations/barriere-bc-ai-consulting"
+                  className="font-semibold text-[var(--color-cyan)] hover:text-[var(--color-cyan-dark)]"
+                >
+                  More about our Barriere, BC office
+                </Link>
+                .
               </p>
             </div>
 

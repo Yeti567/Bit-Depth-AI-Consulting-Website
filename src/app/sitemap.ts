@@ -37,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       { url: `${baseUrl}/industries/professional-services`, changeFrequency: 'monthly', priority: 0.7 },
       { url: `${baseUrl}/industries/cor-pathway`, changeFrequency: 'monthly', priority: 0.7 },
       { url: `${baseUrl}/about`, changeFrequency: 'monthly', priority: 0.7 },
+      { url: `${baseUrl}/locations/barriere-bc-ai-consulting`, changeFrequency: 'monthly', priority: 0.7 },
       { url: `${baseUrl}/resources`, changeFrequency: 'weekly', priority: 0.7 },
       { url: `${baseUrl}/contact`, changeFrequency: 'monthly', priority: 0.6 },
       { url: `${baseUrl}/privacy-policy`, changeFrequency: 'yearly', priority: 0.3 },
