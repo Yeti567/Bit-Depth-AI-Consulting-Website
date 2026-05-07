@@ -3,8 +3,10 @@ import { notFound } from 'next/navigation';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import Script from 'next/script';
-import { ArticleHeader, ArticleBody, ArticleCTA } from '@/components/ui/article-layout';
+import { ArticleHeader, ArticleBody } from '@/components/ui/article-layout';
 import { AuthorBox } from '@/components/ui/article-byline';
+import { CtaBlock } from '@/components/ui/cta-block';
+import { RelatedLinks } from '@/components/ui/related-links';
 import { buildArticleSchema } from '@/lib/schema';
 import { BreadcrumbSchema, buildResourceBreadcrumbs } from '@/components/ui/breadcrumb-schema';
 
@@ -569,13 +571,30 @@ export default async function ResourceArticlePage({ params }: { params: Promise<
           </article>
         </ScrollReveal>
         <AuthorBox />
+        <div className="mt-10 grid gap-10 border-t border-[var(--color-border)] pt-10 md:grid-cols-2">
+          <RelatedLinks
+            eyebrow="Keep reading"
+            title="Related guides"
+            links={[
+              { label: 'What can I expect in an AI discovery audit?', href: '/resources/what-can-i-expect-in-an-ai-discovery-audit' },
+              { label: 'The 5 signs your business is ready for AI', href: '/resources/five-signs-your-business-is-ready-for-ai' },
+              { label: 'You don\'t have an AI problem. You have a systems problem.', href: '/resources/you-dont-have-an-ai-problem' }
+            ]}
+          />
+          <RelatedLinks
+            eyebrow="Where this leads"
+            title="Services and trust"
+            index={1}
+            links={[
+              { label: 'AI Opportunity Audit', href: '/services/ai-audit' },
+              { label: 'Profit Leak Detection Review', href: '/services/profit-leak-review' },
+              { label: 'How we handle security and data', href: '/security-and-data' }
+            ]}
+          />
+        </div>
       </ArticleBody>
 
-      <ArticleCTA
-        eyebrow="Where to start"
-        title="A discovery call is the next step."
-        body="Tell us where AI could help your business. We will tell you honestly whether it makes sense to start with the audit, or whether something else needs to come first."
-      />
+      <CtaBlock intent="discovery" />
     </PageShell>
   );
 }

@@ -142,7 +142,7 @@ export default function IndustriesPage() {
                     </h3>
                     <p className="mt-3 flex-1 text-sm text-[var(--color-slate)]">{industry.summary}</p>
                     <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-[var(--color-cyan)]">
-                      Learn more <ArrowRight className="h-4 w-4" />
+                      Read about AI for {industry.title.toLowerCase()} <ArrowRight className="h-4 w-4" />
                     </span>
                   </div>
                 </Link>

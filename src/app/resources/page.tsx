@@ -5,6 +5,7 @@ import { ArrowRight, Download } from 'lucide-react';
 import { PageShell } from '@/components/layout/page-shell';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { BreadcrumbSchema, buildSimpleBreadcrumbs } from '@/components/ui/breadcrumb-schema';
+import { CtaBlock } from '@/components/ui/cta-block';
 import { LeadMagnet } from '@/components/ui/lead-magnet';
 import { ArticleCard, type ArticleCardData } from '@/components/ui/article-layout';
 import { CaseStudies } from '@/components/ui/case-studies';
@@ -218,26 +219,7 @@ export default function ResourcesPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="section-navy section-space">
-        <div className="container-shell max-w-3xl text-center">
-          <ScrollReveal>
-            <span className="eyebrow">Not sure where to start</span>
-            <h2 className="mt-6 text-white">A discovery call is free and honest.</h2>
-            <p className="mx-auto mt-6 max-w-xl text-white/75">
-              Book a call and we will tell you honestly whether AI makes sense for your business
-              right now.
-            </p>
-            <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link href="/contact" className="btn-primary">
-                Book a discovery call
-              </Link>
-              <Link href="/contact?topic=audit" className="btn-outline">
-                Book an AI Audit
-              </Link>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+      <CtaBlock intent="discovery" />
     </PageShell>
   );
 }
